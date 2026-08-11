@@ -147,6 +147,28 @@ CONTENT_PREFIXES = ("_posts/", "assets/")
 # skip 로그에서 파일 목록 줄을 가려내는 형태. 경로는 공백을 포함하지 않는다.
 SKIP_PATH_RE = re.compile(r"^[\w./-]+$")
 
+WORKFLOWS_DIR = REPO_ROOT / ".github" / "workflows"
+
+# 수집기 이름(커밋 주제 기준) → 워크플로우 파일명.
+#
+# `f"collect-{name}.yml"` 로 조립하면 안 된다. 6개 중 4개가 어긋난다 —
+# `crypto` 는 `collect-crypto-news.yml`, `social` 은 `collect-social-media.yml` 이다.
+# 어긋나면 `gh run list` 가 실패하고 `collect_run_timestamps` 가 설계대로 graceful
+# degradation 해서 **실행당 커밋 지표가 조용히 사라진다.**
+# `tests/test_check_pilot_observation_control_group_guard.py` 가 실존을 강제한다.
+COLLECTOR_WORKFLOWS: dict[str, str] = {
+    "regulatory": "collect-regulatory.yml",
+    "crypto": "collect-crypto-news.yml",
+    "stock": "collect-stock-news.yml",
+    "social": "collect-social-media.yml",
+    "political": "collect-political-trades.yml",
+    "geopolitical": "collect-geopolitical.yml",
+}
+
+# 액션 입력 `skip-noop-state-commits` — 이 플래그가 파일럿의 on/off 다.
+# YAML 은 `true` 와 `'true'` 를 모두 허용하므로 인용부호를 옵셔널로 둔다.
+PILOT_FLAG_RE = re.compile(r"^\s*skip-noop-state-commits:\s*['\"]?(?P<value>true|false)['\"]?\s*$", re.M)
+
 
 def is_runtime_skip_line(line: str) -> bool:
     """로그 한 줄이 skip 의 **런타임 출력**인지 판정한다.
@@ -377,6 +399,34 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
     return skips, checked, None, blocks
 
 
+def workflow_for(collector: str) -> str | None:
+    """수집기의 워크플로우 파일명. 모르는 수집기면 None.
+
+    파일명을 지어내지 않는다 — 없는 파일을 gh 에 넘기면 조회가 실패하고 지표가
+    조용히 사라진다. None 을 받은 호출자는 이유를 밝히고 건너뛴다.
+    """
+    return COLLECTOR_WORKFLOWS.get(collector)
+
+
+def pilot_enabled_collectors() -> frozenset[str] | None:
+    """워크플로우에서 `skip-noop-state-commits: true` 인 수집기를 읽는다.
+
+    읽지 못한 워크플로우가 하나라도 있으면 None — **fail closed** 다. 못 읽은 것을
+    "꺼짐" 으로 치면 실제로는 파일럿이 켜진 수집기가 대조군에 남아 오염을 놓친다.
+    """
+    enabled: set[str] = set()
+    for name, filename in COLLECTOR_WORKFLOWS.items():
+        try:
+            text = (WORKFLOWS_DIR / filename).read_text(encoding="utf-8")
+        except OSError as e:
+            logger.warning("워크플로우를 읽지 못했다 %s: %s", filename, e)
+            return None
+        match = PILOT_FLAG_RE.search(text)
+        if match and match.group("value") == "true":
+            enabled.add(name)
+    return frozenset(enabled)
+
+
 def read_noop_whitelist() -> frozenset[str] | None:
     """액션의 `NOOP_STATE_PATHS` 를 읽는다. 읽지 못하면 None.
 
@@ -591,7 +641,11 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
     pilot_commits = parse_commit_timestamps(raw, collector)
 
     # 실행은 최대 6회/일을 가정하고 여유를 둔다 — 부족하면 전 구간이 잘려 나간다.
-    runs, reason = collect_run_timestamps(f"collect-{collector}.yml", limit=max(30, days * 6))
+    workflow = workflow_for(collector)
+    if workflow is None:
+        runs, reason = [], f"{collector!r} 의 워크플로우 매핑이 없다 (COLLECTOR_WORKFLOWS 에 추가하세요)"
+    else:
+        runs, reason = collect_run_timestamps(workflow, limit=max(30, days * 6))
     if reason:
         logger.info("  실행당 커밋: 건너뜀 (%s)", reason)
     else:
@@ -605,6 +659,26 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
             per_run.post_num,
             per_run.post_den,
             _fmt_delta(per_run.delta_pct()),
+        )
+
+    # `--collector crypto` 처럼 CLI 로 대상을 바꾸면 대조군에 자기 자신이 들어간다.
+    # 가드 테스트는 기본 대상만 검사하므로 오버라이드는 런타임에서 잡는다.
+    if collector in CONTROL_COLLECTORS:
+        logger.warning(
+            "  ⚠ 대조군에 대상 자기 자신(%s)이 들어 있다 — 분모가 분자를 포함하므로 "
+            "대조군 비는 파일럿 효과에 둔감하다.",
+            collector,
+        )
+
+    # 대조군 오염을 도구 자신이 알린다. 테스트만 지키면 CI 를 안 보는 사람은 모른다.
+    enabled = pilot_enabled_collectors()
+    if enabled is None:
+        logger.warning("  ⚠ 대조군 오염 여부 확인 불가 — 워크플로우에서 파일럿 플래그를 읽지 못했다.")
+    elif contaminated := sorted(set(CONTROL_COLLECTORS) & enabled):
+        logger.warning(
+            "  ⚠ 대조군 오염: %s — 파일럿이 켜진 수집기다. CONTROL_COLLECTORS 에서 빼야 "
+            "분모가 함께 줄지 않는다(절감 과소평가).",
+            ", ".join(contaminated),
         )
 
     control_commits = [t for name in CONTROL_COLLECTORS for t in parse_commit_timestamps(raw, name)]
@@ -716,7 +790,12 @@ def main() -> int:
     logger.info("[2] no-op skip 발생 횟수")
     skip_blocks: list[list[str]] | None = None
     if args.with_runs:
-        skips, checked, reason, skip_blocks = collect_skip_counts(f"collect-{args.collector}.yml", args.run_limit)
+        workflow = workflow_for(args.collector)
+        if workflow is None:
+            skips, checked, reason = 0, 0, f"{args.collector!r} 의 워크플로우 매핑이 없다"
+            skip_blocks = None
+        else:
+            skips, checked, reason, skip_blocks = collect_skip_counts(workflow, args.run_limit)
         if reason:
             logger.info("  건너뜀: %s", reason)
             skip_blocks = None
