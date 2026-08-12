@@ -489,22 +489,28 @@ def pilot_started_at(collector: str) -> datetime | None:
         return None
 
 
-def resolve_pilot_starts(collectors: Sequence[str], fallback: datetime) -> dict[str, datetime]:
-    """수집기별 파일럿 시작 시각. git 에서 못 읽으면 `fallback` 을 쓴다.
+def resolve_pilot_starts(collectors: Sequence[str]) -> dict[str, datetime]:
+    """수집기별 파일럿 시작 시각. 못 읽은 수집기는 **빼고** 돌려준다.
 
-    폴백은 단일 수집기 모드의 `--pilot-merged` 다. 묶음 모드에서 폴백이 쓰이면 그
-    수집기의 구간이 다른 수집기의 경계로 잘리므로 경고를 남긴다 — 조용히 틀리지 않게.
+    **다른 수집기의 경계로 대체하지 않는다.** 초안은 `--pilot-merged` 를 폴백으로
+    썼는데, 실제로 돌려 보니 거짓 FAIL 이 났다: 확대분 3개가 아직 `origin/main` 에
+    들어오지 않은 상태에서 regulatory 의 08-10 경계를 물려받자, 그 수집기들이 정상적으로
+    만든 no-op 커밋 17건이 전부 "누출" 로 잡혔다. 파일럿이 켜지지도 않았는데 skip 이
+    동작하지 않았다고 보고한 것이다.
+
+    경계를 모르면 그 수집기는 집계에서 빠지는 게 맞다. 없는 데이터보다 틀린 데이터가
+    나쁘고, `[5]` 의 "누출 0건" 은 게이트라서 거짓 FAIL 이 특히 비싸다.
     """
     starts: dict[str, datetime] = {}
     for name in collectors:
         found = pilot_started_at(name)
         if found is None:
             logger.warning(
-                "  ⚠ %s 의 파일럿 시작 시각을 git 에서 읽지 못했다 — %s 로 대체한다. 구간이 틀릴 수 있다.",
+                "  ⚠ %s 를 집계에서 제외한다 — 파일럿 시작 시각을 origin/main 에서 찾지 못했다. "
+                "아직 머지되지 않았거나 플래그가 다른 경로로 들어왔다.",
                 name,
-                fallback.isoformat(),
             )
-            found = fallback
+            continue
         starts[name] = found
     return starts
 
@@ -658,7 +664,7 @@ def _post_title(path: Path) -> str | None:
     return m.group("title").strip().strip("\"'")
 
 
-def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]]:
+def check_post_duplicates(kind_filter: str | None, since: datetime | None = None) -> tuple[list[str], list[str]]:
     """포스트 수준 중복만 찾는다. Returns (제목 중복 리포트, 날짜·종류 중복 리포트).
 
     슬롯 키의 `kind` 는 꼬리 숫자를 떼고 정규화한다. 파일명을 그대로 키로 쓰면 두
@@ -666,6 +672,15 @@ def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]
     불가가 된다. 실제 재발행은 `…-report-2.md` 처럼 꼬리 숫자가 붙어서 나므로,
     정규화해야 이 검사가 의미를 갖는다. 제목이 없는 포스트를 잡는 유일한 경로이기도
     하다.
+
+    `since` 는 **묶음의 어느 파일도 그 날짜 이후가 아니면 보고하지 않는다.** 이 게이트가
+    묻는 것은 "파일럿이 중복을 만들었는가" 인데, 날짜를 안 보면 파일럿과 무관한 옛
+    중복이 그대로 FAIL 로 나온다 — `--collector all` 로 처음 돌렸을 때 crypto 의
+    2026-03-11 · 03-13 포스트 한 쌍이 그렇게 잡혔다(파일럿보다 5개월 앞선다).
+
+    묶음 **전체**를 자르지 않고 "하나라도 이후면 보고" 인 이유: 파일럿이 재발행을
+    만들었다면 새 파일만 경계 뒤에 있고 원본은 앞에 있다. 양쪽 모두를 요구하면 정작
+    잡아야 할 쌍을 놓친다.
     """
     by_title: dict[str, list[str]] = defaultdict(list)
     by_slot: dict[tuple[str, str], list[str]] = defaultdict(list)
@@ -682,9 +697,20 @@ def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]
             by_title[title].append(path.name)
         by_slot[(path.name[:10], KIND_SUFFIX_RE.sub("", kind))].append(path.name)
 
-    title_dups = [f"{title!r} → {', '.join(files)}" for title, files in sorted(by_title.items()) if len(files) > 1]
+    cutoff = since.strftime("%Y-%m-%d") if since else None
+
+    def _in_window(files: list[str]) -> bool:
+        return cutoff is None or any(name[:10] >= cutoff for name in files)
+
+    title_dups = [
+        f"{title!r} → {', '.join(files)}"
+        for title, files in sorted(by_title.items())
+        if len(files) > 1 and _in_window(files)
+    ]
     slot_dups = [
-        f"{day} / {kind} → {', '.join(files)}" for (day, kind), files in sorted(by_slot.items()) if len(files) > 1
+        f"{day} / {kind} → {', '.join(files)}"
+        for (day, kind), files in sorted(by_slot.items())
+        if len(files) > 1 and _in_window(files)
     ]
     return title_dups, slot_dups
 
@@ -929,6 +955,15 @@ def main() -> int:
     parser.add_argument("--run-limit", type=int, default=12, help="--with-runs 시 조사할 실행 수")
     args = parser.parse_args()
 
+    try:
+        pilot_merged = datetime.fromisoformat(args.pilot_merged)
+    except ValueError:
+        logger.error("--pilot-merged 파싱 실패: %s", args.pilot_merged)
+        return 2
+    if pilot_merged.tzinfo is None:
+        logger.error("--pilot-merged 에 타임존이 없다: %s (예: %s)", args.pilot_merged, PILOT_MERGED_DEFAULT)
+        return 2
+
     if args.collector == GROUP_TARGET:
         enabled = pilot_enabled_collectors()
         if enabled is None:
@@ -941,9 +976,19 @@ def main() -> int:
         if not enabled:
             logger.error("파일럿이 켜진 수집기가 하나도 없다 — 집계할 대상이 없다.")
             return 2
-        targets = sorted(enabled)
+        # 경계를 못 읽은 수집기는 여기서 빠진다. 뒤의 모든 절이 같은 대상 집합을
+        # 봐야 하므로 커밋 집계보다 **먼저** 푼다 — [1] 은 4개인데 [5] 는 1개면
+        # 리포트를 읽는 사람이 어느 쪽을 믿어야 할지 알 수 없다.
+        pilot_starts = resolve_pilot_starts(sorted(enabled))
+        if not pilot_starts:
+            logger.error("파일럿 시작 시각을 읽을 수 있는 수집기가 하나도 없다 — 집계할 수 없다.")
+            return 2
+        targets = sorted(pilot_starts)
     else:
+        # 단일 수집기 모드에서는 `--pilot-merged` 가 그대로 경계다 — 기존 동작을
+        # 바꾸지 않는다.
         targets = [args.collector]
+        pilot_starts = {args.collector: pilot_merged}
 
     logger.info("no-op skip 파일럿 관측 — %s", ", ".join(targets))
 
@@ -1002,7 +1047,7 @@ def main() -> int:
     title_dups: list[str] = []
     slot_dups: list[str] = []
     for name in targets:
-        part_title, part_slot = check_post_duplicates(name)
+        part_title, part_slot = check_post_duplicates(name, since=pilot_starts[name])
         title_dups.extend(part_title)
         slot_dups.extend(part_slot)
     logger.info("  제목 중복: %d건", len(title_dups))
@@ -1011,22 +1056,6 @@ def main() -> int:
     logger.info("  같은 날짜·종류 파일 중복: %d건", len(slot_dups))
     for line in slot_dups:
         logger.warning("    %s", line)
-
-    try:
-        pilot_merged = datetime.fromisoformat(args.pilot_merged)
-    except ValueError:
-        logger.error("--pilot-merged 파싱 실패: %s", args.pilot_merged)
-        return 2
-    if pilot_merged.tzinfo is None:
-        logger.error("--pilot-merged 에 타임존이 없다: %s (예: %s)", args.pilot_merged, PILOT_MERGED_DEFAULT)
-        return 2
-    # 단일 수집기 모드에서는 `--pilot-merged` 가 그대로 경계다 — 기존 동작을 바꾸지
-    # 않는다. 묶음 모드에서만 수집기별 시작 시각을 git 에서 도출하고, 못 읽은 것만
-    # 이 값으로 대체한다.
-    if len(targets) == 1:
-        pilot_starts = {targets[0]: pilot_merged}
-    else:
-        pilot_starts = resolve_pilot_starts(targets, pilot_merged)
 
     report_load_adjusted(targets, args.days, pilot_starts, datetime.now(KST))
     report_capture_rate(targets, args.days, pilot_starts, skip_blocks)

@@ -392,3 +392,67 @@ def test_wilson_interval_matches_known_value():
     low, high = cpo.wilson_interval(50, 100)
     assert abs(low - 0.4038) < 0.001, low
     assert abs(high - 0.5962) < 0.001, high
+
+
+# ---------------------------------------------------------------------------
+# 경계를 모르는 수집기 — 폴백이 거짓 FAIL 을 만들었다
+# ---------------------------------------------------------------------------
+
+
+def test_resolve_pilot_starts_drops_collectors_with_unknown_start(monkeypatch, caplog):
+    """경계를 못 읽은 수집기는 빼야 한다 — 남의 경계를 물려주면 거짓 누출이 난다.
+
+    실측: 확대분 3개가 아직 `origin/main` 에 없던 상태에서 regulatory 의 08-10 경계를
+    폴백으로 물려주자, 그 수집기들이 정상적으로 만든 no-op 커밋 17건이 전부 '누출' 로
+    보고됐다. 파일럿이 켜지지도 않았는데 skip 이 동작하지 않았다고 말한 것이다.
+    """
+    monkeypatch.setattr(cpo, "pilot_started_at", lambda name: _PILOT if name == "regulatory" else None)
+
+    with caplog.at_level("WARNING"):
+        starts = cpo.resolve_pilot_starts(["regulatory", "crypto", "stock"])
+
+    assert set(starts) == {"regulatory"}, f"경계를 모르는 수집기가 남았다: {sorted(starts)}"
+    assert any("제외" in r.getMessage() for r in caplog.records), (
+        f"제외했다는 경고가 없다: {[r.getMessage() for r in caplog.records]}"
+    )
+
+
+def test_resolve_pilot_starts_takes_no_fallback_argument():
+    """폴백 인자를 되살리면 같은 거짓 FAIL 로 돌아간다 — 시그니처로 막는다."""
+    import inspect
+
+    params = list(inspect.signature(cpo.resolve_pilot_starts).parameters)
+    assert params == ["collectors"], (
+        f"인자가 {params} 다. 폴백 경계를 받으면 파일럿이 안 켜진 수집기에 남의 경계가 붙는다."
+    )
+
+
+# ---------------------------------------------------------------------------
+# 중복 게이트의 시간 범위
+# ---------------------------------------------------------------------------
+
+
+def test_check_post_duplicates_ignores_pairs_entirely_before_pilot(tmp_path, monkeypatch):
+    """파일럿보다 5개월 앞선 중복이 게이트를 FAIL 시키면 안 된다."""
+    monkeypatch.setattr(cpo, "POSTS_DIR", tmp_path)
+    for day in ("2026-03-11", "2026-03-13"):
+        (tmp_path / f"{day}-daily-crypto-market-report.md").write_text("---\ntitle: 같은 제목\n---\n", encoding="utf-8")
+
+    title_dups, _ = cpo.check_post_duplicates("crypto", since=_PILOT)
+    assert title_dups == [], f"파일럿 이전 중복은 게이트가 아니다: {title_dups}"
+
+    # since 를 주지 않으면 기존 동작 그대로 — 옛 중복도 보인다.
+    title_dups_all, _ = cpo.check_post_duplicates("crypto")
+    assert len(title_dups_all) == 1, title_dups_all
+
+
+def test_check_post_duplicates_reports_when_only_the_new_file_is_after_pilot(tmp_path, monkeypatch):
+    """재발행은 새 파일만 경계 뒤에 있다 — 양쪽 모두를 요구하면 정작 잡을 쌍을 놓친다."""
+    monkeypatch.setattr(cpo, "POSTS_DIR", tmp_path)
+    for day in ("2026-08-09", "2026-08-11"):  # 파일럿 08-10 을 사이에 두고
+        (tmp_path / f"{day}-daily-crypto-market-report.md").write_text(
+            "---\ntitle: 재발행된 제목\n---\n", encoding="utf-8"
+        )
+
+    title_dups, _ = cpo.check_post_duplicates("crypto", since=_PILOT)
+    assert len(title_dups) == 1, f"경계를 걸친 재발행은 잡아야 한다: {title_dups}"
