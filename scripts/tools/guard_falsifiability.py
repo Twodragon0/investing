@@ -524,6 +524,20 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         r'_JOB_ID_RE = re.compile(r"^\s*(?P<job>[A-Za-z_][A-Za-z0-9_-]*):\s*$", re.M)',
         "tests/test_required_check_aggregator_guard.py::test_job_id_scanner_rejects_nested_keys",
     ),
+    StaticCase(
+        "대조군을 비워 대조군 비 지표를 소멸시킴",
+        "scripts/tools/check_pilot_observation.py",
+        'CONTROL_COLLECTORS = ("political", "geopolitical")',
+        "CONTROL_COLLECTORS = ()",
+        "tests/test_check_pilot_observation_control_group_guard.py::test_control_group_is_not_empty",
+    ),
+    StaticCase(
+        "확대된 수집기의 파일럿 플래그가 조용히 되돌아감",
+        ".github/workflows/collect-crypto-news.yml",
+        "skip-noop-state-commits: 'true'",
+        "skip-noop-state-commits: 'false'",
+        "tests/test_check_pilot_observation_control_group_guard.py::test_every_mapped_collector_is_either_pilot_or_control",
+    ),
 )
 
 
