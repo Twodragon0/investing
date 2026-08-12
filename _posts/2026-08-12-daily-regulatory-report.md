@@ -29,35 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-12 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: CFTC 시장 안정을 보장하기 위해 긴급 권한 행사 - 42건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: ETF, 강화 주목</li><li>🏦 <strong>거래소</strong>: ETF, 해외거래소 동향 주시</li><li>📈 <strong>가격/시장</strong>: 강화, 조치 주목</li><li>🟣 <strong>DeFi</strong>: 3건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cftc.gov/PressRoom/PressReleases/9281-26">CFTC 시장 안정을 보장하기 위해 긴급 권한 행사</a> <span class="p0-desc">CFTC은 KalshiEX, LLC의 시장 긴급 상황 통지에 대응하여 비상 권한을 행사하고 상품 거래법의 핵심 원칙에 따라 거래소를 계속 운영하도록 명령했습니다.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: CFTC 시장 안정을 보장하기 위해 긴급 권한 행사 
-총 42건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (23건): ETF, 강화, 위한 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (8건): ETF, 해외거래소, 해외상장 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📈 가격/시장** (18건): 강화, 조치, 기사 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- CFTC 시장 안정을 보장하기 위해 긴급 권한 행사
-
-### 주요 이슈
-
-- 국내-해외상장 ETF간 비대칭 규제 해소를 위한 단일종목 레버리지 상품(ETF·ETN) 관련 설명 - 노컷뉴스 8월 10일자 기사 등에 대한 설
-- 국내-해외상장 ETF간 비대칭 규제 해소를 위한 단일종목 레버리지 상품(ETF·ETN) 관련 설명 - 한국경제 8월 3일자 기사 등에 대한 설명
-- 금융위, 가상자산사업자 심사 강화…트래블룰 전면 확대·해외거래소 거래 규제 강화 - 블루밍비트
-- 외 2건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 30건, 유럽 7건, 미국 5건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 42건
 - **한국**: 30건

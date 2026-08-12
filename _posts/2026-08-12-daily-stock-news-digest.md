@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-12 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스닥 장중 6%대 급등…매수 사이드카 발동, 코스피는 상승폭 축소 - 산경투데이 - 195건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 반도체 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 상승 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5vRVJJVV9uSkh6enNhTS1aaW4xU0g2MGxLZEhGTzNzYWN6dG5ablVkdnFISE5feDZaandibHBuVEFCRE42eUIwZTlyUVNxM1gyUW5maXI4eE5MWFVRMDlFY21pSTZRVjBrc1pReUNoVVfSAXRBVV95cUxPSVpiMnNYNzAtMU9lYXVkekJnT3FMY2lGYkY1RE1CRndOV3dQS2w2Z2llNXlBT0pDR0doQ0g5VjFlZVZkaUJXNFhUeU9IbmtaVE5CcG5SendHSnh1Z2l4R1RkVEJaVGVBb1hISFBBTGxkcWc1TA?oc=5">코스닥 장중 6%대 급등…매수 사이드카 발동, 코스피는 상승폭 축소 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 한승수 기자] 국내 증시가 10일 오전 동반 상승세를 보이는 가운데 코스닥이 장중 6% 넘게 뛰며 코스피보다 두드러진 강세를 나타내고 있다.코스닥에서는 지수 급등으로 매수 사이드카까지 발동됐다.이날 오전 코스닥지수는 전 거래일보다 47.29포인트(5.92%) 오른 846</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlFsM0tYUV9IdDJnOFNqWGVBYzl1dTFqc3hlWXlvdndWRjRVaDBkY3ZnZ3FkOUhlekxwZjBsMjdQT0x0ajM0UWVGLUMxNFRIb0NNSlRBRVQtd0h1WnhCRGpqaXJLQXJBWmcwWTdKejlUb1l3QWhTZ0t0aXNtc1Z5T2wzc0JyYmV0?oc=5">특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세'</a> <span class="p0-desc">[특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세' 글로벌이코노믹</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스닥 장중 6%대 급등…매수 사이드카 발동, 코스피는 상승폭 축소 - 산경투데이 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 195건의 뉴스 중 P1 주요 이슈도 30건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (43건): 코스피, 반도체, 코스닥 가격 변동 (43건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (25건): 환율, 상승, 인플레이션 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (23건): 반도체, 삼성전자, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스닥 장중 6%대 급등…매수 사이드카 발동, 코스피는 상승폭 축소 - 산경투데이
-- 특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세'
-
-### 주요 이슈
-
-- 월마트 수입이 마감되었습니다. 이 단기 옵션 거래는 14%의 수익을 올릴 수 있습니다.
-- 정부는 모든 수입업자에 대한 관세 환급을 위한 무역 판사의 명령에 맞서 싸우고 있습니다.
-- Legend Biotech, 조정 EPS가 합의를 두 배로 끌어올리면서 2분기 실적이 6% 증가
-- 외 27건
-
-### 투자자 체크포인트
-
-- 한국 기사 70건, 글로벌 기사 125건 수집
-- 한국 지수: KOSPI 6,345.53(+0.73%), KOSDAQ 857.84(+0.39%), USD/KRW 1,412.31(-0.39%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">43건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:58%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:53%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:14%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:19%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-12.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,345.53 (+0.73%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 857.84 (+0.39%).
+- *유가가 상승했고 투자자들은 주요*
 
 ## 테마별 주요 뉴스
 

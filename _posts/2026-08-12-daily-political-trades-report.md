@@ -14,9 +14,6 @@ description: "오하이오주 하원의원, 22건의 공개 지연으로 주식�
 image_alt: "정치인 거래·정책 리포트 - 2026-08-12 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-12.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-12** 정치권 핵심 이슈: **오하이오주 하원의원, 22건의 공개 지연으로 주식법 위반 - 미국 뉴스 - NOTUS**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **35건** (미국 의회 거래 2건, SEC 내부자 거래 15건, 한국 정치인 1건, 중앙은행 17건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,17 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-12 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(7회), **의회**(5회), **연준**(5회), **공시**(3회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **35건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 15건, 한국 정치인 1건, 중앙은행 17건입니다.
-
-**미국 의회 거래** 동향에서는 Rep. Michael Rulli failed to properly disclose 22 personal stock trades, according to a NOTUS review ofnew congressional financial records, making him the latest member of Congress to violate a 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 LIVE: Lagarde Holds ECB News Conference After Key Interest Rate Decision Today | DWS News | AC14 Alicja (hDpZlGwfo5) Mshale 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 이투데이 · 정치 핵심 정리 · 정부ㆍ여당의 지지율 하락 배경에는 부동산ㆍ주식 등 정책 부담과 여당 내부의 정치적 혼선이 맞물린 데다, 청년층이 현 정부를 새로운 ‘기득권’으로 인식하는 흐름까지 겹쳤다는 분석이 나왔다. 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 

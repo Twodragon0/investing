@@ -30,6 +30,7 @@ image_alt: "소셜 미디어 동향 - 2026-08-11 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 국힘 "이재명 정부는 '국민 포기 정부'… 경제·안보 총체적 난맥상, 국정기조 전면 전환하라" - 21건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 인상 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 부동산 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 이재명, 부동산 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 상원 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9BdW16N2pUaG1pWUo3UGF1YW9TeXpmaktJTTZZb3JTQ05MeUdnb1dfaWl5c1Z6UlVlbmhHSDhaRXVBX0Q3TzIzY2xZb1FsRW5DNlVheXpGRGNvc01OeWlja1h6cGg3TW9IUjVuNw?oc=5">국힘 "이재명 정부는 '국민 포기 정부'… 경제·안보 총체적 난맥상, 국정기조 전면 전환하라"</a> <span class="p0-desc">10일 국회에서 열린 국민의힘 최고위원회의에서 장동혁 당 대표와 정점식 원내대표는 이재명 정부의 실정을 강력하게 규탄하며 국정기조의 전면적인 전환을 촉구했다. 이들은 최근 부동산.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 주요 이슈를 정리했습니다.
