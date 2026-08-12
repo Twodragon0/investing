@@ -222,7 +222,7 @@ def test_report_load_adjusted_warns_when_target_is_in_its_own_control(monkeypatc
     pilot = datetime(2026, 8, 10, 13, 14, 51, tzinfo=kst)
 
     with caplog.at_level("WARNING"):
-        cpo.report_load_adjusted("political", 7, pilot, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
+        cpo.report_load_adjusted(["political"], 7, {"political": pilot}, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
 
     messages = [r.getMessage() for r in caplog.records]
     assert any("자기 자신" in m or "자기참조" in m for m in messages), f"자기참조 경고가 없다: {messages}"
@@ -245,7 +245,7 @@ def test_report_load_adjusted_warns_on_contaminated_control(monkeypatch, caplog)
     pilot = datetime(2026, 8, 10, 13, 14, 51, tzinfo=kst)
 
     with caplog.at_level("WARNING"):
-        cpo.report_load_adjusted("regulatory", 7, pilot, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
+        cpo.report_load_adjusted(["regulatory"], 7, {"regulatory": pilot}, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
 
     assert any("오염" in r.message or "political" in str(r.args) for r in caplog.records), (
         f"오염 경고가 없다. 기록된 경고: {[r.getMessage() for r in caplog.records]}"

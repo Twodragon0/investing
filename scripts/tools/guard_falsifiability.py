@@ -538,6 +538,13 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "skip-noop-state-commits: 'false'",
         "tests/test_check_pilot_observation_control_group_guard.py::test_every_mapped_collector_is_either_pilot_or_control",
     ),
+    StaticCase(
+        "묶음 집계가 층화 대신 단일 경계로 자름",
+        "scripts/tools/check_pilot_observation.py",
+        "            runs,\n            pilot_starts[name],",
+        "            runs,\n            min(pilot_starts.values()),",
+        "tests/test_check_pilot_observation_load_adjusted.py::test_group_mode_splits_each_collector_at_its_own_start",
+    ),
 )
 
 

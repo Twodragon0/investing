@@ -86,14 +86,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import NamedTuple
+from typing import TYPE_CHECKING, NamedTuple
 from urllib.parse import urlparse
+
+if TYPE_CHECKING:
+    from collections.abc import Mapping, Sequence
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
 from config import setup_logging  # noqa: E402
@@ -118,6 +122,13 @@ URL_RE = re.compile(r'https?://[^\s)\]"<>]+')
 NON_ITEM_HOSTS = ("2twodragon.com", "w3.org")
 
 DEFAULT_COLLECTOR = "regulatory"
+
+# `--collector all` — 파일럿이 켜진 수집기를 전부 묶어 집계한다.
+#
+# 상수 목록이 아니라 `pilot_enabled_collectors()` 로 푼다. 목록으로 두면 확대할 때마다
+# 두 곳(워크플로우 플래그, 이 목록)을 맞춰야 하고 빠뜨리면 조용히 대상이 준다.
+# 플래그를 못 읽으면 fail closed — 집계 자체를 거부한다.
+GROUP_TARGET = "all"
 
 # 파일럿이 main 에 들어온 시각 — 커밋 5297e40bb
 # "feat: no-op 수집기 커밋을 만들지 않는다 (regulatory 파일럿) …(#1148)"
@@ -436,6 +447,84 @@ def pilot_enabled_collectors() -> frozenset[str] | None:
     return frozenset(enabled)
 
 
+def pilot_started_at(collector: str) -> datetime | None:
+    """그 수집기에 파일럿 플래그가 **main 에 들어온** 시각. 모르면 None.
+
+    묶음 집계에서 수집기마다 파일럿 시작이 다르기 때문에 필요하다. regulatory 는
+    2026-08-10, 1차 확대분은 그 뒤다. 하나의 경계로 전부 자르면 둘 중 하나가 틀린다 —
+    이른 경계를 쓰면 아직 파일럿이 아니던 확대분 구간이 '후' 로 들어가고, 늦은 경계를
+    쓰면 regulatory 의 관측일이 통째로 버려진다.
+
+    상수 표가 아니라 git 에서 도출한다. 표로 두면 확대할 때마다 갱신해야 하고, 빠뜨리면
+    조용히 틀린 구간이 나온다 — `CONTROL_COLLECTORS` 에서 이미 겪은 실패 모드다.
+
+    키 이름(`skip-noop-state-commits`)으로 찾는다. 값(`'true'`)으로 찾으면 인용부호
+    스타일이 다른 워크플로우를 놓친다 — `PILOT_FLAG_RE` 가 두 형태를 모두 받는 것과
+    같은 이유다.
+
+    플래그를 껐다 켠 이력이 있으면 최초 도입 시각을 돌려준다. 그런 이력이 생기면 이
+    값은 틀리지만, `test_every_mapped_collector_is_either_pilot_or_control` 이 되돌림을
+    red 로 만들므로 조용히 남아 있을 수 없다.
+    """
+    workflow = workflow_for(collector)
+    if workflow is None:
+        return None
+    out = _git(
+        "log",
+        "origin/main",
+        "--reverse",
+        "--format=%cI",
+        "-S",
+        "skip-noop-state-commits",
+        "--",
+        f".github/workflows/{workflow}",
+    )
+    first = out.split("\n", 1)[0].strip()
+    if not first:
+        return None
+    try:
+        return datetime.fromisoformat(first).astimezone(KST)
+    except ValueError:
+        logger.warning("파일럿 시작 시각 파싱 실패 (%s): %s", collector, first)
+        return None
+
+
+def resolve_pilot_starts(collectors: Sequence[str], fallback: datetime) -> dict[str, datetime]:
+    """수집기별 파일럿 시작 시각. git 에서 못 읽으면 `fallback` 을 쓴다.
+
+    폴백은 단일 수집기 모드의 `--pilot-merged` 다. 묶음 모드에서 폴백이 쓰이면 그
+    수집기의 구간이 다른 수집기의 경계로 잘리므로 경고를 남긴다 — 조용히 틀리지 않게.
+    """
+    starts: dict[str, datetime] = {}
+    for name in collectors:
+        found = pilot_started_at(name)
+        if found is None:
+            logger.warning(
+                "  ⚠ %s 의 파일럿 시작 시각을 git 에서 읽지 못했다 — %s 로 대체한다. 구간이 틀릴 수 있다.",
+                name,
+                fallback.isoformat(),
+            )
+            found = fallback
+        starts[name] = found
+    return starts
+
+
+def wilson_interval(successes: int, total: int, z: float = 1.96) -> tuple[float, float] | None:
+    """비율의 Wilson 95% 신뢰구간. 표본이 0이면 None.
+
+    정규근사(Wald)를 쓰지 않는 이유: 후 구간 표본이 한 자릿수이고 skip 비율이 0 이나
+    1 에 가까울 때 Wald 구간은 [0,1] 을 벗어나거나 폭이 0으로 붕괴한다. 설계 문서의
+    CI 폭 표도 Wilson 이라 같은 척도를 유지한다.
+    """
+    if total <= 0:
+        return None
+    p = successes / total
+    denom = 1 + z**2 / total
+    center = (p + z**2 / (2 * total)) / denom
+    margin = z * math.sqrt(p * (1 - p) / total + z**2 / (4 * total**2)) / denom
+    return max(0.0, center - margin), min(1.0, center + margin)
+
+
 def read_noop_whitelist() -> frozenset[str] | None:
     """액션의 `NOOP_STATE_PATHS` 를 읽는다. 읽지 못하면 None.
 
@@ -635,30 +724,58 @@ def _fmt_delta(value: float | None) -> str:
     return "n/a" if value is None else f"{value:+.1f}%"
 
 
-def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now: datetime) -> None:
+def report_load_adjusted(
+    collectors: Sequence[str],
+    days: int,
+    pilot_starts: Mapping[str, datetime],
+    now: datetime,
+) -> None:
     """[4] 부하 보정 절감 — 실행당 커밋과 대조군 비를 나란히 출력한다.
 
     판정을 내리지 않는다. 이 스크립트의 종료 코드는 포스트 수준 중복만 본다 —
     절감은 측정 대상이지 게이트가 아니다.
+
+    수집기가 여럿이면 **층화 합산**이다. 각 수집기를 자기 경계로 전·후로 가른 뒤
+    분자와 분모를 더한다. 하나의 경계로 전부 자르면 파일럿 시작이 다른 수집기의
+    구간이 틀어진다.
+
+    **대조군 비는 층화 합산하지 않는다.** 대조군 커밋을 파일럿 수집기 수만큼 중복
+    계상하게 되어 절대값이 묶음 크기에 따라 달라진다. 대신 수집기별로 따로 낸다 —
+    비교 가능한 숫자를 내는 편이 합산된 숫자 하나보다 낫다.
     """
-    logger.info("[4] 부하 보정 절감 (파일럿 머지 %s)", pilot_merged.isoformat())
+    logger.info("[4] 부하 보정 절감 (대상 %s)", ", ".join(collectors))
+    for name in collectors:
+        logger.info("  파일럿 시작 %s — %s", name, pilot_starts[name].isoformat())
 
     # 커밋과 실행에 같은 창을 강제한다. git `--since` 와 gh `--limit` 은 서로 다른
     # 기준으로 자르므로 여기서 한 번 더 맞추지 않으면 분모만 멀리까지 샌다.
     window_start = now - timedelta(days=days)
     raw = commit_log(days)
-    pilot_commits = parse_commit_timestamps(raw, collector)
 
     # 실행은 최대 6회/일을 가정하고 여유를 둔다 — 부족하면 전 구간이 잘려 나간다.
-    workflow = workflow_for(collector)
-    if workflow is None:
-        runs, reason = [], f"{collector!r} 의 워크플로우 매핑이 없다 (COLLECTOR_WORKFLOWS 에 추가하세요)"
-    else:
+    totals = [0, 0, 0, 0]
+    skipped: list[str] = []
+    for name in collectors:
+        workflow = workflow_for(name)
+        if workflow is None:
+            skipped.append(f"{name}: 워크플로우 매핑 없음 (COLLECTOR_WORKFLOWS 에 추가하세요)")
+            continue
         runs, reason = collect_run_timestamps(workflow, limit=max(30, days * 6))
-    if reason:
-        logger.info("  실행당 커밋: 건너뜀 (%s)", reason)
-    else:
-        per_run = build_ratio(pilot_commits, runs, pilot_merged, since=window_start)
+        if reason:
+            skipped.append(f"{name}: {reason}")
+            continue
+        part = build_ratio(
+            parse_commit_timestamps(raw, name),
+            runs,
+            pilot_starts[name],
+            since=window_start,
+        )
+        totals = [a + b for a, b in zip(totals, part, strict=True)]
+
+    for line in skipped:
+        logger.info("  실행당 커밋 제외 — %s", line)
+    if any(totals):
+        per_run = LoadRatio(*totals)
         logger.info(
             "  실행당 커밋   전 %s (%d/%d)  후 %s (%d/%d)  → %s",
             _fmt_ratio(per_run.pre()),
@@ -670,14 +787,18 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
             _fmt_delta(per_run.delta_pct()),
         )
 
+    else:
+        logger.info("  실행당 커밋: 건너뜀 (모든 대상에서 실행을 가져오지 못했다)")
+
     # `--collector crypto` 처럼 CLI 로 대상을 바꾸면 대조군에 자기 자신이 들어간다.
     # 가드 테스트는 기본 대상만 검사하므로 오버라이드는 런타임에서 잡는다.
-    if collector in CONTROL_COLLECTORS:
-        logger.warning(
-            "  ⚠ 대조군에 대상 자기 자신(%s)이 들어 있다 — 분모가 분자를 포함하므로 "
-            "대조군 비는 파일럿 효과에 둔감하다.",
-            collector,
-        )
+    for name in collectors:
+        if name in CONTROL_COLLECTORS:
+            logger.warning(
+                "  ⚠ 대조군에 대상 자기 자신(%s)이 들어 있다 — 분모가 분자를 포함하므로 "
+                "대조군 비는 파일럿 효과에 둔감하다.",
+                name,
+            )
 
     # 대조군 오염을 도구 자신이 알린다. 테스트만 지키면 CI 를 안 보는 사람은 모른다.
     enabled = pilot_enabled_collectors()
@@ -691,21 +812,31 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
         )
 
     control_commits = [t for name in CONTROL_COLLECTORS for t in parse_commit_timestamps(raw, name)]
-    versus = build_ratio(pilot_commits, control_commits, pilot_merged, since=window_start)
     logger.info("  대조군: %s", ", ".join(CONTROL_COLLECTORS))
-    logger.info(
-        "  대조군 비    전 %s (%d/%d)  후 %s (%d/%d)  → %s",
-        _fmt_ratio(versus.pre(), 3),
-        versus.pre_num,
-        versus.pre_den,
-        _fmt_ratio(versus.post(), 3),
-        versus.post_num,
-        versus.post_den,
-        _fmt_delta(versus.delta_pct()),
-    )
+    for name in collectors:
+        versus = build_ratio(
+            parse_commit_timestamps(raw, name),
+            control_commits,
+            pilot_starts[name],
+            since=window_start,
+        )
+        logger.info(
+            "  대조군 비 (%s)  전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+            name,
+            _fmt_ratio(versus.pre(), 3),
+            versus.pre_num,
+            versus.pre_den,
+            _fmt_ratio(versus.post(), 3),
+            versus.post_num,
+            versus.post_den,
+            _fmt_delta(versus.delta_pct()),
+        )
 
-    elapsed_days = (now - pilot_merged).total_seconds() / 86400
-    if is_underpowered(pilot_merged, now):
+    # 게이트는 가장 늦게 시작한 수집기 기준이다. 가장 이른 것으로 재면 확대분이 아직
+    # 하루도 안 돌았는데 "3일 충족" 이 된다.
+    youngest = max(pilot_starts[name] for name in collectors)
+    elapsed_days = (now - youngest).total_seconds() / 86400
+    if is_underpowered(youngest, now):
         logger.warning(
             "  ⚠ 관측 %.1f일 < %d일 — 판정 보류. 위 숫자는 방향 참고용이다.",
             elapsed_days,
@@ -716,9 +847,9 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
 
 
 def report_capture_rate(
-    collector: str,
+    collectors: Sequence[str],
     days: int,
-    pilot_merged: datetime,
+    pilot_starts: Mapping[str, datetime],
     skip_blocks: list[list[str]] | None,
 ) -> bool | None:
     """[5] 포착률 — 누출 0건 · 오검출 0건인가. None 이면 판정 불가.
@@ -737,7 +868,14 @@ def report_capture_rate(
         return None
     logger.info("  화이트리스트(액션 기준): %s", ", ".join(sorted(whitelist)))
 
-    leaks, counts = find_leaks(collect_collector_commits(collector, days), pilot_merged, whitelist)
+    # 수집기마다 자기 경계로 자른 뒤 합산한다. 누출은 "파일럿이 켜진 뒤에도 남았는가"
+    # 라서 경계를 잘못 잡으면 켜지기 전 커밋이 누출로 둔갑한다.
+    leaks: list[CollectorCommit] = []
+    counts: Counter[str] = Counter()
+    for name in collectors:
+        part_leaks, part_counts = find_leaks(collect_collector_commits(name, days), pilot_starts[name], whitelist)
+        leaks.extend(part_leaks)
+        counts.update(part_counts)
     total = sum(counts.values())
     logger.info(
         "  파일럿 후 커밋 %d건 — 콘텐츠 %d / _state+dedup 등 %d / no-op %d",
@@ -772,7 +910,11 @@ def report_capture_rate(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--collector", default=DEFAULT_COLLECTOR, help=f"수집기 이름 (기본: {DEFAULT_COLLECTOR})")
+    parser.add_argument(
+        "--collector",
+        default=DEFAULT_COLLECTOR,
+        help=f"수집기 이름, 또는 '{GROUP_TARGET}' 로 파일럿이 켜진 수집기 전부를 묶어 집계 (기본: {DEFAULT_COLLECTOR})",
+    )
     parser.add_argument(
         "--pilot-merged",
         default=PILOT_MERGED_DEFAULT,
@@ -787,10 +929,28 @@ def main() -> int:
     parser.add_argument("--run-limit", type=int, default=12, help="--with-runs 시 조사할 실행 수")
     args = parser.parse_args()
 
-    logger.info("no-op skip 파일럿 관측 — %s", args.collector)
+    if args.collector == GROUP_TARGET:
+        enabled = pilot_enabled_collectors()
+        if enabled is None:
+            logger.error(
+                "%r 를 풀 수 없다 — 워크플로우에서 파일럿 플래그를 읽지 못했다. "
+                "못 읽은 것을 '꺼짐' 으로 치면 대상이 조용히 빠진다.",
+                GROUP_TARGET,
+            )
+            return 2
+        if not enabled:
+            logger.error("파일럿이 켜진 수집기가 하나도 없다 — 집계할 대상이 없다.")
+            return 2
+        targets = sorted(enabled)
+    else:
+        targets = [args.collector]
+
+    logger.info("no-op skip 파일럿 관측 — %s", ", ".join(targets))
 
     logger.info("[1] 수집기 커밋 수 (최근 %d일, KST)", args.days)
-    counts = collect_commit_counts(args.collector, args.days)
+    counts: Counter[str] = Counter()
+    for name in targets:
+        counts.update(collect_commit_counts(name, args.days))
     if not counts:
         logger.info("  해당 수집기 커밋 없음")
     for day in sorted(counts):
@@ -799,24 +959,52 @@ def main() -> int:
     logger.info("[2] no-op skip 발생 횟수")
     skip_blocks: list[list[str]] | None = None
     if args.with_runs:
-        workflow = workflow_for(args.collector)
-        if workflow is None:
-            skips, checked, reason = 0, 0, f"{args.collector!r} 의 워크플로우 매핑이 없다"
-            skip_blocks = None
-        else:
-            skips, checked, reason, skip_blocks = collect_skip_counts(workflow, args.run_limit)
-        if reason:
-            logger.info("  건너뜀: %s", reason)
-            skip_blocks = None
-        else:
-            logger.info("  실행 %d건 중 skip %d건", checked, skips)
-            if skips == 0:
+        total_skips = total_checked = 0
+        blocks: list[list[str]] = []
+        reasons: list[str] = []
+        for name in targets:
+            workflow = workflow_for(name)
+            if workflow is None:
+                reasons.append(f"{name}: 워크플로우 매핑이 없다")
+                continue
+            skips, checked, reason, part = collect_skip_counts(workflow, args.run_limit)
+            if reason:
+                reasons.append(f"{name}: {reason}")
+                continue
+            total_skips += skips
+            total_checked += checked
+            blocks.extend(part or [])
+            if len(targets) > 1:
+                logger.info("  %-12s 실행 %d건 중 skip %d건", name, checked, skips)
+        for line in reasons:
+            logger.info("  건너뜀: %s", line)
+        if total_checked:
+            skip_blocks = blocks
+            logger.info("  합계  실행 %d건 중 skip %d건", total_checked, total_skips)
+            interval = wilson_interval(total_skips, total_checked)
+            if interval is not None:
+                low, high = interval
+                logger.info(
+                    "  skip 비율 %.1f%% — 95%% CI [%.1f%%, %.1f%%] 폭 %.2f",
+                    100 * total_skips / total_checked,
+                    100 * low,
+                    100 * high,
+                    high - low,
+                )
+            if total_skips == 0:
                 logger.warning("  표본 0 — 새 코드 경로가 실행되지 않았다. 절감 판정 불가.")
+        else:
+            logger.info("  실행 표본 0 — skip 비율을 낼 수 없다.")
     else:
         logger.info("  건너뜀 (--with-runs 로 활성화)")
 
     logger.info("[3] 포스트 수준 중복 (게이트)")
-    title_dups, slot_dups = check_post_duplicates(args.collector)
+    title_dups: list[str] = []
+    slot_dups: list[str] = []
+    for name in targets:
+        part_title, part_slot = check_post_duplicates(name)
+        title_dups.extend(part_title)
+        slot_dups.extend(part_slot)
     logger.info("  제목 중복: %d건", len(title_dups))
     for line in title_dups:
         logger.warning("    %s", line)
@@ -832,10 +1020,22 @@ def main() -> int:
     if pilot_merged.tzinfo is None:
         logger.error("--pilot-merged 에 타임존이 없다: %s (예: %s)", args.pilot_merged, PILOT_MERGED_DEFAULT)
         return 2
-    report_load_adjusted(args.collector, args.days, pilot_merged, datetime.now(KST))
-    report_capture_rate(args.collector, args.days, pilot_merged, skip_blocks)
+    # 단일 수집기 모드에서는 `--pilot-merged` 가 그대로 경계다 — 기존 동작을 바꾸지
+    # 않는다. 묶음 모드에서만 수집기별 시작 시각을 git 에서 도출하고, 못 읽은 것만
+    # 이 값으로 대체한다.
+    if len(targets) == 1:
+        pilot_starts = {targets[0]: pilot_merged}
+    else:
+        pilot_starts = resolve_pilot_starts(targets, pilot_merged)
 
-    dup_urls, total_urls = count_item_recurrence(args.collector, recent=8)
+    report_load_adjusted(targets, args.days, pilot_starts, datetime.now(KST))
+    report_capture_rate(targets, args.days, pilot_starts, skip_blocks)
+
+    dup_urls = total_urls = 0
+    for name in targets:
+        part_dup, part_total = count_item_recurrence(name, recent=8)
+        dup_urls += part_dup
+        total_urls += part_total
     logger.info("[참고] 항목 URL 재등장: %d/%d건 (최근 포스트 8개)", dup_urls, total_urls)
     logger.info("  게이트 아님 — 일일 리포트는 그 시점 피드의 스냅샷이라 설계상 반복된다.")
 

@@ -226,7 +226,7 @@ def test_report_load_adjusted_passes_window_to_both_ratios(monkeypatch):
     monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([_ts(9, 7)], None))
 
     now = _ts(11, 12)
-    cpo.report_load_adjusted("regulatory", 7, _PILOT, now)
+    cpo.report_load_adjusted(["regulatory"], 7, {"regulatory": _PILOT}, now)
 
     assert len(seen) == 2, f"실행당 커밋·대조군 비 두 지표가 모두 계산돼야 한다 (호출 {len(seen)}회)"
     assert all(s == now - timedelta(days=7) for s in seen), f"창이 전달되지 않았다: {seen}"
@@ -245,7 +245,7 @@ def test_report_load_adjusted_still_reports_control_ratio_without_gh(monkeypatch
     monkeypatch.setattr(cpo, "commit_log", lambda _days: _LOG)
     monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([], "gh CLI 미설치"))
 
-    cpo.report_load_adjusted("regulatory", 7, _PILOT, _ts(11, 12))
+    cpo.report_load_adjusted(["regulatory"], 7, {"regulatory": _PILOT}, _ts(11, 12))
 
     assert len(seen) == 1, "gh 부재 시 대조군 비 한 건은 계산돼야 한다"
 
@@ -258,3 +258,137 @@ def test_collect_run_timestamps_parses_iso(monkeypatch):
     stamps, reason = cpo.collect_run_timestamps("collect-regulatory.yml", 30)
     assert reason is None
     assert cpo.split_by_pilot(stamps, _PILOT) == (1, 1)
+
+
+# ---------------------------------------------------------------------------
+# 묶음 집계 — 수집기마다 파일럿 시작이 다르다
+# ---------------------------------------------------------------------------
+
+# regulatory 는 08-10, crypto 는 08-12 에 파일럿이 켜졌다고 두고 만든 로그.
+# 두 수집기의 커밋이 그 사이 구간에 하나씩 들어 있어, 경계를 하나로 잡으면 반드시
+# 어느 한쪽이 틀리도록 배치했다.
+_GROUP_LOG = "\n".join(
+    [
+        "2026-08-09T07:00:00+09:00|chore: collect regulatory news 2026-08-09T00:00Z",  # reg 전
+        "2026-08-11T07:00:00+09:00|chore: collect regulatory news 2026-08-11T00:00Z",  # reg 후
+        "2026-08-09T08:00:00+09:00|chore: collect crypto news 2026-08-09T01:00Z",  # crypto 전
+        "2026-08-11T08:00:00+09:00|chore: collect crypto news 2026-08-11T01:00Z",  # crypto 전
+        "2026-08-13T08:00:00+09:00|chore: collect crypto news 2026-08-13T01:00Z",  # crypto 후
+    ]
+)
+
+_REG_START = datetime(2026, 8, 10, 13, 0, tzinfo=_KST)
+_CRYPTO_START = datetime(2026, 8, 12, 13, 0, tzinfo=_KST)
+
+
+def test_group_mode_splits_each_collector_at_its_own_start(monkeypatch, caplog):
+    """수집기마다 자기 경계로 갈라 합산해야 한다.
+
+    하나의 경계로 전부 자르면 반드시 틀린다. 이 픽스처에서 08-11 crypto 커밋은
+    regulatory 경계(08-10)로 자르면 '후', 자기 경계(08-12)로 자르면 '전' 이다.
+
+    기대: 전 3건(reg 1 + crypto 2) / 후 2건(reg 1 + crypto 1).
+    regulatory 경계 하나로 잘랐다면 전 2 / 후 3 이 나온다.
+    """
+    monkeypatch.setattr(cpo, "commit_log", lambda _days: _GROUP_LOG)
+    # 실행은 수집기당 전 1 / 후 1 로 고정 — 분모가 아니라 분자의 층화를 보는 테스트다.
+    monkeypatch.setattr(
+        cpo,
+        "collect_run_timestamps",
+        lambda _wf, limit: ([_ts(9, 0), _ts(13, 12)], None),
+    )
+    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory", "crypto"}))
+
+    with caplog.at_level("INFO"):
+        cpo.report_load_adjusted(
+            ["regulatory", "crypto"],
+            7,
+            {"regulatory": _REG_START, "crypto": _CRYPTO_START},
+            _ts(14, 0),
+        )
+
+    line = next(m for m in (r.getMessage() for r in caplog.records) if "실행당 커밋" in m)
+
+    # **위치**를 봐야 한다. "(3/ 과 (2/ 가 둘 다 있는가" 로 물으면 전 2 / 후 3 인
+    # 단일 경계 결과도 통과한다 — 초안이 실제로 그랬고 mutation 주입에서 걸렸다.
+    pre_part, _, post_part = line.partition("후")
+    assert "(3/" in pre_part, f"전 구간이 3건이 아니다 — 단일 경계로 잘랐을 가능성: {line}"
+    assert "(2/" in post_part, f"후 구간이 2건이 아니다 — 단일 경계로 잘랐을 가능성: {line}"
+
+
+def test_group_mode_control_ratio_is_per_collector_not_pooled(monkeypatch, caplog):
+    """대조군 비는 합산하지 않는다 — 합산하면 대조군을 수집기 수만큼 중복 계상한다."""
+    monkeypatch.setattr(cpo, "commit_log", lambda _days: _GROUP_LOG)
+    monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([], "gh 없음"))
+    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory", "crypto"}))
+
+    with caplog.at_level("INFO"):
+        cpo.report_load_adjusted(
+            ["regulatory", "crypto"],
+            7,
+            {"regulatory": _REG_START, "crypto": _CRYPTO_START},
+            _ts(14, 0),
+        )
+
+    rows = [m for m in (r.getMessage() for r in caplog.records) if "대조군 비" in m]
+    assert len(rows) == 2, f"수집기별로 한 줄씩 나와야 한다: {rows}"
+    assert any("regulatory" in r for r in rows) and any("crypto" in r for r in rows), rows
+
+
+def test_group_mode_gate_uses_youngest_start(monkeypatch, caplog):
+    """게이트는 가장 늦게 시작한 수집기 기준이다.
+
+    가장 이른 것으로 재면 확대분이 아직 하루도 안 돌았는데 '3일 충족' 이 된다.
+    """
+    monkeypatch.setattr(cpo, "commit_log", lambda _days: _GROUP_LOG)
+    monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([], "gh 없음"))
+    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory", "crypto"}))
+
+    # regulatory 기준으로는 4일 경과(충족)이지만 crypto 기준으로는 2일이다.
+    with caplog.at_level("WARNING"):
+        cpo.report_load_adjusted(
+            ["regulatory", "crypto"],
+            7,
+            {"regulatory": _REG_START, "crypto": _CRYPTO_START},
+            _ts(14, 13),
+        )
+
+    assert any("판정 보류" in r.getMessage() for r in caplog.records), (
+        f"늦은 수집기 기준으로 보류해야 한다: {[r.getMessage() for r in caplog.records]}"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Wilson 신뢰구간 — 묶음 집계가 실제로 사는 이유
+# ---------------------------------------------------------------------------
+
+
+def test_wilson_interval_is_none_for_empty_sample():
+    """표본 0에 구간을 내면 [0,0] 이 되어 '완벽히 측정됐다' 로 읽힌다."""
+    assert cpo.wilson_interval(0, 0) is None
+
+
+def test_wilson_interval_stays_inside_unit_range_at_extremes():
+    """Wald 를 쓰면 p=0 또는 p=1 에서 폭이 0으로 붕괴하거나 [0,1] 을 벗어난다."""
+    low, high = cpo.wilson_interval(0, 10)
+    assert low == 0.0 and 0 < high < 1, (low, high)
+
+    low, high = cpo.wilson_interval(10, 10)
+    assert high == 1.0 and 0 < low < 1, (low, high)
+
+
+def test_wilson_interval_narrows_as_sample_grows():
+    """묶음 집계의 존재 이유 — 표본이 커지면 폭이 좁아져야 한다."""
+    narrow = cpo.wilson_interval(30, 60)
+    wide = cpo.wilson_interval(3, 6)
+    assert narrow[1] - narrow[0] < wide[1] - wide[0]
+
+
+def test_wilson_interval_matches_known_value():
+    """알려진 값과 대조 — 구현이 표류하면 폭 비교만으로는 못 잡는다.
+
+    p=0.5, n=100 의 Wilson 95% 구간은 [0.4038, 0.5962] (폭 0.1924).
+    """
+    low, high = cpo.wilson_interval(50, 100)
+    assert abs(low - 0.4038) < 0.001, low
+    assert abs(high - 0.5962) < 0.001, high
