@@ -214,6 +214,11 @@ COLLECTOR_WORKFLOWS: dict[str, str] = {
 # YAML 은 `true` 와 `'true'` 를 모두 허용하므로 인용부호를 옵셔널로 둔다.
 PILOT_FLAG_RE = re.compile(r"^\s*skip-noop-state-commits:\s*['\"]?(?P<value>true|false)['\"]?\s*$", re.M)
 
+# `git log -G` 에 넘길 **값 인식** 패턴 (POSIX ERE — 호출부에서 `-E` 로 고정한다).
+# 파이썬 정규식이 아니라 git 이 해석하므로 `PILOT_FLAG_RE` 와 문법이 다르다. 둘이
+# 같은 것을 가리키는지는 `tests/test_check_pilot_observation_load_adjusted.py` 가 지킨다.
+PILOT_FLAG_ON_RE = "skip-noop-state-commits:[[:space:]]*['\"]?true"
+
 
 def is_runtime_skip_line(line: str) -> bool:
     """로그 한 줄이 skip 의 **런타임 출력**인지 판정한다.
@@ -518,13 +523,27 @@ def pilot_started_at(collector: str) -> datetime | None:
     상수 표가 아니라 git 에서 도출한다. 표로 두면 확대할 때마다 갱신해야 하고, 빠뜨리면
     조용히 틀린 구간이 나온다 — `CONTROL_COLLECTORS` 에서 이미 겪은 실패 모드다.
 
-    키 이름(`skip-noop-state-commits`)으로 찾는다. 값(`'true'`)으로 찾으면 인용부호
-    스타일이 다른 워크플로우를 놓친다 — `PILOT_FLAG_RE` 가 두 형태를 모두 받는 것과
-    같은 이유다.
+    **키 이름이 아니라 값까지 보고 찾는다.** 초안은 `-S "skip-noop-state-commits"` 였는데,
+    `-S` 는 문자열 **출현 횟수**가 변한 커밋만 잡으므로 키를 그대로 두고 값만
+    `'false'` → `'true'` 로 뒤집은 커밋을 통째로 놓친다. 임시 레포 실측:
 
-    플래그를 껐다 켠 이력이 있으면 최초 도입 시각을 돌려준다. 그런 이력이 생기면 이
-    값은 틀리지만, `test_every_mapped_collector_is_either_pilot_or_control` 이 되돌림을
-    red 로 만들므로 조용히 남아 있을 수 없다.
+        c2 2026-08-05  키를 'false' 로 도입
+        c3 2026-08-25  'true' 로 전환   ← 진짜 파일럿 시작
+        -S <키>  → 2026-08-05  (20일 이른 경계)
+        -G <값>  → 2026-08-25  (정답)
+
+    20일 이른 경계는 그 사이의 정상 no-op 커밋을 전부 `[5]` 의 누출로 만든다 — 커밋
+    `009ed42cd` 가 없앤 거짓 FAIL 과 같은 실패 모드다. 대조군 워크플로우에 "여긴 꺼져
+    있음" 을 명시하려고 `'false'` 를 적어 두는 것은 현재 가드를 전부 통과하므로
+    (대조군이니 orphan 도 오염도 아니다) 이 경로는 가설이 아니라 열려 있다.
+
+    `-E` 를 명시해 ERE 로 고정한다. 기본 문법(BRE)에서는 `?` 가 리터럴이라 인용부호
+    옵셔널이 깨지고, 사용자 git 설정에 좌우되게 두면 조용히 달라진다.
+
+    플래그를 껐다 켠 이력이 여러 번이면 최초의 `true` 도입 시각을 돌려준다.
+    워크플로우 파일 rename 은 대응하지 않는다(`--follow` 없음) — rename 커밋이 첫 줄로
+    잡혀 경계가 **늦게** 잡히고, 그 방향은 절감 과소평가라 거짓 PASS 를 만들지 않는다.
+    현재 13개 워크플로우에 rename 이력은 없다.
     """
     workflow = workflow_for(collector)
     if workflow is None:
@@ -534,8 +553,9 @@ def pilot_started_at(collector: str) -> datetime | None:
         "origin/main",
         "--reverse",
         "--format=%cI",
-        "-S",
-        "skip-noop-state-commits",
+        "-E",
+        "-G",
+        PILOT_FLAG_ON_RE,
         "--",
         f".github/workflows/{workflow}",
     )
@@ -1090,6 +1110,19 @@ def main() -> int:
             return 2
         targets = sorted(pilot_starts)
     else:
+        # 모르는 이름을 받아주면 모든 절이 0건을 내고 그 0건이 "중복 없음 · 누출 0건
+        # → PASS · exit 0" 으로 읽힌다. **한 건도 검사하지 않은 실행이 파일럿이 완벽히
+        # 동작했다는 증거로 보고된다.** `--collector regulatoy` 오타 하나면 된다.
+        # `all` 경로가 fail closed 인 것과 같은 이유로 여기서도 거부한다.
+        if workflow_for(args.collector) is None:
+            logger.error(
+                "모르는 수집기: %r. 아는 이름: %s, 또는 %r. "
+                "모르는 이름을 받아주면 모든 절이 0건을 내고 그게 PASS 로 읽힌다.",
+                args.collector,
+                ", ".join(sorted(COLLECTOR_WORKFLOWS)),
+                GROUP_TARGET,
+            )
+            return 2
         # 단일 수집기 모드에서는 `--pilot-merged` 가 그대로 경계다 — 기존 동작을
         # 바꾸지 않는다.
         targets = [args.collector]

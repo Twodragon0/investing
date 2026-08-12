@@ -573,3 +573,80 @@ def test_control_group_covers_every_non_pilot_collector():
     non_pilot = set(cpo.COLLECTOR_WORKFLOWS) - enabled
     missing = non_pilot - set(cpo.CONTROL_COLLECTORS)
     assert not missing, f"대조군에서 빠진 비-파일럿 수집기: {sorted(missing)}. 빼면 분모가 작아져 SE 가 커진다."
+
+
+# ---------------------------------------------------------------------------
+# 파일럿 경계 도출 — pickaxe 는 값 전환을 못 본다
+# ---------------------------------------------------------------------------
+
+
+def test_pilot_started_at_searches_by_value_not_by_key(monkeypatch):
+    """`-S <키>` 로 되돌아가면 `'false'`→`'true'` 전환을 놓쳐 경계가 너무 이르게 잡힌다.
+
+    `-S` 는 문자열 **출현 횟수** 변화만 잡는다. 임시 레포 실측에서 키를 08-05 에
+    `'false'` 로 도입하고 08-25 에 `'true'` 로 뒤집었더니 `-S <키>` 는 08-05 를,
+    `-G <값>` 은 08-25 를 돌려줬다. 20일 이른 경계는 그 사이의 정상 no-op 커밋을
+    전부 누출로 만든다.
+    """
+    seen: list[tuple[str, ...]] = []
+    monkeypatch.setattr(cpo, "_git", lambda *args: seen.append(args) or "")
+
+    cpo.pilot_started_at("regulatory")
+
+    assert seen, "git 을 호출하지 않았다"
+    args = seen[0]
+    assert "-G" in args, f"값 인식 검색(-G)이 아니다: {args}"
+    assert "-S" not in args, f"키 출현 횟수 검색(-S)으로 되돌아갔다: {args}"
+    assert "-E" in args, f"정규식 문법이 고정돼 있지 않다 — BRE 에서는 `?` 가 리터럴이다: {args}"
+    assert any("true" in a for a in args), f"패턴이 값을 보지 않는다: {args}"
+
+
+def test_pilot_flag_patterns_agree_on_what_counts_as_on():
+    """git 에 넘기는 ERE 와 파이썬 `PILOT_FLAG_RE` 가 같은 것을 '켜짐' 으로 봐야 한다.
+
+    둘이 갈리면 한쪽은 파일럿으로 세는데 다른 쪽은 경계를 못 찾는 상태가 된다 —
+    그 수집기는 집계에서 조용히 빠진다.
+    """
+    import re
+
+    # `[[:space:]]` 는 POSIX 표기라 파이썬에서 `\s` 로 옮겨 비교한다.
+    ere_as_python = re.compile(cpo.PILOT_FLAG_ON_RE.replace("[[:space:]]", r"\s"))
+
+    on = [
+        "          skip-noop-state-commits: 'true'\n",
+        '          skip-noop-state-commits: "true"\n',
+        "          skip-noop-state-commits: true\n",
+    ]
+    off = [
+        "          skip-noop-state-commits: 'false'\n",
+        "          skip-noop-state-commits: false\n",
+    ]
+    for line in on:
+        m = cpo.PILOT_FLAG_RE.search(line)
+        assert m and m.group("value") == "true", line
+        assert ere_as_python.search(line), f"ERE 가 켜짐을 못 잡는다: {line!r}"
+    for line in off:
+        m = cpo.PILOT_FLAG_RE.search(line)
+        assert m and m.group("value") == "false", line
+        assert not ere_as_python.search(line), f"ERE 가 꺼짐을 켜짐으로 잡는다: {line!r}"
+
+
+# ---------------------------------------------------------------------------
+# 모르는 수집기 이름 — 0건이 PASS 로 읽힌다
+# ---------------------------------------------------------------------------
+
+
+def test_unknown_collector_is_rejected_not_silently_empty(monkeypatch, capsys):
+    """오타 하나로 '한 건도 검사 안 함' 이 '문제 없음 → exit 0' 이 되면 안 된다.
+
+    실측: `--collector regulatoy` 가 커밋 0건 · 중복 0건 · 누출 0건 · 포착률 PASS ·
+    exit 0 을 냈다. 유일한 단서는 `[4]` 안에 묻힌 INFO 한 줄이었다.
+    """
+    monkeypatch.setattr(sys, "argv", ["check_pilot_observation.py", "--collector", "regulatoy"])
+    assert cpo.main() == 2
+
+
+def test_known_collectors_are_accepted():
+    """거부 로직이 정상 이름까지 막으면 도구가 죽는다 — 반대 방향도 고정한다."""
+    for name in (cpo.DEFAULT_COLLECTOR, *cpo.CONTROL_COLLECTORS):
+        assert cpo.workflow_for(name) is not None, f"{name!r} 이 매핑에 없다"
