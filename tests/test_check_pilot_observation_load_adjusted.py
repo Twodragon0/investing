@@ -456,3 +456,120 @@ def test_check_post_duplicates_reports_when_only_the_new_file_is_after_pilot(tmp
 
     title_dups, _ = cpo.check_post_duplicates("crypto", since=_PILOT)
     assert len(title_dups) == 1, f"경계를 걸친 재발행은 잡아야 한다: {title_dups}"
+
+
+# ---------------------------------------------------------------------------
+# 절감의 불확실성 — 숫자가 실제보다 정밀해 보이는 것을 막는다
+# ---------------------------------------------------------------------------
+
+
+def test_delta_ci_is_none_when_any_cell_is_zero():
+    """네 칸 중 하나가 0이면 로그 비가 정의되지 않는다 — 구간을 지어내면 안 된다."""
+    assert cpo.LoadRatio(0, 5, 3, 5).delta_ci_pct() is None
+    assert cpo.LoadRatio(5, 5, 0, 5).delta_ci_pct() is None
+    assert cpo.LoadRatio(5, 0, 3, 5).delta_ci_pct() is None
+
+
+def test_delta_ci_brackets_the_point_estimate():
+    ratio = cpo.LoadRatio(14, 20, 5, 8)
+    low, high = ratio.delta_ci_pct()
+    assert low < ratio.delta_pct() < high
+
+
+def test_delta_ci_is_log_symmetric_not_linear():
+    """비율 축에서 대칭 구간을 만들면 하한이 -100% 아래로 가 '절감 120%' 가 나온다."""
+    low, _ = cpo.LoadRatio(14, 20, 5, 8).delta_ci_pct()
+    assert low > -100.0, f"하한 {low}% — 비율이 음수가 될 수는 없다"
+
+
+def test_delta_ci_matches_katz_standard_error():
+    """알려진 공식과 대조 — 구현이 표류하면 '구간이 있다' 만으로는 못 잡는다.
+
+    SE(log RR) = sqrt(1/a + 1/b + 1/c + 1/d).
+    (14/20 → 5/8) 에서 SE = sqrt(1/14+1/20+1/5+1/8) = 0.66815, RR = 0.892857.
+    """
+    import math
+
+    ratio = cpo.LoadRatio(14, 20, 5, 8)
+    se = math.sqrt(1 / 14 + 1 / 20 + 1 / 5 + 1 / 8)
+    rr = (5 / 8) / (14 / 20)
+    expected = ((math.exp(math.log(rr) - 1.96 * se) - 1) * 100, (math.exp(math.log(rr) + 1.96 * se) - 1) * 100)
+    got = ratio.delta_ci_pct()
+    assert got[0] == pytest.approx(expected[0], abs=1e-6)
+    assert got[1] == pytest.approx(expected[1], abs=1e-6)
+
+
+def test_delta_ci_note_marks_unidentified_direction():
+    """구간이 0을 포함하면 말로도 적어야 한다 — 숫자만 보면 부호가 식별된 듯 읽힌다."""
+    text = cpo._fmt_delta_ci(cpo.LoadRatio(14, 20, 5, 8))
+    assert "0 포함" in text, text
+    assert "95%CI" in text
+
+
+# ---------------------------------------------------------------------------
+# 실행 예산 — 절단은 항상 절감을 과대평가하는 방향이다
+# ---------------------------------------------------------------------------
+
+
+def test_run_budget_has_margin_over_observed_run_rate():
+    """`days * 6` 은 crypto 실측 5.86회/일과 사실상 같아 마진이 0이었다.
+
+    2026-08-12 실측: 7일 창에 예산 42, 창 내 실행 41 — 여유 1건.
+    """
+    observed_peak_per_day = 6.0
+    for days in (1, 7, 30):
+        assert cpo.run_budget(days) >= observed_peak_per_day * days * 1.5, (
+            f"{days}일 예산 {cpo.run_budget(days)} — 최고 실행률의 1.5배 여유가 없다"
+        )
+
+
+def test_report_load_adjusted_warns_when_run_list_does_not_cover_window(monkeypatch, caplog):
+    """받아온 가장 오래된 실행이 창 시작보다 뒤면 전 구간이 잘린 것이다.
+
+    잘리는 쪽은 항상 '전' 이다(gh 가 최신순으로 준다). pre_den 이 줄면 전 구간 비율이
+    올라가고 post/pre 가 작아져 **절감이 과대평가된다.** 조용히 낙관적으로 틀리는
+    경로라 경고가 필요하다.
+    """
+    now = _ts(14, 0)
+    monkeypatch.setattr(cpo, "commit_log", lambda _days: _GROUP_LOG)
+    # 창 시작(now - 7일 = 08-07)보다 모두 뒤인 실행만 돌려준다 = 절단된 상태
+    monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([_ts(12, 0), _ts(13, 0)], None))
+    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory"}))
+
+    with caplog.at_level("WARNING"):
+        cpo.report_load_adjusted(["regulatory"], 7, {"regulatory": _REG_START}, now)
+
+    assert any("과대평가" in r.getMessage() for r in caplog.records), (
+        f"절단 경고가 없다: {[r.getMessage() for r in caplog.records]}"
+    )
+
+
+def test_report_load_adjusted_does_not_warn_when_window_is_covered(monkeypatch, caplog):
+    """창을 덮었는데 경고하면 매 실행 노이즈가 된다 — 반대 방향도 고정한다."""
+    now = _ts(14, 0)
+    monkeypatch.setattr(cpo, "commit_log", lambda _days: _GROUP_LOG)
+    monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([_ts(6, 0), _ts(13, 0)], None))
+    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory"}))
+
+    with caplog.at_level("WARNING"):
+        cpo.report_load_adjusted(["regulatory"], 7, {"regulatory": _REG_START}, now)
+
+    assert not any("과대평가" in r.getMessage() for r in caplog.records)
+
+
+# ---------------------------------------------------------------------------
+# 대조군은 비-파일럿 전체다
+# ---------------------------------------------------------------------------
+
+
+def test_control_group_covers_every_non_pilot_collector():
+    """no-op 0건인 수집기를 빼면 SE 가 커진다 — 실측 0.563 → 0.668.
+
+    대조군 요건은 (a) 파일럿에 반응하지 않을 것, (b) 공통 교란을 탈 것이다. no-op
+    0건은 (a) 를 완벽히 만족하므로 배제 사유가 아니다. 초안이 이걸 뒤집어 읽었다.
+    """
+    enabled = cpo.pilot_enabled_collectors()
+    assert enabled is not None
+    non_pilot = set(cpo.COLLECTOR_WORKFLOWS) - enabled
+    missing = non_pilot - set(cpo.CONTROL_COLLECTORS)
+    assert not missing, f"대조군에서 빠진 비-파일럿 수집기: {sorted(missing)}. 빼면 분모가 작아져 SE 가 커진다."

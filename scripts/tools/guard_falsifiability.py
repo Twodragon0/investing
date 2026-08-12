@@ -525,10 +525,13 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_required_check_aggregator_guard.py::test_job_id_scanner_rejects_nested_keys",
     ),
     StaticCase(
+        # 앵커는 튜플의 **여는 줄**이다. 항목을 나열하면 대조군을 넓힐 때마다 앵커가
+        # 낡는다 — 2026-08-12 에 2개에서 9개로 넓히면서 실제로 그렇게 깨졌다.
+        # 뒤에 남는 항목들은 `_FALSIFIABILITY_UNUSED` 로 흘러가 문법이 유지된다.
         "대조군을 비워 대조군 비 지표를 소멸시킴",
         "scripts/tools/check_pilot_observation.py",
-        'CONTROL_COLLECTORS = ("political", "geopolitical")',
-        "CONTROL_COLLECTORS = ()",
+        'CONTROL_COLLECTORS = (\n    "political",',
+        'CONTROL_COLLECTORS = ()\n_FALSIFIABILITY_UNUSED = (\n    "political",',
         "tests/test_check_pilot_observation_control_group_guard.py::test_control_group_is_not_empty",
     ),
     StaticCase(

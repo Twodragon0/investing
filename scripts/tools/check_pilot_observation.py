@@ -134,24 +134,42 @@ GROUP_TARGET = "all"
 # "feat: no-op 수집기 커밋을 만들지 않는다 (regulatory 파일럿) …(#1148)"
 PILOT_MERGED_DEFAULT = "2026-08-10T13:14:51+09:00"
 
-# 대조군 — no-op 커밋을 실제로 만들면서 파일럿이 **적용되지 않은** 수집기.
+# 대조군 — 파일럿이 **적용되지 않은** 수집기 전부.
 #
-# 2026-08-12 1차 확대에서 crypto·stock·social 을 파일럿으로 옮기고 여기서 뺐다.
-# 남은 둘이 대조군의 전부다 — **더 뺄 여유가 없다.**
+# 2026-08-12 초안은 "no-op 커밋을 실제로 만드는" 수집기로 좁혀 2개(political·
+# geopolitical)만 뒀다. 근거는 "no-op 0건인 수집기는 파일럿에 반응할 수 없는 상수
+# 항이라 분모만 키워 민감도를 떨어뜨린다" 였는데, **DiD 에서 이 논리는 뒤집혀 있다.**
+# 대조군의 요건은 (a) 파일럿에 반응하지 않을 것, (b) 공통 교란(뉴스량)을 탈 것이다.
+# no-op 0건인 수집기는 (a)를 완벽히 만족하고, 콘텐츠 커밋으로 뉴스량에 반응하므로
+# (b)도 만족한다. 배제할 이유가 아니라 자격 요건이었다.
 #
-# 나머지 7개 수집기는 대조군이 될 수 없다. 최근 창(2026-07-20 이후 840커밋) 실측에서
-# no-op 커밋이 215건 중 0건이라 파일럿에 반응할 수 없는 상수 항이고, 분모만 키워
-# 비율의 민감도를 떨어뜨린다. 스캔을 3000커밋으로 넓히면 defi llama 121건 ·
-# defi yields 105건이 잡히지만 전부 2026-07-13 이전이다 — 그 뒤로 0건인 다른 체제라
-# 대조군으로 쓰면 전 구간 분모만 부풀린다.
+# 실측이 그대로 보여준다 (최근 7일, regulatory 기준 SE(log RR)):
 #
-# 따라서 political·geopolitical 까지 파일럿으로 옮기면 대조군 비 지표는 분모 0으로
-# 소멸한다. 2차 확대를 할 거면 그 지표를 버리는 값을 먼저 치러야 한다.
+#   대조군 2개   전 0.700 (14/20)  후 0.625 (5/8)   → -10.7%   SE 0.668
+#   대조군 9개   전 0.200 (14/70)  후 0.156 (5/32)  → -21.9%   SE 0.563
+#
+# 좁힌 쪽이 SE 가 19% 크고, 추정치도 다른 대조군들과 갈린다.
+#
+# 이 목록을 넓히면 2차 확대(political·geopolitical)를 해도 대조군 비가 살아남는다.
+# 좁혀 뒀을 때는 그 확대가 지표를 소멸시켰다.
 #
 # 파일럿을 확대하면 그 수집기를 여기서 빼야 한다. 안 빼면 분모도 같이 줄어 절감이
 # 과소평가된다. `tests/test_check_pilot_observation_load_adjusted.py` 가 파일럿
 # 대상이 이 목록에 들어오는 경우를 red 로 만든다.
-CONTROL_COLLECTORS = ("political", "geopolitical")
+#
+# 이름은 커밋 주제(`chore: collect <name> …`)의 접두다. 1500커밋 실측에서 13개 이름이
+# 1283건을 모호성 0으로 가른다.
+CONTROL_COLLECTORS = (
+    "political",
+    "geopolitical",
+    "defi llama",
+    "defi yields",
+    "fmp calendar",
+    "market indicators",
+    "coinmarketcap",
+    "worldmonitor",
+    "blockchain",
+)
 
 # 설계 문서의 "수집기 1개에 먼저 적용해 최소 3일 관측" 게이트.
 MIN_OBSERVATION_DAYS = 3
@@ -183,6 +201,13 @@ COLLECTOR_WORKFLOWS: dict[str, str] = {
     "social": "collect-social-media.yml",
     "political": "collect-political-trades.yml",
     "geopolitical": "collect-geopolitical.yml",
+    "defi llama": "collect-defi-llama.yml",
+    "defi yields": "collect-defi-yields.yml",
+    "fmp calendar": "collect-fmp-calendar.yml",
+    "market indicators": "collect-market-indicators.yml",
+    "coinmarketcap": "collect-coinmarketcap.yml",
+    "worldmonitor": "collect-worldmonitor-news.yml",
+    "blockchain": "collect-blockchain.yml",
 }
 
 # 액션 입력 `skip-noop-state-commits` — 이 플래그가 파일럿의 on/off 다.
@@ -297,6 +322,28 @@ class LoadRatio(NamedTuple):
             return None
         return (post - pre) / pre * 100
 
+    def delta_ci_pct(self, z: float = 1.96) -> tuple[float, float] | None:
+        """변화율의 95% 신뢰구간(%). 네 칸 중 하나라도 0이면 None.
+
+        **이게 없으면 숫자가 실제보다 정밀해 보인다.** 2026-08-12 리뷰에서 드러났다:
+        문서에 기록된 -33.7% 와 -33.3% 는 7시간 뒤 재측정에서 -23.3% 와 -10.7% 로
+        갈렸는데, 구간을 붙여 보면 [-79%, +113%] 라 애초에 그 정도 흔들림이 예상 범위
+        안이었다. "방향 참고용" 이라 부르려면 방향이 식별돼야 하는데 그렇지 않다.
+
+        네 칸 로그 비의 표준오차는 `sqrt(1/a + 1/b + 1/c + 1/d)` 다 (Katz). 로그 축에서
+        대칭 구간을 만든 뒤 비율로 되돌린다 — 비율 축에서 직접 대칭 구간을 만들면
+        하한이 음수가 되어 "절감 120%" 같은 값이 나온다.
+        """
+        cells = (self.pre_num, self.pre_den, self.post_num, self.post_den)
+        if any(c <= 0 for c in cells):
+            return None
+        se = math.sqrt(sum(1 / c for c in cells))
+        rr = (self.post_num / self.post_den) / (self.pre_num / self.pre_den)
+        return (
+            (math.exp(math.log(rr) - z * se) - 1) * 100,
+            (math.exp(math.log(rr) + z * se) - 1) * 100,
+        )
+
 
 def build_ratio(
     numerator: list[datetime],
@@ -316,6 +363,19 @@ def build_ratio(
     pre_num, post_num = split_by_pilot(numerator, pilot_merged)
     pre_den, post_den = split_by_pilot(denominator, pilot_merged)
     return LoadRatio(pre_num, pre_den, post_num, post_den)
+
+
+def run_budget(days: int) -> int:
+    """gh 에서 가져올 실행 수.
+
+    `days * 6` 은 crypto 의 실측 실행률(5.86회/일)과 사실상 같아 마진이 구조적으로 0
+    이었다 — 2026-08-12 실측에서 7일 창에 예산 42, 창 내 실행 41 로 여유가 1건이었다.
+    재실행이나 수동 dispatch 한 번이면 넘어가고, 넘어가도 조용히 절감이 과대평가된다.
+
+    실행률이 가장 높은 수집기의 두 배를 잡는다. gh 호출은 워크플로우당 한 번이라
+    예산을 키우는 비용은 응답 크기뿐이다.
+    """
+    return max(60, days * 12)
 
 
 def is_underpowered(pilot_merged: datetime, now: datetime) -> bool:
@@ -750,6 +810,20 @@ def _fmt_delta(value: float | None) -> str:
     return "n/a" if value is None else f"{value:+.1f}%"
 
 
+def _fmt_delta_ci(ratio: LoadRatio) -> str:
+    """변화율 뒤에 붙일 신뢰구간 문구. 낼 수 없으면 빈 문자열.
+
+    구간이 0을 포함하면 그 사실을 말로도 적는다. 숫자만 보면 부호가 식별된 것처럼
+    읽히는데, 현 표본에서는 대체로 그렇지 않다.
+    """
+    interval = ratio.delta_ci_pct()
+    if interval is None:
+        return ""
+    low, high = interval
+    note = "  ※ 0 포함 — 방향 미식별" if low <= 0 <= high else ""
+    return f"  95%CI [{low:+.0f}%, {high:+.0f}%]{note}"
+
+
 def report_load_adjusted(
     collectors: Sequence[str],
     days: int,
@@ -778,24 +852,37 @@ def report_load_adjusted(
     window_start = now - timedelta(days=days)
     raw = commit_log(days)
 
-    # 실행은 최대 6회/일을 가정하고 여유를 둔다 — 부족하면 전 구간이 잘려 나간다.
     totals = [0, 0, 0, 0]
     skipped: list[str] = []
+    parts: list[tuple[str, LoadRatio]] = []
     for name in collectors:
         workflow = workflow_for(name)
         if workflow is None:
             skipped.append(f"{name}: 워크플로우 매핑 없음 (COLLECTOR_WORKFLOWS 에 추가하세요)")
             continue
-        runs, reason = collect_run_timestamps(workflow, limit=max(30, days * 6))
+        runs, reason = collect_run_timestamps(workflow, limit=run_budget(days))
         if reason:
             skipped.append(f"{name}: {reason}")
             continue
+        if runs and min(runs) >= window_start:
+            # gh 는 최신순으로 준다. 예산이 모자라면 잘려 나가는 것은 **전** 구간이고,
+            # 그러면 pre_den 이 줄어 전 구간 비율이 올라가고 절감이 과대평가된다.
+            # 조용히 낙관적으로 틀리는 경로라 경고한다.
+            logger.warning(
+                "  ⚠ %s 실행 목록이 창 전체를 못 덮었다 (받아온 %d건, 가장 오래된 %s ≥ 창 시작 %s). "
+                "전 구간이 잘려 절감이 과대평가된다.",
+                name,
+                len(runs),
+                min(runs).isoformat(timespec="minutes"),
+                window_start.isoformat(timespec="minutes"),
+            )
         part = build_ratio(
             parse_commit_timestamps(raw, name),
             runs,
             pilot_starts[name],
             since=window_start,
         )
+        parts.append((name, part))
         totals = [a + b for a, b in zip(totals, part, strict=True)]
 
     for line in skipped:
@@ -803,7 +890,7 @@ def report_load_adjusted(
     if any(totals):
         per_run = LoadRatio(*totals)
         logger.info(
-            "  실행당 커밋   전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+            "  실행당 커밋   전 %s (%d/%d)  후 %s (%d/%d)  → %s%s",
             _fmt_ratio(per_run.pre()),
             per_run.pre_num,
             per_run.pre_den,
@@ -811,8 +898,25 @@ def report_load_adjusted(
             per_run.post_num,
             per_run.post_den,
             _fmt_delta(per_run.delta_pct()),
+            _fmt_delta_ci(per_run),
         )
-
+        # 층별 값을 함께 낸다. 위 합산은 층별 비를 합친 게 아니라 분자·분모를 먼저
+        # 더한 combined ratio 라, 전·후 풀의 층 구성이 다르면 층 내 효과가 0이어도
+        # 값이 0이 아니다(Simpson). 노출 기간이 수집기마다 다르면 구성은 반드시
+        # 다르므로, 합산과 층별이 갈리는지 눈으로 확인할 수 있어야 한다.
+        if len(parts) > 1:
+            for name, part in parts:
+                logger.info(
+                    "    층 %-12s 전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+                    name,
+                    _fmt_ratio(part.pre()),
+                    part.pre_num,
+                    part.pre_den,
+                    _fmt_ratio(part.post()),
+                    part.post_num,
+                    part.post_den,
+                    _fmt_delta(part.delta_pct()),
+                )
     else:
         logger.info("  실행당 커밋: 건너뜀 (모든 대상에서 실행을 가져오지 못했다)")
 
@@ -847,7 +951,7 @@ def report_load_adjusted(
             since=window_start,
         )
         logger.info(
-            "  대조군 비 (%s)  전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+            "  대조군 비 (%s)  전 %s (%d/%d)  후 %s (%d/%d)  → %s%s",
             name,
             _fmt_ratio(versus.pre(), 3),
             versus.pre_num,
@@ -856,6 +960,7 @@ def report_load_adjusted(
             versus.post_num,
             versus.post_den,
             _fmt_delta(versus.delta_pct()),
+            _fmt_delta_ci(versus),
         )
 
     # 게이트는 가장 늦게 시작한 수집기 기준이다. 가장 이른 것으로 재면 확대분이 아직
