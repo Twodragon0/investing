@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-13 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세' - 211건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 주목</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, CPI 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 강세 관련 17건</li><li>🏦 <strong>거래소</strong>: 실적, IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlFsM0tYUV9IdDJnOFNqWGVBYzl1dTFqc3hlWXlvdndWRjRVaDBkY3ZnZ3FkOUhlekxwZjBsMjdQT0x0ajM0UWVGLUMxNFRIb0NNSlRBRVQtd0h1WnhCRGpqaXJLQXJBWmcwWTdKejlUb1l3QWhTZ0t0aXNtc1Z5T2wzc0JyYmV0?oc=5">특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세'</a> <span class="p0-desc">[특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세' 글로벌이코노믹</span></li><li><a href="https://www.sedaily.com/article/20078637">12분기 연속 흑자에도 못 웃는 한전…2분기 별도 영업익 96% 급락</a></li><li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSElSejJBWHN6OVFxLU1ZblMxcVVxbEFVMlVJenJhMC14cEI5eTFXU1ZsSGsxTDF5Z0ZlUzIzMWhqRW5LTW5mSWk5ZlJMc1JtLWVSNWlrRUJjb1A4bXRibXVWMExReW1RNnlqcFNwWEZtcXhJenh5ekRzaUhyd2UyZm1ncWRJMC1vSVBOcDZadHhjdkRsYXFHNzEyaVVNQWE3dVVoME9XY1hEOS1LNHZYSlVrZ1pCWFcwYnFFYXgyYVAzZw?oc=5">Colombia to Declare Economic Emergency as Quake Toll Tops 180</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세' 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 211건의 뉴스 중 P1 주요 이슈도 27건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (54건): 코스닥, 코스피, 환율 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (31건): 인플레이션, CPI, 환율 매크로 변수 (31건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (17건): 반도체, 강세, 엔비디아 기술 이슈 (17건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세'
-- 12분기 연속 흑자에도 못 웃는 한전…2분기 별도 영업익 96% 급락
-- 콜롬비아, 지진 사망자 180명 돌파로 경제 비상사태 선포
-
-### 주요 이슈
-
-- 인플레이션 데이터가 금리 인상 불안을 완화함에 따라 강력한 AI 수익 상승 S&P 500, 나스닥
-- 월스트리트은 AI 수익 향상 기술로 이익을 얻고, 인플레이션 데이터는 금리 유지를 지원합니다.
-- 1 S&P 500보다 성능이 뛰어나면서도 아직 실행할 여지가 있는 Vanguard ETF
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 72건, 글로벌 기사 139건 수집
-- 한국 지수: KOSPI 6,579.04(+3.68%), KOSDAQ 858.91(+0.12%), USD/KRW 1,418.17(+0.40%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">54건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:57%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:31%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-13.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,579.04 (+3.68%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 858.91 (+0.12%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *한국거래소가 같은 날 발표한 두 가지 중요한 공시를 함께 살펴보려고 합니다.*
 
 ## 테마별 주요 뉴스
 

@@ -29,43 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-13 - 소셜 미디어 뉴스 요�
 <div class="stat-item"><div class="stat-value">🔴 높음</div><div class="stat-label">시장 경계</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 트렌드: 인상, 금리, 부총재 관련 33건 포착</strong><ul><li>📊 <strong>매크로/금리</strong>: 인상, 금리 주목</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 대통령 주목</li><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 동향 주시</li><li>🟠 <strong>비트코인</strong>: 고래, 비트코인 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 33건의 뉴스 중 **매크로/금리** 관련이 17건(52%)으로 압도적입니다. 거시경제 지표와 통화정책이 시장의 주요 변수로 작용하고 있습니다
+오늘 수집된 총 33건 중 텔레그램 0건, 소셜 3건, 정치·경제 30건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (17건): 인상, 금리, 부총재 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (17건): 이재명, 대통령, 정부 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (23건): 코스피, 외국인, 이재명 가격 변동 (23건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 주요 이슈
-
-- 9월 금리 인상 확률은 급락했지만 연준의 일은 훨씬 더 어려워졌습니다.
-- 한은 부총재 “금리 추가 인상, 근원물가·성장률이 관건”
-
-### 투자자 체크포인트
-
-- 소셜 3건, 정치·경제 30건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:74%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:74%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:17%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:22%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-13.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 없음에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

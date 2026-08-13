@@ -14,9 +14,6 @@ description: "하원의원, 주식법 위반: 거의 2년이 지난 거래를 �
 image_alt: "정치인 거래·정책 리포트 - 2026-08-13 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-13.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-13** 정치권 핵심 이슈: **하원의원, 주식법 위반: 거의 2년이 지난 거래를 포함하여 마감일 이후 22건의 거래 보고**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **25건** (미국 의회 거래 2건, SEC 내부자 거래 15건, 중앙은행 8건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,15 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-13 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(6회), **의회**(2회), **SEC(미국증권거래위원회)**(2회), **내부자**(2회), **공시**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **25건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 15건, 중앙은행 8건입니다.
-
-**미국 의회 거래** 동향에서는 A member of Congress recently disclosed 32 stock trades, with many of the trades made more than 45 days ago. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 Fed Chair Kevin Warsh and the Federal Open Market Committee (FOMC) may be at a crossroads come the September FOMC meeting. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 
