@@ -250,7 +250,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE10VXQ2WmthUmFlMlBWdGFRTktZMDk0TkpWa2ZGT3RqVFpCUjBaWG8wWjJfTE1GTkZPaktOWTBqellTYmFtczYwbVRNT0thSmxBa2NaWHhqQ2J6YjNyeFNBclV1OG1UNkU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 8월 12일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 8월 12일 동부 표준시 오전 6시 45분에 비트코인(BTC) 하나의 가격은 $64,085.21입니다. 이는 어제 오전보다 105.20달러 하락한 가격이며, 지난해 이맘때보다 약 56,000달러 낮은 수준입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
