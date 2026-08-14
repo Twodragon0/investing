@@ -28,28 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-14 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 11건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 8건 수집</li><li>🏦 <strong>거래소</strong>: 4건 수집</li><li>🟣 <strong>DeFi</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 11건의 뉴스 중 **규제/정책** 관련이 8건(73%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (8건): 집행 규제 움직임 (8건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (4건): fca, htx, settlement 관련 지표와 수급 흐름을 함께 확인하세요.
-- **🟣 DeFi** (1건): certification, prediction, incentive 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 영국 FCA, 암호화폐 프로모션 소송을 통해 HTX와 합의 협상 중
-- 영국 사용자가 여전히 제재 동결에 직면함에 따라 Justin Sun의 HTX는 FCA 합의에 가까워졌습니다.
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 5건, 유럽 4건, 한국 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 11건
 - **미국**: 5건

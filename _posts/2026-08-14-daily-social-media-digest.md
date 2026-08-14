@@ -29,42 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-14 - 소셜 미디어 뉴스 요�
 <div class="stat-item"><div class="stat-value">🟡 주의</div><div class="stat-label">시장 경계</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 트렌드: 코스피, 외국인, 기관 관련 20건 포착</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 아주경제 관련 10건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 환율 주목</li><li>🟠 <strong>비트코인</strong>: 트럼프 주목</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 20건의 뉴스 중 **가격/시장** 관련이 16건(80%)으로 압도적입니다. 시장 가격 움직임이 투자자들의 이목을 끌고 있습니다
+오늘 수집된 총 20건 중 텔레그램 0건, 소셜 1건, 정치·경제 19건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📈 가격/시장** (16건): 코스피, 외국인, 기관 가격 변동 (16건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (10건): 환율, 아주경제, 한국은행 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (6건): 트럼프, 환율, 카르다노 정치 이슈 (6건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 퇴근길시황] 코스피 이틀 연속 3%대 상승⋯비트코인 보합 속 ‘7월 PPI’ 시선
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 19건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:62%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:38%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:50%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-14.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 없음에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

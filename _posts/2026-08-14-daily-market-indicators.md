@@ -16,6 +16,11 @@ image_alt: "시장 심리 및 리스크 지표 (2026-08-14) - 시장 분석 뉴�
 
 **2026-08-14** 기준 시장 지표 공포탐욕 66.1(greed), VIX 14.63. 7개 소스 수집.
 
+## 전체 뉴스 요약
+
+- 국채 금리 관련 뉴스 (보완):
+
+
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">66.1</div><div class="stat-label">공포탐욕 (greed)</div></div><div class="stat-item"><div class="stat-value">14.63</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">99.95</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,411.40</div><div class="stat-label">금</div></div></div>
 
 ## 1. 시장 심리 지표
