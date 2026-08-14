@@ -524,6 +524,30 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         r'_JOB_ID_RE = re.compile(r"^\s*(?P<job>[A-Za-z_][A-Za-z0-9_-]*):\s*$", re.M)',
         "tests/test_required_check_aggregator_guard.py::test_job_id_scanner_rejects_nested_keys",
     ),
+    StaticCase(
+        # 앵커는 튜플의 **여는 줄**이다. 항목을 나열하면 대조군을 넓힐 때마다 앵커가
+        # 낡는다 — 2026-08-12 에 2개에서 9개로 넓히면서 실제로 그렇게 깨졌다.
+        # 뒤에 남는 항목들은 `_FALSIFIABILITY_UNUSED` 로 흘러가 문법이 유지된다.
+        "대조군을 비워 대조군 비 지표를 소멸시킴",
+        "scripts/tools/check_pilot_observation.py",
+        'CONTROL_COLLECTORS = (\n    "political",',
+        'CONTROL_COLLECTORS = ()\n_FALSIFIABILITY_UNUSED = (\n    "political",',
+        "tests/test_check_pilot_observation_control_group_guard.py::test_control_group_is_not_empty",
+    ),
+    StaticCase(
+        "확대된 수집기의 파일럿 플래그가 조용히 되돌아감",
+        ".github/workflows/collect-crypto-news.yml",
+        "skip-noop-state-commits: 'true'",
+        "skip-noop-state-commits: 'false'",
+        "tests/test_check_pilot_observation_control_group_guard.py::test_every_mapped_collector_is_either_pilot_or_control",
+    ),
+    StaticCase(
+        "묶음 집계가 층화 대신 단일 경계로 자름",
+        "scripts/tools/check_pilot_observation.py",
+        "            runs,\n            pilot_starts[name],",
+        "            runs,\n            min(pilot_starts.values()),",
+        "tests/test_check_pilot_observation_load_adjusted.py::test_group_mode_splits_each_collector_at_its_own_start",
+    ),
 )
 
 

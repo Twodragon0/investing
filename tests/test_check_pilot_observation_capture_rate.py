@@ -188,7 +188,7 @@ def test_report_capture_rate_skips_when_whitelist_unreadable(monkeypatch, caplog
     monkeypatch.setattr(cpo, "read_noop_whitelist", lambda: None)
     monkeypatch.setattr(cpo, "collect_collector_commits", lambda *_a, **_k: [])
 
-    verdict = cpo.report_capture_rate("regulatory", 7, _PILOT, skip_blocks=None)
+    verdict = cpo.report_capture_rate(["regulatory"], 7, {"regulatory": _PILOT}, skip_blocks=None)
 
     assert verdict is None, "화이트리스트를 못 읽었는데 판정을 냈다 — 거짓 PASS"
 
@@ -201,7 +201,7 @@ def test_report_capture_rate_reports_leak(monkeypatch):
         lambda *_a, **_k: [_commit(11, 7, "bbb", [_METRICS, _CACHE])],
     )
 
-    verdict = cpo.report_capture_rate("regulatory", 7, _PILOT, skip_blocks=None)
+    verdict = cpo.report_capture_rate(["regulatory"], 7, {"regulatory": _PILOT}, skip_blocks=None)
 
     assert verdict is False, "누출 1건인데 PASS 로 판정했다"
 
@@ -214,7 +214,7 @@ def test_report_capture_rate_passes_when_clean(monkeypatch):
         lambda *_a, **_k: [_commit(11, 8, "ccc", [_METRICS, _DEDUP])],
     )
 
-    verdict = cpo.report_capture_rate("regulatory", 7, _PILOT, skip_blocks=[[_METRICS, _CACHE]])
+    verdict = cpo.report_capture_rate(["regulatory"], 7, {"regulatory": _PILOT}, skip_blocks=[[_METRICS, _CACHE]])
 
     assert verdict is True
 
@@ -224,6 +224,6 @@ def test_report_capture_rate_fails_on_overreach(monkeypatch):
     monkeypatch.setattr(cpo, "read_noop_whitelist", lambda: _WHITELIST)
     monkeypatch.setattr(cpo, "collect_collector_commits", lambda *_a, **_k: [])
 
-    verdict = cpo.report_capture_rate("regulatory", 7, _PILOT, skip_blocks=[[_METRICS, _DEDUP]])
+    verdict = cpo.report_capture_rate(["regulatory"], 7, {"regulatory": _PILOT}, skip_blocks=[[_METRICS, _DEDUP]])
 
     assert verdict is False, "오검출 1건인데 PASS 로 판정했다"

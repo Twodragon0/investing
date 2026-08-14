@@ -1,0 +1,87 @@
+name: Vercel Quota Report
+
+# 24h 롤링 피크와 거절을 주간으로 남긴다. 목적은 경보가 아니라 **추세 축적**이다.
+#
+# 임계와 비교해 판정하지 않는다. 포화 사건이 전 기간 1회(2026-08-07)뿐이라 창 폭과
+# 임계가 강하게 식별되지 않는다(24h/95 · 30h/106 · 36h/116 이 모두 비슷하게 들어맞는다).
+# 두 번째 포화 사건이 나오기 전까지 임계를 상수로 박지 말 것 —
+# `docs/devsecops/branch-protection.md` 의 "식별 한계".
+#
+# `VERCEL_TOKEN` 이 없으면 집계할 수 없다. 실패가 아니라 **명시적 skip** 으로 끝낸다
+# (2026-08-14 기준 이 시크릿은 미설정이고, `ops-10am-digest` 도 같은 이유로 Vercel 을
+# UNKNOWN 으로 낸다). 시크릿을 넣으면 이 워크플로우는 수정 없이 동작한다.
+
+on:
+  schedule:
+    # 매주 월요일 01:00 UTC = 10:00 KST. 수집기 러시(07~08 KST)를 피한 시각.
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+    inputs:
+      since:
+        description: '집계 시작일 (YYYY-MM-DD, 기본: 14일 전)'
+        required: false
+      window_hours:
+        description: '롤링 창 폭 (기본: 24)'
+        default: '24'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-quota-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          # SHA 대조가 `origin/main` 전체 이력을 읽는다. 얕은 클론이면 집계 창의
+          # 커밋이 없어 전부 "레코드 없음 = 거절" 로 보고된다.
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: '3.11'
+
+      - name: Check Vercel credentials
+        id: creds
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "${VERCEL_TOKEN}" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::VERCEL_TOKEN 미설정 — 집계를 건너뛴다. 시크릿을 넣으면 수정 없이 동작한다."
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install Vercel CLI
+        if: steps.creds.outputs.available == 'true'
+        run: npm install -g vercel@50.37.3
+
+      - name: Aggregate rolling peak and rejections
+        if: steps.creds.outputs.available == 'true'
+        id: report
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -o pipefail
+          args=(--window-hours "${{ inputs.window_hours || '24' }}")
+          if [ -n "${{ inputs.since }}" ]; then
+            args+=(--since "${{ inputs.since }}")
+          fi
+          # 파이프 뒤에 tee 를 두면 tee 의 rc 를 보게 되므로 pipefail 을 켜 둔다.
+          python3 scripts/tools/check_vercel_quota.py "${args[@]}" 2>&1 | tee vercel-quota-report.txt
+
+      - name: Upload report
+        if: always() && steps.creds.outputs.available == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: vercel-quota-report-${{ github.run_id }}
+          path: vercel-quota-report.txt
+          retention-days: 90

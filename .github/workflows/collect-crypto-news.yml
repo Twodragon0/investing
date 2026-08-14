@@ -34,6 +34,10 @@ jobs:
           install-playwright: 'true'
           commit-message: 'chore: collect crypto news'
           git-add-paths: '_posts/ _state/ assets/images/'
+          # no-op 커밋 생략 — regulatory 파일럿(2026-08-10~) 1차 확대.
+          # 07-20 이후 실측 136커밋 중 96건(70.6%)이 no-op 으로 6개 수집기 중 최다다.
+          # docs/devsecops/collector-push-batching-design.md
+          skip-noop-state-commits: 'true'
 
   alert-consecutive-failures:
     needs: collect

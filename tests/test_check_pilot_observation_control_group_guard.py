@@ -109,6 +109,49 @@ def test_control_group_excludes_pilot_enabled_collectors():
     )
 
 
+def test_control_group_is_not_empty():
+    """대조군이 비면 `[4]` 의 대조군 비가 분모 0으로 조용히 소멸한다.
+
+    오염 가드만으로는 이걸 못 잡는다 — 파일럿을 6개 전부로 확대하면서
+    `CONTROL_COLLECTORS` 를 빈 튜플로 만들면 오염은 0이 되고(공집합) 가드는 통과한다.
+    그런데 결과는 지표가 사라지는 것이지 에러가 아니다. 확대의 대가를 치르려면
+    명시적으로 이 가드를 고쳐야 한다.
+
+    초안은 "대조군 후보는 political·geopolitical 둘뿐" 이라고 적었는데 틀렸다.
+    no-op 0건인 수집기도 대조군 자격이 있다 — 파일럿에 반응하지 않는 것은 결격이
+    아니라 요건이고, 콘텐츠 커밋으로 공통 교란(뉴스량)에는 반응한다. 지금은 비-파일럿
+    수집기 전부가 대조군이라 2차 확대를 해도 이 가드가 red 가 되지 않는다.
+    """
+    assert cpo.CONTROL_COLLECTORS, (
+        "`CONTROL_COLLECTORS` 가 비었다 — 대조군 비의 분모가 0이 되어 지표가 소멸한다. "
+        "파일럿을 남은 수집기까지 확대했다면 그 지표를 버린다는 결정을 코드와 설계 문서에 "
+        "함께 남겨야 한다."
+    )
+
+
+def test_every_mapped_collector_is_either_pilot_or_control():
+    """매핑된 수집기는 파일럿이거나 대조군이어야 한다 — 제3의 상태가 없어야 한다.
+
+    확대 후의 조용한 실패를 잡는다. crypto 의 `skip-noop-state-commits` 가 리베이스나
+    워크플로우 정리에서 되돌아가면 그 수집기는 파일럿에서 빠지는데, 대조군에도 없으므로
+    어느 지표에도 나타나지 않는다. 커밋이 다시 늘어나도 도구는 조용하다.
+
+    상보성으로 단언하면 확대할 때마다 테스트를 고칠 필요가 없다 — 옮긴 이름이 한쪽에서
+    빠지고 다른 쪽에 들어가면 그대로 통과한다.
+    """
+    enabled = cpo.pilot_enabled_collectors()
+    assert enabled is not None, "워크플로우에서 파일럿 플래그를 읽지 못했다"
+
+    mapped = set(cpo.COLLECTOR_WORKFLOWS)
+    control = set(cpo.CONTROL_COLLECTORS)
+    orphans = mapped - enabled - control
+    assert not orphans, (
+        f"파일럿도 대조군도 아닌 수집기: {sorted(orphans)}. 플래그가 되돌아갔거나 "
+        "`CONTROL_COLLECTORS` 에서 빠뜨렸습니다. 어느 쪽이든 이 수집기는 지표에 "
+        "나타나지 않습니다."
+    )
+
+
 # ---------------------------------------------------------------------------
 # 플래그 파서 양방향
 # ---------------------------------------------------------------------------
@@ -163,12 +206,17 @@ def test_report_load_adjusted_warns_when_target_is_in_its_own_control(monkeypatc
     """`--collector crypto` 는 대조군에 자기 자신을 넣는다 — 분모가 분자를 포함한다.
 
     가드 테스트는 기본 대상(`regulatory`)만 검사하므로 CLI 오버라이드는 런타임에서
-    잡아야 한다. 실제로 `--collector crypto` 로 돌렸을 때 대조군 비 분모 29건에
-    crypto 자신의 9건이 들어가 있었다.
+    잡아야 한다. 실제로 `--collector crypto` 로 돌렸을 때(crypto 가 아직 대조군이던
+    2026-08-12 이전) 대조군 비 분모 29건에 crypto 자신의 9건이 들어가 있었다.
+
+    `CONTROL_COLLECTORS` 를 monkeypatch 하는 것은 이 테스트가 **경고 코드의 동작**을
+    보기 때문이다. production 상수를 그대로 읽으면 확대할 때마다(대조군에서 이름이
+    빠질 때마다) 이 테스트가 무관하게 red 가 된다 — 실제로 1차 확대에서 그렇게 깨졌다.
     """
     monkeypatch.setattr(cpo, "commit_log", lambda _days: "")
     monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([], "테스트"))
     monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory"}))
+    monkeypatch.setattr(cpo, "CONTROL_COLLECTORS", ("political", "geopolitical"))
 
     from datetime import datetime, timedelta, timezone
 
@@ -176,16 +224,22 @@ def test_report_load_adjusted_warns_when_target_is_in_its_own_control(monkeypatc
     pilot = datetime(2026, 8, 10, 13, 14, 51, tzinfo=kst)
 
     with caplog.at_level("WARNING"):
-        cpo.report_load_adjusted("crypto", 7, pilot, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
+        cpo.report_load_adjusted(["political"], 7, {"political": pilot}, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
 
     messages = [r.getMessage() for r in caplog.records]
     assert any("자기 자신" in m or "자기참조" in m for m in messages), f"자기참조 경고가 없다: {messages}"
 
 
 def test_report_load_adjusted_warns_on_contaminated_control(monkeypatch, caplog):
+    """대조군에 파일럿이 켜진 이름이 남아 있으면 도구 자신이 경고해야 한다.
+
+    위와 같은 이유로 `CONTROL_COLLECTORS` 를 고정한다 — 오염된 상태를 테스트가 직접
+    만들어야지, production 상수가 우연히 오염돼 있기를 기대하면 안 된다.
+    """
     monkeypatch.setattr(cpo, "commit_log", lambda _days: "")
     monkeypatch.setattr(cpo, "collect_run_timestamps", lambda _wf, limit: ([], "테스트"))
-    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory", "crypto"}))
+    monkeypatch.setattr(cpo, "pilot_enabled_collectors", lambda: frozenset({"regulatory", "political"}))
+    monkeypatch.setattr(cpo, "CONTROL_COLLECTORS", ("political", "geopolitical"))
 
     from datetime import datetime, timedelta, timezone
 
@@ -193,8 +247,8 @@ def test_report_load_adjusted_warns_on_contaminated_control(monkeypatch, caplog)
     pilot = datetime(2026, 8, 10, 13, 14, 51, tzinfo=kst)
 
     with caplog.at_level("WARNING"):
-        cpo.report_load_adjusted("regulatory", 7, pilot, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
+        cpo.report_load_adjusted(["regulatory"], 7, {"regulatory": pilot}, datetime(2026, 8, 20, 0, 0, tzinfo=kst))
 
-    assert any("오염" in r.message or "crypto" in str(r.args) for r in caplog.records), (
+    assert any("오염" in r.message or "political" in str(r.args) for r in caplog.records), (
         f"오염 경고가 없다. 기록된 경고: {[r.getMessage() for r in caplog.records]}"
     )

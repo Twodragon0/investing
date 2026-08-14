@@ -86,14 +86,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import NamedTuple
+from typing import TYPE_CHECKING, NamedTuple
 from urllib.parse import urlparse
+
+if TYPE_CHECKING:
+    from collections.abc import Mapping, Sequence
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "common"))
 from config import setup_logging  # noqa: E402
@@ -119,19 +123,53 @@ NON_ITEM_HOSTS = ("2twodragon.com", "w3.org")
 
 DEFAULT_COLLECTOR = "regulatory"
 
+# `--collector all` — 파일럿이 켜진 수집기를 전부 묶어 집계한다.
+#
+# 상수 목록이 아니라 `pilot_enabled_collectors()` 로 푼다. 목록으로 두면 확대할 때마다
+# 두 곳(워크플로우 플래그, 이 목록)을 맞춰야 하고 빠뜨리면 조용히 대상이 준다.
+# 플래그를 못 읽으면 fail closed — 집계 자체를 거부한다.
+GROUP_TARGET = "all"
+
 # 파일럿이 main 에 들어온 시각 — 커밋 5297e40bb
 # "feat: no-op 수집기 커밋을 만들지 않는다 (regulatory 파일럿) …(#1148)"
 PILOT_MERGED_DEFAULT = "2026-08-10T13:14:51+09:00"
 
-# 대조군 — no-op 커밋을 실제로 만들면서 파일럿이 **적용되지 않은** 수집기.
+# 대조군 — 파일럿이 **적용되지 않은** 수집기 전부.
 #
-# 나머지 7개 수집기는 설계 문서 실측(최근 600커밋)에서 no-op 커밋이 0건이다. 넣어도
-# 파일럿에 반응할 수 없는 상수 항이라 분모만 키워 비율의 민감도를 떨어뜨린다.
+# 2026-08-12 초안은 "no-op 커밋을 실제로 만드는" 수집기로 좁혀 2개(political·
+# geopolitical)만 뒀다. 근거는 "no-op 0건인 수집기는 파일럿에 반응할 수 없는 상수
+# 항이라 분모만 키워 민감도를 떨어뜨린다" 였는데, **DiD 에서 이 논리는 뒤집혀 있다.**
+# 대조군의 요건은 (a) 파일럿에 반응하지 않을 것, (b) 공통 교란(뉴스량)을 탈 것이다.
+# no-op 0건인 수집기는 (a)를 완벽히 만족하고, 콘텐츠 커밋으로 뉴스량에 반응하므로
+# (b)도 만족한다. 배제할 이유가 아니라 자격 요건이었다.
+#
+# 실측이 그대로 보여준다 (최근 7일, regulatory 기준 SE(log RR)):
+#
+#   대조군 2개   전 0.700 (14/20)  후 0.625 (5/8)   → -10.7%   SE 0.668
+#   대조군 9개   전 0.200 (14/70)  후 0.156 (5/32)  → -21.9%   SE 0.563
+#
+# 좁힌 쪽이 SE 가 19% 크고, 추정치도 다른 대조군들과 갈린다.
+#
+# 이 목록을 넓히면 2차 확대(political·geopolitical)를 해도 대조군 비가 살아남는다.
+# 좁혀 뒀을 때는 그 확대가 지표를 소멸시켰다.
 #
 # 파일럿을 확대하면 그 수집기를 여기서 빼야 한다. 안 빼면 분모도 같이 줄어 절감이
 # 과소평가된다. `tests/test_check_pilot_observation_load_adjusted.py` 가 파일럿
 # 대상이 이 목록에 들어오는 경우를 red 로 만든다.
-CONTROL_COLLECTORS = ("crypto", "stock", "social", "political", "geopolitical")
+#
+# 이름은 커밋 주제(`chore: collect <name> …`)의 접두다. 1500커밋 실측에서 13개 이름이
+# 1283건을 모호성 0으로 가른다.
+CONTROL_COLLECTORS = (
+    "political",
+    "geopolitical",
+    "defi llama",
+    "defi yields",
+    "fmp calendar",
+    "market indicators",
+    "coinmarketcap",
+    "worldmonitor",
+    "blockchain",
+)
 
 # 설계 문서의 "수집기 1개에 먼저 적용해 최소 3일 관측" 게이트.
 MIN_OBSERVATION_DAYS = 3
@@ -163,11 +201,23 @@ COLLECTOR_WORKFLOWS: dict[str, str] = {
     "social": "collect-social-media.yml",
     "political": "collect-political-trades.yml",
     "geopolitical": "collect-geopolitical.yml",
+    "defi llama": "collect-defi-llama.yml",
+    "defi yields": "collect-defi-yields.yml",
+    "fmp calendar": "collect-fmp-calendar.yml",
+    "market indicators": "collect-market-indicators.yml",
+    "coinmarketcap": "collect-coinmarketcap.yml",
+    "worldmonitor": "collect-worldmonitor-news.yml",
+    "blockchain": "collect-blockchain.yml",
 }
 
 # 액션 입력 `skip-noop-state-commits` — 이 플래그가 파일럿의 on/off 다.
 # YAML 은 `true` 와 `'true'` 를 모두 허용하므로 인용부호를 옵셔널로 둔다.
 PILOT_FLAG_RE = re.compile(r"^\s*skip-noop-state-commits:\s*['\"]?(?P<value>true|false)['\"]?\s*$", re.M)
+
+# `git log -G` 에 넘길 **값 인식** 패턴 (POSIX ERE — 호출부에서 `-E` 로 고정한다).
+# 파이썬 정규식이 아니라 git 이 해석하므로 `PILOT_FLAG_RE` 와 문법이 다르다. 둘이
+# 같은 것을 가리키는지는 `tests/test_check_pilot_observation_load_adjusted.py` 가 지킨다.
+PILOT_FLAG_ON_RE = "skip-noop-state-commits:[[:space:]]*['\"]?true"
 
 
 def is_runtime_skip_line(line: str) -> bool:
@@ -277,6 +327,28 @@ class LoadRatio(NamedTuple):
             return None
         return (post - pre) / pre * 100
 
+    def delta_ci_pct(self, z: float = 1.96) -> tuple[float, float] | None:
+        """변화율의 95% 신뢰구간(%). 네 칸 중 하나라도 0이면 None.
+
+        **이게 없으면 숫자가 실제보다 정밀해 보인다.** 2026-08-12 리뷰에서 드러났다:
+        문서에 기록된 -33.7% 와 -33.3% 는 7시간 뒤 재측정에서 -23.3% 와 -10.7% 로
+        갈렸는데, 구간을 붙여 보면 [-79%, +113%] 라 애초에 그 정도 흔들림이 예상 범위
+        안이었다. "방향 참고용" 이라 부르려면 방향이 식별돼야 하는데 그렇지 않다.
+
+        네 칸 로그 비의 표준오차는 `sqrt(1/a + 1/b + 1/c + 1/d)` 다 (Katz). 로그 축에서
+        대칭 구간을 만든 뒤 비율로 되돌린다 — 비율 축에서 직접 대칭 구간을 만들면
+        하한이 음수가 되어 "절감 120%" 같은 값이 나온다.
+        """
+        cells = (self.pre_num, self.pre_den, self.post_num, self.post_den)
+        if any(c <= 0 for c in cells):
+            return None
+        se = math.sqrt(sum(1 / c for c in cells))
+        rr = (self.post_num / self.post_den) / (self.pre_num / self.pre_den)
+        return (
+            (math.exp(math.log(rr) - z * se) - 1) * 100,
+            (math.exp(math.log(rr) + z * se) - 1) * 100,
+        )
+
 
 def build_ratio(
     numerator: list[datetime],
@@ -296,6 +368,19 @@ def build_ratio(
     pre_num, post_num = split_by_pilot(numerator, pilot_merged)
     pre_den, post_den = split_by_pilot(denominator, pilot_merged)
     return LoadRatio(pre_num, pre_den, post_num, post_den)
+
+
+def run_budget(days: int) -> int:
+    """gh 에서 가져올 실행 수.
+
+    `days * 6` 은 crypto 의 실측 실행률(5.86회/일)과 사실상 같아 마진이 구조적으로 0
+    이었다 — 2026-08-12 실측에서 7일 창에 예산 42, 창 내 실행 41 로 여유가 1건이었다.
+    재실행이나 수동 dispatch 한 번이면 넘어가고, 넘어가도 조용히 절감이 과대평가된다.
+
+    실행률이 가장 높은 수집기의 두 배를 잡는다. gh 호출은 워크플로우당 한 번이라
+    예산을 키우는 비용은 응답 크기뿐이다.
+    """
+    return max(60, days * 12)
 
 
 def is_underpowered(pilot_merged: datetime, now: datetime) -> bool:
@@ -339,11 +424,60 @@ def collect_run_timestamps(workflow: str, limit: int) -> tuple[list[datetime], s
     return stamps, None
 
 
-def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None, list[list[str]]]:
+def run_started_at(run: Mapping[str, object]) -> datetime | None:
+    """실행 시작 시각. 읽을 수 없으면 None — 호출부가 그 실행을 버린다."""
+    stamp = run.get("createdAt")
+    if not isinstance(stamp, str):
+        return None
+    try:
+        return datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def count_runs_before(runs: Sequence[Mapping[str, object]], pilot_start: datetime) -> int:
+    """파일럿 경계 **때문에** 버려질 실행 수.
+
+    `filter_runs_after` 의 결과 길이만 보면 "경계로 버려짐" 과 "시각을 못 읽어
+    버려짐" 이 구분되지 않는다. 후자 한 건 때문에 표본이 상한에 묶였다는 안내가
+    조용히 꺼지는 것을 막으려고 따로 센다.
+    """
+    return sum(1 for run in runs if (at := run_started_at(run)) is not None and at <= pilot_start)
+
+
+def filter_runs_after(runs: Sequence[Mapping[str, object]], pilot_start: datetime) -> list[Mapping[str, object]]:
+    """파일럿 시작 **뒤에 시작한** 실행만 남긴다.
+
+    파일럿 전 실행은 코드가 없어 **구조적으로 skip 할 수 없다.** 분모에 넣으면
+    skip 비율이 희석되는데, 그 방향이 나쁘다 — 2026-08-14 실측에서 조사한 20실행 중
+    8건이 파일럿 전이라 5/20 = 25.0% (CI 상한 46.9%) 가 나왔다. 그 상한은 파일럿 전
+    실측 no-op 비율 55.2% 를 **배제해서** "skip 이 기대보다 덜 걸린다" 는 잘못된
+    인상을 준다. 후만 세면 5/12 = 41.7% CI [19.3%, 68.0%] 로 55.2% 를 정상적으로
+    포함한다.
+
+    `createdAt` 을 못 읽는 실행은 **버린다.** 남기면 경계를 모르는 표본이 분모에
+    들어가 같은 희석이 재발한다.
+    """
+    kept: list[Mapping[str, object]] = []
+    for run in runs:
+        started = run_started_at(run)
+        if started is None:
+            continue
+        if started > pilot_start:
+            kept.append(run)
+    return kept
+
+
+def collect_skip_counts(
+    workflow: str, limit: int, pilot_start: datetime
+) -> tuple[int, int, str | None, list[list[str]]]:
     """gh CLI 로 워크플로우 실행 로그에서 skip 발생 횟수와 버린 파일 목록을 센다.
 
     Returns (skip 횟수, 조사한 실행 수, 건너뛴 이유, skip 블록들). gh 가 없거나
     인증이 없으면 (0, 0, 이유, []) 로 graceful degradation.
+
+    `pilot_start` 뒤에 시작한 실행만 센다 — 이유는 `filter_runs_after` 참조.
+    `--limit` 은 gh 에서 **가져올** 실행 수이고 필터 뒤 표본은 그보다 작다.
 
     파일 목록까지 같은 로그에서 뽑는 이유: 오검출 판정([5])에 필요한데, 로그를 다시
     받으면 실행당 수 초가 두 배로 든다.
@@ -357,7 +491,7 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
                 f"--workflow={workflow}",
                 f"--limit={limit}",
                 "--json",
-                "databaseId,conclusion",
+                "databaseId,conclusion,createdAt",
             ],
             cwd=REPO_ROOT,
             capture_output=True,
@@ -370,9 +504,17 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
         return 0, 0, f"gh run list 실패 ({e.returncode})", []
 
     try:
-        runs = json.loads(listing.stdout)
+        fetched = json.loads(listing.stdout)
     except json.JSONDecodeError:
         return 0, 0, "gh 출력 파싱 실패", []
+
+    runs = filter_runs_after(fetched, pilot_start)
+    if fetched and not count_runs_before(fetched, pilot_start):
+        # 경계 앞 실행이 하나도 없다면 그 앞이 더 있는데 `--limit` 에서 잘렸을 수
+        # 있다. 표본이 조용히 상한에 묶이는 것을 보이게 한다. 판정 기준이 "버려진
+        # 실행 수" 가 아니라 "**경계 때문에** 버려진 실행 수" 인 이유: 시각을 못 읽어
+        # 버린 실행 한 건이 이 안내를 꺼 버리면 안 된다.
+        logger.info("  가져온 %d실행에 파일럿 전이 없다 — --run-limit 을 올리면 표본이 늘 수 있다", len(fetched))
 
     skips = 0
     checked = 0
@@ -425,6 +567,105 @@ def pilot_enabled_collectors() -> frozenset[str] | None:
         if match and match.group("value") == "true":
             enabled.add(name)
     return frozenset(enabled)
+
+
+def pilot_started_at(collector: str) -> datetime | None:
+    """그 수집기에 파일럿 플래그가 **main 에 들어온** 시각. 모르면 None.
+
+    묶음 집계에서 수집기마다 파일럿 시작이 다르기 때문에 필요하다. regulatory 는
+    2026-08-10, 1차 확대분은 그 뒤다. 하나의 경계로 전부 자르면 둘 중 하나가 틀린다 —
+    이른 경계를 쓰면 아직 파일럿이 아니던 확대분 구간이 '후' 로 들어가고, 늦은 경계를
+    쓰면 regulatory 의 관측일이 통째로 버려진다.
+
+    상수 표가 아니라 git 에서 도출한다. 표로 두면 확대할 때마다 갱신해야 하고, 빠뜨리면
+    조용히 틀린 구간이 나온다 — `CONTROL_COLLECTORS` 에서 이미 겪은 실패 모드다.
+
+    **키 이름이 아니라 값까지 보고 찾는다.** 초안은 `-S "skip-noop-state-commits"` 였는데,
+    `-S` 는 문자열 **출현 횟수**가 변한 커밋만 잡으므로 키를 그대로 두고 값만
+    `'false'` → `'true'` 로 뒤집은 커밋을 통째로 놓친다. 임시 레포 실측:
+
+        c2 2026-08-05  키를 'false' 로 도입
+        c3 2026-08-25  'true' 로 전환   ← 진짜 파일럿 시작
+        -S <키>  → 2026-08-05  (20일 이른 경계)
+        -G <값>  → 2026-08-25  (정답)
+
+    20일 이른 경계는 그 사이의 정상 no-op 커밋을 전부 `[5]` 의 누출로 만든다 — 커밋
+    `009ed42cd` 가 없앤 거짓 FAIL 과 같은 실패 모드다. 대조군 워크플로우에 "여긴 꺼져
+    있음" 을 명시하려고 `'false'` 를 적어 두는 것은 현재 가드를 전부 통과하므로
+    (대조군이니 orphan 도 오염도 아니다) 이 경로는 가설이 아니라 열려 있다.
+
+    `-E` 를 명시해 ERE 로 고정한다. 기본 문법(BRE)에서는 `?` 가 리터럴이라 인용부호
+    옵셔널이 깨지고, 사용자 git 설정에 좌우되게 두면 조용히 달라진다.
+
+    플래그를 껐다 켠 이력이 여러 번이면 최초의 `true` 도입 시각을 돌려준다.
+    워크플로우 파일 rename 은 대응하지 않는다(`--follow` 없음) — rename 커밋이 첫 줄로
+    잡혀 경계가 **늦게** 잡히고, 그 방향은 절감 과소평가라 거짓 PASS 를 만들지 않는다.
+    현재 13개 워크플로우에 rename 이력은 없다.
+    """
+    workflow = workflow_for(collector)
+    if workflow is None:
+        return None
+    out = _git(
+        "log",
+        "origin/main",
+        "--reverse",
+        "--format=%cI",
+        "-E",
+        "-G",
+        PILOT_FLAG_ON_RE,
+        "--",
+        f".github/workflows/{workflow}",
+    )
+    first = out.split("\n", 1)[0].strip()
+    if not first:
+        return None
+    try:
+        return datetime.fromisoformat(first).astimezone(KST)
+    except ValueError:
+        logger.warning("파일럿 시작 시각 파싱 실패 (%s): %s", collector, first)
+        return None
+
+
+def resolve_pilot_starts(collectors: Sequence[str]) -> dict[str, datetime]:
+    """수집기별 파일럿 시작 시각. 못 읽은 수집기는 **빼고** 돌려준다.
+
+    **다른 수집기의 경계로 대체하지 않는다.** 초안은 `--pilot-merged` 를 폴백으로
+    썼는데, 실제로 돌려 보니 거짓 FAIL 이 났다: 확대분 3개가 아직 `origin/main` 에
+    들어오지 않은 상태에서 regulatory 의 08-10 경계를 물려받자, 그 수집기들이 정상적으로
+    만든 no-op 커밋 17건이 전부 "누출" 로 잡혔다. 파일럿이 켜지지도 않았는데 skip 이
+    동작하지 않았다고 보고한 것이다.
+
+    경계를 모르면 그 수집기는 집계에서 빠지는 게 맞다. 없는 데이터보다 틀린 데이터가
+    나쁘고, `[5]` 의 "누출 0건" 은 게이트라서 거짓 FAIL 이 특히 비싸다.
+    """
+    starts: dict[str, datetime] = {}
+    for name in collectors:
+        found = pilot_started_at(name)
+        if found is None:
+            logger.warning(
+                "  ⚠ %s 를 집계에서 제외한다 — 파일럿 시작 시각을 origin/main 에서 찾지 못했다. "
+                "아직 머지되지 않았거나 플래그가 다른 경로로 들어왔다.",
+                name,
+            )
+            continue
+        starts[name] = found
+    return starts
+
+
+def wilson_interval(successes: int, total: int, z: float = 1.96) -> tuple[float, float] | None:
+    """비율의 Wilson 95% 신뢰구간. 표본이 0이면 None.
+
+    정규근사(Wald)를 쓰지 않는 이유: 후 구간 표본이 한 자릿수이고 skip 비율이 0 이나
+    1 에 가까울 때 Wald 구간은 [0,1] 을 벗어나거나 폭이 0으로 붕괴한다. 설계 문서의
+    CI 폭 표도 Wilson 이라 같은 척도를 유지한다.
+    """
+    if total <= 0:
+        return None
+    p = successes / total
+    denom = 1 + z**2 / total
+    center = (p + z**2 / (2 * total)) / denom
+    margin = z * math.sqrt(p * (1 - p) / total + z**2 / (4 * total**2)) / denom
+    return max(0.0, center - margin), min(1.0, center + margin)
 
 
 def read_noop_whitelist() -> frozenset[str] | None:
@@ -560,7 +801,7 @@ def _post_title(path: Path) -> str | None:
     return m.group("title").strip().strip("\"'")
 
 
-def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]]:
+def check_post_duplicates(kind_filter: str | None, since: datetime | None = None) -> tuple[list[str], list[str]]:
     """포스트 수준 중복만 찾는다. Returns (제목 중복 리포트, 날짜·종류 중복 리포트).
 
     슬롯 키의 `kind` 는 꼬리 숫자를 떼고 정규화한다. 파일명을 그대로 키로 쓰면 두
@@ -568,6 +809,15 @@ def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]
     불가가 된다. 실제 재발행은 `…-report-2.md` 처럼 꼬리 숫자가 붙어서 나므로,
     정규화해야 이 검사가 의미를 갖는다. 제목이 없는 포스트를 잡는 유일한 경로이기도
     하다.
+
+    `since` 는 **묶음의 어느 파일도 그 날짜 이후가 아니면 보고하지 않는다.** 이 게이트가
+    묻는 것은 "파일럿이 중복을 만들었는가" 인데, 날짜를 안 보면 파일럿과 무관한 옛
+    중복이 그대로 FAIL 로 나온다 — `--collector all` 로 처음 돌렸을 때 crypto 의
+    2026-03-11 · 03-13 포스트 한 쌍이 그렇게 잡혔다(파일럿보다 5개월 앞선다).
+
+    묶음 **전체**를 자르지 않고 "하나라도 이후면 보고" 인 이유: 파일럿이 재발행을
+    만들었다면 새 파일만 경계 뒤에 있고 원본은 앞에 있다. 양쪽 모두를 요구하면 정작
+    잡아야 할 쌍을 놓친다.
     """
     by_title: dict[str, list[str]] = defaultdict(list)
     by_slot: dict[tuple[str, str], list[str]] = defaultdict(list)
@@ -584,9 +834,20 @@ def check_post_duplicates(kind_filter: str | None) -> tuple[list[str], list[str]
             by_title[title].append(path.name)
         by_slot[(path.name[:10], KIND_SUFFIX_RE.sub("", kind))].append(path.name)
 
-    title_dups = [f"{title!r} → {', '.join(files)}" for title, files in sorted(by_title.items()) if len(files) > 1]
+    cutoff = since.strftime("%Y-%m-%d") if since else None
+
+    def _in_window(files: list[str]) -> bool:
+        return cutoff is None or any(name[:10] >= cutoff for name in files)
+
+    title_dups = [
+        f"{title!r} → {', '.join(files)}"
+        for title, files in sorted(by_title.items())
+        if len(files) > 1 and _in_window(files)
+    ]
     slot_dups = [
-        f"{day} / {kind} → {', '.join(files)}" for (day, kind), files in sorted(by_slot.items()) if len(files) > 1
+        f"{day} / {kind} → {', '.join(files)}"
+        for (day, kind), files in sorted(by_slot.items())
+        if len(files) > 1 and _in_window(files)
     ]
     return title_dups, slot_dups
 
@@ -626,32 +887,87 @@ def _fmt_delta(value: float | None) -> str:
     return "n/a" if value is None else f"{value:+.1f}%"
 
 
-def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now: datetime) -> None:
+def _fmt_delta_ci(ratio: LoadRatio) -> str:
+    """변화율 뒤에 붙일 신뢰구간 문구. 낼 수 없으면 빈 문자열.
+
+    구간이 0을 포함하면 그 사실을 말로도 적는다. 숫자만 보면 부호가 식별된 것처럼
+    읽히는데, 현 표본에서는 대체로 그렇지 않다.
+    """
+    interval = ratio.delta_ci_pct()
+    if interval is None:
+        return ""
+    low, high = interval
+    note = "  ※ 0 포함 — 방향 미식별" if low <= 0 <= high else ""
+    return f"  95%CI [{low:+.0f}%, {high:+.0f}%]{note}"
+
+
+def report_load_adjusted(
+    collectors: Sequence[str],
+    days: int,
+    pilot_starts: Mapping[str, datetime],
+    now: datetime,
+) -> None:
     """[4] 부하 보정 절감 — 실행당 커밋과 대조군 비를 나란히 출력한다.
 
     판정을 내리지 않는다. 이 스크립트의 종료 코드는 포스트 수준 중복만 본다 —
     절감은 측정 대상이지 게이트가 아니다.
+
+    수집기가 여럿이면 **층화 합산**이다. 각 수집기를 자기 경계로 전·후로 가른 뒤
+    분자와 분모를 더한다. 하나의 경계로 전부 자르면 파일럿 시작이 다른 수집기의
+    구간이 틀어진다.
+
+    **대조군 비는 층화 합산하지 않는다.** 대조군 커밋을 파일럿 수집기 수만큼 중복
+    계상하게 되어 절대값이 묶음 크기에 따라 달라진다. 대신 수집기별로 따로 낸다 —
+    비교 가능한 숫자를 내는 편이 합산된 숫자 하나보다 낫다.
     """
-    logger.info("[4] 부하 보정 절감 (파일럿 머지 %s)", pilot_merged.isoformat())
+    logger.info("[4] 부하 보정 절감 (대상 %s)", ", ".join(collectors))
+    for name in collectors:
+        logger.info("  파일럿 시작 %s — %s", name, pilot_starts[name].isoformat())
 
     # 커밋과 실행에 같은 창을 강제한다. git `--since` 와 gh `--limit` 은 서로 다른
     # 기준으로 자르므로 여기서 한 번 더 맞추지 않으면 분모만 멀리까지 샌다.
     window_start = now - timedelta(days=days)
     raw = commit_log(days)
-    pilot_commits = parse_commit_timestamps(raw, collector)
 
-    # 실행은 최대 6회/일을 가정하고 여유를 둔다 — 부족하면 전 구간이 잘려 나간다.
-    workflow = workflow_for(collector)
-    if workflow is None:
-        runs, reason = [], f"{collector!r} 의 워크플로우 매핑이 없다 (COLLECTOR_WORKFLOWS 에 추가하세요)"
-    else:
-        runs, reason = collect_run_timestamps(workflow, limit=max(30, days * 6))
-    if reason:
-        logger.info("  실행당 커밋: 건너뜀 (%s)", reason)
-    else:
-        per_run = build_ratio(pilot_commits, runs, pilot_merged, since=window_start)
+    totals = [0, 0, 0, 0]
+    skipped: list[str] = []
+    parts: list[tuple[str, LoadRatio]] = []
+    for name in collectors:
+        workflow = workflow_for(name)
+        if workflow is None:
+            skipped.append(f"{name}: 워크플로우 매핑 없음 (COLLECTOR_WORKFLOWS 에 추가하세요)")
+            continue
+        runs, reason = collect_run_timestamps(workflow, limit=run_budget(days))
+        if reason:
+            skipped.append(f"{name}: {reason}")
+            continue
+        if runs and min(runs) >= window_start:
+            # gh 는 최신순으로 준다. 예산이 모자라면 잘려 나가는 것은 **전** 구간이고,
+            # 그러면 pre_den 이 줄어 전 구간 비율이 올라가고 절감이 과대평가된다.
+            # 조용히 낙관적으로 틀리는 경로라 경고한다.
+            logger.warning(
+                "  ⚠ %s 실행 목록이 창 전체를 못 덮었다 (받아온 %d건, 가장 오래된 %s ≥ 창 시작 %s). "
+                "전 구간이 잘려 절감이 과대평가된다.",
+                name,
+                len(runs),
+                min(runs).isoformat(timespec="minutes"),
+                window_start.isoformat(timespec="minutes"),
+            )
+        part = build_ratio(
+            parse_commit_timestamps(raw, name),
+            runs,
+            pilot_starts[name],
+            since=window_start,
+        )
+        parts.append((name, part))
+        totals = [a + b for a, b in zip(totals, part, strict=True)]
+
+    for line in skipped:
+        logger.info("  실행당 커밋 제외 — %s", line)
+    if any(totals):
+        per_run = LoadRatio(*totals)
         logger.info(
-            "  실행당 커밋   전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+            "  실행당 커밋   전 %s (%d/%d)  후 %s (%d/%d)  → %s%s",
             _fmt_ratio(per_run.pre()),
             per_run.pre_num,
             per_run.pre_den,
@@ -659,16 +975,37 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
             per_run.post_num,
             per_run.post_den,
             _fmt_delta(per_run.delta_pct()),
+            _fmt_delta_ci(per_run),
         )
+        # 층별 값을 함께 낸다. 위 합산은 층별 비를 합친 게 아니라 분자·분모를 먼저
+        # 더한 combined ratio 라, 전·후 풀의 층 구성이 다르면 층 내 효과가 0이어도
+        # 값이 0이 아니다(Simpson). 노출 기간이 수집기마다 다르면 구성은 반드시
+        # 다르므로, 합산과 층별이 갈리는지 눈으로 확인할 수 있어야 한다.
+        if len(parts) > 1:
+            for name, part in parts:
+                logger.info(
+                    "    층 %-12s 전 %s (%d/%d)  후 %s (%d/%d)  → %s",
+                    name,
+                    _fmt_ratio(part.pre()),
+                    part.pre_num,
+                    part.pre_den,
+                    _fmt_ratio(part.post()),
+                    part.post_num,
+                    part.post_den,
+                    _fmt_delta(part.delta_pct()),
+                )
+    else:
+        logger.info("  실행당 커밋: 건너뜀 (모든 대상에서 실행을 가져오지 못했다)")
 
     # `--collector crypto` 처럼 CLI 로 대상을 바꾸면 대조군에 자기 자신이 들어간다.
     # 가드 테스트는 기본 대상만 검사하므로 오버라이드는 런타임에서 잡는다.
-    if collector in CONTROL_COLLECTORS:
-        logger.warning(
-            "  ⚠ 대조군에 대상 자기 자신(%s)이 들어 있다 — 분모가 분자를 포함하므로 "
-            "대조군 비는 파일럿 효과에 둔감하다.",
-            collector,
-        )
+    for name in collectors:
+        if name in CONTROL_COLLECTORS:
+            logger.warning(
+                "  ⚠ 대조군에 대상 자기 자신(%s)이 들어 있다 — 분모가 분자를 포함하므로 "
+                "대조군 비는 파일럿 효과에 둔감하다.",
+                name,
+            )
 
     # 대조군 오염을 도구 자신이 알린다. 테스트만 지키면 CI 를 안 보는 사람은 모른다.
     enabled = pilot_enabled_collectors()
@@ -682,21 +1019,32 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
         )
 
     control_commits = [t for name in CONTROL_COLLECTORS for t in parse_commit_timestamps(raw, name)]
-    versus = build_ratio(pilot_commits, control_commits, pilot_merged, since=window_start)
     logger.info("  대조군: %s", ", ".join(CONTROL_COLLECTORS))
-    logger.info(
-        "  대조군 비    전 %s (%d/%d)  후 %s (%d/%d)  → %s",
-        _fmt_ratio(versus.pre(), 3),
-        versus.pre_num,
-        versus.pre_den,
-        _fmt_ratio(versus.post(), 3),
-        versus.post_num,
-        versus.post_den,
-        _fmt_delta(versus.delta_pct()),
-    )
+    for name in collectors:
+        versus = build_ratio(
+            parse_commit_timestamps(raw, name),
+            control_commits,
+            pilot_starts[name],
+            since=window_start,
+        )
+        logger.info(
+            "  대조군 비 (%s)  전 %s (%d/%d)  후 %s (%d/%d)  → %s%s",
+            name,
+            _fmt_ratio(versus.pre(), 3),
+            versus.pre_num,
+            versus.pre_den,
+            _fmt_ratio(versus.post(), 3),
+            versus.post_num,
+            versus.post_den,
+            _fmt_delta(versus.delta_pct()),
+            _fmt_delta_ci(versus),
+        )
 
-    elapsed_days = (now - pilot_merged).total_seconds() / 86400
-    if is_underpowered(pilot_merged, now):
+    # 게이트는 가장 늦게 시작한 수집기 기준이다. 가장 이른 것으로 재면 확대분이 아직
+    # 하루도 안 돌았는데 "3일 충족" 이 된다.
+    youngest = max(pilot_starts[name] for name in collectors)
+    elapsed_days = (now - youngest).total_seconds() / 86400
+    if is_underpowered(youngest, now):
         logger.warning(
             "  ⚠ 관측 %.1f일 < %d일 — 판정 보류. 위 숫자는 방향 참고용이다.",
             elapsed_days,
@@ -707,9 +1055,9 @@ def report_load_adjusted(collector: str, days: int, pilot_merged: datetime, now:
 
 
 def report_capture_rate(
-    collector: str,
+    collectors: Sequence[str],
     days: int,
-    pilot_merged: datetime,
+    pilot_starts: Mapping[str, datetime],
     skip_blocks: list[list[str]] | None,
 ) -> bool | None:
     """[5] 포착률 — 누출 0건 · 오검출 0건인가. None 이면 판정 불가.
@@ -728,7 +1076,14 @@ def report_capture_rate(
         return None
     logger.info("  화이트리스트(액션 기준): %s", ", ".join(sorted(whitelist)))
 
-    leaks, counts = find_leaks(collect_collector_commits(collector, days), pilot_merged, whitelist)
+    # 수집기마다 자기 경계로 자른 뒤 합산한다. 누출은 "파일럿이 켜진 뒤에도 남았는가"
+    # 라서 경계를 잘못 잡으면 켜지기 전 커밋이 누출로 둔갑한다.
+    leaks: list[CollectorCommit] = []
+    counts: Counter[str] = Counter()
+    for name in collectors:
+        part_leaks, part_counts = find_leaks(collect_collector_commits(name, days), pilot_starts[name], whitelist)
+        leaks.extend(part_leaks)
+        counts.update(part_counts)
     total = sum(counts.values())
     logger.info(
         "  파일럿 후 커밋 %d건 — 콘텐츠 %d / _state+dedup 등 %d / no-op %d",
@@ -763,7 +1118,11 @@ def report_capture_rate(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--collector", default=DEFAULT_COLLECTOR, help=f"수집기 이름 (기본: {DEFAULT_COLLECTOR})")
+    parser.add_argument(
+        "--collector",
+        default=DEFAULT_COLLECTOR,
+        help=f"수집기 이름, 또는 '{GROUP_TARGET}' 로 파일럿이 켜진 수집기 전부를 묶어 집계 (기본: {DEFAULT_COLLECTOR})",
+    )
     parser.add_argument(
         "--pilot-merged",
         default=PILOT_MERGED_DEFAULT,
@@ -778,43 +1137,6 @@ def main() -> int:
     parser.add_argument("--run-limit", type=int, default=12, help="--with-runs 시 조사할 실행 수")
     args = parser.parse_args()
 
-    logger.info("no-op skip 파일럿 관측 — %s", args.collector)
-
-    logger.info("[1] 수집기 커밋 수 (최근 %d일, KST)", args.days)
-    counts = collect_commit_counts(args.collector, args.days)
-    if not counts:
-        logger.info("  해당 수집기 커밋 없음")
-    for day in sorted(counts):
-        logger.info("  %s  %d건  %s", day, counts[day], "#" * counts[day])
-
-    logger.info("[2] no-op skip 발생 횟수")
-    skip_blocks: list[list[str]] | None = None
-    if args.with_runs:
-        workflow = workflow_for(args.collector)
-        if workflow is None:
-            skips, checked, reason = 0, 0, f"{args.collector!r} 의 워크플로우 매핑이 없다"
-            skip_blocks = None
-        else:
-            skips, checked, reason, skip_blocks = collect_skip_counts(workflow, args.run_limit)
-        if reason:
-            logger.info("  건너뜀: %s", reason)
-            skip_blocks = None
-        else:
-            logger.info("  실행 %d건 중 skip %d건", checked, skips)
-            if skips == 0:
-                logger.warning("  표본 0 — 새 코드 경로가 실행되지 않았다. 절감 판정 불가.")
-    else:
-        logger.info("  건너뜀 (--with-runs 로 활성화)")
-
-    logger.info("[3] 포스트 수준 중복 (게이트)")
-    title_dups, slot_dups = check_post_duplicates(args.collector)
-    logger.info("  제목 중복: %d건", len(title_dups))
-    for line in title_dups:
-        logger.warning("    %s", line)
-    logger.info("  같은 날짜·종류 파일 중복: %d건", len(slot_dups))
-    for line in slot_dups:
-        logger.warning("    %s", line)
-
     try:
         pilot_merged = datetime.fromisoformat(args.pilot_merged)
     except ValueError:
@@ -823,10 +1145,121 @@ def main() -> int:
     if pilot_merged.tzinfo is None:
         logger.error("--pilot-merged 에 타임존이 없다: %s (예: %s)", args.pilot_merged, PILOT_MERGED_DEFAULT)
         return 2
-    report_load_adjusted(args.collector, args.days, pilot_merged, datetime.now(KST))
-    report_capture_rate(args.collector, args.days, pilot_merged, skip_blocks)
 
-    dup_urls, total_urls = count_item_recurrence(args.collector, recent=8)
+    if args.collector == GROUP_TARGET:
+        enabled = pilot_enabled_collectors()
+        if enabled is None:
+            logger.error(
+                "%r 를 풀 수 없다 — 워크플로우에서 파일럿 플래그를 읽지 못했다. "
+                "못 읽은 것을 '꺼짐' 으로 치면 대상이 조용히 빠진다.",
+                GROUP_TARGET,
+            )
+            return 2
+        if not enabled:
+            logger.error("파일럿이 켜진 수집기가 하나도 없다 — 집계할 대상이 없다.")
+            return 2
+        # 경계를 못 읽은 수집기는 여기서 빠진다. 뒤의 모든 절이 같은 대상 집합을
+        # 봐야 하므로 커밋 집계보다 **먼저** 푼다 — [1] 은 4개인데 [5] 는 1개면
+        # 리포트를 읽는 사람이 어느 쪽을 믿어야 할지 알 수 없다.
+        pilot_starts = resolve_pilot_starts(sorted(enabled))
+        if not pilot_starts:
+            logger.error("파일럿 시작 시각을 읽을 수 있는 수집기가 하나도 없다 — 집계할 수 없다.")
+            return 2
+        targets = sorted(pilot_starts)
+    else:
+        # 모르는 이름을 받아주면 모든 절이 0건을 내고 그 0건이 "중복 없음 · 누출 0건
+        # → PASS · exit 0" 으로 읽힌다. **한 건도 검사하지 않은 실행이 파일럿이 완벽히
+        # 동작했다는 증거로 보고된다.** `--collector regulatoy` 오타 하나면 된다.
+        # `all` 경로가 fail closed 인 것과 같은 이유로 여기서도 거부한다.
+        if workflow_for(args.collector) is None:
+            logger.error(
+                "모르는 수집기: %r. 아는 이름: %s, 또는 %r. "
+                "모르는 이름을 받아주면 모든 절이 0건을 내고 그게 PASS 로 읽힌다.",
+                args.collector,
+                ", ".join(sorted(COLLECTOR_WORKFLOWS)),
+                GROUP_TARGET,
+            )
+            return 2
+        # 단일 수집기 모드에서는 `--pilot-merged` 가 그대로 경계다 — 기존 동작을
+        # 바꾸지 않는다.
+        targets = [args.collector]
+        pilot_starts = {args.collector: pilot_merged}
+
+    logger.info("no-op skip 파일럿 관측 — %s", ", ".join(targets))
+
+    logger.info("[1] 수집기 커밋 수 (최근 %d일, KST)", args.days)
+    counts: Counter[str] = Counter()
+    for name in targets:
+        counts.update(collect_commit_counts(name, args.days))
+    if not counts:
+        logger.info("  해당 수집기 커밋 없음")
+    for day in sorted(counts):
+        logger.info("  %s  %d건  %s", day, counts[day], "#" * counts[day])
+
+    logger.info("[2] no-op skip 발생 횟수")
+    skip_blocks: list[list[str]] | None = None
+    if args.with_runs:
+        total_skips = total_checked = 0
+        blocks: list[list[str]] = []
+        reasons: list[str] = []
+        for name in targets:
+            workflow = workflow_for(name)
+            if workflow is None:
+                reasons.append(f"{name}: 워크플로우 매핑이 없다")
+                continue
+            skips, checked, reason, part = collect_skip_counts(workflow, args.run_limit, pilot_starts[name])
+            if reason:
+                reasons.append(f"{name}: {reason}")
+                continue
+            total_skips += skips
+            total_checked += checked
+            blocks.extend(part or [])
+            if len(targets) > 1:
+                logger.info("  %-12s 실행 %d건 중 skip %d건", name, checked, skips)
+        for line in reasons:
+            logger.info("  건너뜀: %s", line)
+        if total_checked:
+            skip_blocks = blocks
+            logger.info("  합계  실행 %d건 중 skip %d건", total_checked, total_skips)
+            interval = wilson_interval(total_skips, total_checked)
+            if interval is not None:
+                low, high = interval
+                logger.info(
+                    "  skip 비율 %.1f%% — 95%% CI [%.1f%%, %.1f%%] 폭 %.2f",
+                    100 * total_skips / total_checked,
+                    100 * low,
+                    100 * high,
+                    high - low,
+                )
+            if total_skips == 0:
+                logger.warning("  표본 0 — 새 코드 경로가 실행되지 않았다. 절감 판정 불가.")
+        else:
+            logger.info("  실행 표본 0 — skip 비율을 낼 수 없다.")
+    else:
+        logger.info("  건너뜀 (--with-runs 로 활성화)")
+
+    logger.info("[3] 포스트 수준 중복 (게이트)")
+    title_dups: list[str] = []
+    slot_dups: list[str] = []
+    for name in targets:
+        part_title, part_slot = check_post_duplicates(name, since=pilot_starts[name])
+        title_dups.extend(part_title)
+        slot_dups.extend(part_slot)
+    logger.info("  제목 중복: %d건", len(title_dups))
+    for line in title_dups:
+        logger.warning("    %s", line)
+    logger.info("  같은 날짜·종류 파일 중복: %d건", len(slot_dups))
+    for line in slot_dups:
+        logger.warning("    %s", line)
+
+    report_load_adjusted(targets, args.days, pilot_starts, datetime.now(KST))
+    report_capture_rate(targets, args.days, pilot_starts, skip_blocks)
+
+    dup_urls = total_urls = 0
+    for name in targets:
+        part_dup, part_total = count_item_recurrence(name, recent=8)
+        dup_urls += part_dup
+        total_urls += part_total
     logger.info("[참고] 항목 URL 재등장: %d/%d건 (최근 포스트 8개)", dup_urls, total_urls)
     logger.info("  게이트 아님 — 일일 리포트는 그 시점 피드의 스냅샷이라 설계상 반복된다.")
 
