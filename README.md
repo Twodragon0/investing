@@ -111,14 +111,15 @@
 | scripts/respond\_ai\_mentions.py                  |      259 |      207 |     20% |32-36, 40-67, 71-80, 84-87, 91-124, 128-138, 149-151, 162-164, 175-202, 215-232, 258-259, 274-285, 297-308, 319-336, 340-355, 375-381, 385-483, 487 |
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
-| scripts/tools/check\_pilot\_observation.py        |      393 |      162 |     59% |186-197, 206, 226-227, 233-236, 322-323, 327-328, 334, 337-338, 351-399, 470, 475-491, 527, 539, 552-560, 572-591, 601-602, 607-618, 646, 676, 765-835, 839 |
+| scripts/tools/check\_pilot\_observation.py        |      541 |      186 |     66% |236-247, 256, 276-277, 283-286, 407-408, 412-413, 419, 422-423, 485-541, 607, 622-626, 711, 716-732, 768, 780, 795-797, 800, 828, 831, 862-863, 868-879, 938-939, 1013, 1142-1144, 1146-1147, 1150-1168, 1185-1268, 1272 |
 | scripts/tools/check\_relative\_imports.py         |       37 |        1 |     97% |        70 |
 | scripts/tools/check\_sitemap\_local.py            |       52 |        2 |     96% |    82, 90 |
+| scripts/tools/check\_vercel\_quota.py             |      280 |      129 |     54% |121-135, 199, 330-338, 354-385, 395-409, 414-429, 433-515, 519 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
 | scripts/tools/component\_counts.py                |       84 |        1 |     99% |       164 |
 | scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |      234 |      0% |    44-561 |
-| scripts/tools/guard\_falsifiability.py            |      180 |       80 |     56% |598-602, 612-614, 643-652, 657, 671-680, 712-716, 721-755, 765-813, 831-857, 861 |
+| scripts/tools/guard\_falsifiability.py            |      180 |       80 |     56% |622-626, 636-638, 667-676, 681, 695-704, 736-740, 745-779, 789-837, 855-881, 885 |
 | scripts/tools/indexnow\_submit.py                 |      174 |       28 |     84% |89-132, 222-229, 347-348, 358 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
@@ -129,7 +130,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24176** | **6274** | **74%** |           |
+| **TOTAL**                                         | **24604** | **6427** | **74%** |           |
 
 
 ## Setup coverage badge
