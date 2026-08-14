@@ -310,7 +310,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ya2M2VkZVV1RoYVFpeTNtRXFieXNGcGtKU3FsUHVuSk1KZndKOE1PZU1qUllmTG42TVo3TXVCamxqa2RTU2hKemZucHJQTVRHdDVtQTlTNy1kN0RUVmJlOA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 부총재 "원·달러 환율, 4분기로 갈수록 낮아질 것…경상흑자 효과 본격화"[경제정책 줌인</a>
-<p class="news-desc">한은 부총재 "원·달러 환율, 4분기로 갈수록 낮아질 것…경상흑자 효과 본격화"[경제정책 줌인] 아시아경제</p>
+<p class="news-desc">유상대 한국은행 부총재는 "원·달러 환율이 4분기로 갈수록 방향은 아래쪽일 것"이라며 "올해 초에도 대규모 경상수지 흑자 전망 등으로 하락 방향으로 가고 있.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
