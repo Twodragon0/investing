@@ -345,3 +345,22 @@ def test_window_composition_respects_window_bounds() -> None:
     ]
     counts = cvq.window_composition(records, _at(7, 12), timedelta(hours=24))
     assert counts == {"수집기": 1, "PR 머지": 1}
+
+
+# ── 인증 ─────────────────────────────────────────────────────────────────────
+
+
+def test_vercel_list_cmd_omits_token_when_unset(monkeypatch: pytest.MonkeyPatch) -> None:
+    """로컬은 `vercel login` 세션을 쓴다 — 빈 토큰을 붙이면 인증이 깨진다."""
+    monkeypatch.delenv("VERCEL_TOKEN", raising=False)
+    assert "--token" not in cvq.vercel_list_cmd("investing", "production")
+
+    monkeypatch.setenv("VERCEL_TOKEN", "   ")
+    assert "--token" not in cvq.vercel_list_cmd("investing", "production")
+
+
+def test_vercel_list_cmd_appends_token_when_set(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("VERCEL_TOKEN", "xxx-dummy-token")
+    cmd = cvq.vercel_list_cmd("investing", "preview")
+    assert cmd[-2:] == ["--token", "xxx-dummy-token"]
+    assert "--environment" in cmd and "preview" in cmd

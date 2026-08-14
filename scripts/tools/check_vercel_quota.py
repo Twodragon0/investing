@@ -46,6 +46,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from collections import Counter
@@ -164,6 +165,19 @@ def parse_records(payload: str, env: str) -> tuple[list[Record], int | None]:
     return records, cursor if isinstance(cursor, int) else None
 
 
+def vercel_list_cmd(project: str, env: str) -> list[str]:
+    """`vercel ls` 명령. `VERCEL_TOKEN` 이 있으면 `--token` 을 붙인다.
+
+    로컬은 `vercel login` 세션을 쓰고 CI 는 토큰을 쓴다. 토큰을 인자로 받지 않고
+    환경변수에서 읽는 이유: 명령줄에 넣으면 프로세스 목록과 로그에 남는다.
+    """
+    cmd = ["vercel", "ls", project, "--environment", env, "-F", "json"]
+    token = os.environ.get("VERCEL_TOKEN", "").strip()
+    if token:
+        cmd += ["--token", token]
+    return cmd
+
+
 def fetch_records(project: str, env: str, since: datetime) -> list[Record] | None:
     """`--next` 로 `since` 를 덮을 때까지 페이지네이션한다. 실패하면 None.
 
@@ -174,7 +188,7 @@ def fetch_records(project: str, env: str, since: datetime) -> list[Record] | Non
     collected: list[Record] = []
     cursor: int | None = None
     for _ in range(MAX_PAGES):
-        cmd = ["vercel", "ls", project, "--environment", env, "-F", "json"]
+        cmd = vercel_list_cmd(project, env)
         if cursor is not None:
             cmd += ["--next", str(cursor)]
         payload = _run(cmd)
