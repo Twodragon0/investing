@@ -424,11 +424,60 @@ def collect_run_timestamps(workflow: str, limit: int) -> tuple[list[datetime], s
     return stamps, None
 
 
-def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None, list[list[str]]]:
+def run_started_at(run: Mapping[str, object]) -> datetime | None:
+    """실행 시작 시각. 읽을 수 없으면 None — 호출부가 그 실행을 버린다."""
+    stamp = run.get("createdAt")
+    if not isinstance(stamp, str):
+        return None
+    try:
+        return datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def count_runs_before(runs: Sequence[Mapping[str, object]], pilot_start: datetime) -> int:
+    """파일럿 경계 **때문에** 버려질 실행 수.
+
+    `filter_runs_after` 의 결과 길이만 보면 "경계로 버려짐" 과 "시각을 못 읽어
+    버려짐" 이 구분되지 않는다. 후자 한 건 때문에 표본이 상한에 묶였다는 안내가
+    조용히 꺼지는 것을 막으려고 따로 센다.
+    """
+    return sum(1 for run in runs if (at := run_started_at(run)) is not None and at <= pilot_start)
+
+
+def filter_runs_after(runs: Sequence[Mapping[str, object]], pilot_start: datetime) -> list[Mapping[str, object]]:
+    """파일럿 시작 **뒤에 시작한** 실행만 남긴다.
+
+    파일럿 전 실행은 코드가 없어 **구조적으로 skip 할 수 없다.** 분모에 넣으면
+    skip 비율이 희석되는데, 그 방향이 나쁘다 — 2026-08-14 실측에서 조사한 20실행 중
+    8건이 파일럿 전이라 5/20 = 25.0% (CI 상한 46.9%) 가 나왔다. 그 상한은 파일럿 전
+    실측 no-op 비율 55.2% 를 **배제해서** "skip 이 기대보다 덜 걸린다" 는 잘못된
+    인상을 준다. 후만 세면 5/12 = 41.7% CI [19.3%, 68.0%] 로 55.2% 를 정상적으로
+    포함한다.
+
+    `createdAt` 을 못 읽는 실행은 **버린다.** 남기면 경계를 모르는 표본이 분모에
+    들어가 같은 희석이 재발한다.
+    """
+    kept: list[Mapping[str, object]] = []
+    for run in runs:
+        started = run_started_at(run)
+        if started is None:
+            continue
+        if started > pilot_start:
+            kept.append(run)
+    return kept
+
+
+def collect_skip_counts(
+    workflow: str, limit: int, pilot_start: datetime
+) -> tuple[int, int, str | None, list[list[str]]]:
     """gh CLI 로 워크플로우 실행 로그에서 skip 발생 횟수와 버린 파일 목록을 센다.
 
     Returns (skip 횟수, 조사한 실행 수, 건너뛴 이유, skip 블록들). gh 가 없거나
     인증이 없으면 (0, 0, 이유, []) 로 graceful degradation.
+
+    `pilot_start` 뒤에 시작한 실행만 센다 — 이유는 `filter_runs_after` 참조.
+    `--limit` 은 gh 에서 **가져올** 실행 수이고 필터 뒤 표본은 그보다 작다.
 
     파일 목록까지 같은 로그에서 뽑는 이유: 오검출 판정([5])에 필요한데, 로그를 다시
     받으면 실행당 수 초가 두 배로 든다.
@@ -442,7 +491,7 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
                 f"--workflow={workflow}",
                 f"--limit={limit}",
                 "--json",
-                "databaseId,conclusion",
+                "databaseId,conclusion,createdAt",
             ],
             cwd=REPO_ROOT,
             capture_output=True,
@@ -455,9 +504,17 @@ def collect_skip_counts(workflow: str, limit: int) -> tuple[int, int, str | None
         return 0, 0, f"gh run list 실패 ({e.returncode})", []
 
     try:
-        runs = json.loads(listing.stdout)
+        fetched = json.loads(listing.stdout)
     except json.JSONDecodeError:
         return 0, 0, "gh 출력 파싱 실패", []
+
+    runs = filter_runs_after(fetched, pilot_start)
+    if fetched and not count_runs_before(fetched, pilot_start):
+        # 경계 앞 실행이 하나도 없다면 그 앞이 더 있는데 `--limit` 에서 잘렸을 수
+        # 있다. 표본이 조용히 상한에 묶이는 것을 보이게 한다. 판정 기준이 "버려진
+        # 실행 수" 가 아니라 "**경계 때문에** 버려진 실행 수" 인 이유: 시각을 못 읽어
+        # 버린 실행 한 건이 이 안내를 꺼 버리면 안 된다.
+        logger.info("  가져온 %d실행에 파일럿 전이 없다 — --run-limit 을 올리면 표본이 늘 수 있다", len(fetched))
 
     skips = 0
     checked = 0
@@ -1150,7 +1207,7 @@ def main() -> int:
             if workflow is None:
                 reasons.append(f"{name}: 워크플로우 매핑이 없다")
                 continue
-            skips, checked, reason, part = collect_skip_counts(workflow, args.run_limit)
+            skips, checked, reason, part = collect_skip_counts(workflow, args.run_limit, pilot_starts[name])
             if reason:
                 reasons.append(f"{name}: {reason}")
                 continue
