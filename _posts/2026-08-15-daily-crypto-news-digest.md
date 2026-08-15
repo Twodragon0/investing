@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-15 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 'Jewelbug' APT, 국가 스파이 활동과 암호화폐 절도의 균형 유지 - Dark Reading - 100건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 인플레이션 관련 53건</li><li>📈 <strong>가격/시장</strong>: 암호화폐 동향 주시</li><li>🔵 <strong>규제/정책</strong>: SEC 관련 30건</li><li>📊 <strong>매크로/금리</strong>: 인플레이션 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQdEdqR2NCcDBycUxybG8wQ1BydkJZWGstQmh3eC0wU09xOVNnWGN1blZDTWRlSFNnVTV1THRnelBTTFVocEVtbkwwM2NmeUNuTC1PNk1ZM0hmSTIxY2ZWSEJmV1hsSmNXVzlFUmppR25mY1dDTzFaV2NZMEFQX0E2S2V1bXBwTDRqLXBxQ3prNnZjbkI3VVRlb1Q1amZVUQ?oc=5">'Jewelbug' APT, 국가 스파이 활동과 암호화폐 절도의 균형 유지 - Dark Reading</a> <span class="p0-desc">연구원들은 고용된 해커가 동일한 웹 패널에서 사이버 스파이 활동과 재정적 동기를 지닌 강도 행위를 수행하는 것을 발견했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTI1UTV6amtTMk93WDBnc2lRUHBpTGI5OTF5LVhVVXd3ckZZdnhlVnNlUnRzdXNEMHZoSjBvLXR3TC1POWVXekU3bHVDVUMyNXM0WGwwTEVPd1N2eXFWVGdCVTh5RmdtNXVpTlR0U09iZDFlWHBsd1UtVVEyN0lKX2pKLVVLdG9XaG8yYUo5d3JaV19ieTRPdlQzRDZrSmY4Zl9YZ3pxQ0NkNGVZS3U2SG5sY1ctSVY0enZMT1pnejVHTlZLUjAwbXQtdzlNbDU2eDUzQmFn?oc=5">비트코인(BTC), 주식, 금, 채권 등 모든 시장에서 공포감이 사라지고 있다: 크립토 데일리 - CoinDesk</a> <span class="p0-desc">뉴스를 살펴보면 우려할 만한 이유가 많다: 미국과 이란 간의 지속되는 긴장 고조 위험, 증가하는 국가 부채 및 채권 수익률 상승 등이 그중 일부다. 암호화폐는 규제 실망, 수요 부.</span></li><li><a href="https://cointelegraph.com/news/crypto-biz-bitcoin-self-custody-etf-inflows-strategy-riot-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto Biz: 비트코인의 $116M 자기 양육권 모닝콜</a> <span class="p0-desc">1억 1600만 달러 규모의 비트코인 지갑 익스플로잇으로 인해 ETF 유입이 반등하고 Strategy가 BTC에 더 많은 관심을 기울이고 채굴자들이 AI 거래에서 수십억 달러를 추.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 'Jewelbug' APT, 국가 스파이 활동과 암호화폐 절도의 균형 유지 - Dark Reading 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (53건): 비트코인, 인플레이션 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (27건): 암호화폐, 달러 가격 변동 (27건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (30건): SEC 규제 움직임 (30건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 'Jewelbug' APT, 국가 스파이 활동과 암호화폐 절도의 균형 유지 - Dark Reading
-- 비트코인(BTC), 주식, 금, 채권 등 모든 시장에서 공포감이 사라지고 있다: 크립토 데일리 - CoinDesk
-- Crypto Biz: 비트코인의 $116M 자기 양육권 모닝콜
-
-### 주요 이슈
-
-- 비트코인, 이더리움, XRP 또는 솔라나: 2026년에 어떤 ETF이 가장 많이 성장할까요?
-- SEC, 최신 업계의 어려움으로 암호화폐 규제 회의 연기
-- 외 15건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-15.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **100건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-15 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Resort destination mall and hotel seek Chapter 11 bankruptcy - 189건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 인플레이션 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 관련 12건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com/real-estate/articles/68-old-resort-hotel-mall-015339982.html">Resort destination mall and hotel seek Chapter 11 bankruptcy</a></li><li><a href="https://www.marketwatch.com/story/my-husband-and-i-are-at-odds-should-we-tap-our-home-equity-or-sell-stocks-to-build-a-100-000-emergency-fund-097d36a4?mod=mw_rss_topstories">Should I tap my home equity or sell stocks to build a $100,000 emergency fund?</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Resort destination mall and hotel seek Chapter 11 bankruptcy 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 189건의 뉴스 중 P1 주요 이슈도 30건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (39건): 코스피, 코스닥, 반도체 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (20건): 반도체, 삼성전자, 하이닉스 기술 이슈 (20건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (14건): 환율, 인플레이션, 국채 매크로 변수 (14건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 리조트 대상 쇼핑몰 및 호텔, Chapter 11 파산 신청
-- $100,000의 비상 자금을 마련하기 위해 주택 담보를 활용해야 합니까, 아니면 주식을 팔아야 합니까?
-
-### 주요 이슈
-
-- 인플레이션 데이터가 금리 인상 불안을 완화함에 따라 강력한 AI 수익 상승 S&P 500, 나스닥
-- 주식시장은 이전에 5번만 본 경고를 발동했습니다. 역사는 울다
-- 5는 S&P 500에 동력을 공급하는 수익 기반의 랠리이 곧 흐지부지 될 것이라는 신호입니다.
-- 외 27건
-
-### 투자자 체크포인트
-
-- 한국 기사 55건, 글로벌 기사 134건 수집
-- 한국 지수: KOSPI 6,977.94(+2.42%), KOSDAQ 864.65(+0.38%), USD/KRW 1,416.04(-0.15%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:51%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:31%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:28%"></div></div><span class="theme-count">11건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-15.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,977.94 (+2.42%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 864.65 (+0.38%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *[산경투데이 = 이하나 기자]14일 국내 증시는 장 초반 강한 상승세를 보였지만 오전 들어 차익 실현 매물이 나오면서 지수별 흐름이 엇갈리고 있다.코스피는 장중 7,000선을 넘어선 뒤 상승폭을 줄였고,.*
 
 ## 테마별 주요 뉴스
 
