@@ -14,9 +14,6 @@ description: "가족이 가장 많은 주식을 거래하는 5명의 국회의�
 image_alt: "정치인 거래·정책 리포트 - 2026-08-16 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-16.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-16** 정치권 핵심 이슈: **가족이 가장 많은 주식을 거래하는 5명의 국회의원**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **9건** (미국 의회 거래 1건, SEC 내부자 거래 4건, 트럼프 정책 3건, 중앙은행 1건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,17 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-16 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(5회), **관세**(3회), **의회**(2회), **연준**(2회), **행정명령**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **9건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, SEC 내부자 거래 4건, 트럼프 정책 3건, 중앙은행 1건입니다.
-
-**트럼프 정책** 관련으로는 The US Court of International Trade issued summary judgment in favor of the Trump administration on Thursday in a case brought by a US auto-parts dealer challenging a presidential order that closed 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 The 5 Congress Members Whose Families Trade the Most Stocks The New York Times 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 미국의 물가 상승 압력이 둔화하면서 오는 27일 기준금리를 결정하는 한국은행의 셈법이 복잡해졌다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 

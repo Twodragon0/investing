@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-16 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 폭락 - 180건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 환율 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 관련 10건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com/markets/stocks/articles/why-us-boomers-seriously-prepare-121500467.html">Why US boomers seriously need to prepare for a stock market crash before it’s too late — 3 red flags and what to do now</a></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/ultimate-crash-peter-schiff-calls-114500834.html">'Ultimate crash': Peter Schiff calls US stocks a 'ticking time bomb' — but is he right? Protect your wealth now</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Why US boomers seriously need to prepare for a stock market crash before it’s too late — 3 red fl. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 180건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (25건): 코스피, 삼성전자, 코스닥 가격 변동 (25건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (21건): 반도체, 삼성전자, 엔비디아 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (12건): 국채, 환율, 인플레이션 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 미국 붐 세대가 너무 늦기 전에 폭락 주식 시장에 진지하게 대비해야 하는 이유 — 3가지 위험 신호
-- '궁극적 폭락': Peter Schiff는 미국 주식을 '똑딱이는 시한폭탄'이라고 부릅니다. 하지만 그가 맞습니까? 당신의
-
-### 주요 이슈
-
-- 나스닥 100 예측: AI 수익은 35,000을 향한 이동을 지원합니다 - FXEmpire
-- '아웃라이어' S&P 500 실적 강점 환호 월스트리트의 황소
-- 20년 후 Vanguard S&P 500 ETF (VOO)는 어디에 있을까요? 수십 년의 시간은 다음과 같습니다.
-- 외 19건
-
-### 투자자 체크포인트
-
-- 한국 기사 59건, 글로벌 기사 121건 수집
-- 한국 지수: KOSPI 6,977.94(+2.42%), KOSDAQ 864.65(+0.38%), USD/KRW 1,412.00(-0.43%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:84%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:48%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:40%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:32%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-16.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,977.94 (+2.42%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 864.65 (+0.38%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *완화된 인플레이션과 강력한 AI 수익은 나스닥 100을 뒷받침하는 반면, 30,600을 돌파하면 35,000 목표를 향한 길을 열 수 있습니다.*
 
 ## 테마별 주요 뉴스
 
