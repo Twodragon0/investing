@@ -14,9 +14,6 @@ description: "LeBlanc set to meet U.S. trade representative Sunday as tariff dea
 image_alt: "정치인 거래·정책 리포트 - 2026-08-17 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-17.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-17** 정치권 핵심 이슈: **LeBlanc set to meet U.S. trade representative Sunday as tariff deadline looms**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **3건** (트럼프 정책 1건, 한국 정치인 2건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,15 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-17 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **관세**(2회), **이재명**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **3건**의 뉴스가 수집되었습니다. 세부 구성은 트럼프 정책 1건, 한국 정치인 2건입니다.
-
-**트럼프 정책** 관련으로는 OTTAWA — Canada-U.S. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**한국 정치인** 관련으로는 여러 가지로 어수선한 세상이다. 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 트럼프 행정명령/정책
 

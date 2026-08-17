@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-17 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진 - 80건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 관련 37건</li><li>📈 <strong>가격/시장</strong>: 암호화폐, XRP 주목</li><li>🏦 <strong>거래소</strong>: 13건 수집</li><li>🔵 <strong>규제/정책</strong>: 16건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/375670/openai-staff-blame-rush-ship-rogue-agent-hack">OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진</a> <span class="p0-desc">전현직 OpenAI 직원들은 새로운 AI 제품 출시에 대한 압박으로 인해 안전 우선순위를 정하기가 더 어려워졌다고 말했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진 
-총 80건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (37건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (23건): 암호화폐, XRP, 달러 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (13건): IPO 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진
-
-### 주요 이슈
-
-- 트럼프과 연계된 암호화폐 벤처인 World Liberty Trust는 대통령 선거에서 전례 없는 움직임으로 은행 자격을 부여 받았습니다.
-- 미국 주식이 사상 최고치를 기록했음에도 불구하고 비트코인이 하락하는 이유
-- 트럼프 가족이 지원하는 암호화폐 회사인 World Liberty가 조건부 은행 인가 승인을 받았습니다.
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(13건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **80건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

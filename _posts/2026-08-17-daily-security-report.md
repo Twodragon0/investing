@@ -16,27 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-08-17 - 보안 뉴스 요약 �
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] DefiLlama delayed mobile launch over phishing app**.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Harmony Bridge 익스플로잇: Infinite Mint 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 9건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): security, exploit, bridge 보안 이슈 (9건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (4건): exploit, bridge, mint 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (4건): exploit, arithmetic, signature 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-### 긴급 이슈
-
-- [보안] Harmony Bridge 익스플로잇: Infinite Mint
-- [보안] 코리움 브릿지 익스플로잇: 브릿지 로직 결함
-- [보안] USM 익스플로잇: 산술 오류
-
-### 투자자 체크포인트
-
-- 보안 사건 9건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건
