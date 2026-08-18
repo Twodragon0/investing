@@ -157,7 +157,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiaEFVX3lxTE1NczhwVWptMEFpbEFOMFROWUg3MTdteXY5N3ZNSEF4djZCcm90TTV3VUNMeHA4cEE5U051WEsyT2pRWXR0NnlyV2tpUFNvTUNrS3YwVHQzR0x4Z1FhV0htNmR3LVBNWGRI?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 8월 17일 이더리움의 현재 가격</a>
-<p class="news-desc">이더리움은 단순한 디지털 화폐가 아닙니다. 이는 분산형 컴퓨팅 플랫폼입니다. 즉, 사용자는 회사나 은행의 감독 없이 앱을 구축하고 실행할 수 있습니다.</p>
+<p class="news-desc">2026년 8월 17일 동부 표준시 오전 6시 15분에 이더리움(1 ETH)의 가격은 $1,891.33입니다. 이는 어제 오전보다 13.64달러 증가한 수치이며, 1년 전과 비교하면 약 2,584달러 감소한 수치입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

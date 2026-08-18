@@ -292,7 +292,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://seekingalpha.com/news/4633585-anthropics-ipo-valuation-tied-2028-revenue-forecast?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic의 IPO 가치 평가는 2028년 매출 예측 1,900억~2,000억 달러와 연결됨: Reuters</a>
-<p class="news-desc">Anthropic(ANTHRO)은 2028년 수익이 약 1,900억~2,000억 달러에 이를 것으로 예상하고 있으며, 이는 IPO 가치 평가를 결정하는 수치입니다. 여기에서 자세한 내용을 읽어보세요.</p>
+<p class="news-desc">Anthropic (ANTHRO) is forecasting its 2028 revenue to reach roughly $190B - $200B, a figure that will determine its IPO valuation. Read more here.</p>
 <span class="source-tag" data-source-type="default">Seeking Alpha</span>
 </div>
 </div>
