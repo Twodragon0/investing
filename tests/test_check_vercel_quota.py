@@ -364,3 +364,176 @@ def test_vercel_list_cmd_appends_token_when_set(monkeypatch: pytest.MonkeyPatch)
     cmd = cvq.vercel_list_cmd("investing", "preview")
     assert cmd[-2:] == ["--token", "xxx-dummy-token"]
     assert "--environment" in cmd and "preview" in cmd
+
+
+# ── `--kind` 축 필터 ─────────────────────────────────────────────────────────
+#
+# 이 렌즈가 필요한 이유는 총량 피크가 개발 활동에 지배될 때 파일럿이 움직일 수 있는
+# 축을 따로 봐야 하기 때문이다(모듈 docstring 의 95→52 / 수집기 30→36 실측).
+#
+# 위험한 것은 필터가 **보고 축을 넘어 판정으로 새는 것**이다. 걸러진 목록으로
+# `deployed_shas` 를 만들면 걸러진 레코드를 받은 커밋이 전부 "레코드 없음 = 거절" 이
+# 된다. `--kind collector` 하나로 PR 머지 커밋 수십 건이 거절로 둔갑하는 경로다.
+
+
+def test_filter_kind_all_is_identity() -> None:
+    """기본값은 기존 동작을 한 글자도 바꾸지 않아야 한다."""
+    records = [
+        _record(7, 1, subject="chore: collect crypto news"),
+        _record(7, 2, env="preview", subject="feat: x"),
+        _record(7, 3, subject="Merge pull request #1 from x"),
+    ]
+    assert cvq.filter_kind(records, "all") == records
+
+
+def test_filter_kind_collector_keeps_only_collector_axis() -> None:
+    collector = _record(7, 1, subject="chore: collect crypto news")
+    backfill = _record(7, 2, subject="chore: backfill post images")
+    merge = _record(7, 3, subject="Merge pull request #1 from x")
+    preview = _record(7, 4, env="preview", subject="chore: collect crypto news")
+    records = [collector, backfill, merge, preview]
+
+    assert cvq.filter_kind(records, "collector") == [collector, backfill]
+    # `dev` 는 여집합이다 — 두 축이 겹치거나 비면 부하 구성이 어디론가 샌다.
+    assert cvq.filter_kind(records, "dev") == [merge, preview]
+
+
+def test_kind_choices_and_labels_stay_in_sync() -> None:
+    """CLI choices 는 `KIND_FILTERS` 에서 나오고 라벨은 따로 있다 — 갈리면 KeyError.
+
+    `report_peaks` 가 `KIND_LABELS[kind]` 로 헤더를 찍으므로, 필터에만 축을 추가하면
+    도구가 런타임에 죽는다.
+    """
+    assert set(cvq.KIND_FILTERS) == set(cvq.KIND_LABELS)
+    assert cvq.DEFAULT_KIND in cvq.KIND_FILTERS
+
+
+def test_filtering_does_not_touch_rejection_verdict() -> None:
+    """축 필터는 보고 축만이다. SHA 대조는 전량으로 돌아야 한다.
+
+    수집기 커밋 1건 + PR 머지 커밋 1건이 **둘 다** 레코드를 받은 상황을 만든다.
+    거른 목록으로 대조하면 PR 머지 커밋이 거절로 둔갑한다.
+    """
+    collector_rec = _record(7, 1, sha="aaa", subject="chore: collect crypto news")
+    merge_rec = _record(7, 2, sha="bbb", subject="Merge pull request #1 from x")
+    records = [collector_rec, merge_rec]
+    commits = [
+        _commit(7, 1, 0, "aaa", subject="chore: collect crypto news"),
+        _commit(7, 2, 0, "bbb", subject="Merge pull request #1 from x"),
+    ]
+
+    whole = frozenset(r.sha for r in records if r.env == "production" and r.sha)
+    assert cvq.classify_commits(commits, whole, timedelta(seconds=90)).rejected == []
+
+    # 필터를 판정에 새게 하면 이렇게 된다 — 이 단언이 그 회귀의 모양을 박아 둔다.
+    leaked = frozenset(r.sha for r in cvq.filter_kind(records, "collector") if r.env == "production" and r.sha)
+    leaked_verdict = cvq.classify_commits(commits, leaked, timedelta(seconds=90))
+    assert [c.sha for c in leaked_verdict.rejected] == ["bbb"]
+
+
+def test_composition_reports_full_load_even_when_filtered(caplog: pytest.LogCaptureFixture) -> None:
+    """거른 뒤 구성을 내면 "수집기 100%" 만 남아 그 창의 실제 부하가 사라진다."""
+    # 수집기 레코드를 **가장 늦게** 둔다. 피크 창은 그 레코드에서 끝나므로, 앞에
+    # 두면 뒤따르는 preview·머지가 창 밖으로 나가 이 단언이 창 경계를 재게 된다.
+    records = [
+        _record(7, 1, env="preview", subject="feat: x"),
+        _record(7, 2, subject="Merge pull request #1 from x"),
+        _record(7, 3, subject="chore: collect crypto news"),
+    ]
+
+    with caplog.at_level("INFO"):
+        cvq.report_peaks(records, timedelta(hours=24), None, _at(7, 0), "collector")
+    text = caplog.text
+    assert "수집기 축만" in text
+    assert "쿼터 부하가 아니다" in text
+    # 구성 표는 전량 기준 — preview 와 PR 머지가 살아 있어야 한다.
+    assert "피크 창 구성 (총 3건)" in text
+
+
+def test_main_rejection_count_is_independent_of_kind(
+    monkeypatch: pytest.MonkeyPatch, caplog: pytest.LogCaptureFixture
+) -> None:
+    """`--kind` 를 바꿔도 `[3]` 거절 수가 흔들리면 안 된다 — `main()` 배선까지 본다.
+
+    단위 테스트로는 부족하다는 것이 2026-08-18 리뷰에서 뮤테이션으로 드러났다.
+    `main()` 의 `deployed_shas` 를 거른 목록으로 바꿔도 39/39 가 통과했다 — 기존
+    테스트는 두 frozenset 을 **테스트 본문에서** 손으로 만들어 `classify_commits` 에
+    먹였을 뿐, `main()` 이 실제로 어느 쪽을 만드는지는 보지 않았다.
+
+    그래서 여기서는 `main()` 을 직접 돌린다. 수집기 커밋 1건과 PR 머지 커밋 1건이
+    **둘 다** 레코드를 받은 상황이라, 필터가 판정으로 새면 `--kind collector` 에서
+    머지 커밋이 거절 1건으로 나타난다.
+    """
+
+    def _fake_records(project: str, env: str, since: datetime) -> list[cvq.Record]:
+        if env != "production":
+            return []
+        return [
+            _record(7, 1, sha="aaa", subject="chore: collect crypto news"),
+            _record(7, 2, sha="bbb", subject="Merge pull request #1 from x"),
+        ]
+
+    git_log = "aaa|2026-08-07T01:00:00+09:00|chore: collect crypto news\nbbb|2026-08-07T02:00:00+09:00|Merge pull request #1 from x\n"
+
+    def _run_main(kind: str) -> str:
+        monkeypatch.setattr(cvq, "fetch_records", _fake_records)
+        monkeypatch.setattr(cvq, "_run", lambda cmd: git_log)
+        monkeypatch.setattr(sys, "argv", ["check_vercel_quota.py", "--since", "2026-08-01", "--kind", kind])
+        caplog.clear()
+        with caplog.at_level("INFO"):
+            assert cvq.main() == 0
+        return caplog.text
+
+    rejection_line = "레코드 없음 = 거절   0"
+    all_text = _run_main("all")
+    assert rejection_line in all_text
+    assert "production+preview" in all_text
+
+    collector_text = _run_main("collector")
+    assert rejection_line in collector_text, "축 필터가 SHA 대조로 샜다 — 머지 커밋이 거절로 둔갑했다"
+    assert "수집기 축만" in collector_text
+
+
+def test_rejection_load_uses_the_same_window_rule_as_peaks() -> None:
+    """거절에 붙는 부하는 `rolling_peak` 과 같은 `(t-window, t]` 여야 한다.
+
+    규칙이 갈리면 같은 데이터에서 피크와 부하가 1건씩 어긋나고, 그 1건이
+    `branch-protection.md` 의 94 대 95 를 만든 차이다.
+    """
+    times = [_at(7, 0), _at(8, 0), _at(8, 1)]
+    window = timedelta(hours=24)
+    # 정확히 창 폭만큼 떨어진 08-07 00:00 은 **빠진다**.
+    assert cvq.load_at(times, _at(8, 0), window) == 1
+    assert cvq.load_at(times, _at(8, 1), window) == 2
+    assert cvq.load_at(times, _at(7, 0), window) == 1
+
+
+def test_rejection_report_omits_load_column_without_records(caplog: pytest.LogCaptureFixture) -> None:
+    """부하를 못 내면 열을 빼야 한다 — 0 으로 폴백하면 "부하 0에서 거절" 로 읽힌다."""
+    verdict = cvq.Verdict(deployed=[], non_head=[], rejected=[_commit(7, 12, 0, "a", subject="chore: collect x")])
+    with caplog.at_level("INFO"):
+        cvq.report_rejections(verdict, None)
+    assert "부하" not in caplog.text
+
+
+def test_report_daily_respects_kind_filter(caplog: pytest.LogCaptureFixture) -> None:
+    """`[2]` 도 축을 걸러야 한다.
+
+    `[1]` 만 거르고 `[2]` 를 그대로 두면 두 절의 숫자가 다른 모집단을 세면서 같은
+    헤더 라벨을 달고 나온다 — 나란히 읽는 사람이 "피크는 내려갔는데 일자별은 그대로"
+    라는 없는 현상을 본다. 2026-08-18 뮤테이션 감사에서 이 경로만 무방비였다.
+    """
+    records = [
+        _record(7, 1, subject="chore: collect crypto news"),
+        _record(7, 2, env="preview", subject="feat: x"),
+        _record(7, 3, subject="Merge pull request #1 from x"),
+    ]
+    with caplog.at_level("INFO"):
+        cvq.report_daily(records, timedelta(hours=24), _at(7, 0), "collector")
+    assert "2026-08-07  레코드   1" in caplog.text, "축을 안 걸렀다 — 3건이 그대로 세졌다"
+    assert "쿼터 부하가 아니다" in caplog.text
+
+    caplog.clear()
+    with caplog.at_level("INFO"):
+        cvq.report_daily(records, timedelta(hours=24), _at(7, 0), "all")
+    assert "2026-08-07  레코드   3" in caplog.text

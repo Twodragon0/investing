@@ -91,6 +91,7 @@ import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import TYPE_CHECKING, NamedTuple
@@ -186,6 +187,20 @@ CONTENT_PREFIXES = ("_posts/", "assets/")
 SKIP_PATH_RE = re.compile(r"^[\w./-]+$")
 
 WORKFLOWS_DIR = REPO_ROOT / ".github" / "workflows"
+
+# `--with-runs` 에서 gh 로그를 동시에 몇 개까지 받을 것인가.
+#
+# 순차 수집은 실행당 수 초가 그대로 누적된다. `--collector all` 이면 수집기 4개 ×
+# `--run-limit` 12 = 최대 48회라 분 단위가 되고, 그 대기 때문에 `--with-runs` 를
+# 실제로는 안 돌리게 된다. 그러면 `[2]` 의 skip 횟수와 `[5]` 의 오검출 판정이 통째로
+# 비는데, 그 둘은 새 코드 경로가 돌기는 했는지를 보는 **유일한** 표본원이다.
+# 2026-08-18 게이트 판정도 `--with-runs` 없이 나와 오검출이 "미확인" 으로 남았다.
+#
+# 상한을 두는 이유: gh 는 REST 위에 얹혀 있고 GitHub 은 동시 요청이 몰리면 secondary
+# rate limit 으로 403 을 준다. 403 이 나면 그 실행은 조용히 표본에서 빠지므로
+# (`fetch_run_log` 가 None), 병렬화가 오히려 표본을 줄이는 방향으로 틀릴 수 있다.
+# 로그 다운로드는 대기가 전송에 지배되어 4 정도면 대기 시간의 대부분이 겹친다.
+LOG_FETCH_WORKERS = 4
 
 # 수집기 이름(커밋 주제 기준) → 워크플로우 파일명.
 #
@@ -468,6 +483,30 @@ def filter_runs_after(runs: Sequence[Mapping[str, object]], pilot_start: datetim
     return kept
 
 
+def fetch_run_log(run_id: str) -> str | None:
+    """실행 로그 본문. 받지 못하면 None — 호출부가 그 실행을 표본에서 뺀다.
+
+    빈 문자열로 폴백하지 않는다. 빈 로그는 `parse_skip_paths` 에서 "skip 없음" 과
+    구분되지 않아, 받아오지 못한 실행이 **skip 하지 않은 실행**으로 분모에 들어간다.
+    """
+    try:
+        out = subprocess.run(
+            ["gh", "run", "view", run_id, "--log"],
+            cwd=REPO_ROOT,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except (subprocess.CalledProcessError, OSError) as e:
+        # **말없이 버리면 안 된다.** 이 경로가 조용하면 "실행 3건 중 skip 1건" 을 보고
+        # 표본이 원래 3건인지, 12건을 시도했는데 9건이 secondary rate limit 으로 죽은
+        # 것인지 구분할 수 없다. 그런데 후자야말로 `LOG_FETCH_WORKERS` 를 4로 묶어 둔
+        # 이유라서, 관측되지 않으면 그 상수의 근거를 검증할 수 없다.
+        logger.warning("  로그 수집 실패 run=%s: %s", run_id, e)
+        return None
+    return out.stdout
+
+
 def collect_skip_counts(
     workflow: str, limit: int, pilot_start: datetime
 ) -> tuple[int, int, str | None, list[list[str]]]:
@@ -481,6 +520,9 @@ def collect_skip_counts(
 
     파일 목록까지 같은 로그에서 뽑는 이유: 오검출 판정([5])에 필요한데, 로그를 다시
     받으면 실행당 수 초가 두 배로 든다.
+
+    로그는 `LOG_FETCH_WORKERS` 개씩 동시에 받는다. 받아오지 못한 실행은 `checked`
+    에서도 빠지므로 분모가 조용히 부풀지 않는다.
     """
     try:
         listing = subprocess.run(
@@ -516,28 +558,32 @@ def collect_skip_counts(
         # 버린 실행 한 건이 이 안내를 꺼 버리면 안 된다.
         logger.info("  가져온 %d실행에 파일럿 전이 없다 — --run-limit 을 올리면 표본이 늘 수 있다", len(fetched))
 
+    run_ids: list[str] = []
+    for run in runs:
+        run_id = str(run.get("databaseId", ""))
+        if run_id:
+            run_ids.append(run_id)
+
     skips = 0
     checked = 0
     blocks: list[list[str]] = []
-    for run in runs:
-        run_id = str(run.get("databaseId", ""))
-        if not run_id:
-            continue
-        try:
-            log = subprocess.run(
-                ["gh", "run", "view", run_id, "--log"],
-                cwd=REPO_ROOT,
-                capture_output=True,
-                text=True,
-                check=True,
-            )
-        except subprocess.CalledProcessError:
-            continue
-        checked += 1
-        found = parse_skip_paths(log.stdout)
-        if found:
-            skips += 1
-            blocks.extend(found)
+    if run_ids:
+        with ThreadPoolExecutor(max_workers=min(LOG_FETCH_WORKERS, len(run_ids))) as pool:
+            # `map` 은 **입력 순서대로** 돌려준다. `as_completed` 로 바꾸면 blocks 순서가
+            # 로그 도착 순서를 타서 같은 데이터에서 실행마다 다른 출력이 나온다 —
+            # 오검출 목록([5])이 흔들리면 재현 대조가 불가능해진다.
+            for log in pool.map(fetch_run_log, run_ids):
+                if log is None:
+                    continue
+                checked += 1
+                found = parse_skip_paths(log)
+                if found:
+                    skips += 1
+                    blocks.extend(found)
+    if checked != len(run_ids):
+        # 분모가 시도한 수보다 작다는 사실 자체를 보이게 한다. 위 warning 은 실패한
+        # 실행마다 나오지만, 합계가 없으면 몇 건이 빠졌는지 눈으로 세야 한다.
+        logger.warning("  로그 %d/%d 만 수집됐다 — skip 비율의 분모가 그만큼 작다", checked, len(run_ids))
     return skips, checked, None, blocks
 
 

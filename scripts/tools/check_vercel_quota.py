@@ -33,11 +33,18 @@
 식별되지 않는다(24h/95 · 30h/106 · 36h/116 이 모두 비슷하게 들어맞는다). 이 도구는
 피크를 **보고**할 뿐 임계와 비교해 판정하지 않는다.
 
+`--kind collector` 는 3번을 한 걸음 더 밀어 **피크 자체를 수집기 축으로만** 다시
+낸다. 총량 피크가 개발 활동에 지배될 때 파일럿이 움직일 수 있는 축이 실제로 내려갔는지
+보려면 이게 필요하다. 대신 거른 피크는 **쿼터 부하가 아니다** — 쿼터 카운터는 우리
+분류를 모른다. 걸러도 `[3]` SHA 대조는 전량으로 돈다(거른 목록으로 대조하면 걸러진
+레코드를 받은 커밋이 전부 거절로 둔갑한다).
+
 Usage
 -----
   python scripts/tools/check_vercel_quota.py
   python scripts/tools/check_vercel_quota.py --window-hours 30 --since 2026-08-01
   python scripts/tools/check_vercel_quota.py --pilot-merged 2026-08-10T13:14:51+09:00
+  python scripts/tools/check_vercel_quota.py --kind collector   # 수집기 축만
 
 종료 코드: 집계 성공 0, `vercel`/`git` 을 못 돌리면 2.
 """
@@ -76,7 +83,9 @@ MAX_PAGES = 200
 
 ENVIRONMENTS = ("production", "preview")
 
-# 커밋 제목 → 종류. 피크 창의 구성을 가르는 데만 쓴다(집계 판정에는 안 쓴다).
+# 커밋 제목 → 종류. 피크 창의 **구성**과 `--kind` 축 필터가 둘 다 이걸 쓴다.
+# 즉 이 표를 건드리면 `[1]` 피크와 `[2]` 일자별의 대상 집합까지 움직인다
+# (`[3]` SHA 대조는 영향 없다 — 전량으로 돈다).
 COLLECTOR_PREFIXES = (
     "chore: collect",
     "chore: update",
@@ -310,7 +319,11 @@ def classify_commits(
 
 
 def record_kind(record: Record) -> str:
-    """피크 창 구성용 분류. preview 는 환경으로, 나머지는 커밋 제목으로 가른다."""
+    """레코드를 축으로 가른다. preview 는 환경으로, 나머지는 커밋 제목으로 판정한다.
+
+    피크 창 구성 표와 `--kind` 필터(`filter_kind`)가 같이 쓴다. 후자를 통해
+    `[1]`·`[2]` 의 대상 집합을 정하므로 "구성 표시용" 이 아니다.
+    """
     if record.env == "preview":
         return "preview(PR)"
     subject = record.subject
@@ -319,6 +332,44 @@ def record_kind(record: Record) -> str:
     if subject.startswith("Merge pull request") or "(#" in subject:
         return "PR 머지"
     return "그 외"
+
+
+COLLECTOR_KIND = "수집기"
+
+# `--kind` 선택지 → 남길 `record_kind` 판정.
+#
+# `all` 이 기본이고 그때만 이 도구가 **쿼터 부하**를 보고한다. 나머지 둘은 부하가
+# 아니라 **부하의 구성**을 보는 렌즈다 — 아래 `filter_kind` 의 경고를 볼 것.
+KIND_FILTERS = {
+    "all": None,
+    "collector": lambda kind: kind == COLLECTOR_KIND,
+    "dev": lambda kind: kind != COLLECTOR_KIND,
+}
+KIND_LABELS = {
+    "all": "production+preview",
+    "collector": "수집기 축만",
+    "dev": "개발 활동 축만",
+}
+DEFAULT_KIND = "all"
+
+
+def filter_kind(records: Sequence[Record], kind: str) -> list[Record]:
+    """`--kind` 로 레코드를 거른다.
+
+    **거른 피크는 쿼터 헤드룸이 아니다.** Vercel 의 쿼터 카운터는 우리 분류를 모르고
+    통에 든 레코드를 전부 센다. `--kind collector` 로 나온 36 은 "쿼터를 36 만큼
+    쓰고 있다" 가 아니라 "그 창의 부하 중 36 이 수집기 축이다" 다. 둘을 섞으면
+    임계(추정 하한 ~95)와 비교해 여유가 있다고 오독한다.
+
+    이 렌즈가 필요한 이유는 반대 방향의 오독을 막기 위해서다. 2026-08-14 실측에서
+    24h 피크가 95 → 52 로 떨어졌는데 그 창의 수집기 레코드는 30 → 36 으로 **늘었다.**
+    총량만 보면 파일럿 성과로 읽히지만 빠진 43건은 전부 개발 활동(preview 43→11,
+    PR 머지 16→4)이었다. 파일럿이 움직일 수 있는 축만 따로 세야 그 착시가 안 생긴다.
+    """
+    keep = KIND_FILTERS[kind]
+    if keep is None:
+        return list(records)
+    return [r for r in records if keep(record_kind(r))]
 
 
 def window_composition(records: Iterable[Record], end: datetime, window: timedelta) -> Counter[str]:
@@ -343,6 +394,7 @@ def report_peaks(
     window: timedelta,
     pilot_merged: datetime | None,
     since: datetime,
+    kind: str = DEFAULT_KIND,
 ) -> None:
     """롤링 피크와 그 창의 구성을 낸다.
 
@@ -350,9 +402,24 @@ def report_peaks(
     가져온 그 레코드들을 버리면, `since` 직후에 끝나는 창이 자기 앞부분을 잃어
     피크가 과소평가된다 — 쿼터 카운터는 집계 시작일을 모른다. 대신 `min_end` 로
     **창 종료**만 `since` 이후로 제한한다.
+
+    `records` 는 **거르지 않은 전량**이고 `--kind` 필터는 이 함수 안에서 건다.
+    호출부가 거른 목록을 만들어 넘기는 구조로 두면 그 목록이 `main()` 의 지역변수로
+    남고, 같은 타입의 전량 목록과 뒤바뀔 수 있다. 뒤바뀌면 조용히 틀린다 — 특히
+    `[3]` SHA 대조가 거른 목록을 집으면 걸러진 레코드를 받은 커밋이 전부 "레코드
+    없음 = 거절" 이 되어 거절 수가 통째로 조작된다. 필터를 안으로 넣으면 그 뒤바뀜이
+    **표현 불가능**해진다.
+
+    구성 표는 언제나 전량으로 낸다 — 거른 뒤 구성을 내면 "수집기 100%" 라는 자명한
+    줄만 남아, 그 창의 실제 쿼터 부하가 얼마였는지가 출력에서 사라진다. 그 숫자가
+    이 렌즈를 쓰는 이유의 절반이다.
     """
     hours = int(window.total_seconds() // 3600)
-    logger.info("[1] %dh 롤링 피크 (production+preview)", hours)
+    composition = records
+    records = filter_kind(records, kind)
+    logger.info("[1] %dh 롤링 피크 (%s)", hours, KIND_LABELS[kind])
+    if kind != DEFAULT_KIND:
+        logger.info("  ※ 축을 걸렀다 — 아래 피크는 **쿼터 부하가 아니다.** 구성 표의 총계가 부하다.")
 
     times = [r.at for r in records]
     overall = rolling_peak(times, window, min_end=since)
@@ -363,7 +430,7 @@ def report_peaks(
     logger.info("  전 기간 피크  %d건  (창 종료 %s KST)", count, at.strftime("%Y-%m-%d %H:%M"))
 
     if pilot_merged is None:
-        _report_composition(records, at, window, "피크")
+        _report_composition(composition, at, window, "피크")
         return
 
     # 창 **전체**가 한쪽 구간에 들어가는 것만 본다. 경계를 걸친 창은 전/후 어느
@@ -379,20 +446,29 @@ def report_peaks(
             continue
         peak_at, peak_count = peak
         logger.info("  %s 피크  %d건  (창 종료 %s)", label, peak_count, peak_at.strftime("%m-%d %H:%M"))
-        _report_composition(records, peak_at, window, label)
+        _report_composition(composition, peak_at, window, label)
 
     logger.info("  주의: 피크는 파일럿이 건드리지 않는 축(개발 활동)이 지배할 수 있다.")
     logger.info("        총량 하락을 파일럿 성과로 읽기 전에 위 창 구성을 볼 것.")
+    if kind == DEFAULT_KIND:
+        logger.info("        `--kind collector` 로 파일럿이 움직일 수 있는 축만 따로 볼 수 있다.")
 
 
-def report_daily(records: Sequence[Record], window: timedelta, since: datetime) -> None:
+def report_daily(records: Sequence[Record], window: timedelta, since: datetime, kind: str = DEFAULT_KIND) -> None:
     """일자별 레코드 수와 그날의 롤링 최대.
 
     `report_peaks` 와 같은 이유로 `since` 이전 레코드도 **세는 데는** 쓴다. 표시만
     `since` 이후 날짜로 자른다 — 안 그러면 첫날의 롤링 최대가 그날 레코드 수와
     같아지는 가짜 계단이 생긴다.
+
+    `report_peaks` 와 같이 전량을 받아 **안에서** 거른다(그 docstring 참조).
     """
-    logger.info("[2] 일자별 (KST) — 레코드 수 / 그날의 롤링 최대")
+    records = filter_kind(records, kind)
+    logger.info("[2] 일자별 (KST) — 레코드 수 / 그날의 롤링 최대 (%s)", KIND_LABELS[kind])
+    if kind != DEFAULT_KIND:
+        # `[1]` 과 `[2]` 는 따로 인용된다. 경고를 `[1]` 에만 두면 `[2]` 표만 떼어
+        # 읽는 사람에게는 이 숫자가 쿼터 부하로 보인다.
+        logger.info("  ※ 축을 걸렀다 — 쿼터 부하가 아니다.")
     ordered = sorted(records, key=lambda r: r.at)
     times = [r.at for r in ordered]
     per_day: Counter[str] = Counter(r.at.strftime("%Y-%m-%d") for r in ordered if r.at >= since)
@@ -409,8 +485,44 @@ def report_daily(records: Sequence[Record], window: timedelta, since: datetime) 
         logger.info("  %s  레코드 %3d   롤링 피크 %3d", day, per_day[day], day_peak.get(day, 0))
 
 
-def report_rejections(verdict: Verdict, pilot_merged: datetime | None) -> None:
-    """SHA 대조 결과를 낸다."""
+def load_at(times: Sequence[datetime], at: datetime, window: timedelta) -> int:
+    """`(at - window, at]` 에 든 레코드 수 = 그 순간의 쿼터 부하.
+
+    `rolling_peak` 과 **같은 경계 규칙**(오른쪽 닫힘)이다. 규칙이 갈리면 같은 데이터에서
+    피크와 부하가 1건씩 어긋난다.
+
+    `rolling_peak` 과 다른 점은 평가 격자다. `rolling_peak` 은 **레코드** 시각에서
+    창을 끝내고 여기는 **커밋** 시각에서 끝낸다. 두 격자는 일치하지 않으므로 이 함수의
+    최대값이 `rolling_peak` 의 피크보다 작을 수 있다 — 틀린 게 아니라 다른 질문이다
+    ("부하의 최대" vs "이 커밋이 겪은 부하").
+    """
+    return sum(1 for t in times if at - window < t <= at)
+
+
+def _percentiles(values: Sequence[int]) -> str:
+    """분포 요약 한 줄. 거절 부하를 비교할 기준선이 없으면 숫자를 읽을 수 없다."""
+    ordered = sorted(values)
+    n = len(ordered)
+    return (
+        f"n={n} min={ordered[0]} p25={ordered[n // 4]} "
+        f"중앙값={ordered[n // 2]} p75={ordered[3 * n // 4]} max={ordered[-1]}"
+    )
+
+
+def report_rejections(
+    verdict: Verdict,
+    pilot_merged: datetime | None,
+    records: Sequence[Record] | None = None,
+    window: timedelta | None = None,
+) -> None:
+    """SHA 대조 결과를 낸다.
+
+    `records`·`window` 를 주면 거절마다 **그 순간의 롤링 부하**를 붙이고 정상 생성의
+    부하 분포를 함께 낸다. 이게 없으면 "거절 25건" 만 남아 쿼터 때문인 거절과 그렇지
+    않은 거절이 구분되지 않는다 — `branch-protection.md` 의 "쿼터로 설명되지 않는
+    단발 거절" 절이 손으로 계산해야 했던 숫자다. 손계산은 이 파일에서 두 번 틀렸다
+    (91→79, 94→95). 도구가 내면 다시 틀리지 않는다.
+    """
     logger.info("[3] SHA 대조 — main 커밋이 production 레코드를 받았는가")
     total = len(verdict.deployed) + len(verdict.non_head) + len(verdict.rejected)
     logger.info("  main 커밋 %d건", total)
@@ -419,10 +531,33 @@ def report_rejections(verdict: Verdict, pilot_merged: datetime | None) -> None:
     logger.info("  레코드 없음 = 거절   %d", len(verdict.rejected))
     if not verdict.rejected:
         return
+
+    # sha → 그 커밋이 겪은 롤링 부하. `records`/`window` 가 없으면 None 이고 그때는
+    # 부하 열을 아예 내지 않는다 — 0 으로 폴백하면 "부하 0에서 거절" 로 읽힌다.
+    loads: dict[str, int] | None = None
+    if records and window is not None:
+        times = [r.at for r in records]
+        loads = {c.sha: load_at(times, c.at, window) for c in (*verdict.deployed, *verdict.rejected)}
+        if verdict.deployed:
+            logger.info(
+                "  정상 생성 %d건의 %dh 롤링 부하 분포: %s",
+                len(verdict.deployed),
+                int(window.total_seconds() // 3600),
+                _percentiles([loads[c.sha] for c in verdict.deployed]),
+            )
+
     by_day = Counter(c.at.strftime("%Y-%m-%d") for c in verdict.rejected)
     logger.info("  일자별 거절: %s", ", ".join(f"{d} {n}" for d, n in sorted(by_day.items())))
     for commit in verdict.rejected:
-        logger.info("    %s  %s", commit.at.strftime("%m-%d %H:%M"), commit.subject[:60])
+        if loads is None:
+            logger.info("    %s  %s", commit.at.strftime("%m-%d %H:%M"), commit.subject[:60])
+        else:
+            logger.info(
+                "    %s  부하 %3d  %s",
+                commit.at.strftime("%m-%d %H:%M"),
+                loads[commit.sha],
+                commit.subject[:60],
+            )
     if pilot_merged is not None:
         after = sum(1 for c in verdict.rejected if c.at > pilot_merged)
         logger.info("  파일럿 후 거절 %d건", after)
@@ -445,6 +580,16 @@ def main() -> int:
         type=int,
         default=DEFAULT_BATCH_SECONDS,
         help=f"푸시 batch non-head 판정 간격 (기본: {DEFAULT_BATCH_SECONDS})",
+    )
+    parser.add_argument(
+        "--kind",
+        choices=sorted(KIND_FILTERS),
+        default=DEFAULT_KIND,
+        help=(
+            f"롤링 피크·일자별을 낼 축 (기본: {DEFAULT_KIND}). "
+            "collector 는 수집기 커밋만, dev 는 그 외(preview·PR 머지 등)만 센다. "
+            "거른 피크는 쿼터 부하가 아니라 부하의 구성이다 — [3] SHA 대조에는 적용되지 않는다."
+        ),
     )
     args = parser.parse_args()
 
@@ -501,8 +646,12 @@ def main() -> int:
         len(records) - len(in_window),
     )
 
-    report_peaks(records, window, pilot_merged, since)
-    report_daily(records, window, since)
+    # `--kind` 는 **보고 축만** 좁힌다. 여기서 거른 목록을 만들지 않는 것이 요점이다 —
+    # 지역변수로 남으면 아래 `deployed_shas` 가 그것을 집을 수 있고, 그러면 걸러진
+    # 레코드를 받은 커밋이 전부 "레코드 없음 = 거절" 이 되어 거절 수가 통째로 조작된다.
+    # 필터는 두 report 함수 **안**에 있다.
+    report_peaks(records, window, pilot_merged, since, args.kind)
+    report_daily(records, window, since, args.kind)
 
     commits = fetch_commits(since)
     if commits is None:
@@ -510,7 +659,7 @@ def main() -> int:
         return 2
     deployed_shas = frozenset(r.sha for r in records if r.env == "production" and r.sha)
     verdict = classify_commits(commits, deployed_shas, timedelta(seconds=args.batch_window_seconds))
-    report_rejections(verdict, pilot_merged)
+    report_rejections(verdict, pilot_merged, records, window)
 
     return 0
 
