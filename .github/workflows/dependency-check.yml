@@ -8,6 +8,8 @@ on:
 permissions:
   contents: read
   issues: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
 
 concurrency:
   group: dependency-check
@@ -109,8 +111,28 @@ jobs:
         env:
           VULN_COUNT: ${{ steps.audit.outputs.vuln_count }}
 
-      - name: Fail on vulnerabilities
+      # **발견은 실패가 아니다.** 예전에는 여기서 exit 1 했는데, 그러면 잡 실패가
+      # "취약점을 찾았다" 와 "워크플로우가 죽었다" 두 가지를 뜻해 밖에서 구분되지
+      # 않는다. 그래서 크래시에 알림을 붙일 수 없었고, 이 워크플로우는 실패 알림
+      # 커버리지에서 면제로 남아 있었다.
+      #
+      # 이제 발견은 exit 0 + 이슈다. 잡 실패는 크래시만 뜻하므로 아래
+      # `alert-consecutive-failures` 가 의미를 갖는다.
+      #
+      # 발견의 유일한 출력 경로가 위 "Create issue on vulnerabilities" 가 되므로
+      # 그 step 은 반드시 blocking 이어야 한다(`continue-on-error` 금지).
+      # `tests/test_findings_exit_zero_guard.py` 가 강제한다.
+      - name: Report vulnerabilities (non-failing)
         if: steps.audit.outputs.vuln_count != '0'
         run: |
-          echo "::error title=pip-audit findings::pip-audit 가 ${{ steps.audit.outputs.vuln_count }} 건의 취약점을 발견했습니다. audit-report.txt 와 자동 생성된 이슈를 확인하세요."
-          exit 1
+          echo "::warning title=pip-audit findings::pip-audit 가 ${{ steps.audit.outputs.vuln_count }} 건의 취약점을 발견했습니다. 자동 생성된 이슈를 확인하세요."
+
+  # 주 1회. 발견을 exit 0 으로 옮겼으므로 잡 실패는 크래시만 뜻한다 — 첫 실패에 알린다.
+  alert-consecutive-failures:
+    needs: audit
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Dependency Security Check'
+      threshold: 1
+    secrets: inherit

@@ -48,29 +48,22 @@ WORKFLOWS_DIR = REPO_ROOT / ".github" / "workflows"
 CLASSIFIER = WORKFLOWS_DIR / "classify-workflow-failures.yml"
 CONSECUTIVE_ALERT_REF = "./.github/workflows/alert-consecutive-failures.yml"
 
-# 커버리지가 없는 스케줄 워크플로우 — 2026-08-18 발견 시점의 실측 baseline.
+# 커버리지가 없는 스케줄 워크플로우 — 2026-08-18 기준 **0건**.
 #
-# **이 목록은 줄어들기만 해야 한다.** 늘리려면 "왜 이 워크플로우는 조용히 실패해도
-# 되는가" 를 PR 에서 답해야 한다. 위 `Push Folder Info To Slack` 이 정확히 이 목록에
-# 있었어야 할 종류였고, 없었기 때문에 11일이 걸렸다.
+# 발견 시점에는 17건이었다. 셋으로 나눠 없앴다:
+# - 11건 → `alert-consecutive-failures` 호출 (#1176)
+# - 3건  → 자기참조 위험 우선 (#1174)
+# - 2건  → 발견 경로를 exit 0 으로 옮겨 잡 실패가 크래시만 뜻하게 만든 뒤 알림 연결.
+#          `tests/test_findings_exit_zero_guard.py` 가 그 전환의 불변식을 지킨다.
+# - 1건  → `check-post-summary.yml`. 전환 없이 이미 커버돼 있었다 — 이슈 생성이
+#          `if: failure()` 라 크래시에도 돈다. `_issue_on_failure_workflows()` 가 그
+#          메커니즘을 모델에 넣는다.
 #
-# 2026-08-18 에 17건 → 3건으로 줄였다. 남은 셋은 **실패가 곧 설계된 신호**라
-# 알림을 붙이면 모든 발견이 이슈와 Slack 에 중복된다:
-#
-# - `Dependency Security Check` — 취약점 발견 시 의도적 `exit 1` + 이슈 자동 생성
-# - `Integrated Quality Report` — 회귀 감지 시 `exit 1` + 이슈
-# - `Check Post Summary` — 회귀 시 이슈 생성
-#
-# **면제에는 남은 구멍이 있다.** 진짜 크래시와 "찾았음" 이 외부에서 구분되지 않아
-# 크래시는 여전히 안 보인다. 근본 해결은 두 경로를 분리하는 것(발견 시 이슈를 만들고
-# exit 0, 크래시만 실패)인데 각 워크플로우의 계약 변경이라 별건이다.
-KNOWN_UNCOVERED: frozenset[str] = frozenset(
-    {
-        "Check Post Summary",
-        "Dependency Security Check",
-        "Integrated Quality Report",
-    }
-)
+# **비어 있다고 가드가 무의미해지지 않는다.** 새 스케줄 워크플로우가 커버리지 없이
+# 들어오면 여기 적어야 통과하고, 적는 행위가 리뷰 대상이 된다.
+# `test_uncovered_scheduled_workflow_would_be_detected` 가 탐지 로직이 vacuous 하지
+# 않음을 따로 지킨다.
+KNOWN_UNCOVERED: frozenset[str] = frozenset()
 
 
 def _load(path: Path) -> dict:
@@ -125,8 +118,34 @@ def _consecutive_alert_callers() -> set[str]:
     return names
 
 
+def _issue_on_failure_workflows() -> set[str]:
+    """실패 시(크래시 포함) 이슈를 만드는 워크플로우 — 세 번째 커버리지 메커니즘.
+
+    `check-post-summary.yml` 이 이 방식이다. 이슈 생성 step 의 `if:` 가 `failure()` 라
+    회귀뿐 아니라 크래시에도 돌므로, 알림 계층에 등록돼 있지 않아도 고장이 보인다.
+
+    이 메커니즘을 모델에 넣지 않으면 baseline 이 "커버 안 됨" 과 "다르게 커버됨" 을
+    뒤섞어, 남은 숫자가 실제 위험을 과장한다.
+    """
+    names: set[str] = set()
+    for path in sorted(WORKFLOWS_DIR.glob("*.yml")):
+        wf = _load(path)
+        for job in (wf.get("jobs") or {}).values():
+            if not isinstance(job, dict):
+                continue
+            for step in job.get("steps") or []:
+                if not isinstance(step, dict):
+                    continue
+                if "failure()" not in str(step.get("if") or ""):
+                    continue
+                script = str((step.get("with") or {}).get("script") or "")
+                if "issues.create" in script:
+                    names.add(_workflow_name(path, wf))
+    return names
+
+
 def _covered() -> set[str]:
-    return _classifier_allowlist() | _consecutive_alert_callers()
+    return _classifier_allowlist() | _consecutive_alert_callers() | _issue_on_failure_workflows()
 
 
 def test_scheduled_workflows_are_discovered() -> None:
@@ -143,6 +162,7 @@ def test_coverage_sources_are_discovered() -> None:
     """두 커버리지 원본이 다 읽혀야 한다. 하나가 비면 갭이 과대 보고된다."""
     assert len(_classifier_allowlist()) >= 15, "classify 화이트리스트를 못 읽었다"
     assert len(_consecutive_alert_callers()) >= 10, "alert-consecutive-failures 호출자를 못 찾았다"
+    assert _issue_on_failure_workflows(), "`if: failure()` 이슈 생성 워크플로우를 못 찾았다"
 
 
 def test_no_new_uncovered_scheduled_workflow() -> None:
