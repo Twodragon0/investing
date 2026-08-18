@@ -548,6 +548,23 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "            runs,\n            min(pilot_starts.values()),",
         "tests/test_check_pilot_observation_load_adjusted.py::test_group_mode_splits_each_collector_at_its_own_start",
     ),
+    # Part 5 (2026-08-18): `--kind` 축 필터가 판정으로 새는 경로.
+    #
+    # 이 케이스가 여기 있는 이유는 리뷰에서 뮤테이션으로 갭이 실증됐기 때문이다.
+    # 단위 테스트만 있을 때 아래 주입으로 39/39 가 통과했다 — 기존 테스트가 두
+    # frozenset 을 테스트 본문에서 손으로 만들어 `classify_commits` 에 먹였을 뿐,
+    # `main()` 이 실제로 어느 쪽을 만드는지는 보지 않았다.
+    #
+    # 새면 조용히 틀린다: 걸러진 레코드를 받은 커밋이 전부 "레코드 없음 = 거절" 이
+    # 되어 `--kind collector` 하나로 PR 머지 커밋이 거절로 둔갑한다. 그 숫자는
+    # `branch-protection.md` 의 쿼터 서사를 통째로 뒤집는다.
+    StaticCase(
+        "Vercel 축 필터가 SHA 대조로 샘 (거절 수 조작)",
+        "scripts/tools/check_vercel_quota.py",
+        'deployed_shas = frozenset(r.sha for r in records if r.env == "production" and r.sha)',
+        'deployed_shas = frozenset(r.sha for r in filter_kind(records, args.kind) if r.env == "production" and r.sha)',
+        "tests/test_check_vercel_quota.py::test_main_rejection_count_is_independent_of_kind",
+    ),
 )
 
 
