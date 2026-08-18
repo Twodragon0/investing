@@ -161,12 +161,38 @@ jobs:
           SLACK_CHANNEL_ID_AI: ${{ secrets.SLACK_CHANNEL_ID_AI }}
           SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
 
+      # payload 를 YAML 로 조립하지 않는다. `summary.outputs.message` 는 멀티라인이라
+      # `text: "..."` 안에 그대로 보간되면 2번째 줄부터 들여쓰기가 없는 상태로
+      # 스칼라를 벗어난다 — js-yaml 이 `deficient indentation (3:1)` 로 죽는다.
+      #
+      # v3.0.1 은 이 입력을 관대하게 다뤘고 v4.0.0(#1099, 2026-08-07 17:39 머지)부터
+      # 엄격히 파싱한다. 그 bump 이후 이 워크플로우는 **11일 연속 매일 실패**했고
+      # (마지막 성공 08-07 04:08, 첫 실패 08-08 03:07) 아무도 알아채지 못했다 —
+      # 5개 매트릭스 중 4개는 채널 시크릿이 없어 skip 되므로 실패가 openclaw 하나에만
+      # 나타나고, 그마저 Slack 알림 워크플로우 자신이라 알릴 통로가 없었다.
+      #
+      # jq 로 JSON 을 만들어 파일로 넘기면 이스케이프가 구조적으로 보장된다. 값은
+      # env 로 받는다 — `${{ }}` 를 셸에 직접 보간하면 주입 경로가 된다.
+      - name: Build Slack payload
+        if: steps.slack-config.outputs.can_post == 'true'
+        shell: bash
+        env:
+          SLACK_CHANNEL: ${{ steps.slack-config.outputs.channel }}
+          PROFILE_LABEL: ${{ steps.slack-config.outputs.profile_label }}
+          SUMMARY_MESSAGE: ${{ steps.summary.outputs.message }}
+        run: |
+          set -euo pipefail
+          jq -n \
+            --arg channel "$SLACK_CHANNEL" \
+            --arg label "$PROFILE_LABEL" \
+            --arg message "$SUMMARY_MESSAGE" \
+            '{channel: $channel, text: ("[" + $label + "]\n" + $message)}' \
+            > "${RUNNER_TEMP}/slack-payload.json"
+
       - name: Post to Slack investing channel
         if: steps.slack-config.outputs.can_post == 'true'
         uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d  # v4.0.0
         with:
           method: chat.postMessage
           token: ${{ steps.slack-config.outputs.token }}
-          payload: |
-            channel: "${{ steps.slack-config.outputs.channel }}"
-            text: "[${{ steps.slack-config.outputs.profile_label }}]\n${{ steps.summary.outputs.message }}"
+          payload-file-path: ${{ runner.temp }}/slack-payload.json
