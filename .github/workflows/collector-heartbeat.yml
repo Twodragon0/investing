@@ -7,6 +7,9 @@ on:
 
 permissions:
   actions: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  issues: write
+  contents: read
 
 jobs:
   heartbeat:
@@ -96,3 +99,13 @@ jobs:
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: "${{ steps.report.outputs.header }}\n${{ steps.report.outputs.lines }}"
+
+  # 일 1회. 이틀 연속이면 수집기 상태를 이틀 모르는 것이다.
+  alert-consecutive-failures:
+    needs: heartbeat
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Collector Heartbeat'
+      threshold: 2
+    secrets: inherit

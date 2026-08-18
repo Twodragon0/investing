@@ -54,31 +54,21 @@ CONSECUTIVE_ALERT_REF = "./.github/workflows/alert-consecutive-failures.yml"
 # 되는가" 를 PR 에서 답해야 한다. 위 `Push Folder Info To Slack` 이 정확히 이 목록에
 # 있었어야 할 종류였고, 없었기 때문에 11일이 걸렸다.
 #
-# 자기참조 위험이 가장 컸던 3건은 2026-08-18 에 커버리지를 붙여 여기서 뺐다.
-# 메커니즘이 갈렸다:
-# - `Watchdog — Zero-Job` 자신 · `Vercel Quota Report` → `alert-consecutive-failures`
-#   호출(`if: failure()` 라 정상 실행 비용 0)
-# - `Guard Falsifiability` → classify 화이트리스트. 이 워크플로우의 `gate` 는
-#   required-check aggregator라 `test_required_check_aggregator_guard.py` 가 "모든 잡이
-#   gate.needs 에 있어야 한다" 를 강제하는데, 알림 잡은 gate 실패 **뒤에** 도는 잡이라
-#   순환이 된다. PR 에서 도는 워크플로우는 화이트리스트가 정석이다.
-# 남은 14건은 아직 조용히 실패할 수 있다.
+# 2026-08-18 에 17건 → 3건으로 줄였다. 남은 셋은 **실패가 곧 설계된 신호**라
+# 알림을 붙이면 모든 발견이 이슈와 Slack 에 중복된다:
+#
+# - `Dependency Security Check` — 취약점 발견 시 의도적 `exit 1` + 이슈 자동 생성
+# - `Integrated Quality Report` — 회귀 감지 시 `exit 1` + 이슈
+# - `Check Post Summary` — 회귀 시 이슈 생성
+#
+# **면제에는 남은 구멍이 있다.** 진짜 크래시와 "찾았음" 이 외부에서 구분되지 않아
+# 크래시는 여전히 안 보인다. 근본 해결은 두 경로를 분리하는 것(발견 시 이슈를 만들고
+# exit 0, 크래시만 실패)인데 각 워크플로우의 계약 변경이라 별건이다.
 KNOWN_UNCOVERED: frozenset[str] = frozenset(
     {
-        "Action Pin Verify",
-        "Backfill URL Summaries",
-        "Check Post Images",
         "Check Post Summary",
-        "Collector Heartbeat",
         "Dependency Security Check",
-        "GSC Index Audit",
-        "Generate Weekly Report",
         "Integrated Quality Report",
-        "OpenClaw Hourly Improvement Loop",
-        "Push Folder Info To Slack",
-        "Respond AI Mentions",
-        "Supply-chain Lock Promotion Reminder",
-        "Supply-chain Lock Verify",
     }
 )
 
@@ -215,12 +205,25 @@ def test_alert_reference_path_is_current() -> None:
     )
 
 
-def test_regression_marker_push_folder_info() -> None:
-    """이 가드를 만들게 한 그 워크플로우가 실제로 무커버리지로 잡히는지.
+def test_regression_marker_push_folder_info_is_now_covered() -> None:
+    """이 가드를 만들게 한 워크플로우(11일 조용한 실패, #1172)가 이제 커버되는지.
 
-    잡히지 않으면 가드가 원래 문제를 재현하지 못하는 것이다.
+    2026-08-18 에 `alert-consecutive-failures` 를 붙였다. 여기서 red 가 나면 그 연결이
+    끊어진 것이고, 같은 사고가 다시 조용히 일어날 수 있다.
     """
-    assert "Push Folder Info To Slack" in _scheduled() - _covered()
+    name = "Push Folder Info To Slack"
+    assert name in _scheduled(), "스케줄 트리거가 사라졌다 — 이 단언의 전제가 깨졌다"
+    assert name in _covered(), "알림 연결이 끊어졌다 — #1172 와 같은 사고가 다시 조용해진다"
+
+
+def test_uncovered_scheduled_workflow_would_be_detected() -> None:
+    """탐지 로직 자체가 살아 있는지 — baseline 이 비어 가도 vacuous 해지지 않게.
+
+    커버리지가 100% 가 되면 `_scheduled() - _covered()` 가 항상 빈 집합이라 위
+    단언들이 전부 자동 통과한다. 합성 입력으로 탐지 로직을 따로 확인한다.
+    """
+    synthetic_scheduled = _scheduled() | {"Synthetic Uncovered Workflow"}
+    assert "Synthetic Uncovered Workflow" in synthetic_scheduled - _covered()
 
 
 def test_yaml_on_key_trap_is_handled() -> None:

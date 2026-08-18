@@ -7,6 +7,9 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: push-folder-info
@@ -197,3 +200,13 @@ jobs:
           method: chat.postMessage
           token: ${{ steps.slack-config.outputs.token }}
           payload-file-path: ${{ runner.temp }}/slack-payload.json
+
+  # 일 1회. 2026-08-08~18 에 11일간 조용히 실패한 당사자다(#1172).
+  alert-consecutive-failures:
+    needs: push-folder-info
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Push Folder Info To Slack'
+      threshold: 2
+    secrets: inherit
