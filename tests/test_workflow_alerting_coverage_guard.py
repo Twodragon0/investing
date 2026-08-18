@@ -54,11 +54,15 @@ CONSECUTIVE_ALERT_REF = "./.github/workflows/alert-consecutive-failures.yml"
 # 되는가" 를 PR 에서 답해야 한다. 위 `Push Folder Info To Slack` 이 정확히 이 목록에
 # 있었어야 할 종류였고, 없었기 때문에 11일이 걸렸다.
 #
-# 몇 개는 특히 눈에 띈다:
-# - `Watchdog — Zero-Job / startup_failure Runs` 는 알림 계층 3 자신이다. Layer 4
-#   (외부 서버)가 본다고 문서화돼 있지만 이 저장소 안에서는 무커버리지다.
-# - `Vercel Quota Report` 는 관측 축적이 목적이라 조용히 죽으면 데이터가 빈다.
-# - `Guard Falsifiability` 는 가드의 가드다.
+# 자기참조 위험이 가장 컸던 3건은 2026-08-18 에 커버리지를 붙여 여기서 뺐다.
+# 메커니즘이 갈렸다:
+# - `Watchdog — Zero-Job` 자신 · `Vercel Quota Report` → `alert-consecutive-failures`
+#   호출(`if: failure()` 라 정상 실행 비용 0)
+# - `Guard Falsifiability` → classify 화이트리스트. 이 워크플로우의 `gate` 는
+#   required-check aggregator라 `test_required_check_aggregator_guard.py` 가 "모든 잡이
+#   gate.needs 에 있어야 한다" 를 강제하는데, 알림 잡은 gate 실패 **뒤에** 도는 잡이라
+#   순환이 된다. PR 에서 도는 워크플로우는 화이트리스트가 정석이다.
+# 남은 14건은 아직 조용히 실패할 수 있다.
 KNOWN_UNCOVERED: frozenset[str] = frozenset(
     {
         "Action Pin Verify",
@@ -69,15 +73,12 @@ KNOWN_UNCOVERED: frozenset[str] = frozenset(
         "Dependency Security Check",
         "GSC Index Audit",
         "Generate Weekly Report",
-        "Guard Falsifiability",
         "Integrated Quality Report",
         "OpenClaw Hourly Improvement Loop",
         "Push Folder Info To Slack",
         "Respond AI Mentions",
         "Supply-chain Lock Promotion Reminder",
         "Supply-chain Lock Verify",
-        "Vercel Quota Report",
-        "Watchdog — Zero-Job / startup_failure Runs",
     }
 )
 

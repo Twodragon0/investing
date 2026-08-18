@@ -26,6 +26,10 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구한다. 재사용 워크플로우는
+  # 호출자의 permissions 를 상속하므로 여기서 주지 않으면 알림이 런타임에 죽는다.
+  actions: read
+  issues: write
 
 concurrency:
   group: vercel-quota-report
@@ -143,3 +147,14 @@ jobs:
             vercel-quota-report.txt
             vercel-quota-report-collector.txt
           retention-days: 90
+
+  # 주 1회라 threshold 3 이면 3주 뒤에야 운다. 관측 축적이 목적이라
+  # 한 번 빠지면 그 주 데이터가 통째로 비므로 첫 실패에 알린다.
+  alert-consecutive-failures:
+    needs: report
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Vercel Quota Report'
+      threshold: 1
+    secrets: inherit
