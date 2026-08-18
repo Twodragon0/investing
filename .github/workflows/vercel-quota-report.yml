@@ -64,24 +64,82 @@ jobs:
         if: steps.creds.outputs.available == 'true'
         run: npm install -g vercel@50.37.3
 
+      # dispatch 입력은 `${{ }}` 로 스크립트에 **직접 보간하지 않는다.** 보간하면
+      # 입력 문자열이 셸 소스로 들어가 `"; curl … #` 같은 값이 그대로 실행된다.
+      # env 로 넘기면 셸이 값으로만 취급한다.
       - name: Aggregate rolling peak and rejections
         if: steps.creds.outputs.available == 'true'
         id: report
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          INPUT_SINCE: ${{ inputs.since }}
+          INPUT_WINDOW_HOURS: ${{ inputs.window_hours || '24' }}
         run: |
           set -o pipefail
-          args=(--window-hours "${{ inputs.window_hours || '24' }}")
-          if [ -n "${{ inputs.since }}" ]; then
-            args+=(--since "${{ inputs.since }}")
+          args=(--window-hours "$INPUT_WINDOW_HOURS")
+          if [ -n "$INPUT_SINCE" ]; then
+            args+=(--since "$INPUT_SINCE")
           fi
           # 파이프 뒤에 tee 를 두면 tee 의 rc 를 보게 되므로 pipefail 을 켜 둔다.
           python3 scripts/tools/check_vercel_quota.py "${args[@]}" 2>&1 | tee vercel-quota-report.txt
+
+      # 총량 축만 쌓으면 추세를 오독한다. 2026-08-14 실측에서 24h 피크가 95 → 52 로
+      # 떨어졌는데 그 두 창의 수집기 레코드는 30 → 36 으로 **늘었다** — 빠진 43건은
+      # 전부 개발 활동(preview 43→11, PR 머지 16→4)이었다. 총량만 기록해 두면 몇 주
+      # 뒤에 그 하락을 파일럿 성과로 읽게 된다.
+      #
+      # 도구를 두 번 도는 이유: 레코드를 자기가 가져오므로 축마다 페이지네이션이
+      # 따로 필요하다. 주 1회라 API 비용은 문제가 아니다.
+      #
+      # 덤으로 얻는 것: 두 실행의 `[3] SHA 대조` 는 **반드시 같아야 한다.** 축 필터는
+      # 보고 축만 좁히고 판정에는 닿지 않기 때문이다(`filter_kind` docstring,
+      # `guard_falsifiability` 의 "Vercel 축 필터가 SHA 대조로 샘" 케이스). 달라지면
+      # 필터가 판정으로 샌 것이므로 여기서 실패시킨다 — 프로덕션 데이터로 도는
+      # 카나리아라, 단위 테스트가 못 보는 실제 레코드 조합까지 덮는다.
+      - name: Aggregate collector axis only
+        if: steps.creds.outputs.available == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          INPUT_SINCE: ${{ inputs.since }}
+          INPUT_WINDOW_HOURS: ${{ inputs.window_hours || '24' }}
+        run: |
+          set -o pipefail
+          args=(--window-hours "$INPUT_WINDOW_HOURS" --kind collector)
+          if [ -n "$INPUT_SINCE" ]; then
+            args+=(--since "$INPUT_SINCE")
+          fi
+          python3 scripts/tools/check_vercel_quota.py "${args[@]}" 2>&1 | tee vercel-quota-report-collector.txt
+
+          # `[3]` 절의 세 집계 줄만 뽑아 대조한다. 거절 목록 본문은 부하 열이 붙어
+          # 있어 두 실행 사이 초 단위 데이터 증가로 흔들릴 수 있으므로 쓰지 않는다.
+          pattern='(레코드 생성|푸시 batch non-head|레코드 없음 = 거절) +[0-9]+$'
+          extract() { grep -oE "$pattern" "$1" | grep -oE '[0-9]+$'; }
+          extract vercel-quota-report.txt > verdict-all.txt
+          extract vercel-quota-report-collector.txt > verdict-collector.txt
+
+          # **빈 결과로 통과하면 안 된다.** 로그 형식이 바뀌어 grep 이 0줄을 내면 빈
+          # 파일 둘을 비교해 카나리아가 조용히 green 이 된다 — 검증이 아니라 장식이
+          # 된다. 세 줄이 정확히 나왔는지 먼저 확인한다.
+          for f in verdict-all.txt verdict-collector.txt; do
+            n=$(wc -l < "$f")
+            if [ "$n" -ne 3 ]; then
+              echo "::error::$f 에서 집계 3줄을 찾지 못했다 (${n}줄) — 로그 형식이 바뀌었는지 확인할 것."
+              exit 1
+            fi
+          done
+
+          if ! diff -u verdict-all.txt verdict-collector.txt; then
+            echo "::error::축 필터가 SHA 대조로 샜다 — --kind 가 거절 수를 바꿨다."
+            exit 1
+          fi
+          echo "::notice::SHA 대조가 두 축에서 일치한다 (필터 누수 없음)."
 
       - name: Upload report
         if: always() && steps.creds.outputs.available == 'true'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: vercel-quota-report-${{ github.run_id }}
-          path: vercel-quota-report.txt
+          path: |
+            vercel-quota-report.txt
+            vercel-quota-report-collector.txt
           retention-days: 90
