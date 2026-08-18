@@ -26,6 +26,10 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구한다. 재사용 워크플로우는
+  # 호출자의 permissions 를 상속하므로 여기서 주지 않으면 알림이 런타임에 죽는다.
+  actions: read
+  issues: write
 
 concurrency:
   group: vercel-quota-report

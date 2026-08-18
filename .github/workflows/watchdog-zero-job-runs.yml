@@ -14,6 +14,8 @@ on:
 permissions:
   actions: read
   contents: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구한다(상속).
+  issues: write
 
 jobs:
   check-and-alert:
