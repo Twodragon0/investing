@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-08-18 - 보안 뉴스 요약 �
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Harmony plans rollback, wiping 109,000 transactio** / 보안 뉴스 헤드라인: 개인 키 악용으로 IoTeX 브리지가 해킹됨 - 공격자가 THORChain을 통해 훔친 자금을 비트코인에 연.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Harmony plans rollback, wiping 109,000 transactions after ONE exploit 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 12건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): exploit, security, bridge 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (5건): exploit, bridge, mint 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (4건): exploit, arithmetic, signature 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] Harmony는 롤백을 계획하고 있으며 한 번의 익스플로잇 이후 109,000건의 트랜잭션을 삭제합니다.
-- [보안] Harmony Bridge 익스플로잇: Infinite Mint
-- [보안] Coinsbuy 악용: 부적절한 액세스 제어
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건

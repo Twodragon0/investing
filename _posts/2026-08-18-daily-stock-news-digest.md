@@ -32,45 +32,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-18 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">864.65</div><div class="stat-label">KOSDAQ +0.38%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 코스닥, 선물 부각 169건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 169건의 뉴스에서 **가격/시장**(31건)과 **AI/기술**(21건)이 동시에 부각되고 있습니다. AI/기술 섹터의 뉴스가 관련 토큰 및 주식 가격에 영향을 미치고 있습니다
-
-### 테마별 동향
-
-- **📈 가격/시장** (31건): 코스피, 코스닥, 선물 가격 변동 (31건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (21건): 반도체, 엔비디아, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (10건): 국채, 연준 매크로 변수 (10건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 채권수익률 상승은 미국 재무부와 연준에 대한 경고입니다.
-- 반도체 ETF 일주일새 20% 급등…수익률 상위권 '싹쓸이'
-- 오늘의 주식 시장: 200포인트 하락; S&P 500 및 나스닥이 강함에도 불구하고 혼합됨
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 56건, 글로벌 기사 113건 수집
-- 한국 지수: KOSPI 6,977.94(+2.42%), KOSDAQ 864.65(+0.38%), USD/KRW 1,413.12(-0.24%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:68%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:32%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:29%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-18.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,977.94 (+2.42%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 864.65 (+0.38%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *[CBC뉴스] 국내 주식시장이 17일 휴장에 들어간다.*
 
 ## 테마별 주요 뉴스
 

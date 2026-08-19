@@ -29,47 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-18 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 오늘의 주식시장: 유가 상승으로 주가지수 선물이 엇갈리고 있으며, 금 가격은 $4,385입니다 - 유라시아 비즈니스 뉴스 - 19건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리인상, 매일일보 관련 12건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 매일일보 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 외국인, 기관 동향 주시</li><li>📈 <strong>가격/시장</strong>: 금리인상, 매일일보 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPc2tXbHUwdzBya09ZQ0wxMDFKcC10di1lanRUdWg4MVEwNDFrOWNaS2h6YVNBSHNmLTZCY3BpVGlGRm5jOHhYclRtaWxFVXJpUjlyaWRoUXo5WXlQQVotclNROUVraHVVNlEyclpLdW1DS2hRMHNVUHZld25KN25LRHhJYXdndENGYjVYNHVYV2dQQnJ3T2YycGUyYUExTGtYMDhTaWtCalNjUjRleWxBSm9jb1RrZDNJSmtRYlhMTnFBTjRCZ1hydUx3?oc=5">오늘의 주식시장: 유가 상승으로 주가지수 선물이 엇갈리고 있으며, 금 가격은 $4,385입니다 - 유라시아 비즈니스 뉴스</a> <span class="p0-desc">8월 17일 글로벌 시장은 기술주를 중심으로 조심스러운 긍정적인 모습을 보였습니다. 미국 소매판매 감소와 고유가에 대한 우려가 제기된 가운데 연준의 금리 결정…</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 오늘의 주식시장: 유가 상승으로 주가지수 선물이 엇갈리고 있으며, 금 가격은 $4,385입니다 - 유라시아 비즈니스 뉴스 
-총 19건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 0건, 정치·경제 19건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (12건): 금리인상, 매일일보, 연준 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (5건): 트럼프, 매일일보 정치 이슈 (5건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🤖 AI/기술** (4건): 외국인, 기관, 쌍끌 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 오늘의 주식시장: 유가 상승으로 주가지수 선물이 엇갈리고 있으며, 금 가격은 $4,385입니다 - 유라시아 비즈니스 뉴스
-
-### 주요 이슈
-
-- 심층분석] 반도체 투톱 삼성전자·SK하이닉스, 외국인·기관 쌍끌이 매수세에 상승 탄력
-
-### 투자자 체크포인트
-
-- 정치·경제 19건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:80%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:27%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:100%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:20%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

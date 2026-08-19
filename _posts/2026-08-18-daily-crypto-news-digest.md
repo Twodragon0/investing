@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-18 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 폭락 중인 암호화폐 비트코인·리플 이번 주 가격 결정지을 4가지 핵심 이벤트 - 위키트리 - 89건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 관련 22건</li><li>🔵 <strong>규제/정책</strong>: 19건 수집</li><li>🔷 <strong>이더리움</strong>: 이더리움, 공급 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OVGZLcGtYbUNaTXp3T1J3NWI0OFdRNFBoa1dVR1lSUTVBblBCRkFkY3JDNHp3eE9SaUdNNEstaTFudkRPRmhJMWUtaWpoRU9xbHZ6V0RR?oc=5">폭락 중인 암호화폐 비트코인·리플 이번 주 가격 결정지을 4가지 핵심 이벤트 - 위키트리</a> <span class="p0-desc">암호화폐(가상화폐·코인) 비트코인(Bitcoin, BTC)과 엑스알피(XRP)의 가격 향방을 결정지을 4가지 핵심 이벤트가 이번 주 열린다.17일(한국 시각) 오전 9시 30분 기.</span></li><li><a href="https://www.coindesk.com/opinion/2026/08/17/the-coldcard-hack-proves-reputation-is-not-a-security-model">Coldcard 해킹으로 평판은 보안 모델이 아님이 입증되었습니다.</a> <span class="p0-desc">검증을 기반으로 구축된 커뮤니티는 판단을 한 사람에게 아웃소싱하는 데 5년을 보냈다고 Foundation CEO Zach Herbert는 썼습니다.</span></li><li><a href="https://cointelegraph.com/news/harmony-plans-rollback-transactions-one-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Harmony는 한 번의 익스플로잇 이후 109,000건의 트랜잭션을 삭제하여 롤백을 계획하고 있습니다.</a> <span class="p0-desc">하모니는 레이븐코인이 익스플로잇 이후 별도의 롤백 분쟁에 직면하기 때문에 선택적으로 거래를 복원하면 일관되지 않은 체인 상태가 발생할 수 있다고 말했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 폭락 중인 암호화폐 비트코인·리플 이번 주 가격 결정지을 4가지 핵심 이벤트 - 위키트리 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 89건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (38건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (22건): 암호화폐, 달러 가격 변동 (22건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (19건): published, industry, bitpanda 규제 움직임 (19건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 폭락 중인 암호화폐 비트코인·리플 이번 주 가격 결정지을 4가지 핵심 이벤트 - 위키트리
-- Coldcard 해킹으로 평판은 보안 모델이 아님이 입증되었습니다.
-- Harmony는 한 번의 익스플로잇 이후 109,000건의 트랜잭션을 삭제하여 롤백을 계획하고 있습니다.
-
-### 주요 이슈
-
-- 트럼프과 연계된 암호화폐 벤처인 World Liberty Trust는 대통령 선거에서 전례 없는 움직임으로 은행 자격을 부여 받았습니다.
-- 트럼프 가족 암호화폐 사업인 World Liberty가 설립에 대한 예비 승인을 받았습니다.
-- 트럼프과 연계된 암호화폐 벤처인 World Liberty Trust는 전례 없는 대통령 선거 움직임으로 은행 지위를 획득했습니다. - ABC 뉴
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **89건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

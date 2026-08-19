@@ -34,6 +34,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-17 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 투자 압박 美 달래러 가나.여한구 경질 속 김정관 장관 긴급 방미 - 140건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 신용잔고, 빚투 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 빚투, 신용잔고 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li><li>🏦 <strong>거래소</strong>: IPO 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sedaily.com/article/20079925">투자 압박 美 달래러 가나.여한구 경질 속 김정관 장관 긴급 방미</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,977.94 (+2.42%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.

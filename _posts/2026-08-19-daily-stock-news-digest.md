@@ -32,45 +32,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-19 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">834.20</div><div class="stat-label">KOSDAQ -3.52%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 하이닉스, 삼성전자 부각 194건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채, 달러 관련 24건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 하이닉스 주목</li><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 194건의 뉴스에서 **가격/시장**(43건)과 **매크로/금리**(24건)이 동시에 부각되고 있습니다. 매크로 환경 변화가 위험자산 전반의 가격 움직임을 주도하고 있습니다
-
-### 테마별 동향
-
-- **📈 가격/시장** (43건): 코스피, 하이닉스, 삼성전자 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (24건): 국채, 달러, 환율 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (20건): 반도체, 하이닉스, 삼성전자 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 소유하지 않았음에도 불구하고 S&P 500 및 나스닥-100을 압도하는 Vanguard ETF을 만나보세요
-- 채권수익률 상승은 미국 재무부와 연준에 대한 경고입니다.
-- 오늘 주식 시장: 다우, S&P 500, 나스닥 선물은 미국-이란 수십 년 동안 손실을 확대합니다.
-- 외 21건
-
-### 투자자 체크포인트
-
-- 한국 기사 66건, 글로벌 기사 128건 수집
-- 한국 지수: KOSPI 6,869.83(-1.55%), KOSDAQ 834.20(-3.52%), USD/KRW 1,411.47(-0.36%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">43건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:56%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:47%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:14%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:21%"></div></div><span class="theme-count">9건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-19.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,869.83 (-1.55%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 834.20 (-3.52%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *코스피가 장 초반 크게 상승하며 7,200선을 회복했지만, 매도 물량이 쏟아지며 하락 전환해 6,800선에서 마감했습니다.미국 반도체주 훈풍 속에 상승 기대감도 있었지만,.*
 
 ## 테마별 주요 뉴스
 

@@ -42,6 +42,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-17 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진 - 80건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 관련 37건</li><li>📈 <strong>가격/시장</strong>: 암호화폐, XRP 주목</li><li>🏦 <strong>거래소</strong>: 13건 수집</li><li>🔵 <strong>규제/정책</strong>: 16건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/375670/openai-staff-blame-rush-ship-rogue-agent-hack">OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진</a> <span class="p0-desc">전현직 OpenAI 직원들은 새로운 AI 제품 출시에 대한 압박으로 인해 안전 우선순위를 정하기가 더 어려워졌다고 말했습니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **80건** 수집

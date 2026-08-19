@@ -14,9 +14,6 @@ description: "1억 달러 이상 가치가 있는 상원의원이 5개 민간 �
 image_alt: "정치인 거래·정책 리포트 - 2026-08-18 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-18.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-18** 정치권 핵심 이슈: **1억 달러 이상 가치가 있는 상원의원이 5개 민간 기업의 거래를 공개했습니다.**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **23건** (미국 의회 거래 2건, SEC 내부자 거래 14건, 트럼프 정책 2건, 한국 정치인 1건, 중앙은행 4건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,19 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-18 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(7회), **관세**(3회), **내부자**(2회), **트럼프**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **23건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 14건, 트럼프 정책 2건, 한국 정치인 1건, 중앙은행 4건입니다.
-
-**트럼프 정책** 관련으로는 OTTAWA — Canada's top trade negotiators remained in Washington Monday for talks as the deadline looms for U.S. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 A senator discloses several private company investments made in 2025. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 매일일보 = 김현태 기자 | 한국은행 금융통화위원회가 이달 말 기준금리 결정을 앞둔 가운데 근원물가 등이 핵심 변수로 작용할 전망이다.17일 금융권에 따르면 한은 금통위는 오는 27일 통화정책방향 결정회의를 개최해 기준금리 수준을 결정할 예정이다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 [이길상 기자] ▲ 폭염 경보가 발효 중인 7일 오전 서울 종로구 광화문광장에서 시민들이 발걸음을 옮기고 있다.ⓒ 이정민여러 가지로 어수선한 세상이다. 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 

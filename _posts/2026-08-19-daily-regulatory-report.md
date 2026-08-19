@@ -29,34 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-19 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 가타야마 사쓰키 재무대신 겸 금융장관 기자회견(2026년 8월 4일) - 10건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 규제 주목</li><li>🟣 <strong>DeFi</strong>: 규제 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.fsa.go.jp/en/conference/minister/2026/20260804.html">가타야마 사쓰키 재무대신 겸 금융장관 기자회견(2026년 8월 4일)</a> <span class="p0-desc">먼저 예비비 활용에 대해 몇 말씀 드리겠습니다. 2026년 7월 28일 구마모토 지진으로 목숨을 잃은 WHO 분들을 위해 진심으로 기도하고 싶습니다. 또한 재해로 피해를 입은 모든.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 가타야마 사쓰키 재무대신 겸 금융장관 기자회견(2026년 8월 4일) 
-총 10건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (9건): 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🟣 DeFi** (2건): 규제 DeFi 동향 (2건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- 가타야마 사쓰키 재무대신 겸 금융장관 기자회견(2026년 8월 4일)
-
-### 주요 이슈
-
-- SEC 새로운 규정 암호화 자산 제안
-- 규제 탱크 채우기: 규제 암호화 자산 출시 제안
-- 암호화폐 자산 규제에 관한 성명: 암호화폐 시장 혁신을 위한 목적에 맞는 면제
-- 외 4건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 7건, 아시아 2건, 유럽 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 10건
 - **미국**: 7건
