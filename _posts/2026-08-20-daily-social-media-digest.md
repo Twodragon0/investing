@@ -29,49 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-20 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인 - 39건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 관련 22건</li><li>📊 <strong>매크로/금리</strong>: 기준금리, 인상 관련 16건</li><li>🔵 <strong>규제/정책</strong>: 트럼프, SEC 관련 9건</li><li>📈 <strong>가격/시장</strong>: 기관, 기준금리 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE8wVlk0NXpuVVVCeE1ZUzZLenp3cGVCbFVoRzQ0MUd4Vi1tRmhTVFVjUVg0UWtPdnNXMl94SThqNEVwTG14U2xYbzltQVRWRTlxX1JrcHk0YWFoMnMwMXd6Z0pvLXc3RmtvWER3?oc=5">코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인</a> <span class="p0-desc">[뉴스인] 김태엽 기자 =코스피가 외국인과 기관의 동반 매도 공세에 19일 6% 가까이 급락하며 6500선 아래로 내려앉았다. 최근 상승장을 이끌었던 삼성전자와 SK하이닉스 등 반.</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1hRGYzRmt2TldseTQzZHRXeWhaVWJYZXV6ZjBfdXEzaERhMjFTOHBYUTM4dXAzMzREalJDa21PcHZPaTlpNGsteVZhdXNLSUhqemc?oc=5">기관 이어 외국인마저 “팔자”…코스피, 5%대 급락 마감 - 매일경제 마켓</a> <span class="p0-desc">코스피가 19일 기관에 이어 외국인마저 장 초반 순매도로 돌아서면서 장중 매도 사이드카까지 발동된 가운데 동반 순매도세에 5%대 하락 마감했다. 코스피는 이날 전일 대비 398.6.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 39건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 39건 중 텔레그램 0건, 소셜 0건, 정치·경제 39건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **🏛️ 정치/정책** (22건): 트럼프, 이재명, 암호화폐 정치 이슈 (22건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (16건): 기준금리, 인상, 전망 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🔵 규제/정책** (9건): 트럼프, SEC 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인
-- 기관 이어 외국인마저 “팔자”…코스피, 5%대 급락 마감 - 매일경제 마켓
-
-### 주요 이슈
-
-- SEC 및 CFTC은 상원에서 Clarity Act가 지연됨에 따라 암호화 규칙을 작성합니다.
-- Crypto Weekly: 트럼프의 벤처가 승인을 받고 SEC이 새로운 규칙을 제시합니다.
-
-### 투자자 체크포인트
-
-- 정치·경제 39건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:73%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:41%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:82%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:23%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

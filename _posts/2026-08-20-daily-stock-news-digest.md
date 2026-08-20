@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-20 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 - 뉴스핌 - 213건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 국채, 채권 주목</li><li>🤖 <strong>AI/기술</strong>: 구글, 애플 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9jd0hPaHZnRkNlMFg0VkQzcGhQRUswS25hMVRHQ3luQUo5Rm1BbkNibkpfem5sSno4N1hRNTJjQzNRMFNaQzRReUxVNEFPWUZmZjVhdXpGdzBzSVFZ?oc=5">마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 - 뉴스핌</a> <span class="p0-desc">[마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1NendjNkFDREFLekpfTFJsandETE5Jc3JGYS1MMllReXlEWU9hLXdjeHVfY0pVTkkxalhMTGs0TkdYWllCWDdpTERKemVNTXZlQUp2VlNvX0QwTnhC?oc=5">개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' - 뉴스핌</a> <span class="p0-desc">[개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1LSEZKUGY1VWRVQ2lGSlBtdlRLMFp1V3Z3TWJCa2czSVN2NjUtcnF6M01LaEdVclM1LWgwVFBDZ2JSRHlld05FenN0dEM5T2plRlBmR0NYQUplYXhJR0VlYnRxVUc5Qi1ncXd1MkFDZnEzaUE?oc=5">속보] 코스피, 5%대 급락 출발…코스닥도 3%대 하락 - 스페셜타임스</a> <span class="p0-desc">[속보] 코스피, 5%대 급락 출발…코스닥도 3%대 하락 스페셜타임스</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 - 뉴스핌 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 213건의 뉴스 중 P1 주요 이슈도 29건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (61건): 코스피, 코스닥, 급락 가격 변동 (61건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (39건): 국채, 채권 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (12건): 구글, 애플, 삼성전자 기술 이슈 (12건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 - 뉴스핌
-- 개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' - 뉴스핌
-- 속보] 코스피, 5%대 급락 출발…코스닥도 3%대 하락 - 스페셜타임스
-
-### 주요 이슈
-
-- 한화·LG·포스코… 그룹주 ETF 새 강자 - 매일경제 마켓
-- FOMC 이자율 분은 BTC 가격이 안정적으로 유지되고 채권 수익률이 유지되면서 초점이 맞춰집니다.
-- 오늘 주식 시장: 다우, S&P 500, 나스닥 칩 주식 매도, 채권 수익률 하락
-- 외 26건
-
-### 투자자 체크포인트
-
-- 한국 기사 75건, 글로벌 기사 138건 수집
-- 한국 지수: KOSPI 6,471.17(-5.80%), KOSDAQ 824.46(-1.17%), USD/KRW 1,387.96(-1.73%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">61건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:64%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:16%"></div></div><span class="theme-count">10건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-20.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,471.17 (-5.80%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 824.46 (-1.17%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *[서울=뉴스핌] 김가희 기자 = 19일 코스피가 6% 가까이 급락하며 6500선 아래로 밀렸다.*
 
 ## 테마별 주요 뉴스
 
