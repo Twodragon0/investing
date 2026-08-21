@@ -84,7 +84,23 @@ oh-my-claudecode 플러그인이 관리. `omc update` 시 덮어씌워지므로 
 |----|------|------|
 | `protect-files.sh` | PreToolUse (Edit/Write) | `_state/`, `.env`, `*.key` 등 민감 파일 편집 차단 |
 | `auto-lint-python.sh` | PostToolUse (Edit/Write) | `.py` 파일 편집 시 `ruff check --fix` 자동 실행 |
+| `yaml-syntax-check.sh` | PostToolUse (Edit/Write) | YAML 편집 시 문법 검사 |
 | `memory-guard.sh` | PreToolUse (Agent) | 시스템 메모리 10% 미만 시 경고 (M1/M2 16GB 보호) |
+| `pre-commit-state-guard.sh` | PreToolUse (Bash) | `_state/` 파일이 staged 면 `git commit` 차단 |
+| `component-counts-drift-guard.sh` | PreToolUse (Bash) | `docs/component-counts.md` 드리프트 시 `git push` 차단 |
+
+Bash 훅 둘은 `git` 하위명령을 **명령 위치**에서만 인정한다 — 줄/세그먼트 시작이거나
+`;`/`&&`/`||`/`|` 뒤일 때. 부분문자열로 보면 문자열 안의 언급까지 걸려서
+`git commit -m "docs: git push 훅 추가"` 나 `git log --grep="git commit"` 이 막힌다
+(2026-08-12 실측). 반대로 `git -C /repo commit` 처럼 리터럴이 없는 형태는 **놓친다**.
+양방향은 `tests/test_state_guard_command_matching.py` 와
+`tests/test_component_counts_drift_hook_guard.py` 가 실제 스크립트를 돌려 강제한다.
+
+`component-counts-drift-guard.sh` 는 CI 의
+`tests/test_component_counts.py::test_generated_doc_in_sync` 앞단의 빠른 피드백이다.
+2026-08-11 PR #1157·#1158 순차 머지에서 리베이스의 3-way 머지가 카운트를 조용히 잘못
+합쳐(143, 실제 144) 실제로 당했다. 막히면
+`python3 scripts/tools/component_counts.py --write` 후 커밋에 포함할 것.
 
 ## 사용 패턴
 

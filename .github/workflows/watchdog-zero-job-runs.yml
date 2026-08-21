@@ -14,6 +14,8 @@ on:
 permissions:
   actions: read
   contents: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구한다(상속).
+  issues: write
 
 jobs:
   check-and-alert:
@@ -82,8 +84,20 @@ jobs:
         if: steps.scan.outputs.hit_count != '0' && steps.slack.outputs.can_post == 'true'
         uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d  # v4.0.0
         with:
+          errors: true
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *Workflow startup failure detected* (${{ steps.scan.outputs.hit_count }} run(s))\n\n${{ steps.scan.outputs.slack_lines }}\n\nInvestigate within 5 min. <https://github.com/${{ github.repository }}/actions|View all runs>"
+
+  # 알림 계층 3 자신이다. 이게 죽으면 startup_failure 를 아무도 못 본다.
+  # `*/5` 라 threshold 3 은 약 15분 — 일시 실패는 흡수하고 지속 고장은 빨리 잡는다.
+  alert-consecutive-failures:
+    needs: check-and-alert
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Watchdog — Zero-Job / startup_failure Runs'
+      threshold: 3
+    secrets: inherit
