@@ -62,11 +62,32 @@ jobs:
               'map(select(.conclusion == "failure")) | .[0:5]
                | map("• <\(.url)|\(.createdAt[0:16]) UTC>")
                | join("\\n")')
+            # threshold=1 이면 조회 대상이 현재 런 하나뿐이고, 그 런은 아직 진행 중이라
+            # conclusion 이 "failure" 가 아니어서 위 필터에서 탈락한다 → 목록이 빈 문자열이
+            # 되고 알림에 "Recent failed runs:" 만 덩그러니 남는다.
+            #
+            # `--limit` 을 늘려 채우면 안 된다 — 같은 runs_json 으로 prev_failures 를 세므로
+            # 판정 창이 넓어져 "연속 실패" 가 "창 안에 N건" 으로 의미가 바뀐다.
+            if [ -z "${recent}" ]; then
+              recent="• (이번 런이 창 내 첫 실패 — threshold=${THRESHOLD})"
+            fi
             echo "recent_failures=${recent}" >> "$GITHUB_OUTPUT"
           else
             echo "alert=false" >> "$GITHUB_OUTPUT"
           fi
 
+      # `investing` alias 는 2026-08-21 현재 `can_post=false` 다 —
+      # `SLACK_CHANNEL_ID_INVESTING` 과 `SLACK_CHANNEL_ID` 시크릿이 둘 다 비어 있다.
+      # 같은 composite action 을 쓰는 `push-folder-info-to-slack` 실측(run 32440743053)
+      # 에서 `openclaw` matrix 만 "Post to Slack" 이 success 이고 investing/ops/dev/
+      # security 는 전부 skipped 였다. 살아 있는 alias 는 `openclaw` 하나다.
+      #
+      # alias 를 바꾸지 않은 것은 의도다 — 알림이 어느 채널로 가야 하는지는 진행 중인
+      # Slack 네이밍 마이그레이션의 결정 사항이고, 여기서 조용히 재라우팅하면 그 결정을
+      # 앞질러 버린다. 대신 이 상태를 **드러나게** 만들었다(아래 warning + 이슈 fallback).
+      #
+      # 되살리는 방법: `SLACK_CHANNEL_ID_INVESTING` 시크릿 설정. 그때까지 알림은
+      # Slack 이 아니라 GitHub 이슈로 착지한다.
       - name: Resolve Slack config
         if: steps.check.outputs.alert == 'true'
         id: slack
@@ -78,6 +99,13 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           SLACK_CHANNEL_ID_INVESTING: ${{ secrets.SLACK_CHANNEL_ID_INVESTING }}
+
+      # can_post=false 는 "전달 실패" 가 아니라 "애초에 설정 안 됨" 이다. 런 자체에서
+      # 보이게 해 둔다 — 아래 이슈만으로는 이슈를 열어보기 전까지 알 수 없다.
+      - name: Warn when Slack is not configured
+        if: steps.check.outputs.alert == 'true' && steps.slack.outputs.can_post != 'true'
+        run: |
+          echo "::warning title=Slack alert not configured::alias 'investing' 의 can_post=false 입니다(SLACK_CHANNEL_ID_INVESTING 미설정). 알림은 Slack 대신 GitHub 이슈로 생성됩니다."
 
       - name: Post alert to Slack
         id: post-slack
@@ -91,34 +119,60 @@ jobs:
             channel: "${{ steps.slack.outputs.channel }}"
             text: ":rotating_light: [${{ steps.slack.outputs.profile_label }}] *${{ inputs.workflow-name }}* failed ${{ inputs.threshold }}+ consecutive runs\n\n*Recent failed runs:*\n${{ steps.check.outputs.recent_failures }}\n\n<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|:link: View current run>"
 
-      - name: Fallback — create GitHub issue if Slack post failed
+      # `!cancelled() &&` 가 없으면 **Slack 전달 실패 분기가 도달 불가**하다.
+      # `post-slack` 에 `continue-on-error` 가 없어 실패 시 잡이 죽고, 이 step 의 `if:`
+      # 는 암묵 `success()` 를 포함하므로 skip 된다. 즉 원래 의도(전달 실패 시 이슈로
+      # 대체)가 코드에 있으면서 한 번도 실행될 수 없었다. can_post=false 분기만
+      # 도달 가능했다(그쪽은 Slack step 이 skip 이지 fail 이 아니므로).
+      #
+      # `always()` 대신 `!cancelled()` 인 이유: 취소된 런에서 이슈를 만들지 않는다.
+      - name: Fallback — create GitHub issue when Slack alert did not land
         if: >-
+          !cancelled() &&
           steps.check.outputs.alert == 'true' &&
           (steps.slack.outputs.can_post != 'true' || steps.post-slack.outcome == 'failure')
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
         with:
           script: |
-            const title = `[alert-delivery-failed] ${{ inputs.workflow-name }} consecutive failures (Slack notify failed)`;
+            // 두 원인을 구분한다. 이전 문구는 can_post=false 인데도 "delivery failed" 로
+            // 적고 "토큰 로테이션 확인" 을 지시해, 실제 원인(시크릿 미설정)이 아닌 곳을
+            // 뒤지게 만들었다.
+            const canPost = `${{ steps.slack.outputs.can_post }}`;
+            const notConfigured = canPost !== 'true';
+            const cause = notConfigured ? 'Slack not configured' : 'Slack delivery failed';
+
+            const investigate = notConfigured
+              ? [
+                  `- alias \`investing\` 의 \`can_post\` 가 \`${canPost}\` 다 — 채널이 **설정되지 않았다**(전달 실패가 아니다).`,
+                  `- \`SLACK_CHANNEL_ID_INVESTING\` 시크릿을 설정하면 Slack 경로가 살아난다.`,
+                  `- 2026-08-21 실측 기준 살아 있는 alias 는 \`openclaw\` 하나다. 알림 채널을 옮기려면 \`.github/workflows/alert-consecutive-failures.yml\` 의 \`target_channel_alias\` 를 바꿔야 한다.`,
+                ]
+              : [
+                  `- Slack 토큰 로테이션: \`SLACK_BOT_TOKEN\` 이 유효한지 확인`,
+                  `- 채널 ID 드리프트: \`SLACK_CHANNEL_ID_INVESTING\` 이 기대 채널로 해소되는지 확인`,
+                  `- Slack 장애였다면 알림이 재개된 뒤 이 이슈를 닫아라`,
+                ];
+
+            const title = `[alert-delivery-failed] ${{ inputs.workflow-name }} consecutive failures (${cause})`;
             const body = [
-              `## Alert delivery failure`,
+              `## ${cause}`,
               ``,
-              `The primary Slack alert for **${{ inputs.workflow-name }}** could not be delivered.`,
+              `**${{ inputs.workflow-name }}** 의 연속 실패 알림이 Slack 으로 가지 못해 이슈로 대체 생성됐다.`,
               ``,
               `| Field | Value |`,
               `|-------|-------|`,
               `| Workflow | \`${{ inputs.workflow-name }}\` |`,
               `| Threshold | ${{ inputs.threshold }} consecutive failures |`,
               `| Run | <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}> |`,
-              `| Slack can_post | \`${{ steps.slack.outputs.can_post }}\` |`,
+              `| Slack can_post | \`${canPost}\` |`,
               `| Slack step outcome | \`${{ steps.post-slack.outcome }}\` |`,
+              `| Cause | ${cause} |`,
               ``,
               `**Recent failed runs:**`,
               `${{ steps.check.outputs.recent_failures }}`,
               ``,
               `## What to investigate`,
-              `- Slack token rotation: verify \`SLACK_BOT_TOKEN\` / \`SLACK_AI_BOT_TOKEN\` secrets are current`,
-              `- Channel ID drift: confirm \`SLACK_CHANNEL_ID_INVESTING\` still resolves to the expected channel`,
-              `- If Slack was in outage, close this issue once alerts resume`,
+              ...investigate,
             ].join('\n');
 
             await github.rest.issues.create({
