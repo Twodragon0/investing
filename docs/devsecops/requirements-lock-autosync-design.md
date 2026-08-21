@@ -1,8 +1,40 @@
 # requirements.lock 자동 동기 PR 파이프라인 — 설계 (#2 원안)
 
-> 상태: **설계 (미구현)** · 작성 2026-06-24 · 대상 `scripts/requirements.txt` ↔ `scripts/requirements.lock`
+> 상태: **부분 구현** (2026-08-21) · 작성 2026-06-24 · 대상 `scripts/requirements.txt` ↔ `scripts/requirements.lock`
 > 선행 컨텍스트: `supply-chain-lock.yml`, `tests/test_requirements_lock_coverage.py`,
 > `scripts/refresh_requirements_lock.sh`, `.github/dependabot.yml`, `.github/workflows/dependabot-auto-merge.yml`
+
+## 0. 구현 상태 (2026-08-21)
+
+`.github/workflows/requirements-lock-sync.yml` — 옵션 A 의 **토큰 불필요 부분집합**.
+인바리언트 가드는 `tests/test_requirements_lock_sync_workflow_guard.py`.
+
+| 설계 항목 | 상태 |
+|---|---|
+| §2 in-place 앵커 재생성 | 구현 — 헬퍼 그대로 호출, `--upgrade` 없음 (가드가 강제) |
+| §5.2 `pull_request_target` 금지 | 구현 — `pull_request` 만 사용 (가드가 강제) |
+| §5.4 무한 루프 방지 | 구현 — `paths` 를 `requirements.txt` 로 한정 (가드가 강제) |
+| §5.5 결정성 (python 3.11) | 구현 (가드가 강제) |
+| §6.1 임시 버전-동기 가드 | 이미 존재 — `tests/test_requirements_lock_version_sync.py` |
+| §5.1 커밋백 | **미구현** — `secrets.LOCK_SYNC_TOKEN` 부재 |
+| §5.3 자동머지 순서 강제 | **미구현** — 아래 참조 |
+
+### 커밋백을 넣지 않은 이유
+
+토큰이 없다. 그래서 워크플로우는 재생성된 락을 **artifact + step summary** 로 내놓고
+drift 시 잡을 실패시키는 데까지만 한다. 토큰 없이 커밋백 코드를 미리 넣으면 한 번도
+실행해 볼 수 없는 경로가 되므로 넣지 않았다. 올리는 절차는 워크플로우 상단 주석에 있다.
+
+### §5.3 은 여전히 열려 있다 (실측 2026-08-21)
+
+main 룰셋(`20539046`)에는 **required status check 가 하나도 없다** — `deletion` 과
+`non_fast_forward` 뿐이다. 즉 `test_requirements_lock_version_sync` 가 red 여도 머지를
+물리적으로 막지 못하고, `dependabot-auto-merge.yml` 은 semver-patch 를 자동 승인·자동
+머지한다. stale 락이 사람 리뷰 없이 들어갈 수 있는 구조가 그대로 남아 있다.
+
+`supply-chain-lock.yml` 은 `paths:` 필터가 있어 그대로 required 로 지정하면 무관 PR 이
+영구 대기한다(룰셋 Phase 2 가 막힌 것과 같은 이유). aggregator 잡 선행이 필요하며 이
+문서 범위 밖의 별도 작업이다.
 
 ## 1. 문제 (왜 필요한가)
 
