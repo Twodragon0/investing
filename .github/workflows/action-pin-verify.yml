@@ -31,6 +31,9 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: action-pin-verify-${{ github.ref }}
@@ -48,7 +51,7 @@ jobs:
           fetch-depth: 1
 
       - name: Setup Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: '3.11'
 
@@ -62,3 +65,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/tools/verify_action_pins.py
+
+  # 주 1회 + PR. 업스트림 API 의존이라 PR 실패는 머지를 막지 않는 설계다 — 스케줄만 본다.
+  alert-consecutive-failures:
+    needs: verify
+    if: failure() && github.event_name == 'schedule'
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Action Pin Verify'
+      threshold: 1
+    secrets: inherit

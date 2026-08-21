@@ -7,6 +7,9 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: gsc-index-audit-${{ github.ref }}
@@ -27,7 +30,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
       - name: Setup Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -61,3 +64,13 @@ jobs:
           name: gsc-audit-${{ github.run_id }}
           path: gsc-audit-output.txt
           retention-days: 30
+
+  # 주 1회. 색인 감사가 빠지면 그 주 데이터가 없다.
+  alert-consecutive-failures:
+    needs: audit
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'GSC Index Audit'
+      threshold: 1
+    secrets: inherit

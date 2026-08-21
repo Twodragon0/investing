@@ -34,6 +34,10 @@ jobs:
           install-playwright: 'false'
           commit-message: 'chore: collect stock news'
           git-add-paths: '_posts/ _state/ assets/images/'
+          # no-op 커밋 생략 — regulatory 파일럿(2026-08-10~) 1차 확대.
+          # 07-20 이후 실측 110커밋 중 78건(70.9%)이 no-op.
+          # docs/devsecops/collector-push-batching-design.md
+          skip-noop-state-commits: 'true'
 
   alert-consecutive-failures:
     needs: collect

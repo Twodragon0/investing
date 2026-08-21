@@ -47,6 +47,9 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: supply-chain-lock
@@ -61,7 +64,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
       - name: Set up Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: '3.11'  # 락은 3.11 에서 생성됨 — 동일 버전으로 검증
 
@@ -186,3 +189,13 @@ jobs:
               )
           print(f"OK: 직접 의존성 {len(direct)}개 핀 모두 txt 명세 만족.")
           PY
+
+  # 주 1회 + push/PR. PR 실패는 작성자가 이미 본다.
+  alert-consecutive-failures:
+    needs: verify
+    if: failure() && github.event_name == 'schedule'
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Supply-chain Lock Verify'
+      threshold: 1
+    secrets: inherit

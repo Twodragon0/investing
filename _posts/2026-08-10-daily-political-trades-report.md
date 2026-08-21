@@ -14,9 +14,6 @@ description: "미국 정치인의 매우 의심스러운 Palantir 주식 거래�
 image_alt: "정치인 거래·정책 리포트 - 2026-08-10 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-10.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-10** 정치권 핵심 이슈: **미국 정치인의 매우 의심스러운 Palantir 주식 거래는 3개월도 안 되어 30% 증가했습니다 - Finbold**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **9건** (미국 의회 거래 1건, SEC 내부자 거래 4건, 한국 정치인 1건, 중앙은행 3건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,17 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-10 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(5회), **내부자**(3회), **트럼프**(2회), **이재명**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **9건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, SEC 내부자 거래 4건, 한국 정치인 1건, 중앙은행 3건입니다.
-
-**미국 의회 거래** 동향에서는 Senator John Boozman's first reported purchase of Palantir (NASDAQ: PLTR) has drawn attention after the investment gained nearly 30%. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 씨티 "8월 금리 인상" 전망.BNPㆍ바클레이즈 "이번엔 동결"동결 전망 은행들도 "결정은 박빙, 신 총재 매파적 발언" 예측▲한국은행 금융통화위원회 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 '서울대첩 0등 공신' 김재섭 국민의힘 의원이 양 극단을 지양하는 데일리안TV 유튜브 '정국 기상대'에 특별 출연한다. 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 미국 의회 거래 동향
 

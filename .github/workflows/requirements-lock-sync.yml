@@ -1,0 +1,180 @@
+name: Requirements Lock Sync
+
+# `scripts/requirements.txt` 를 bump 하는 PR(대부분 dependabot)에서 락을 in-place
+# 재생성해, **적용 가능한 결과물**을 그 자리에 내놓는다.
+#
+# 배경: 설계 docs/devsecops/requirements-lock-autosync-design.md
+#
+# ## 이 워크플로우가 게이트가 아니다
+#
+# 차단은 이미 두 곳이 한다 — code-quality 의
+# `tests/test_requirements_lock_version_sync.py` 와 `supply-chain-lock.yml`.
+# 여기서 하는 일은 그 red 를 **해소 가능하게** 만드는 것이다: 재생성된 락 전문을
+# artifact 로, diff 를 step summary 로 내놓는다. 그래서 사람이 로컬에 python3.11 을
+# 갖추고 헬퍼를 돌리지 않아도 된다.
+#
+# 그럼에도 drift 시 잡을 **실패**시킨다. 재생성 결과가 어긋나는데 green 으로 끝나면
+# 이 워크플로우 자체가 fail-open 신호가 되어, 나중에 게이트가 느슨해졌을 때 아무도
+# 모른다.
+#
+# ## 왜 커밋백이 아닌가 (설계 §5.1)
+#
+# dependabot 이벤트의 `GITHUB_TOKEN` 은 read-only 로 축소되고, 그 토큰으로 푸시한
+# 커밋은 워크플로우를 재트리거하지 않는다. 커밋백에는 별도 PAT/App 토큰이 필요하다.
+# 그 토큰이 등록되기 전까지 쓸 수 있는 버전이 이것이다.
+#
+# 커밋백으로 올리려면: PAT/App 토큰을 `secrets.LOCK_SYNC_TOKEN` 으로 등록하고,
+# checkout 에 `ref: ${{ github.head_ref }}` + `token:` 을 주고, 아래 "Fail on lock
+# drift" 를 커밋·푸시 step 으로 교체한다. 지금 그 경로를 미리 넣지 않은 것은 의도다 —
+# 토큰이 없어 한 번도 실행해 볼 수 없는 코드가 된다.
+#
+# ## 하지 않는 것
+#
+# `pull_request_target` 은 쓰지 않는다(설계 §5.2). write 토큰 + PR head 코드 실행은
+# 전형적 권한 상승 패턴이고, `pip-compile` 은 sdist 빌드로 임의 코드를 실행할 수 있다.
+#
+# 무한 루프도 구조적으로 없다: `paths` 가 `requirements.txt` 뿐이라 락만 바뀐 푸시는
+# 이 워크플로우를 트리거하지 않는다(설계 §5.4).
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/requirements.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # drift 요약을 PR 에 남기기 위한 것. dependabot 런에서는 토큰이 read-only 로
+  # 축소돼 실패할 수 있으므로 그 step 은 best-effort 다(아래 주석 참조).
+  pull-requests: write
+
+concurrency:
+  group: requirements-lock-sync-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+
+      # 락은 Python 3.11 에서 생성됐다. 다른 마이너로 생성하면 내용이 달라진다
+      # (헬퍼가 경고한다). 결정성 요구사항이므로 고정한다(설계 §5.5).
+      - name: Setup Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: '3.11'
+
+      # 헬퍼가 내부에서 `python3 -m pytest tests/test_requirements_lock_coverage.py --no-cov`
+      # 로 커버리지 가드를 돌린다.
+      #
+      # **pytest-cov 도 반드시 필요하다.** 그 테스트 자체는 stdlib 만 쓰지만,
+      # `pyproject.toml` 의 `addopts = "--cov=scripts --cov-fail-under=70"` 이 모든
+      # pytest 호출에 붙는다. pytest-cov 가 없으면 `--cov`/`--no-cov` 를 인자 파싱
+      # 단계에서 거부해 헬퍼가 죽는다 — 실측(run 32454917372):
+      #
+      #     error: unrecognized arguments: --cov=scripts --cov-fail-under=70 --no-cov
+      #
+      # 로컬에는 pytest-cov 가 이미 깔려 있어 드러나지 않는 종류의 차이다.
+      # `tests/test_requirements_lock_sync_workflow_guard.py` 가 두 패키지를 지킨다.
+      - name: Install helper prerequisites
+        run: pip install pytest pytest-cov
+
+      # PYTHON=python3 — setup-python 이 깐 python3 가 3.11 이다. 헬퍼 기본값인
+      # `python3.11` 이라는 이름은 러너 PATH 에 없을 수 있다.
+      #
+      # in-place 재생성이다(`--upgrade` 없음). 체크아웃된 기존 락이 앵커로 남아
+      # requirements.txt 에서 실제로 바뀐 패키지만 이동하고, 무관 패키지의 상류
+      # drift 는 0 이다(설계 §3).
+      - name: Regenerate lock in place
+        env:
+          PYTHON: python3
+        run: bash scripts/refresh_requirements_lock.sh
+
+      - name: Summarize lock drift
+        id: drift
+        run: |
+          if git diff --quiet -- scripts/requirements.lock; then
+            echo "drift=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "## requirements.lock 동기 상태: 일치"
+              echo
+              echo "재생성 결과가 커밋된 락과 동일합니다 — 이 PR 은 락을 갱신할 필요가 없습니다."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          echo "drift=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "## requirements.lock 이 requirements.txt 와 어긋납니다"
+            echo
+            echo "이 PR 은 \`scripts/requirements.txt\` 를 바꿨지만 \`scripts/requirements.lock\` 은 그대로입니다."
+            echo "이 상태로 머지되면 런타임은 txt 로 **신버전**을 설치하고 해시 무결성 검증은 락의 **구버전**을 확인합니다."
+            echo
+            echo "### 해소 (둘 중 하나)"
+            echo
+            echo "로컬에서 재생성:"
+            echo '```bash'
+            echo 'bash scripts/refresh_requirements_lock.sh'
+            echo 'git add scripts/requirements.lock && git commit'
+            echo '```'
+            echo
+            echo "또는 이 런의 artifact \`requirements-lock\` 을 내려받아 \`scripts/requirements.lock\` 을 덮어쓰고 커밋합니다."
+            echo "artifact 는 이 잡이 방금 생성한 바로 그 파일입니다(python 3.11 + pip-tools 핀, in-place 앵커)."
+            echo
+            echo "### 재생성 결과 diff"
+            echo
+            echo '```diff'
+            git diff -- scripts/requirements.lock | head -c 60000
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload regenerated lock
+        if: steps.drift.outputs.drift == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: requirements-lock
+          path: scripts/requirements.lock
+          retention-days: 14
+
+      # best-effort. dependabot 런은 `GITHUB_TOKEN` 이 read-only 로 축소돼 이 호출이
+      # 403 이 될 수 있다. 그래도 신호는 잃지 않는다 — 권위 있는 출력은 위 step summary
+      # 와 artifact 이고, 아래 step 이 잡을 실패시킨다. 즉 이 step 의 실패가 무언가를
+      # 가리는 구조가 아니다.
+      - name: Comment drift on PR (best-effort)
+        if: steps.drift.outputs.drift == 'true' && github.event_name == 'pull_request'
+        continue-on-error: true
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
+        with:
+          script: |
+            const runUrl = `${process.env.SERVER_URL}/${process.env.REPOSITORY}/actions/runs/${process.env.RUN_ID}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: [
+                '### ⚠️ `scripts/requirements.lock` 이 갱신되지 않았습니다',
+                '',
+                '이 PR 은 `scripts/requirements.txt` 를 바꿨지만 락은 구버전을 핀한 채입니다.',
+                '',
+                '해소:',
+                '```bash',
+                'bash scripts/refresh_requirements_lock.sh',
+                'git add scripts/requirements.lock && git commit',
+                '```',
+                '',
+                `재생성된 락 전문과 diff: ${runUrl} (artifact \`requirements-lock\` + step summary)`,
+              ].join('\n'),
+            });
+        env:
+          SERVER_URL: ${{ github.server_url }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+
+      - name: Fail on lock drift
+        if: steps.drift.outputs.drift == 'true'
+        run: |
+          echo "::error title=requirements.lock drift::락이 requirements.txt 와 어긋납니다. step summary 의 diff 와 artifact 'requirements-lock' 을 확인하세요."
+          exit 1

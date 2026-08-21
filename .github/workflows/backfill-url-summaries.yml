@@ -36,6 +36,9 @@ on:
 
 permissions:
   contents: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   # 자기 자신과 겹치면 같은 블러브를 두 러너가 동시에 고쳐 푸시 경합이 난다.
@@ -53,7 +56,7 @@ jobs:
           fetch-depth: 1
 
       - name: Setup Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -131,3 +134,13 @@ jobs:
           done
           echo "::error::All $MAX_RETRIES push attempts failed"
           exit 1
+
+  # 일 1회. 실패하면 요약 백필이 밀리고 커밋이 안 나온다.
+  alert-consecutive-failures:
+    needs: backfill
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Backfill URL Summaries'
+      threshold: 2
+    secrets: inherit

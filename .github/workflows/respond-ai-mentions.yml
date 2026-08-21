@@ -7,6 +7,9 @@ on:
 
 permissions:
   contents: read
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: respond-ai-mentions
@@ -47,7 +50,7 @@ jobs:
 
       - name: Setup Python
         if: steps.slack-config.outputs.can_post == 'true'
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -64,3 +67,13 @@ jobs:
           SLACK_BOT_TOKEN: ${{ steps.slack-config.outputs.token }}
           SLACK_CHANNEL_ID: ${{ steps.slack-config.outputs.channel }}
         run: python3 scripts/respond_ai_mentions.py
+
+  # 시간당 실행. 멘션 무응답은 사용자가 체감하므로 3시간 내 감지.
+  alert-consecutive-failures:
+    needs: respond-mentions
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Respond AI Mentions'
+      threshold: 3
+    secrets: inherit

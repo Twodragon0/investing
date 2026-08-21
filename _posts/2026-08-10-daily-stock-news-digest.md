@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-10 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 모건스탠리 “메모리주 급락 조정 끝났다”…삼성·하이닉스 재진입 기회 - 산경투데이 - 146건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 급락, 모건스탠리 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 금리, 환율 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 수급 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 모건스탠리, 재진입 관련 6건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5rcU1JbW9lVi1LV3FHanFIejJJeVhBV3c3QUtHdkg4WlVYU3NTZVAzT1RXYy1mMWdUQjJKRmowemUxY0RhdkdoM3dqWUI2M1hZNm5ncjhSNVBaVEdfMnJaZHloSHF5bTBLWkZkUXdjWjXSAXRBVV95cUxPZGd5QmNJc3l0T25Ec3pVTWRXOHhWUnlWaU9CNkpod3hyd3I2dE1aZlkwaFEtaWY5T2pfTlJEcUlaeG1ubTNwZU9HWHBJZ0NuNGphdU1sRHg0Z1pubW1jb3Nya2dKNm5vblc5V1VrT054cHFrZA?oc=5">모건스탠리 “메모리주 급락 조정 끝났다”…삼성·하이닉스 재진입 기회 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이준영 기자] 최근 급격한 주가 조정을 받은 삼성전자와 SK하이닉스 등 국내 메모리 반도체주에 대해 글로벌 투자은행 모건스탠리가 투자 매력이 다시 높아졌다는 평가를 내놨다.단기적인 주가 충격은 상당 부분 해소됐으며 현 주가 수준에서 투자자들이 다시 매수를 검토할 만하다는</span></li><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQNmUxRFlvcUFjN2I5ZWNFTzZRb2ttWnd1cjl5cEdMTDZnbkRpaDRfMFdlSzdZOTJaSFlCM1pjb3pGSWpyai1NLVpiTk5IbXhfUFh3Q241dk4xSVFVbWdBMWhrZjFmR3d6blcyZEpvUHRmVDFFa3JNcE5lLUZlX21IS2xFQk9meGs?oc=5">모건스탠리 "메모리 반도체주 급락 마무리…현 주가 재진입 기회"</a> <span class="p0-desc">최근 급락한 메모리 반도체주가 다시 투자자들의 관심을 받을 수 있다는 전망이 나왔다. 모건스탠리는 메모리 업황의 급격한 조정이 일단락된 것으로 판단하면서 현재 주가 수준을 매력적인 재진입 구간으로 평가했다.9일 투자은행(IB) 업계에 따르면 모건스탠리는 지난 6일 발간한 아시아 기술주</span></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/scott-galloway-warned-us-stock-142000770.html">Scott Galloway warned the US stock market could crash within 24 months thanks to AI. Protect your nest egg while you can</a></li></ul></div>
+
+
 ## 전체 뉴스 요약
 
-**긴급**: 모건스탠리 “메모리주 급락 조정 끝났다”…삼성·하이닉스 재진입 기회 - 산경투데이 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 146건의 뉴스 중 P1 주요 이슈도 35건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (30건): 급락, 모건스탠리, 실적 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (12건): 금리, 환율, 원화 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (7건): 반도체, 수급, 급락 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- 모건스탠리 “메모리주 급락 조정 끝났다”…삼성·하이닉스 재진입 기회 - 산경투데이
-- 모건스탠리 "메모리 반도체주 급락 마무리…현 주가 재진입 기회"
-- Scott Galloway는 AI 덕분에 미국 주식 시장이 24개월 이내에 폭락할 수 있다고 경고했습니다. 당신의 네를 보호하세요
-
-### 주요 이슈
-
-- 나스닥 ETF 투자 가이드
-- 10년 전에 Vanguard S&P 500 ETF에 $1,000를 투자했다면 다음과 같습니다.
-- 워런 버핏 닷컴 버블에 대해 경고했습니다. 이제 주식시장은 반짝반짝 빛나고 있습니다
-- 외 32건
-
-### 투자자 체크포인트
-
-- 한국 기사 47건, 글로벌 기사 99건 수집
-- 한국 지수: KOSPI 6,258.77(-0.60%), KOSDAQ 798.81(-0.36%), USD/KRW 1,407.45(-1.09%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:23%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-10.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,258.77 (-0.60%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 798.81 (-0.36%).
+- *[더페어] 최준규 기자 = 국내 증시가 이틀 연속 약세를 보인 가운데 유가증권시장과 코스닥 시장에서 주요*
 
 ## 테마별 주요 뉴스
 

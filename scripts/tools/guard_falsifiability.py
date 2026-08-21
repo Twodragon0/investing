@@ -524,6 +524,47 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         r'_JOB_ID_RE = re.compile(r"^\s*(?P<job>[A-Za-z_][A-Za-z0-9_-]*):\s*$", re.M)',
         "tests/test_required_check_aggregator_guard.py::test_job_id_scanner_rejects_nested_keys",
     ),
+    StaticCase(
+        # 앵커는 튜플의 **여는 줄**이다. 항목을 나열하면 대조군을 넓힐 때마다 앵커가
+        # 낡는다 — 2026-08-12 에 2개에서 9개로 넓히면서 실제로 그렇게 깨졌다.
+        # 뒤에 남는 항목들은 `_FALSIFIABILITY_UNUSED` 로 흘러가 문법이 유지된다.
+        "대조군을 비워 대조군 비 지표를 소멸시킴",
+        "scripts/tools/check_pilot_observation.py",
+        'CONTROL_COLLECTORS = (\n    "political",',
+        'CONTROL_COLLECTORS = ()\n_FALSIFIABILITY_UNUSED = (\n    "political",',
+        "tests/test_check_pilot_observation_control_group_guard.py::test_control_group_is_not_empty",
+    ),
+    StaticCase(
+        "확대된 수집기의 파일럿 플래그가 조용히 되돌아감",
+        ".github/workflows/collect-crypto-news.yml",
+        "skip-noop-state-commits: 'true'",
+        "skip-noop-state-commits: 'false'",
+        "tests/test_check_pilot_observation_control_group_guard.py::test_every_mapped_collector_is_either_pilot_or_control",
+    ),
+    StaticCase(
+        "묶음 집계가 층화 대신 단일 경계로 자름",
+        "scripts/tools/check_pilot_observation.py",
+        "            runs,\n            pilot_starts[name],",
+        "            runs,\n            min(pilot_starts.values()),",
+        "tests/test_check_pilot_observation_load_adjusted.py::test_group_mode_splits_each_collector_at_its_own_start",
+    ),
+    # Part 5 (2026-08-18): `--kind` 축 필터가 판정으로 새는 경로.
+    #
+    # 이 케이스가 여기 있는 이유는 리뷰에서 뮤테이션으로 갭이 실증됐기 때문이다.
+    # 단위 테스트만 있을 때 아래 주입으로 39/39 가 통과했다 — 기존 테스트가 두
+    # frozenset 을 테스트 본문에서 손으로 만들어 `classify_commits` 에 먹였을 뿐,
+    # `main()` 이 실제로 어느 쪽을 만드는지는 보지 않았다.
+    #
+    # 새면 조용히 틀린다: 걸러진 레코드를 받은 커밋이 전부 "레코드 없음 = 거절" 이
+    # 되어 `--kind collector` 하나로 PR 머지 커밋이 거절로 둔갑한다. 그 숫자는
+    # `branch-protection.md` 의 쿼터 서사를 통째로 뒤집는다.
+    StaticCase(
+        "Vercel 축 필터가 SHA 대조로 샘 (거절 수 조작)",
+        "scripts/tools/check_vercel_quota.py",
+        'deployed_shas = frozenset(r.sha for r in records if r.env == "production" and r.sha)',
+        'deployed_shas = frozenset(r.sha for r in filter_kind(records, args.kind) if r.env == "production" and r.sha)',
+        "tests/test_check_vercel_quota.py::test_main_rejection_count_is_independent_of_kind",
+    ),
 )
 
 
