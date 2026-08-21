@@ -7,7 +7,7 @@ PyYAML>=6.0.3
 requests==2.34.2
 certifi>=2026.7.22
 cachetools>=7.1.7
-beautifulsoup4==4.14.3
+beautifulsoup4==4.15.0
 # lxml 6.1.1: lxml-html-clean 0.4.5 가 lxml>=6.1.1 요구 (아래 참고).
 lxml==6.1.1
 readability-lxml==0.8.4.1
@@ -15,8 +15,8 @@ readability-lxml==0.8.4.1
 # 0.4.4 는 CVE-2026-49825(javascript: URL 미제거, XSS) 취약 → 0.4.5 에서 수정.
 lxml-html-clean>=0.4.5
 yfinance==1.5.2
-matplotlib~=3.10.9
-Pillow>=12.2.0
+matplotlib~=3.11.1
+Pillow>=12.3.0
 numpy~=2.4.4
 playwright~=1.62
 deep-translator==1.11.4
@@ -24,4 +24,4 @@ googlenewsdecoder==0.1.7
 langdetect==1.0.9
 # Optional: external image mirroring to Cloudflare R2 (scripts/common/asset_storage.py).
 # Pipeline degrades gracefully to local-only when boto3 or R2 credentials are absent.
-boto3>=1.43.63,<2
+boto3>=1.43.71,<2
