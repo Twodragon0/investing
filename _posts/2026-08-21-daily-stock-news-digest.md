@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-21 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' - 뉴스핌 - 191건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 환율 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 애플, 하이닉스 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 관련 7건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1NendjNkFDREFLekpfTFJsandETE5Jc3JGYS1MMllReXlEWU9hLXdjeHVfY0pVTkkxalhMTGs0TkdYWllCWDdpTERKemVNTXZlQUp2VlNvX0QwTnhC?oc=5">개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 김가희 기자 = 19일 코스피가 장 초반 6% 넘게 급락하며 6500선 아래로 밀렸다.미국 반도체주 약세와 주요국 장기금리 상승 등 대외 악재가 겹치면서 투자심리가 급격히 위축된 가운데 코스피 매도 사이드카까지 발동됐다. 코스닥도 3% 넘게 하</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9jd0hPaHZnRkNlMFg0VkQzcGhQRUswS25hMVRHQ3luQUo5Rm1BbkNibkpfem5sSno4N1hRNTJjQzNRMFNaQzRReUxVNEFPWUZmZjVhdXpGdzBzSVFZ?oc=5">마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 김가희 기자 = 19일 코스피가 6% 가까이 급락하며 6500선 아래로 밀렸다. 급락세가 이어지면서 장 초반에는 코스피 매도 사이드카가 발동됐고, 코스닥도 1% 넘게 하락하며 약세로 마감했다.한국거래소에 따르면 이날 코스피 지수는 전 거래일보다 398.</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPX0EzSHpaSWEydXlaZGFOTTk1SUYtcHBpa1FHbGJkem5tMEM5NVdMcnRaeERjeWxtVFlyOGV5RzNRNkhLdWZ4cnEtOUdybTJkc1U3TmNlQ3o0QWRuc1VJTWVkcWxDaGoxWVZ6WE9lQVBhakFVc0RkTEw1MTFxVDlWdHVZczR3LVhBMHRsSDBIM01zcnY4YWFMc1JuQ2FBdw?oc=5">A Stock Market Crash Is Coming Sooner or Later. History Says Investors Who Do This One Thing Will Profit.</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' - 뉴스핌 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 191건의 뉴스 중 P1 주요 이슈도 30건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (49건): 코스피, 코스닥, 한강타임즈 가격 변동 (49건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (36건): 국채, 환율, 채권 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (10건): 애플, 하이닉스, 주주환원 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 개장시황] 코스피 6%대 하락에 사이드카 발동…코스닥도 3%대 '털썩' - 뉴스핌
-- 마감시황] 코스피, 외인·기관 매도에 5.80% 급락…6471선 마감 - 뉴스핌
-- 주식 시장 폭락이 조만간 다가옵니다. 역사는 투자자들이 WHO 이것을 하면 효과가 있을 것이라고 말합니다.
-
-### 주요 이슈
-
-- 다우(Dow)는 재무부 계획이 수익률을 유지하지 못하면서 거의 500포인트 하락, 월마트
-- 다우존스 선물은 유가로 하락하고, 비트코인 점프; 월마트 수입 감소 -
-- AI 회사 지분의 이익은 S&P 500의 2분기 수익에 영향을 미칩니다.
-- 외 27건
-
-### 투자자 체크포인트
-
-- 한국 기사 62건, 글로벌 기사 129건 수집
-- 한국 지수: KOSPI 6,852.58(+5.89%), KOSDAQ 840.89(+1.99%), USD/KRW 1,394.38(+0.42%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">49건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:73%"></div></div><span class="theme-count">36건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:14%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:16%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-21.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,852.58 (+5.89%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 840.89 (+1.99%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *한강타임즈 김광호 기자 = 20일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스
 

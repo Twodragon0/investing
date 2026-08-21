@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다. - 107건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 트럼프 관련 50건</li><li>📈 <strong>가격/시장</strong>: 42건 수집</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li><li>🔵 <strong>규제/정책</strong>: 트럼프, 암호화폐 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.fool.com/investing/2026/08/19/looking-to-diversify-your-portfolio-heres-1-crypto/">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다.</a> <span class="p0-desc">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다. 급락 관련 보도.</span></li><li><a href="https://decrypt.co/375976/maya-protocol-halts-network-bitcoin-exploit">Six-Bug Exploit Halts Maya Protocol After $1.4 Million in Bitcoin Stolen</a></li><li><a href="https://www.coindesk.com/markets/2026/08/20/bearish-crypto-bets-lose-record-usd2-7-billion-as-bitcoin-surges-toward-usd70-000">약세 암호화폐 베팅은 비트코인이 $71,000를 넘어서면서 기록적인 $30억 손실을 입었습니다.</a> <span class="p0-desc">암호화폐에 베팅한 거래자들은 하루에 27억 4천만 달러의 손실을 입었습니다. 이는 시장 역사상 가장 큰 청산 이벤트로 남아 있는 2025년 10월 폭락의 단기 손실보다 더 많은 것.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다. 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 107건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인, 트럼프, 의회 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (42건): prices, meeting, stocks 가격 변동 (42건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (29건): 트럼프, 의회 정치 이슈 (29건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다.
-- 비트코인에 140만 달러를 도난당한 후 6개 버그 악용으로 인해 Maya 프로토콜이 중단됨
-- 약세 암호화폐 베팅은 비트코인이 $71,000를 넘어서면서 기록적인 $30억 손실을 입었습니다.
-
-### 주요 이슈
-
-- HMRC 세금 단속으로 암호화폐 보유자에게 81,000통의 경고 편지 발송
-- 비트코인 및 이더리움 가격 오늘(2026년 8월 19일 수요일): SEC이 제안된 규정을 발표한 후 암호화폐 가격이 상승합니다.
-- 트럼프 대통령, 자신의 재정적 이익에 대한 조사 속에서 새로운 암호화폐 규칙 추진 - WBAL-TV
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-21.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **107건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

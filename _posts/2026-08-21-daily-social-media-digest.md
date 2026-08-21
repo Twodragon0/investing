@@ -29,50 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-21 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인 - 35건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 기준금리, 연준 관련 18건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 기준금리, 인상 주목</li><li>🔵 <strong>규제/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE8wVlk0NXpuVVVCeE1ZUzZLenp3cGVCbFVoRzQ0MUd4Vi1tRmhTVFVjUVg0UWtPdnNXMl94SThqNEVwTG14U2xYbzltQVRWRTlxX1JrcHk0YWFoMnMwMXd6Z0pvLXc3RmtvWER3?oc=5">코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인</a> <span class="p0-desc">[뉴스인] 김태엽 기자 =코스피가 외국인과 기관의 동반 매도 공세에 19일 6% 가까이 급락하며 6500선 아래로 내려앉았다. 최근 상승장을 이끌었던 삼성전자와 SK하이닉스 등 반.</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1hRGYzRmt2TldseTQzZHRXeWhaVWJYZXV6ZjBfdXEzaERhMjFTOHBYUTM4dXAzMzREalJDa21PcHZPaTlpNGsteVZhdXNLSUhqemc?oc=5">기관 이어 외국인마저 “팔자”…코스피, 5%대 급락 마감 - 매일경제 마켓</a> <span class="p0-desc">코스피가 19일 기관에 이어 외국인마저 장 초반 순매도로 돌아서면서 장중 매도 사이드카까지 발동된 가운데 동반 순매도세에 5%대 하락 마감했다. 코스피는 이날 전일 대비 398.6.</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUYjhZaWpDdkVPUVY2eEo2THpzNHNZUEtoQUJYRGNrR09TY0hESllWbzFxR2lKaEp5UkFCZ3d1UGNWYmkwRzV1QWhCMEM1SE5HeWFFeGFB?oc=5">이상렬의 시시각각] 이재명 정부 경제팀의 세 가지 오류</a> <span class="p0-desc">뜨거운 여름이었다. 그러나 폭염보다 국민들을 더 힘들게 만든 건 경제 실정(失政)이었다. 부동산은 수도권 매매·전세·월세 시장이 모두 급등하는 전례 없는 대란을 겪고 있고, 주가는.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 35건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 35건 중 텔레그램 0건, 소셜 0건, 정치·경제 35건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (18건): 기준금리, 연준, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (24건): 트럼프, 이재명 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (17건): 기준금리, 인상, 전망 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인
-- 기관 이어 외국인마저 “팔자”…코스피, 5%대 급락 마감 - 매일경제 마켓
-- 이상렬의 시시각각] 이재명 정부 경제팀의 세 가지 오류
-
-### 주요 이슈
-
-- 트럼프 대통령, 자신의 재정적 이익에 대한 조사 속에서 새로운 암호화폐 규칙 추진 - WBAL-TV
-- 백악관 암호화 회의: 트럼프는 $70,000 이상으로 비트코인로 명확성 법안을 추진합니다. - 비트코인 재단
-
-### 투자자 체크포인트
-
-- 정치·경제 35건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:75%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:71%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:38%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:21%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-21.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
