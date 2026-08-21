@@ -120,6 +120,7 @@ echo "${ANTHROPIC_API_KEY:+claude OK}" "${OPENAI_API_KEY:+codex OK}" "${GEMINI_A
 
 | Secret | 활성화 시 효과 |
 |--------|---------------|
+| `VERCEL_TOKEN` | 주간 쿼터 리포트(롤링 피크·거절·수집기 축) + 10AM 다이제스트의 Vercel 절 — [활성화 절차](#vercel_token-활성화-절차) |
 | `GSC_SERVICE_ACCOUNT_JSON` | Google Search Console 색인 자동 감사 |
 | `CRYPTOPANIC_API_KEY` | crypto news 다양성 확대 |
 | ~~`NEWSAPI_API_KEY`~~ | ~~일반 뉴스 카드~~ (DEPRECATED) |
@@ -156,6 +157,79 @@ Vercel Dashboard → Project → Settings → Environment Variables
 - 배포 로그는 Vercel Dashboard > Deployments > 각 배포의 Build/Function Logs
 - Webhook으로 Slack 통지: Project Settings → Git → Vercel for GitHub → Notifications
 - **상태**: 변경 완료 (2026-05-09 사용자 확인)
+
+---
+
+## `VERCEL_TOKEN` 활성화 절차
+
+위 L4 표의 키들은 **Vercel 쪽** 환경변수다. `VERCEL_TOKEN` 은 반대 방향 —
+**GitHub Actions 가 Vercel 을 읽기 위한** 자격증명이라 GitHub Secret 에 넣는다.
+2026-08-18 기준 **미설정**이다(`gh secret list` 에 없음).
+
+### 무엇이 멈춰 있나
+
+미설정이면 두 워크플로우가 조용히 축소 동작한다. **실패하지 않기 때문에** 대시보드나
+Slack 만 보면 멀쩡해 보인다는 점이 중요하다:
+
+| 워크플로우 | 미설정일 때 | 코드 근거 |
+|---|---|---|
+| `vercel-quota-report.yml` (주 1회) | 집계 자체를 **명시적 skip**. 롤링 피크·거절·수집기 축이 하나도 쌓이지 않는다 | `Check Vercel credentials` 스텝 |
+| `ops-10am-digest.yml` (매일) | Vercel 절이 전부 `UNKNOWN` (배포 상태·에러 로그·최근 3건 실패율) | `scripts/generate_ops_10am_digest.py:146-156` |
+
+즉 `check_vercel_quota.py` 와 `--kind collector` 축은 **코드로는 완성돼 있지만 이
+시크릿이 들어오기 전까지 한 줄도 기록하지 않는다.**
+
+### 등록
+
+1. **토큰 발급** — Vercel Dashboard → Account Settings → Tokens → Create.
+   - Scope 는 `investing` 프로젝트를 포함하는 계정/팀으로 좁힌다.
+   - 코드가 쓰는 것은 **조회뿐**이다 — 두 소비처 모두 `vercel ls` / `vercel list` 만
+     부르고 배포를 만들거나 지우지 않는다. 스코프를 좁힐 수 있는 계정 유형이면 좁힌다.
+   - 만료를 설정하면 만료일을 아래 회전 절에 적어 둘 것. 만료된 토큰은 `vercel ls`
+     실패 → **미설정과 똑같이 조용한 축소 동작**이 된다.
+
+2. **GitHub Secret 등록**
+   ```bash
+   # 값을 인자로 넘기지 않는다 — 셸 이력과 프로세스 목록에 남는다.
+   # 인자 없이 부르면 gh 가 프롬프트로 받는다.
+   gh secret set VERCEL_TOKEN
+   gh secret list | grep VERCEL_TOKEN   # 등록 확인 (값은 출력되지 않는다)
+   ```
+
+3. **즉시 검증** — 다음 주 월요일 cron 을 기다리지 않는다.
+   ```bash
+   gh workflow run vercel-quota-report.yml
+   gh run list --workflow=vercel-quota-report.yml --limit 3
+   ```
+   확인할 것 두 가지:
+   - `::notice::VERCEL_TOKEN 미설정` 이 **더 이상 안 나온다** (나오면 등록이 안 된 것)
+   - `Aggregate collector axis only` 스텝의
+     `::notice::SHA 대조가 두 축에서 일치한다` — 축 필터가 판정으로 새지 않았다는
+     프로덕션 카나리아다. 여기서 실패하면 집계가 아니라 **도구가** 틀린 것이다.
+
+   아티팩트 2개(`vercel-quota-report.txt`, `-collector.txt`)를 받아 대조한다:
+   ```bash
+   gh run download <run-id> --name vercel-quota-report-<run-id>
+   ```
+
+4. **로컬 대조 (선택)** — CI 값이 의심스러우면 같은 창으로 손에서 재현한다.
+   로컬은 `vercel login` 세션을 쓰므로 토큰이 필요 없다.
+   ```bash
+   python scripts/tools/check_vercel_quota.py --since 2026-08-10
+   python scripts/tools/check_vercel_quota.py --since 2026-08-10 --kind collector
+   ```
+   두 실행의 `[3] SHA 대조` 세 줄(레코드 생성 / non-head / 거절)이 **같아야** 한다.
+
+> `verify_secret_activation.py` 는 twitter·gsc 만 지원한다. Vercel 축은 위 3번의
+> 워크플로우 notice 와 카나리아가 그 역할을 한다 — 도구에 `--secret vercel` 을
+> 추가하지 않은 이유는 검증 대상이 "수집량 변화" 가 아니라 "집계가 돌기는 했는가"
+> 라서 baseline 비교가 성립하지 않기 때문이다.
+
+### 회전
+
+토큰이 새면 배포 이력 열람이 가능해진다(쓰기는 아니다). 유출 시 Vercel Dashboard
+에서 해당 토큰을 revoke 하고 위 2번을 다시 돌린다. 회전해도 워크플로우는 수정이
+필요 없다.
 
 ---
 

@@ -24,6 +24,8 @@ on:
 permissions:
   contents: read
   issues: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
 
 concurrency:
   group: integrated-quality-report-${{ github.ref }}
@@ -147,8 +149,19 @@ jobs:
               labels: ['quality', 'integrated-report'],
             });
 
-      - name: Fail the job on combined failure
+      # 발견은 실패가 아니다 — `dependency-check.yml` 의 같은 자리 주석 참조.
+      # 회귀 발견은 exit 0 + 이슈이고, 잡 실패는 크래시만 뜻한다.
+      - name: Report combined regressions (non-failing)
         if: steps.combine.outputs.combined_status == 'failure'
         run: |
-          echo "::error::Integrated quality report flagged regressions — see step summary and opened issue."
-          exit 1
+          echo "::warning::Integrated quality report flagged regressions — see step summary and opened issue."
+
+  # 주 1회. 위와 같은 이유로 잡 실패 = 크래시.
+  alert-consecutive-failures:
+    needs: integrated-report
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Integrated Quality Report'
+      threshold: 1
+    secrets: inherit

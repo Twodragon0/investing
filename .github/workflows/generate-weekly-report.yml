@@ -13,6 +13,9 @@ on:
 
 permissions:
   contents: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: collect-data
@@ -77,8 +80,19 @@ jobs:
         if: steps.slack.outputs.can_post == 'true'
         uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d  # v4.0.0
         with:
+          errors: true
           method: chat.postMessage
           token: ${{ steps.slack.outputs.token }}
           payload: |
             channel: "${{ steps.slack.outputs.channel }}"
             text: ":bar_chart: *Weekly Report* generated (run #${{ github.run_number }}) — https://github.com/Twodragon0/investing/tree/main/docs\n${{ steps.rejection.outputs.oneliner }}"
+
+  # 주 1회라 threshold 3 이면 3주 뒤다. 리포트 커밋이 통째로 빠지므로 첫 실패에 알린다.
+  alert-consecutive-failures:
+    needs: generate
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Generate Weekly Report'
+      threshold: 1
+    secrets: inherit

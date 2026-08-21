@@ -20,6 +20,9 @@ on:
 
 permissions:
   contents: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 concurrency:
   group: check-post-images-${{ github.ref }}
@@ -126,3 +129,13 @@ jobs:
           done
           echo "::error::All $MAX_RETRIES push attempts failed"
           exit 1
+
+  # 일 1회 + push/PR. PR 실패는 작성자가 이미 보므로 스케줄만 본다.
+  alert-consecutive-failures:
+    needs: check-images
+    if: failure() && github.event_name == 'schedule'
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Check Post Images'
+      threshold: 2
+    secrets: inherit
