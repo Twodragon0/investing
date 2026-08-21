@@ -20,6 +20,14 @@ inputs:
     description: 'Fail job if DISABLE_SSL_VERIFY is enabled (true/false)'
     required: false
     default: 'true'
+  skip-noop-state-commits:
+    description: |
+      Skip the commit when the staged set contains nothing but the no-op state
+      files listed in the "Commit and push" step. Off by default — enable per
+      collector. Rationale and measurements:
+      docs/devsecops/collector-push-batching-design.md
+    required: false
+    default: 'false'
 
 runs:
   using: 'composite'
@@ -186,6 +194,32 @@ runs:
             git add "$path"
           fi
         done
+
+        # main 커밋 1건 = Vercel 배포 레코드 1건이다(2026-08-08 실측, SHA 1:1).
+        # 수집기 커밋의 41%는 `_state/` 안의 두 파일만 바꾼다 — 사이트 산출물에
+        # 영향이 없고 `ignoreCommand` 가 빌드도 이미 skip 하는데, 배포 레코드만
+        # 만든다. 그 커밋을 아예 만들지 않는다.
+        #
+        # 화이트리스트는 여기 상수로 둔다. 액션 입력으로 열면 어느 수집기가
+        # dedup 상태(`*_seen.json`)를 흘려보내는지 추적할 수 없게 되고, 그건
+        # 중복 포스트로 이어진다. tests/test_collector_noop_commit_whitelist_guard.py
+        # 가 이 목록에 dedup 파일이 들어오는 것을 막는다.
+        #
+        # 근거·수치: docs/devsecops/collector-push-batching-design.md
+        NOOP_STATE_PATHS="_state/image_rejection_metrics.json _state/translation_cache.json"
+        if [ "${{ inputs.skip-noop-state-commits }}" = "true" ] && ! git diff --staged --quiet; then
+          leftover=$(git diff --staged --name-only)
+          for safe in $NOOP_STATE_PATHS; do
+            # -x: 경로 전체 일치만(부분일치 금지), -F: 정규식 아님.
+            # 매치가 없으면 grep 은 1 을 반환하므로 set -e 아래에서 `|| true` 필요.
+            leftover=$(printf '%s\n' "$leftover" | grep -vxF "$safe" || true)
+          done
+          if [ -z "$leftover" ]; then
+            echo "No-op state churn only — skipping commit:"
+            git diff --staged --name-only | sed 's/^/  /'
+            git reset --quiet
+          fi
+        fi
 
         if git diff --staged --quiet; then
           echo "No new posts to commit"

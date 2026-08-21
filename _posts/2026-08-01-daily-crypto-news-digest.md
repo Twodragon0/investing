@@ -62,7 +62,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMixwFBVV95cUxQdk05N1M2ZHNMcExKV0FXQ0NUS1p3MzNsWHV5Z3dBbHdrZ1ZUUl8tc0J4RkVQWkJTc0xjb2VFclNfdzR3NTZyazRWc2tFb3lEMEt1WUpWaXJZZUxoZUdVNE9LdGJVZVpXeGNpV3p5QnJLR1dGdlN2NVVCbVQwVm92aVRtVFFOcGxWamdSRTJvYW1Bd0ZNMkN3Yy1NTmtmVVdkVklyQU81S1lfTy1hUEZIZWhFbVpPMUl2ekF1WkhwQlNGbm0zRVJv?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">XRP, 비트코인은 잊어버리세요: 이 3개의 코인은 현재 20% 이상의 상승 여력을 보이고 있습니다.</a>
-<p class="news-desc">XRP, 비트코인은 잊어버리세요: 이 3개 코인은 현재 20% 이상의 상승 여력을 보이고 있습니다. (20% 변경)</p>
+<p class="news-desc">비트코인(CRYPTO: BTC)과 XRP(CRYPTO: XRP)가 통합되는 동안 3개의 알트코인은 추진력과 거래량으로 뒷받침되는 20% 이상의 상승 목표를 달성하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
