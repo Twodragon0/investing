@@ -71,6 +71,33 @@ jobs:
           echo "vuln_count=$VULN_COUNT" >> "$GITHUB_OUTPUT"
           echo "Found $VULN_COUNT vulnerabilities"
 
+          # 발견 지문(취약점 ID 집합의 해시). 이슈 중복 판정에 쓴다.
+          #
+          # 제목이 상수였을 때는 **열려 있는 이슈 하나가 이후 모든 발견의 이슈 생성을
+          # 영구히 억제**했다. 실제로 #985(2026-06-01, 지금은 ignore 목록에 든
+          # PYSEC-2022-252)가 82일간 그 역할을 했다. 발견이 exit 1 이던 시절에는
+          # 잡이 red 라 흔적이 남았지만, exit 0 으로 옮긴 뒤에는 잡도 green 이라
+          # 신호가 하나도 남지 않는다.
+          #
+          # 지문을 제목에 넣으면 발견 내용이 바뀔 때마다 새 이슈가 열리고, 같은
+          # 발견의 주간 재실행만 억제된다(원래 의도한 멱등성).
+          VULN_FINGERPRINT=$(python3 -c "
+          import hashlib, json
+          try:
+              with open('audit-report.json') as f:
+                  data = json.load(f)
+              ids = sorted(
+                  v.get('id', '')
+                  for d in data.get('dependencies', [])
+                  for v in d.get('vulns', [])
+              )
+              print(hashlib.sha256('|'.join(ids).encode()).hexdigest()[:12] if ids else 'none')
+          except Exception:
+              print('unknown')
+          ")
+          echo "vuln_fingerprint=$VULN_FINGERPRINT" >> "$GITHUB_OUTPUT"
+          echo "Finding fingerprint: $VULN_FINGERPRINT"
+
       - name: Check outdated packages
         run: pip list --outdated --format=columns 2>/dev/null || true
 
@@ -85,7 +112,8 @@ jobs:
               report = fs.readFileSync('audit-report.txt', 'utf8');
             } catch (e) {}
 
-            const title = `🔒 Dependency Security: ${process.env.VULN_COUNT} vulnerabilities found`;
+            const fingerprint = process.env.VULN_FINGERPRINT;
+            const title = `🔒 Dependency Security: ${process.env.VULN_COUNT} vulnerabilities found [${fingerprint}]`;
             const body = `## Dependency Security Audit\n\n` +
               `**Vulnerabilities Found**: ${process.env.VULN_COUNT}\n\n` +
               `### Details\n\`\`\`\n${report.substring(0, 3000)}\n\`\`\`\n\n` +
@@ -98,7 +126,10 @@ jobs:
               labels: 'security'
             });
 
-            const existing = issues.data.find(i => i.title.includes('Dependency Security'));
+            // **지문이 같은** 열린 이슈만 중복이다. 상수 접두어로 판정하면 이미 열려
+            // 있는 이슈 하나가 이후 모든 발견을 침묵시킨다(위 audit step 주석 참조).
+            // tests/test_findings_exit_zero_guard.py 가 이 판정식을 지킨다.
+            const existing = issues.data.find(i => i.title.includes(`[${fingerprint}]`));
             if (!existing) {
               await github.rest.issues.create({
                 owner: context.repo.owner,
@@ -110,6 +141,7 @@ jobs:
             }
         env:
           VULN_COUNT: ${{ steps.audit.outputs.vuln_count }}
+          VULN_FINGERPRINT: ${{ steps.audit.outputs.vuln_fingerprint }}
 
       # **발견은 실패가 아니다.** 예전에는 여기서 exit 1 했는데, 그러면 잡 실패가
       # "취약점을 찾았다" 와 "워크플로우가 죽었다" 두 가지를 뜻해 밖에서 구분되지
