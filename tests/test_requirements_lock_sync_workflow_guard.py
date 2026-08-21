@@ -27,6 +27,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -38,6 +39,16 @@ WORKFLOW = REPO_ROOT / ".github" / "workflows" / "requirements-lock-sync.yml"
 HELPER = "scripts/refresh_requirements_lock.sh"
 REQUIRED_PYTHON = "3.11"
 TRIGGER_PATHS = ["scripts/requirements.txt"]
+
+# 헬퍼가 내부에서 `python3 -m pytest ... --no-cov` 를 돌린다. 그 호출은 pyproject 의
+# `addopts = "--cov=scripts --cov-fail-under=70"` 를 상속하므로 **pytest 만 깔면
+# 인자 파싱에서 죽는다** — 실측(run 32454917372):
+#     error: unrecognized arguments: --cov=scripts --cov-fail-under=70 --no-cov
+# 로컬에는 pytest-cov 가 이미 있어 드러나지 않는 종류의 차이라 가드로 못 박는다.
+HELPER_PREREQS = frozenset({"pytest", "pytest-cov"})
+
+# `pkg==1.2`, `pkg>=1`, `pkg[extra]` 에서 배포 이름만 떼어낸다.
+_PKG_NAME = re.compile(r"^[^<>=!~\[;]+")
 
 
 def _workflow() -> dict:
@@ -71,9 +82,48 @@ def _steps(wf: dict) -> list[dict]:
     return out
 
 
+def _pip_installed_packages(wf: dict) -> set[str]:
+    """워크플로우가 `pip install` 로 설치하는 배포 이름 집합.
+
+    토큰 단위로 떼어낸다 — `"pytest" in run` 같은 부분문자열 검사는 `pytest-cov`
+    한 줄만 있어도 만족되어 vacuous 해진다.
+    """
+    found: set[str] = set()
+    for step in _steps(wf):
+        for line in str(step.get("run") or "").splitlines():
+            _, sep, rest = line.strip().partition("pip install")
+            if not sep:
+                continue
+            for token in rest.split():
+                if token.startswith("-"):
+                    continue
+                match = _PKG_NAME.match(token)
+                if match:
+                    found.add(match.group(0).strip())
+    return found
+
+
 def test_workflow_exists() -> None:
     """카나리. 파일이 사라지면 나머지 단언이 조용히 통과하는 대신 여기서 실패한다."""
     _workflow()
+
+
+def test_helper_prerequisites_satisfy_pytest_addopts() -> None:
+    """헬퍼의 내부 pytest 호출이 죽지 않도록 pytest-cov 까지 깔아야 한다.
+
+    `pyproject.toml` 의 `addopts` 가 모든 pytest 호출에 `--cov` 를 붙이므로, pytest 만
+    설치하면 인자 파싱 단계에서 실패한다. 로컬에는 pytest-cov 가 이미 있어 재현되지
+    않는다 — 그래서 실제로 CI 에서 한 번 깨진 뒤에 이 가드를 넣었다.
+
+    방향: 두 패키지 모두 존재. addopts 가 다른 플러그인을 요구하게 바뀌면 여기도 갱신할 것.
+    """
+    installed = _pip_installed_packages(_workflow())
+    missing = HELPER_PREREQS - installed
+    assert not missing, (
+        f"{WORKFLOW.name}: `pip install` 에 {sorted(missing)} 가 없다 (설치 목록: "
+        f"{sorted(installed)}). pyproject 의 addopts 가 `--cov` 를 붙이므로 pytest-cov 가 "
+        "없으면 헬퍼의 내부 pytest 호출이 `unrecognized arguments` 로 죽는다."
+    )
 
 
 def test_does_not_use_pull_request_target() -> None:

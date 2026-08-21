@@ -67,10 +67,20 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 헬퍼가 내부에서 `python3 -m pytest tests/test_requirements_lock_coverage.py` 로
-      # 커버리지 가드를 돌린다. 그 테스트는 stdlib 만 쓰므로 pytest 만 있으면 된다.
+      # 헬퍼가 내부에서 `python3 -m pytest tests/test_requirements_lock_coverage.py --no-cov`
+      # 로 커버리지 가드를 돌린다.
+      #
+      # **pytest-cov 도 반드시 필요하다.** 그 테스트 자체는 stdlib 만 쓰지만,
+      # `pyproject.toml` 의 `addopts = "--cov=scripts --cov-fail-under=70"` 이 모든
+      # pytest 호출에 붙는다. pytest-cov 가 없으면 `--cov`/`--no-cov` 를 인자 파싱
+      # 단계에서 거부해 헬퍼가 죽는다 — 실측(run 32454917372):
+      #
+      #     error: unrecognized arguments: --cov=scripts --cov-fail-under=70 --no-cov
+      #
+      # 로컬에는 pytest-cov 가 이미 깔려 있어 드러나지 않는 종류의 차이다.
+      # `tests/test_requirements_lock_sync_workflow_guard.py` 가 두 패키지를 지킨다.
       - name: Install helper prerequisites
-        run: pip install pytest
+        run: pip install pytest pytest-cov
 
       # PYTHON=python3 — setup-python 이 깐 python3 가 3.11 이다. 헬퍼 기본값인
       # `python3.11` 이라는 이름은 러너 PATH 에 없을 수 있다.
