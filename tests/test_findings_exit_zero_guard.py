@@ -29,10 +29,29 @@
 2. 이슈 생성 step 이 blocking 일 것 (`continue-on-error` 금지)
 3. 이슈 생성 step 이 실제로 존재하고 발견 조건에 걸려 있을 것
 4. 알림이 연결돼 있을 것 — exit 0 전환의 대가로 얻어야 하는 것
+5. 이슈 **중복 판정이 새 발견을 억제할 수 없을 것** (2026-08-21 추가)
+
+## 5번을 뒤늦게 추가한 이유 (실측)
+
+1~4 는 "step 이 실행되는가" 를 지켰다. 그런데 step 이 **실행되고 성공하면서도 아무
+이슈를 만들지 않는** 경로가 남아 있었다 — 중복 판정이다.
+
+`dependency-check.yml` 의 판정은 제목의 상수 접두어(`'Dependency Security'`)를 훑었다.
+그래서 그 접두어를 가진 **열린 이슈가 하나라도 있으면 이후 모든 발견의 이슈 생성이
+영구히 억제**됐다. 실측: #985 가 2026-06-01 에 열린 뒤 82일간(`createdAt == updatedAt`)
+그 역할을 했고, 정작 그 이슈의 취약점(PYSEC-2022-252)은 이미 `--ignore-vuln` 목록에
+들어가 닫혀야 했던 것이다.
+
+발견이 `exit 1` 이던 시절엔 억제돼도 잡이 red 라 흔적이 남았다. exit 0 전환 이후엔
+잡도 green 이므로 **신호가 0** 이다. 즉 전환이 이 잠복 버그를 무음 사고로 승격시켰다.
+
+조치는 지문(발견 ID 집합의 해시)을 제목에 넣고 판정을 지문으로 좁힌 것이다. 아래 두
+테스트가 그 성질을 지킨다 — 제목이 다시 상수가 되거나 판정이 다시 넓어지면 red.
 """
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -47,6 +66,22 @@ CONVERTED: dict[str, tuple[str, str]] = {
     "dependency-check.yml": ("Create issue on vulnerabilities", "vuln_count"),
     "integrated-quality-report.yml": ("Open issue on combined failure", "combined_status"),
 }
+
+# 파일 → 이슈 제목과 중복 판정이 반드시 참조해야 하는 "발견마다 달라지는" 값.
+#
+# 두 워크플로우가 서로 다른 수단을 쓴다 — 하나로 통일하지 않은 것은 의도다.
+#   dependency-check       : 발견 ID 집합의 해시. 같은 취약점의 주간 재실행은 억제해야
+#                            하므로 실행마다 달라지면 안 된다.
+#   integrated-quality-report: `run_id`. 애초에 중복 조회가 없어 억제될 수 없고, 회귀
+#                            리포트는 매 실행 스냅샷이라 실행마다 새 이슈가 맞다.
+FINDING_SCOPED_DEDUP: dict[str, str] = {
+    "dependency-check.yml": "fingerprint",
+    "integrated-quality-report.yml": "github.run_id",
+}
+
+# 제목을 **만드는** 줄의 앵커. `i.title.includes(...)` 같은 속성 접근은 제외해야 한다
+# (아니면 판정식 줄이 제목 줄로 오인되어 단언이 vacuous 해진다 — 실측 확인).
+_TITLE_ASSIGN = re.compile(r"^\s*(?:const\s+|let\s+|var\s+)?title\s*[:=]")
 
 
 def _load(name: str) -> dict:
@@ -124,6 +159,65 @@ def test_alerting_is_attached(workflow: str) -> None:
     assert ALERT_REF in text, (
         f"{workflow}: 발견을 exit 0 으로 옮겼는데 실패 알림이 없다. "
         "크래시가 green 도 red 도 아닌 채로 아무에게도 안 보인다."
+    )
+
+
+def _issue_script(workflow: str) -> str:
+    """이슈 생성 step 의 github-script 본문. 없으면 아래 단언들이 vacuous 해지므로 실패."""
+    step_name, _ = CONVERTED[workflow]
+    step = _step_named(_load(workflow), step_name)
+    assert step is not None, f"{workflow}: '{step_name}' step 이 없다"
+    script = str((step.get("with") or {}).get("script") or "")
+    assert script, (
+        f"{workflow}: '{step_name}' 에 github-script 본문이 없다. 이슈 생성 방식이 바뀌었다면 "
+        "중복 억제 가드도 새 형태에 맞춰 다시 써야 한다."
+    )
+    return script
+
+
+@pytest.mark.parametrize("workflow", sorted(FINDING_SCOPED_DEDUP))
+def test_issue_title_varies_with_the_finding(workflow: str) -> None:
+    """제목이 상수면 중복 판정이 이후 모든 발견을 억제할 수 있다(#985, 82일)."""
+    token = FINDING_SCOPED_DEDUP[workflow]
+    script = _issue_script(workflow)
+    # 제목을 **만드는** 줄만 본다 — 변수 대입(`const title = ...`)과 create() 인자
+    # 리터럴(`title: ...`).
+    #
+    # 느슨하게 `"title" in ln` 으로 걸면 중복 판정식(`i.title.includes(...)`)까지
+    # 잡혀서, 그 줄에 있는 지문이 이 단언을 우연히 만족시킨다. 실측으로 확인했다:
+    # 제목에서 지문을 제거하는 뮤테이션이 통과했다(2026-08-21). 접두어 앵커 필수.
+    title_lines = [ln for ln in script.splitlines() if _TITLE_ASSIGN.match(ln)]
+    assert title_lines, f"{workflow}: 이슈 제목을 만드는 줄을 찾지 못했다 — 형태가 바뀌었다"
+    assert any(token in ln for ln in title_lines), (
+        f"{workflow}: 이슈 제목이 `{token}` 을 담지 않는다. 제목이 발견마다 달라지지 않으면 "
+        f"열린 이슈 하나가 이후 모든 발견을 침묵시킨다. 현재 제목 줄: {title_lines!r}"
+    )
+
+
+@pytest.mark.parametrize("workflow", sorted(FINDING_SCOPED_DEDUP))
+def test_dedup_lookup_cannot_suppress_a_different_finding(workflow: str) -> None:
+    """열린 이슈를 훑어 중복을 판정한다면, 그 판정은 발견마다 달라지는 값에 걸려야 한다.
+
+    상수 접두어로 판정하면 step 은 실행되고 성공하면서도 이슈를 만들지 않는다.
+    exit 0 전환 이후에는 잡도 green 이라 그 침묵이 어디에도 드러나지 않는다.
+    """
+    token = FINDING_SCOPED_DEDUP[workflow]
+    script = _issue_script(workflow)
+
+    if "listForRepo" not in script and ".find(" not in script:
+        # 중복 조회가 아예 없으면 억제될 수 없다. 이 상태가 유지되는지만 확인한다 —
+        # 나중에 조회가 추가되면 위 조건이 참이 되어 아래 판정식 단언이 살아난다.
+        assert "issues.create" in script, f"{workflow}: 중복 조회도 없고 이슈 생성도 없다. 발견의 출력 경로가 사라졌다."
+        return
+
+    predicates = [ln for ln in script.splitlines() if ".find(" in ln]
+    assert predicates, (
+        f"{workflow}: 열린 이슈를 조회(listForRepo)하는데 중복 판정식(.find)을 찾지 못했다. "
+        "판정 형태가 바뀌었다면 이 가드를 새 형태에 맞춰 다시 써야 한다."
+    )
+    assert all(token in ln for ln in predicates), (
+        f"{workflow}: 중복 판정식이 `{token}` 을 참조하지 않는다 — 발견 내용과 무관하게 "
+        f"매칭되므로 열린 이슈 하나가 이후 모든 발견을 억제한다. 현재: {predicates!r}"
     )
 
 
