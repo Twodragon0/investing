@@ -126,7 +126,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE1NMkJtSFBKTDl4Mk55eUdaUWxveXBBUmlkY2ZUdzltYTZZWHNMbENwNFJYaUZoeVFvUnFZZS1wNjlJY3QyYmRxRFcxNnBiM25hc2pzM0JwRmNKTk5JVUJpN3BMaDVPWUU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 7월 20일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 7월 20일 동부 표준시 오전 6시에 비트코인(1 BTC)의 가격은 $64,199.13입니다. 이는 어제 오전보다 $331.62 감소한 수치이며, 1년 전과 비교하면 $53,100 이상 감소한 수치입니다. 비트코인은 최초의 암호화폐이며 여전히 시장에서 가장 인기 있는 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

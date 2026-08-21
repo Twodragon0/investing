@@ -31,6 +31,12 @@ jobs:
           script: scripts/collect_regulatory.py
           commit-message: 'chore: collect regulatory news'
           git-add-paths: '_posts/ _state/ assets/images/'
+          # no-op 커밋 생략 파일럿(2026-08-10~). 이 수집기를 고른 이유는 실측
+          # 표본 49건 중 27건(55%)이 no-op 이라 코드 경로가 실제로 돌면서도
+          # 3회/일이라 폭발 반경이 작기 때문이다. 최소 3일 관측 후 확대 판단:
+          # 커밋 수 감소 + 중복 포스트 0건.
+          # docs/devsecops/collector-push-batching-design.md
+          skip-noop-state-commits: 'true'
 
   alert-consecutive-failures:
     needs: collect

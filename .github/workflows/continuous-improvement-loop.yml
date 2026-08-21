@@ -11,6 +11,9 @@ concurrency:
 
 permissions:
   contents: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구(상속됨).
+  actions: read
+  issues: write
 
 jobs:
   loop-cycle:
@@ -137,3 +140,13 @@ jobs:
             --channel "${{ steps.slack_dev.outputs.channel }}" \
             --message-path _state/continuous-improvement-roles/continuous-improvement-loop-uiux.txt \
             --marker "[multi-agent-forum]"
+
+  # 시간당 실행이라 threshold 3 = 약 3시간.
+  alert-consecutive-failures:
+    needs: loop-cycle
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'OpenClaw Hourly Improvement Loop'
+      threshold: 3
+    secrets: inherit

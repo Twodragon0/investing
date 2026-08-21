@@ -54,6 +54,10 @@
           {
             "type": "command",
             "command": "bash .claude/hooks/pre-commit-state-guard.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/component-counts-drift-guard.sh"
           }
         ]
       }

@@ -4,20 +4,20 @@
     "bad_image": {
       "buckets": {
         "ext:gif": 2703,
-        "default-image": 1571,
+        "default-image": 1621,
         "ext:ico": 196,
         "placeholder": 554,
         "ext:svg": 160,
         "blank.": 105,
         "beacon": 35,
         "wp-content/plugins": 2,
-        "gravatar.com/avatar": 1,
+        "gravatar.com/avatar": 3,
         "no-image": 17,
-        "tracker": 34,
+        "tracker": 61,
         "pixel": 8
       }
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-08-09T23:00:05"
+  "last_seen": "2026-08-20T22:56:01"
 }
