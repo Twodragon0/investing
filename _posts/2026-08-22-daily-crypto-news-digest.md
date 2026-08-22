@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-22 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 파산을 위한 암호화폐 채굴자 Poolin 파일 - 103건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 급등 동향 주시</li><li>📈 <strong>가격/시장</strong>: 랠리, 국채 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 의회, 트럼프 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 의회 관련 26건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiowFBVV95cUxOc3BmM0sza0VVMW13ZUI0d2tlX3JXMjhRRzdGUlE5czJINjZGSzFzNTZhcVZ3QWVvVUxLdWtkZ1A1SWtzSTVHOEZCWnlYS1ZuN0puYm11QjhDYjlhcWhPOHA0NHg4cFJrM3A1dThqb0NlTjFwVm1hQVZLbTQ1X2NmNEt1b3U0Z09SWTllalROMW1HcjdYQVg4WnlqbE5haTZ4TDRr?hl=en-US&gl=US&ceid=US%3Aen">파산을 위한 암호화폐 채굴자 Poolin 파일</a> <span class="p0-desc">비트코인(암호화폐: $BTC) 채굴 운영업체인 Poolin Technology가 11장 파산 신청을 했습니다.</span></li><li><a href="https://decrypt.co/376103/bitcoin-price-pumping-prediction-next-move">비트코인은 펌핑되고 ​​있지만 예측 시장 거래자들은 확신하지 못합니다.</a> <span class="p0-desc">비트코인의 5개월 만에 가장 날카로운 랠리로 인해 예측 시장 배당률이 약세에서 동전 뒤집기로 바뀌었지만 장기 베팅의 가격은 여전히 ​​폭락입니다.</span></li><li><a href="https://www.coindesk.com/tech/2026/08/21/coldcard-ships-firmware-after-usd114-million-bitcoin-theft-says-ai-helped-catch-more-bugs">Coldcard는 1억 1400만 달러의 비트코인 도난 후 펌웨어를 배송했습니다. AI이 더 많은 버그를 잡는 데 도움이 되었다고 말합니다</a> <span class="p0-desc">3주간의 검토를 통해 사용자에게 1억 1400만 달러의 비용을 초래한 결함과 관련 없는 문제가 밝혀졌지만 업데이트를 해도 여전히 손상된 지갑을 안전하게 만들 수는 없습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 파산을 위한 암호화폐 채굴자 Poolin 파일 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 103건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (67건): 비트코인, 급등, 랠리 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (52건): 랠리, 국채, 반등 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏛️ 정치/정책** (21건): 의회, 트럼프, 바이백 정치 이슈 (21건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 파산을 위한 암호화폐 채굴자 Poolin 파일
-- 비트코인은 펌핑되고 ​​있지만 예측 시장 거래자들은 확신하지 못합니다.
-- Coldcard는 1억 1400만 달러의 비트코인 도난 후 펌웨어를 배송했습니다. AI이 더 많은 버그를 잡는 데 도움이 되었다고 말합니다
-
-### 주요 이슈
-
-- 비트코인 상승세, 거시경제보다 규제 뉴스가 주도 - Investing.com 한국어
-- Laser Digital, 4년 만에 일본 최초의 암호화폐 거래소 승인 획득
-- Standard Chartered는 $100,000 비트코인 연말 결산에 대해 '너무 낮을 수 있다'고 말했습니다.
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-22.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **103건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

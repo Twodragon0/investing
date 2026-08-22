@@ -39,28 +39,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-22 - 시�
 - 정적 레이어(핫스팟/기지/핵시설/제재국가/경제 중심지)는 WorldMonitor 기준 데이터셋 기반입니다.
 - 상세 지도: https://finance.worldmonitor.app/?lat=20.0000&lon=0.0000&zoom=1.00&view=global&theme=dark
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 보통</strong><ul><li>안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(14건), **지정학/안보**(5건), **정책/법률**(1건) 중심으로 전개되고 있습니다.
-
-안보 관련 이슈가 전체의 **25%**(5건)를 차지합니다. 무력 충돌·제재 확대 시 원유 공급 차질과 방산 수요 증가 가능성이 있습니다.
-
-**테마 집중도**: 상위 2개 테마가 전체의 95%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (5건)
-
-- GOP가 데이터 센터가 오하이오 상원의원을 위험에 빠뜨릴 것이라고 경고함에 따라 Husted는 에너지 정책을 옹호합니다.
-- 이란, AI 및 캘리포니아 때문에 에너지 부문이 중점을 두고 있습니다. 헤지펀드의 주요 플레이는 다음과 같습니다.
-- 브로드컴 부채 거래는 700억 달러 이상에 이를 것으로 예상된다고 소식통은 말합니다.
-- 미군은 지난 5월부터 호르무즈 해협을 통해 6억6천만 배럴의 석유 수송을 지원했다고 밝혔습니다
-
-### 투자자 체크포인트
-
-- **안전자산**: 금·달러·미국채로의 자금 이동 가속 여부 확인
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/CNBC (12건), WorldMonitor/Guardian World (8건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">안보 이슈</div></div></div>
 

@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-22 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 삼성전자·SK하이닉스가 끌어올린 코스피…코스닥은 4%대 급락 - 산경투데이 - 225건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 57건</li><li>📊 <strong>매크로/금리</strong>: 국채, 채권 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 관세 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1HXzBxT3l2bkV2MEkwc3dsRC1QUVV4SXhvM1BIMDVGbE1TRjBlSTk2bHlvRmZxcV9iWTVYLVdFcUJnZzJKUjNTLUZnWERFZkgyZm5XY2NvUERNQTVUUk5HRWRDTGlFeUNZai0wMlZYMHjSAXRBVV95cUxPcXk5c0R0MjdVQURWUThBT3A5RXRSR0tYTWlaSmhRMlBZUjZERHZreGhlVjJUektLdUU2NnZXbFpsdjd2ZDNKU1lhbnAzSnZ1bG9TSGdLZ2FfYUYzXzFfNkRoWnNDemZrUE1QYWJxYUMyT182TQ?oc=5">삼성전자·SK하이닉스가 끌어올린 코스피…코스닥은 4%대 급락 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이준영 기자] 미국 국채 금리 상승과 글로벌 소비 둔화 우려, 중동발 유가 불안이 겹친 가운데 국내 증시가 반도체 대형주를 중심으로 극명하게 엇갈렸다.삼성전자와 SK하이닉스가 주주환원 기대를 등에 업고 강세를 이어가면서 코스피는 6,900선을 되찾았지만, 성장주 비중이</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5oQUpmWkFCaWxIRFJZV1pKcWZia0ZiQ3RlNE1WRHg1Vl9zdHgwQWl4dHFSOTJOWmlwanZyOEV6VGxadmR2UWV0Zzg4Z2VQZHVZbWd4VTRDQ2l1SURzV0ZEd3V0YVpwWWoySkRESg?oc=5">엇갈린 증시…코스피 0.78% 상승 vs 코스닥 5.09% 급락 - 프리진경제</a> <span class="p0-desc">21일 오전 11시 32분 기준 국내 증시가 코스피와 코스닥 간 극명한 온도 차를 보이며 혼조세를 나타내고 있다. 이날 코스피 지수는 외국인의 매수세에 힘입어 전 거래일 대비 0.78% 상승한 반면, 코스닥 지수는 기관과 외국인의 매도 물량이 쏟아지며 5% 이상 급락했다.코스피 지수는</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE8zSlE1cnZiYmpaNGNOT3NlaHhiN05EZXdLcThJYXJTcTJqSVVVUjhzRi0wcktJc0xZdHBkSU1ZeGVmdWltNEtlcFprUnRyalYwVHl0ZHB4QThxMmY4YWVMM1pyWS1qRGFkblRUcXhNRknSAXRBVV95cUxQTHktaUR1N3VNR3ZScktGRkFRUjRUaU11MG1HRmNMemlPSHJ5UGlMX0p0MktYakc5cjg5cjRnU2NBbjdMMktVcFUyTHZCa05fdW1Yc19oNVQ3SmJhdUk3NEFMNW5UX0FYdE43OFZnSnk3Z1AzTg?oc=5">美 장기금리 다시 뛰자 코스피 1%대 하락…코스닥은 3%대 급락 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 미국 장기 국채 금리가 다시 오름세로 돌아서면서 국내 증시가 21일 장 초반 약세를 보이고 있다.전날 급등했던 코스피에서는 외국인과 기관의 차익 실현성 매물이 출회됐고, 코스닥은 성장주를 중심으로 낙폭이 3%대까지 확대됐다.한국거래소에 따르면 이날 오전 코</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 삼성전자·SK하이닉스가 끌어올린 코스피…코스닥은 4%대 급락 - 산경투데이 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 225건의 뉴스 중 P1 주요 이슈도 32건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (57건): 코스피, 코스닥, 삼성전자 가격 변동 (57건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (36건): 국채, 채권, 금리 매크로 변수 (36건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (13건): 반도체, 엔비디아, 실적 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 삼성전자·SK하이닉스가 끌어올린 코스피…코스닥은 4%대 급락 - 산경투데이
-- 엇갈린 증시…코스피 0.78% 상승 vs 코스닥 5.09% 급락 - 프리진경제
-- 美 장기금리 다시 뛰자 코스피 1%대 하락…코스닥은 3%대 급락 - 산경투데이
-
-### 주요 이슈
-
-- AI 칩 타이탄 엔비디아 헤드라인 수익 달력; 세일즈포스(Salesforce), 인튜이트(Intuit)도 12월에 출시
-- 엔비디아 수익은 정체된 주식 시장을 구제할 수 있습니다. — AI 칩 제조업체 b
-- 트럼프 300,000미터톤의 다진 쇠고기를 관세 없이 수입할 수 있도록 허용합니다.
-- 외 29건
-
-### 투자자 체크포인트
-
-- 한국 기사 85건, 글로벌 기사 140건 수집
-- 한국 지수: KOSPI 6,912.95(+0.88%), KOSDAQ 801.94(-4.63%), USD/KRW 1,385.16(-0.65%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">57건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:63%"></div></div><span class="theme-count">36건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:23%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:12%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-22.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,912.95 (+0.88%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 801.94 (-4.63%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *마이크론 기술 (나스닥:MU) 주가 4% 상승 - 일어난 일은 다음과 같습니다.*
 
 ## 테마별 주요 뉴스
 

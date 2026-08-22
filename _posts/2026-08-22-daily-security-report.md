@@ -16,31 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-08-22 - 보안 뉴스 요약 �
 
 블록체인 보안 10건 분석. 주목 사건: **[Security] Coldcard strengthens seed generation with firmwar**.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Allbridge 익스플로잇: Bridge Logic Flaw 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 10건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (10건): security, exploit, bridge 보안 이슈 (10건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (3건): bridge, exploit, logic DeFi 동향 (3건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (4건): exploit, arithmetic, allbridge 생태계 동향 (4건) — 가스비·TVL 변화를 함께 확인하세요.
-
-### 긴급 이슈
-
-- [보안] Allbridge 익스플로잇: Bridge Logic Flaw
-- [보안] Maya 프로토콜 악용: 철회 논리 결함
-- [보안] 폭스마켓 악용: 현물가격 조작
-
-### 주요 이슈
-
-- [보안] Coldcard, 펌웨어 업데이트로 시드 생성 강화
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 10건
