@@ -11,7 +11,7 @@
         "blank.": 105,
         "beacon": 35,
         "wp-content/plugins": 2,
-        "gravatar.com/avatar": 3,
+        "gravatar.com/avatar": 4,
         "no-image": 17,
         "tracker": 68,
         "pixel": 8
@@ -19,5 +19,5 @@
     }
   },
   "since": "2026-04-23T08:54:23",
-  "last_seen": "2026-08-23T16:37:01"
+  "last_seen": "2026-08-23T16:47:43"
 }
