@@ -77,8 +77,9 @@ python3 -m pytest tests/
 # Description quality check
 python scripts/check_description_quality.py --days 7
 
-# Server morning cron setup (09:10 KST)
-bash scripts/install_server_morning_cron.sh
+# Server morning automation setup (09:10 KST)
+bash scripts/install_macos_launchagent.sh --install   # macOS LaunchAgent (Recommended for Mac mini)
+bash scripts/install_server_morning_cron.sh --install  # crontab alternative
 ```
 
 ## For AI Agents

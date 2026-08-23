@@ -1,7 +1,31 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Ensure robust PATH for macOS (rbenv first for ruby/bundle, Apple Silicon Homebrew, local bin)
+export PATH="$HOME/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+export TZ="Asia/Seoul"
+
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Load local environment variables if available
+for env_file in "$HOME/Desktop/.env" "$HOME/.env" "$REPO_ROOT/.env"; do
+  if [[ -f "$env_file" ]]; then
+    set -a
+    # shellcheck disable=SC1090
+    source "$env_file" 2>/dev/null || true
+    set +a
+  fi
+done
+
+# Rotate log file if exceeds 10MB
+LOG_FILE="$REPO_ROOT/_state/server-morning-autopost.log"
+if [[ -f "$LOG_FILE" ]]; then
+  LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
+  if [[ "$LOG_SIZE" -gt 10485760 ]]; then
+    mv "$LOG_FILE" "$LOG_FILE.1"
+  fi
+fi
+
 LOCK_DIR="/tmp/investing-morning-0910.lock"
 LOG_PREFIX="[server-0910]"
 
@@ -9,7 +33,21 @@ if ! mkdir "$LOCK_DIR" 2>/dev/null; then
   echo "$LOG_PREFIX already running, skip"
   exit 0
 fi
-trap 'rmdir "$LOCK_DIR" 2>/dev/null || true' EXIT
+
+# Prevent macOS sleep during pipeline execution
+CAFFEINATE_PID=""
+if command -v caffeinate >/dev/null 2>&1; then
+  caffeinate -d -i -m -u -t 3600 &
+  CAFFEINATE_PID=$!
+fi
+
+cleanup() {
+  rmdir "$LOCK_DIR" 2>/dev/null || true
+  if [[ -n "$CAFFEINATE_PID" ]]; then
+    kill "$CAFFEINATE_PID" 2>/dev/null || true
+  fi
+}
+trap cleanup EXIT
 
 cd "$REPO_ROOT"
 

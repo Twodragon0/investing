@@ -58,10 +58,12 @@ python3 -m ruff format --check scripts/ tests/
 # OpenCode 동기화 (git pull, 중앙 관리자)
 bash ~/Desktop/.twodragon0/bin/hourly-opencode-git-pull.sh
 
-# 서버 오전 9:10 자동 포스팅/품질 보정 크론 설치
-bash scripts/install_server_morning_cron.sh
+# 서버 오전 9:10 자동화 셋업 (맥미니 권장 LaunchAgent 또는 Cron)
+bash scripts/install_macos_launchagent.sh --install   # macOS LaunchAgent (권장)
+bash scripts/install_server_morning_cron.sh --install  # Crontab 대안
 
-# 서버 오전 9:10 자동화 수동 실행
+# 서버 오전 9:10 자동화 수동 실행 / 상태 확인
+bash scripts/install_macos_launchagent.sh --status
 bash scripts/server_morning_autopost.sh
 
 # 의존성 설치

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.twodragon.investing-morning-autopost</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/namyongkim/Desktop/investing/scripts/server_morning_autopost.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/namyongkim/Desktop/investing</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>10</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/namyongkim/Desktop/investing/_state/server-morning-autopost.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/namyongkim/Desktop/investing/_state/server-morning-autopost.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/namyongkim/.rbenv/shims:/Users/namyongkim/Desktop/investing/.venv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/namyongkim/.local/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>TZ</key>
+        <string>Asia/Seoul</string>
+        <key>LANG</key>
+        <string>en_US.UTF-8</string>
+        <key>LC_ALL</key>
+        <string>en_US.UTF-8</string>
+    </dict>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>AbandonProcessGroup</key>
+    <true/>
+</dict>
+</plist>
