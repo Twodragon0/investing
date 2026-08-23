@@ -66,6 +66,10 @@ bash scripts/install_server_morning_cron.sh --install  # Crontab 대안
 bash scripts/install_macos_launchagent.sh --status
 bash scripts/server_morning_autopost.sh
 
+# 로컬 수집기 통합 실행 & 디스크/로그 헬스체크
+bash scripts/run_local_collectors.sh --fast           # 로컬 수집기 일괄 실행 (--fast/--crypto/--stocks/--all)
+bash scripts/ops/health_and_logrotate.sh              # 디스크 및 로그/LaunchAgent 헬스체크
+
 # 의존성 설치
 pip install -r scripts/requirements.txt
 bundle install

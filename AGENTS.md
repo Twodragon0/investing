@@ -80,6 +80,10 @@ python scripts/check_description_quality.py --days 7
 # Server morning automation setup (09:10 KST)
 bash scripts/install_macos_launchagent.sh --install   # macOS LaunchAgent (Recommended for Mac mini)
 bash scripts/install_server_morning_cron.sh --install  # crontab alternative
+
+# Local collectors runner & Ops health check
+bash scripts/run_local_collectors.sh --fast           # Local batch collection (fast/crypto/stocks/all)
+bash scripts/ops/health_and_logrotate.sh              # Disk & log health check + Slack alert
 ```
 
 ## For AI Agents
