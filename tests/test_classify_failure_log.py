@@ -300,3 +300,18 @@ class TestWorkflowWiring:
             "the inline keyword grep is back — classification must go through "
             "scripts/tools/classify_failure_log.py so it stays under test"
         )
+
+    def test_issue_dedupe_paginates(self) -> None:
+        """`listForRepo` returns 30 by default — the dedupe window must not truncate.
+
+        Measured 2026-08-24: 363 open `ci-failure` issues. An unpaginated
+        `listForRepo` checked only the newest 30, so any failure whose issue had
+        aged past that window got a *duplicate* issue on recurrence — the
+        classifier's own output was inflating the backlog it reports into.
+        """
+        workflow = (_REPO_ROOT / ".github" / "workflows" / "classify-workflow-failures.yml").read_text(encoding="utf-8")
+        assert "github.paginate(github.rest.issues.listForRepo" in workflow, (
+            "issue dedupe must page through all open ci-failure issues; a bare "
+            "`github.rest.issues.listForRepo` silently caps at 30"
+        )
+        assert "per_page: 100" in workflow, "paginated dedupe should request full pages"

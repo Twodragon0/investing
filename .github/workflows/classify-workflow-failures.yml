@@ -140,11 +140,17 @@ jobs:
               'Action: investigate code or configuration changes in this run.'
             ].join('\n');
 
-            const { data: issues } = await github.rest.issues.listForRepo({
+            // `github.paginate` 필수 — `listForRepo` 는 기본 30건만 준다.
+            // 2026-08-24 실측으로 open `ci-failure` 이슈가 363건이었고, 그 상태에서
+            // dedupe 창은 최신 30건으로 잘려 있었다. 즉 31번째 이후로 밀려난
+            // 이슈와 같은 실패가 재발하면 중복 이슈가 새로 생긴다.
+            // `per_page: 100` 이므로 363건은 4요청. 실패 경로에서만 도는 호출이다.
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              labels: 'ci-failure'
+              labels: 'ci-failure',
+              per_page: 100
             });
 
             const exists = issues.some(
