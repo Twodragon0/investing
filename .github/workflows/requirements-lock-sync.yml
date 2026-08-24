@@ -23,10 +23,26 @@ name: Requirements Lock Sync
 # 커밋은 워크플로우를 재트리거하지 않는다. 커밋백에는 별도 PAT/App 토큰이 필요하다.
 # 그 토큰이 등록되기 전까지 쓸 수 있는 버전이 이것이다.
 #
-# 커밋백으로 올리려면: PAT/App 토큰을 `secrets.LOCK_SYNC_TOKEN` 으로 등록하고,
-# checkout 에 `ref: ${{ github.head_ref }}` + `token:` 을 주고, 아래 "Fail on lock
-# drift" 를 커밋·푸시 step 으로 교체한다. 지금 그 경로를 미리 넣지 않은 것은 의도다 —
-# 토큰이 없어 한 번도 실행해 볼 수 없는 코드가 된다.
+# ## 커밋백을 올리려면 — 먼저 설계 §9 를 읽어라 (2026-08-24 정정)
+#
+# 이전 버전의 이 주석은 "`secrets.LOCK_SYNC_TOKEN` 을 등록하고 checkout 에
+# `ref: ${{ github.head_ref }}` + `token:` 을 주라" 고 적었다. **그 절차는 Dependabot
+# PR 에서 작동하지 않는다.** Dependabot 이 트리거한 런은 Actions 시크릿에 접근할 수
+# 없어(접근 가능한 것은 별도의 Dependabot 시크릿 저장소뿐) 그 시크릿이 빈 문자열로
+# 해소되고, checkout 이 read-only GITHUB_TOKEN 으로 폴백해 push 가 403 이 된다.
+# 고치려는 대상이 바로 Dependabot PR 이므로 이 실패는 확정적이다.
+#
+# 작동하는 구조는 `workflow_run` 분리다 — 이 워크플로우(생산자, 권한 없음)가 락을
+# artifact 로 내놓고, 기본 브랜치에서 도는 별개 소비자 워크플로우가 그것을 받아
+# GitHub App 토큰으로 push 한다. `workflow_run` 런은 이전 런이 못 받았어도 시크릿과
+# write 토큰을 받는다. 생산자 절반은 **이미 이 파일에 구현돼 있다**(아래 artifact
+# 업로드 step).
+#
+# 전체 설계·보안 요구(특히 소비자가 artifact 를 신뢰해서는 안 되는 이유)와 롤아웃
+# 순서: docs/devsecops/requirements-lock-autosync-design.md §9.
+#
+# 이 파일에 커밋백을 직접 넣지 않은 것은 의도다 — 토큰이 없어 검증할 수 없고,
+# 위 이유로 애초에 이 트리거에서는 불가능하다.
 #
 # ## 하지 않는 것
 #
