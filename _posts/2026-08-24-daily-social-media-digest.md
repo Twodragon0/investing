@@ -29,43 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-24 - 소셜 미디어 뉴스 요�
 <div class="stat-item"><div class="stat-value">🟡 주의</div><div class="stat-label">시장 경계</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 트렌드: 금리, 기준금리, 인상 관련 19건 포착</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 기준금리 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, SEC 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 트럼프, SEC 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 기준금리, 다음주 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 19건의 뉴스 중 **매크로/금리** 관련이 15건(79%)으로 압도적입니다. 금리/경제 관련 이슈가 투자 심리에 큰 영향을 미치고 있습니다
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 1건, 정치·경제 18건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (15건): 금리, 기준금리, 인상 매크로 변수 (15건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (5건): 트럼프, SEC, 법안 정치 이슈 (5건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🔵 규제/정책** (3건): 트럼프, SEC 규제 움직임 (3건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 월드 프리즘] 트럼프, ‘억만장자 버블’에 갇혔나…민생경제와 멀어지는 백악관 - 뉴시안
-- 이번 주 엔비디아 실적 영향 관심…기준금리도 주목
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 18건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:33%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 없음에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

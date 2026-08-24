@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: XRP Has Rallied 1,000% After Every 60% Crash. Is this the Fourth? - 24/7 Wall St. - 72건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 랠리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 국채 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 의회, 트럼프 관련 23건</li><li>📊 <strong>매크로/금리</strong>: 국채, 자사주매입 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZjF2aEQ0VmR0WTAzSHQyeFBCcVJzaTN6OUl1QjkzM1hpZXBoZ1F4Umd6NVFSTFVaM3Jhdmk5dTBGOEk4WWVjdVhFeF9IY25uWFk3aFFOckxUSTN0aDlSS3o3LUhUbXpmTjdMaUROSnFZMGFnRC1FdmFnSnM3SkNkSWNwMTYtQVcwVzdBeGFvM2NSdzBUVkRIcmRsdS1zUGFPS3JHbHRadnFGd0ZUa1dlNHdORXRwMnNEUFRF?oc=5">XRP Has Rallied 1,000% After Every 60% Crash. Is this the Fourth? - 24/7 Wall St.</a></li><li><a href="https://decrypt.co/376287/microsoft-perfect-10-exploit-hackers-run-code">마이크로소프트 해커가 원격으로 코드를 실행할 수 있는 'Perfect 10' 익스플로잇 수정</a> <span class="p0-desc">Entra ID 결함은 가장 높은 심각도 점수를 얻었지만 마이크로소프트은 CVE를 게시하기 전에 버그를 패치했으며 악용되었다는 증거를 찾지 못했다고 말합니다.</span></li><li><a href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit">Coldcard, 1억 3천만 달러 비트코인 악용 후 새로운 보안 조치 추가</a> <span class="p0-desc">Coinkite의 최신 펌웨어에서는 사용자가 지갑 시드를 생성할 때 임의성을 추가하도록 요구하고 3주 검토 중에 발견된 추가 보안 문제를 수정합니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: XRP Has Rallied 1,000% After Every 60% Crash. Is this the Fourth? - 24/7 Wall St. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 72건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, 랠리, 무역 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (34건): 국채, 강세, 전망 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (23건): 의회, 트럼프, BTC 규제 움직임 (23건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- XRP Has Rallied 1,000% After Every 60% Crash. Is this the Fourth? - 24/7 Wall St.
-- 마이크로소프트 해커가 원격으로 코드를 실행할 수 있는 'Perfect 10' 익스플로잇 수정
-- Coldcard, 1억 3천만 달러 비트코인 악용 후 새로운 보안 조치 추가
-
-### 주요 이슈
-
-- 비트코인과 금이 어떻게 단 며칠 만에 슬럼프에서 MVP 주간으로 변했는지
-- 4년 전, 암호화폐 보스가 사라졌습니다. 이제 그의 후임자가 되었습니다.
-- 비트코인 1억원 재돌파
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 규제
-- **주요 출처**: Google News(20건), CoinDesk(12건), Google News KR(10건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **72건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

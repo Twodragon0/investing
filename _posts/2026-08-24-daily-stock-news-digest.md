@@ -33,50 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-24 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Emergency savings shortfall signals 'danger' for working households, Suze Orman says - 138건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 압축전환 이슈 부각</li><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 제재 관련 10건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/08/22/emergency-savings-workers-financial-strain.html">Emergency savings shortfall signals 'danger' for working households, Suze Orman says</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Emergency savings shortfall signals 'danger' for working households, Suze Orman says 
-총 138건의 뉴스 중 P1 주요 이슈도 19건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (12건): 국채, 금리, 금통위 매크로 변수 (12건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (11건): 엔비디아, 압축전환, 대한민국 기술 이슈 (11건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **🟠 비트코인** (6건): 비트코인, ETF, 변동성 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 긴급 저축 부족은 일하는 가구에 '위험' 신호라고 Suze Orman은 말합니다.
-
-### 주요 이슈
-
-- History Says You Should Know These 3 Things Before Buying the Vanguard S&P 500 E
-- 삼전닉스 반등하자 서학개미 움직였다…한주간 라운드힐 ETF 1천억 사들여
-- Tariff refunds are hitting retailers' wallets. Here's what they're doing with th
-- 외 16건
-
-### 투자자 체크포인트
-
-- 한국 기사 47건, 글로벌 기사 91건 수집
-- 한국 지수: KOSPI 6,912.95(+0.88%), KOSDAQ 801.94(-4.63%), USD/KRW 1,385.98(-0.59%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:75%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:69%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:38%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:62%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:100%"></div></div><span class="theme-count">16건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-24.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,912.95 (+0.88%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 801.94 (-4.63%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *한국은행이 오는 27일 올해 경제성장률 전망치를 3%대로 대폭 높이고 기준금리를 연 3.00%로 올릴지 주목된다.*
 
 ## 테마별 주요 뉴스
 
