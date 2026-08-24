@@ -139,6 +139,20 @@ class TestWorkflowWiring:
         assert perms.get("issues") == "write"
         assert perms.get("contents") == "read", "this workflow must not need write access to the tree"
 
+    def test_grants_actions_read_for_the_reusable_alert(self, parsed: dict) -> None:
+        """A reusable workflow inherits the *caller's* permissions.
+
+        `alert-consecutive-failures.yml` reads run history, so it declares
+        `actions: read`. Omitting it here does not fail loudly at author time —
+        `actionlint` passes, the YAML is valid — the alert job simply cannot run.
+        Caught in CI by `scripts/tools/check_workflow_permissions.py`; asserted
+        here so the reason lives next to the workflow it constrains.
+        """
+        assert parsed["permissions"].get("actions") == "read", (
+            "the alert-consecutive-failures call needs `actions: read` from its "
+            "caller; without it the failure alerting silently cannot run"
+        )
+
     def test_concurrency_group_is_ref_scoped(self, parsed: dict) -> None:
         """A constant group cancels unrelated runs — measured on supply-chain-lock.yml.
 

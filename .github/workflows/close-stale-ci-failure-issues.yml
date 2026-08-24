@@ -47,6 +47,10 @@ on:
 permissions:
   contents: read
   issues: write
+  # `alert-consecutive-failures` 재사용 워크플로우가 요구한다 — 재사용 워크플로우는
+  # 호출자 권한을 상속하므로 여기서 주지 않으면 그 잡이 실행조차 못 한다.
+  # `scripts/tools/check_workflow_permissions.py` 가 이 관계를 강제한다.
+  actions: read
 
 concurrency:
   # ref 스코프. 전역 상수 그룹 + cancel-in-progress 는 서로 무관한 런을 취소해
