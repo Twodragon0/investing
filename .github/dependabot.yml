@@ -4,40 +4,38 @@ version: 2
 registries: {}
 
 updates:
-  - package-ecosystem: "pip"
-    directory: "/scripts"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      timezone: "Asia/Seoul"
-    open-pull-requests-limit: 5
-    labels:
-      - "dependencies"
-      - "python"
-    commit-message:
-      prefix: "chore(deps):"
-    groups:
-      security-patches:
-        applies-to: security-updates
-        update-types:
-          - "patch"
-          - "minor"
-
-  # 루트의 `requirements-dev.txt` 는 `/scripts` 항목이 커버하지 않는다. Dependabot
-  # 의 pip 디렉토리는 정확히 그 경로의 매니페스트만 읽으므로, 개발 도구(ruff,
-  # pytest, playwright 등)가 취약점 알림 밖에 있었다.
+  # pip — 저장소의 두 매니페스트를 **이 항목 하나가** 커버한다:
+  #   scripts/requirements.txt  (런타임)
+  #   requirements-dev.txt      (ruff, pytest, playwright, basedpyright)
+  #
+  # 이전에는 `/scripts` 와 `/` 두 항목이었다. 그 분리는 "Dependabot 의 pip
+  # 디렉토리는 정확히 그 경로의 매니페스트만 읽는다" 는 전제 위에 있었는데,
+  # **그 전제가 틀렸다**. `/` 는 하위 `requirements*.txt` 를 재귀 탐색한다 —
+  # 2026-08-24 실측으로 `/` 항목이 `scripts/requirements.txt` 를 바꾼 PR 이
+  # 7건이었다: #1097 #1098 #1100 #1106 #1143 #1144 #1189.
+  #
+  # 결과는 체계적 중복이었다. 같은 bump 가 두 브랜치(`dependabot/pip/<pkg>` 와
+  # `dependabot/pip/scripts/<pkg>`)로 두 번 열렸고, 둘 다 락 게이트에 걸려
+  # 정체 PR 을 두 배로 만들었다. #1184 와 #1189 가 그 쌍이다 — 동일한 boto3
+  # bump, 동일한 파일.
+  #
+  # 통합의 대가: prefix 로 런타임/개발을 구분하던 신호가 사라진다. 중립적인
+  # `chore(deps):` 로 통일했다 — 어차피 `/` 항목의 `chore(deps-dev):` 는 런타임
+  # 의존성 bump 에도 붙어서(#1189) 이미 신뢰할 수 없는 신호였다.
+  #
+  # limit 은 두 항목분(5+5)을 합쳐 8 로 둔다. 중복이 사라지므로 10 은 불필요하다.
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
       timezone: "Asia/Seoul"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 8
     labels:
       - "dependencies"
       - "python"
     commit-message:
-      prefix: "chore(deps-dev):"
+      prefix: "chore(deps):"
     groups:
       security-patches:
         applies-to: security-updates
