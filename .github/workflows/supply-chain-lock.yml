@@ -51,8 +51,21 @@ permissions:
   actions: read
   issues: write
 
+# ref/PR 스코프 필수. 전역 상수 그룹 + `cancel-in-progress: true` 는 **서로 무관한
+# 런끼리 서로를 취소**한다. 이 워크플로우는 `push` 와 `pull_request` 를 모두 받으므로
+# 동시에 여러 ref 가 하나의 슬롯을 다툰다 — 최근 60런 실측(2026-08-24):
+#
+#   push          : 취소 25 / 성공 9 / 실패 1   → 71% 취소
+#   pull_request  : 취소 10 / 성공 10 / 실패 3  → 43% 취소
+#   전체          : 35/60 = 58% 취소
+#
+# 이건 공급망 무결성 게이트다(락 해시 ↔ requirements.txt 검증, 상류 yank/tamper 탐지).
+# 절반 이상이 취소되면 게이트가 대부분 **돌지 않는다**. 게다가 PR 브랜치에 푸시하면
+# push 런과 pull_request 런이 같은 슬롯을 다퉈 서로를 죽이므로, 어느 쪽도 완주하지
+# 못한 채 PR 에는 red X 만 남는다. #1184 가 실제로 그 상태였다 — `sync` 는 통과했는데
+# 취소된 `verify` 때문에 막힌 PR 처럼 보였다.
 concurrency:
-  group: supply-chain-lock
+  group: supply-chain-lock-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
