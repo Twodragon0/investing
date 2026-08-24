@@ -13,6 +13,6 @@
 | 공통 모듈 (scripts/common/**/*.py, __init__ 제외) | 62 |
 | GitHub Actions 워크플로우 (.github/workflows/*.yml) | 55 |
 | 카테고리 페이지 (pages/*.md) | 15 |
-| 테스트 파일 (tests/test_*.py) | 157 |
+| 테스트 파일 (tests/test_*.py) | 158 |
 
 <!-- component-counts:end -->
