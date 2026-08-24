@@ -43,6 +43,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
+      # 분류와 근거 추출은 `scripts/tools/classify_failure_log.py` 가 한다.
+      #
+      # 인라인 grep 이었을 때의 결함: pytest 로그는 대부분 *테스트 이름*이고, 이
+      # 저장소의 테스트 이름에 `timeout`/`exception` 이 들어 있다
+      # (`test_wait_for_with_timeout`, `test_fetch_exception_propagates`).
+      # 실측(run 32456925989 → issue #1181): failed.log 의 `timeout` 매치 20건 중
+      # 16건이 `PASSED` 라인, 나머지는 PytestConfigWarning. 진짜 네트워크 신호는 0건.
+      # 그런데도 raw=network 로 분류돼 ~13분 quality 잡을 무의미하게 rerun 하고,
+      # attempt 2 에서 code 로 escalate 해 신호가 늦게, 잘못된 라벨로 도착했다.
+      #
+      # 이 파일에 로직을 다시 인라인하지 말 것 —
+      # `tests/test_classify_failure_log.py` 가 배선까지 검증한다.
       - name: Classify failure type
         id: classify
         env:
@@ -52,48 +64,9 @@ jobs:
         run: |
           set -euo pipefail
           gh run view "$RUN_ID" --log-failed > failed.log 2>&1 || gh run view "$RUN_ID" > failed.log 2>&1 || true
-
-          network_pattern='(timed out|timeout|couldn.t connect|connection reset|connection refused|temporary failure|name resolution|502 bad gateway|503 service unavailable|504 gateway timeout|429 too many requests|failed to connect|tls handshake timeout|ssl connect error)'
-
-          if grep -Eqi "$network_pattern" failed.log; then
-            classification="network"
-          else
-            classification="code"
-          fi
-
-          echo "classification=$classification" >> "$GITHUB_OUTPUT"
-
-          evidence_snippet=$(python3 - <<'PY'
-          import re
-          from pathlib import Path
-
-          log_path = Path("failed.log")
-          if not log_path.exists():
-              print("failed.log not found")
-              raise SystemExit(0)
-
-          lines = log_path.read_text(encoding="utf-8", errors="replace").splitlines()
-          pattern = re.compile(
-              r"(timed out|timeout|couldn.t connect|connection reset|connection refused|temporary failure|name resolution|502 bad gateway|503 service unavailable|504 gateway timeout|429 too many requests|failed to connect|tls handshake timeout|ssl connect error|traceback|error:|exception)",
-              re.IGNORECASE,
-          )
-
-          indexed = [(idx + 1, line.strip()) for idx, line in enumerate(lines)]
-          matches = [f"L{idx}: {line}" for idx, line in indexed if line and pattern.search(line)]
-          selected = matches[:12] if matches else [f"L{idx}: {line}" for idx, line in indexed[:12] if line]
-
-          if not selected:
-              print("no relevant log lines captured")
-          else:
-              print("\n".join(selected))
-          PY
-          )
-
-          {
-            echo "evidence_snippet<<EOF"
-            printf '%s\n' "$evidence_snippet"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+          python3 scripts/tools/classify_failure_log.py \
+            --log failed.log \
+            --github-output "$GITHUB_OUTPUT"
 
       - name: Finalize classification with escalation
         id: classify_final
