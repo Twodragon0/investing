@@ -104,6 +104,44 @@ changes (항상 실행, 변경 파일 판정)
 이 배선은 `tests/test_required_check_aggregator_guard.py` 가 강제한다(5케이스:
 `needs:` 완결성, `always()` 존재, `paths:` 부재, 스캐너 양방향).
 
+### 조치 B-2 — `supply-chain-lock.yml` (2026-08-24, 누락 보완)
+
+조치 A·B 는 `security-scan`·`dependency-review`·`guard-falsifiability` 를 다뤘지만
+**`supply-chain-lock.yml` 은 빠져 있었다.** 하필 §5.3(stale 락이 auto-merge 로
+들어가는 구멍)이 가리키는 게이트가 그것이다 — 후보 표에도 없었으니 Phase 2 를
+열어도 락 검증은 required 가 되지 않는 상태였다.
+
+조치 B 와 동일한 형태로 바꿨다:
+
+```
+changes (항상 실행, 변경 파일 판정)
+  └─ verify (if: needs.changes.outputs.relevant == 'true', --require-hashes 검증)
+       └─ gate (if: always(), needs: [changes, verify])   ← required check 대상
+```
+
+- `pull_request` 트리거의 `paths:` 를 제거했다. `push` 트리거의 필터는 유지 —
+  main 푸시는 required check 대상이 아니고 주간 스케줄이 전수를 덮는다.
+- `changes` 는 `gh api pulls/{n}/files` 로 판정한다(조치 B 와 동일, 추가 액션 의존
+  없음). PR 컨텍스트가 아니면 전수 실행.
+- `gate` 는 `skipped` 를 통과, `failure`/`cancelled` 를 실패로 본다. `cancelled` 를
+  포함시킨 것은 이 워크플로우에서 **실제로 발생했던** 실패 모드이기 때문이다
+  (concurrency 전역 상수 그룹으로 런 58%가 취소 — #1199 에서 수정).
+
+`tests/test_supply_chain_lock_gate_guard.py` 가 8개 불변식을 고정한다(각각 뮤테이션
+확인). 경로 목록이 `push:` 트리거와 `changes` 잡 두 곳에 있으므로 그 드리프트도
+단언 대상이다 — 조치 B 가 파생으로 없앤 그 문제와 같은 종류이며, 여기서는 목록이
+3개뿐이라 파생 도구 대신 동등성 단언을 택했다.
+
+#### 실측: §5.3 의 위험은 아직 잠재 상태다 (2026-08-24)
+
+`dependabot-auto-merge.yml` 의 `Enable auto-merge` 스텝이 **한 번도 실행된 적
+없다** — 최근 12개 런 전부 `skipped`(`update-type` 이 `version-update:semver-patch`
+가 아니었다. 범위 제약 bump 는 `fetch-metadata` 가 patch 로 분류하지 않는다).
+
+즉 구멍은 구조적으로 실재하지만 **관측된 발생은 0건**이다. 위 "결정을 다시 열어야
+하는 신호" 중 "required check 를 우회한 회귀가 실제로 발생한다" 는 아직 충족되지
+않았다. 준비 작업만 완비해 두고 룰셋은 그대로 둔다.
+
 ### required check 후보 (Phase 2 적용 시)
 
 전 PR 무조건 생성되는 체크만 등록할 수 있다.
@@ -115,6 +153,7 @@ changes (항상 실행, 변경 파일 판정)
 | `Python SAST (Bandit)` · `Secret Detection` · `Workflow Permissions Audit` | `security-scan.yml` | ✅ 조치 A 이후 |
 | `Dependency Review` | `dependency-review.yml` | ✅ 조치 A 이후 |
 | `Falsifiability gate` | `guard-falsifiability.yml` | ✅ 조치 B 이후 |
+| `Supply-chain lock gate` | `supply-chain-lock.yml` | ✅ 조치 B-2 이후(2026-08-24) |
 
 **등록하지 않을 것:**
 
@@ -205,8 +244,9 @@ third-party 앱은 허용된다.
 - 저장소를 조직으로 옮길 다른 이유가 생긴다(그러면 경로 3이 공짜가 된다)
 - required check 를 우회한 회귀가 실제로 발생한다
 
-준비 작업(조치 A·B, required check 후보 9종, 집계 잡)은 **이미 머지돼 있으므로**
-경로를 고르는 순간 룰셋 생성만 남는다.
+준비 작업(조치 A·B·B-2, required check 후보 **10종**, 집계 잡)은 **이미 머지돼
+있으므로** 경로를 고르는 순간 룰셋 생성만 남는다. 2026-08-24 에 마지막 누락이었던
+`supply-chain-lock.yml` 까지 채웠다(조치 B-2).
 
 ### 어느 경로를 택하든 남는 트레이드오프
 
