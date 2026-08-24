@@ -51,8 +51,11 @@ jobs:
       - name: Install dependencies
         run: |
           # ruff는 핀 고정: floating(unpinned) 시 새 릴리스의 format 규칙 변경으로
-          # 코드 변경 없이 main이 갑자기 red가 될 수 있음. .pre-commit-config.yaml의
-          # ruff-pre-commit rev(v0.16.1) 및 requirements-dev.txt와 반드시 동기화할 것.
+          # 코드 변경 없이 main이 갑자기 red가 될 수 있음. 아래 핀은
+          # .pre-commit-config.yaml 의 ruff-pre-commit `rev` 및 requirements-dev.txt 의
+          # `ruff==` 와 반드시 같아야 하며, `tests/test_ruff_version_pin_sync.py` 가
+          # 세 곳의 일치를 강제한다. (여기에 버전 숫자를 다시 적지 말 것 — bump 마다
+          # 낡는다. 2026-08-24 에 0.16.1→0.16.4 bump 후 실제로 낡은 채 남았다.)
           pip install -r scripts/requirements.txt ruff==0.16.4 yamllint basedpyright pytest pytest-cov pytest-xdist pre-commit
           curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
           tar -xzf /tmp/actionlint.tgz -C /tmp
