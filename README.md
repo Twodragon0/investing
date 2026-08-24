@@ -52,7 +52,7 @@
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
 | scripts/common/image\_generator/\_\_init\_\_.py   |        6 |        0 |    100% |           |
-| scripts/common/image\_generator/base.py           |      327 |       17 |     95% |50-54, 64-65, 79-83, 89-92, 433 |
+| scripts/common/image\_generator/base.py           |      327 |       16 |     95% |50-54, 65, 79-83, 89-92, 433 |
 | scripts/common/image\_generator/coins.py          |      276 |        0 |    100% |           |
 | scripts/common/image\_generator/market.py         |      287 |        4 |     99% |   449-454 |
 | scripts/common/image\_generator/news.py           |      146 |        0 |    100% |           |
@@ -130,7 +130,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24650** | **6334** | **74%** |           |
+| **TOTAL**                                         | **24650** | **6333** | **74%** |           |
 
 
 ## Setup coverage badge
