@@ -1,0 +1,207 @@
+# `classify-workflow-failures.yml` 은 코드 실패마다 이슈를 만들지만 **닫지 않는다**.
+# 종료 경로가 없어서 트래커가 자동 이슈로 포화됐다 — 2026-08-24 실측:
+#
+#   open 이슈 378건 중 363건(96%)이 `ci-failure` 라벨 자동 생성
+#   월별: 2026-04 197건 / 05 116건 / 06 20건 / 07 7건 / 08 22건
+#   워크플로우별: Code Quality 267건 / Security Scan 25건 / 수집기 합계 ~60건
+#
+# 4월·5월분 313건은 이미 해결된 실패의 잔해다. 그 결과 사람이 다뤄야 하는
+# 이슈 15건이 노이즈에 묻혀 트래커가 관측 수단으로 기능하지 못한다.
+#
+# ## 왜 "해결됐는지" 를 확인하지 않고 나이로 닫나
+#
+# 이상적으로는 같은 워크플로우의 후속 run 이 성공했는지 보고 닫아야 한다. 그런데
+# 이슈 본문의 `Dedupe Key` 는 `workflow|run|sha` 라서 특정 커밋에 묶여 있고, 그
+# 커밋은 대개 이미 main 에서 사라졌다(스쿼시 머지·강제 정리). 즉 "이 실패가 지금도
+# 재현되는가" 를 이슈 하나만 보고 판정할 수 없다.
+#
+# 대신 나이 + **사람 개입 흔적**으로 판정한다. 코멘트가 하나라도 달렸거나 `keep`
+# 라벨이 붙었으면 누군가 트리아지한 것이므로 건드리지 않는다. 아직 유효한 실패라면
+# 분류기가 다음 실패에서 새 이슈를 만든다 — 정보가 영구히 사라지는 구조가 아니다.
+#
+# ## 상한을 두고, 그 사실을 로그에 남긴다
+#
+# 한 번에 `max_close` 건까지만 닫는다(기본 200). 초회 실행은 363건이라 두 번에
+# 걸쳐 소화된다. 상한에 걸려 남긴 건수를 step summary 에 반드시 적는다 —
+# 조용히 잘린 상한은 "전부 처리했다" 로 읽혀서 다음 사람을 속인다.
+name: Close Stale CI-Failure Issues
+
+on:
+  schedule:
+    - cron: '0 5 * * *'  # 매일 05:00 UTC (14:00 KST)
+  workflow_dispatch:
+    inputs:
+      age_days:
+        description: '이 일수보다 오래 갱신되지 않은 ci-failure 이슈를 닫는다'
+        required: false
+        default: '30'
+      max_close:
+        description: '한 실행에서 닫을 최대 건수 (레이트리밋 보호)'
+        required: false
+        default: '200'
+      dry_run:
+        description: 'true 면 닫지 않고 대상만 보고한다 (초회 실행 시 권장)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  # ref 스코프. 전역 상수 그룹 + cancel-in-progress 는 서로 무관한 런을 취소해
+  # 게이트를 조용히 건너뛰게 만든다(supply-chain-lock.yml 에서 실측된 실패 모드).
+  group: close-stale-ci-failure-issues-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  close-stale:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Close stale ci-failure issues
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3  # v9.0.0
+        env:
+          AGE_DAYS: ${{ inputs.age_days || '30' }}
+          MAX_CLOSE: ${{ inputs.max_close || '200' }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        with:
+          script: |
+            const ageDays = Number(process.env.AGE_DAYS);
+            const maxClose = Number(process.env.MAX_CLOSE);
+            const dryRun = process.env.DRY_RUN === 'true';
+
+            if (!Number.isFinite(ageDays) || ageDays < 1) {
+              core.setFailed(`age_days must be a positive number, got "${process.env.AGE_DAYS}"`);
+              return;
+            }
+            if (!Number.isFinite(maxClose) || maxClose < 1) {
+              core.setFailed(`max_close must be a positive number, got "${process.env.MAX_CLOSE}"`);
+              return;
+            }
+
+            const cutoff = new Date(Date.now() - ageDays * 24 * 60 * 60 * 1000);
+
+            // paginate 필수 — `listForRepo` 는 기본 30건만 준다. 363건 상태에서
+            // 페이지네이션 없이 돌면 매 실행이 같은 최신 30건만 보고 끝난다.
+            const all = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'ci-failure',
+              per_page: 100,
+            });
+
+            // PR 은 issues API 에도 나온다. 라벨 조합상 거의 없지만 배제한다.
+            const issues = all.filter(i => !i.pull_request);
+
+            const kept = [];
+            const candidates = [];
+            for (const issue of issues) {
+              const labels = (issue.labels || []).map(l => (typeof l === 'string' ? l : l.name));
+              if (labels.includes('keep')) {
+                kept.push({ number: issue.number, why: 'keep 라벨' });
+                continue;
+              }
+              if ((issue.comments || 0) > 0) {
+                kept.push({ number: issue.number, why: `코멘트 ${issue.comments}건 (사람 트리아지)` });
+                continue;
+              }
+              if (new Date(issue.updated_at) >= cutoff) {
+                kept.push({ number: issue.number, why: `최근 갱신 (${issue.updated_at.slice(0, 10)})` });
+                continue;
+              }
+              candidates.push(issue);
+            }
+
+            // 오래된 것부터. 상한에 걸리면 가장 최근 것들이 다음 실행으로 넘어간다.
+            candidates.sort((a, b) => new Date(a.updated_at) - new Date(b.updated_at));
+            const target = candidates.slice(0, maxClose);
+            const deferred = candidates.length - target.length;
+
+            const closed = [];
+            const failed = [];
+            for (const issue of target) {
+              if (dryRun) {
+                closed.push(issue.number);
+                continue;
+              }
+              try {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: [
+                    `자동 종료: ${ageDays}일 이상 갱신되지 않은 \`ci-failure\` 자동 생성 이슈입니다.`,
+                    '',
+                    '이 이슈는 `classify-workflow-failures.yml` 이 만든 것이고, 코멘트가 없어',
+                    '트리아지되지 않은 상태입니다. 해당 실패가 지금도 재현된다면 분류기가',
+                    '다음 실패에서 새 이슈를 만듭니다 — 정보는 사라지지 않습니다.',
+                    '',
+                    '자동 종료를 원하지 않으면 `keep` 라벨을 붙이거나 코멘트를 남기세요.',
+                    '',
+                    `닫은 워크플로우: \`${context.workflow}\` (run ${context.runId})`,
+                  ].join('\n'),
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned',
+                });
+                closed.push(issue.number);
+              } catch (error) {
+                // 한 건 실패가 나머지를 막지 않게 한다. 단, 반드시 집계에 남긴다.
+                failed.push({ number: issue.number, message: error.message });
+                core.warning(`#${issue.number} 종료 실패: ${error.message}`);
+              }
+            }
+
+            const lines = [
+              `## Stale \`ci-failure\` 이슈 종료${dryRun ? ' (DRY RUN — 실제로 닫지 않음)' : ''}`,
+              '',
+              `- 기준: ${ageDays}일 이상 미갱신, 코멘트 0건, \`keep\` 라벨 없음`,
+              `- open \`ci-failure\` 이슈: **${issues.length}**건`,
+              `- 종료 대상: **${candidates.length}**건`,
+              `- ${dryRun ? '종료 예정' : '종료 완료'}: **${closed.length}**건`,
+              `- 보존: **${kept.length}**건`,
+            ];
+
+            // 상한으로 남긴 건수를 절대 침묵시키지 않는다.
+            if (deferred > 0) {
+              lines.push(
+                `- ⚠️ 상한(\`max_close=${maxClose}\`)으로 **${deferred}건 이월** — 다음 실행에서 처리됩니다.`
+              );
+              core.notice(`max_close=${maxClose} 상한으로 ${deferred}건을 이월했습니다.`);
+            }
+            if (failed.length > 0) {
+              lines.push(`- ❌ 종료 실패: **${failed.length}**건`);
+              lines.push('', '<details><summary>실패 상세</summary>', '');
+              for (const f of failed) lines.push(`- #${f.number}: ${f.message}`);
+              lines.push('', '</details>');
+            }
+            if (kept.length > 0) {
+              lines.push('', '<details><summary>보존 사유</summary>', '');
+              for (const k of kept.slice(0, 50)) lines.push(`- #${k.number}: ${k.why}`);
+              if (kept.length > 50) lines.push(`- … 외 ${kept.length - 50}건`);
+              lines.push('', '</details>');
+            }
+
+            await core.summary.addRaw(lines.join('\n')).write();
+
+            if (failed.length > 0 && closed.length === 0) {
+              core.setFailed('종료 대상이 있었지만 한 건도 닫지 못했습니다 — 권한/레이트리밋을 확인하세요.');
+            }
+
+  # 일 1회. 이 잡이 조용히 죽으면 트래커가 다시 포화된다 — 애초에 이 워크플로우를
+  # 만들게 한 상태로 되돌아가는데, 그 사실을 알려주는 것이 아무것도 없다.
+  # `tests/test_workflow_alerting_coverage_guard.py` 가 이 등록을 강제한다.
+  alert-consecutive-failures:
+    needs: close-stale
+    if: failure()
+    uses: ./.github/workflows/alert-consecutive-failures.yml
+    with:
+      workflow-name: 'Close Stale CI-Failure Issues'
+      threshold: 2
+    secrets: inherit
