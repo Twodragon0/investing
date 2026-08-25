@@ -32,10 +32,13 @@ jobs:
         with:
           python-version: '3.11'
 
+      # `post_comment` — 이 잡은 앞선 런의 artifact 만 읽어 PR 에 코멘트한다.
+      # `pull-requests: write` 를 요구한다(워크플로우 상단에 있음).
       - name: Post coverage comment
-        uses: py-cov-action/python-coverage-comment-action@63f52f4fbbffada6e8dee8ec432de7e01df9ba79  # v3.41
+        uses: py-cov-action/python-coverage-comment-action@a05be3d2e8a6272d3ef5fb2840ab20368bb2eb71  # v4.3
         with:
           GITHUB_TOKEN: ${{ github.token }}
+          ACTIVITY: post_comment
           GITHUB_PR_RUN_ID: ${{ github.event.workflow_run.id }}
           MINIMUM_GREEN: 50
           MINIMUM_ORANGE: 40
