@@ -133,6 +133,32 @@ def _probe_steps(*refs: str) -> str:
 # 모듈은 `pathlib` 을 import 하지 않아 autouse fixture 의 dedup import 가 NameError
 # 로 죽었다 — 테스트 본문은 실행조차 되지 않았는데 rc!=0 이라 FALSIFIABLE 로 보였다.
 # 주입은 대상 모듈에 이미 있는 이름만 쓸 것(또는 import 불필요한 리터럴).
+# 커버리지 하한 케이스의 앵커는 **현재 값에서 파생**시킨다. 하드코딩하면 하한을
+# ratchet 할 때마다(55 -> 65 -> 70 -> 73 ...) 이 하네스가 AMBIGUOUS-ANCHOR 로
+# 죽는다 — 2026-08-25 에 70 -> 73 상향에서 실제로 5개 앵커가 한꺼번에 깨졌다.
+# 가드는 "하한이 내려가는 것"을 막으라고 있는 것이지, 올라갈 때 손이 가라고 있는
+# 게 아니다.
+_COV_FLOOR_RE = re.compile(r"--cov-fail-under=(\d+)")
+
+
+def _current_coverage_floor() -> int:
+    """`pyproject.toml` 의 현재 커버리지 하한. 못 찾으면 조용히 넘어가지 않는다."""
+    src = (REPO_ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    found = _COV_FLOOR_RE.findall(src)
+    if len(found) != 1:
+        raise RuntimeError(
+            f"pyproject.toml 에서 --cov-fail-under 를 정확히 1개 찾지 못했다 (found={found}). "
+            "커버리지 하한 mutation 케이스의 앵커를 만들 수 없다."
+        )
+    return int(found[0])
+
+
+#: 현재 하한과, 그 아래로 끌어내리는 mutation 목표값. 목표값은 어떤 합리적 하한보다도
+#: 낮아야 `test_*_coverage_floor_enforced` 가 red 가 된다.
+_FLOOR = _current_coverage_floor()
+_FLOOR_LOWERED = 50
+_WORKFLOW_FLOOR_LOWERED = 40
+
 STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "AST 스캔: 스크립트에 cwd-상대 _state 주입 (form A)",
@@ -191,24 +217,24 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_hermetic_test_writes_guard.py::test_detector_flags_all_banned_forms",
     ),
     StaticCase(
-        "커버리지 하한 하향 (70 -> 50)",
+        f"커버리지 하한 하향 ({_FLOOR} -> {_FLOOR_LOWERED})",
         "pyproject.toml",
-        "--cov-fail-under=70",
-        "--cov-fail-under=50",
+        f"--cov-fail-under={_FLOOR}",
+        f"--cov-fail-under={_FLOOR_LOWERED}",
         "tests/test_coverage_floor_guard.py::test_pyproject_coverage_floor_enforced",
     ),
     StaticCase(
         "커버리지 게이트 제거 (addopts)",
         "pyproject.toml",
-        " --cov-fail-under=70",
+        f" --cov-fail-under={_FLOOR}",
         "",
         "tests/test_coverage_floor_guard.py::test_pyproject_coverage_floor_enforced",
     ),
     StaticCase(
-        "워크플로우 전역 커버리지 하한 하향 (70 -> 40)",
+        f"워크플로우 전역 커버리지 하한 하향 ({_FLOOR} -> {_WORKFLOW_FLOOR_LOWERED})",
         ".github/workflows/code-quality.yml",
-        "--fail-under=70",
-        "--fail-under=40",
+        f"--fail-under={_FLOOR}",
+        f"--fail-under={_WORKFLOW_FLOOR_LOWERED}",
         "tests/test_coverage_floor_guard.py::test_workflow_global_coverage_floor_enforced",
     ),
     # ---------------------------------------------------------------------
@@ -255,8 +281,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "커버리지 측정 범위 축소 (pyproject --cov)",
         "pyproject.toml",
-        '"--cov=scripts --cov-fail-under=70"',
-        '"--cov=scripts/common/summary_sections.py --cov-fail-under=70"',
+        f'"--cov=scripts --cov-fail-under={_FLOOR}"',
+        f'"--cov=scripts/common/summary_sections.py --cov-fail-under={_FLOOR}"',
         "tests/test_coverage_floor_guard.py::test_pyproject_coverage_scope_not_narrowed",
     ),
     StaticCase(
@@ -276,8 +302,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "커버리지 게이트에서 모듈 제외 (--omit)",
         ".github/workflows/code-quality.yml",
-        "python3 -m coverage report --fail-under=70",
-        'python3 -m coverage report --fail-under=70 --omit="*/collect_*.py"',
+        f"python3 -m coverage report --fail-under={_FLOOR}",
+        f'python3 -m coverage report --fail-under={_FLOOR} --omit="*/collect_*.py"',
         "tests/test_coverage_floor_guard.py::test_workflow_coverage_gate_omits_nothing",
     ),
     StaticCase(
