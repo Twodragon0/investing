@@ -109,6 +109,36 @@ jobs:
           path: coverage.json
           retention-days: 1
 
+      # `post_comment` 는 코멘트를 **계산하지 않는다** — `process_pr` 가 만들어 둔
+      # `python-coverage-comment-action` artifact 를 내려받아 그대로 붙일 뿐이다.
+      # 이 스텝이 없던 동안 coverage-comment.yml 은 매 PR 마다 `NoArtifact` 로 끝나면서
+      # **exit 0** 을 반환했다(run 32797674530, PR #1219 — 코멘트 0건, 잡은 green).
+      # 배지(save_coverage_data_files)는 정상이라 겉으로는 파이프라인이 살아 있어 보인다.
+      #
+      # 직접 붙이지 않고 artifact 로 넘기는 이유는 Dependabot PR 이다. Dependabot 런의
+      # `GITHUB_TOKEN` 은 아래 `permissions:` 블록과 무관하게 read-only 라서 이 잡은
+      # 코멘트를 쓸 수 없다. 쓰기 권한을 가진 `workflow_run` 잡이 대신 붙인다.
+      - name: Generate coverage comment
+        id: coverage_comment
+        if: github.event_name == 'pull_request'
+        uses: py-cov-action/python-coverage-comment-action@a05be3d2e8a6272d3ef5fb2840ab20368bb2eb71  # v4.3
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
+          ACTIVITY: process_pr
+          MINIMUM_GREEN: 50
+          MINIMUM_ORANGE: 40
+          COVERAGE_DATA_BRANCH: python-coverage-comment-action-data
+
+      - name: Store coverage comment for the post_comment job
+        # 액션이 직접 코멘트를 붙였다면 파일을 쓰지 않는다 — 그때는 업로드할 것도 없다.
+        if: steps.coverage_comment.outputs.COMMENT_FILE_WRITTEN == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          # 이름 고정: `post_comment` 가 이 이름으로 찾는다(액션의 COMMENT_ARTIFACT_NAME 기본값).
+          name: python-coverage-comment-action
+          path: python-coverage-comment-action.txt
+          retention-days: 1
+
       # v4 는 `ACTIVITY` 로 무엇을 할지 명시할 수 있다. 기본값은 휴리스틱 추론인데,
       # 이 저장소는 저장(여기) / 코멘트(coverage-comment.yml) 를 두 워크플로우로
       # 쪼개 쓰므로 추론에 맡기지 않는다 — 추론이 틀리면 커버리지 배지가 조용히
