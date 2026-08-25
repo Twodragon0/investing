@@ -355,3 +355,26 @@ def test_real_tree_writes_detected():
         "broken (wrong dirs, or every path filtered out) and the comparison at "
         "teardown would be vacuous."
     )
+
+
+def test_rate_limit_sleeps_are_stubbed():
+    """``sleep_calls`` must keep ``time.sleep`` replaced for the whole suite.
+
+    Collectors pace outbound requests with real sleeps (2s per Telegram channel,
+    1s per Twitter query, 1-2s per CoinMarketCap endpoint). Under test every fetch
+    is mocked, so those sleeps buy nothing and are pure wall-clock — before the
+    fixture they were ~102s of a 184s suite.
+
+    Asserted via the recorder's ``_no_real_sleep_stub`` marker rather than by timing
+    a sleep: a behavioural probe would have to actually wait, which is the cost this
+    guard exists to prevent. This test deliberately does *not* request the
+    ``sleep_calls`` fixture — that is what makes it fail when the fixture stops
+    being autouse rather than quietly picking it up as an explicit dependency.
+    """
+    import time
+
+    assert getattr(time.sleep, "_no_real_sleep_stub", False), (
+        "time.sleep is the real builtin during tests — the sleep_calls conftest "
+        "fixture is not active. Collector rate-limit delays will be paid in real "
+        "wall-clock and the suite roughly doubles in duration."
+    )

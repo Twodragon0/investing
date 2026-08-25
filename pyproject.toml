@@ -76,15 +76,27 @@ timeout_method = "thread"
 # 행이 난 테스트가 잡 타임아웃(25분)을 통째로 태운 뒤 "workflow timeout" 이라는
 # 원인 불명 실패로 끝난다. 값이 있으면 pytest 가 **어느 테스트인지** 지목한다.
 #
-# 300s 의 근거(2026-08-24 실측, `--durations=15`): 로컬 최장 테스트가 48.6s
-# (`test_dedup_idempotent_social`), 그다음이 24.1s / 10.0s / 5.0s 이고 그 아래는
-# 3s 미만이다. 최장 테스트의 대부분은 `collect_social_media.py` 의 실제
-# `time.sleep(1)/(2)` 이며 sleep 은 wall-clock 이라 CI 에서도 거의 같다.
-# 즉 300s 는 최장 실측치의 6배 이상이고, 잡 타임아웃 25분보다 한참 앞선다.
-timeout = 300
+# 값의 성격: 정상 테스트 상한이 아니라 **행(hang) 백스톱**이다.
+#
+# 60s 의 근거 — 이 값을 실제로 소비하는 곳은 둘뿐이고, 둘 다 단위 스위트다:
+#   * `code-quality.yml`  — `pytest tests/ -m "not i18n_e2e"`, 실측 최장 1.9s
+#   * `reports-e2e.yml`   — 파일 2개, 실측 1s 미만
+# 가장 무거운 `i18n-e2e.yml`(Playwright)은 자체적으로 `--timeout 30` 을 넘긴다.
+# 즉 이 저장소에서 가장 느린 스위트가 이미 30s 로 돌고 있고, 60s 는 그보다 위다.
+#
+# 실측 최장 1.9s 대비 30배, CI 러너가 로컬의 3배 느리다고 가정해도 10배다.
+# 직전 값 300s 는 두 가지가 겹쳐 만들어진 수였다 — (a) 수집기 rate-limit sleep 이
+# 최장 테스트를 48.6s 로 만들었고, (b) `code-quality.yml` 이 tests/i18n 을 함께
+# 수집해 30.4s 짜리 setup phase(서버 폴링 후 skip)를 매 런 치렀다. 둘 다 제거됐다.
+#
+# 낮추면 행이 5분이 아니라 1분 만에, **어느 테스트인지 지목된 채** 드러난다.
+# 더 낮추고 싶으면 먼저 `pytest --durations` 로 다시 재고
+# `tests/test_pytest_plugin_install_sync_guard.py` 의 상수를 갱신할 것.
+timeout = 60
 markers = [
     "i18n_e2e: Playwright-driven end-to-end tests for the language toggle (tests/i18n/). Requires a running Jekyll preview at I18N_E2E_BASE_URL.",
     "no_state_isolation: opt out of the autouse _state path-redirect fixtures (dedup/signal/translation). For runtime guards that must read the real repo-anchored _state paths. Only path-redirecting fixtures honour this marker — see docs/test-isolation.md.",
+    "real_sleep: opt out of the autouse `sleep_calls` fixture, which replaces `time.sleep` with a no-op recorder. For tests that need actual wall-clock to pass (e.g. making a file mtime measurably change).",
 ]
 
 [tool.basedpyright]

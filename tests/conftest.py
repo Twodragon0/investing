@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 
 import pytest
 
@@ -437,3 +438,86 @@ def _isolate_image_rejection_state(tmp_path, monkeypatch):
         return
     monkeypatch.setattr(m, "_STATE_PATH", tmp_path / "image_rejection_metrics.json")
     monkeypatch.setattr(m, "_ARCHIVE_DIR", tmp_path / "archive")
+
+
+# ---------------------------------------------------------------------------
+# Rate-limit / backoff sleeps
+# ---------------------------------------------------------------------------
+
+#: Real ``time.sleep``, captured before any fixture replaces it. Kept module-level
+#: so helpers that genuinely need wall-clock delay can reach it after the autouse
+#: fixture below is active.
+REAL_SLEEP = time.sleep
+
+
+#: Sleeps at or above this many seconds are treated as deliberate pacing and skipped;
+#: anything shorter is passed through to the real ``time.sleep``.
+#:
+#: The floor is not cosmetic — a blanket no-op breaks third-party polling loops.
+#: ``yfinance.multi._download_impl`` waits on its worker threads with
+#: ``while ...: time.sleep(0.01)``. Skipping that turns a cooperative wait into a
+#: spin: measured 2026-08-25 on ``test_dedup_idempotent_stock``, the loop went from
+#: ~1.9s to ~15s (115k iterations become ~10M, starving the very threads it waits
+#: for, and the recorder below balloons to ~800MB of entries).
+#:
+#: 0.25s separates the two populations cleanly. Every pacing delay in ``scripts/`` is
+#: 0.3s-2s (``blockchain_api`` 0.3s, the collectors 1-2s); library poll intervals are
+#: 0.01-0.05s.
+SKIPPED_SLEEP_FLOOR_S = 0.25
+
+
+class _SleepRecorder:
+    """Stand-in for ``time.sleep`` that skips pacing delays and remembers them."""
+
+    #: Tripwire for the isolation guard, mirroring ``_http_block_stub`` /
+    #: ``_ssrf_dns_stub``: lets it confirm the stub is installed without having to
+    #: actually sleep (which, if the fixture were gone, would be the very wall-clock
+    #: cost this guard exists to prevent).
+    _no_real_sleep_stub = True
+
+    def __init__(self) -> None:
+        self.calls: list[float] = []
+
+    def __call__(self, seconds: float) -> None:
+        if seconds < SKIPPED_SLEEP_FLOOR_S:
+            REAL_SLEEP(seconds)
+            return
+        self.calls.append(seconds)
+
+    @property
+    def total(self) -> float:
+        return sum(self.calls)
+
+
+@pytest.fixture(autouse=True)
+def sleep_calls(request, monkeypatch):
+    """Skip rate-limit sleeps so they cost no wall-clock, and record what was skipped.
+
+    Collectors pace their outbound requests with real sleeps — ``collect_social_media``
+    waits 2s per Telegram channel and 1s per Twitter query, ``collect_coinmarketcap``
+    1-2s per endpoint, ``generate_market_summary`` 1s per Alpha Vantage symbol. Under
+    test every fetch is mocked, so those sleeps buy nothing and are pure wall-clock:
+    2026-08-25 ``--durations=30`` put them at ~102s of a 184s suite (55%), with a
+    single test (``test_dedup_idempotent_social``) at 48.6s.
+
+    Sleeping is not what those tests assert. The retry/backoff *behaviour* is covered
+    by call-count assertions that already patch sleep themselves
+    (``test_utils.TestRequestWithRetry``, ``test_enrichment_utils`` — ``mock_sleep.call_count``,
+    ``test_translator`` — batch delay count), and no test asserts elapsed time. So the
+    delays are removable without losing coverage.
+
+    Removing them silently *would* lose something: a backoff that starts computing
+    absurd delays no longer shows up as a slow test. That is why this is a recorder
+    and not a bare ``lambda``. Request ``sleep_calls`` to assert the sequence —
+    ``test_utils.test_backoff_delays_are_exponential`` pins it for
+    ``request_with_retry``.
+
+    Only sleeps at or above ``SKIPPED_SLEEP_FLOOR_S`` are skipped — see that constant
+    for why a blanket no-op is wrong. Opt out entirely with ``@pytest.mark.real_sleep``
+    when a test needs wall-clock to pass, e.g. to make a file mtime measurably change
+    (``test_generate_og_images_skip_branch``).
+    """
+    recorder = _SleepRecorder()
+    if request.node.get_closest_marker("real_sleep") is None:
+        monkeypatch.setattr(time, "sleep", recorder)
+    return recorder
