@@ -9,13 +9,30 @@ at or above :data:`_MIN_FLOOR`:
 * ``.github/workflows/code-quality.yml`` — a dedicated
   ``coverage report --fail-under=NN`` step re-checks the same data in CI.
 
-Total ``scripts`` coverage sits ~70% (2026-07); the floor was ratcheted
-55 -> 65 (P3-1/P3-2) -> 70 (P3-3) to lock the existing coverage as a regression
-baseline. Without this guard the floor could be quietly dropped back —
-re-opening the gap between "tests deleted" and "build still green".
+The floor was ratcheted 55 -> 65 (P3-1/P3-2) -> 70 (P3-3) -> 73 (2026-08-25) to
+lock existing coverage as a regression baseline. Without this guard the floor
+could be quietly dropped back — re-opening the gap between "tests deleted" and
+"build still green".
 
-Direction: floor is ``>=`` — ratcheting UP (70 -> 75 ...) stays green; only
-removing a gate or lowering it below 70 trips this test. If the floor is lowered
+The 73 step was measured, not guessed. Actual total is **74.36%**
+(18413/24761 statements), and the measurement is deterministic:
+
+* local, same tree, 5 consecutive runs -> ``24761 6348 74%`` every time, spread 0
+* CI, 25 runs over 2026-08-18..08-25 (``python-coverage-comment-action-data``
+  branch ``data.json``) -> 74.304 .. 74.309, spread **0.005pt**
+
+So the 1.36pt headroom at 73 is ~270x the observed measurement noise; this floor
+cannot go red from noise. What it *does* cost: a new fully-untested script is
+allowed only up to ~462 statements before the gate trips (for scale, the largest
+existing 0%-covered script is ``scripts/backfill_images.py`` at 317). That is the
+intended ratchet — past that point, write tests or lower the floor deliberately.
+
+An earlier note claimed a ~1.3pt run-to-run swing (2026-07-27, when the total was
+~71%). That is no longer reproducible; the hermetic-test hardening since then
+removed it. Re-measure before citing it again.
+
+Direction: floor is ``>=`` — ratcheting UP (73 -> 75 ...) stays green; only
+removing a gate or lowering it below 73 trips this test. If the floor is lowered
 intentionally, update ``_MIN_FLOOR`` here AND both ``--fail-under`` values
 together.
 
@@ -25,11 +42,11 @@ by ``test_summary_sections_coverage_floor.py``.
 
 ## A floor number is not a gate
 
-A number alone proves nothing: four edits leave ``--fail-under=70`` untouched
+A number alone proves nothing: four edits leave ``--fail-under=NN`` untouched
 while making the gate meaningless, so each is asserted separately below.
 
 * **Measurement scope** — narrowing ``--cov=scripts`` to a single well-tested
-  module keeps the floor at 70 while measuring almost nothing.
+  module keeps the floor number intact while measuring almost nothing.
 * **Omission** — ``coverage report --omit=...``, or an ``omit`` key under
   ``[tool.coverage.run]`` / ``[tool.coverage.report]``, silently drops the
   weakest modules out of the denominator.
@@ -50,7 +67,7 @@ _PYPROJECT = _REPO_ROOT / "pyproject.toml"
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 
 # The global scripts coverage floor both gates must enforce.
-_MIN_FLOOR = 70
+_MIN_FLOOR = 73
 
 # The measurement scope the floor is meaningful against. `--cov=scripts` in
 # pyproject addopts applies to every pytest run; the CI step additionally names
@@ -143,7 +160,7 @@ def test_workflow_global_coverage_floor_enforced() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Gate *validity*: the four edits that keep `--fail-under=70` intact while
+# Gate *validity*: the four edits that keep `--fail-under=NN` intact while
 # making it prove nothing. A floor is only as strong as what it measures.
 # ---------------------------------------------------------------------------
 
@@ -152,7 +169,7 @@ def test_pyproject_coverage_scope_not_narrowed() -> None:
     """pytest addopts must measure the whole ``scripts`` tree.
 
     Narrowing to ``--cov=scripts/common/summary_sections.py`` leaves the floor
-    reading 70 while measuring one already-well-tested module — every other
+    number intact while measuring one already-well-tested module — every other
     script could lose its tests and the gate would stay green.
     """
     addopts = _pytest_addopts()
