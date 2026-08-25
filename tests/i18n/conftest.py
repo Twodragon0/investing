@@ -6,63 +6,60 @@ conftest only performs a non-blocking health check so failures surface as a
 clear ``pytest.skip`` instead of an opaque Playwright timeout.
 
 Override the target URL with ``I18N_E2E_BASE_URL`` (e.g. ``http://127.0.0.1:4000``).
+
+The health-check logic itself lives in ``tests/_i18n_healthcheck.py`` so it can be
+unit-tested — a conftest is not importable by name, which is why the 30s wait loop
+had never been covered. See that module for why "nothing is listening" and
+"listening but not ready" must be told apart.
 """
 
 from __future__ import annotations
 
 import json
-import os
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 import pytest
-
-DEFAULT_BASE_URL = "http://127.0.0.1:4000"
-HEALTHCHECK_TIMEOUT_S = float(os.environ.get("I18N_E2E_HEALTHCHECK_TIMEOUT", "30"))
-HEALTHCHECK_INTERVAL_S = 0.5
+from _i18n_healthcheck import (
+    FAST_FAIL_GRACE_S,
+    HEALTHCHECK_INTERVAL_S,
+    HEALTHCHECK_TIMEOUT_S,
+    resolve_base_url,
+    should_fail_hard,
+    unreachable_message,
+    wait_for_server,
+)
 
 # The root conftest's autouse ``sleep_calls`` fixture swaps ``time.sleep`` for a
-# no-op recorder. This poll needs real wall-clock — without it the loop below
-# spins the CPU until the 30s deadline instead of waiting between attempts — so
-# bind the real function at import, before any fixture can replace it.
+# recorder that skips any delay >= 0.25s — and ``HEALTHCHECK_INTERVAL_S`` is 0.5.
+# Without a real sleep the poll below would spin the CPU instead of waiting
+# between attempts, so bind the real function at import, before any fixture can
+# replace it.
 _REAL_SLEEP = time.sleep
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
 
 
-def _resolve_base_url() -> str:
-    return os.environ.get("I18N_E2E_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
-
-
-def _wait_for_server(url: str, timeout_s: float) -> bool:
-    """Poll the homepage until it returns any response or timeout elapses."""
-    deadline = time.monotonic() + timeout_s
-    last_error: Exception | None = None
-    while time.monotonic() < deadline:
-        try:
-            with urllib.request.urlopen(url + "/", timeout=2) as resp:  # noqa: S310
-                if 200 <= resp.status < 500:
-                    return True
-        except (urllib.error.URLError, ConnectionError, TimeoutError) as exc:
-            last_error = exc
-        _REAL_SLEEP(HEALTHCHECK_INTERVAL_S)
-    if last_error is not None:
-        print(f"[i18n-e2e] healthcheck failed for {url}: {last_error}")  # noqa: T201
-    return False
-
-
 @pytest.fixture(scope="session")
 def base_url() -> str:
     """Resolve the Jekyll preview base URL and verify the server is reachable."""
-    url = _resolve_base_url()
-    if not _wait_for_server(url, HEALTHCHECK_TIMEOUT_S):
-        pytest.skip(
-            f"Jekyll preview at {url} is unreachable; "
-            "start `bundle exec jekyll serve --port 4000` or set I18N_E2E_BASE_URL."
-        )
-    return url
+    url = resolve_base_url()
+    probe = wait_for_server(
+        url,
+        HEALTHCHECK_TIMEOUT_S,
+        FAST_FAIL_GRACE_S,
+        interval_s=HEALTHCHECK_INTERVAL_S,
+        sleep=_REAL_SLEEP,
+    )
+    if probe.ok:
+        return url
+
+    message = unreachable_message(url, probe)
+    if should_fail_hard():
+        # CI 에서 서버가 사라지면 skip 이 아니라 red 여야 한다 — 그러지 않으면 e2e 가
+        # "16 skipped" 로 조용히 통과한다.
+        pytest.fail(message)
+    pytest.skip(message)
 
 
 @pytest.fixture(scope="session")
