@@ -4,10 +4,10 @@
 
 | Name                                              |    Stmts |     Miss |   Cover |   Missing |
 |-------------------------------------------------- | -------: | -------: | ------: | --------: |
-| scripts/backfill\_images.py                       |      317 |      317 |      0% |    10-760 |
+| scripts/backfill\_images.py                       |      317 |       55 |     83% |26, 531-539, 557-559, 692-750, 760 |
 | scripts/backfill\_post\_summaries.py              |      831 |      518 |     38% |116, 118, 146, 204, 213, 215, 217, 219, 221, 223, 225, 227, 229, 231, 246, 248, 250, 252, 254, 256, 258, 260, 311, 313, 315, 317, 319, 321, 323, 325, 354, 356, 358, 360, 384, 396-398, 400, 402, 405-412, 420, 427-453, 472-485, 489-510, 514-543, 571-603, 607-632, 642, 654-665, 669-676, 680-685, 696-719, 723-761, 765-784, 788-807, 815, 819, 836-837, 845, 849, 852, 857-905, 909-923, 935-939, 943-947, 951-960, 964-986, 990-1016, 1025-1078, 1087-1137, 1141-1211, 1215 |
 | scripts/backfill\_signal\_history\_accuracy.py    |       84 |        7 |     92% |30, 161-164, 171, 210 |
-| scripts/backfill\_signal\_history\_btc\_price.py  |      181 |      181 |      0% |    11-347 |
+| scripts/backfill\_signal\_history\_btc\_price.py  |      181 |        2 |     99% |   24, 347 |
 | scripts/check\_description\_quality.py            |      303 |       25 |     92% |67, 78, 163, 174, 179, 208-209, 246, 416, 443, 454-456, 459-461, 464-466, 469-477, 564-565, 579 |
 | scripts/check\_jekyll\_build.py                   |       19 |        1 |     95% |        28 |
 | scripts/check\_post\_images.py                    |       67 |        3 |     96% |48, 84, 107 |
@@ -119,7 +119,7 @@
 | scripts/tools/classify\_failure\_log.py           |       71 |       18 |     75% |197, 226-252, 256 |
 | scripts/tools/component\_counts.py                |       84 |        1 |     99% |       164 |
 | scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
-| scripts/tools/gsc\_index\_audit.py                |      234 |      234 |      0% |    44-561 |
+| scripts/tools/gsc\_index\_audit.py                |      234 |        5 |     98% |253-257, 416, 421, 561 |
 | scripts/tools/guard\_falsifiability.py            |      190 |       81 |     57% |149, 666-670, 680-682, 711-720, 725, 739-748, 780-784, 789-823, 833-881, 899-925, 929 |
 | scripts/tools/indexnow\_submit.py                 |      174 |       28 |     84% |89-132, 222-229, 347-348, 358 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
@@ -131,7 +131,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24731** | **6352** | **74%** |           |
+| **TOTAL**                                         | **24731** | **5682** | **77%** |           |
 
 
 ## Setup coverage badge
