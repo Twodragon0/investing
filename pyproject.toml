@@ -72,6 +72,16 @@ norecursedirs = ["_site", ".git", "node_modules", "vendor", ".bundle"]
 # i18n-e2e CI run 25563884706에서 S3 touch가 22분 행 → workflow timeout.
 # thread 방식은 별도 타이머 스레드로 강제 종료해 Playwright wait도 신뢰성 있게 컷.
 timeout_method = "thread"
+# per-test 상한. 이게 없으면 `timeout_method` 는 아무 효과가 없고(값이 설정돼야 발동),
+# 행이 난 테스트가 잡 타임아웃(25분)을 통째로 태운 뒤 "workflow timeout" 이라는
+# 원인 불명 실패로 끝난다. 값이 있으면 pytest 가 **어느 테스트인지** 지목한다.
+#
+# 300s 의 근거(2026-08-24 실측, `--durations=15`): 로컬 최장 테스트가 48.6s
+# (`test_dedup_idempotent_social`), 그다음이 24.1s / 10.0s / 5.0s 이고 그 아래는
+# 3s 미만이다. 최장 테스트의 대부분은 `collect_social_media.py` 의 실제
+# `time.sleep(1)/(2)` 이며 sleep 은 wall-clock 이라 CI 에서도 거의 같다.
+# 즉 300s 는 최장 실측치의 6배 이상이고, 잡 타임아웃 25분보다 한참 앞선다.
+timeout = 300
 markers = [
     "i18n_e2e: Playwright-driven end-to-end tests for the language toggle (tests/i18n/). Requires a running Jekyll preview at I18N_E2E_BASE_URL.",
     "no_state_isolation: opt out of the autouse _state path-redirect fixtures (dedup/signal/translation). For runtime guards that must read the real repo-anchored _state paths. Only path-redirecting fixtures honour this marker — see docs/test-isolation.md.",
