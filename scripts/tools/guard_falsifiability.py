@@ -75,6 +75,7 @@ CASES: dict[str, str] = {
     "_isolate_image_rejection_state": "test_image_rejection_state_redirected_off_repo_tree",
     "_isolate_tvl_history_state": "test_tvl_history_redirected_off_repo_tree",
     "_detect_real_tree_writes": "test_real_tree_writes_detected",
+    "sleep_calls": "test_rate_limit_sleeps_are_stubbed",
 }
 
 # ``autouse=True`` may sit alongside other kwargs (``scope="session"``), in any

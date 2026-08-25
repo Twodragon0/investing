@@ -277,6 +277,26 @@ class TestRequestWithRetry:
             request_with_retry("https://example.com/api", max_retries=1)
 
     @patch("common.utils.requests.get")
+    def test_backoff_delays_are_exponential(self, mock_get, sleep_calls):
+        """Retry delays follow ``base_delay * 2**attempt`` — pinned, not just counted.
+
+        Every other test here patches sleep away and asserts only how *many* times it
+        was called, and the autouse ``sleep_calls`` recorder now makes all sleeps free
+        suite-wide. Together that means a backoff that starts computing minutes-long
+        delays would cost no wall-clock and trip no assertion. This pins the values.
+        """
+        import requests as req
+
+        mock_get.side_effect = req.exceptions.ConnectionError("refused")
+
+        with pytest.raises(req.exceptions.ConnectionError):
+            request_with_retry("https://example.com/api", max_retries=3, base_delay=0.5)
+
+        assert mock_get.call_count == 4
+        # Sleeps happen between attempts, so one fewer than the attempt count.
+        assert sleep_calls.calls == [0.5, 1.0, 2.0]
+
+    @patch("common.utils.requests.get")
     def test_no_retry_on_404(self, mock_get):
         import requests as req
 

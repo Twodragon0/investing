@@ -23,6 +23,12 @@ DEFAULT_BASE_URL = "http://127.0.0.1:4000"
 HEALTHCHECK_TIMEOUT_S = float(os.environ.get("I18N_E2E_HEALTHCHECK_TIMEOUT", "30"))
 HEALTHCHECK_INTERVAL_S = 0.5
 
+# The root conftest's autouse ``sleep_calls`` fixture swaps ``time.sleep`` for a
+# no-op recorder. This poll needs real wall-clock — without it the loop below
+# spins the CPU until the 30s deadline instead of waiting between attempts — so
+# bind the real function at import, before any fixture can replace it.
+_REAL_SLEEP = time.sleep
+
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
 
 
@@ -41,7 +47,7 @@ def _wait_for_server(url: str, timeout_s: float) -> bool:
                     return True
         except (urllib.error.URLError, ConnectionError, TimeoutError) as exc:
             last_error = exc
-        time.sleep(HEALTHCHECK_INTERVAL_S)
+        _REAL_SLEEP(HEALTHCHECK_INTERVAL_S)
     if last_error is not None:
         print(f"[i18n-e2e] healthcheck failed for {url}: {last_error}")  # noqa: T201
     return False

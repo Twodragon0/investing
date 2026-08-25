@@ -123,12 +123,12 @@ def test_addopts_flags_have_their_plugins_installed() -> None:
 def test_timeout_value_exceeds_slowest_observed_test() -> None:
     """타임아웃이 실측 최장 테스트보다 충분히 커야 flaky red 가 나지 않는다.
 
-    2026-08-24 `--durations=15` 실측 최장은 48.6s
-    (`test_dedup_idempotent_social` — `collect_social_media.py` 의 실제
-    `time.sleep(1)/(2)` 가 대부분이다). sleep 은 wall-clock 이라 CI 에서도 거의
-    같다. 여유 4배를 최소 조건으로 둔다.
+    2026-08-25 `--durations=12` 실측 최장은 1.9s (`test_dedup_idempotent_stock`).
+    직전 실측은 48.6s (`test_dedup_idempotent_social`) 였고, 그 대부분은 수집기의
+    rate-limit `time.sleep(1)/(2)` 였다 — `tests/conftest.py` 의 `sleep_calls`
+    fixture 가 그 pacing 을 건너뛰면서 사라졌다. 여유 4배를 최소 조건으로 둔다.
     """
-    slowest_observed = 48.6
+    slowest_observed = 1.9
     timeout = _ini_options().get("timeout")
     if timeout is None:
         pytest.skip("pyproject 가 timeout 을 선언하지 않음")

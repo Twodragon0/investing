@@ -93,6 +93,7 @@ class TestSkipBranch:
         mock_gen_og.assert_not_called()
         mock_gen_thumb.assert_not_called()
 
+    @pytest.mark.real_sleep
     def test_both_exist_does_not_modify_og_mtime(self, tmp_path, monkeypatch):
         """og + thumb 모두 존재할 때 og 파일의 mtime이 변경되지 않는다."""
         monkeypatch.setattr(og, "IMAGES_DIR", str(tmp_path))
@@ -144,6 +145,7 @@ class TestSkipBranch:
         mock_gen_og.assert_not_called()
         mock_gen_thumb.assert_called_once_with(str(og_path))
 
+    @pytest.mark.real_sleep
     def test_og_exists_thumb_missing_preserves_og_mtime(self, tmp_path, monkeypatch):
         """og 있고 thumb 없을 때 og 파일의 mtime이 변경되지 않는다."""
         monkeypatch.setattr(og, "IMAGES_DIR", str(tmp_path))
