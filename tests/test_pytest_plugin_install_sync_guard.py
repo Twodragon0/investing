@@ -69,9 +69,10 @@ _ADDOPTS_FLAGS: dict[str, str] = {
 _SLOWEST_OBSERVED_S = 1.9
 
 #: i18n 을 디셀렉트하지 않았을 때 매 런 발생하는 setup phase 실측(2026-08-25).
-#: `tests/i18n/conftest.py` 의 세션 fixture 가 `HEALTHCHECK_TIMEOUT_S=30` 동안
-#: 서버를 폴링한 뒤 skip 한다 — `16 skipped in 30.43s`.
-_I18N_HEALTHCHECK_SETUP_S = 30.4
+#: `tests/_i18n_healthcheck.py` 의 fast-fail 도입 **후** 값이다 — 도입 전에는
+#: `HEALTHCHECK_TIMEOUT_S=30` 을 꽉 채워 `16 skipped in 30.43s` 였다.
+#: 지금은 refused 가 이어지면 `FAST_FAIL_GRACE_S=2.0` 에서 포기한다 (`16 skipped in 2.05s`).
+_I18N_HEALTHCHECK_SETUP_S = 2.1
 
 
 def _ini_options() -> dict:
@@ -191,16 +192,17 @@ def test_code_quality_deselects_i18n_e2e() -> None:
     """`code-quality.yml` 은 `-m "not i18n_e2e"` 로 Playwright 스위트를 빼야 한다.
 
     이 잡은 :4000 에 Jekyll 을 띄우지 않으므로 `tests/i18n/**` 16건은 **항상**
-    skip 된다. 문제는 공짜로 skip 되지 않는다는 것이다 — `tests/i18n/conftest.py`
-    의 세션 fixture 가 `HEALTHCHECK_TIMEOUT_S=30` 동안 서버를 폴링한 뒤에야
-    skip 한다. 2026-08-25 실측: `16 skipped in 30.43s`, 그중 setup phase 30.40s.
+    skip 된다. 브라우저도 서버도 없이 도는 것이라 커버리지 기여도 0이다.
 
     두 가지가 걸려 있다:
 
-    1. 매 런 30초 낭비. skip 이라 로그에는 `s` 열여섯 개로만 보인다.
+    1. **비용.** skip 이 공짜가 아니다 — 세션 fixture 가 서버를 폴링한 뒤에야 skip
+       한다. 도입 초기에는 `HEALTHCHECK_TIMEOUT_S=30` 을 꽉 채워 매 런 30초였고
+       (`16 skipped in 30.43s`), fast-fail 도입 후에도 `_I18N_HEALTHCHECK_SETUP_S`
+       만큼은 든다. skip 이라 로그에는 `s` 열여섯 개로만 보인다.
     2. **`timeout` 산정의 전제.** 디셀렉트하지 않으면 이 잡의 최장 test item phase
-       가 1.9s 가 아니라 30.4s 가 되고, `_SLOWEST_OBSERVED_S` 를 근거로 낮춘
-       per-test 상한이 그 순간 근거를 잃는다. 위
+       가 `_SLOWEST_OBSERVED_S` 가 아니라 그 setup phase 가 되고, 그 값을 근거로
+       낮춘 per-test 상한이 근거를 잃는다. 위
        `test_timeout_value_exceeds_slowest_observed_test` 는 상수만 보므로 이
        전제가 깨지는 것을 스스로는 알아채지 못한다.
 
