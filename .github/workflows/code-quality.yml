@@ -73,8 +73,22 @@ jobs:
         run: python3 -m ruff format --check scripts/ tests/
 
       - name: Run tests with coverage
+        # `-m "not i18n_e2e"`: 이 잡은 :4000 에 Jekyll 을 띄우지 않는다(아래 Jekyll
+        # 빌드 스텝은 serve 가 아니고 이 스텝보다 뒤다). 그래서 tests/i18n/** 16건은
+        # **항상 skip 되는데, 그 전에 30초를 쓴다** — `tests/i18n/conftest.py` 의
+        # 세션 fixture 가 `HEALTHCHECK_TIMEOUT_S=30` 동안 서버를 폴링한 뒤에야
+        # skip 하기 때문이다(2026-08-25 실측: setup 30.40s, 16 skipped in 30.43s).
+        #
+        # 결과는 두 가지였다. (1) 매 런 30초 순수 낭비. (2) `timeout` 값 산정이
+        # 왜곡 — 이 잡의 최장 테스트 phase 가 실제로는 30.4s 여서, per-test 상한을
+        # 실측 기반으로 낮출 수 없었다. 디셀렉트로 최장이 1.9s 가 된다.
+        #
+        # 커버리지 영향 0 — 어차피 skip 되던 테스트라 기여분이 없었다.
+        # 이 테스트들의 실행 책임은 `i18n-e2e.yml` 이며, 거기서는 Jekyll 을 띄우고
+        # 자체 `--timeout 30` 으로 돈다.
         run: |
           PYTHONPATH=scripts python3 -m pytest tests/ -v --tb=short \
+            -m "not i18n_e2e" \
             --cov=scripts/common --cov-report= \
             --cov-config=pyproject.toml
 
