@@ -29,6 +29,11 @@ main 룰셋(`20539046`)에는 required status check 가 **하나도 없다**(202
 추가로 경로 목록이 `push:` 트리거와 `changes` 잡 두 곳에 존재하므로 그 **드리프트**도
 막는다. 드리프트는 텍스트 충돌을 만들지 않아 리뷰에서 놓치기 쉽고, 결과는 "락이
 바뀌었는데 verify 가 skip" 이라는 최악의 방향이다.
+
+마지막으로 4번째 축: `--require-hashes` 무결성 스텝이 **차단**으로 남아 있을 것
+(2026-08-26 승격, 이슈 #1039). 위 세 축은 "실패가 게이트까지 전파되는가" 를 지키지만,
+스텝 자체가 실패를 삼키면 전파할 실패가 애초에 없다 — `TestLockIntegrityStaysBlocking`
+참고.
 """
 
 from __future__ import annotations
@@ -62,6 +67,20 @@ def _gate_script(parsed: dict) -> str:
         if step.get("run"):
             return step["run"]
     pytest.fail("gate 잡에 run 스텝이 없다")
+
+
+_INTEGRITY_STEP_NAME = "Verify lock integrity (--require-hashes)"
+
+
+def _integrity_step(parsed: dict) -> dict:
+    for step in parsed["jobs"]["verify"]["steps"]:
+        if step.get("name") == _INTEGRITY_STEP_NAME:
+            return step
+    pytest.fail(
+        f"verify 잡에서 {_INTEGRITY_STEP_NAME!r} 스텝을 찾지 못했다. 이름을 바꿨다면 "
+        "이 가드의 _INTEGRITY_STEP_NAME 도 함께 갱신할 것 — 아니면 가드가 조용히 "
+        "아무것도 지키지 않는다."
+    )
 
 
 class TestAlwaysReports:
@@ -129,6 +148,50 @@ class TestVerifyStaysConditional:
         assert "needs.changes.outputs.relevant" in str(verify.get("if")), (
             "verify 가 changes 판정에 걸려 있지 않으면 모든 PR 에서 무거운 무결성 검증이 "
             "돌아 paths 필터 제거가 순수 비용 증가가 된다"
+        )
+
+
+class TestLockIntegrityStaysBlocking:
+    """`--require-hashes` 무결성 스텝은 차단 게이트다 (2026-08-26 승격, 이슈 #1039).
+
+    2026-06-22 도입부터 승격까지 이 스텝은 `|| echo "::warning title=lock integrity::"`
+    fallback 을 달고 non-blocking 으로 돌았다. 그 형태로 되돌아가면 락 변조·yank 로
+    해시 검증이 깨져도 **잡은 여전히 성공**한다 — 경고는 로그에 묻히고 게이트는 열린
+    채로 남는다. 되돌림이 조용하다는 것이 이 가드가 필요한 이유다.
+
+    파일 전체가 아니라 **그 스텝의 `run:` 본문만** 본다. 워크플로우 상단에 승격 이력을
+    적은 주석이 `|| echo ...` 를 문자열로 포함하므로, 전체 텍스트 검색은 자기 설명
+    주석에 매칭돼 무엇을 하든 green 이 된다.
+    """
+
+    def test_step_still_runs_require_hashes(self, parsed: dict) -> None:
+        run = _integrity_step(parsed).get("run", "")
+        assert "--require-hashes" in run, (
+            "무결성 스텝에서 --require-hashes 가 사라졌다. 이게 없으면 해시 검증 없이 "
+            "설치 가능 여부만 보게 되어 변조 탐지가 통째로 빠진다."
+        )
+
+    def test_step_has_no_failure_fallback(self, parsed: dict) -> None:
+        run = _integrity_step(parsed).get("run", "")
+        assert "||" not in run, (
+            "무결성 스텝에 `||` fallback 이 다시 붙었다(`|| echo ...`, `|| true` 등). "
+            "그러면 해시 검증 실패가 잡 성공으로 위장한다 — 2026-06~08 롤아웃 기간의 "
+            "형태이며 2026-08-26 에 의도적으로 제거했다(이슈 #1039). 락 재생성이 "
+            "필요한 상황이면 `bash scripts/refresh_requirements_lock.sh` 를 쓸 것."
+        )
+        assert "set +e" not in run, "`set +e` 는 `||` 없이도 비-0 종료를 삼킨다 — fallback 과 동일한 효과다."
+
+    def test_step_is_not_continue_on_error(self, parsed: dict) -> None:
+        step = _integrity_step(parsed)
+        assert not step.get("continue-on-error"), (
+            "무결성 스텝에 continue-on-error 가 붙었다. `run:` 이 아무리 엄격해도 "
+            "스텝 실패가 잡 결과에 반영되지 않아 차단이 무력화된다."
+        )
+
+    def test_verify_job_is_not_continue_on_error(self, parsed: dict) -> None:
+        assert not parsed["jobs"]["verify"].get("continue-on-error"), (
+            "verify 잡에 continue-on-error 가 붙었다. gate 가 fail-closed 여도 잡이 "
+            "성공으로 보고되면 전파할 실패 자체가 없어진다."
         )
 
 
