@@ -7,6 +7,7 @@ docs/component-counts.md 가 실측과 드리프트되면 CI(pytest)에서 실�
 from __future__ import annotations
 
 import importlib.util
+import re
 from pathlib import Path
 
 import pytest
@@ -27,6 +28,7 @@ def test_counts_are_positive_ints():
         "generators",
         "common_modules",
         "workflows",
+        "main_push_workflows",
         "category_pages",
         "tests",
     }
@@ -34,6 +36,79 @@ def test_counts_are_positive_ints():
     for key, value in counts.items():
         assert isinstance(value, int), key
         assert value > 0, key
+
+
+class TestMainPushWorkflows:
+    """`main_push_workflows` 카운트가 서 있는 가정을 고정한다.
+
+    이 수치는 `docs/devsecops/branch-protection.md` 가 Phase 2 마이그레이션 비용
+    ("N개 푸시 지점 수정")으로 인용한다. 탐지는 휴리스틱이므로 — 공유 액션 참조
+    또는 본문의 push 토큰 — 두 방향으로 조용히 틀릴 수 있다:
+
+    * **과다 계수**: main 이 아닌 ref 로 푸시하는 워크플로우가 생기면 그것도 센다.
+      그러면 비용 견적이 부풀고, "직접 푸시를 막으면 멈춘다" 는 서술이 과장된다.
+    * **과소 계수**: 새 푸시 방식(다른 액션, `gh api` 로 커밋 생성 등)이 도입되면
+      놓친다. 이쪽이 더 위험하다 — 브랜치 보호를 켰을 때 예상 밖으로 멈추는 잡이
+      생긴다.
+
+    과다 계수는 아래에서 단언으로 막는다. 과소 계수는 단언으로 막을 수 없으므로
+    (모르는 방식을 열거할 수 없다) 탐지 토큰을 명시적으로 고정해서, 방식을 바꾸는
+    사람이 이 테스트를 마주치게 한다.
+    """
+
+    def test_detects_a_plausible_number(self):
+        hits = component_counts.main_push_workflows()
+        total = component_counts._count_glob(".github/workflows/*.yml")
+        assert 0 < len(hits) < total, (
+            f"main 직접 푸시 워크플로우가 {len(hits)}/{total} 건이다. 0 이면 탐지가 "
+            "깨진 것이고(공유 액션 이름이 바뀌었는지 확인), 전건이면 탐지가 너무 "
+            "넓어진 것이다."
+        )
+
+    def test_every_match_targets_main(self):
+        """명시적 `git push origin <ref>` 는 전부 main 이어야 한다."""
+        pattern = re.compile(r"git\s+push\s+(?:\S+\s+)*?origin\s+(?:HEAD:)?(?P<ref>[A-Za-z0-9._/${}-]+)")
+        offenders = []
+        for path in component_counts.main_push_workflows():
+            for match in pattern.finditer(path.read_text(encoding="utf-8")):
+                ref = match.group("ref")
+                if ref not in {"main", "HEAD"}:
+                    offenders.append(f"{path.name} -> {ref}")
+
+        assert not offenders, (
+            f"main 이 아닌 ref 로 푸시하는 워크플로우가 카운트에 포함됐다: {offenders}. "
+            "이 카운트는 'main 직접 푸시' 를 세는 것이므로 과다 계수다 — "
+            "component_counts.main_push_workflows() 에서 제외 조건을 추가하거나, "
+            "branch-protection.md 의 인용 맥락을 함께 고치라."
+        )
+
+    def test_detection_tokens_are_pinned(self):
+        """탐지 토큰이 바뀌면 과소 계수가 조용히 생긴다 — 여기서 마주치게 한다."""
+        assert component_counts.PUSH_ACTION == "actions/python-collect", (
+            f"PUSH_ACTION 이 {component_counts.PUSH_ACTION!r} 로 바뀌었다. 이 상수는 대다수 "
+            "워크플로우의 푸시 탐지 근거다(본문에 push 문자열이 없어 액션 참조로만 잡힌다) — "
+            "공유 액션을 리네임했다면 여기와 test_shared_action_actually_pushes_to_main 의 "
+            "경로를 함께 갱신하라."
+        )
+        assert set(component_counts.PUSH_MARKERS) == {"git push", "git-auto-commit-action"}, (
+            "푸시 방식을 추가/변경했다면 PUSH_MARKERS 와 이 단언을 함께 갱신하고, "
+            "docs/devsecops/branch-protection.md 의 마이그레이션 비용 서술도 다시 볼 것."
+        )
+
+    def test_shared_action_actually_pushes_to_main(self):
+        """`PUSH_ACTION` 경유 계수의 근거가 실제로 성립하는지 확인한다.
+
+        워크플로우 17건은 본문에 push 문자열이 없고 이 액션 참조로만 잡힌다. 액션이
+        푸시를 그만두면 그 17건은 계수에서 빠져야 하는데, 참조만 보는 탐지는 계속
+        센다.
+        """
+        action = component_counts.REPO_ROOT / ".github" / "actions" / "python-collect" / "action.yml"
+        assert action.is_file(), f"{action} 이 없다 — PUSH_ACTION 경유 계수의 근거가 사라졌다"
+        assert "git push origin main" in action.read_text(encoding="utf-8"), (
+            "python-collect 액션이 더 이상 main 으로 푸시하지 않는다. 그렇다면 이 액션을 "
+            "쓰는 워크플로우를 'main 직접 푸시' 로 세는 근거가 없다 — PUSH_ACTION 탐지를 "
+            "제거하거나 조건을 고치라."
+        )
 
 
 def test_generated_doc_in_sync():
@@ -55,6 +130,7 @@ _SAMPLE = {
     "generators": 2,
     "common_modules": 3,
     "workflows": 4,
+    "main_push_workflows": 7,
     "category_pages": 5,
     "tests": 6,
 }
