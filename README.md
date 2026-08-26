@@ -91,7 +91,7 @@
 | scripts/common/translator.py                      |      206 |        0 |    100% |           |
 | scripts/common/utils.py                           |      171 |        8 |     95% |191-192, 226-229, 269-271 |
 | scripts/common/worldmonitor\_utils.py             |        5 |        0 |    100% |           |
-| scripts/continuous\_improvement\_loop.py          |       89 |       89 |      0% |     3-293 |
+| scripts/continuous\_improvement\_loop.py          |       89 |        1 |     99% |       293 |
 | scripts/convert\_to\_avif.py                      |       66 |       66 |      0% |     7-123 |
 | scripts/enrich\_existing\_posts.py                |      133 |      133 |      0% |    15-311 |
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
@@ -107,7 +107,7 @@
 | scripts/generate\_weekly\_report.py               |      216 |      187 |     13% |61-68, 73-87, 97-141, 151-170, 175-206, 211, 235-246, 259-278, 293-370, 379-440, 444 |
 | scripts/improve\_existing\_posts.py               |      488 |      246 |     50% |212, 241-285, 344, 350, 383-384, 421, 425, 447, 514-519, 528, 543-566, 570-575, 580-606, 611-612, 623-671, 680-720, 755, 765-766, 772-773, 781-869, 873-958, 962 |
 | scripts/migrate\_images\_to\_r2.py                |      165 |       19 |     88% |28, 59-61, 89-95, 261-262, 320-321, 327-328, 338-339, 356 |
-| scripts/post\_loop\_to\_slack.py                  |       67 |       67 |      0% |     3-114 |
+| scripts/post\_loop\_to\_slack.py                  |       67 |        1 |     99% |       114 |
 | scripts/respond\_ai\_mentions.py                  |      259 |      207 |     20% |32-36, 40-67, 71-80, 84-87, 91-124, 128-138, 149-151, 162-164, 175-202, 215-232, 258-259, 274-285, 297-308, 319-336, 340-355, 375-381, 385-483, 487 |
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
@@ -125,13 +125,13 @@
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
 | scripts/tools/tune\_risk\_threshold.py            |      175 |       16 |     91% |26, 76, 92, 95-96, 98, 116, 119-120, 122, 124, 188-189, 205, 293, 402 |
-| scripts/tools/verify\_action\_pins.py             |      150 |      150 |      0% |    58-315 |
+| scripts/tools/verify\_action\_pins.py             |      150 |        1 |     99% |       315 |
 | scripts/tools/verify\_secret\_activation.py       |      236 |        4 |     98% |124, 355-356, 443 |
 | scripts/validate\_collector\_summary\_contract.py |       53 |        1 |     98% |        95 |
-| scripts/verify\_post\_quality.py                  |       78 |       78 |      0% |    13-130 |
+| scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24731** | **5682** | **77%** |           |
+| **TOTAL**                                         | **24731** | **5302** | **79%** |           |
 
 
 ## Setup coverage badge
