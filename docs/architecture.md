@@ -1,8 +1,13 @@
 # Architecture
 
-> 최종 현행화: 2026-07-13. 실측 카운트는 `ls scripts/collect_*.py`, `ls scripts/generate_*.py`,
-> `find scripts/common -name '*.py'`, `ls .github/workflows/*.yml`, `ls pages/*.md`,
-> `ls tests/test_*.py` 로 재검증 가능.
+> 최종 현행화: 2026-08-26. 전체 카운트의 단일 소스는
+> [`docs/component-counts.md`](component-counts.md) 다(`scripts/tools/component_counts.py` 파생).
+>
+> **이 문서가 숫자를 직접 적는 기준**: 바로 아래에 **열거 표가 붙어 있어 자기 검증되는
+> 경우에만** 적는다(수집기 13 / 생성기 6 / 페이지 15 — 각 표의 행 수와 일치하므로
+> 어긋나면 눈에 보인다). 열거가 없는 수치는 적지 않는다 — 2026-08-26 감사에서
+> 워크플로우 수가 제목 "49개", ASCII 다이어그램 "48", 그룹 표 합계 48, 실측 54 로
+> 네 군데가 서로 달랐다.
 
 ## 시스템 개요
 
@@ -11,7 +16,7 @@ Investing Dragon은 3-tier 아키텍처로 구성됩니다:
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                        GitHub Actions (Cron)                        │
-│  48 Workflows  │  per-collector concurrency groups  │  Auto Deploy  │
+│   Workflows    │  per-collector concurrency groups  │  Auto Deploy  │
 └────────┬────────────────────┬──────────────────────┬────────────────┘
          │                    │                      │
          ▼                    ▼                      ▼
@@ -31,7 +36,7 @@ Investing Dragon은 3-tier 아키텍처로 구성됩니다:
 └─────────────────────────────────────────┘
 ```
 
-전체 수집기(13개)는 `scripts/common/base_collector.py`의 `BaseCollector`(ABC)를
+전체 수집기는 `scripts/common/base_collector.py`의 `BaseCollector`(ABC)를
 상속하여 동일한 실행 파이프라인을 공유합니다. 자세한 내용은
 [BaseCollector 아키텍처](#basecollector-아키텍처) 참고.
 
@@ -170,7 +175,7 @@ flowchart TD
 
 | 모듈 | 역할 |
 |:-----|:-----|
-| `base_collector.py` | 수집기 ABC (템플릿 메서드) — 13개 수집기 전부 상속 |
+| `base_collector.py` | 수집기 ABC (템플릿 메서드) — `collect_*.py` 전부 상속 |
 | `config.py` | 환경변수 로드, 로깅 (`get_env`, `setup_logging`, `get_verify_ssl`) |
 | `collector_config.py` | `collectors.yml` 기반 수집기별 설정 로드 |
 | `dedup.py` | 중복 방지 엔진 (SHA256 + `SequenceMatcher` fuzzy >80%) |
@@ -186,7 +191,7 @@ flowchart TD
 | `translator.py`, `text_lang.py`, `text_utils.py` | 번역·언어 처리 |
 | `collector_metrics.py`, `signal_tracker.py` | 메트릭/시그널 추적 |
 
-> `scripts/common/` 변경은 13개 수집기 전부에 영향을 미치는 고-blast-radius
+> `scripts/common/` 변경은 수집기 전부에 영향을 미치는 고-blast-radius
 > 영역입니다. 시그니처 변경 시 전 수집기와 테스트 회귀 확인 필수.
 
 ## 중복 방지 시스템
@@ -242,16 +247,29 @@ flowchart TD
 ### 테마
 - minima 기반 **다크 파이낸스** 스타일, 반응형, Sass `@use` 모듈 구조
 
-## CI/CD 파이프라인 - 49개 워크플로우
+## CI/CD 파이프라인
+
+전체 워크플로우 개수는 [`docs/component-counts.md`](component-counts.md) 가 단일
+소스다(`scripts/tools/component_counts.py` 파생). 여기 숫자를 적지 않는 이유:
+2026-08-26 감사에서 이 제목이 "49개", 아래 그룹 표 합계가 48, 실측이 54 로 셋 다
+어긋나 있었다.
 
 ### 워크플로우 그룹
+
+> **분류는 2026-08-26 기준 스냅샷**이다. 합계의 권위는 위 생성 문서에 있고, 이 표는
+> "어떤 종류가 있는지" 를 보여주는 용도다.
+>
+> 각 행의 "수" 는 그 그룹의 **실제 워크플로우 파일 수**이며, 설명 칸의 항목 수와는
+> 1:1 이 아니다 — glob(`collect-*.yml` = 13개)이나 슬래시 묶음
+> (`check-post-images/summary` = 2개) 표기를 쓰기 때문이다. 행을 고칠 때는 이름을
+> 세지 말고 `ls .github/workflows/` 로 확인할 것.
 
 | 그룹 | 수 | 설명 |
 |:-----|:--:|:-----|
 | **수집** | 13 | `collect-*.yml` — 수집기별 독립 cron |
 | **콘텐츠 생성** | 6 | daily-summary, weekly-digest, weekly-report, ops-10am-digest, journal-og-images, backfill-post-summaries |
 | **품질/테스트** | 10 | code-quality, post-quality, check-post-images/summary, description-quality, coverage-comment, integrated-quality-report, lighthouse-ci, i18n-e2e, reports-e2e |
-| **보안/공급망** | 5 | security-scan, dependency-check, supply-chain-lock(+reminder), dependabot-auto-merge |
+| **보안/공급망** | 4 | security-scan, dependency-check, supply-chain-lock, dependabot-auto-merge |
 | **배포/SEO** | 5 | deploy-pages, indexnow-submit, gsc-sitemap-submit, gsc-index-audit, notify-deploy-status |
 | **모니터링/운영** | 9 | site-health-check, collector-heartbeat, watchdog-zero-job-runs, alert-consecutive-failures, classify-workflow-failures, push-folder-info-to-slack, respond-ai-mentions, continuous-improvement-loop, cleanup-old-images |
 

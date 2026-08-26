@@ -20,15 +20,13 @@ Jekyll(Ruby) 정적 사이트 + Python 수집 스크립트 + GitHub Actions CI/C
 
 ```
 scripts/           # Python 자동화 스크립트
-  common/          # 공통 모듈 18개 (config, dedup, utils, post_generator, image_generator,
-                   #   crypto_api, rss_fetcher, summarizer, formatters, browser,
-                   #   collector_metrics, markdown_utils, enrichment, fmp_api,
-                   #   translator, worldmonitor_utils, blockchain_api, __init__)
-  collect_*.py     # 뉴스 수집기 12개 (crypto, stock, social, regulatory, political,
-                   #   coinmarketcap, worldmonitor, defi_llama, fmp_calendar, market_indicators,
-                   #   geopolitical, blockchain)
-  generate_*.py    # 요약 생성기 5개 (daily_summary, market_summary, weekly_digest,
-                   #   og_images, ops_10am_digest)
+  common/          # 공통 모듈 (개수: docs/component-counts.md)
+                   #   주요: config, dedup, utils, post_generator, base_collector,
+                   #   enrichment, summarizer, rss_fetcher, image_generator/ (서브패키지)
+  collect_*.py     # 뉴스 수집기 (개수: docs/component-counts.md)
+                   #   전부 common/base_collector.py 의 BaseCollector 를 상속한다
+  generate_*.py    # 요약 생성기 (개수: docs/component-counts.md)
+                   #   주요: daily_summary, market_summary, weekly_digest, og_images
   tools/           # SEO/색인 도구 (gsc_api, gsc_index_audit, indexnow_submit,
                    #   check_sitemap_local, postbuild_fix_feed_enclosures)
   respond_ai_mentions.py  # Slack 멘션 응답
@@ -261,7 +259,7 @@ Slack 연동:
 
 ### 6. Architect (시스템 아키텍트)
 - **담당**: 수집 파이프라인 설계, Jekyll 통합, 워크플로우 자동화 아키텍처
-- **전문**: 11개 수집기 데이터 흐름, `scripts/common/` 모듈 설계, GitHub Actions 구조
+- **전문**: 수집기 데이터 흐름 전반, `scripts/common/` 모듈 설계, GitHub Actions 구조
 - **핵심 파일**: `scripts/common/config.py`, `scripts/common/dedup.py`
 
 ### 7. Test Engineer (테스트 엔지니어)
