@@ -19,7 +19,7 @@ DragonQuant Platform
 │  │  Data Intelligence       │─────▶│  Quant Trading Engine        │  │
 │  │                          │      │                              │  │
 │  │  20+ 소스 자동 수집       │      │  14-Component MI Signal     │  │
-│  │  11 Collectors           │      │  6 Technical Indicators     │  │
+│  │  Collectors              │      │  6 Technical Indicators     │  │
 │  │  중복 제거 + 감성 분석    │      │  Kelly + CVaR 리스크 제어    │  │
 │  │  Jekyll 사이트 발행       │      │  Upbit/Bithumb 자동매매     │  │
 │  └─────────────────────────┘      └─────────────────────────────┘  │
@@ -32,7 +32,7 @@ DragonQuant Platform
 
 ## Features
 
-### 데이터 수집 (11 Collectors)
+### 데이터 수집 (13 Collectors)
 
 | 수집기 | 주기 | 주요 소스 | 카테고리 |
 |:-------|:----:|:---------|:---------|
@@ -47,14 +47,19 @@ DragonQuant Platform
 | `collect_fmp_calendar` | 12h | FMP 경제 캘린더/실적 일정, 섹터 퍼포먼스 | market-analysis |
 | `collect_market_indicators` | 평일 2회 | CNN Fear & Greed, VIX/DXY/원자재, 시장 폭/마진 뉴스 | market-analysis |
 | `collect_geopolitical` | 12h | Polymarket 지정학 리스크 시장 데이터 | geopolitical-risk |
+| `collect_defi_yields` | 6h | DeFi Llama Yields API (이자율) | crypto-news |
+| `collect_blockchain` | 일간 | Blockchain.com(BTC 해시레이트/난이도), Etherscan V2(ETH gas/supply) | crypto-news |
 
-### 콘텐츠 생성 (3 Generators)
+### 콘텐츠 생성 (6 Generators)
 
 | 생성기 | 스케줄 | 출력 |
 |:-------|:------|:-----|
 | `generate_market_summary` | 매일 | 시장 분석 + 시각화 이미지 (히트맵, 게이지, 카드) |
 | `generate_daily_summary` | 매일 | 우선순위별 종합 뉴스 요약 (P0/P1/P2) |
 | `generate_weekly_digest` | 매주 일 | 주간 다이제스트 (카테고리별 분석) |
+| `generate_weekly_report` | 매주 월 09:00 KST | 주간 운영·수집 지표 리포트 |
+| `generate_ops_10am_digest` | 매일 10:00 KST | 오전 운영 다이제스트 (Slack) |
+| `generate_og_images` | push 트리거 | 포스트 OG/소셜 카드 이미지 |
 
 ### crypto repo 연동
 
@@ -75,7 +80,7 @@ DragonQuant Platform
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    GitHub Actions (25 Workflows)                 │
+│                    GitHub Actions (Cron + Push)                  │
 │  Concurrency Group: collect-data  │  Cron Schedule  │  Deploy   │
 └────────┬────────────────────┬──────────────────────┬────────────┘
          │                    │                      │
@@ -83,10 +88,10 @@ DragonQuant Platform
 ┌─────────────────┐  ┌─────────────────┐  ┌──────────────────┐
 │   Collection    │  │   Processing    │  │   Presentation   │
 │                 │  │                 │  │                  │
-│ 11 Collectors   │─▶│  3 Generators   │─▶│  Jekyll Site     │
+│   Collectors    │─▶│   Generators    │─▶│  Jekyll Site     │
 │  20+ Sources    │  │  Image Gen      │  │  GitHub Pages    │
 │  Dedup Engine   │  │  Summarizer     │  │  OG/SNS 최적화   │
-│  Enrichment     │  │  OG Image Gen   │  │  9 Categories    │
+│  Enrichment     │  │  OG Image Gen   │  │  Categories      │
 └────────┬────────┘  └────────┬────────┘  └──────────────────┘
          │                    │
          ▼                    ▼
@@ -175,9 +180,16 @@ bash scripts/server_morning_autopost.sh
 2. **Fuzzy 매칭**: `difflib.SequenceMatcher` 유사도 80% 초과 시 중복 판정
 3. **상태 파일**: `_state/*.json`에 해시 저장 (30일 보관)
 
-## GitHub Actions Workflows (25개)
+## GitHub Actions Workflows
 
-### 데이터 수집 (10개)
+전체 개수는 [`docs/component-counts.md`](docs/component-counts.md) 가 단일 소스다
+(`scripts/tools/component_counts.py` 파생). **아래 표는 주요 워크플로우만 고른
+부분 목록**이며 전수가 아니다 — 이전에는 이 제목이 "25개" 라고 적혀 있어 저장소에
+워크플로우가 25개뿐인 것처럼 읽혔다(실측 54).
+
+각 소절의 숫자는 그 표의 행 수와 일치시킨다. 어긋나면 그 소절이 낡은 것이다.
+
+### 데이터 수집 (13개)
 
 | 워크플로우 | 스케줄 (UTC) | 설명 |
 |:-----------|:------------|:-----|
@@ -191,6 +203,9 @@ bash scripts/server_morning_autopost.sh
 | `collect-worldmonitor-news` | 매일 | 글로벌 뉴스 |
 | `collect-fmp-calendar` | 매 12h `:00` | FMP 경제 캘린더/실적 |
 | `collect-market-indicators` | 평일 14:00/22:00 UTC | 시장 심리·리스크 지표 |
+| `collect-defi-yields` | 매 6h `:35` | DeFi 이자율(Yields) |
+| `collect-blockchain` | 매일 `00:20` | 온체인 지표(BTC 해시레이트, ETH gas) |
+| `collect-geopolitical` | `21:52`, `09:52` | 지정학 리스크(Polymarket, GDELT) |
 
 ### 콘텐츠 생성 (4개)
 
@@ -201,7 +216,7 @@ bash scripts/server_morning_autopost.sh
 | `backfill-post-summaries` | 매일 | 포스트 요약 보강 |
 | `weekly-digest` | 매주 일 | 주간 다이제스트 |
 
-### 배포 & 운영 (11개)
+### 배포 & 운영 (10개)
 
 | 워크플로우 | 트리거 | 설명 |
 |:-----------|:------|:-----|
@@ -228,24 +243,24 @@ investing/
 ├── _posts/                     # 자동 생성 포스트 → crypto repo가 소비
 ├── _state/                     # 중복 방지 상태 파일 (수동 수정 금지)
 ├── assets/images/generated/    # OG 이미지 + 시각화 (30일 보관)
-├── pages/                      # 카테고리 페이지 (9개)
+├── pages/                      # 카테고리 페이지 (개수: docs/component-counts.md)
 ├── scripts/
-│   ├── common/                 # 공통 모듈 (13개)
+│   ├── common/                 # 공통 모듈 (개수: docs/component-counts.md)
 │   │   ├── config.py           # 환경변수, 로깅
 │   │   ├── dedup.py            # SHA256 + fuzzy 중복 방지
 │   │   ├── enrichment.py       # URL 해석, 설명 생성
 │   │   ├── summarizer.py       # 키워드 기반 요약
 │   │   ├── image_generator.py  # matplotlib/Pillow 시각화
 │   │   └── ...                 # utils, rss_fetcher, crypto_api 등
-│   ├── collect_*.py            # 수집기 10개
-│   ├── generate_*.py           # 생성기 5개 + OG 이미지
+│   ├── collect_*.py            # 수집기 (개수: docs/component-counts.md)
+│   ├── generate_*.py           # 생성기 (개수: docs/component-counts.md)
 │   └── enrich_existing_posts.py # 포스트 품질 보강
 ├── docs/
 │   ├── platform-architecture.md # DragonQuant 통합 아키텍처
 │   ├── architecture.md         # 이 저장소 상세 아키텍처
 │   └── data-sources.md         # 데이터 소스 카탈로그
 ├── .github/
-│   ├── workflows/              # 25개 자동화 워크플로우
+│   ├── workflows/              # 자동화 워크플로우 (개수: docs/component-counts.md)
 │   └── actions/                # 재사용 액션 (python-collect, resolve-slack-config)
 ├── Gemfile                     # Ruby 의존성
 └── README.md
