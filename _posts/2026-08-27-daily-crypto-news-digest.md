@@ -201,7 +201,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBkQlJFb2w4VktnYXdEeXU2WGdXMjRXd0JHbU0zRFg2dTJOVUZiTUZVbFY2ZWlvRTNQOXVLeFpkQUUwczNqRUhWVEZydnBtNGFNVFNpM2JR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코빗 이어 코인원도 ‘수수료 0원’…미래에셋·한투 가세한 거래소 ‘쩐의 전쟁’</a>
-<p class="news-desc">코빗 이어 코인원도 ‘수수료 0원’…미래에셋·한투 가세한 거래소 ‘쩐의 전쟁’ 중앙일보</p>
+<p class="news-desc">암호화폐 거래소 코빗에 이어 코인원도 ‘거래 수수료 0원’ 카드를 꺼냈다. 코인 시장 침체로 거래량이 줄었지만 미래 먹거리를 찾는 미래에셋그룹과 한국투자증권 등 대형 금융자본을 등에 업은 후발 거래소들이 수수료 수익을 포기하면서 고객 확보 경쟁에 나섰다. 코인원은 26일 오전 11시부터 전 종목 거래 수수료를 무료화했다. 30일간 무료인 바우처를 횟수 제한 없이 재발급하는 방식이다. 앞서 24일 코빗 운영사 디지털엑스는 파격적인 카드를 꺼냈다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
