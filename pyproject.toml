@@ -1,4 +1,38 @@
+# 이 저장소는 배포 패키지가 아니다. `[project]` 는 **오직 `requires-python` 을
+# 선언하려고** 존재한다 — `name`/`version` 은 PEP 621 이 요구하는 최소 필드라서
+# 채운 자리값이다. `[build-system]` 을 두지 않은 것도 의도적이다: 빌드 경로가 생기면
+# 배포 가능한 패키지로 오인된다(2026-08-26 실측으로 `pip install .` / `python -m build`
+# / `setup.py` 사용처는 0건).
+#
+# ## 왜 `.python-version` 만으로 부족한가
+#
+# 런타임은 3.11 고정이고 `scripts/requirements.lock` 도 3.11 에서 생성한다. 그 제약을
+# Dependabot 에 알리려고 2026-08-25 에 `.python-version` = 3.11 을 추가했는데,
+# **그게 실제로 존중되는지 관측할 방법이 없다**(2026-08-26 확정):
+#
+#   - numpy 2.5.2 PR(#1209)을 닫자 Dependabot 이 "won't notify you again about this
+#     release" 라고 응답했다 → 같은 릴리스로는 재제안되지 않으므로, PR 이 안 나오는
+#     것이 존중의 증거가 못 된다.
+#   - 그 PR 의 head 브랜치가 삭제돼 `reopen`/`recreate` 로 억제를 우회할 수도 없다.
+#   - 직접 의존성 23개를 전수 조회한 결과 최신이 3.12 전용인 것은 numpy 하나뿐 →
+#     대체 프로브가 없다. 다음 관측 기회는 numpy 2.5.3 이다.
+#
+# 그래서 관측 불가능한 기제에 의존하는 대신 **파일로 관측되는 선언**으로 승격한다.
+# Dependabot 이 파이썬 제약을 읽는 순서(dependabot-core `python_requirement_parser.rb`)
+# 에서 `[project] requires-python` 은 2위, `.python-version` 은 4위다 — 즉 이 선언이
+# 우선한다. 둘 다 두는 이유는 서로 다른 실패 모드를 덮기 때문이고,
+# `tests/test_python_version_declaration_guard.py` 가 둘의 드리프트를 막는다.
+#
+# `<3.12` 상한은 락이 3.11 전용이라는 사실의 반영이다. 상한이 없으면 3.12+ 전용
+# 패키지가 "3.11 사용자만 못 쓰는" 상태로 통과할 여지가 남는다.
+[project]
+name = "investing-dragon"
+version = "0.0.0"
+requires-python = ">=3.11,<3.12"
+
 [tool.ruff]
+# target-version 을 명시 유지한다. 비우면 ruff 가 `[project] requires-python` 에서
+# 추론하는데, 추론에 맡기면 상한 표기를 바꿀 때 린트 대상 문법이 조용히 함께 움직인다.
 target-version = "py311"
 line-length = 120
 
