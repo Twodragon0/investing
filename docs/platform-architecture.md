@@ -45,7 +45,7 @@ DragonQuant는 **데이터 인텔리전스**와 **퀀트 트레이딩**을 결�
 │  Layer 1: Data Intelligence (investing repo)                            │
 │  ┌────────────────────────────────────────────────────────────────────┐ │
 │  │  20+ 데이터 소스 자동 수집 → 중복 제거 → 감성 분석 → 구조화 출력   │ │
-│  │  13 Collectors | 6 Generators | SHA256+Fuzzy Dedup | OG/SEO 최적화 │ │
+│  │  Collectors | Generators | SHA256+Fuzzy Dedup | OG/SEO 최적화      │ │
 │  └──────────────────────────────┬─────────────────────────────────────┘ │
 │                                 │ _posts/*.md (구조화된 시장 데이터)     │
 │                                 ▼                                       │
@@ -107,14 +107,19 @@ Live:   investing.2twodragon.com
 └── 출력 (Output)         → _posts/*.md (crypto repo가 소비)
 ```
 
-| 구성 요소 | 수량 | 설명 |
-|:----------|:-----|:-----|
-| 수집기 (Collectors) | 13개 | crypto_news, stock_news, coinmarketcap, defi_llama, defi_yields, blockchain, market_indicators, fmp_calendar, social_media, regulatory, political_trades, geopolitical, worldmonitor_news (전부 `BaseCollector` 상속) |
-| 생성기 (Generators) | 6개 | daily_summary, market_summary, weekly_digest, weekly_report, og_images, ops_10am_digest |
-| 공통 모듈 | 57개 | base_collector, config, dedup, utils, post_generator, enrichment, image_generator/ 서브패키지 등 |
-| 데이터 소스 | 20+ | CryptoPanic, FRED, CoinGecko, FMP, SEC, FSC, GDELT, Polymarket 등 (NewsAPI는 2026-05-10 DEPRECATED) |
-| GitHub Actions | 48개 | 수집 13 + 생성 6 + 품질 10 + 보안/공급망 5 + 배포/SEO 5 + 운영 9 |
-| 페이지 | 15개 | crypto, stock, regulatory, political, social, blockchain, defi, worldmonitor, reports, search 등 |
+> **개수는 이 표에 적지 않는다.** investing 의 실측 카운트는
+> [`component-counts.md`](component-counts.md) 가 단일 소스다
+> (`scripts/tools/component_counts.py` 파생). 2026-08-26 감사에서 이 표의 공통 모듈
+> 57(→62) · GitHub Actions 48(→54) 이 드리프트해 있었다.
+
+| 구성 요소 | 설명 |
+|:----------|:-----|
+| 수집기 (Collectors) | crypto_news, stock_news, coinmarketcap, defi_llama, defi_yields, blockchain, market_indicators, fmp_calendar, social_media, regulatory, political_trades, geopolitical, worldmonitor_news (전부 `BaseCollector` 상속) |
+| 생성기 (Generators) | daily_summary, market_summary, weekly_digest, weekly_report, og_images, ops_10am_digest |
+| 공통 모듈 | base_collector, config, dedup, utils, post_generator, enrichment, image_generator/ 서브패키지 등 |
+| 데이터 소스 | CryptoPanic, FRED, CoinGecko, FMP, SEC, FSC, GDELT, Polymarket 등 (NewsAPI는 2026-05-10 DEPRECATED) |
+| GitHub Actions | 수집 / 생성 / 품질 / 보안·공급망 / 배포·SEO / 운영 (그룹별 내역: [`architecture.md`](architecture.md)) |
+| 페이지 | crypto, stock, regulatory, political, social, blockchain, defi, worldmonitor, reports, search 등 |
 
 ### crypto (퀀트 트레이딩 엔진)
 
@@ -132,14 +137,21 @@ GitHub: Twodragon0/crypto
 └── 검증 (Verification)       → Backtest, Monte Carlo, DSR, IC/ICIR
 ```
 
-| 구성 요소 | 수량 | 설명 |
-|:----------|:-----|:-----|
-| 핵심 서비스 | 4개 | monitor, quant_trader, post_generator, dashboard |
-| 데이터 수집기 | 9개 | economic, alternative, regulatory, onchain, cdp, cmc, polymarket, social_signal, worldmonitor |
-| 트레이딩 모듈 | 7개 | swing_strategy, swing_indicators (VWAP 포함), paper_broker, state_cache 등 |
-| 마켓 인텔리전스 컴포넌트 | 14개 | F&G, social, macro, funding 등 (가중치 합계 1.0) |
-| 테스트 | 2,373개 (crypto) + 113개 (investing) = **2,486개** | 전체 모듈 커버리지 |
-| GitHub Actions | 16개 | CI/CD, security scan, quant trader 실행 등 |
+> **개수는 적지 않는다.** crypto 쪽 수치는 이 저장소에서 검증할 수 없다 —
+> 레이아웃이 다르고(`crypto-monitoring/` 등 하위 프로젝트 구조), CI 러너에 crypto
+> 체크아웃이 없어 파생 검증이 돌지 않는다. 2026-08-26 시점 확인된 드리프트만 기록:
+> GitHub Actions 16 → 실측 22, 테스트 "2,373 + 113 = 2,486" 의 investing 몫 113 은
+> 실측(파일 172 / 함수 5,409)과 무관. 정확한 수는
+> [Twodragon0/crypto](https://github.com/Twodragon0/crypto) 를 직접 볼 것.
+
+| 구성 요소 | 설명 |
+|:----------|:-----|
+| 핵심 서비스 | monitor, quant_trader, post_generator, dashboard |
+| 데이터 수집기 | economic, alternative, regulatory, onchain, cdp, cmc, polymarket, social_signal, worldmonitor |
+| 트레이딩 모듈 | swing_strategy, swing_indicators (VWAP 포함), paper_broker, state_cache 등 |
+| 마켓 인텔리전스 컴포넌트 | F&G, social, macro, funding 등 (**가중치 합계 1.0**) |
+| 테스트 | 전체 모듈 커버리지 |
+| GitHub Actions | CI/CD, security scan, quant trader 실행 등 |
 
 ---
 
@@ -155,7 +167,7 @@ GitHub: Twodragon0/crypto
 │        │          │        │     │        │           │             │
 │        ▼          ▼        ▼     ▼        ▼           ▼             │
 │  ┌──────────────────────────────────────────────────────────────┐   │
-│  │  13 Collectors → Dedup Engine → Post Generator              │   │
+│  │  Collectors → Dedup Engine → Post Generator                 │   │
 │  └──────────────────────────────┬───────────────────────────────┘   │
 │                                 │                                   │
 │                                 ▼                                   │
@@ -237,7 +249,7 @@ GitHub: Twodragon0/crypto
 │  └─────────┘  └─────────┘  └──────────┘  └─────────────────┘  │
 │                                                                 │
 │  동시성 제어: 수집기별 concurrency 그룹 (동일 수집기 직렬, 간 병렬)  │
-│  워크플로우: investing 49개 + crypto 16개 = 65개                  │
+│  워크플로우: 각 저장소 CI/CD (개수는 각 저장소 기준)              │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
