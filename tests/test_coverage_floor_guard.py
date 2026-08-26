@@ -9,32 +9,40 @@ at or above :data:`_MIN_FLOOR`:
 * ``.github/workflows/code-quality.yml`` — a dedicated
   ``coverage report --fail-under=NN`` step re-checks the same data in CI.
 
-The floor was ratcheted 55 -> 65 (P3-1/P3-2) -> 70 (P3-3) -> 73 (2026-08-25) to
-lock existing coverage as a regression baseline. Without this guard the floor
-could be quietly dropped back — re-opening the gap between "tests deleted" and
-"build still green".
+The floor was ratcheted 55 -> 65 (P3-1/P3-2) -> 70 (P3-3) -> 73 -> 75 (both
+2026-08-25) to lock existing coverage as a regression baseline. Without this guard
+the floor could be quietly dropped back — re-opening the gap between "tests
+deleted" and "build still green".
 
-The 73 step was measured, not guessed. Actual total is **74.36%**
-(18413/24761 statements), and the measurement is deterministic:
+Every step is measured, not guessed. Actual total is **77.03%**
+(19091/24771 statements), and the measurement is deterministic:
 
-* local, same tree, 5 consecutive runs -> ``24761 6348 74%`` every time, spread 0
-* CI, 25 runs over 2026-08-18..08-25 (``python-coverage-comment-action-data``
-  branch ``data.json``) -> 74.304 .. 74.309, spread **0.005pt**
+* local, same tree, 5 consecutive runs -> ``24771 5680 77%`` every time, spread 0
+* CI on main -> 77.025 (``python-coverage-comment-action-data`` branch ``data.json``)
+* CI noise baseline, 25 runs over 2026-08-18..08-25 -> spread **0.005pt**
 
-So the 1.36pt headroom at 73 is ~270x the observed measurement noise; this floor
+So the 2.03pt headroom at 75 is ~400x the observed measurement noise; this floor
 cannot go red from noise. What it *does* cost: a new fully-untested script is
-allowed only up to ~462 statements before the gate trips (for scale, the largest
-existing 0%-covered script is ``scripts/backfill_images.py`` at 317). That is the
-intended ratchet — past that point, write tests or lower the floor deliberately.
+allowed only up to ~683 statements before the gate trips. For scale, scripts in
+this repo run 43..490 statements, and the largest remaining low-coverage module is
+``scripts/collect_geopolitical.py`` (490 stmts at 17%). That is the intended
+ratchet — past that point, write tests or lower the floor deliberately.
+
+Why 75 and not 76: the 73 step was accepted with 1.36pt / 462 statements of
+headroom. 76 would give 1.03pt / 348 — *tighter* than the bar agreed hours
+earlier, which is a stricter policy than anyone signed up for. 75 banks most of
+the gain without moving that bar.
 
 An earlier note claimed a ~1.3pt run-to-run swing (2026-07-27, when the total was
 ~71%). That is no longer reproducible; the hermetic-test hardening since then
 removed it. Re-measure before citing it again.
 
-Direction: floor is ``>=`` — ratcheting UP (73 -> 75 ...) stays green; only
-removing a gate or lowering it below 73 trips this test. If the floor is lowered
+Direction: floor is ``>=`` — ratcheting UP (75 -> 77 ...) stays green; only
+removing a gate or lowering it below 75 trips this test. If the floor is lowered
 intentionally, update ``_MIN_FLOOR`` here AND both ``--fail-under`` values
-together.
+together. The falsifiability harness derives its mutation anchors from the current
+value (``guard_falsifiability._current_coverage_floor``), so ratcheting needs no
+edit there.
 
 The workflow gate that scopes coverage to ``summary_sections.py`` (a stricter
 95% per-module floor) is intentionally excluded here — it is guarded separately
@@ -67,7 +75,7 @@ _PYPROJECT = _REPO_ROOT / "pyproject.toml"
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 
 # The global scripts coverage floor both gates must enforce.
-_MIN_FLOOR = 73
+_MIN_FLOOR = 75
 
 # The measurement scope the floor is meaningful against. `--cov=scripts` in
 # pyproject addopts applies to every pytest run; the CI step additionally names
