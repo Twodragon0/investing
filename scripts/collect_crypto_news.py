@@ -46,6 +46,7 @@ from common.rss_fetcher import fetch_rss_feed, fetch_rss_feeds_concurrent
 from common.summarizer import ThemeSummarizer
 from common.translator import get_display_title
 from common.utils import (
+    redact_credentials,
     remove_sponsored_text,
     request_with_retry,
     sanitize_string,
@@ -115,7 +116,10 @@ def fetch_cryptopanic(api_key: str, limit: Optional[int] = None) -> List[Dict[st
         logger.info("CryptoPanic: fetched %d items", len(items))
         return items
     except requests.exceptions.RequestException as e:
-        logger.warning("CryptoPanic fetch failed: %s", e)
+        # This call bypasses request_with_retry, so it does not get that helper's
+        # redaction — and `params` above carries the CryptoPanic `auth_token`,
+        # which requests embeds in the exception's URL. Redact explicitly.
+        logger.warning("CryptoPanic fetch failed: %s", redact_credentials(e))
         return []
 
 
