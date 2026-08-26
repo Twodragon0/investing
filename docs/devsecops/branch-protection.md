@@ -1,8 +1,15 @@
 # main 브랜치 보호 — 단계별 적용 기록
 
-이 저장소는 **main 에 직접 푸시하는 워크플로우가 23개**다. 그래서 브랜치 보호를
-한 번에 켜면 수집 파이프라인이 멈춘다. 단계를 나눈 이유와 각 단계의 제약을 여기
-기록한다.
+이 저장소는 **main 에 직접 푸시하는 워크플로우가 여럿**이다(실측 개수:
+[`docs/component-counts.md`](../component-counts.md) 의 "main 직접 푸시 워크플로우"
+행). 그래서 브랜치 보호를 한 번에 켜면 수집 파이프라인이 멈춘다. 단계를 나눈 이유와
+각 단계의 제약을 여기 기록한다.
+
+> 개수를 이 문서에 적지 않는 이유: 2026-08-07 작성 시점의 23 이 2026-08-26 실측
+> 24 와 어긋났다. 워크플로우가 추가될 때마다 5곳을 손으로 고쳐야 했고 실제로
+> 드리프트했다. 이제 `scripts/tools/component_counts.py` 가 파생하고
+> `tests/test_component_counts.py` 가 그 탐지 가정(전건이 main 대상인지)까지
+> 단언한다.
 
 매핑: OWASP **CICD-SEC-1**(Insufficient Flow Control), NIST SSDF(SP 800-218)
 **PO.3 / PS.1**.
@@ -25,7 +32,7 @@
 - enforcement `active`, 적용 2026-08-07T05:07:18Z
 
 **bypass 가 필요 없는 이유:** 두 규칙은 fast-forward 푸시를 건드리지 않는다.
-자동 푸시 23개는 전부 fast-forward(또는 rebase 후 fast-forward)이므로 영향이 없다.
+자동 푸시는 전부 fast-forward(또는 rebase 후 fast-forward)이므로 영향이 없다.
 
 ### 실측 검증
 
@@ -48,8 +55,8 @@
 - `05:48:49Z` `chore: collect social media`
 - `05:53:12Z` `chore: collect stock news`
 
-두 건 모두 `python-collect` 공유 액션 경유다. 즉 23개 자동 푸시 경로 중 가장 많이
-쓰이는 것이 Phase 1 아래서 정상 동작한다.
+두 건 모두 `python-collect` 공유 액션 경유다. 즉 자동 푸시 경로 중 **가장 많이 쓰이는
+것**(대다수 워크플로우가 이 공유 액션을 통해 푸시한다)이 Phase 1 아래서 정상 동작한다.
 
 ## Phase 2 — PR 필수 + 상태 체크 필수 (미적용)
 
@@ -127,16 +134,40 @@ changes (항상 실행, 변경 파일 판정)
   포함시킨 것은 이 워크플로우에서 **실제로 발생했던** 실패 모드이기 때문이다
   (concurrency 전역 상수 그룹으로 런 58%가 취소 — #1199 에서 수정).
 
-`tests/test_supply_chain_lock_gate_guard.py` 가 8개 불변식을 고정한다(각각 뮤테이션
-확인). 경로 목록이 `push:` 트리거와 `changes` 잡 두 곳에 있으므로 그 드리프트도
-단언 대상이다 — 조치 B 가 파생으로 없앤 그 문제와 같은 종류이며, 여기서는 목록이
-3개뿐이라 파생 도구 대신 동등성 단언을 택했다.
+`tests/test_supply_chain_lock_gate_guard.py` 가 다섯 축을 고정한다(각각 뮤테이션
+확인). 축 이름으로 적는다 — 개수를 적으면 축이 늘 때마다 드리프트한다(실제로 이
+문서는 "8개" 라고 적고 있었는데 어느 시점에도 함수 수와 맞지 않았다):
 
-#### 실측: §5.3 의 위험은 아직 잠재 상태다 (2026-08-24)
+| 축 (테스트 클래스) | 지키는 것 |
+|---|---|
+| `TestAlwaysReports` | `pull_request` 에 `paths:` 부재, `gate` 존재·`always()`·`needs: [changes, verify]` |
+| `TestFailClosed` | `changes` 실패 차단, `verify` `failure`/`cancelled` 차단, `skipped` 통과, 미지의 결과 차단 |
+| `TestVerifyStaysConditional` | `verify` 가 `changes` 판정에 걸려 있어 무거운 검증이 전 PR 에서 돌지 않음 |
+| `TestLockIntegrityStaysBlocking` | `--require-hashes` 스텝이 **차단**으로 유지 — `\|\|` fallback·`set +e`·`continue-on-error` 부재 (2026-08-26 승격, #1224) |
+| `TestPathListDoesNotDrift` | `push:` 트리거와 `changes` 잡의 경로 목록 동등 |
+
+마지막 축의 경로 목록이 두 곳에 있는 문제는 조치 B 가 파생으로 없앤 것과 같은
+종류이며, 여기서는 목록이 3개뿐이라 파생 도구 대신 동등성 단언을 택했다.
+
+`TestLockIntegrityStaysBlocking` 이 뒤늦게 추가된 이유가 중요하다. 조치 B-2 가 집계
+구조를 만들었지만 그 안의 `verify` 는 여전히 `|| echo "::warning ..."` 로 실패를
+삼키고 있었다 — 즉 `Supply-chain lock gate` 를 required 로 걸어도 **락 무결성 실패는
+통과했을 것**이다. 집계 배선과 스텝의 차단성은 별개 축이고, 둘 다 없으면 게이트가
+조용히 비어 있다.
+
+#### 실측: §5.3 의 위험은 아직 잠재 상태다 (2026-08-24, 2026-08-26 재확인)
 
 `dependabot-auto-merge.yml` 의 `Enable auto-merge` 스텝이 **한 번도 실행된 적
 없다** — 최근 12개 런 전부 `skipped`(`update-type` 이 `version-update:semver-patch`
 가 아니었다. 범위 제약 bump 는 `fetch-metadata` 가 patch 로 분류하지 않는다).
+
+**2026-08-26 재측정: 최근 14개 런도 전부 잡 레벨 `skipped`.** 스텝은 여전히 실행된
+적이 없다. 재측정 명령:
+
+```bash
+gh run list --workflow=dependabot-auto-merge.yml --limit 14 \
+  --json createdAt,conclusion --jq '.[]|"\(.createdAt[:16]) \(.conclusion)"'
+```
 
 즉 구멍은 구조적으로 실재하지만 **관측된 발생은 0건**이다. 위 "결정을 다시 열어야
 하는 신호" 중 "required check 를 우회한 회귀가 실제로 발생한다" 는 아직 충족되지
@@ -189,7 +220,7 @@ changes (항상 실행, 변경 파일 판정)
 ### 차단 사유 — `github-actions` 는 이 저장소에서 bypass actor 가 될 수 없다 (2026-08-07 실측)
 
 Phase 2 의 `pull_request`·`required_status_checks` 는 **직접 푸시를 막으므로 자동
-푸시 23개를 그대로 차단한다.** 따라서 `github-actions[bot]` 을 bypass actor 로
+푸시 전건을 그대로 차단한다.** 따라서 `github-actions[bot]` 을 bypass actor 로
 넣는 것이 전제인데, GitHub 이 이를 **거부**한다:
 
 ```
@@ -224,7 +255,9 @@ third-party 앱은 허용된다.
    확인됐으므로 자체 App 도 bypass actor 가 된다. 워크플로우는
    `actions/create-github-app-token` 으로 설치 토큰을 받아 푸시한다. 토큰이 여전히
    **단기·스코프 한정**이라 보안 특성이 GITHUB_TOKEN 과 가깝다. 비용: App 생성(UI
-   수동), App ID·private key 시크릿 등록, 23개 푸시 지점 수정.
+   수동), App ID·private key 시크릿 등록, **푸시 지점 전건 수정**(개수는
+   `docs/component-counts.md` 의 "main 직접 푸시 워크플로우" 행 — 이 숫자가 곧
+   마이그레이션 비용이다).
 2. **Deploy key 푸시**. API 상 허용됨이 확인됐다. 비용은 낮지만 **장기 유효한 write
    자격증명**이 생겨 ephemeral GITHUB_TOKEN 보다 보안이 후퇴한다.
 3. **저장소를 조직으로 이전**. 그러면 `github-actions` Integration bypass 가 바로

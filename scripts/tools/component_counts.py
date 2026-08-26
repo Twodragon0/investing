@@ -42,6 +42,40 @@ def _count_common_modules() -> int:
     return sum(1 for p in common.rglob("*.py") if p.name != "__init__.py" and "__pycache__" not in p.parts)
 
 
+#: 공유 수집 액션. 이 액션이 자체적으로 `git push origin main` 한다
+#: (`.github/actions/python-collect/action.yml`).
+PUSH_ACTION = "actions/python-collect"
+
+#: 워크플로우가 자체적으로 푸시할 때 나타나는 토큰.
+PUSH_MARKERS = ("git push", "git-auto-commit-action")
+
+
+def main_push_workflows() -> list[Path]:
+    """main 에 직접 푸시할 수 있는 워크플로우 목록.
+
+    두 경로의 합집합이다:
+
+    1. `PUSH_ACTION` 사용 — 그 공유 액션이 `git push origin main` 을 한다.
+       워크플로우 본문에는 push 문자열이 없으므로 액션 참조로만 탐지된다.
+    2. 워크플로우 본문에 `PUSH_MARKERS` 중 하나가 있음 — 자체 푸시.
+
+    이 수치가 필요한 이유: 브랜치 보호에 required status check 를 걸면 직접 푸시가
+    거부되므로, 몇 개의 푸시 지점을 고쳐야 하는지가 그대로 마이그레이션 비용이 된다
+    (`docs/devsecops/branch-protection.md`).
+
+    **휴리스틱이다.** main 이 아닌 ref 로 푸시하는 워크플로우가 생기면 과다 계수된다.
+    `tests/test_component_counts.py` 가 매칭된 전건이 main 대상임을 단언해서 그
+    가정이 조용히 깨지지 않게 한다.
+    """
+    workflows = REPO_ROOT / ".github" / "workflows"
+    hits: list[Path] = []
+    for path in sorted(workflows.glob("*.yml")):
+        text = path.read_text(encoding="utf-8")
+        if PUSH_ACTION in text or any(marker in text for marker in PUSH_MARKERS):
+            hits.append(path)
+    return hits
+
+
 def compute_counts() -> dict[str, int]:
     """저장소에서 직접 계산한 컴포넌트 카운트."""
     return {
@@ -49,6 +83,7 @@ def compute_counts() -> dict[str, int]:
         "generators": _count_glob("scripts/generate_*.py"),
         "common_modules": _count_common_modules(),
         "workflows": _count_glob(".github/workflows/*.yml"),
+        "main_push_workflows": len(main_push_workflows()),
         "category_pages": _count_glob("pages/*.md"),
         "tests": _count_glob("tests/test_*.py"),
     }
@@ -60,6 +95,7 @@ _LABELS = {
     "generators": "생성기 (scripts/generate_*.py)",
     "common_modules": "공통 모듈 (scripts/common/**/*.py, __init__ 제외)",
     "workflows": "GitHub Actions 워크플로우 (.github/workflows/*.yml)",
+    "main_push_workflows": "main 직접 푸시 워크플로우 (python-collect 경유 + 자체 push)",
     "category_pages": "카테고리 페이지 (pages/*.md)",
     "tests": "테스트 파일 (tests/test_*.py)",
 }
