@@ -21,8 +21,6 @@ image_alt: "시장 심리 및 리스크 지표 (2026-08-24) - 시장 분석 뉴�
 - Put/Call 비율 관련 뉴스:
 
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">55.9</div><div class="stat-label">공포탐욕 (greed)</div></div><div class="stat-item"><div class="stat-value">15.92</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">98.95</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,729.50</div><div class="stat-label">금</div></div></div>
-
 ## 1. 시장 심리 지표
 
 | 지표 | 현재값 | 변화 | 신호 |

@@ -29,6 +29,7 @@ image_alt: "소셜 미디어 동향 - 2026-08-25 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 트렌드: 금리, 기준금리, 연속 관련 14건 포착</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 기준금리 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 억만장자, 민생경제 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 억만장자, 민생경제 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 주간금융이슈, 통화정책방향 동향 주시</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 14건 중 텔레그램 0건, 소셜 0건, 정치·경제 14건으로 주요 이슈를 정리했습니다.

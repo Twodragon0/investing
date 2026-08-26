@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 반도체 주식 약세 여파… 코스피·코스닥 동반 급락 - 213건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 관련 26건</li><li>📊 <strong>매크로/금리</strong>: 환율, 인플레이션 관련 19건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 제재 관련 12건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE15ZHNLZ2dDWHpfY1ZYNmVNZTJJcEdDNmp1WlJ3cWVxbE9DS1pmVVpRU1k3LVVXOGZ5c0o4cVFRRl84NVNYTElhbTEtaHl6ZTZ6RGVkdWpnRDU2MXRxNEhxbWZXUHZyOHpM?oc=5">반도체 주식 약세 여파… 코스피·코스닥 동반 급락</a> <span class="p0-desc">[공감신문] 정재은 기자=25일 오전, 코스피 지수는 뉴욕 증시에서의 반도체 주식 약세 영향으로 장 초반부터 2% 이상의 하락세를 보였다. 이날 오전 9시 1분 기준으로, 코스피는 전날 대비 159.25포인트 하락한 6,537.71을 기록했다. 지수는 장 시작 전보다 161.03포인트</span></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQa3IwSWZob0FORjdIbTVHX3pIQVFuZXoyZS0zR3ZVMjF4bWlaZUE2N1oyVWJBajh3QXA3UHNhV3d2VVczTmJla0c5OGNzdzhUYUZLUzZMcUw3dWZOemRkZXJ2X2tBME51NnBpOHZSUnhWRVdtLXY0al9EUWlMMFA2OW5XZ3hyTDMwTHc?oc=5">코스피 3.12% 급락… 삼성전자 셀온 충격 속 코스닥은 이차전지·바이오 강세 (2026.08.24) - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">1. 국내 증시 요약 오늘 국내 증시는 코스피가 3.12% 급락한 반면, 코스닥은 1.42% 상승하는 등 양 시장이 극명하게 엇갈린 디커플링 장세를 연출했습니다. 코스피 지수: 전 거래일 대비 215.99포인트(-3.12%) 급락한 6,696.96에 거래를 마쳤습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1rWXlrZENoSXZhVEh5NkdjVnlSR1dTVExualRzalQ2RWNLQnRXNVhSX2U0SWR5MUdZTTBHY0cycjdfb21uNWhzT0hqWWhFUXB3RHJBZkNNZ0gwOGNjUm91TjMzSjh2NjBuRjYzNUZnYWjSAXRBVV95cUxPd3FWSTFuc0wtSEtMbTJoMGZYbW9TUk11WENhc2pQTC1hTFQtN01VX1M4UUVpdjlyYWZhc2dXeERab3pvZXhIalhhR2JleUpjSzdRbEdwaWpxM2QtRGw2SDlOM3FRSWV5MzFzZUdsTWM2bG04cQ?oc=5">반도체 투톱 동반 급락…코스피 3.12% 밀려 6700선 붕괴 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 삼성전자와 SK하이닉스가 주주환원 기대에 따른 단기 상승분을 반납하면서 코스피가 3% 넘게 떨어졌다.다만, 상승 종목 수가 하락 종목을 웃돌고 코스닥은 오름세를 보이면서 증시 전반의 동반 약세보다는 대형 반도체주 중심의 지수 조정이라는 분석이 나온다.24일</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 반도체 주식 약세 여파… 코스피·코스닥 동반 급락 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 213건의 뉴스 중 P1 주요 이슈도 32건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (55건): 코스피, 삼성전자, 코스닥 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (26건): 반도체, 엔비디아, 삼성전자 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (19건): 환율, 인플레이션, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 반도체 주식 약세 여파… 코스피·코스닥 동반 급락
-- 코스피 3.12% 급락… 삼성전자 셀온 충격 속 코스닥은 이차전지·바이오 강세 (2026.08.24) - 네이버 프리미엄콘텐츠
-- 반도체 투톱 동반 급락…코스피 3.12% 밀려 6700선 붕괴 - 산경투데이
-
-### 주요 이슈
-
-- 기술 랠리은 엔비디아 수익보다 미국 선물을 높이는 데 도움이 됩니다
-- IXIC: 나스닥 선물은 AI 매도 이후 안정화됩니다. 엔비디아 다음 수익 창출 - Tradi
-- 삼성전자·SK하이닉스 ETF 경쟁 ‘후끈’…미래에셋·한투까지 가세 - 데일리한국
-- 외 29건
-
-### 투자자 체크포인트
-
-- 한국 기사 77건, 글로벌 기사 136건 수집
-- 한국 지수: KOSPI 6,742.74(+0.68%), KOSDAQ 827.15(+1.70%), USD/KRW 1,383.18(+0.08%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">55건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:47%"></div></div><span class="theme-count">26건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:35%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-26.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,742.74 (+0.68%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 827.15 (+1.70%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *25일 오전 키움증권 창구를 통한 장중 수급 집계 결과, 외국인은 신라젠을 순매수 상위권에 올렸고 기관은 팬오션과 한국전력 등을 중심으로 순매수에 나섰다.*
 
 ## 테마별 주요 뉴스
 
