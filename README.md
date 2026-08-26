@@ -117,7 +117,7 @@
 | scripts/tools/check\_vercel\_quota.py             |      313 |       60 |     81% |130-144, 208, 384, 427-428, 438-454, 479, 481, 504-506, 539-542, 555, 562-564, 597-598, 604-606, 610, 614-621, 630-631, 634-635, 658-659, 668 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
 | scripts/tools/classify\_failure\_log.py           |       71 |       18 |     75% |197, 226-252, 256 |
-| scripts/tools/component\_counts.py                |       84 |        1 |     99% |       164 |
+| scripts/tools/component\_counts.py                |       94 |        1 |     99% |       200 |
 | scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |        5 |     98% |253-257, 416, 421, 561 |
 | scripts/tools/guard\_falsifiability.py            |      190 |       81 |     57% |149, 666-670, 680-682, 711-720, 725, 739-748, 780-784, 789-823, 833-881, 899-925, 929 |
@@ -131,7 +131,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24738** | **5302** | **79%** |           |
+| **TOTAL**                                         | **24748** | **5302** | **79%** |           |
 
 
 ## Setup coverage badge
