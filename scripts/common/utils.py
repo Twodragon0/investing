@@ -37,6 +37,41 @@ _DNS_REBIND_HOST_SUFFIXES = (
     ".lvh.me",
 )
 
+# Query-parameter names that carry a credential. `requests` embeds the full URL —
+# query string included — in its exception messages on both the HTTP-error path
+# ("… for url: https://…?apikey=KEY") and the connection path ("Max retries
+# exceeded with url: /x?apikey=KEY"), so logging such an exception publishes the
+# key. This repo is public and its collectors run on Actions twice a day, which
+# makes those logs publicly readable.
+#
+# Ordered longest-first and anchored with a lookbehind so `key=` cannot match the
+# tail of `apikey=` and leave the value exposed after a partial substitution.
+_CREDENTIAL_QUERY_PARAMS = (
+    "auth_token",
+    "access_key",
+    "api_key",
+    "apikey",
+    "password",
+    "secret",
+    "token",
+    "key",
+)
+_CREDENTIAL_QUERY_RE = re.compile(
+    r"(?<![A-Za-z0-9_])(" + "|".join(_CREDENTIAL_QUERY_PARAMS) + r")=[^&\s\"'<>]+",
+    re.IGNORECASE,
+)
+
+
+def redact_credentials(text) -> str:
+    """Mask credential query-parameter values in ``text``.
+
+    Non-credential parameters are left intact — they are what makes a failure log
+    diagnosable, and removing them would trade one problem for another.
+    """
+    if text is None:
+        return ""
+    return _CREDENTIAL_QUERY_RE.sub(r"\1=***", str(text))
+
 
 # Common source suffixes to strip from news titles (shared across collectors and summaries)
 SOURCE_SUFFIX_RE = re.compile(
@@ -398,6 +433,10 @@ def request_with_retry(
     Retries on any RequestException up to max_retries times with
     exponential backoff (base_delay * 2^attempt). Raises the last
     exception if all attempts fail.
+
+    Credential query parameters are stripped from the raised exception's message
+    (see ``redact_credentials``), because ``params`` routinely carries an API key
+    and the exception text embeds the whole URL.
     """
     last_exc: Optional[Exception] = None
     for attempt in range(max_retries + 1):
@@ -412,6 +451,15 @@ def request_with_retry(
             resp.raise_for_status()
             return resp
         except requests.exceptions.RequestException as e:
+            # Redact once, at the single point the exception enters this function:
+            # it is logged three times below and then again by callers (fmp_api
+            # alone re-logs it at seven sites), so masking here covers every reader
+            # instead of relying on each of them to remember.
+            #
+            # Rewriting `args` rather than raising a new exception deliberately:
+            # it preserves the class callers catch on and the `.response` attribute
+            # the retry decision immediately below reads.
+            e.args = (redact_credentials(e),)
             last_exc = e
             # Don't retry on client errors (401-422) — they won't succeed
             status = getattr(getattr(e, "response", None), "status_code", None)

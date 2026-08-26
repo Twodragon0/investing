@@ -41,7 +41,7 @@ from common.formatters import fmt_number as _fmt
 from common.formatters import fmt_percent as _pct
 from common.markdown_utils import markdown_link, markdown_table
 from common.post_generator import PostGenerator, build_dated_permalink
-from common.utils import request_with_retry
+from common.utils import redact_credentials, request_with_retry
 
 logger = setup_logging("generate_market_summary")
 
@@ -112,7 +112,10 @@ def fetch_us_market_data(api_key: str) -> Dict[str, Dict[str, str]]:
                     }
                 time.sleep(1)
             except requests.exceptions.RequestException as e:
-                logger.warning("Alpha Vantage %s: %s", symbol, e)
+                # This call bypasses request_with_retry, so it does not get that
+                # helper's redaction — and `params` above carries the Alpha Vantage
+                # `apikey`, which requests embeds in the exception's URL.
+                logger.warning("Alpha Vantage %s: %s", symbol, redact_credentials(e))
 
     # yfinance fallback for AV symbols only
     if len(results) < len(symbols_av):
