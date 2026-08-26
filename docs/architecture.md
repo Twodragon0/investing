@@ -307,7 +307,6 @@ flowchart TD
   월 02:00  dependency-check
   월 03:00  security-scan, gsc-index-audit
   월 04:00  supply-chain-lock, code-quality
-  월 05:00  supply-chain-lock-promotion-reminder
 
 이벤트/고빈도:
   Push to main                → deploy-pages, generate-journal-og-images(경로 필터)
