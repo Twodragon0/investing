@@ -10,33 +10,38 @@ at or above :data:`_MIN_FLOOR`:
   ``coverage report --fail-under=NN`` step re-checks the same data in CI.
 
 The floor was ratcheted 55 -> 65 (P3-1/P3-2) -> 70 (P3-3) -> 73 -> 75 (both
-2026-08-25) -> 77 (2026-08-26) -> 79 -> 80 (both 2026-08-27) to lock existing
+2026-08-25) -> 77 (2026-08-26) -> 79 -> 80 -> 82 (all 2026-08-27) to lock existing
 coverage as a regression baseline. Without this guard the floor could be quietly
 dropped back — re-opening the gap between "tests deleted" and "build still green".
 
-Every step is measured, not guessed. Actual total is **82.36%**
-(20415/24788 statements), and the measurement is deterministic:
+Every step is measured, not guessed. Actual total is **83.95%**
+(20815/24794 statements), and the measurement is deterministic:
 
-* local, same tree -> ``24788 4373 82%``
+* local, same tree -> ``24794 3979 84%``
 * CI noise baseline, 25 runs over 2026-08-18..08-25 -> spread **0.005pt**
 
-So the headroom at 80 is orders of magnitude above the observed measurement
+So the headroom at 82 is orders of magnitude above the observed measurement
 noise; this floor cannot go red from noise. What it *does* cost: a new
-fully-untested script is allowed only up to ~708 statements before the gate trips
-(``coverage`` rounds, so the effective threshold is 79.5%). For scale, scripts in
-this repo run 43..831 statements. The two largest low-coverage modules were closed
-on 2026-08-27 — ``backfill_post_summaries.py`` (831 stmts, 38% -> 99%) and
-``collect_geopolitical.py`` (490 stmts, 17% -> 99%). The largest remaining are
-``scripts/respond_ai_mentions.py`` (259 at 20%) and
-``scripts/generate_weekly_report.py`` (216 at 13%). That is the intended ratchet —
-past that point, write tests or lower the floor deliberately.
+fully-untested script is allowed only up to ~607 statements before the gate trips
+(``coverage`` rounds, so the effective threshold is 81.5%). For scale, scripts in
+this repo run 43..831 statements.
 
-Why 80 and not 81: the tightest previously accepted headroom was the 73 step's
-1.36pt / 462 statements. 80 gives 708 statements — above that bar. 81 gives
-**460**, missing the bar by 2 statements, so it is out. The rule is: never ratchet
-to a floor whose headroom is below the tightest headroom already accepted. (81
-being this close is the rule doing real work, not a formality — a 2-statement
-regression elsewhere would have made the gate unsatisfiable on the same day.)
+The four largest low-coverage modules were all closed on 2026-08-27:
+``backfill_post_summaries.py`` (831 stmts, 38% -> 99%),
+``collect_geopolitical.py`` (490, 17% -> 99%),
+``respond_ai_mentions.py`` (259, 20% -> 99%) and
+``generate_weekly_report.py`` (216, 0% -> 99%). Re-derive the current worst
+offenders before citing any list here — run
+``pytest tests/ -m "not i18n_e2e" --cov-report=term-missing`` and sort by missed
+statements. That is the intended ratchet — past that point, write tests or lower
+the floor deliberately.
+
+Why 82 and not 83: the tightest previously accepted headroom was the 73 step's
+1.36pt / 462 statements. 82 gives 607 statements — above that bar. 83 gives 359,
+*tighter* than any step anyone has signed up for. The rule is: never ratchet to a
+floor whose headroom is below the tightest headroom already accepted. (The 80 step
+earlier the same day rejected 81 at **460** — two statements short — so this bar
+is doing real work, not acting as a formality.)
 
 An earlier note claimed a ~1.3pt run-to-run swing (2026-07-27, when the total was
 ~71%). That is no longer reproducible; the hermetic-test hardening since then
@@ -80,7 +85,7 @@ _PYPROJECT = _REPO_ROOT / "pyproject.toml"
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 
 # The global scripts coverage floor both gates must enforce.
-_MIN_FLOOR = 80
+_MIN_FLOOR = 82
 
 # The measurement scope the floor is meaningful against. `--cov=scripts` in
 # pyproject addopts applies to every pytest run; the CI step additionally names
