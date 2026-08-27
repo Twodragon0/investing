@@ -150,7 +150,7 @@ class TestRun:
         monkeypatch.setattr(wr.subprocess, "run", boom)
         assert wr._run(["git", "log"]) == ""
 
-    def test_passes_cwd_and_timeout(self, monkeypatch) -> None:
+    def test_passes_cwd_and_timeout(self, monkeypatch, tmp_path) -> None:
         captured: Dict[str, Any] = {}
 
         class _Result:
@@ -163,9 +163,26 @@ class TestRun:
             return _Result()
 
         monkeypatch.setattr(wr.subprocess, "run", fake_run)
-        wr._run(["git", "status"], cwd="/tmp")
-        assert captured["cwd"] == "/tmp"
+        wr._run(["git", "status"], cwd=str(tmp_path))
+        assert captured["cwd"] == str(tmp_path)
         assert captured["timeout"] == 30
+
+    def test_defaults_cwd_to_repo_root(self, monkeypatch) -> None:
+        """cwd 를 안 주면 저장소 루트에서 돈다 — 다른 곳이면 git 히스토리를 못 읽는다."""
+        captured: Dict[str, Any] = {}
+
+        class _Result:
+            returncode = 0
+            stdout = ""
+            stderr = ""
+
+        def fake_run(cmd, cwd=None, **_kw):
+            captured["cwd"] = cwd
+            return _Result()
+
+        monkeypatch.setattr(wr.subprocess, "run", fake_run)
+        wr._run(["git", "status"])
+        assert captured["cwd"] == wr.REPO_ROOT
 
 
 # ---------------------------------------------------------------------------
