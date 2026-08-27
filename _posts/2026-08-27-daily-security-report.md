@@ -16,29 +16,6 @@ description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] Galaxy puts Coldcard hack losses at 1,789 BTC, wi**.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Galaxy에서는 Coldcard 해킹 손실을 1,789BTC로 보고 있으며 87%는 변동이 없습니다. 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 9건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): security, exploit, logic 보안 이슈 (9건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (6건): exploit, manipulation, termfinance 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🟣 DeFi** (3건): exploit, logic, flaw DeFi 동향 (3건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] Galaxy에서는 Coldcard 해킹 손실을 1,789BTC로 보고 있으며 87%는 변동이 없습니다.
-- [Security] FH Token exploit: Swap Logic Flaw
-- [Security] Enjin exploit: Ownership Takeover
-
-### 투자자 체크포인트
-
-- 보안 사건 9건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건

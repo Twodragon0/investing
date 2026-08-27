@@ -16,12 +16,6 @@ excerpt: "2026-03-22부터 약 한 달간 일일 DeFi TVL 리포트의 상위 20
 
 ## 배경
 
-## 전체 뉴스 요약
-
-- - 엔드포인트: /v2/protocols → /protocols (v1) - CEX 제외 필터링 유지 (기존과 동일한 "DeFi 전용" 스코프) - TVL 수치는 v1 실시간 집계로 갱신. v1은 v2 대비 LST/derivative 집계 방식 차이로 Lido·AAVE 등 주요…
-- - 2026-04-20 이후 생성되는 일일 DeFi TVL 리포트부터 v1 수치 반영 - 과거 포스트의 TVL 수치는 변경되지 않음 (기록 보존) - 같은 _state/defi_tvl_history.json에 이어 기록되므로 시계열 차트 상 일시적 단차 발생 가능. 추후 차트 해석…
-
-
 ## 변경
 
 - 엔드포인트: `/v2/protocols` → `/protocols` (v1)

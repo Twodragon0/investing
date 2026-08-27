@@ -8,7 +8,7 @@ source: "consolidated"
 lang: "ko"
 description: "오늘의 암호화폐 브리핑: 암호화폐 뉴스 브리핑 - 2026-02-11. 시세 변동과 온체인 데이터를 분석합니다."
 image: "/assets/images/generated/news-briefing-crypto-2026-02-11.png"
-excerpt: "Files cast light on Jeffrey Epstein’s ties to cryptocurrency - The Guardian - Investing Dragon 자동…"
+excerpt: "1. Files cast light on Jeffrey Epstein’s ties to cryptocurrency - The Guardian - 구글 뉴스 2.…"
 image_alt: "암호화폐 뉴스 브리핑 - 2026-02-11 - crypto-news 뉴스 요약 이미지"
 permalink: "/crypto-news/2026/02/11/daily-crypto-news-digest/"
 ---
@@ -18,7 +18,7 @@ permalink: "/crypto-news/2026/02/11/daily-crypto-news-digest/"
 ## 전체 뉴스 요약
 
 - 총 **70건** 수집
-- - 총 수집된 뉴스: 70건 - 주요 출처: Binance, 구글 뉴스, Google News KR
+- 1. Files cast light on Jeffrey Epstein’s ties to cryptocurrency - The Guardian - 구글 뉴스 2. Prediction: This Cryptocurrency Could Soar 187% in 2026 - The Motley…
 
 
 ## 주요 뉴스

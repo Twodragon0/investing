@@ -19,7 +19,7 @@ permalink: "/market-analysis/2026/02/07/daily-crypto-market-report/"
 
 - 1. 시장 방향성: 상위 10개 통화 중 2개 상승, 8개 하락
 - 2. 최대 상승: 에이피아이쓰리 (+9.89%)
-- - BTCUSDT: +5.7% - ETHUSDT: +7.6% - XRPUSDT: +9.7% - SOLUSDT: +7.4% - BNBUSDT: +2.9%
+- Upbit KRW 마켓 총 거래량: ₩10,758.8억
 
 
 ## 주요 암호화폐 실시간 시세 (Upbit KRW 기준)

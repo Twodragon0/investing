@@ -35,8 +35,6 @@ image_alt: "Crypto trading journal visual board for March 14, 2026"
 
 ## 전체 뉴스 요약
 
-- - 핵심 시나리오: BTC는 range scalp, SOL은 volume confirmation only - 리스크 예산: 총 노출 30% 이하, 1회 손실 -0.4R, 무계획 추격 금지 - 시장 일치도: 방향보다는 속도와 체결 구간 관리가 중요한 장세라는 판단이 맞았습니다.
-
 
 ## 오늘의 시장 환경
 

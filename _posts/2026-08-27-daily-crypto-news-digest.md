@@ -40,34 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (35회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 랠리 중심 106건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 랠리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 랠리 관련 43건</li><li>🏦 <strong>거래소</strong>: 미래에셋 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 인플레이션 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 106건의 뉴스 중 **비트코인** 관련이 51건(48%)으로 압도적입니다. 비트코인이 오늘 시장의 핵심 화제입니다
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인, 랠리 관련 (51건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (43건): 랠리 가격 변동 (43건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (12건): 미래에셋, 코인원 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 주요 이슈
-
-- BTC price rally stalls after adding 23% in 7 days as ETF demand holds steady: Cr
-- 오늘의 암호화폐 뉴스: 비트코인, Ether 및 알트코인 통찰력
-- 4년 전, 암호화폐 보스가 사라졌습니다. 이제 그의 후임자가 되었습니다.
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **106건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -17,8 +17,6 @@ permalink: "/market-analysis/2026/02/08/weekly-investment-digest-2026-02-08/"
 
 ## 전체 뉴스 요약
 
-- - 총 포스트 수: 11건 - 카테고리: 4개 - 기간: 02월 01일 ~ 02월 08일
-
 
 ## 시장 분석
 

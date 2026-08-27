@@ -18,7 +18,7 @@ permalink: "/stock-news/2026/02/11/daily-stock-news-digest/"
 ## 전체 뉴스 요약
 
 - 총 **120건** 수집
-- - 총 수집 뉴스: 120건
+- 1. AI 우려로 금융주 약세, S&P 500 하락 마감 — 다우는 또다시 신기록 - Google News Stocks EN 2. 오늘의 주식시장: 소매 판매 부진으로 금리 인하 기대감 — 다우·S&P 500·나스닥 소폭 상승 - Google News Stocks EN 3. 미국…
 
 
 ## 시장 데이터 스냅샷

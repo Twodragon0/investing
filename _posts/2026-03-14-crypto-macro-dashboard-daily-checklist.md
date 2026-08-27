@@ -20,8 +20,8 @@ permalink: "/market-analysis/2026/03/14/crypto-macro-dashboard-daily-checklist/"
 
 ## 전체 뉴스 요약
 
-- - 아침 포스트를 쓰기 전 - crypto-monitoring 대시보드를 열기 직전 - 라이브 사이클 실행 전후 - 장 마감 후 회고를 남길 때
 - 다음 4개를 가장 먼저 봅니다.
+- 장 전 결론 문장은 반드시 한 줄로 남깁니다.
 
 
 ## 이 체크리스트를 언제 쓰나

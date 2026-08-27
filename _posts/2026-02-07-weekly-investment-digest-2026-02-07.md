@@ -17,8 +17,6 @@ permalink: "/market-analysis/2026/02/07/weekly-investment-digest-2026-02-07/"
 
 ## 전체 뉴스 요약
 
-- - 총 포스트 수: 8건 - 카테고리: 4개 - 기간: 01월 31일 ~ 02월 07일
-
 
 ## 보안 알림
 

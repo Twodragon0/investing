@@ -33,51 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-27 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 반도체 주식 약세 여파… 코스피·코스닥 동반 급락 - 210건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 달러 관련 31건</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 실적 동향 주시</li><li>🏦 <strong>거래소</strong>: 옵션 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE15ZHNLZ2dDWHpfY1ZYNmVNZTJJcEdDNmp1WlJ3cWVxbE9DS1pmVVpRU1k3LVVXOGZ5c0o4cVFRRl84NVNYTElhbTEtaHl6ZTZ6RGVkdWpnRDU2MXRxNEhxbWZXUHZyOHpM?oc=5">반도체 주식 약세 여파… 코스피·코스닥 동반 급락</a> <span class="p0-desc">[공감신문] 정재은 기자=25일 오전, 코스피 지수는 뉴욕 증시에서의 반도체 주식 약세 영향으로 장 초반부터 2% 이상의 하락세를 보였다. 이날 오전 9시 1분 기준으로, 코스피는 전날 대비 159.25포인트 하락한 6,537.71을 기록했다. 지수는 장 시작 전보다 161.03포인트</span></li><li><a href="https://www.marketwatch.com/story/your-portfolio-can-recover-from-a-bear-market-but-can-it-survive-you-living-to-110-cc6d344c?mod=mw_rss_topstories">The biggest risk to retirement plans may no longer be a stock market crash or inflation</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 반도체 주식 약세 여파… 코스피·코스닥 동반 급락 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 210건의 뉴스 중 P1 주요 이슈도 39건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (55건): 코스피, 코스닥, 내림세 가격 변동 (55건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (31건): 환율, 달러, 앞두고 매크로 변수 (31건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (35건): 엔비디아, 실적, 코스피 기술 이슈 (35건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 반도체 주식 약세 여파… 코스피·코스닥 동반 급락
-- The biggest risk to retirement plans may no longer be a stock market crash or inflation
-
-### 주요 이슈
-
-- 코스피·코스닥 보합세…엔비디아 실적·물가지표 앞두고 관망
-- 기술 랠리은 엔비디아 수익보다 미국 선물을 높이는 데 도움이 됩니다
-- Stock market today: Dow, S&P 500, Nasdaq futures hold steady ahead of inflation
-- 외 36건
-
-### 투자자 체크포인트
-
-- 한국 기사 75건, 글로벌 기사 135건 수집
-- 한국 지수: KOSPI 6,808.21(+0.97%), KOSDAQ 826.87(-0.03%), USD/KRW 1,385.78(+0.28%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">55건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:56%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:64%"></div></div><span class="theme-count">35건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:24%"></div></div><span class="theme-count">13건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-27.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,808.21 (+0.97%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 826.87 (-0.03%).
+- *코스닥이 26일 장 막판까지 보합권 공방을 벌인 끝에 소폭 내림세로 거래를 마쳤다.*
 
 ## 테마별 주요 뉴스
 
