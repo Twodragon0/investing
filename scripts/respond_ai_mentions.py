@@ -211,49 +211,6 @@ def channel_id_for_alias(alias: str) -> str:
     )
 
 
-def intent_keywords(alias: str) -> List[str]:
-    if alias == "ops":
-        return ["ops", "운영", "상태", "배포", "헬스", "장애", "status"]
-    if alias == "dev":
-        return ["dev", "개발", "빌드", "ci", "배포", "commit", "릴리즈"]
-    if alias == "security":
-        return [
-            "security",
-            "보안",
-            "해킹",
-            "취약점",
-            "exploit",
-            "incident",
-            "phishing",
-            "scam",
-            "위험",
-            "risk",
-        ]
-    return [
-        "투자",
-        "요약",
-        "소식",
-        "summary",
-        "market",
-        "news",
-        "브리핑",
-        "코인",
-        "crypto",
-        "실시간",
-        "realtime",
-        "monitor",
-        "모니터링",
-        "price",
-        "worldmonitor",
-        "world monitor",
-        "worldmonitor.app",
-        "지정학",
-        "geopolitics",
-        "global risk",
-        "에너지",
-    ]
-
-
 def wants_coin_monitoring(text: str) -> bool:
     lowered = text.lower()
     return any(
@@ -369,16 +326,6 @@ def should_reply(text: str, bot_user_id: str, alias: str) -> bool:
     if ("openclaw" in lowered or "open claw" in lowered) and "?" in text:
         return True
     return False
-
-
-def fallback_help_text(alias: str) -> str:
-    if alias in ("openclaw", "investing"):
-        return "예: '@OpenClaw 실시간 코인 모니터링 해줘', '@OpenClaw 오늘 투자 소식 요약해줘'"
-    if alias == "ops":
-        return "예: '@OpenClaw 운영 상태 확인해줘', '@OpenClaw 배포 상태 알려줘'"
-    if alias == "security":
-        return "예: '@OpenClaw 보안 이슈 요약해줘', '@OpenClaw 해킹 리스크 점검해줘'"
-    return "예: '@OpenClaw dev 상태 알려줘', '@OpenClaw 최신 커밋 요약해줘'"
 
 
 def main() -> int:
