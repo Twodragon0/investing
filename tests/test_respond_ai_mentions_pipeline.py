@@ -28,11 +28,10 @@
 | 67 | `slack_api` 끝의 `return {"ok": False, "error": "unknown_api_error"}` | 방어적 코드. 3회 루프의 모든 경로가 return / continue / raise 로 끝난다 — 429 는 `attempt < max_attempts` 일 때만 continue 하고 마지막 시도에서는 raise, `URLError` 도 동일. 따라서 루프를 다 돌고 이 줄에 닿을 수 없다 |
 | 487 | `raise SystemExit(main())` | `__main__` 가드 본문 |
 
-## 범위 밖 — 보고만
+## 삭제된 헬퍼
 
-`intent_keywords` · `fallback_help_text` 는 **저장소 전체에서 호출처가 0건**이다
-(2026-08-27 실측: `scripts/` `.github/` `tests/` `docs/` 전수 grep). 죽은 코드지만
-삭제는 이 PR 범위 밖이라 `TestUnusedHelpers` 로 현재 동작만 고정했다.
+`intent_keywords` · `fallback_help_text` 는 호출처가 0건이라 2026-08-27 에 제거했다.
+당시 `TestUnusedHelpers` 로 동작을 고정해 뒀고, 삭제와 함께 그 클래스도 지웠다.
 """
 
 from __future__ import annotations
@@ -512,37 +511,6 @@ class TestChannelIdForAlias:
 
     def test_nothing_configured_returns_empty(self) -> None:
         assert respond.channel_id_for_alias("ops") == ""
-
-
-class TestUnusedHelpers:
-    """저장소 어디에서도 호출되지 않는 두 헬퍼 (2026-08-27 실측 호출처 0건).
-
-    죽은 코드지만 이 PR 은 커버리지 목적이라 삭제하지 않고 보고만 한다. 삭제가
-    결정되면 이 클래스도 함께 지우면 된다.
-    """
-
-    @pytest.mark.parametrize(
-        ("alias", "expected_first"),
-        [("ops", "ops"), ("dev", "dev"), ("security", "security"), ("investing", "투자")],
-    )
-    def test_intent_keywords_first_entry(self, alias: str, expected_first: str) -> None:
-        assert respond.intent_keywords(alias)[0] == expected_first
-
-    def test_intent_keywords_default_covers_worldmonitor(self) -> None:
-        assert "worldmonitor" in respond.intent_keywords("investing")
-
-    @pytest.mark.parametrize("alias", ["openclaw", "investing"])
-    def test_fallback_help_for_investing_aliases(self, alias: str) -> None:
-        assert "실시간 코인 모니터링" in respond.fallback_help_text(alias)
-
-    def test_fallback_help_for_ops(self) -> None:
-        assert "운영 상태" in respond.fallback_help_text("ops")
-
-    def test_fallback_help_for_security(self) -> None:
-        assert "보안 이슈" in respond.fallback_help_text("security")
-
-    def test_fallback_help_default_is_dev(self) -> None:
-        assert "dev 상태" in respond.fallback_help_text("dev")
 
 
 # ---------------------------------------------------------------------------

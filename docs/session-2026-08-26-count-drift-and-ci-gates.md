@@ -338,12 +338,17 @@ dry-run 이 매번 원인 파일을 정확히 지목했다.
 ## 9. 남은 일
 
 - **numpy 2.5.3 관측** — `.python-version` 존중 여부는 그때까지 관측 불가 (#1226)
-- **#1237 → #1238 머지** — #1238 은 #1237 위 스택이므로 순서를 지켜야 한다
 - **branch protection Phase 2** — `Enable auto-merge` 스텝이 최근 14런 전부 잡 레벨 `skipped`. 재개 조건 미충족 재확인 (#1227 §5.3)
 - **crypto 레포 카운터 도입** — 크로스 레포 비교 표의 개수 권위를 되살리려면 crypto 쪽에 `component_counts` 상응물이 필요하다. investing 세션에서는 측정 불가
-- **죽은 코드 3건** (보고만 됨, 삭제 미결정) — `respond_ai_mentions.intent_keywords` ·
-  `respond_ai_mentions.fallback_help_text` (둘 다 저장소 전체 호출처 0건),
-  `extract_theme_names` 의 `- ` 불릿 스킵 부재는 #1235 에서 해소
+
+**해소된 항목** (이 문서를 처음 쓴 뒤 처리됨):
+
+- ~~#1237 → #1238 머지~~ — #1237 은 머지됐다. **#1238 은 CLOSED** 됐다:
+  `--delete-branch` 로 base 브랜치가 삭제되자 GitHub 이 스택 PR 을 자동 retarget 하지
+  않고 닫았고, base 가 없으면 reopen 도 불가능하다. 같은 head 를 `origin/main` 위로
+  rebase 해 #1240 으로 다시 올렸다. **스택 PR 의 base 를 `--delete-branch` 로 지우지 말 것.**
+- ~~죽은 코드 2건~~ — `intent_keywords` · `fallback_help_text` 를 삭제했다(호출처 0건).
+  `extract_theme_names` 의 불릿 스킵 부재는 #1235 에서 해소됐다.
 - **저커버리지 재고 재도출** — 상위 4개가 모두 닫혔으므로 다음 대상은 실측으로 뽑아야
   한다: `pytest tests/ -m "not i18n_e2e" --cov-report=term-missing` 후 미커버 statement
   기준 정렬
