@@ -51,6 +51,23 @@
 
 set -euo pipefail
 
+# bash 4+ 필요 — `mapfile` 이 4.0 빌트인이다. macOS 기본 `/bin/bash` 는 3.2 라서
+# 가드가 없으면 `mapfile: command not found` (exit 127) 만 남는다. 원인도 조치도
+# 알 수 없는 메시지다.
+#
+# `set -e` 가 그 지점에서 멈춰 주므로 지금은 파괴적이지 않지만, 그건 mapfile 이
+# 우연히 첫 동작이라서다. 위치가 바뀌면 조용한 오작동이 된다 — SKIPPED 가 빈
+# 배열이면 이 스크립트는 "skip-worktree 파일 없음" 으로 판단하고 평범한 pull 로
+# 넘어간다. 인터프리터 요구사항은 실행 순서에 의존하지 않는 곳에서 검사한다.
+if (( BASH_VERSINFO[0] < 4 )); then
+  echo "error: bash 4 이상이 필요합니다 (mapfile 빌트인). 현재: ${BASH_VERSION}" >&2
+  echo >&2
+  echo "macOS 기본 /bin/bash 는 3.2 입니다. Homebrew bash 로 실행하세요:" >&2
+  echo "  brew install bash" >&2
+  echo "  bash scripts/dev_sync_state_safe.sh   # PATH 의 bash (Homebrew)" >&2
+  exit 1
+fi
+
 REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
 if [[ -z "${REPO_ROOT}" ]]; then
   echo "error: git 레포 내부에서 실행하세요." >&2

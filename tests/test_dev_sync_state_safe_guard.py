@@ -26,12 +26,28 @@
 from __future__ import annotations
 
 import re
+import shutil
+import subprocess
 from pathlib import Path
 
 import pytest
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPT = _REPO_ROOT / "scripts" / "dev_sync_state_safe.sh"
+
+
+def _bash_major(binary: str) -> int | None:
+    """`binary` 의 bash 메이저 버전. bash 가 아니거나 못 읽으면 None."""
+    try:
+        out = subprocess.run(
+            [binary, "-c", 'printf %s "${BASH_VERSINFO[0]-}"'],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return int(out.stdout) if out.stdout.strip().isdigit() else None
 
 
 def _code_only(text: str) -> str:
@@ -119,3 +135,110 @@ def test_dry_run_unskips_so_it_can_actually_see_changes(code: str) -> None:
         "un-skip 이 DRY_RUN 조건에 걸려 있다. 그러면 dry-run 에서 skip-worktree 가 변경을 "
         "가려 `git diff` 가 비어 보이고, '버릴 것 없음' 이라고 거짓 보고한다."
     )
+
+
+class TestBashVersionGuard:
+    """bash 4+ 요구를 시작 시점에 검사하는지 고정한다.
+
+    `mapfile` 은 bash 4.0 빌트인이고 macOS 기본 `/bin/bash` 는 3.2 다. 가드가 없던
+    2026-08-27 실측은 `mapfile: command not found` / exit 127 — 원인도 조치도 알 수
+    없는 메시지였다.
+
+    지금은 `set -e` 가 mapfile 지점에서 멈춰 주므로 파괴적이지 않다. 하지만 그건
+    mapfile 이 **우연히 첫 동작**이라서다. 순서가 바뀌면 조용한 오작동이 된다 —
+    `SKIPPED` 가 빈 배열이면 스크립트는 "skip-worktree 파일 없음" 으로 판단하고
+    평범한 pull 로 넘어간다. 그래서 아래 순서 단언이 이 클래스의 핵심이다.
+    """
+
+    def test_guard_uses_bash_versinfo_and_exits(self, code: str) -> None:
+        assert "BASH_VERSINFO" in code, (
+            "bash 버전 검사가 없다. `mapfile` 은 4.0 빌트인이라 3.2 에서는 `command not found` 만 남는다."
+        )
+        guard = re.search(r"if\s*\(\(\s*BASH_VERSINFO\[0\]\s*<\s*(\d+)\s*\)\)", code)
+        assert guard, (
+            "`(( BASH_VERSINFO[0] < N ))` 형태의 검사를 찾지 못했다. 이 산술 조건은 "
+            "bash 3.2 에서도 파싱되므로 3.2 에서 실제로 평가된다 — 그게 가드가 "
+            "동작하는 이유다."
+        )
+        assert int(guard.group(1)) >= 4, (
+            f"요구 메이저 버전이 {guard.group(1)} 로 내려갔다. mapfile 은 4.0 빌트인이므로 "
+            "4 미만으로 낮추면 가드가 무력해진다."
+        )
+
+    def test_guard_precedes_first_mapfile_use(self, code: str) -> None:
+        """순서가 이 가드의 전부다 — mapfile 뒤에 있으면 아무것도 막지 못한다."""
+        lines = code.splitlines()
+        guard_at = next(
+            (i for i, ln in enumerate(lines) if "BASH_VERSINFO" in ln),
+            None,
+        )
+        mapfile_at = next(
+            (i for i, ln in enumerate(lines) if re.search(r"\bmapfile\b", ln)),
+            None,
+        )
+        assert guard_at is not None, "버전 가드를 찾지 못했다"
+        assert mapfile_at is not None, (
+            "`mapfile` 사용이 없다. 4+ 요구가 사라졌다면 가드도 함께 정리할 것 — "
+            "이 테스트가 낡은 요구를 강제하고 있는 셈이다."
+        )
+        assert guard_at < mapfile_at, (
+            f"버전 가드(line {guard_at + 1})가 첫 mapfile 사용(line {mapfile_at + 1}) "
+            "뒤에 있다. 그러면 3.2 에서 가드에 닿기 전에 mapfile 이 먼저 실패한다."
+        )
+
+    def test_guard_does_not_fire_on_current_bash(self, tmp_path: Path) -> None:
+        """반대 방향 — 4+ 에서는 가드가 걸리지 않고 통과해야 한다.
+
+        가드가 항상 걸리는 버그(예: 비교 방향 뒤집힘)는 "3.2 에서 막힌다" 단언만으로는
+        절대 잡히지 않는다. git 레포가 아닌 임시 디렉토리에서 돌려, **버전 가드 다음
+        단계인** 레포 검사에 도달하는지로 통과를 확인한다. 트리를 건드리지 않는다.
+        """
+        bash = shutil.which("bash")
+        assert bash, "PATH 에 bash 가 없다"
+        assert (_bash_major(bash) or 0) >= 4, f"PATH 의 bash 가 4 미만이다({bash}). 이 테스트는 4+ 환경을 전제한다."
+
+        proc = subprocess.run(
+            [bash, str(_SCRIPT), "--dry-run"],
+            cwd=tmp_path,
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        assert "BASH_VERSINFO" not in proc.stderr
+        assert "bash 4 이상" not in proc.stderr, (
+            f"4+ 에서 버전 가드가 걸렸다 — 비교 방향이 뒤집혔을 수 있다.\n{proc.stderr}"
+        )
+        assert "git 레포" in proc.stderr, (
+            "버전 가드 다음 단계(레포 검사)에 도달하지 못했다. 가드를 통과했다는 근거가 "
+            f"없으므로 이 테스트는 결론을 낼 수 없다.\nstdout={proc.stdout}\nstderr={proc.stderr}"
+        )
+
+    def test_guard_fires_on_bash_3(self, tmp_path: Path) -> None:
+        """실제 bash 3.x 이 있는 환경(macOS `/bin/bash`)에서만 행동을 검증한다.
+
+        CI(ubuntu)의 `/bin/bash` 는 5.x 라 skip 된다. 그래서 위 두 정적 단언이
+        리눅스에서의 실질적 방어선이고, 이 테스트는 로컬 macOS 에서 그 정적 단언이
+        실제 행동과 일치함을 확인하는 역할이다.
+        """
+        old = next(
+            (b for b in ("/bin/bash", "/usr/bin/bash") if (_bash_major(b) or 99) < 4),
+            None,
+        )
+        if old is None:
+            pytest.skip("bash 4 미만 인터프리터가 없다 (CI 리눅스에서는 정상)")
+
+        proc = subprocess.run(
+            [old, str(_SCRIPT), "--dry-run"],
+            cwd=tmp_path,
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        assert proc.returncode == 1, (
+            f"exit 1 이 아니다({proc.returncode}). 127 이면 가드에 닿기 전에 mapfile 이 "
+            f"먼저 실패했다는 뜻이다.\nstderr={proc.stderr}"
+        )
+        assert "bash 4 이상" in proc.stderr, f"버전 요구를 알리지 않는다: {proc.stderr}"
+        assert "brew install bash" in proc.stderr, (
+            "조치 안내가 없다. 원인만 알리고 해결책을 주지 않으면 가드 이전과 크게 다르지 않다."
+        )
