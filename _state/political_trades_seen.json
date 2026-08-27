@@ -1,45 +1,5 @@
 {
   "seen": {
-    "61d478b7764ecbf28380811a": "2026-07-27T23:35:49",
-    "132e9f64618567b0e25eff43": "2026-07-27T23:35:49",
-    "4eaff54ace0b2c2ece52fa3a": "2026-07-27T23:35:49",
-    "b899a16f7ef396872da35b6d": "2026-07-27T23:35:49",
-    "618c87f61932b54d42b73818": "2026-07-27T23:35:49",
-    "1a618322c145f0d6acf8327c": "2026-07-27T23:35:49",
-    "48b081742dbbb16ee466858e": "2026-07-27T23:35:49",
-    "a3a758b3b5e7a47dd18082ee": "2026-07-27T23:35:49",
-    "9f0bf4d31405566128d3eee8": "2026-07-27T23:35:49",
-    "65350c0c18e8832a04e5f28d": "2026-07-27T23:35:49",
-    "985ccbf439997ca3308695f5": "2026-07-27T23:35:49",
-    "b7392bf4ec1f39c9220d0b4d": "2026-07-27T23:35:49",
-    "fbc70a29a6c9e5d3234594d3": "2026-07-27T23:35:49",
-    "0aec06a562649012d1a6aad4": "2026-07-27T23:35:49",
-    "6e0f5b0ccd2c179b583e006e": "2026-07-27T23:35:49",
-    "06cb9832285e3f2969d3fda1": "2026-07-27T23:35:49",
-    "e70e36c66f5c365dcac59cac": "2026-07-27T23:35:49",
-    "088398ffd848b5a79748c1ee": "2026-07-27T23:35:49",
-    "1bd70fea9413d78dbc2fba16": "2026-07-27T23:35:49",
-    "25c592f3fa4689ab1def2bb4": "2026-07-27T23:35:49",
-    "b9cf4b8e282cd7260a0b2215": "2026-07-27T23:35:49",
-    "9440e32d5eb1c5d2a961f09c": "2026-07-27T23:35:49",
-    "89d979a513408373e3a7824b": "2026-07-27T23:35:49",
-    "0310c89e3c4b210161dd5ff7": "2026-07-27T23:35:49",
-    "b668d421ae1861501ff669b1": "2026-07-27T23:35:49",
-    "12af9059503b625dd0d25a87": "2026-07-27T23:35:49",
-    "25096c063284fd382d5a04f1": "2026-07-27T23:35:49",
-    "0916bbbf96e975940f75e5c8": "2026-07-27T23:35:49",
-    "5488219016ccf5d3f9a17401": "2026-07-27T23:35:49",
-    "e3db475a430c135ef9066c8b": "2026-07-27T23:35:49",
-    "e6aab274406fac35095a4aca": "2026-07-27T23:35:49",
-    "473ee77bb114597445a5a6d4": "2026-07-27T23:35:49",
-    "05ea2ee082a0f7132071a481": "2026-07-27T23:35:49",
-    "3373ed93afaa3d718ec3b224": "2026-07-27T23:35:49",
-    "035770694ca62a4a1c7ce995": "2026-07-27T23:35:49",
-    "272809591fc7cd31483ec2a7": "2026-07-27T23:35:49",
-    "967069837abbe78d479c025a": "2026-07-27T23:35:49",
-    "5118ab871262f3764f7128ab": "2026-07-27T23:35:49",
-    "e25af9414a564a9146148858": "2026-07-27T23:35:49",
-    "ed42cda3633259c3b8fcf0bf": "2026-07-27T23:35:49",
     "777384b3c06b0f1fcbdabf80": "2026-07-28T23:30:47",
     "b51e1d792f790f3f68555bd9": "2026-07-28T23:30:47",
     "08cc3031114afe2d17b1b837": "2026-07-28T23:30:47",
@@ -672,7 +632,44 @@
     "583bf43e6f28b7622df3c9a1": "2026-08-25T22:56:41",
     "dd7a3fd59fdd41a4d4f579a9": "2026-08-25T22:56:41",
     "69c1ebc208b14b9968d754e8": "2026-08-25T22:56:41",
-    "778c09d5fa13ba93038bdf65": "2026-08-25T22:56:41"
+    "778c09d5fa13ba93038bdf65": "2026-08-25T22:56:41",
+    "7d39f65f79b288a506bb527f": "2026-08-27T03:28:10",
+    "151f8243d9017bec6d8f2405": "2026-08-27T03:28:10",
+    "38d4700ebb47d35887e9acfc": "2026-08-27T03:28:10",
+    "b06135cd7c73fba2186353f5": "2026-08-27T03:28:10",
+    "7dec22e1021b94722753dcf8": "2026-08-27T03:28:10",
+    "fcb739b4e55d4f974be03a65": "2026-08-27T03:28:10",
+    "861abdd2d8128bc4683c3a78": "2026-08-27T03:28:10",
+    "e33b5dba9727c2caa106f0a5": "2026-08-27T03:28:10",
+    "43ea2808ec851ba64244dac6": "2026-08-27T03:28:10",
+    "e799b5442490359d0db83f5f": "2026-08-27T03:28:10",
+    "7bc38dceacc8bd601419a96f": "2026-08-27T03:28:10",
+    "850de27708527241d3df25a6": "2026-08-27T03:28:10",
+    "a7145f9cc24ba5018c4062d6": "2026-08-27T03:28:10",
+    "0ef4c9be4dffe5bdb5407a62": "2026-08-27T03:28:10",
+    "6fdbda3ba4f6b153ccf1932c": "2026-08-27T03:28:10",
+    "0ca81c61bcf4ac2c7635cf79": "2026-08-27T03:28:10",
+    "cdee103878150bb34b21df69": "2026-08-27T03:28:10",
+    "13f00209801b47ac1442c5f0": "2026-08-27T03:28:10",
+    "e934845b79a8ea91406f5df4": "2026-08-27T03:28:10",
+    "1d0649b125f1af703a7edada": "2026-08-27T03:28:10",
+    "a37ab2229d026d35a10108c5": "2026-08-27T03:28:10",
+    "c49b96191dc9ee66dec643e8": "2026-08-27T03:28:10",
+    "5c7764ca9fe1fd2e01fe1dce": "2026-08-27T03:28:10",
+    "4d2e5d53aed0377cfc77790d": "2026-08-27T03:28:10",
+    "7dbbcb9b41f330b04d277a90": "2026-08-27T03:28:10",
+    "341668a4d99da1097c35f155": "2026-08-27T03:28:10",
+    "6c71dc267361c2b946dbeaf9": "2026-08-27T03:28:10",
+    "6ec44c8f075e7c18b3f78d54": "2026-08-27T03:28:10",
+    "3b4b9c09167d659a48b8e976": "2026-08-27T03:28:10",
+    "163ea3fd2f2e1751c6c9dbff": "2026-08-27T03:28:10",
+    "552a0de1ac80bd228e1b7cd6": "2026-08-27T03:28:10",
+    "0e4786191ef65f08fd900163": "2026-08-27T03:28:10",
+    "5f066711f8eba2c34c374cbf": "2026-08-27T03:28:10",
+    "9d7d718c4504cfebec7c24f2": "2026-08-27T03:28:10",
+    "852061e9f2afef3bfd151fbf": "2026-08-27T03:28:10",
+    "dd696f63fe7957bd91ef0002": "2026-08-27T03:28:10",
+    "6f5773d006f3b45f917b3a40": "2026-08-27T03:28:10"
   },
   "titles": [
     [
@@ -16250,6 +16247,154 @@
     [
       "정치인 거래정책 리포트 20260826",
       "2026-08-26"
+    ],
+    [
+      "nancy pelosi discloses big investment in this ai energy play",
+      "2026-08-27"
+    ],
+    [
+      "pelosi family makes first bet on ai power stocks spending millions to build bloom energy position financebiggocom",
+      "2026-08-27"
+    ],
+    [
+      "us rep michael rulli misses deadlines to disclose stock transactions",
+      "2026-08-27"
+    ],
+    [
+      "xos xos insider reports latest share transactions in new sec filing stock titan",
+      "2026-08-27"
+    ],
+    [
+      "nu holdings nu insider logs new share transaction stock titan",
+      "2026-08-27"
+    ],
+    [
+      "genco shipping nyse gnk logs new insider trades stock titan",
+      "2026-08-27"
+    ],
+    [
+      "geopark gprk insider details latest share trades stock titan",
+      "2026-08-27"
+    ],
+    [
+      "renew energy global rnw insider trades in latest filing stock titan",
+      "2026-08-27"
+    ],
+    [
+      "aqua metals nasdaq aqms records insider trade filing stock titan",
+      "2026-08-27"
+    ],
+    [
+      "eos energy nasdaq eose logs new insider share trades stock titan",
+      "2026-08-27"
+    ],
+    [
+      "strategy inc mstr director sells 3700 shares at 122127 stock titan",
+      "2026-08-27"
+    ],
+    [
+      "wealthfront corp nasdaq wlth reports insider stock trades stock titan",
+      "2026-08-27"
+    ],
+    [
+      "light wonder lnwo cfo gains 879 shares on rsu vesting stock titan",
+      "2026-08-27"
+    ],
+    [
+      "global self storage affiliate buys 15308 shares 124 self insider trading stock titan",
+      "2026-08-27"
+    ],
+    [
+      "aqua metals aqms details latest insider stock move stock titan",
+      "2026-08-27"
+    ],
+    [
+      "navitas semiconductor nasdaq nvts insider updates holdings stock titan",
+      "2026-08-27"
+    ],
+    [
+      "navitas nasdaq nvts revises reported insider share trade stock titan",
+      "2026-08-27"
+    ],
+    [
+      "wendys wen cmo hassan tariq listed as insider with no holdings stock titan",
+      "2026-08-27"
+    ],
+    [
+      "trump signs executive order banning foreign equipment from us grid daily finland",
+      "2026-08-27"
+    ],
+    [
+      "honeymoons over warsh under pressure as fed weighs raising rates",
+      "2026-08-27"
+    ],
+    [
+      "will fed chair warsh actually say anything in his big friday speech",
+      "2026-08-27"
+    ],
+    [
+      "four regional fed banks sought discount rate hike ahead of july fomc hold investinglive",
+      "2026-08-27"
+    ],
+    [
+      "78월 이어 기준금리 오를까한은 오늘 드디어 결정",
+      "2026-08-27"
+    ],
+    [
+      "한은 오늘 기준금리 결정2연속 인상이냐 동결이냐",
+      "2026-08-27"
+    ],
+    [
+      "한은 오늘 기준금리 또 올리나2연속 인상 여부 주목 국민일보",
+      "2026-08-27"
+    ],
+    [
+      "한국은행 기준금리 결정2연속 인상 여부 관심 주간한국",
+      "2026-08-27"
+    ],
+    [
+      "한은 금통위 오늘 기준금리 결정긴축 속도 조절 vs 추가 인상 팽팽",
+      "2026-08-27"
+    ],
+    [
+      "한은 두달 연속 인상 단행기준금리 다시 3대 연합뉴스tv",
+      "2026-08-27"
+    ],
+    [
+      "한은 오늘 기준금리 또 올릴까78월 연속 인상 기로",
+      "2026-08-27"
+    ],
+    [
+      "오늘의 주요 일정 한국은행 기준금리 결정2연속 인상 촉각 ytn",
+      "2026-08-27"
+    ],
+    [
+      "속보 한국은행 기준금리 300 결정백투백 인상 현실화 서울신문",
+      "2026-08-27"
+    ],
+    [
+      "한은 오늘 기준금리 결정추가 인상 여부에 시장 촉각 산경투데이",
+      "2026-08-27"
+    ],
+    [
+      "오늘 한은 금통위기준금리 결정 kbs 뉴스",
+      "2026-08-27"
+    ],
+    [
+      "오늘 한은 기준금리 결정연속 인상이냐 동결이냐",
+      "2026-08-27"
+    ],
+    [
+      "한은 2회 연속 기준금리 인상 결정연 275300 투데이신문",
+      "2026-08-27"
+    ],
+    [
+      "통방문 달라진 점은선제적 대응 강조비용압력 전이 추가 kb think",
+      "2026-08-27"
+    ],
+    [
+      "정치인 거래정책 리포트 20260827",
+      "2026-08-27"
     ]
   ],
   "seen_urls": {}
