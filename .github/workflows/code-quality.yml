@@ -94,7 +94,7 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          python3 -m coverage report --fail-under=79
+          python3 -m coverage report --fail-under=80
           python3 -m coverage html -d coverage-html
           python3 -m coverage json -o coverage.json
 
