@@ -98,6 +98,12 @@ bash scripts/dev_sync_state_safe.sh --force    # 큰 _state diff 도 버림
 순서상 알아둘 것: dirty 상태로는 pull 이 안 되므로 **버리기가 pull 보다 먼저**다.
 pull 이 실패하면 `_state` 변경은 이미 버려진 뒤다(재생성되므로 손실은 아니다).
 
+**bash 4 이상이 필요하다** — `mapfile` 이 4.0 빌트인이다. 위 예시처럼 `bash scripts/...`
+로 실행하면 PATH 의 bash(Homebrew 5.x)가 잡혀 정상이지만, macOS 기본 `/bin/bash` 는
+**3.2** 라서 명시 호출하면 실행되지 않는다. 스크립트가 시작 시점에 버전을 검사해
+설치 안내와 함께 exit 1 한다(가드가 없던 2026-08-27 실측: `mapfile: command not found`,
+exit 127 — 원인도 조치도 알 수 없었다).
+
 ## 주의
 
 - skip-worktree 적용 후 `git pull` 이 `_state` 변경을 덮어쓰지 못해 막힐 수 있다.
