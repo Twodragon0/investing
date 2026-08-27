@@ -57,7 +57,7 @@
 | scripts/common/image\_generator/market.py         |      287 |        4 |     99% |   449-454 |
 | scripts/common/image\_generator/news.py           |      146 |        0 |    100% |           |
 | scripts/common/image\_generator/og.py             |       59 |        0 |    100% |           |
-| scripts/common/image\_rejection\_metrics.py       |       81 |       29 |     64% |79-108, 147, 151, 162, 165-167 |
+| scripts/common/image\_rejection\_metrics.py       |       81 |       27 |     67% |79-108, 147, 165-167 |
 | scripts/common/markdown\_utils.py                 |      226 |        2 |     99% |  377, 393 |
 | scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
 | scripts/common/og\_compose.py                     |      143 |        0 |    100% |           |
@@ -104,11 +104,11 @@
 | scripts/generate\_og\_images.py                   |      275 |      135 |     51% |160-161, 172-182, 186-378, 386-419, 431-480, 503, 575, 579-580, 595-596, 620, 650 |
 | scripts/generate\_ops\_10am\_digest.py            |      284 |      205 |     28% |65-75, 79-85, 89-93, 97-120, 124-133, 137-195, 217-218, 221, 229-262, 273-284, 288-296, 300-319, 323-326, 330-333, 345, 347, 351, 353, 355, 392, 410-418, 422-476, 480 |
 | scripts/generate\_weekly\_digest.py               |      475 |      334 |     30% |107, 124, 126, 128, 145-147, 152-164, 169-198, 203, 208-220, 229-301, 344, 400-477, 482-490, 495-525, 533-746, 751-781, 785 |
-| scripts/generate\_weekly\_report.py               |      216 |      187 |     13% |61-68, 73-87, 97-141, 151-170, 175-206, 211, 235-246, 259-278, 293-370, 379-440, 444 |
+| scripts/generate\_weekly\_report.py               |      216 |        1 |     99% |       444 |
 | scripts/improve\_existing\_posts.py               |      488 |      246 |     50% |212, 241-285, 344, 350, 383-384, 421, 425, 447, 514-519, 528, 543-566, 570-575, 580-606, 611-612, 623-671, 680-720, 755, 765-766, 772-773, 781-869, 873-958, 962 |
 | scripts/migrate\_images\_to\_r2.py                |      165 |       19 |     88% |28, 59-61, 89-95, 261-262, 320-321, 327-328, 338-339, 356 |
 | scripts/post\_loop\_to\_slack.py                  |       67 |        1 |     99% |       114 |
-| scripts/respond\_ai\_mentions.py                  |      259 |        2 |     99% |   67, 487 |
+| scripts/respond\_ai\_mentions.py                  |      243 |        2 |     99% |   67, 434 |
 | scripts/smoke\_test\_rendered\_pages.py           |       43 |       43 |      0% |      3-86 |
 | scripts/tools/\_\_init\_\_.py                     |        0 |        0 |    100% |           |
 | scripts/tools/check\_pilot\_observation.py        |      554 |      162 |     71% |251-262, 271, 291-292, 298-301, 422-423, 427-428, 434, 437-438, 507, 543-546, 550-551, 653, 668-672, 757, 762-778, 814, 841-843, 846, 874, 877, 908-909, 914-925, 984-985, 1059, 1188-1190, 1192-1193, 1196-1214, 1231-1314, 1318 |
@@ -131,7 +131,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24754** | **4176** | **83%** |           |
+| **TOTAL**                                         | **24738** | **3988** | **84%** |           |
 
 
 ## Setup coverage badge
