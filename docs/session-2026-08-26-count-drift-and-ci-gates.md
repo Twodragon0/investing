@@ -10,6 +10,10 @@
 - **Python 3.11 제약을 `[project] requires-python` 으로 승격** (관측 불가한 `.python-version` 단독 의존 해소)
 - **개발 마찰 해소**: `_state` skip-worktree 로 fast-forward 가 막히는 문제를 스크립트로 자동화
 
+**후속 7건** (#1232 ~ #1238, §8): 저커버리지 재고 4개 모듈 소진(총계 78.63% → **83.95%**,
+게이트 77 → **82**), 결함 3건 수정, 검증 단계가 실제로 잡아낸 문제 3건(bash 3.2 실패 /
+트리 오염 / conftest 네트워크 차단 사각지대).
+
 ---
 
 ## 1. 타임라인
@@ -248,12 +252,101 @@ $ python3 -m pytest tests/test_dev_sync_state_safe_guard.py --no-cov -q
 
 ---
 
-## 8. 남은 일
+## 8. 후속 작업 (#1232 ~ #1238, 같은 날)
+
+§1 의 9건을 머지한 뒤 같은 세션에서 7건을 더 진행했다. 절반은 §7 의 검증 과정에서
+**발견된 문제**이고, 절반은 §8(구 "남은 일")의 저커버리지 재고를 소진한 것이다.
+
+| PR | 상태 | 분류 | 핵심 |
+|----|------|------|------|
+| [#1232](https://github.com/Twodragon0/investing/pull/1232) | 머지 | docs | 이 문서 (세션 요약) |
+| [#1233](https://github.com/Twodragon0/investing/pull/1233) | 머지 | chore(dev) | `dev_sync_state_safe.sh` bash 4+ 버전 가드 |
+| [#1234](https://github.com/Twodragon0/investing/pull/1234) | 머지 | test | `backfill_post_summaries` 38% → 99%, 게이트 77 → 79 |
+| [#1235](https://github.com/Twodragon0/investing/pull/1235) | 머지 | fix | #1234 가 보고한 결함 3건 수정 |
+| [#1236](https://github.com/Twodragon0/investing/pull/1236) | 머지 | test | `collect_geopolitical` 17% → 99%, 게이트 79 → 80 |
+| [#1237](https://github.com/Twodragon0/investing/pull/1237) | **열림** | test | `respond_ai_mentions` 20% → 99% |
+| [#1238](https://github.com/Twodragon0/investing/pull/1238) | **열림** | test | `generate_weekly_report` 0% → 99%, 게이트 80 → 82 (#1237 위 스택) |
+
+### 8.1 커버리지 재고를 소진했다
+
+§8 이 "남은 일" 로 적어둔 저커버리지 모듈 4개가 모두 닫혔다. 총계 **78.63% → 83.95%**,
+게이트 **77 → 82** (4단계).
+
+| 모듈 | stmts | 전 | 후 | PR |
+|---|---|---|---|---|
+| `backfill_post_summaries.py` | 831 | 38% | 99% | #1234 |
+| `collect_geopolitical.py` | 490 | 17% | 99% | #1236 |
+| `respond_ai_mentions.py` | 259 | 20% | 99% | #1237 |
+| `generate_weekly_report.py` | 216 | **0%** | 99% | #1238 |
+
+게이트 값은 매번 가드에 명문화된 규칙("이미 수용한 가장 빡빡한 헤드룸 462 stmts
+아래로는 래칫하지 않는다")으로 결정했고, 그 규칙이 두 번 실제로 후보를 잘랐다:
+
+| 단계 | 채택 | 거부한 후보 | 거부 이유 |
+|---|---|---|---|
+| #1234 | 79 (551 stmts) | 80 | 303 stmts |
+| #1236 | 80 (708 stmts) | 81 | **460 stmts — 462 에 2 부족** |
+| #1238 | 82 (607 stmts) | 83 | 359 stmts |
+
+#1236 의 81 이 2 stmts 차로 걸린 건 규칙이 장식이 아니라는 증거다. 그 관찰을 가드
+docstring 에 남겼고, 동시에 **모듈 목록을 고정 나열하지 않도록** 바꿨다 — 이번에
+실제로 낡은 값("`generate_weekly_report` 216 at 13%")을 인용하다 걸렸다. 13% 는 다른
+테스트가 import 만 해서 생긴 모듈 레벨 커버리지였고, 이 모듈만 재면 **0%** 였다.
+
+### 8.2 §7 검증이 실제로 잡아낸 것
+
+이 세션의 검증 단계는 형식적 통과가 아니라 **결함을 냈다.**
+
+- **bash 4+ 의존** (#1233) — `mapfile` 은 4.0 빌트인인데 macOS 기본 `/bin/bash` 는 3.2 다.
+  가드 전에는 `mapfile: command not found` / exit **127** 만 남았다. 지금 파괴적이지
+  않은 이유는 `mapfile` 이 우연히 첫 동작이라서다 — 순서가 바뀌면 `SKIPPED` 빈 배열로
+  "skip-worktree 없음" 오판이 된다. 그래서 실행 순서에 의존하지 않는 곳에서 검사한다.
+- **트리 오염** (#1236) — `run()` 이 실제 이미지 생성기를 호출해
+  `assets/images/generated/news-briefing-geopolitical-2026-08-27.{png,webp,avif}` 3개를
+  수정했다. `git checkout` 으로 복구하고 fixture 로 기본 차단했다.
+- **conftest 차단의 사각지대** (#1237) — 네트워크 차단은 `requests` 의 `HTTPAdapter.send`
+  를 막지만 `respond_ai_mentions` 는 `urllib.request.urlopen` 을 직접 쓴다. 게다가
+  `main()` 은 `os.getenv` 로 토큰을 찾으므로, 개발자 셸에 실제 `SLACK_BOT_TOKEN` 이
+  있으면 **실제 워크스페이스로 요청이 나갈 수 있었다.** env 삭제 + urlopen 실패 스텁
+  2겹을 깔았다.
+
+### 8.3 결함 수정에서 고정 테스트가 한 일 (#1235)
+
+#1234 는 결함 3건을 "범위 밖 — 보고만" 으로 남기면서 **현재 동작을 테스트로 고정**했다.
+#1235 에서 고치자 정확히 그 2건만 red 가 됐고(288건 무영향), 의도된 변경임이 증명됐다.
+
+| 결함 | 수정 |
+|---|---|
+| `if normalized.startswith("/")` 도달 불가 + then/else 본문 동일 | 죽은 조건 제거. 남은 `lstrip("./")` 은 **절대경로 방어**라 주석·테스트로 고정 |
+| 도입 폴백이 이미 쓴 불릿을 한 단락으로 합쳐 중복 게시 | `extract_intro_bullets` 에서 불릿을 **단락 경계**로 처리 |
+| 헤더 판별 `"\| 테마" in line` 이 '테마'로 시작하는 실제 행도 버림 | 위치·구조 기준(첫 파이프 줄 = 헤더, 셀이 `-`/`:` 뿐 = 구분선) |
+
+뮤테이션 4건 전부 red 로 falsifiability 를 실증했고, rc 만 보지 않고 **red 된 테스트
+이름**을 확인해 import 에러로 인한 허위 red 를 배제했다.
+
+부수 효과로 도입 폴백의 `break` 가 미커버로 바뀌었다 — 중복 항목이 우연히 카운트를
+채워 덮고 있었기 때문이다. 그 경로를 별도로 덮었다.
+
+### 8.4 스크립트 실전 검증 3회
+
+`dev_sync_state_safe.sh` 는 이 세션에서 세 번 실제로 쓰였다 — #1231·#1234 머지 직후
+FF 충돌이 재현되어 복구했고, #1235·#1236 머지 후에는 충돌이 없어 평범한 FF 로 끝났다.
+dry-run 이 매번 원인 파일을 정확히 지목했다.
+
+---
+
+## 9. 남은 일
 
 - **numpy 2.5.3 관측** — `.python-version` 존중 여부는 그때까지 관측 불가 (#1226)
-- **저커버리지 재고** — `backfill_post_summaries.py`(831 stmts @38%), `collect_geopolitical.py`(490 @17%), `respond_ai_mentions.py`(259 @20%), `generate_weekly_report.py`(216 @13%)
+- **#1237 → #1238 머지** — #1238 은 #1237 위 스택이므로 순서를 지켜야 한다
 - **branch protection Phase 2** — `Enable auto-merge` 스텝이 최근 14런 전부 잡 레벨 `skipped`. 재개 조건 미충족 재확인 (#1227 §5.3)
 - **crypto 레포 카운터 도입** — 크로스 레포 비교 표의 개수 권위를 되살리려면 crypto 쪽에 `component_counts` 상응물이 필요하다. investing 세션에서는 측정 불가
+- **죽은 코드 3건** (보고만 됨, 삭제 미결정) — `respond_ai_mentions.intent_keywords` ·
+  `respond_ai_mentions.fallback_help_text` (둘 다 저장소 전체 호출처 0건),
+  `extract_theme_names` 의 `- ` 불릿 스킵 부재는 #1235 에서 해소
+- **저커버리지 재고 재도출** — 상위 4개가 모두 닫혔으므로 다음 대상은 실측으로 뽑아야
+  한다: `pytest tests/ -m "not i18n_e2e" --cov-report=term-missing` 후 미커버 statement
+  기준 정렬
 
 ## 관련 문서
 
