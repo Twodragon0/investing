@@ -516,12 +516,20 @@ def extract_theme_names(lines: List[str]) -> List[str]:
     idx = find_heading_index(lines, "테마 스냅샷")
     if idx != -1:
         end = find_section_end(lines, idx)
+        # 헤더/구분선은 **위치와 구조**로 가려낸다. 예전에는 `"| 테마" in line` 으로
+        # 헤더를 찾았는데, 그러면 '테마'로 시작하는 실제 행("테마파크 관련주" 등)도
+        # 함께 버려졌다. 첫 파이프 줄이 헤더이고, 구분선은 셀이 `-`/`:` 뿐인 줄이다.
+        header_seen = False
         for line in lines[idx + 1 : end]:
-            if not line.strip().startswith("|"):
+            stripped = line.strip()
+            if not stripped.startswith("|"):
                 continue
-            if "| ---" in line or "| 테마" in line:
+            if not header_seen:
+                header_seen = True
                 continue
-            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            cells = [c.strip() for c in stripped.strip("|").split("|")]
+            if cells and all(c and set(c) <= {"-", ":"} for c in cells):
+                continue
             if cells:
                 theme = clean_text(cells[0])
                 if theme and theme not in names:
@@ -616,6 +624,15 @@ def extract_intro_bullets(lines: List[str], limit: int = 2) -> List[str]:
         if stripped.startswith(("#", "|", "!", "<", ">")):
             continue
         if stripped in {"---", "--"}:
+            continue
+        if stripped.startswith(("- ", "* ")):
+            # 불릿은 도입 단락이 아니다. 걸러내지 않으면 `build_summary` 가 이미
+            # 요약에 쓴 불릿들을 한 단락으로 합쳐 중복 항목을 덧붙인다 —
+            # `used` 집합으로도 막히지 않는다(합친 문자열은 개별 불릿과 다른 값).
+            # 목록이 시작되면 앞 단락은 끝난 것이므로 버퍼를 비운다.
+            if buffer:
+                paragraphs.append(" ".join(buffer))
+                buffer = []
             continue
         buffer.append(stripped)
     if buffer:
@@ -840,13 +857,12 @@ def remove_missing_local_images(lines: List[str]) -> List[str]:
             cleaned.append(line)
             continue
 
+        # lstrip 의 문자집합이 {'.', '/'} 이므로 결과는 절대경로가 될 수 없다. 그게
+        # 이 한 줄의 요점이다 — os.path.join 은 두 번째 인자가 절대경로면 REPO_ROOT 를
+        # 버리므로, 이 정규화 없이는 포스트의 "/etc/..." 같은 경로를 저장소 밖에서
+        # 찾게 된다. 지우지 말 것.
         normalized = image_path.lstrip("./")
-        if normalized.startswith("/"):
-            normalized = normalized.lstrip("/")
-        if normalized.startswith("assets/"):
-            file_path = os.path.join(REPO_ROOT, normalized)
-        else:
-            file_path = os.path.join(REPO_ROOT, normalized)
+        file_path = os.path.join(REPO_ROOT, normalized)
 
         if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
             cleaned.append(line)

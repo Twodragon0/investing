@@ -21,20 +21,19 @@
 - 파일을 쓰는 경로(`process_post`, `main --zero-image-report`)는 전부 `tmp_path`
   안에서만 돌린다.
 
-## 덮지 않은 3줄 (다음 사람이 쫓지 않도록)
+## 덮지 않은 2줄 (다음 사람이 쫓지 않도록)
 
-`scripts/backfill_post_summaries.py` 는 이 파일과 짝 파일을 합쳐 99% 다. 남은 3줄은
+`scripts/backfill_post_summaries.py` 는 이 파일과 짝 파일을 합쳐 99% 다. 남은 2줄은
 테스트가 부족한 게 아니라 **도달할 수 없다**:
 
 | 줄 | 내용 | 근거 |
 |---|---|---|
 | 146 | `normalize_summary` 의 `if not sentence: return ""` | 139번 줄에서 `text` 가 비어있지 않음이 보장되고, 분할 패턴이 전부 lookbehind 라 첫 조각은 위치 0 에서 끊기지 않는다. 4자 전수 탐색(`. ! ? 공백 다 니 가 A`)에서 첫 조각이 빈 입력 0건 |
-| 845 | `normalized = normalized.lstrip("/")` | 843번 줄이 `lstrip("./")` 이므로 결과는 `/` 로 시작할 수 없다 |
-| 1215 | `main()` (`__main__` 가드 본문) | 임포트로는 실행되지 않는 엔트리포인트 |
+| 1231 | `main()` (`__main__` 가드 본문) | 임포트로는 실행되지 않는 엔트리포인트 |
 
-같은 자리에서 발견했으나 **고치지 않은 것**: 846-849 의 `if normalized.startswith("assets/")`
-는 then/else 본문이 완전히 같다(둘 다 `os.path.join(REPO_ROOT, normalized)`). 죽은
-조건이지만 이 PR 은 커버리지 목적이라 손대지 않고 보고만 한다.
+이전에 세 번째 항목이던 `normalized.lstrip("/")`(도달 불가)과 그 위의 동일-본문
+`if/else` 는 2026-08-27 에 제거됐다. 남은 `lstrip("./")` 은 장식이 아니라
+**절대경로 방어**다 — `TestLocalImagePathStaysInsideRepo` 가 그 역할을 고정한다.
 """
 
 from __future__ import annotations
@@ -468,12 +467,11 @@ class TestExtractThemeNames:
         lines = ["## 테마 스냅샷", "| 테마 | 건수 |", "| --- | --- |"] + [f"| {n} | 1 |" for n in names]
         assert bps.extract_theme_names(lines) == names[:3]
 
-    def test_header_skip_heuristic_also_drops_rows_starting_with_theme(self) -> None:
-        """헤더 판별이 `"| 테마" in line` 이라 **'테마'로 시작하는 실제 행도 버린다.**
+    def test_rows_starting_with_theme_are_kept(self) -> None:
+        """'테마'로 시작하는 실제 행이 헤더로 오인되지 않는다.
 
-        현재 동작을 고정하는 것이지 바람직하다는 뜻은 아니다. 실서비스 테마명이
-        '테마'로 시작하지 않아 문제가 드러나지 않았을 뿐이고, 판별을 인덱스 기준으로
-        바꾸면 이 테스트가 그 변경을 알려준다.
+        예전 판별(`"| 테마" in line`)은 이 행을 버렸다. 이제 첫 파이프 줄만 헤더로
+        보고 구분선은 셀 구조로 가려낸다.
         """
         lines = [
             "## 테마 스냅샷",
@@ -482,6 +480,17 @@ class TestExtractThemeNames:
             "| 테마파크 관련주 | 3 |",
             "| 에너지 | 2 |",
         ]
+        assert bps.extract_theme_names(lines) == ["테마파크 관련주", "에너지"]
+
+    @pytest.mark.parametrize("sep", ["| --- | --- |", "| :---: | ---: |", "|---|---|"])
+    def test_separator_variants_are_skipped(self, sep: str) -> None:
+        """정렬 표기가 붙은 구분선도 셀이 `-`/`:` 뿐이므로 걸러진다."""
+        lines = ["## 테마 스냅샷", "| 테마 | 건수 |", sep, "| 에너지 | 2 |"]
+        assert bps.extract_theme_names(lines) == ["에너지"]
+
+    def test_row_whose_cell_looks_like_a_dash_is_not_mistaken_for_separator(self) -> None:
+        """일부 셀만 `-` 인 행은 구분선이 아니다 — 전 셀이 `-`/`:` 여야 건너뛴다."""
+        lines = ["## 테마 스냅샷", "| 테마 | 건수 |", "| --- | --- |", "| 에너지 | - |"]
         assert bps.extract_theme_names(lines) == ["에너지"]
 
     def test_duplicate_themes_are_deduped(self) -> None:
@@ -706,20 +715,15 @@ class TestBuildSummary:
         lines = ["## 핵심 요약", "- 첫 항목", "- 둘째 항목"]
         assert bps.build_summary(lines, "")[:2] == ["첫 항목", "둘째 항목"]
 
-    def test_intro_fallback_can_restate_already_used_bullets(self) -> None:
-        """알려진 결함을 고정한다 — 수정이 아니라 기록이다.
+    def test_intro_fallback_does_not_restate_already_used_bullets(self) -> None:
+        """폴백이 이미 요약에 쓴 불릿을 중복으로 덧붙이지 않는다.
 
-        섹션에서 3개 미만을 모으면 `extract_intro_bullets` 폴백이 돈다. 그런데 그
-        함수는 불릿 줄을 걸러내지 않으므로(`extract_section_sentences` 와 달리
-        `- ` 스킵이 없다), 이미 쓴 불릿들을 한 단락으로 합쳐 **중복 항목**을 덧붙인다.
-
-        `used` 집합으로도 막히지 않는다 — 합쳐진 문자열은 개별 불릿과 다른 값이다.
-        이 PR 은 커버리지 목적이라 동작을 바꾸지 않는다. 폴백에 불릿 스킵을 넣으면
-        이 테스트가 red 가 되어 의도된 변경임을 확인하게 해준다.
+        `extract_intro_bullets` 가 불릿 줄을 걸러내지 않던 동안에는 결과가
+        `["첫 항목", "둘째 항목", "- 첫 항목 - 둘째 항목"]` 이었다. 합쳐진 문자열은
+        개별 불릿과 다른 값이라 `used` 집합으로도 막히지 않았다.
         """
         lines = ["## 핵심 요약", "- 첫 항목", "- 둘째 항목"]
-        result = bps.build_summary(lines, "")
-        assert result == ["첫 항목", "둘째 항목", "- 첫 항목 - 둘째 항목"], result
+        assert bps.build_summary(lines, "") == ["첫 항목", "둘째 항목"]
 
     def test_priority_order_is_followed(self) -> None:
         """`SECTION_PRIORITY` 순서대로 훑는다 — 문서 순서가 아니다."""
@@ -1358,3 +1362,71 @@ class TestListZeroByteImagesErrorPath:
         (gen / "broken.png").symlink_to(gen / "does-not-exist.png")
         (gen / "empty.png").write_bytes(b"")
         assert bps.list_zero_byte_images() == ["assets/images/generated/empty.png"]
+
+
+# ---------------------------------------------------------------------------
+# 결함 수정 회귀 (2026-08-27)
+# ---------------------------------------------------------------------------
+
+
+class TestIntroBulletsTreatListAsBoundary:
+    """`extract_intro_bullets` 에서 불릿은 단락이 아니라 **단락 경계**다."""
+
+    def test_bullet_lines_are_not_paragraphs(self) -> None:
+        assert bps.extract_intro_bullets(["- 첫 항목", "* 둘째 항목"]) == []
+
+    def test_bullet_list_ends_the_preceding_paragraph(self) -> None:
+        """목록 앞뒤 텍스트가 하나로 합쳐지지 않는다."""
+        lines = ["앞 단락입니다.", "- 목록 항목", "뒤 단락입니다."]
+        assert bps.extract_intro_bullets(lines) == ["앞 단락입니다.", "뒤 단락입니다."]
+
+    def test_paragraph_before_a_list_is_still_collected(self) -> None:
+        assert bps.extract_intro_bullets(["도입 문단입니다.", "- 목록 항목"]) == ["도입 문단입니다."]
+
+
+class TestLocalImagePathStaysInsideRepo:
+    """죽은 조건을 지우면서 `lstrip("./")` 의 절대경로 방어가 남아 있는지.
+
+    `os.path.join` 은 두 번째 인자가 절대경로면 첫 인자를 버린다. 정규화가 사라지면
+    포스트에 적힌 `/etc/...` 같은 경로를 저장소 밖에서 조회하게 된다.
+    """
+
+    def test_absolute_looking_path_is_resolved_under_repo_root(self, fake_repo) -> None:
+        outside = fake_repo.parent / "outside.png"
+        outside.write_bytes(b"x")
+        # 저장소 밖 실제 파일을 가리키는 것처럼 보이는 경로 — 저장소 안에서 찾아야 하고,
+        # 거기에 없으므로 줄이 제거되어야 한다.
+        assert bps.remove_missing_local_images([f"![alt]({outside})"]) == []
+
+    def test_parent_traversal_is_flattened(self, fake_repo) -> None:
+        (fake_repo / "escape.png").write_bytes(b"x")
+        # "../escape.png" 의 선행 './' 문자가 벗겨져 REPO_ROOT/escape.png 로 해석된다.
+        kept = ["![alt](../escape.png)"]
+        assert bps.remove_missing_local_images(kept) == kept
+
+
+class TestBuildSummaryIntroFallbackQuota:
+    def test_intro_fallback_stops_at_four_items(self) -> None:
+        """총계·테마 2칸 + 도입 단락 2개로 4가 되면 폴백 루프가 멈춘다.
+
+        `extract_intro_bullets` 는 `paragraphs[:2]` 로 하드캡되어 있어 도입에서
+        얻을 수 있는 항목은 최대 2개다. 불릿 스킵을 넣은 뒤로는 이 조합만이 폴백
+        안에서 상한에 닿는 경로다.
+        """
+        lines = [
+            "첫 도입 단락입니다.",
+            "",
+            "둘째 도입 단락입니다.",
+            "",
+            "## 테마 스냅샷",
+            "| 테마 | 건수 |",
+            "| --- | --- |",
+            "| 에너지 | 3 |",
+        ]
+        result = bps.build_summary(lines, "총 42건 수집")
+        assert result == [
+            "총 **42건** 수집",
+            "주요 테마: 에너지",
+            "첫 도입 단락입니다.",
+            "둘째 도입 단락입니다.",
+        ], result
