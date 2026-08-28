@@ -3244,10 +3244,41 @@ class TestIsValidImageUrlLongGif:
 # Lines 538-539: _fetch_og_image — SSRF block
 # ---------------------------------------------------------------------------
 class TestFetchOgImageSSRF:
-    def test_private_url_returns_empty(self):
-        with patch("common.enrichment_network.is_private_url", return_value=True):
+    """SSRF 가드는 **반환값이 아니라 요청이 나갔는지**로 검증한다.
+
+    `result == ""` 만 단언하면 가드를 통째로 지워도 초록이다 — conftest 의 HTTP
+    차단이 요청을 거부하고, 그 예외를 함수의 넓은 `except` 가 삼켜서 **똑같이**
+    빈 문자열이 나오기 때문이다. 즉 "가드 있음"과 "가드 없음"이 구별되지 않는다.
+    실제로 `if is_private_url(url):` 를 `if False:` 로 바꿔도 이 파일 전체가
+    통과했다. 그래서 `requests.get` 이 호출되지 않았다는 사실을 직접 관측한다.
+    """
+
+    def test_private_url_blocks_the_request_before_it_is_sent(self, caplog):
+        with (
+            patch("common.enrichment_network.is_private_url", return_value=True),
+            patch("common.enrichment_network.requests.get") as mock_get,
+            caplog.at_level("WARNING"),
+        ):
             result = _fetch_og_image("https://internal.corp/image")
+
         assert result == ""
+        mock_get.assert_not_called()
+        assert any("SSRF blocked" in r.message for r in caplog.records), (
+            "가드가 경고를 남기지 않았다 — 차단이 아니라 다른 경로로 빠졌을 수 있다"
+        )
+
+    def test_public_url_does_send_the_request(self):
+        """대조군. 이게 없으면 `assert_not_called` 는 '어떤 경로로도 요청을 안 한다'
+        는 사실만 확인하게 되어, 가드 검증으로서 무의미해진다."""
+        resp = MagicMock()
+        resp.text = '<meta property="og:image" content="https://cdn.example.com/a.jpg">'
+        resp.raise_for_status = MagicMock()
+        with (
+            patch("common.enrichment_network.is_private_url", return_value=False),
+            patch("common.enrichment_network.requests.get", return_value=resp) as mock_get,
+        ):
+            _fetch_og_image("https://public.example.com/article")
+        mock_get.assert_called_once()
 
     def test_empty_url_returns_empty(self):
         result = _fetch_og_image("")
@@ -3367,16 +3398,45 @@ class TestExtractViaBs4ArticleEmptyParagraphs:
 # Lines 837-838: fetch_page_metadata — SSRF block for direct URL
 # ---------------------------------------------------------------------------
 class TestFetchPageMetadataSSRFBlock:
-    def test_private_url_returns_empty_dict(self):
-        with patch("common.enrichment_network.is_private_url", return_value=True):
+    """`TestFetchOgImageSSRF` 와 같은 이유로 요청 발생 여부를 관측한다.
+
+    빈 dict 는 네트워크 실패 경로도 똑같이 만들어내므로 가드 유무를 구별하지
+    못한다.
+    """
+
+    _EMPTY = {
+        "description": "",
+        "image": "",
+        "published_time": "",
+        "author": "",
+        "section": "",
+    }
+
+    def test_private_url_blocks_the_request_before_it_is_sent(self, caplog):
+        with (
+            patch("common.enrichment_network.is_private_url", return_value=True),
+            patch("common.enrichment_network.requests.get") as mock_get,
+            caplog.at_level("WARNING"),
+        ):
             result = fetch_page_metadata("https://internal.corp/article")
-        assert result == {
-            "description": "",
-            "image": "",
-            "published_time": "",
-            "author": "",
-            "section": "",
-        }
+
+        assert result == self._EMPTY
+        mock_get.assert_not_called()
+        assert any("SSRF blocked" in r.message for r in caplog.records), (
+            "가드가 경고를 남기지 않았다 — 차단이 아니라 다른 경로로 빠졌을 수 있다"
+        )
+
+    def test_public_url_does_send_the_request(self):
+        """대조군 — `assert_not_called` 가 공허하지 않다는 것을 보인다."""
+        resp = MagicMock()
+        resp.text = "<html><head><title>t</title></head><body><p>본문</p></body></html>"
+        resp.raise_for_status = MagicMock()
+        with (
+            patch("common.enrichment_network.is_private_url", return_value=False),
+            patch("common.enrichment_network.requests.get", return_value=resp) as mock_get,
+        ):
+            fetch_page_metadata("https://public.example.com/article")
+        mock_get.assert_called_once()
 
 
 # ---------------------------------------------------------------------------
