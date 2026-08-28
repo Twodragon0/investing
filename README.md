@@ -253,8 +253,7 @@ investing/
 │   │   ├── image_generator.py  # matplotlib/Pillow 시각화
 │   │   └── ...                 # utils, rss_fetcher, crypto_api 등
 │   ├── collect_*.py            # 수집기 (개수: docs/component-counts.md)
-│   ├── generate_*.py           # 생성기 (개수: docs/component-counts.md)
-│   └── enrich_existing_posts.py # 포스트 품질 보강
+│   └── generate_*.py           # 생성기 (개수: docs/component-counts.md)
 ├── docs/
 │   ├── platform-architecture.md # DragonQuant 통합 아키텍처
 │   ├── architecture.md         # 이 저장소 상세 아키텍처

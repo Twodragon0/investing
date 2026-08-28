@@ -60,7 +60,6 @@ scripts/
 ├── backfill_images.py          # image backfill for existing posts
 ├── backfill_post_summaries.py  # summary backfill
 ├── improve_existing_posts.py   # post quality improvement runner
-├── enrich_existing_posts.py    # enrichment backfill
 ├── verify_post_quality.py      # post quality verification
 ├── smoke_test_rendered_pages.py # smoke tests on rendered HTML
 ├── validate_collector_summary_contract.py # contract validation

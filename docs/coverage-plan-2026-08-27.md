@@ -44,7 +44,7 @@ python3 -m pytest tests/ -m "not i18n_e2e" --cov-report=term-missing --cov-fail-
 | 162 | 554 | 71% | `tools/check_pilot_observation.py` | 89건 (5파일) | 수동 |
 | 162 | 491 | 67% | `collect_stock_news.py` | 6건 | 수집기 크론 |
 | 135 | 275 | 51% | `generate_og_images.py` | 14건 (2파일) | 빌드 파이프라인 |
-| 133 | 133 | **0%** | `enrich_existing_posts.py` | **없음** | **워크플로우 참조 0건** |
+| ~~133~~ | 133 | **0%** | ~~`enrich_existing_posts.py`~~ | 없음 | **삭제** (아래 절 참조) |
 | 109 | 228 | 52% | `tools/review_alerting_quality.py` | 8건 | 수동 |
 | 83 | 415 | 80% | `collect_regulatory.py` | 9건 | 수집기 크론 |
 
@@ -54,7 +54,8 @@ python3 -m pytest tests/ -m "not i18n_e2e" --cov-report=term-missing --cov-fail-
 
 직전 라운드(#1234·#1236·#1237·#1240)의 대상은 **테스트가 아예 없거나 게이팅 함수 하나만
 덮인** 모듈이었다 — 0%·13%·17%·20%. 이번 상위 15개 중 테스트가 **0건인 것은
-`enrich_existing_posts` 뿐**이고, 나머지는 3~89건을 이미 갖고 있다(비율 27~80%).
+`enrich_existing_posts` 뿐이었고(그마저 삭제됨, 아래 절)**, 나머지는 3~89건을 이미
+갖고 있다(비율 27~80%).
 
 즉 이번은 **없는 테스트를 만드는 일이 아니라 있는 테스트를 깊게 하는 일**이다. 남은
 미커버가 정상 경로가 아니라 **예외·폴백·조건 분기**에 몰려 있을 가능성이 높고, 그쪽은
@@ -73,7 +74,8 @@ python3 -m pytest tests/ -m "not i18n_e2e" --cov-report=term-missing --cov-fail-
 
 ## 단계 배치와 게이트 전망
 
-기준선은 **#1240·#1241 머지 후** `20,799 / 24,778 = 83.94%`, 게이트 82(헤드룸 604 stmts).
+기준선은 **#1240·#1241 머지 + `enrich_existing_posts` 삭제 후** `20,799 / 24,645 = 84.39%`,
+게이트 82. 규칙상 이미 **83** 까지 갈 수 있다(헤드룸 466 stmts) — T1 을 기다리지 않아도 된다.
 
 각 단계는 해당 모듈을 ~98% 로 덮는다고 가정했다(잔여는 `__main__` 등 도달 불가 줄).
 게이트는 매번 **462-stmts 규칙**("이미 수용한 가장 빡빡한 헤드룸 아래로는 래칫하지
@@ -81,9 +83,9 @@ python3 -m pytest tests/ -m "not i18n_e2e" --cov-report=term-missing --cov-fail-
 
 | 단계 | 모듈 | 회수 | 총계 전망 | 규칙상 최대 게이트 | 헤드룸 |
 |---|---|---:|---:|---:|---:|
-| **T1** | `generate_weekly_digest`, `collect_fmp_calendar`, `generate_ops_10am_digest` | 783 | 87.10% | **85** | 644 |
-| **T2** | `collect_crypto_news`, `collect_social_media`, `collect_coinmarketcap` | 703 | 89.94% | **88** | 604 |
-| **T3** | `improve_existing_posts`, `collect_market_indicators`, `enrich_existing_posts` | 556 | 92.18% | **90** | 664 |
+| **T1** | `generate_weekly_digest`, `collect_fmp_calendar`, `generate_ops_10am_digest` | 783 | 87.57% | **86** | 510 |
+| **T2** | `collect_crypto_news`, `collect_social_media`, `collect_coinmarketcap` | 703 | 90.42% | **89** | 474 |
+| **T3** | `improve_existing_posts`, `collect_market_indicators` | 426 | 92.15% | **90** | 653 |
 
 전망치는 계획용이다 — 실제 게이트는 매 PR 에서 다시 실측해 결정한다. 이번 세션에서
 81 이 **460 stmts** 로 462 기준에 2 부족해 거부된 사례가 있었고, 그건 전망으로는
@@ -99,18 +101,30 @@ python3 -m pytest tests/ -m "not i18n_e2e" --cov-report=term-missing --cov-fail-
 **남은 미커버가 예외·폴백 경로에 몰려 있을 가능성**이 높고, 그쪽은 T1 보다 설계 시간이
 더 든다.
 
-## 별도 확인 필요 — `enrich_existing_posts.py`
+## 해소됨 — `enrich_existing_posts.py` 삭제 (조사 후)
 
-133 stmts, **0%**, 테스트 파일 없음, **워크플로우 참조 0건**. 저장소 전체 grep 에서
-`README.md:257` 과 `scripts/AGENTS.md:63` 의 트리 주석만 나온다.
+이 문서 초안은 "확인 필요, 죽은 코드로 단정하지 않는다" 로 남겨뒀다. 조사 결과 **정규식이
+렌더러 변경을 따라가지 못해 5개월간 조용한 no-op** 이었음이 드러나 삭제했다.
 
-수동 백필 도구일 수 있으므로 죽은 코드로 단정하지 않는다. 다만 T3 에서 테스트를 쓰기
-전에 **"아직 쓰는가"** 를 먼저 확인해야 한다 — 쓰지 않는다면 삭제가 테스트보다 낫다
-(#1241 에서 `intent_keywords` 를 그렇게 처리했다).
+| 확인 항목 | 실측 |
+|---|---|
+| 호출처 | 워크플로우·코드 0건. `README.md` / `scripts/AGENTS.md` 트리 주석만 |
+| 최종 수정 | 2026-03-07 (약 6개월 전) |
+| 대상 마크업 생존 | **살아 있다** — `common/themed_news_renderer.py` 가 지금도 생성, 월 54~62 포스트 |
+| 스크립트가 매칭 가능한 카드 | **5,234개 중 357개(6.8%), 2026-04 이후 0개** |
+| 남은 실제 작업량 | 2026-06~08 카드 2,634개 중 설명 누락 **46개(1.7%)** |
 
-> 주의: 커버된 코드를 지우면 분자·분모가 같이 줄어 비율은 거의 변하지 않는다. 삭제가
-> 커버리지에 이득이 되는 것은 **미커버 상태로 지울 때**다. `enrich_existing_posts` 는
-> 현재 0% 이므로 삭제 시 133 stmts 가 분모에서만 빠져 총계가 오른다.
+원인은 마크업 드리프트다. 렌더러가 2026-04 부터 `<div class="news-card-item news-sev-{severity}">`
+를 내는데 스크립트의 `_CARD_RE` 는 `class="news-card-item"` **정확 일치**였다. 그래서 실행하면
+"0건 처리" 로 **성공처럼 끝난다** — 정확히 이 저장소가 경계하는 "실패해도 조용한 코드" 다.
+
+삭제를 고른 이유: 5개월간 아무도 못 쓴 것을 눈치채지 못했고(= 수요가 없다), 정규식을 고쳐
+되살려도 얻는 것은 카드 46개 보완이다. 133 stmts 가 분모에서 빠져 총계도 오른다(0% 였으므로
+#1241 과 달리 삭제가 커버리지에도 이득이다). 재필요 시 git 히스토리에서 되살릴 수 있다.
+
+**교훈**: 마크업을 정규식으로 잡는 백필 스크립트는 렌더러와 함께 움직이지 않으면 조용히
+죽는다. 새로 쓰는 백필 도구는 렌더러가 내는 마크업을 **테스트로 묶어** 드리프트를 red 로
+드러내야 한다.
 
 ## 작업 시 반드시 적용할 격리 규칙
 
