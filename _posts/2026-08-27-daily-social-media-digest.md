@@ -30,6 +30,7 @@ image_alt: "소셜 미디어 동향 - 2026-08-27 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: ‘올리나, 쉬어가나’…27일 한은 금리 결정, 물가·성장은 인상에 무게 [머니뭐니 - 21건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 인상 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 트럼프 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 인상, 금통위 관련 14건</li><li>🤖 <strong>AI/기술</strong>: 이코노미뉴스, 스마트비즈 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBXanBwU01QU3hlakZReURKLTV6M09PQkptb2REMjdlNXJSWC1PNTFUamVQVGVRSUhUQTQtRm9GSW1yQ3JpbHNwbUE4Y1JXQXM3OUVLNzl3?oc=5">‘올리나, 쉬어가나’…27일 한은 금리 결정, 물가·성장은 인상에 무게 [머니뭐니</a> <span class="p0-desc">한국은행 금융통화위원회의 기준금리 결정을 앞두고 인상과 동결 전망이 비등하게 갈리고 있는 가운데 신현송 한은 총재가 강조한 물가·성장의 높은 상승률을 확인한 만큼</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 주요 이슈를 정리했습니다.

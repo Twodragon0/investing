@@ -33,50 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-28 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: If a Stock Market Crash Is Coming, Here's the 1 Thing You Shouldn't Do, According to History - 214건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 관련 56건</li><li>🤖 <strong>AI/기술</strong>: 엔비디아 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 인상, 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 조선비즈, IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPdFJSTFNpOVJDVDhRaHJIVDVOU2JTR3JFcEtWcGZlSUJ2NDVLa3dieWZfeDY0OFBDVzJoSzVwTk83czlIX01qMEo4dGlDNVZaZW1EMkNLemZZRklmQlZLTm5GVEVFQlMwVFoyMEwzZVFvSV81aXdJN1BsajA5Tm1HakN3aUd0ZHZlbDRBS3NpcVFlY2NVcXhWMlo4OFg?oc=5">If a Stock Market Crash Is Coming, Here's the 1 Thing You Shouldn't Do, According to History</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: If a Stock Market Crash Is Coming, Here's the 1 Thing You Shouldn't Do, According to History 
-총 214건의 뉴스 중 P1 주요 이슈도 45건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (56건): 코스닥, 코스피, 엔비디아 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (54건): 엔비디아 기술 이슈 (54건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (28건): 인상, 달러, 금리 매크로 변수 (28건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 폭락 주식 시장이 다가오고 있다면, 역사에 따르면 하지 말아야 할 한 가지는 다음과 같습니다.
-
-### 주요 이슈
-
-- 엔비디아 '깜짝 실적'에 삼성전자·SK하이닉스 강세…AI 메모리 수요 기대↑ - 블루밍비트
-- 엔비디아 ‘깜짝 실적’에 삼성전자·SK하이닉스 강세…반도체 투심 모처럼 ‘훈풍’ [종목Pick
-- 엔비디아 실적 발표 5번 중 4번은 ‘삼전닉스’ 강세…5거래일째엔 상승분 반납키도
-- 외 42건
-
-### 투자자 체크포인트
-
-- 한국 기사 79건, 글로벌 기사 135건 수집
-- 한국 지수: KOSPI 6,912.37(+1.53%), KOSDAQ 837.65(+1.30%), USD/KRW 1,381.63(-0.21%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">56건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:96%"></div></div><span class="theme-count">54건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:50%"></div></div><span class="theme-count">28건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-28.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,912.37 (+1.53%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 837.65 (+1.30%).
+- *[센머니=김병진 기자] 코스닥지수가 27일 전 거래일보다*
 
 ## 테마별 주요 뉴스
 
