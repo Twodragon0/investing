@@ -209,7 +209,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBuclN3NnNZeWtJUjFwVGZ6ZUZmQ2dTTU5JZXF5LWk3bjYtT3VVVUp2V3lDdUtyOUN5TEw4Mjc5MkdEWVgzR2hKQi14ZlI0bVRxaU02ckxYR1liSEtzWDNCNjF6eno5YWFhRGtxekZvenQ5ZUpJdmc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 산업의 선구자 중 하나인 크라켄이 TradingView에 합류했습니다 - TradingView</a>
-<p class="news-desc">새로운 TradingView 업데이트 읽기: 암호화폐 산업의 선구자 중 하나인 Kraken이 TradingView에 합류했습니다. 블로그에서 더 많은 정보를 확인하고 최신 플랫폼 뉴스를 받아보세요.</p>
+<p class="news-desc">Read fresh TradingView updates: Kraken, one of the pioneers of the cryptocurrency industry, joins TradingView. Discover more in our blog and stay connected with the latest platform news.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
