@@ -419,23 +419,22 @@ class FmpCalendarCollector(BaseCollector):
         # Opening summary — single headline (top economic event preferred) +
         # secondary earnings signal threaded as the source slot, so the
         # post-summary excerpt reads like an editorial brief. Counts trail.
+        # 키 이름은 생산자(`common/fmp_api.py`)가 정한다. 경제 이벤트는 `event`,
+        # 실적은 `symbol` 이며 둘 다 `name` 을 내지 않는다 — 예전 코드가 `name` 을
+        # 읽어 헤드라인이 173개 포스트에서 조용히 비어 있었다. 표는 `event` 를
+        # 읽었기 때문에 본문만 멀쩡해 아무도 눈치채지 못했다.
         _headline = ""
-        _top_event = (economic_events[0].get("name") or "").strip() if economic_events else ""
+        _top_event = (economic_events[0].get("event") or "").strip() if economic_events else ""
         _top_earn_symbol = (earnings[0].get("symbol") or "").strip() if earnings else ""
-        _top_earn_name = (earnings[0].get("name") or "").strip() if earnings else ""
 
         if _top_event:
             _headline = f"주요 경제 이벤트 {_top_event}"
         elif _top_earn_symbol:
             _headline = f"대형 실적 {_top_earn_symbol}"
-            if _top_earn_name and _top_earn_name != _top_earn_symbol:
-                _headline += f" ({_top_earn_name})"
 
         _secondary = ""
         if _top_event and _top_earn_symbol:
             _secondary = f"실적: {_top_earn_symbol}"
-            if _top_earn_name and _top_earn_name != _top_earn_symbol:
-                _secondary += f"/{_top_earn_name}"
 
         _detail = (
             f"시장 지수 {len(indices)}종, "
@@ -580,8 +579,9 @@ class FmpCalendarCollector(BaseCollector):
         _desc_ko = f"경제 캘린더 {total_items}건 수집. "
         if _desc_parts_fmp:
             _desc_ko += f"{', '.join(_desc_parts_fmp)} 포함. "
-        _next_event = economic_events[0].get("name", "")[:30] if economic_events else ""
-        _next_earn = earnings[0].get("name", "")[:20] if earnings else ""
+        # 헤드라인과 같은 이유로 `event` / `symbol` 을 읽는다 (위 주석 참조).
+        _next_event = economic_events[0].get("event", "")[:30] if economic_events else ""
+        _next_earn = earnings[0].get("symbol", "")[:20] if earnings else ""
         if _next_event:
             _desc_ko += f"주목 이벤트: {_next_event}."
         elif _next_earn:

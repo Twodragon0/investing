@@ -9,9 +9,12 @@
 이 수집기는 크론이 하루 한 번 돌리고 결과를 아무도 즉시 읽지 않는다. 아래가 깨져도
 워크플로우는 성공으로 끝난다:
 
-- **키 이름 불일치** — 경제 섹션 표는 이벤트 이름을 `event` 키에서 읽지만,
-  `build_content` 의 헤드라인과 `run()` 의 description 은 `name` 키에서 읽는다.
-  둘 중 한쪽만 채워진 페이로드가 오면 표는 멀쩡한데 요약만 조용히 빈다.
+- **키 이름 불일치** — 표·헤드라인·description 이 **같은 키**를 읽어야 한다.
+  실제로 이 버그가 있었다: 표는 `event` 를, 헤드라인과 description 은 `name` 을
+  읽었는데 생산자(`common/fmp_api.py`)는 `name` 을 낸 적이 없다. 그래서 본문 표는
+  멀쩡한 채 요약만 173개 포스트에서 조용히 비었다. 픽스처는 반드시 `_event()` /
+  `_earn()` (= 생산자와 동일한 키 집합)을 쓴다 — 손으로 `name` 을 끼워 넣으면
+  그 버그가 다시 정답처럼 보인다.
 - **중요도 필터** — `_build_economic_section` 은 High/Medium 만 담는다.
   다른 값이 들어오면 카운트에는 잡히고 표에서는 사라진다.
 - **폴백 판정** — `is_news_fallback` 플래그 하나로 캘린더 표 대신 뉴스 카드가 나간다.
@@ -168,6 +171,12 @@ class TestBuildSectorSection:
 
 
 def _event(**over: Any) -> Dict[str, Any]:
+    """경제 이벤트 1건 — 키 집합은 `common/fmp_api.py` 생산자와 **동일**하다.
+
+    두 생산 경로(FMP stable, Forex Factory 폴백)가 모두 이 7개 키를 낸다.
+    여기에 없는 키(예: `name`)를 테스트에서 손으로 끼워 넣지 말 것 — 생산자가
+    내지 않는 키를 소비자가 읽는 버그를 정답으로 고정시킨다.
+    """
     base = {
         "date": "2026-08-20",
         "country": "US",
@@ -176,6 +185,22 @@ def _event(**over: Any) -> Dict[str, Any]:
         "forecast": "3.0%",
         "previous": "2.9%",
         "actual": "3.1%",
+    }
+    base.update(over)
+    return base
+
+
+def _earn(**over: Any) -> Dict[str, Any]:
+    """실적 1건 — 키 집합은 `fetch_earnings_calendar` 생산자와 **동일**하다.
+
+    회사명 키는 없다. `symbol` 이 유일한 식별자다.
+    """
+    base = {
+        "symbol": "AAPL",
+        "date": "2026-08-20",
+        "eps_estimated": "1.50",
+        "revenue_estimated": "1000000",
+        "time": "amc",
     }
     base.update(over)
     return base
@@ -665,45 +690,51 @@ def _loaded(collector, **datasets: Any):
 
 
 class TestBuildContent:
-    def test_headline_reads_the_name_key_not_the_event_key(self) -> None:
-        """표는 `event`, 헤드라인은 `name` 을 읽는다 — 이 비대칭이 실제 동작이다."""
-        c = _loaded(fmp.FmpCalendarCollector(), economic=[{"event": "CPI", "name": "소비자물가지수"}])
+    def test_headline_reads_the_same_event_key_the_table_reads(self) -> None:
+        """헤드라인과 표는 **같은 키**(`event`)를 읽어야 한다.
+
+        회귀 이력: 헤드라인이 `name` 을 읽던 시절, 생산자
+        (`common/fmp_api.py`)는 `name` 을 낸 적이 없어 헤드라인이 173개 포스트에서
+        조용히 비어 있었다. 표는 `event` 를 읽어 정상이었기 때문에 본문만 보면
+        멀쩡했다. 그래서 `_event()` (= 생산자와 동일한 키 집합)만 넣고 단언한다 —
+        `name` 을 손으로 끼워 넣으면 그 버그가 다시 정답처럼 보인다.
+        """
+        c = _loaded(fmp.FmpCalendarCollector(), economic=[_event(event="소비자물가지수")])
         content = c.build_content([])
         assert "**주요 경제 이벤트 소비자물가지수**" in content
-        assert "주요 경제 이벤트 CPI" not in content
+        assert "오늘 일정 핵심" in content
+
+    def test_headline_is_empty_when_the_producer_shape_has_no_event_text(self) -> None:
+        c = _loaded(fmp.FmpCalendarCollector(), economic=[_event(event="")])
+        content = c.build_content([])
+        assert "주요 경제 이벤트" not in content.split("\n")[0]
+        assert "오늘 일정 핵심" not in content
 
     def test_headline_falls_back_to_the_top_earning_symbol(self) -> None:
-        c = _loaded(fmp.FmpCalendarCollector(), earnings=[{"symbol": "AAPL", "name": "Apple Inc"}])
-        assert "**대형 실적 AAPL (Apple Inc)**" in c.build_content([])
-
-    def test_earning_name_equal_to_symbol_is_not_repeated(self) -> None:
-        c = _loaded(fmp.FmpCalendarCollector(), earnings=[{"symbol": "AAPL", "name": "AAPL"}])
-        content = c.build_content([])
-        assert "**대형 실적 AAPL**" in content
-        assert "(AAPL)" not in content
-
-    def test_earning_without_name_omits_the_parenthetical(self) -> None:
-        c = _loaded(fmp.FmpCalendarCollector(), earnings=[{"symbol": "AAPL"}])
+        """실적에는 회사명 키가 없다 — 생산자가 내는 건 `symbol` 뿐이다."""
+        c = _loaded(fmp.FmpCalendarCollector(), earnings=[_earn(symbol="AAPL")])
         assert "**대형 실적 AAPL**" in c.build_content([])
+
+    def test_economic_event_wins_over_earnings_for_the_headline(self) -> None:
+        c = _loaded(
+            fmp.FmpCalendarCollector(),
+            economic=[_event(event="CPI")],
+            earnings=[_earn(symbol="AAPL")],
+        )
+        content = c.build_content([])
+        assert "**주요 경제 이벤트 CPI**" in content
+        assert "대형 실적 AAPL" not in content
 
     def test_secondary_tag_appears_only_when_both_sources_exist(self) -> None:
         both = _loaded(
             fmp.FmpCalendarCollector(),
-            economic=[{"name": "CPI"}],
-            earnings=[{"symbol": "AAPL", "name": "Apple Inc"}],
+            economic=[_event(event="CPI")],
+            earnings=[_earn(symbol="AAPL")],
         ).build_content([])
-        assert "(실적: AAPL/Apple Inc)" in both
+        assert "(실적: AAPL)" in both
 
-        event_only = _loaded(fmp.FmpCalendarCollector(), economic=[{"name": "CPI"}]).build_content([])
+        event_only = _loaded(fmp.FmpCalendarCollector(), economic=[_event(event="CPI")]).build_content([])
         assert "실적:" not in event_only
-
-    def test_secondary_tag_skips_a_name_identical_to_the_symbol(self) -> None:
-        content = _loaded(
-            fmp.FmpCalendarCollector(),
-            economic=[{"name": "CPI"}],
-            earnings=[{"symbol": "AAPL", "name": "AAPL"}],
-        ).build_content([])
-        assert "(실적: AAPL)" in content
 
     def test_label_degrades_when_there_is_no_headline(self) -> None:
         c = _loaded(fmp.FmpCalendarCollector())
@@ -783,7 +814,7 @@ class TestBuildContent:
     def test_fetch_output_flows_into_build_content(self, fake_api) -> None:
         """fetch → build_content 배선 — 속성 이름이 어긋나면 여기서 깨진다."""
         fake_api["indices"] = {"SPY": {"symbol": "SPY", "price": 512.0}}
-        fake_api["economic"] = [_event(name="소비자물가지수")]
+        fake_api["economic"] = [_event(event="소비자물가지수")]
         collector = fmp.FmpCalendarCollector()
         content = collector.build_content(collector.fetch())
         assert fake_api["calls"], "fetch 가 실제로 호출되지 않았다"
@@ -818,8 +849,8 @@ def _populate(state: Dict[str, Any]) -> None:
     """포스트가 실제로 만들어질 만큼의 데이터를 채운다."""
     state["indices"] = {"SPY": {"symbol": "SPY", "price": 512.0}}
     state["sectors"] = [{"sector": "Technology", "change_pct": 1.0}]
-    state["economic"] = [_event(name="소비자물가지수")]
-    state["earnings"] = [{"symbol": "AAPL", "name": "Apple Inc", "date": "2026-08-20"}]
+    state["economic"] = [_event(event="소비자물가지수")]
+    state["earnings"] = [_earn(symbol="AAPL")]
     state["treasury"] = [{"maturity": "10Y", "rate": 4.25, "change": 0.01}]
     state["ipo"] = [{"company": "Acme Inc", "date": "2026-08-21"}]
 
@@ -873,12 +904,12 @@ class TestCollectorRun:
         assert "주목 이벤트: 소비자물가지수." in desc
         assert captured["extra_frontmatter"]["description_ko"] == desc
 
-    def test_description_falls_back_to_the_earnings_name(
+    def test_description_falls_back_to_the_earnings_symbol(
         self, fake_api, isolated_posts, no_image_writes, monkeypatch
     ) -> None:
-        """경제 이벤트에 `name` 이 없으면 실적 이름으로 넘어간다 (20자로 잘림)."""
-        fake_api["economic"] = [_event()]
-        fake_api["earnings"] = [{"symbol": "AAPL", "name": "가" * 50, "date": "2026-08-20"}]
+        """경제 이벤트 텍스트가 비면 실적 `symbol` 로 넘어간다 (20자로 잘림)."""
+        fake_api["economic"] = [_event(event="")]
+        fake_api["earnings"] = [_earn(symbol="가" * 50)]
         collector = fmp.FmpCalendarCollector()
         captured = _spy_create_post(collector, monkeypatch)
         collector.run()
@@ -896,7 +927,7 @@ class TestCollectorRun:
         슬라이스를 없애도 통과하는 false green 이 된다.
         """
         _populate(fake_api)
-        fake_api["economic"] = [_event(name="아" * 200)]
+        fake_api["economic"] = [_event(event="아" * 200)]
         collector = fmp.FmpCalendarCollector()
         captured = _spy_create_post(collector, monkeypatch)
         collector.run()
@@ -1063,3 +1094,117 @@ class TestMain:
         monkeypatch.setattr(fmp, "FmpCalendarCollector", _Fake)
         fmp.main()
         assert calls == ["run"]
+
+
+# ---------------------------------------------------------------------------
+# 생산자/소비자 키 계약
+#
+# 이 절만 `common/fmp_api.py`(생산자)를 직접 호출한다. 나머지 테스트는 위의
+# `_event()` / `_earn()` 픽스처를 쓰는데, 그 픽스처가 생산자와 어긋나면 소비자
+# 버그를 정답으로 고정시킬 수 있다 — 실제로 그렇게 173개 포스트의 헤드라인이
+# 조용히 비었다. 아래 테스트가 픽스처를 생산자에 **묶어 둔다**.
+# ---------------------------------------------------------------------------
+
+
+_fmp_api = importlib.import_module("common.fmp_api")
+
+
+@pytest.fixture
+def stub_fmp_http(monkeypatch):
+    """`request_with_retry` 를 대체해 임의 JSON 을 생산자에 흘려 넣는다."""
+    box: Dict[str, Any] = {"payload": [], "calls": []}
+
+    class _Resp:
+        def json(self) -> Any:
+            return box["payload"]
+
+    def _fake(url: str, **kwargs: Any) -> _Resp:
+        box["calls"].append(url)
+        return _Resp()
+
+    monkeypatch.setattr(_fmp_api, "request_with_retry", _fake)
+    return box
+
+
+class TestProducerConsumerKeyContract:
+    def test_economic_producer_emits_exactly_the_fixture_keys(self, stub_fmp_http, monkeypatch) -> None:
+        monkeypatch.setattr(_fmp_api, "get_env", lambda *_a, **_kw: "dummy-key")
+        stub_fmp_http["payload"] = [
+            {
+                "event": "CPI",
+                "country": "US",
+                "date": "2026-08-20",
+                "impact": "High",
+                "estimate": "3.0%",
+                "previous": "2.9%",
+                "actual": "3.1%",
+            }
+        ]
+        (produced,) = _fmp_api.fetch_economic_calendar(days_ahead=30)
+        assert stub_fmp_http["calls"], "생산자가 호출되지 않았다 — 배선이 끊겼다"
+        assert set(produced) == set(_event()), (
+            "생산자 키 집합이 `_event()` 픽스처와 다르다. 픽스처를 맞추고, "
+            "소비자(collect_fmp_calendar)가 읽는 키도 함께 확인할 것."
+        )
+
+    def test_forex_factory_fallback_emits_the_same_keys(self, stub_fmp_http, monkeypatch) -> None:
+        """폴백 경로도 같은 계약을 지켜야 한다 — 한쪽만 맞으면 키가 소스마다 갈린다."""
+        monkeypatch.setattr(_fmp_api, "get_env", lambda *_a, **_kw: "")
+        stub_fmp_http["payload"] = [
+            {
+                "title": "Non-Farm Payrolls",
+                "country": "USD",
+                "date": "2026-08-20",
+                "impact": "High",
+                "forecast": "180K",
+                "previous": "175K",
+            }
+        ]
+        (produced,) = _fmp_api.fetch_economic_calendar(days_ahead=30)
+        assert set(produced) == set(_event())
+        assert produced["event"] == "Non-Farm Payrolls", "폴백은 `title` 을 `event` 로 옮겨야 한다"
+
+    def test_earnings_producer_emits_exactly_the_fixture_keys(self, stub_fmp_http, monkeypatch) -> None:
+        monkeypatch.setattr(_fmp_api, "get_env", lambda *_a, **_kw: "dummy-key")
+        stub_fmp_http["payload"] = [
+            {
+                "symbol": "AAPL",
+                "date": "2026-08-20",
+                "epsEstimated": 1.5,
+                "revenueEstimated": 1e6,
+                "time": "amc",
+                # 시총 20억 달러 미만은 생산자가 걸러낸다 — 넘겨야 항목이 남는다.
+                "marketCap": 3_000_000_000_000,
+            }
+        ]
+        (produced,) = _fmp_api.fetch_earnings_calendar(days_ahead=7)
+        assert set(produced) == set(_earn())
+
+    def test_producers_never_emit_a_name_key(self, stub_fmp_http, monkeypatch) -> None:
+        """이 버그의 핵심 단언.
+
+        소비자가 `name` 을 읽어도 표는 `event` 를 읽으므로 본문은 멀쩡하다.
+        그래서 "요약만 빈" 상태가 5개월 넘게 안 보였다. 생산자가 `name` 을
+        내지 않는다는 사실 자체를 못 박아 둔다.
+        """
+        monkeypatch.setattr(_fmp_api, "get_env", lambda *_a, **_kw: "dummy-key")
+        stub_fmp_http["payload"] = [
+            {"event": "CPI", "country": "US", "date": "2026-08-20", "impact": "High", "name": "소비자물가지수"}
+        ]
+        (produced,) = _fmp_api.fetch_economic_calendar(days_ahead=30)
+        assert "name" not in produced, "생산자가 `name` 을 내기 시작했다면 소비자 쪽도 재검토할 것"
+
+    def test_consumer_summary_is_populated_from_producer_shaped_data(self) -> None:
+        """계약의 반대편: 생산자 모양 그대로 넣으면 요약이 채워져야 한다.
+
+        표만 보는 단언으로는 이 회귀를 못 잡는다 — 버그가 있을 때도 표는 정상이었다.
+        """
+        collector = _loaded(
+            fmp.FmpCalendarCollector(),
+            economic=[_event(event="소비자물가지수")],
+            earnings=[_earn(symbol="AAPL")],
+        )
+        content = collector.build_content([])
+        assert "| **소비자물가지수** |" in content, "표가 비었다"
+        assert "**주요 경제 이벤트 소비자물가지수**" in content, "표는 찼는데 헤드라인이 비었다 — 그 버그다"
+        assert "(실적: AAPL)" in content
