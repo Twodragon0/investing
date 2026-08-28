@@ -375,10 +375,19 @@ class TestExtractKeywords:
         assert len(result) <= 5
 
     def test_sentiment_field_values(self):
+        """감성 라벨을 값으로 고정.
+
+        기존 ``sentiments <= {"bullish","bearish","neutral"}`` 는 codomain
+        전체라 항진명제였다 — 매핑이 통째로 뒤집혀도 통과했다.
+        """
         result = self.spider.extract_keywords(BULLISH_NEWS, top_n=15)
-        sentiments = {kw["sentiment"] for kw in result}
-        # Should have bullish sentiments since text is bullish
-        assert sentiments <= {"bullish", "bearish", "neutral"}
+        by_keyword = {kw["keyword"]: kw["sentiment"] for kw in result}
+
+        assert by_keyword["rally"] == "bullish"
+        assert by_keyword["surge"] == "bullish"
+        assert by_keyword["bitcoin"] == "neutral"
+        # 강세 기사 묶음이므로 bearish 라벨은 하나도 없어야 한다
+        assert "bearish" not in set(by_keyword.values())
 
     def test_categories_collected(self):
         result = self.spider.extract_keywords(BULLISH_NEWS, top_n=10)
@@ -617,10 +626,29 @@ class TestExtractEntities:
             assert isinstance(entity, FinancialEntity)
 
     def test_known_entities_detected(self):
+        """추출 엔티티 집합을 정확히 고정.
+
+        기존 ``any(name in entity_names for ...)`` 는 5개 중 1개만 맞아도
+        통과해서 누락(4개 실종)도 오탐(유령 엔티티 추가)도 잡지 못했다.
+        """
         result = self.spider.extract_entities(ENTITY_NEWS)
-        entity_names = [e.name for e in result]
-        # SEC, Binance, Elon Musk, BlackRock, 연준 should be found
-        assert any(name in entity_names for name in ["SEC", "바이낸스", "일론 머스크", "블랙록", "연준"])
+
+        assert {e.name for e in result} == {
+            "SEC",
+            "바이낸스",
+            "코인베이스",
+            "일론 머스크",
+            "테슬라",
+            "블랙록",
+            "이더리움",
+            "비트코인",
+            "연준",
+        }
+        # 언급 수는 등장 기사 수 (기사 내 별칭 반복은 1회로 집계)
+        by_name = {e.name: e.mentions for e in result}
+        assert by_name["비트코인"] == 2
+        assert by_name["이더리움"] == 2
+        assert by_name["SEC"] == 1
 
     def test_entity_has_required_fields(self):
         result = self.spider.extract_entities(ENTITY_NEWS)
@@ -686,27 +714,34 @@ class TestDetectRelations:
         assert result == []
 
     def test_returns_list_of_entity_relations(self):
+        """관계가 실제로 **생성됨**을 먼저 고정.
+
+        아래 5개 테스트는 모두 ``for rel in result:`` / ``if result:`` 라
+        ``result == []`` 이면 전부 공허하게 통과했다. 건수 단언 한 줄이
+        다섯 테스트를 동시에 유효화한다.
+        """
         entities = self.spider.extract_entities(ENTITY_NEWS)
         result = self.spider.detect_relations(ENTITY_NEWS, entities)
-        assert isinstance(result, list)
+        assert len(result) > 0
         for rel in result:
             assert isinstance(rel, EntityRelation)
 
     def test_relation_has_required_fields(self):
         entities = self.spider.extract_entities(ENTITY_NEWS)
         result = self.spider.detect_relations(ENTITY_NEWS, entities)
-        if result:
-            rel = result[0]
-            assert hasattr(rel, "source")
-            assert hasattr(rel, "target")
-            assert hasattr(rel, "relation_type")
-            assert hasattr(rel, "fact")
-            assert hasattr(rel, "sentiment")
+        assert len(result) > 0
+        rel = result[0]
+        assert hasattr(rel, "source")
+        assert hasattr(rel, "target")
+        assert hasattr(rel, "relation_type")
+        assert hasattr(rel, "fact")
+        assert hasattr(rel, "sentiment")
 
     def test_relation_types_valid(self):
         entities = self.spider.extract_entities(ENTITY_NEWS)
         result = self.spider.detect_relations(ENTITY_NEWS, entities)
         valid_types = {"SUPPORTS", "OPPOSES", "REGULATES", "INVESTS_IN", "AFFECTS", "COMMENTS_ON"}
+        assert len(result) > 0
         for rel in result:
             assert rel.relation_type in valid_types
 
@@ -714,6 +749,7 @@ class TestDetectRelations:
         entities = self.spider.extract_entities(ENTITY_NEWS)
         entity_names = {e.name for e in entities}
         result = self.spider.detect_relations(ENTITY_NEWS, entities)
+        assert len(result) > 0
         for rel in result:
             assert rel.source in entity_names
             assert rel.target in entity_names
@@ -721,8 +757,23 @@ class TestDetectRelations:
     def test_sentiment_in_range(self):
         entities = self.spider.extract_entities(ENTITY_NEWS)
         result = self.spider.detect_relations(ENTITY_NEWS, entities)
+        assert len(result) > 0
         for rel in result:
             assert -1.0 <= rel.sentiment <= 1.0
+
+    def test_two_entity_article_is_not_skipped(self):
+        """엔티티가 정확히 2개인 기사(가장 흔한 형태)도 관계를 만든다.
+
+        ``len(found_in_article) < 2`` 가 ``< 3`` 으로 밀리면 위 5개 테스트는
+        다시 공허해지고, 발행 포스트의 '주요 관계' 블록이 통째로 사라진다.
+        """
+        news = [{"title": "SEC sues Binance over compliance", "description": ""}]
+        entities = self.spider.extract_entities(news)
+        result = self.spider.detect_relations(news, entities)
+
+        assert len(result) == 1
+        assert {result[0].source, result[0].target} == {"SEC", "바이낸스"}
+        assert result[0].relation_type == "OPPOSES"
 
 
 # ── generate_entity_report tests ─────────────────────────────────────────────
@@ -868,8 +919,9 @@ class TestInternalHelpers:
             {"ethereum", "fall", "loss"},
         ]
         best = self.spider._find_best_seed([0, 1, 2], doc_sets)
-        # indices 0 and 1 share bitcoin+rally, so best is 0 or 1
-        assert best in [0, 1]
+        # 0과 1은 중복도가 동률(2)이며, `>` 비교이므로 먼저 나온 0이 유지된다.
+        # 기존 `best in [0, 1]` 은 `>`/`>=` 두 동작을 모두 허용해 무력했다.
+        assert best == 0
 
     def test_find_representative(self):
         items = [
