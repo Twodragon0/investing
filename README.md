@@ -93,7 +93,6 @@
 | scripts/common/worldmonitor\_utils.py             |        5 |        0 |    100% |           |
 | scripts/continuous\_improvement\_loop.py          |       89 |        1 |     99% |       293 |
 | scripts/convert\_to\_avif.py                      |       66 |       66 |      0% |     7-123 |
-| scripts/enrich\_existing\_posts.py                |      133 |      133 |      0% |    15-311 |
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
 | scripts/fix\_post\_descriptions.py                |      275 |       13 |     95% |25, 164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
 | scripts/fix\_post\_number\_format.py              |       54 |        1 |     98% |        98 |
@@ -131,7 +130,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24738** | **3988** | **84%** |           |
+| **TOTAL**                                         | **24605** | **3855** | **84%** |           |
 
 
 ## Setup coverage badge
