@@ -10,21 +10,28 @@ at or above :data:`_MIN_FLOOR`:
   ``coverage report --fail-under=NN`` step re-checks the same data in CI.
 
 The floor was ratcheted 55 -> 65 (P3-1/P3-2) -> 70 (P3-3) -> 73 -> 75 (both
-2026-08-25) -> 77 (2026-08-26) -> 79 -> 80 -> 82 (all 2026-08-27) to lock existing
-coverage as a regression baseline. Without this guard the floor could be quietly
-dropped back — re-opening the gap between "tests deleted" and "build still green".
+2026-08-25) -> 77 (2026-08-26) -> 79 -> 80 -> 82 -> 83 (all 2026-08-27) to lock
+existing coverage as a regression baseline. Without this guard the floor could be
+quietly dropped back — re-opening the gap between "tests deleted" and "build still
+green".
 
-Every step is measured, not guessed. Actual total is **83.95%**
-(20815/24794 statements), and the measurement is deterministic:
+Every step is measured, not guessed. Actual total is **84.39%**
+(20799/24645 statements), and the measurement is deterministic:
 
-* local, same tree -> ``24794 3979 84%``
+* local, same tree -> ``24645 3846 84%``
 * CI noise baseline, 25 runs over 2026-08-18..08-25 -> spread **0.005pt**
 
-So the headroom at 82 is orders of magnitude above the observed measurement
+The 83 step came from *deleting* dead code, not from new tests:
+``enrich_existing_posts.py`` (133 stmts at 0%) had been a silent no-op for five
+months — its card regex never followed a 2026-04 renderer change — so removing it
+dropped 133 uncovered statements out of the denominator. Deleting **covered** code
+does not help; it removes equal amounts from numerator and denominator.
+
+So the headroom at 83 is orders of magnitude above the observed measurement
 noise; this floor cannot go red from noise. What it *does* cost: a new
-fully-untested script is allowed only up to ~607 statements before the gate trips
-(``coverage`` rounds, so the effective threshold is 81.5%). For scale, scripts in
-this repo run 43..831 statements.
+fully-untested script is allowed only up to ~466 statements before the gate trips
+(``coverage`` rounds, so the effective threshold is 82.5%). For scale, scripts in
+this repo run 43..824 statements.
 
 The four largest low-coverage modules were all closed on 2026-08-27:
 ``backfill_post_summaries.py`` (831 stmts, 38% -> 99%),
@@ -36,12 +43,15 @@ offenders before citing any list here — run
 statements. That is the intended ratchet — past that point, write tests or lower
 the floor deliberately.
 
-Why 82 and not 83: the tightest previously accepted headroom was the 73 step's
-1.36pt / 462 statements. 82 gives 607 statements — above that bar. 83 gives 359,
-*tighter* than any step anyone has signed up for. The rule is: never ratchet to a
-floor whose headroom is below the tightest headroom already accepted. (The 80 step
-earlier the same day rejected 81 at **460** — two statements short — so this bar
-is doing real work, not acting as a formality.)
+Why 83 and not 84: the tightest previously accepted headroom was the 73 step's
+1.36pt / 462 statements. 83 gives **466** statements — four above that bar. 84
+gives 220, far tighter than any step anyone has signed up for. The rule is: never
+ratchet to a floor whose headroom is below the tightest headroom already accepted.
+
+That bar is doing real work, not acting as a formality: earlier the same day the
+80 step rejected 81 at **460** — two statements short — and 83 now clears it by
+only four. Re-measure before assuming the next step is available; a small
+regression elsewhere can make this floor the binding constraint.
 
 An earlier note claimed a ~1.3pt run-to-run swing (2026-07-27, when the total was
 ~71%). That is no longer reproducible; the hermetic-test hardening since then
@@ -85,7 +95,7 @@ _PYPROJECT = _REPO_ROOT / "pyproject.toml"
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 
 # The global scripts coverage floor both gates must enforce.
-_MIN_FLOOR = 82
+_MIN_FLOOR = 83
 
 # The measurement scope the floor is meaningful against. `--cov=scripts` in
 # pyproject addopts applies to every pytest run; the CI step additionally names
