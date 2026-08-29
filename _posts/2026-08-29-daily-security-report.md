@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-08-29 - 보안 뉴스 요약 �
 
 블록체인 보안 13건 분석. 주목 사건: **[Security] OneKey reproduces transaction replacement attack ** / 보안 뉴스 헤드라인: Audited Protocols Account for 88% of Crypto Hack Losses Sinc.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] OneKey reproduces transaction replacement attack on outdated Ledger Ethereum app 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 13건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (13건): security, exploit, logic 보안 이슈 (13건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (6건): exploit, logic, flaw DeFi 동향 (6건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (7건): exploit, bridge, manipulation 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] OneKey reproduces transaction replacement attack on outdated Ledger Ethereum app
-- [Security] The Sandbox pledges 1:1 repayment after $700K bridge exploit
-- [Security] Moonwell Lending exploit: Spot Price Manipulation
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 3건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 13건

@@ -29,46 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-08-29 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준의 9월 이자율 결정은 '쉽게' 결정되지 않습니다: Fmr. 연준 공식 - 19건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 인상, 기준금리 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 인상, 기준금리 주목</li><li>📈 <strong>가격/시장</strong>: 인상, 기준금리 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 기준금리, 연속 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPSkVBZGZPekQwZ3JzUVVUSmIxbkkyeFI1UW9ZZnBZdWlVR0QwMTc5cGp4NXpNd1lkZXFRNG9YM0RoZWQ0ampDUUtqTmpsNU1oRzdsYlJMRkFsa3pBSFpudjdQVGtDQkllQUE3aFVoQ1I2Mnp2Z2JOcXBYNEVZOFhDOUVIVmZUNlV0ZkN1LQ?oc=5">연준의 9월 이자율 결정은 '쉽게' 결정되지 않습니다: Fmr. 연준 공식</a> <span class="p0-desc">골드만삭스 부회장 Robert Kaplan은 연준의 금리 인상이 기정사실이라고 생각하지 않는 이유를 설명합니다. Kaplan은 또한 연준 Bank of Dallas의 전직 회장이자.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준의 9월 이자율 결정은 '쉽게' 결정되지 않습니다: Fmr. 연준 공식 
-총 19건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 0건, 정치·경제 19건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (17건): 인상, 기준금리, 금리 매크로 변수 (17건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (8건): 인상, 기준금리, 신현송 정치 이슈 (8건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📈 가격/시장** (16건): 인상, 기준금리, 경제 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 연준의 9월 이자율 결정은 '쉽게' 결정되지 않습니다: Fmr. 연준 공식
-
-### 주요 이슈
-
-- 한국은행 금리 인상 "미국 연준에 경고" 외신 평가, 인플레이션 대응 다급해져
-
-### 투자자 체크포인트
-
-- 정치·경제 19건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:47%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:94%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:29%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-08-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-08-29.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

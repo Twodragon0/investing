@@ -14,9 +14,6 @@ description: "Kanzhun (NASDAQ: BZ) insider details latest share trades - Stock T
 image_alt: "정치인 거래·정책 리포트 - 2026-08-29 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-08-29.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-08-29.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-08-29** 정치권 핵심 이슈: **Kanzhun (NASDAQ: BZ) insider details latest share trades - Stock Titan**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **37건** (SEC 내부자 거래 15건, 트럼프 정책 12건, 한국 정치인 1건, 중앙은행 9건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,17 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-29 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(20회), **트럼프**(17회), **관세**(8회), **행정명령**(6회), **연준**(4회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **37건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 트럼프 정책 12건, 한국 정치인 1건, 중앙은행 9건입니다.
-
-**트럼프 정책** 관련으로는 (워싱턴=연합뉴스) 박성민 특파원 = 도널드 트럼프 미국 대통령은 28일(현지시간) 미국에 '우주군 사관학교'(U.S. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 Eurozone Businesses More Upbeat Despite Prolonged War in Middle East WSJ 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 ■일시: 2026년 8월 28일 오전 9시 ■장소: 경기 고양 소노캄 #국민의힘 #연찬회 #정기국회 #장동혁 #정점식 등의 재산/거래 소식이 수집되었습니다.
-
----
 
 ## 1. 트럼프 행정명령/정책
 
