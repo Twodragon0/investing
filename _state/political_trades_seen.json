@@ -1,44 +1,5 @@
 {
   "seen": {
-    "e750d236d56d7086b0e03b2b": "2026-07-30T23:34:04",
-    "682aca019b23202737f7f7c4": "2026-07-30T23:34:04",
-    "a73848c6a1a85b75cb79fb75": "2026-07-30T23:34:04",
-    "57090d7e3a9bba17f48f6559": "2026-07-30T23:34:04",
-    "3f13b5a952181762f1f99e2b": "2026-07-30T23:34:04",
-    "044285df543dc37b22e17219": "2026-07-30T23:34:04",
-    "536bd8e7efe636c3e43dcfe3": "2026-07-30T23:34:04",
-    "4df905b21ffc86b1134f8a76": "2026-07-30T23:34:04",
-    "51454c98ad0110b7173add5e": "2026-07-30T23:34:04",
-    "5ba2c17f82d17fe76ae2e47c": "2026-07-30T23:34:04",
-    "97df6592736c471b064c3775": "2026-07-30T23:34:04",
-    "5d49708c27af30de30c759be": "2026-07-30T23:34:04",
-    "9293e2e0a588e0cdf35b8621": "2026-07-30T23:34:04",
-    "2dc7981fd147ce4262224af1": "2026-07-30T23:34:04",
-    "c2ef5b6f3425f1600ebd8010": "2026-07-30T23:34:04",
-    "3c78927870b27567bfd28c8b": "2026-07-30T23:34:04",
-    "8f53eed62e84b109365a4877": "2026-07-30T23:34:04",
-    "b85c9cfa9470fc6013200a5a": "2026-07-30T23:34:04",
-    "d65e624fede9c2e49cdc7e0b": "2026-07-30T23:34:04",
-    "3e8bec39f6dc830d8b28bc6c": "2026-07-30T23:34:04",
-    "86e3d1b9e331e4b1160205a6": "2026-07-30T23:34:04",
-    "ffa1d81d909a96da998f3755": "2026-07-30T23:34:04",
-    "2ce26e15b11f751fab49cf1f": "2026-07-30T23:34:04",
-    "adffbd82bc63e6487664b5d8": "2026-07-30T23:34:04",
-    "7ccb84a82b678bb3815185b3": "2026-07-30T23:34:04",
-    "760bc988e59027b521d01bc5": "2026-07-30T23:34:04",
-    "d1702a4e336567266066ad69": "2026-07-30T23:34:04",
-    "2602d89a90cd310de51e8f31": "2026-07-30T23:34:04",
-    "8ddddc5d0523236229b6d19c": "2026-07-30T23:34:04",
-    "7f6e501e8e5f94d89989ce90": "2026-07-30T23:34:04",
-    "d51f75344389d658ecd7e108": "2026-07-30T23:34:04",
-    "e2e0874ec81cd7595e716293": "2026-07-30T23:34:04",
-    "293d8e90a7be0a162277304e": "2026-07-30T23:34:04",
-    "22aec584517e92a4ff482e6c": "2026-07-30T23:34:04",
-    "0a907b70d2406a533c38d35f": "2026-07-30T23:34:04",
-    "1f7be2261efdadd41beb5d58": "2026-07-30T23:34:04",
-    "2e0f504ea48a7f40d8d9bc18": "2026-07-30T23:34:04",
-    "fae5e515a56f6b68e9b08b7d": "2026-07-30T23:34:04",
-    "f26f186e90796ba6344bd11e": "2026-07-30T23:34:04",
     "f03f1417c30297b41330b45a": "2026-07-31T23:31:10",
     "a988cd13bac16048ad37e1cf": "2026-07-31T23:31:10",
     "c9cfaff1cdc7dd672d3d6587": "2026-07-31T23:31:10",
@@ -671,7 +632,18 @@
     "9f54116a6dc47a5e1bdae0b0": "2026-08-28T21:00:07",
     "175a8a19d83f20c67949edc4": "2026-08-28T21:00:07",
     "f7f7ffcb94262366a887ec01": "2026-08-28T21:00:07",
-    "40f4b8346a532525847511ef": "2026-08-28T21:00:07"
+    "40f4b8346a532525847511ef": "2026-08-28T21:00:07",
+    "c700de772d3ec01c76329fa9": "2026-08-30T00:32:55",
+    "d07c03dcb6c757a846f88e12": "2026-08-30T00:32:55",
+    "3ecbf8e8dfab729e412a9e72": "2026-08-30T00:32:55",
+    "8164832ba00fd12e1f275b14": "2026-08-30T00:32:55",
+    "816e2ccd1be4cb7dcf4dcd36": "2026-08-30T00:32:55",
+    "febbe53bc67a7a5998d7f627": "2026-08-30T00:32:55",
+    "e142ba9fe7d895a28814e089": "2026-08-30T00:32:55",
+    "aeb4daf892bb27e946c5f87f": "2026-08-30T00:32:55",
+    "f5fa83b489e28e618556e47f": "2026-08-30T00:32:55",
+    "b946da0156c164861b9052a7": "2026-08-30T00:32:55",
+    "850e4653d77c7c9a42c7ef60": "2026-08-30T00:32:55"
   },
   "titles": [
     [
@@ -16681,6 +16653,50 @@
     [
       "정치인 거래정책 리포트 20260829",
       "2026-08-29"
+    ],
+    [
+      "trumps financial disclosure reveals 2 coupang stock trades in june the korea times",
+      "2026-08-30"
+    ],
+    [
+      "solv energy mwh insider logs new stock trades in sec filing stock titan",
+      "2026-08-30"
+    ],
+    [
+      "gmr solutions gmrs insider logs new stock trades stock titan",
+      "2026-08-30"
+    ],
+    [
+      "rubrik rbrk details latest insider trading activity stock titan",
+      "2026-08-30"
+    ],
+    [
+      "can trump actually change lake ontario to lake america heres what to know kcra",
+      "2026-08-30"
+    ],
+    [
+      "preposterous lawmakers reject trumps renaming of lake ontario amid uscanada trade war time magazine",
+      "2026-08-30"
+    ],
+    [
+      "ecbs dolenc sees good case to hike interest rates in september",
+      "2026-08-30"
+    ],
+    [
+      "eurusd analysis euro struggles to gain ground after ecb decision",
+      "2026-08-30"
+    ],
+    [
+      "the fed chair says ai is moving faster than even its believers predicted 247 wall st",
+      "2026-08-30"
+    ],
+    [
+      "kevin warsh jackson hole speech raises odds of september fed rate hike finchannel",
+      "2026-08-30"
+    ],
+    [
+      "정치인 거래정책 리포트 20260830",
+      "2026-08-30"
     ]
   ],
   "seen_urls": {}
