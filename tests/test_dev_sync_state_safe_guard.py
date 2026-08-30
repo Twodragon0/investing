@@ -195,7 +195,8 @@ class TestBashVersionGuard:
         """
         bash = shutil.which("bash")
         assert bash, "PATH 에 bash 가 없다"
-        assert (_bash_major(bash) or 0) >= 4, f"PATH 의 bash 가 4 미만이다({bash}). 이 테스트는 4+ 환경을 전제한다."
+        if (_bash_major(bash) or 0) < 4:
+            pytest.skip(f"PATH 의 bash 가 4 미만이다({bash}). 이 테스트는 bash 4+ 환경(Linux CI 등)에서만 실행된다.")
 
         proc = subprocess.run(
             [bash, str(_SCRIPT), "--dry-run"],
