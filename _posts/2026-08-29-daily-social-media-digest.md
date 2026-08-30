@@ -30,6 +30,7 @@ image_alt: "소셜 미디어 동향 - 2026-08-29 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준의 9월 이자율 결정은 '쉽게' 결정되지 않습니다: Fmr. 연준 공식 - 19건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 인상, 기준금리 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 인상, 기준금리 주목</li><li>📈 <strong>가격/시장</strong>: 인상, 기준금리 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 기준금리, 연속 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPSkVBZGZPekQwZ3JzUVVUSmIxbkkyeFI1UW9ZZnBZdWlVR0QwMTc5cGp4NXpNd1lkZXFRNG9YM0RoZWQ0ampDUUtqTmpsNU1oRzdsYlJMRkFsa3pBSFpudjdQVGtDQkllQUE3aFVoQ1I2Mnp2Z2JOcXBYNEVZOFhDOUVIVmZUNlV0ZkN1LQ?oc=5">연준의 9월 이자율 결정은 '쉽게' 결정되지 않습니다: Fmr. 연준 공식</a> <span class="p0-desc">골드만삭스 부회장 Robert Kaplan은 연준의 금리 인상이 기정사실이라고 생각하지 않는 이유를 설명합니다. Kaplan은 또한 연준 Bank of Dallas의 전직 회장이자.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 19건 중 텔레그램 0건, 소셜 0건, 정치·경제 19건으로 주요 이슈를 정리했습니다.

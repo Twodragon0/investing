@@ -40,33 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (34회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 이더리움 중심 96건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 아래, 알트코인 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 매파, 발언 이슈 부각</li><li>🏦 <strong>거래소</strong>: 15건 수집</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 96건의 뉴스 중 **비트코인** 관련이 56건(58%)으로 압도적입니다. 비트코인 관련 이슈가 시장을 주도하고 있습니다
-
-### 테마별 동향
-
-- **🟠 비트코인** (56건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (30건): 아래, 알트코인, ETF 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (21건): 매파, 발언, 아래 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 비트코인 옵션의 64억 달러가 내일 만료됩니다. 그 의미는 다음과 같습니다.
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **96건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

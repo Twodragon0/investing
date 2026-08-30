@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-08-30 - 보안 뉴스 요약 �
 
 블록체인 보안 13건 분석. 주목 사건: **[Security] Trump-promoted brand touts GOLD before token coll** / 보안 뉴스 헤드라인: Audited Protocols Account for 88% of Crypto Hack Losses Sinc.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] OneKey, 오래된 Ledger 이더리움 앱에 대한 거래 대체 공격 재현 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 13건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (13건): security, exploit, logic 보안 이슈 (13건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (6건): exploit, manipulation, transaction 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🟣 DeFi** (4건): exploit, logic, swap DeFi 동향 (4건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] OneKey, 오래된 Ledger 이더리움 앱에 대한 거래 대체 공격 재현
-- [Security] The Sandbox pledges 1:1 repayment after $700K bridge exploit
-- [Security] Ajna V2 exploit: Liquidation Logic Flaw
-
-### 투자자 체크포인트
-
-- 보안 사건 11건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 13건
