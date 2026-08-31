@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-31 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 베테랑의 긴급 심층 분석] "中 창신메모리(CXMT) 급성장의 실체" 삼성전자 vs SK하이닉스 주가와 실적에 미칠 진짜 파급력 완벽 해부 - 네이버 프리미엄콘텐츠 - 144건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 신현송, 금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 신현송, 총재 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 자극 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 국채 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYk9HbmcyV3dPa2RELVd5YlU5WTFPVWxIc1hBNXhWUk45Tmx5Wm9FYXM0dXk0RjhLUXgzcFM5WGMyUEVwakdmQ05qZ2ZVQmZNYm1CSFVBbkhzUlNnVEtfVmpyQXdhUmNWTTNfOUJDUFhhY3ZCeFlBeEtVajNVdERfY0J1aUpVczY3?oc=5">베테랑의 긴급 심층 분석] "中 창신메모리(CXMT) 급성장의 실체" 삼성전자 vs SK하이닉스 주가와 실적에 미칠 진짜 파급력 완벽 해부 - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">안녕하세요, 개발자 여러분! 함께하는 베테랑입니다. 최근 글로벌 반도체 시장의 최대 화두 중 하나는 중국 1위 D램 제조사 '창신메모리(CXMT)'의 생산능력 폭증과 양쯔메모리(YMTC)의 낸드플래시 점유율 확대 뉴스입니다. 미국의 강력한 대중국 반도체 수출 통제 속</span></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFA3c3V5Rm5lZ3ZGS0o3LVFDVlZjM29DQ0xzMl9LeEJhTTlwd3hTZjdnc0N1Y3duNUdMVWxsYmx3YjNRclZHaENrMWgzTDBpbm1IemhISE5GN0Jrd1BETXVVdmVSdUg0VHVrd2l2NjhZeGZpVkRBeFdrb3NOcEhjaEE?oc=5">I asked ChatGPT if the S&P 500 will crash 50% due to the AI bubble and it said… - Yahoo Finance UK</a></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNb2h0QjlLSTlBdjJIWVNYeVpsQVpWcWt5OG50VDNvYVpKSVdZVGJHX1BBVmtyTENVZWVGald6bGw2amJ4OEpXOUFpMVZmVExPRDliVmRwMmpUUDdERmMzNUdCRDlpWkg4RVMyREZPRjBpWkFVenRfOF8zU053VllFT21KaGtuS2VWN0x5eWZuLUN5NWVyVDZRbXNDSExYcE0?oc=5">Is a Stock Market Crash Imminent Under President Donald Trump? More Than 85 Years of Historical Precedent Offers an Answer.</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 베테랑의 긴급 심층 분석] "中 창신메모리(CXMT) 급성장의 실체" 삼성전자 vs SK하이닉스 주가와 실적에 미칠 진짜 파급력 완벽 해부 - 네이버 프리미엄콘텐츠 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 144건의 뉴스 중 P1 주요 이슈도 21건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (24건): 신현송, 금리, 면역력 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (21건): 신현송, 총재, 달러 가격 변동 (21건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (10건): 반도체, 자극, 인수 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 베테랑의 긴급 심층 분석] "中 창신메모리(CXMT) 급성장의 실체" 삼성전자 vs SK하이닉스 주가와 실적에 미칠 진짜 파급력 완벽 해부 - 네이버 프리미엄콘텐츠
-- 나는 ChatGPT에게 S&P 500이 AI 거품으로 인해 폭락 50%가 될 것인지 물었고 그 결과는… - Yahoo Finance UK
-- 도널드 트럼프 대통령 하에서 주식 시장이 폭락 임박합니까? 85년 이상의 역사적 Prec
-
-### 주요 이슈
-
-- “실적 좋은 건 알겠는데, 주주에게도 성의 보여야”…개미들 검색 ‘삼전닉스’에 쏠린 이유
-- 이 2 ETF 포트폴리오는 역사적으로 변동성이 적으면서도 S&P 500보다 뛰어난 성과를 보였습니다.
-- S&P 500은 수십 년 동안 볼 수 없었던 경고 신호를 깜박입니다. 여기에 역사가가 있습니다.
-- 외 18건
-
-### 투자자 체크포인트
-
-- 한국 기사 47건, 글로벌 기사 97건 수집
-- 한국 지수: KOSPI 6,788.88(-1.79%), KOSDAQ 838.41(+0.09%), USD/KRW 1,375.67(-0.39%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:88%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:42%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:67%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:29%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-08-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-08-31.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,788.88 (-1.79%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 838.41 (+0.09%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- *Warsh가 잭슨 홀 연설에서 인플레이션을 목표로 삼으면서 단기 국채 수익률 상승 WSJ*
 
 ## 테마별 주요 뉴스
 
