@@ -59,7 +59,7 @@
 | scripts/common/image\_generator/og.py             |       59 |        0 |    100% |           |
 | scripts/common/image\_rejection\_metrics.py       |       81 |       27 |     67% |79-108, 147, 165-167 |
 | scripts/common/markdown\_utils.py                 |      226 |        2 |     99% |  377, 393 |
-| scripts/common/mindspider.py                      |      377 |        6 |     98% |603, 673-674, 687-688, 990 |
+| scripts/common/mindspider.py                      |      377 |        5 |     99% |603, 673-674, 687-688 |
 | scripts/common/og\_compose.py                     |      143 |        0 |    100% |           |
 | scripts/common/og\_image\_formats.py              |       38 |        3 |     92% |     17-19 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
@@ -130,7 +130,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24600** | **3061** | **88%** |           |
+| **TOTAL**                                         | **24600** | **3060** | **88%** |           |
 
 
 ## Setup coverage badge
