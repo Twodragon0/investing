@@ -24,7 +24,7 @@ repos:
   # 파일을 push해 Code Quality가 이틀간 silently red였던 회귀(ruff format 누락) 재발 방지.
   # rev는 로컬/CI ruff 버전(0.16.4)에 맞춤 — CI ruff가 floating이므로 버전 갱신 시 함께 올릴 것.
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.4
+    rev: v0.16.5
     hooks:
       - id: ruff
         name: ruff lint (scripts/ tests/)
