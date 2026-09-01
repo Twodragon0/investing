@@ -28,6 +28,7 @@ from common.collector_config import get_collector_config, get_url
 from common.config import REQUEST_TIMEOUT
 from common.dedup import deduplicate_by_url
 from common.enrichment import _POLITICAL_SOURCE_CONTEXT, enrich_items
+from common.headline import select_korean_headline
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -505,15 +506,12 @@ class PoliticalTradesCollector(BaseCollector):
             _desc_parts.append(f"한국 정치인 {korea_count}건")
         if cb_count:
             _desc_parts.append(f"중앙은행 {cb_count}건")
-        # Lead with the headline so excerpt mirrors the body lead.
+        # Lead with the headline so excerpt mirrors the body lead. Returns "" when
+        # no Korean headline is available, which falls through to the counts branch
+        # below rather than leaking the untranslated English title.
         _top_pol_headline = ""
         if unique_items:
-            _candidate = (
-                unique_items[0].get("title_ko")
-                or unique_items[0].get("title_translated")
-                or unique_items[0].get("title", "")
-            )
-            _top_pol_headline = _candidate.strip()[:70]
+            _top_pol_headline = select_korean_headline(unique_items[0])[:70]
         _top_ticker = (
             Counter(i.get("ticker", "") for i in unique_items if i.get("ticker")).most_common(1) if unique_items else []
         )
