@@ -11,7 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-08-24.png"
 permalink: "/market-analysis/2026/08/24/daily-worldmonitor-briefing/"
 description: "글로벌 20건 수집. 사회/기타, 지정학/안보, 정책/법률 등 주요 테마 분석. Trump says Canada wants 'benefits' of be; ‘No more!!!’: Trump lashes out after US- 등 핵심 이슈 포함. 주요 출처: WorldMonitor/"
-excerpt: "시장 분석 브리핑: WorldMonitor 글로벌 인텔리전스 브리핑. 주요 자산군의 상관관계와 방향성을 점검합니다."
+excerpt: "글로벌 20건 수집. 사회/기타, 지정학/안보, 정책/법률 등 주요 테마 분석. Trump says Canada wants 'benefits' of be; ‘No…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-24 - 시장 분석 뉴스 요약 이미지"
 ---
 

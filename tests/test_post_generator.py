@@ -1,6 +1,7 @@
 """Tests for post generator (scripts/common/post_generator.py)."""
 
 import os
+import re
 from datetime import UTC, datetime
 from unittest.mock import patch
 
@@ -22,6 +23,7 @@ from common.post_generator import (
     _wrap_picture_tags,
     build_dated_permalink,
 )
+from common.summary_quality import has_positive_signal
 
 
 class TestNormalizeImagePaths:
@@ -1234,3 +1236,121 @@ class TestCreatePostEnglishDescTextExcerptFallback:
             raw = fh.read()
         # excerpt field should be present and contain Korean fallback text
         assert "excerpt:" in raw
+
+
+class TestExcerptKeepsPositiveSignal:
+    """`_layouts/post.html` renders `page.excerpt` as the visible 요약 section, and
+    `scripts/check_post_summary.py` fails the build when that text carries no number,
+    proper noun, or headline lead-in. Both regressions below were observed on live
+    posts (run 33449871940): the excerpt lost every signal token while the post's own
+    `description` still had one.
+    """
+
+    @staticmethod
+    def _excerpt_of(raw: str) -> str:
+        match = re.search(r'^excerpt: "(.*)"$', raw, re.M)
+        assert match, "post has no excerpt front matter"
+        return match.group(1)
+
+    def test_korean_lead_quoting_english_headlines_keeps_signal(self, tmp_path):
+        """Regression: daily-worldmonitor-briefing (6 of 7 findings).
+
+        The briefing lead is Korean prose that quotes English headlines, so
+        ``_is_mostly_english`` scores it as English and swaps in the
+        ``market-analysis`` template, which has no number or proper-noun pair.
+        """
+        desc_ko = (
+            "글로벌 20건 수집. 사회/기타, 에너지, 지정학/안보 등 주요 테마 분석. "
+            "Ontario's Doug Ford prods Trump with sign; What's behind the US deal "
+            "등 핵심 이슈 포함. 주요 출처: WorldMonitor/Al Jazeera"
+        )
+        # The lead must be followed by another block: `_extract_description` needs a
+        # newline terminator to pick it up, exactly as on the live post.
+        content = (
+            "**2026-08-30** 글로벌 핵심 이슈: **Gaza runs out of cancer medicines, as "
+            "Israeli strikes continue** (지정학/안보). WorldMonitor 연계 소스 기준 총 20건의 "
+            "글로벌 이벤트·시장·에너지 뉴스를 정리했습니다\n\n"
+            "## 핵심 요약\n"
+        )
+        with patch("common.post_generator.POSTS_DIR", str(tmp_path)):
+            gen = PostGenerator("market-analysis")
+            filepath = gen.create_post(
+                title="WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-30",
+                content=content,
+                lang="ko",
+                extra_frontmatter={"description": desc_ko, "description_ko": desc_ko},
+            )
+        assert filepath is not None
+        with open(filepath) as fh:
+            excerpt = self._excerpt_of(fh.read())
+        assert has_positive_signal(excerpt), f"excerpt lost every content signal: {excerpt!r}"
+
+    def test_date_prefixed_lead_falls_back_to_description_signal(self, tmp_path):
+        """Regression: daily-geopolitical-risk-report (1 of 7 findings).
+
+        ``_extract_description`` drops the rich lead because it starts with a
+        ``YYYY-MM-DD`` token, then settles on a section intro that states no fact.
+        """
+        desc_ko = (
+            "핵심 이슈: Conflict With Iran - Global Conflict Tracker. "
+            "총 48건 (15 Polymarket / 30 GDELT / 3 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
+        )
+        content = (
+            "**2026-08-27** 지정학 핵심 이슈: **Conflict With Iran** (Google News). "
+            "Polymarket 15건·GDELT 30건·뉴스 3건을 종합 분석했습니다\n\n"
+            "## 1. 예측 시장 동향\n\n"
+            "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. "
+            "거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.\n"
+        )
+        with patch("common.post_generator.POSTS_DIR", str(tmp_path)):
+            gen = PostGenerator("worldmonitor")
+            filepath = gen.create_post(
+                title="지정학 리스크 리포트 - 2026-08-27",
+                content=content,
+                lang="ko",
+                extra_frontmatter={"description": desc_ko, "description_ko": desc_ko},
+            )
+        assert filepath is not None
+        with open(filepath) as fh:
+            excerpt = self._excerpt_of(fh.read())
+        assert has_positive_signal(excerpt), f"excerpt lost every content signal: {excerpt!r}"
+
+    def test_description_ko_only_collector_keeps_signal(self, tmp_path):
+        """Several collectors pass only ``description_ko`` (e.g. collect_stock_news.py:988,
+        collect_geopolitical.py:997). That value becomes ``desc_text`` and hits the same
+        ``_is_mostly_english`` swap, so recovery must consider it too.
+        """
+        desc_ko = "S&P 500 지수 0.8% 상승 마감. Nvidia Corp, Advanced Micro Devices 등 반도체 강세."
+        with patch("common.post_generator.POSTS_DIR", str(tmp_path)):
+            gen = PostGenerator("stock-news")
+            filepath = gen.create_post(
+                title="미국 증시 리포트 - 2026-08-30",
+                content="**미국 증시** 마감 리포트입니다.\n\n## 핵심 요약\n",
+                lang="ko",
+                extra_frontmatter={"description_ko": desc_ko},
+            )
+        assert filepath is not None
+        with open(filepath) as fh:
+            excerpt = self._excerpt_of(fh.read())
+        assert has_positive_signal(excerpt), f"excerpt lost every content signal: {excerpt!r}"
+
+    def test_english_only_post_still_gets_korean_fallback(self, tmp_path):
+        """The signal guard must not resurrect an English excerpt.
+
+        Korean-first readability is a repo guardrail, so a post with no Korean
+        source text still falls back to the Korean template.
+        """
+        with patch("common.post_generator.POSTS_DIR", str(tmp_path)):
+            gen = PostGenerator("crypto-news")
+            filepath = gen.create_post(
+                title="Bitcoin ETF Approved by SEC",
+                content=(
+                    "The SEC has approved a spot Bitcoin ETF in a landmark decision "
+                    "that marks a turning point for institutional crypto adoption."
+                ),
+                lang="ko",
+            )
+        assert filepath is not None
+        with open(filepath) as fh:
+            excerpt = self._excerpt_of(fh.read())
+        assert re.search(r"[가-힣]", excerpt), f"excerpt is not Korean: {excerpt!r}"
