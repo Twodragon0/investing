@@ -11,7 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-08-27.png"
 permalink: "/market-analysis/2026/08/27/daily-worldmonitor-briefing/"
 description: "글로벌 20건 수집. 사회/기타, 정책/법률, 지정학/안보 등 주요 테마 분석. Meta settles social media addiction case; Fed Gov Lisa Cook’s lawyer fires back at 등 핵심 이슈 포함. 주요 출처: WorldMonitor/"
-excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다."
+excerpt: "글로벌 20건 수집. 사회/기타, 정책/법률, 지정학/안보 등 주요 테마 분석. Meta settles social media addiction case; Fed Gov…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-27 - 시장 분석 뉴스 요약 이미지"
 ---
 

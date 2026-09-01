@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-08-27.png"
 permalink: "/market-analysis/2026/08/27/daily-geopolitical-risk-report/"
 description: "핵심 이슈: Conflict With Iran &124; Global Conflict Tracker - Council on Foreign. 총 48건 (15 Polymarket / 30 GDELT / 3 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
-excerpt: "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다."
+excerpt: "핵심 이슈: Conflict With Iran &124; Global Conflict Tracker - Council on Foreign. 총 48건 (15 Polymarket…"
 image_alt: "지정학 리스크 리포트 - 2026-08-27 - 글로벌 이슈 뉴스 요약 이미지"
 ---
 

@@ -14,6 +14,7 @@ from common.asset_storage import is_enabled as _r2_enabled
 from common.asset_storage import public_url as _r2_public_url
 from common.config import get_kst_now, get_kst_timezone
 from common.markdown_utils import smart_truncate
+from common.summary_quality import has_positive_signal
 
 KST = get_kst_timezone()
 
@@ -643,6 +644,35 @@ def _is_mostly_english(text: str) -> bool:
     return ascii_count / len(alpha_chars) > 0.6
 
 
+_HANGUL_RE = re.compile(r"[가-힣]")
+
+
+def _recover_excerpt_signal(excerpt: str, *candidates: Optional[str]) -> str:
+    """Swap a signal-free excerpt for the first candidate that still carries a signal.
+
+    ``_layouts/post.html`` renders ``page.excerpt`` as the visible 요약 section and
+    ``scripts/check_post_summary.py`` fails a post whose summary carries no number,
+    proper noun, or headline lead-in. Two upstream paths strip every such token:
+
+    - ``_is_mostly_english`` scores a Korean briefing lead that quotes English
+      headlines as English, replacing it with a fixed category template;
+    - ``_extract_description`` skips a ``YYYY-MM-DD``-prefixed lead and can settle
+      on a section intro that states no fact.
+
+    The collector-supplied description survives both, so callers pass it (and the
+    ``description_ko`` many collectors send instead) as candidates. Requiring Hangul
+    keeps the Korean-first guardrail: an English-only description never displaces
+    the Korean template.
+    """
+    if not excerpt or has_positive_signal(excerpt):
+        return excerpt
+    for raw in candidates:
+        candidate = str(raw or "").strip()
+        if candidate and _HANGUL_RE.search(candidate) and has_positive_signal(candidate):
+            return candidate
+    return excerpt
+
+
 def _build_fallback_description(title: str, category: str, tags: Optional[List[str]] = None) -> str:
     """Build a fallback SEO description from title and category.
 
@@ -845,6 +875,10 @@ class PostGenerator:
             excerpt_text = desc_text if desc_text else _extract_description(content)
             if excerpt_text and _is_mostly_english(excerpt_text):
                 excerpt_text = _build_fallback_description(title, self.category, tags)
+            _fm = extra_frontmatter or {}
+            excerpt_text = _recover_excerpt_signal(
+                excerpt_text, desc_text, _fm.get("description"), _fm.get("description_ko")
+            )
             if excerpt_text:
                 excerpt_text = _polish_generated_text(smart_truncate(excerpt_text, 100)).replace('"', "'")
                 frontmatter_lines.append(f'excerpt: "{excerpt_text}"')
