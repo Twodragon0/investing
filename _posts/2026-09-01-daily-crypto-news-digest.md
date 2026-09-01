@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-01 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 전문가는 글로벌 유동성이 9월 암호화폐 시장을 주도할 수 있다고 말합니다. - 95건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 주목</li><li>📈 <strong>가격/시장</strong>: BTC 관련 38건</li><li>🔷 <strong>이더리움</strong>: 이더리움 관련 19건</li><li>📊 <strong>매크로/금리</strong>: 애널리스트 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiogFBVV95cUxQdWZkRDVDNEkwcjNvdnE0b3NYUzFNVEFZZjRMemo3WnBzZl9QdFNRamhDUklITUhwTXVzX0lSZjRqTzJsdW5xR3VRanQwel8xY3IzQVkxbmpuSVU0blRDbEpTWEE5NkNKbW9SczI2SzAzTWRfbFhial9CY1g5STF1dmlNOHd2cUpJVG5DVkNjUEg2dUViRnptbjhVN0l5UmVxbnc?hl=en-US&gl=US&ceid=US%3Aen">전문가는 글로벌 유동성이 9월 암호화폐 시장을 주도할 수 있다고 말합니다.</a> <span class="p0-desc">글로벌 유동성이 9월 암호화폐 시장에 대한 연준의 다음 금리 결정보다 더 중요할 수 있다고 합니다.</span></li><li><a href="https://cointelegraph.com/news/cronos-network-halt-tectonic-exploit-75-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Cronos는 약 7,500만 달러에 달하는 Tectonic 익스플로잇 이후 네트워크를 중단합니다.</a> <span class="p0-desc">Crypto.com CEO Kris Marszalek은 회사의 앱과 거래소가 Tectonic 침해의 영향을 받지 않았으며 계속 정상적으로 운영되고 있다고 말했습니다.</span></li><li><a href="https://decrypt.co/376913/crypto-coms-cronos-halts-entire-blockchain-after-75m-tectonic-exploit">Crypto.com's Cronos Halts Entire Blockchain After $75M Tectonic Exploit</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 전문가는 글로벌 유동성이 9월 암호화폐 시장을 주도할 수 있다고 말합니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 95건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (60건): 비트코인, BTC, 애널리스트 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (38건): BTC 가격 변동 (38건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔷 이더리움** (19건): 이더리움, XRP 생태계 동향 (19건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 전문가는 글로벌 유동성이 9월 암호화폐 시장을 주도할 수 있다고 말합니다.
-- Cronos는 약 7,500만 달러에 달하는 Tectonic 익스플로잇 이후 네트워크를 중단합니다.
-- Crypto.com의 Cronos는 7,500만 달러 규모의 구조적 익스플로잇 이후 전체 블록체인을 중단합니다.
-
-### 주요 이슈
-
-- 블랙록의 임원은 CLARITY 법이 비트코인 다른 암호화폐에 대해 '덜 중요하다'고 말합니다.
-- "비트코인 8만달러 돌파, 단순 반등 아니다".美 국채 위기가 부른 '디지털 금'. - 마켓인
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 1건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: Google News(20건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-01.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **95건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

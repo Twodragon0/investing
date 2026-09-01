@@ -29,49 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-01 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” - 40건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong>: 이재명, 대통령 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 부동산, 금리 주목</li><li>🤖 <strong>AI/기술</strong>: 바클레이즈, 금리인상 주목</li><li>📈 <strong>가격/시장</strong>: 부동산, 이재명 관련 23건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAzTTJUVGgyNjg4UUNPdzlkcmZOc0FoaUlrY291WDMydUlaY1V2X1hPeUtnYlNzeS1rQmFUNDNwYThHbmdXdjJxUk94OV9ZTWZlLVBrMld5eEkxV1NqdXZoSjBmLVFlU1BLT25n?oc=5">이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”</a> <span class="p0-desc">이재명 대통령이 30일 “조기 대량 공급, 투기 수요 억제, 고금리에 의한 대출 연체와 경매 폭증 등으로 주택가격이 폭락할 경우에 대비해 공공주택 보유용으로 ​일정 기준 이하의 주.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” 
-총 40건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
+오늘 수집된 총 40건 중 텔레그램 0건, 소셜 0건, 정치·경제 40건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **🏛️ 정치/정책** (28건): 이재명, 대통령, 부동산 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📊 매크로/금리** (20건): 부동산, 금리, 투기 매크로 변수 (20건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (7건): 바클레이즈, 금리인상, 이재명 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”
-
-### 주요 이슈
-
-- 李대통령 "내년 1분기 한은 금리 3.5%, 부동산 투기 유의해야" 경고 - 뉴스핌
-- 데스크시각] 우군의 경고…경제정책 방향 바꿀 때다
-- 외 1건
-
-### 투자자 체크포인트
-
-- 정치·경제 40건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">28건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:71%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:25%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:82%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:4%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-01.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
