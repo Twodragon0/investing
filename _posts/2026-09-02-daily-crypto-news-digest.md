@@ -314,7 +314,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 암호화폐 뉴스: 비트코인, Ether 및 알트코인 통찰력</a>
-<p class="news-desc">비트코인이 반등하면서 Michael Saylor의 전략은 미화 28억 달러의 수익을 보고했으며 이는 잠재적인 신규 매수를 암시합니다. 한편 Cronos는 미화 7,500만 달러의 악용에 직면해 있습니다. 이러한 사건이 암호화폐 환경을 어떻게 형성하고 있는지 알고 싶으십니까? 더 많은 통찰력을 얻으려면 전체 이야기를 살펴보세요.</p>
+<p class="news-desc">비트코인 및 Ether 업데이트를 포함한 최신 암호화폐 시장 통찰력을 알아보세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
