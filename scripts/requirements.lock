@@ -1444,7 +1444,7 @@ websockets==16.0 \
     --hash=sha256:f4a32d1bd841d4bcbffdcb3d2ce50c09c3909fbead375ab28d0181af89fd04da \
     --hash=sha256:fd3cb4adb94a2a6e2b7c0d8d05cb94e6f1c81a0cf9dc2694fb65c7e8d94c42e4
     # via yfinance
-yfinance==1.6.0 \
-    --hash=sha256:2ced6339a90e5721269a18d245757c7592163c897a7cd2b9a2dfd1d8fd30590e \
-    --hash=sha256:c32c45b42480d64981e89d65da3f480fd6910fe1972d7e78f1e2d91b45d9ee1b
+yfinance==1.7.0 \
+    --hash=sha256:442f780d13d3e52fefa6c721c2c9bfee321078c1987d6585ec193b5c24382f8a \
+    --hash=sha256:91281ecd1f71069a37155ff8653aff2d3085f3492bd8721f18b70955da62911a
     # via -r scripts/requirements.txt
