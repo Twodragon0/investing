@@ -17,6 +17,12 @@ from pathlib import Path
 # common/enrichment and common/summarizer should not be imported directly
 # from CLI scripts (DIP). The facade orchestrates all three so a pattern
 # update in any single source file remains observable to every consumer.
+from common.summary_quality import (
+    ASCII_MIN_LEN,
+    ASCII_RATIO_THRESHOLD,
+    ascii_ratio,
+    is_ascii_heavy,
+)
 from common.summary_quality import is_boilerplate as _is_boilerplate
 from common.text_utils import _strip_trailing_artifacts
 
@@ -232,30 +238,13 @@ def collect_posts(posts_dir: Path, days: int) -> list[dict]:
     return results
 
 
-_ASCII_RATIO_THRESHOLD = 0.70
-_ASCII_MIN_LEN = 30
-
-
-def _ascii_ratio(desc: str) -> float:
-    """Return the ratio of ASCII alphabetic chars to all alphabetic chars.
-
-    Returns 0.0 when desc has no alphabetic characters (division-by-zero guard).
-    """
-    alpha_total = sum(1 for c in desc if c.isalpha())
-    if alpha_total == 0:
-        return 0.0
-    ascii_alpha = sum(1 for c in desc if c.isalpha() and c.isascii())
-    return ascii_alpha / alpha_total
-
-
-def _is_ascii_ratio_high(desc: str) -> bool:
-    """Return True if ASCII alphabetic chars exceed the threshold ratio.
-
-    Skips descriptions shorter than _ASCII_MIN_LEN (already caught by other rules).
-    """
-    if not desc or len(desc) < _ASCII_MIN_LEN:
-        return False
-    return _ascii_ratio(desc) > _ASCII_RATIO_THRESHOLD
+# Thresholds and detectors live in common.summary_quality so that this report
+# and the collectors' headline guard (common.headline) cannot drift apart.
+# The names below stay as thin aliases for existing callers and tests.
+_ASCII_RATIO_THRESHOLD = ASCII_RATIO_THRESHOLD
+_ASCII_MIN_LEN = ASCII_MIN_LEN
+_ascii_ratio = ascii_ratio
+_is_ascii_ratio_high = is_ascii_heavy
 
 
 def classify_posts(posts: list[dict]) -> dict:
