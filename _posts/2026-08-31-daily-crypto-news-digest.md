@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-31 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인 54% 낙폭, 과거 반등 사례와 비교됐다 - tokenpost.kr - 78건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 주목</li><li>📈 <strong>가격/시장</strong>: 거래대금, 가격 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 법안 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 아래, 발언 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5qWG9PT2hNdDZTckxUVHN2dWhlWDIweXZEYXdEV0Y3NE84OElVZF8wbVUzY2lOek9MbGpiaFl1UWhnLWRvQlRLUWxHT3A1UEgyemRfWTRWV2NWQ0FKQ1lWUdIBZkFVX3lxTE1vakMwV28tb1htSHFaMnFSTkxCLV92ajFJOHV1ZTQteGc0bDMyd3Vibnc5RUFUTmRuQTlhQXZmN2c3YjhuVHp2WmM2bGEwM09WZlJoaXpNYklTd2RpYVNUYW43aGJGQQ?oc=5">비트코인 54% 낙폭, 과거 반등 사례와 비교됐다 - tokenpost.kr</a> <span class="p0-desc">비트코인(BTC)이 2018년과 2022년 급락 뒤 반등한 구간과 비슷한 흐름에 있다는 분석이 나왔다. 2026년 이번 구간의 최대 낙폭은 약 54%로 제시됐지만, 차트 비교에 근.</span></li><li><a href="https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49">110만 달러 규모의 암호화폐 카드 해킹으로 네오뱅크의 토큰 49%가 추락했습니다.</a> <span class="p0-desc">이 익스플로잇으로 인해 네오뱅크의 AVICI 토큰은 24시간 최고치에서 49% 하락하여 손실을 일부 만회하기 전에 사상 최저치를 기록했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 54% 낙폭, 과거 반등 사례와 비교됐다 - tokenpost.kr 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 78건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (46건): 비트코인 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (25건): 거래대금, 가격, 달러 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏛️ 정치/정책** (7건): 트럼프, 법안 정치 이슈 (7건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 54% 낙폭, 과거 반등 사례와 비교됐다 - tokenpost.kr
-- 110만 달러 규모의 암호화폐 카드 해킹으로 네오뱅크의 토큰 49%가 추락했습니다.
-
-### 주요 이슈
-
-- 金·비트코인이 동시에?…안전-위험 극단에 몰리는 '바벨 머니'
-- 메타플래닛 CEO "첫 아시아 비트코인 사이클 이미 시작"
-- XRP 재무부 회사는 나스닥 상장에 한 단계 더 가까워졌습니다.
-- 외 2건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News(20건), Google News KR(15건), Cointelegraph(11건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-08-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-08-31.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **78건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
@@ -165,7 +137,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE9JWkQycUlIUGJkUjBqMnN3U0I2bWVlRmtBVzFSaUlhamlUMTRGQlU2SFQ5QXpzLU9OM2dMRWV5SWtBd0pleUs4bUJRUmw5NzhpX0lZUDRDaEV0Rjd2STVrTV9hWkg1MEU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 8월 28일 비트코인의 현재 가격</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">2026년 8월 28일 동부 표준시 오전 6시 30분에 단일 비트코인(BTC)의 시장 가격은 $79,132.61입니다. 이는 어제 오전 거래보다 574.57달러 하락한 것이며 1년 전보다 약 33,434달러 낮은 수치입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
