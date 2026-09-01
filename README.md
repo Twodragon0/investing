@@ -64,7 +64,7 @@
 | scripts/common/og\_image\_formats.py              |       38 |        3 |     92% |     17-19 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
 | scripts/common/og\_visuals.py                     |      369 |        0 |    100% |           |
-| scripts/common/post\_generator.py                 |      341 |        2 |     99% |   882-883 |
+| scripts/common/post\_generator.py                 |      353 |        2 |     99% |   916-917 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      251 |        9 |     96% |64-65, 111, 292, 301, 312, 322, 351-352 |
@@ -130,7 +130,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24600** | **3058** | **88%** |           |
+| **TOTAL**                                         | **24612** | **3058** | **88%** |           |
 
 
 ## Setup coverage badge
