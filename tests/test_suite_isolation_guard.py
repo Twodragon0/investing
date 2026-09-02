@@ -237,14 +237,14 @@ def test_image_rejection_state_redirected_off_repo_tree():
         )
 
     baseline = getattr(root_conftest, "_STATE_TMP", None)
-    if baseline is not None:
-        active_state = os.path.abspath(str(m._STATE_PATH))
-        assert active_state != os.path.abspath(str(baseline)), (
-            "image_rejection_metrics._STATE_PATH still equals the import-time "
-            f"baseline ({baseline}) — the _isolate_image_rejection_state "
-            "fixture is not active, so every test shares one metrics file "
-            "instead of getting its own tmp copy."
-        )
+    assert baseline is not None, "_STATE_TMP 앵커가 사라졌다 — 이 가드가 무력화됐다"
+    active_state = os.path.abspath(str(m._STATE_PATH))
+    assert active_state != os.path.abspath(str(baseline)), (
+        "image_rejection_metrics._STATE_PATH still equals the import-time "
+        f"baseline ({baseline}) — the _isolate_image_rejection_state "
+        "fixture is not active, so every test shares one metrics file "
+        "instead of getting its own tmp copy."
+    )
 
 
 def test_image_rejection_atexit_baseline_off_repo_tree():
