@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-04.png"
 excerpt: "2026-08-04 정치인 거래·정책 리포트: 의회 거래 1건, SEC 내부자 1건, 트럼프 정책 1건, 총 3건 수집"
 permalink: "/political-trades/2026/08/04/daily-political-trades-report/"
-description: "정치인 거래·정책 3건 (의회 거래 1건, SEC 내부자 1건)."
+description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거래와 정책 연관성을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-04 - 정치인 거래 뉴스 요약 이미지"
 ---
 
