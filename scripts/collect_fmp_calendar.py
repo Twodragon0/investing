@@ -425,7 +425,13 @@ class FmpCalendarCollector(BaseCollector):
         # 읽어 헤드라인이 173개 포스트에서 조용히 비어 있었다. 표는 `event` 를
         # 읽었기 때문에 본문만 멀쩡해 아무도 눈치채지 못했다.
         _headline = ""
-        _top_event = (economic_events[0].get("event") or "").strip() if economic_events else ""
+        # `event` 는 원문 영어로 오는 경우가 많다. 번역되지 않은 이벤트명이 리드에
+        # 남으면 렌더링되는 요약까지 영어가 된다 — 번역에 실패하면 헤드라인을
+        # 버리고 아래 `_top_earn_symbol` 분기로 떨어진다. 티커는 번역 대상이
+        # 아니므로 `symbol` 은 그대로 둔다.
+        _top_event = (
+            select_korean_headline({"title": (economic_events[0].get("event") or "")}) if economic_events else ""
+        )
         _top_earn_symbol = (earnings[0].get("symbol") or "").strip() if earnings else ""
 
         if _top_event:

@@ -1102,12 +1102,7 @@ class CryptoNewsCollector(BaseCollector):
 
         # Lead with the top news headline so the summary excerpt is concrete
         # (avoid vague "...관련 소식이 주목됩니다" filler).
-        _top_headline = ""
-        if all_items:
-            _candidate = (
-                all_items[0].get("title_ko") or all_items[0].get("title_translated") or all_items[0].get("title", "")
-            )
-            _top_headline = _candidate.strip()[:80]
+        _top_headline = select_korean_headline(all_items[0])[:80] if all_items else ""
 
         _detail = (
             f"총 {len(all_items)}건 분석, 핵심 테마는 **{themes_str}**입니다"

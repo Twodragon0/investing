@@ -140,7 +140,10 @@ class TestEventHeadlineIsKorean:
         with patch("common.headline.translate_to_korean", return_value=_KOREAN_EVENT) as mock_tr:
             desc = _desc(_run_and_capture(monkeypatch))
 
-        mock_tr.assert_called_once_with(_ENGLISH_EVENT)
+        # 본문 리드도 같은 헬퍼를 타므로 호출은 1회가 아니다(2026-09-02, 본문
+        # 리드 가드 추가). 검증 대상은 '무엇으로 호출됐는가'이지 횟수가 아니다.
+        mock_tr.assert_any_call(_ENGLISH_EVENT)
+        assert {c.args for c in mock_tr.call_args_list} == {(_ENGLISH_EVENT,)}
         assert f"주목 이벤트: {_KOREAN_EVENT}." in desc
         assert _ENGLISH_EVENT not in desc
 

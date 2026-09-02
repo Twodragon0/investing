@@ -95,3 +95,23 @@ def cdq_path() -> str:
     import check_description_quality as cdq
 
     return cdq.__file__
+
+
+class TestAcronymHeadlinesSurvive:
+    """Economic-indicator and ticker labels are not English prose.
+
+    ``CPI`` / ``FOMC`` / ``GDP`` are used verbatim in Korean copy and machine
+    translation returns them unchanged, so the translate-or-drop rule would
+    delete the summary's only concrete token. `collect_fmp_calendar.py` leads
+    with exactly these names.
+    """
+
+    def test_acronym_event_names_are_kept(self):
+        with patch("common.headline.translate_to_korean", side_effect=lambda t: t):
+            for acronym in ("CPI", "FOMC", "GDP", "PMI", "AAPL"):
+                assert select_korean_headline({"title": acronym}) == acronym
+
+    def test_multiword_english_is_still_dropped(self):
+        with patch("common.headline.translate_to_korean", side_effect=lambda t: t):
+            for prose in ("Nonfarm Payrolls", "Treasury Sec Bessent Speaks", "ISM Manufacturing PMI"):
+                assert select_korean_headline({"title": prose}) == ""
