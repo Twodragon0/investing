@@ -65,8 +65,9 @@
 | scripts/common/og\_image\_formats.py              |       38 |        3 |     92% |     17-19 |
 | scripts/common/og\_render.py                      |       59 |       11 |     81% |37-38, 75-77, 92-97 |
 | scripts/common/og\_visuals.py                     |      369 |        0 |    100% |           |
-| scripts/common/post\_generator.py                 |      353 |        2 |     99% |   916-917 |
+| scripts/common/post\_generator.py                 |      355 |        2 |     99% |   917-918 |
 | scripts/common/post\_html.py                      |       28 |        0 |    100% |           |
+| scripts/common/post\_manifest.py                  |       27 |        1 |     96% |        63 |
 | scripts/common/risk\_classifier.py                |      184 |        9 |     95% |331-332, 354, 392, 431-435 |
 | scripts/common/rss\_fetcher.py                    |      251 |        9 |     96% |64-65, 111, 292, 301, 312, 322, 351-352 |
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
@@ -99,7 +100,7 @@
 | scripts/fix\_post\_number\_format.py              |       54 |        1 |     98% |        98 |
 | scripts/fix\_post\_url\_summaries.py              |      291 |       77 |     74% |248, 267-269, 315, 320-322, 405-415, 477-494, 498-569, 573 |
 | scripts/fix\_scenario\_na\_placeholders.py        |       41 |        1 |     98% |        77 |
-| scripts/generate\_daily\_summary.py               |      281 |       59 |     79% |120-121, 124-144, 153-154, 157, 165, 195-197, 248, 324-334, 345-359, 399-400, 487-488, 512-513, 528, 530, 532, 534, 536, 591 |
+| scripts/generate\_daily\_summary.py               |      283 |       59 |     79% |121-122, 125-145, 154-155, 158, 166, 196-198, 249, 325-335, 346-360, 400-401, 492-493, 517-518, 533, 535, 537, 539, 541, 596 |
 | scripts/generate\_market\_summary.py              |      673 |       27 |     96% |240-241, 396-397, 430-431, 552-553, 603, 1047-1048, 1169-1171, 1174-1177, 1245-1250, 1306, 1384, 1393 |
 | scripts/generate\_og\_images.py                   |      275 |      135 |     51% |160-161, 172-182, 186-378, 386-419, 431-480, 503, 575, 579-580, 595-596, 620, 650 |
 | scripts/generate\_ops\_10am\_digest.py            |      284 |        1 |     99% |       480 |
@@ -131,7 +132,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24666** | **2990** | **88%** |           |
+| **TOTAL**                                         | **24697** | **2991** | **88%** |           |
 
 
 ## Setup coverage badge
