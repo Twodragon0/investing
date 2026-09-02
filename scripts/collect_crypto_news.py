@@ -32,6 +32,7 @@ from common.config import (
     get_verify_ssl,
     setup_logging,
 )
+from common.content_filters import is_entertainment as _shared_is_entertainment
 from common.dedup import deduplicate_by_url
 from common.enrichment import _CRYPTO_SOURCE_CONTEXT, enrich_items
 from common.headline import select_korean_headline
@@ -730,7 +731,12 @@ def _is_entertainment_item(item: Dict[str, Any]) -> bool:
     if any(kw in text for kw in _CRYPTO_CONTEXT_KW):
         return False
 
-    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+    # 판정은 `common.content_filters.is_entertainment` 에 위임한다 — 키워드를
+    # 단어 경계에 고정해 `nfl` 이 `inflation` 안에서 매칭되던 오탐을 막는다.
+    return _shared_is_entertainment(
+        {"title": title, "description": desc},
+        _ENTERTAINMENT_KEYWORDS,
+    )
 
 
 def _is_security_relevant(item: Dict[str, Any]) -> bool:

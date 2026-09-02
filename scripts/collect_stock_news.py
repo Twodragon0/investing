@@ -20,6 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.base_collector import BaseCollector
 from common.collector_config import get_collector_config, get_url
 from common.config import REQUEST_TIMEOUT, get_env, get_verify_ssl, setup_logging
+from common.content_filters import is_entertainment as _shared_is_entertainment
 from common.dedup import deduplicate_by_url
 from common.enrichment import _STOCK_SOURCE_CONTEXT, enrich_items
 from common.markdown_utils import (
@@ -129,9 +130,12 @@ _ENTERTAINMENT_KEYWORDS = _load_entertainment_filter()
 
 
 def _is_entertainment(item: Dict[str, Any]) -> bool:
-    """title + description에 엔터테인먼트/스포츠 이벤트 키워드가 포함되면 True."""
-    text = (item.get("title", "") + " " + item.get("description", "")).lower()
-    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+    """title + description에 엔터테인먼트/스포츠 이벤트 키워드가 포함되면 True.
+
+    판정은 `common.content_filters.is_entertainment` 에 위임한다 — 키워드를
+    단어 경계에 고정해 `nfl` 이 `inflation` 안에서 매칭되던 오탐을 막는다.
+    """
+    return _shared_is_entertainment(item, _ENTERTAINMENT_KEYWORDS)
 
 
 def fetch_google_news_browser_stocks(limit: int = 20) -> List[Dict[str, Any]]:
