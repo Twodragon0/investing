@@ -49,7 +49,6 @@ _DEFAULT_ENTERTAINMENT_KEYWORDS: frozenset = frozenset(
         "championships",
         "playoffs",
         "playoff",
-        "mvp",
         "ballon d'or",
         "nfl draft",
         "nba draft",
@@ -77,30 +76,16 @@ _DEFAULT_ENTERTAINMENT_KEYWORDS: frozenset = frozenset(
         "lakers",
         "celtics",
         "knicks",
-        "warriors",
-        "spurs",
         "clippers",
-        "heat",
-        "bulls",
-        "nets",
         "pacers",
         "cavaliers",
-        "nuggets",
         "timberwolves",
-        "thunder",
-        "suns",
         "mavericks",
-        "rockets",
         "grizzlies",
         "pelicans",
-        "hawks",
         "hornets",
-        "magic",
-        "wizards",
-        "bucks",
         "raptors",
         "sixers",
-        "pistons",
         # MLB/NFL 팀명
         "yankees",
         "dodgers",
@@ -115,7 +100,6 @@ _DEFAULT_ENTERTAINMENT_KEYWORDS: frozenset = frozenset(
         "cannes",
         "bachelor",
         "bachelorette",
-        "survivor",
         # 미디어 / 팝컬처
         "netflix",
         "spotify",
@@ -209,12 +193,22 @@ def _keyword_pattern(keywords: frozenset) -> "re.Pattern[str]":
         kw = raw.strip()
         if not kw:
             continue
-        left = r"\b" if kw[0].isalnum() or kw[0] == "_" else ""
-        # Plural forms were matched for free by substring search ("oscar" caught
-        # "Oscars"); a bare ``\b`` would drop them. Allowing an optional plural
-        # suffix keeps those true positives without reopening the substring hole,
-        # because the leading boundary still has to line up.
-        right = r"(?:e?s)?\b" if kw[-1].isalnum() or kw[-1] == "_" else ""
+        # Explicit padding is the author's own anchor and is stricter than ``\b``.
+        # ``" f1 "`` is padded precisely so it does not fire inside identifiers;
+        # replacing that with ``\bf1\b`` makes it match the host in
+        # ``https://f1.tokenpost.kr/...`` (``/`` and ``.`` are both boundaries).
+        # Measured on the 2026 corpus: 70 hits, every one that CDN hostname.
+        left = r"(?<!\S)" if raw[:1].isspace() else (r"\b" if kw[0].isalnum() or kw[0] == "_" else "")
+        if raw[-1:].isspace():
+            right = r"(?!\S)"
+        elif kw[-1].isalnum() or kw[-1] == "_":
+            # Plural forms were matched for free by substring search ("oscar"
+            # caught "Oscars"); a bare ``\b`` would drop them. An optional plural
+            # suffix keeps those true positives without reopening the substring
+            # hole, because the leading boundary still has to line up.
+            right = r"(?:e?s)?\b"
+        else:
+            right = ""
         parts.append(f"{left}{re.escape(kw)}{right}")
     if not parts:
         return re.compile(r"(?!)")  # never matches
