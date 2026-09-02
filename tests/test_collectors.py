@@ -237,11 +237,7 @@ class TestFetchCoingeckoTopCoins:
             mock_req.return_value = self._make_coins_response(10)
             fetch_coingecko_top_coins(limit=10)
 
-        call_kwargs = mock_req.call_args
-        _params = call_kwargs[1].get("params") or call_kwargs[0][1] if len(call_kwargs[0]) > 1 else {}  # noqa: F841
-        # params may be passed as keyword arg
-        if call_kwargs[1].get("params"):
-            assert call_kwargs[1]["params"]["per_page"] == 10
+        assert mock_req.call_args.kwargs["params"]["per_page"] == 10
 
     def test_timeout_error_returns_empty_list(self):
         import requests as req_lib
