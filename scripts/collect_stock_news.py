@@ -92,7 +92,6 @@ def _load_entertainment_filter() -> frozenset:
             "lakers",
             "celtics",
             "knicks",
-            "warriors",
             "yankees",
             "dodgers",
             "patriots",
