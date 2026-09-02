@@ -14,6 +14,7 @@ from common.asset_storage import is_enabled as _r2_enabled
 from common.asset_storage import public_url as _r2_public_url
 from common.config import get_kst_now, get_kst_timezone
 from common.markdown_utils import smart_truncate
+from common.post_manifest import record_created_post
 from common.summary_quality import has_positive_signal
 
 KST = get_kst_timezone()
@@ -918,6 +919,10 @@ class PostGenerator:
 
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(post_content)
+
+        # Downstream CI steps need the list of posts this run *created*, not the
+        # ones whose mtime happened to change (see common/post_manifest.py).
+        record_created_post(filepath)
 
         logger.info("Created post: %s", filename)
         return filepath
