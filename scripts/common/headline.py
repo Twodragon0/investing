@@ -15,6 +15,7 @@ already has a headline-free branch that states counts and themes instead.
 
 from __future__ import annotations
 
+import re
 from typing import Any, Mapping, Optional
 
 from common.summary_quality import is_ascii_dominant
@@ -26,6 +27,14 @@ __all__ = ["select_korean_headline"]
 # ``title_ko``/``title``, so items carrying a translation under
 # ``title_translated`` lost it there; this order covers both conventions.
 _TITLE_KEYS = ("title_ko", "title_translated", "title")
+
+# A single uppercase token — an acronym or ticker such as ``CPI``, ``FOMC``,
+# ``GDP``, ``AAPL``. These are not English prose: Korean readers use them
+# verbatim, machine translation leaves them unchanged, and dropping them costs
+# the summary its only concrete token. Multi-word Title Case ("Nonfarm
+# Payrolls", "Treasury Sec Bessent Speaks") is prose and stays subject to the
+# translate-or-drop rule.
+_ACRONYM_RE = re.compile(r"^[A-Z0-9][A-Z0-9.&^-]{0,7}$")
 
 
 def select_korean_headline(item: Mapping[str, Any]) -> str:
@@ -40,7 +49,7 @@ def select_korean_headline(item: Mapping[str, Any]) -> str:
     candidate = _first_title(item)
     if not candidate:
         return ""
-    if not is_ascii_dominant(candidate):
+    if not is_ascii_dominant(candidate) or _ACRONYM_RE.match(candidate):
         return candidate
 
     translated = (translate_to_korean(candidate) or "").strip()

@@ -601,14 +601,7 @@ class PoliticalTradesCollector(BaseCollector):
 
         # Lead with the top headline so the post-summary excerpt becomes
         # concrete ("X 거래·발의·정책" 형식 대신 실제 사건명 노출).
-        _top_headline = ""
-        if unique_items:
-            _candidate = (
-                unique_items[0].get("title_ko")
-                or unique_items[0].get("title_translated")
-                or unique_items[0].get("title", "")
-            )
-            _top_headline = _candidate.strip()[:80]
+        _top_headline = select_korean_headline(unique_items[0])[:80] if unique_items else ""
 
         content_parts.append(
             post_html.summary_intro(
