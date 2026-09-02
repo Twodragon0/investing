@@ -240,7 +240,12 @@ def clean_description(fm: dict[str, str]) -> bool:
 def rebuild_low_quality_metadata(fm: dict[str, str], body: str) -> dict[str, int]:
     try:
         from common.markdown_utils import smart_truncate
-        from common.post_generator import _build_fallback_description, _clean_description, _extract_description
+        from common.post_generator import (
+            _build_fallback_description,
+            _clean_description,
+            _extract_description,
+            _recover_excerpt_signal,
+        )
     except ImportError:
         return {}
 
@@ -275,9 +280,16 @@ def rebuild_low_quality_metadata(fm: dict[str, str], body: str) -> dict[str, int
         stats["description_rebuilt"] = 1
 
     if _looks_low_quality(fm.get("excerpt", "")):
-        excerpt_source = _extract_description(body) or _strip_wrapping_quotes(fm.get("description", ""))
+        description = _strip_wrapping_quotes(fm.get("description", ""))
+        excerpt_source = _extract_description(body) or description
         if not excerpt_source:
             excerpt_source = _build_fallback_description(title, category, tags)
+        # `_extract_description` is preferred because it mirrors the rendered lead,
+        # but it can settle on a section intro that states no fact. The rendered
+        # 요약 section is what `scripts/check_post_summary.py` grades, so a rebuild
+        # must not trade a signal-carrying excerpt for a fact-free one — recover
+        # from the description exactly as the generator does.
+        excerpt_source = _recover_excerpt_signal(excerpt_source, description)
         rebuilt_excerpt = smart_truncate(_clean_description(excerpt_source), 100).replace('"', "'")
         fm["excerpt"] = f'"{rebuilt_excerpt}"'
         stats["excerpt_rebuilt"] = 1
