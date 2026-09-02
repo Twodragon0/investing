@@ -28,6 +28,7 @@ from common.markdown_utils import (
     markdown_link,
 )
 from common.post_generator import POSTS_DIR
+from common.post_manifest import record_created_post
 from common.summarizer import ThemeSummarizer
 
 # summary_sections 는 2026-06-29 L2 분리로 3개 레이어로 나뉘었다(L2→L1→L0).
@@ -462,6 +463,10 @@ image_alt: "{image_alt}"
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(post_content)
+
+    # 이 스크립트는 front matter 를 직접 조립해 PostGenerator 를 우회한다. 그래서
+    # PostGenerator.create_post 안의 기록이 닿지 않아 여기서 한 번 더 호출한다.
+    record_created_post(filepath)
 
     logger.info("Created daily summary: %s (total %d news items)", filepath, total_count)
     return filepath
