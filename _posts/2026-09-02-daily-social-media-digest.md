@@ -29,49 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-02 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO - 37건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 이재명 주목</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 김용범 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 이재명, 기준금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 정부, 경제 관련 6건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeUxjcERJSDVINVoxRF9GazhDY180RWYyUl9mMWlKSlZSR2VnWlFOb1VFME9CZ1JYSThDVjR1RWRFQkxhd0lfRHJXNHgyUWxGQTNjOGVoVTBWT1pvdkpWdDhmQl8yUG10cG9HcWRobGZXQkFRTWlKcWh2cjROWDNjM2FFdUVGclpXOVZqMjFKeS05YkJ5MXZPX0Qyd0psYVZDeDhPUmF5LTFzT2RORkdrOHZYNmhFdzB5MUZn?oc=5">BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO</a> <span class="p0-desc">토론토, 9월 1일 (Reuters) - 투자자들이 다음 달 연준 금리 인상에 베팅하고 글로벌 채권 시장의 매도는 캐나다 은행(Bank of Canada) 금리 결정을 앞두고 국내.</span></li><li><a href="https://www.forexfactory.com/news/1415959-canadian-dollar-weakens-ahead-of-boc-rate-decision">캐나다 달러는 BoC 금리 결정을 앞두고 약세, 10년 수익률이 2년 최고치를 기록 - Forex Factory</a> <span class="p0-desc">캐나다 달러는 BoC 금리 결정을 앞두고 약세를 보이고, 10년 수익률은 2년 최고치를 기록했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQeGNmR2NENUNjc3N6bjM3LUNXM1ZfRXUzVDhSNkRsUlBXU1ZMTlN5NmNBUkRhbG9tZC01NEVaT29HaExLb2FqYTVGQTdoUjhMREdaM2piUUd1bHlaWHh1eW40R1ZoNXFuMjZ1RExxN3YxVEM2bm5pb0NwWGVsYngyanMtUlJ2dWcxSFRyQldFaS05WGJHMGZBQ0NrdTNZUWc1MFB4dVBsNldSQ2JKSGJ5RDF1cG9oaW5fQWZtUTVlTW5GT1FWN1VPNTB3OE9leGRqSU93V0NkYWhfUUVRTzQwenln?oc=5">미국 국채 수익률은 계속해서 신고가를 경신하고 있으며, 9월 미국 주식이 3중 압력에 직면하면서 필라델피아 반도체 지수가 2% 이상 하락했습니다. - TradingKey</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 37건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 37건 중 텔레그램 0건, 소셜 0건, 정치·경제 37건으로 주요 이슈를 정리했습니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (19건): 금리, 이재명, 연준 매크로 변수 (19건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (18건): 이재명, 김용범, 정책실장 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (18건): 이재명, 기준금리, 금리인상 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO
-- 캐나다 달러는 BoC 금리 결정을 앞두고 약세, 10년 수익률이 2년 최고치를 기록 - Forex Factory
-- 미국 국채 수익률은 계속해서 신고가를 경신하고 있으며, 9월 미국 주식이 3중 압력에 직면하면서 필라델피아 반도체 지수가 2% 이상 하락했습니다. - TradingKey
-
-### 주요 이슈
-
-- 김용범 정책실장 전격 사퇴…경제·부동산 라인 전면 교체
-
-### 투자자 체크포인트
-
-- 정치·경제 37건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:95%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:95%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:32%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:5%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-02.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 주요 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

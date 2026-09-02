@@ -14,9 +14,6 @@ description: "uCloudlink(UCL)의 내부자는 새로운 SEC Form 4 서류를 통
 image_alt: "정치인 거래·정책 리포트 - 2026-09-02 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-02.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
-
-
 **2026-09-02** 정치권 핵심 이슈: **uCloudlink(UCL)의 내부자는 새로운 SEC Form 4 서류를 통해 새로운 주식 거래를 보고합니다. - Stock Titan**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **17건** (SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 1건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -25,15 +22,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-02 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(20회), **트럼프**(2회), **SEC(미국증권거래위원회)**(2회), **관세**(2회), **공시**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **17건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 1건입니다.
-
-**트럼프 정책** 관련으로는 Trump’s Canada tariff fight reaches critical point as House GOP summons trade chief WFIN 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 미국과 일본의 기준금리 결정이 예정된 9월 국내 채권시장의 변동성이 커질 수 있다는 전망이 나왔다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
 
 ## 1. 트럼프 행정명령/정책
 

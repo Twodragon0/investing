@@ -25,28 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-02 - 시�
 - 주요 출처: WorldMonitor/BBC World (14건), WorldMonitor/Al Jazeera (6건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 낮음</strong><ul><li>지정학적 리스크가 비교적 안정적이나, 돌발 이벤트 가능성은 상존합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(15건), **지정학/안보**(3건), **정책/법률**(1건) 중심으로 전개되고 있습니다.
-
-안보 관련 이슈가 전체의 **15%**(3건)를 차지합니다. 무력 충돌·제재 확대 시 원유 공급 차질과 방산 수요 증가 가능성이 있습니다.
-
-에너지 이슈 **1건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-**테마 집중도**: 상위 2개 테마가 전체의 90%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (3건)
-
-- 이스라엘, 가자지구 공습 중 공습으로 4명 사망, 하마스 보안 책임자 체포
-- 이란 사이트에 대한 접근이 시급하다고 유엔 핵 감시단이 경고했습니다.
-
-### 투자자 체크포인트
-
-- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/BBC World (14건), WorldMonitor/Al Jazeera (6건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div></div>
 

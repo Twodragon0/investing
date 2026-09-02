@@ -33,52 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-02 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피, 장중 1%대 하락해 6,600대…코스닥은 3% 급락 중 - 211건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 코스피 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 인플레이션 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZZDI3ZzQzb0JjNWVkbXJrUG9HOHhoVktPbVhwRmpPMURIT1BDTHFRNjJuSFRqeGU3RUZnSGhZQ2tPVHhjSnJlV05mU29FNWpEUmZfSEcyY1Q2SnNManRDdtIBYEFVX3lxTFBZZDI3ZzQzb0JjNWVkbXJrUG9HOHhoVktPbVhwRmpPMURIT1BDTHFRNjJuSFRqeGU3RUZnSGhZQ2tPVHhjSnJlV05mU29FNWpEUmZfSEcyY1Q2SnNManRDdg?oc=5">코스피, 장중 1%대 하락해 6,600대…코스닥은 3% 급락 중</a> <span class="p0-desc">(서울=연합뉴스) 이민영 기자 = 코스피가 31일 장중 1% 넘게 내려 6,600대를 나타내고 있다. 코스닥 지수는 3% 넘게 급락 중이다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9WSWpwUURyaGVyODBBaDZSci1FU051VmlTMW9OQ2NRT0htVUYybVJpdzZmcDhNS0lyVEphSGl0dWkzU2pfWGhUTHNGa0FjcVVnMmtKeFFoNnJUN3lNNmxuZ2ZHYWpiUlBuVTExQmNWTHLSAXRBVV95cUxQNm9sOUEyRnAwdnZyTmJBNUVpVnR1clJwRzE5V3hNOTRrRlBKeEtEcktLUEZRZTdxZTlBd1VabllRQnZKdlNfd2IzX1VGbnBjR2VpMHdBR2FpRk9ORlJGOWN0WWcwU2JOUmRId01raTdwb0VmVQ?oc=5">외국인·기관 ‘팔자’에 코스피 1.9%↓…코스닥은 3%대 급락 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 미국의 기준금리 인상 가능성이 다시 부각되면서 국내 증시의 투자심리가 크게 위축되고 있다.코스피는 외국인과 기관의 동반 매도에 6,600선으로 밀렸고, 코스닥은 바이오·성장주를 중심으로 낙폭이 3%를 넘어섰다.31일 오전 코스피는 전 거래일보다 129.19</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5ZMDJhODdHOUx4cUowRzhad0ZLWFJCazAtVWVGbUNnaXVBOTA5Z1BTTGR0Tmp6aWg5VC03Q3kwLTFUdUxaTGlJY1E2NDhHZWxFSkxBVmpGVzNwcmNEdTJ0XzI1OFdhZnFib211N19NTHlrQdIBdkFVX3lxTFBrQXFZOXVYaVByaXo5OUFUOEhmM1NPdkZPV3R0THdWeVlxZ2pYc1JTVjRfUEF0V0VtYmhqYzRQMzFvenRUX0hvLURwYVlUOFpwYlNKTzgwV3AzT1FNOV82cVllY1U4R1Fxb05vV0U2ZXBVSk1QMUE?oc=5">中 CXMT에 이어 YMTC도 상장···삼전닉스 주가 폭락 재현될까 - 시사저널e</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, 장중 1%대 하락해 6,600대…코스닥은 3% 급락 중 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 211건의 뉴스 중 P1 주요 이슈도 30건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (54건): 코스피, 코스닥, 기관 가격 변동 (54건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (27건): 인플레이션, 국채, 환율 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (13건): 반도체, 코스피, 삼성전자 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피, 장중 1%대 하락해 6,600대…코스닥은 3% 급락 중
-- 외국인·기관 ‘팔자’에 코스피 1.9%↓…코스닥은 3%대 급락 - 산경투데이
-- 中 CXMT에 이어 YMTC도 상장···삼전닉스 주가 폭락 재현될까 - 시사저널e
-
-### 주요 이슈
-
-- GoPro, Inc. (NASDAQ: GPRO) Surges on Merger News - Day's High of $1.61
-- Stock Market Today: Dow Skids As Trump Gives This AI Warning; Tesla Pops Ahead O
-- There's a 750% Reason You Should Check Which S&P 500 ETF You're Invested In - Ki
-- 외 27건
-
-### 투자자 체크포인트
-
-- 한국 기사 79건, 글로벌 기사 132건 수집
-- 한국 지수: KOSPI 6,835.80(+0.23%), KOSDAQ 821.25(-1.56%), USD/KRW 1,373.24(+0.43%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">54건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">27건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:24%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:35%"></div></div><span class="theme-count">19건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-02.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,835.80 (+0.23%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 821.25 (-1.56%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- *(서울=연합뉴스) 이민영 기자 = 코스피가 31일 장중 1% 넘게 내려 6,600대를 나타내고 있다.*
 
 ## 테마별 주요 뉴스
 
