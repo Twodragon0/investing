@@ -6,6 +6,8 @@ is_entertainment() / filter_entertainment()를 사용합니다.
 """
 
 import logging
+import re
+from functools import lru_cache
 from typing import Any, Dict, List, Optional
 
 from .collector_config import get_collector_config
@@ -182,8 +184,48 @@ def load_entertainment_keywords(collector_name: str) -> frozenset:
     return _DEFAULT_ENTERTAINMENT_KEYWORDS
 
 
+@lru_cache(maxsize=32)
+def _keyword_pattern(keywords: frozenset) -> "re.Pattern[str]":
+    """Build one word-boundary-anchored alternation for ``keywords``.
+
+    Bare substring matching (the previous ``any(kw in text ...)``) let short
+    sports acronyms hit the middle of ordinary words. Measured on this repo's
+    2026 corpus: ``nfl`` matched inflation/conflict/inflows (1,976 occurrences),
+    ``nba`` matched coinbase/unbacked (853), ``hbo`` matched dashboard (214).
+    Those are core crypto/macro vocabulary, so the filter was dropping the very
+    items it exists to keep.
+
+    Every keyword is ASCII, so ``\\b`` is safe here. It would not be for Hangul:
+    Python's ``\\w`` includes Hangul, so there is no boundary between two Korean
+    characters — a Korean keyword would need lookarounds instead.
+
+    The boundary is applied per edge, only where the keyword's own edge is a word
+    character. ``disney+`` ends in ``+``; a trailing ``\\b`` there would demand a
+    word character right after the plus, so "disney+ streaming" would stop
+    matching. Anchoring unconditionally silently narrows the filter.
+    """
+    parts = []
+    for raw in sorted(keywords, key=len, reverse=True):
+        kw = raw.strip()
+        if not kw:
+            continue
+        left = r"\b" if kw[0].isalnum() or kw[0] == "_" else ""
+        # Plural forms were matched for free by substring search ("oscar" caught
+        # "Oscars"); a bare ``\b`` would drop them. Allowing an optional plural
+        # suffix keeps those true positives without reopening the substring hole,
+        # because the leading boundary still has to line up.
+        right = r"(?:e?s)?\b" if kw[-1].isalnum() or kw[-1] == "_" else ""
+        parts.append(f"{left}{re.escape(kw)}{right}")
+    if not parts:
+        return re.compile(r"(?!)")  # never matches
+    return re.compile("|".join(parts))
+
+
 def is_entertainment(item: Dict[str, Any], keywords: Optional[frozenset] = None) -> bool:
     """title + description에 엔터테인먼트/스포츠 키워드가 포함되면 True를 반환합니다.
+
+    키워드는 단어 경계에 고정해 비교합니다 — ``nfl`` 이 ``inflation`` 안에서
+    매칭되던 오탐을 막습니다(``_keyword_pattern`` 주석의 실측 참조).
 
     Args:
         item: title, description 키를 가진 뉴스 아이템 dict
@@ -193,7 +235,7 @@ def is_entertainment(item: Dict[str, Any], keywords: Optional[frozenset] = None)
     """
     kws = keywords if keywords is not None else _DEFAULT_ENTERTAINMENT_KEYWORDS
     text = (item.get("title", "") + " " + item.get("description", "")).lower()
-    return any(kw in text for kw in kws)
+    return bool(_keyword_pattern(frozenset(kws)).search(text))
 
 
 def filter_entertainment(

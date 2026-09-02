@@ -29,6 +29,7 @@ from common.config import (
     get_verify_ssl,
     setup_logging,
 )
+from common.content_filters import is_entertainment
 from common.dedup import deduplicate_by_url
 from common.enrichment import _SOCIAL_SOURCE_CONTEXT, enrich_items
 from common.headline import select_korean_headline
@@ -188,9 +189,12 @@ _ENTERTAINMENT_KEYWORDS = _load_entertainment_filter()
 
 
 def _is_entertainment(item: Dict[str, Any]) -> bool:
-    """title + description에 엔터테인먼트/스포츠 키워드가 포함되면 True."""
-    text = (item.get("title", "") + " " + item.get("description", "")).lower()
-    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+    """title + description에 엔터테인먼트/스포츠 키워드가 포함되면 True.
+
+    판정은 `common.content_filters.is_entertainment` 에 위임한다 — 키워드를
+    단어 경계에 고정해 `nfl` 이 `inflation` 안에서 매칭되던 오탐을 막는다.
+    """
+    return is_entertainment(item, _ENTERTAINMENT_KEYWORDS)
 
 
 def _parse_telegram_items(channel: str, messages, limit: int) -> List[Dict[str, Any]]:

@@ -25,6 +25,7 @@ from common.base_collector import BaseCollector
 from common.bettafish_analyzer import BettaFishAnalyzer
 from common.collector_config import get_collector_config, get_url
 from common.config import BROWSER_USER_AGENT, REQUEST_TIMEOUT, get_env, get_verify_ssl
+from common.content_filters import is_entertainment as _shared_is_entertainment
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -158,8 +159,9 @@ def _is_entertainment(title: str) -> bool:
     Returns:
         True이면 필터 대상 (제외해야 할 항목)
     """
-    text = title.lower()
-    return any(kw in text for kw in _ENTERTAINMENT_KEYWORDS)
+    # 판정은 `common.content_filters.is_entertainment` 에 위임한다 — 키워드를
+    # 단어 경계에 고정해 `nfl` 이 `inflation` 안에서 매칭되던 오탐을 막는다.
+    return _shared_is_entertainment({"title": title, "description": ""}, _ENTERTAINMENT_KEYWORDS)
 
 
 def _filter_rss_items(items: List[Dict[str, Any]]) -> tuple:
