@@ -37,11 +37,63 @@ logger = logging.getLogger(__name__)
 
 __all__ = [
     "ARTICLE_SPECIFIC_RE",
+    "ASCII_MIN_LEN",
+    "ASCII_RATIO_THRESHOLD",
     "GENERIC_DESC_PATTERNS",
+    "ascii_ratio",
     "has_positive_signal",
+    "is_ascii_dominant",
+    "is_ascii_heavy",
     "is_boilerplate",
     "is_generic_desc",
 ]
+
+
+# ---------------------------------------------------------------------------
+# ASCII-dominance detection — single source of truth.
+#
+# ``scripts/check_description_quality.py`` reports an "ASCII-heavy desc" class,
+# and ``common.headline`` rejects a headline that would drag a Korean
+# description into that class. Both read the threshold from here: a second
+# literal copy would let one side move while the other stayed put, and the
+# report would stop matching what the collectors actually enforce.
+# ---------------------------------------------------------------------------
+ASCII_RATIO_THRESHOLD = 0.70
+ASCII_MIN_LEN = 30
+
+
+def ascii_ratio(text: str) -> float:
+    """Return the ratio of ASCII alphabetic chars to all alphabetic chars.
+
+    Returns 0.0 when text has no alphabetic characters (division-by-zero guard).
+    """
+    alpha_total = sum(1 for c in text if c.isalpha())
+    if alpha_total == 0:
+        return 0.0
+    ascii_alpha = sum(1 for c in text if c.isalpha() and c.isascii())
+    return ascii_alpha / alpha_total
+
+
+def is_ascii_dominant(text: str) -> bool:
+    """Return True if ASCII letters exceed the threshold ratio, at any length.
+
+    Used for headline-level language checks, where a short English fragment is
+    still English. ``is_ascii_heavy`` adds the report's minimum-length guard.
+    """
+    if not text:
+        return False
+    return ascii_ratio(text) > ASCII_RATIO_THRESHOLD
+
+
+def is_ascii_heavy(text: str) -> bool:
+    """Return True if text is ASCII-dominant and long enough to report.
+
+    Descriptions shorter than ``ASCII_MIN_LEN`` are already caught by the other
+    quality rules, so the report skips them to avoid double-counting.
+    """
+    if not text or len(text) < ASCII_MIN_LEN:
+        return False
+    return is_ascii_dominant(text)
 
 
 # ---------------------------------------------------------------------------

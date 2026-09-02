@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-24.png"
 excerpt: "2026-08-24 정치권 핵심 이슈: Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold -…"
 permalink: "/political-trades/2026/08/24/daily-political-trades-report/"
-description: "Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta S. 정치인 거래·정책 13건 (의회 거래 2건, 중앙은행 11건)."
+description: "정치인 거래·정책 13건 (의회 거래 2건, 중앙은행 11건)."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-24 - 정치인 거래 뉴스 요약 이미지"
 ---
 

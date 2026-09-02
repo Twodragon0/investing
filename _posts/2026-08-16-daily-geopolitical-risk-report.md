@@ -9,7 +9,7 @@ source: "geopolitical"
 lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-08-16.png"
 permalink: "/market-analysis/2026/08/16/daily-geopolitical-risk-report/"
-description: "핵심 이슈: South Korea president proposes talks with North to formally end Korean. 총 45건 (15 Polymarket / 30 GDELT / 0 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
+description: "총 45건 (15 Polymarket / 30 GDELT / 0 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
 excerpt: "2026-08-16 지정학 핵심 이슈: South Korea president proposes talks with North to formally end Korean War…"
 image_alt: "지정학 리스크 리포트 - 2026-08-16 - 글로벌 이슈 뉴스 요약 이미지"
 ---

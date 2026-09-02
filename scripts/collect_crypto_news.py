@@ -34,6 +34,7 @@ from common.config import (
 )
 from common.dedup import deduplicate_by_url
 from common.enrichment import _CRYPTO_SOURCE_CONTEXT, enrich_items
+from common.headline import select_korean_headline
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -787,9 +788,12 @@ def _build_security_description(
         # 제목(종종 영문)을 그대로 노출하지 않고 Google fallback으로 넘어간다.
 
     # Google 보안 뉴스 대표 사건 — rekt에 실제 사건이 없을 때만 fallback.
+    # 한국어 헤드라인이 없으면 "" 가 돌아오며, 영어 원문을 노출하는 대신
+    # 아래 건수 문장만 남긴다.
     if google_security_items and not parts:
-        top_title = get_display_title(google_security_items[0])
-        parts.append(smart_truncate(top_title, 60))
+        top_title = select_korean_headline(google_security_items[0])
+        if top_title:
+            parts.append(smart_truncate(top_title, 60))
 
     total = len(rekt_items) + len(google_security_items)
     parts.append(f"블록체인 보안 뉴스 {total}건 분석")
@@ -956,7 +960,8 @@ class CryptoNewsCollector(BaseCollector):
                 name for name, _ in Counter(item.get("source", "unknown") for item in all_items).most_common(3)
             ]
             # Lead with the headline so excerpt is concrete (mirrors body lead).
-            _top_headline = (get_display_title(all_items[0]) if all_items else "").strip()
+            # "" 이면 아래 건수/출처 분기로 떨어져 영어 원문 제목이 새지 않는다.
+            _top_headline = select_korean_headline(all_items[0]) if all_items else ""
             if _top_headline:
                 _top_headline = _top_headline[:80].rsplit(" ", 1)[0] if len(_top_headline) > 80 else _top_headline
                 _desc_ko_a = f"{_top_headline}. 크립토 뉴스 {len(all_items)}건 분석"

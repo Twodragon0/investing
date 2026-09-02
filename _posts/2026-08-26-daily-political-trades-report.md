@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-26.png"
 excerpt: "2026-08-26 정치인 거래·정책 리포트: 의회 거래 6건, SEC 내부자 15건, 트럼프 정책 2건, 중앙은행 9건, 총 32건 수집"
 permalink: "/political-trades/2026/08/26/daily-political-trades-report/"
-description: "Bloom Energy Shares Jump After Nancy Pelosi Trade Disclosure. 정치인 거래·정책 32건 (의회 거래 6건, SEC 내부자 15건)."
+description: "정치인 거래·정책 32건 (의회 거래 6건, SEC 내부자 15건)."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-26 - 정치인 거래 뉴스 요약 이미지"
 ---
 

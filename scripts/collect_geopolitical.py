@@ -30,6 +30,7 @@ from common.config import (
 from common.content_filters import load_entertainment_keywords
 from common.dedup import deduplicate_by_url
 from common.enrichment import enrich_items
+from common.headline import select_korean_headline
 from common.markdown_utils import (
     html_reference_details,
     html_source_tag,
@@ -953,23 +954,28 @@ class GeopoliticalCollector(BaseCollector):
         _top_geo_themes = [t[0] for t in theme_counter.most_common(3)] if theme_counter else []
         # Reuse the body-lead headline so excerpt mirrors the rendered first paragraph.
         # Same script-readability filter as the body lead.
+        # All three sources are English-first (Google News RSS, GDELT, Polymarket
+        # questions), so the headline must be language-checked before it leads a
+        # Korean description. ``select_korean_headline`` returns "" when it cannot
+        # produce Korean, which falls through to the headline-free branch below.
         _desc_headline = ""
         if google_news_items:
-            _candidate = (
-                google_news_items[0].get("title_ko")
-                or google_news_items[0].get("title_translated")
-                or google_news_items[0].get("title", "")
-            ).strip()
+            _candidate = select_korean_headline(google_news_items[0])
             if _candidate and _is_supported_language(_candidate):
                 _desc_headline = _candidate[:70]
         if not _desc_headline and gdelt_articles:
             for art in gdelt_articles:
-                _candidate = (art.get("title") or "").strip()
-                if _candidate and not _GDELT_NOISE_TITLE_RE.match(_candidate) and _is_supported_language(_candidate):
+                # Noise filter runs on the original title — the pattern matches
+                # GDELT's raw English boilerplate, not a translation of it.
+                _raw = (art.get("title") or "").strip()
+                if not _raw or _GDELT_NOISE_TITLE_RE.match(_raw):
+                    continue
+                _candidate = select_korean_headline(art)
+                if _candidate and _is_supported_language(_candidate):
                     _desc_headline = _candidate[:70]
                     break
         if not _desc_headline and markets:
-            _candidate = (markets[0].get("title") or "").strip()
+            _candidate = select_korean_headline(markets[0])
             if _candidate and _is_supported_language(_candidate):
                 _desc_headline = _candidate[:70]
 

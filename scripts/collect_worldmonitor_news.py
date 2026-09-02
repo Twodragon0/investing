@@ -21,6 +21,7 @@ from common.config import REQUEST_TIMEOUT, USER_AGENT, get_verify_ssl
 from common.content_filters import filter_entertainment, load_entertainment_keywords
 from common.dedup import deduplicate_by_url
 from common.enrichment import _WORLDMONITOR_SOURCE_CONTEXT, enrich_items
+from common.headline import select_korean_headline
 from common.markdown_utils import (
     escape_table_cell,
     html_source_tag,
@@ -1071,7 +1072,11 @@ class WorldMonitorCollector(BaseCollector):
             for _t in theme_counter.most_common(2):
                 _t_titles = theme_titles.get(_t[0], [])
                 if _t_titles:
-                    _clean = _t_titles[0][:40].rstrip()
+                    # "" when no Korean headline is available; the ``if _clean``
+                    # guard then drops that entry, so the join never emits an
+                    # empty segment and an all-English run leaves the list empty
+                    # (the whole clause is skipped below).
+                    _clean = select_korean_headline({"title": _t_titles[0]})[:40].rstrip()
                     if _clean and _clean not in _headline_titles:
                         _headline_titles.append(_clean)
         except Exception as exc:

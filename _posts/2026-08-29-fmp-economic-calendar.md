@@ -9,7 +9,7 @@ source: "fmp"
 lang: "ko"
 image: "/assets/images/generated/og-fmp-economic-calendar-2026-08-29.png"
 permalink: "/market-analysis/2026/08/29/fmp-economic-calendar/"
-description: "경제 캘린더 50건 수집. 시장 지수 2개, 실적 발표 2건, 경제 이벤트 18건, IPO 12건 포함. 주목 이벤트: Treasury Sec Bessent Speaks."
+description: "경제 캘린더 50건 수집. 시장 지수 2개, 실적 발표 2건, 경제 이벤트 18건, IPO 12건 포함."
 excerpt: "2026-08-29 오늘 일정 핵심: 주요 경제 이벤트 Treasury Sec Bessent Speaks. 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트…"
 image_alt: "주요 경제 캘린더 및 실적 일정 (2026-08-29) - 시장 분석 뉴스 요약 이미지"
 ---

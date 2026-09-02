@@ -18,6 +18,7 @@ from common.fmp_api import (
     fetch_sector_performance,
     fetch_treasury_rates,
 )
+from common.headline import select_korean_headline
 from common.post_generator import build_dated_permalink
 
 # collectors.yml에서 설정 로드
@@ -580,7 +581,13 @@ class FmpCalendarCollector(BaseCollector):
         if _desc_parts_fmp:
             _desc_ko += f"{', '.join(_desc_parts_fmp)} 포함. "
         # 헤드라인과 같은 이유로 `event` / `symbol` 을 읽는다 (위 주석 참조).
-        _next_event = economic_events[0].get("event", "")[:30] if economic_events else ""
+        # `event` 는 FMP 가 영어 문장으로 내려준다. 그대로 붙이면 한국어 desc 끝에
+        # 영어가 남아 check_description_quality 의 "번역 이슈" 로 잡히므로
+        # select_korean_headline 을 거치고, 한국어를 못 얻으면("") 절 전체를 버린다.
+        # `symbol` 은 티커라 ASCII 가 정상이다 — 번역하거나 버리면 안 된다.
+        _next_event = (
+            select_korean_headline({"title": economic_events[0].get("event", "")})[:30] if economic_events else ""
+        )
         _next_earn = earnings[0].get("symbol", "")[:20] if earnings else ""
         if _next_event:
             _desc_ko += f"주목 이벤트: {_next_event}."

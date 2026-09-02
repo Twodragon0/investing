@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-08-25.png"
 permalink: "/security-alerts/2026/08/25/daily-security-report/"
-description: "Another DeFi Hack: Term Labs Loses $8.5 Million in…. 블록체인 보안 뉴스 12건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "블록체인 보안 뉴스 12건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "보안/해킹 (12건): exploit, security, bridge 보안 이슈 (12건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요. DeFi (7건):…"
 image_alt: "블록체인 보안 리포트 - 2026-08-25 - 보안 뉴스 요약 이미지"
 ---
