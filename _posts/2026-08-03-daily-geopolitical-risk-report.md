@@ -9,7 +9,7 @@ source: "geopolitical"
 lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-08-03.png"
 permalink: "/market-analysis/2026/08/03/daily-geopolitical-risk-report/"
-description: "핵심 이슈: Living Nostradamu Warns of Dark Prophecy as Russia Moves Missile Syste. 총 45건 (15 Polymarket / 30 GDELT / 0 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
+description: "총 45건 (15 Polymarket / 30 GDELT / 0 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
 excerpt: "2026-08-03 지정학 핵심 이슈: Living Nostradamu Warns of Dark Prophecy as Russia Moves Missile Systems to…"
 image_alt: "지정학 리스크 리포트 - 2026-08-03 - 글로벌 이슈 뉴스 요약 이미지"
 ---

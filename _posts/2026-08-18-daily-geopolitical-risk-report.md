@@ -9,7 +9,7 @@ source: "geopolitical"
 lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-08-18.png"
 permalink: "/market-analysis/2026/08/18/daily-geopolitical-risk-report/"
-description: "핵심 이슈: Fitch sees geopolitical risk impact easing across Gulf bond market - T. 총 16건 (15 Polymarket / 0 GDELT / 1 뉴스), 주요 테마: 기타 지정학."
+description: "총 16건 (15 Polymarket / 0 GDELT / 1 뉴스), 주요 테마: 기타 지정학."
 excerpt: "2026-08-18 지정학 핵심 이슈: Fitch sees geopolitical risk impact easing across Gulf bond market - Times…"
 image_alt: "지정학 리스크 리포트 - 2026-08-18 - 글로벌 이슈 뉴스 요약 이미지"
 ---

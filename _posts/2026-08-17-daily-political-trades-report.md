@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-17.png"
 excerpt: "2026-08-17 정치인 거래·정책 리포트: 트럼프 정책 1건, 한국 정치인 2건, 총 3건 수집"
 permalink: "/political-trades/2026/08/17/daily-political-trades-report/"
-description: "LeBlanc set to meet U.S. trade representative Sunday as tariff deadlin. 정치인 거래·정책 3건 (트럼프 정책 1건, 한국 정치인 2건)."
+description: "정치인 거래·정책 3건 (트럼프 정책 1건, 한국 정치인 2건)."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-17 - 정치인 거래 뉴스 요약 이미지"
 ---
 

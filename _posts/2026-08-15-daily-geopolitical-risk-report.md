@@ -9,7 +9,7 @@ source: "geopolitical"
 lang: "ko"
 image: "/assets/images/generated/og-daily-geopolitical-risk-report-2026-08-15.png"
 permalink: "/market-analysis/2026/08/15/daily-geopolitical-risk-report/"
-description: "핵심 이슈: Report Traces U. S.- Iran Conflict to 1953 Coup, Subsequent Interve. 총 45건 (15 Polymarket / 30 GDELT / 0 뉴스), 주요 테마: 군사/분쟁, 기타 지정학."
+description: "총 45건 (15 Polymarket / 30 GDELT / 0 뉴스), 주요 테마: 군사/분쟁, 기타 지정학."
 excerpt: "2026-08-15 지정학 핵심 이슈: Report Traces U. S.- Iran Conflict to 1953 Coup, Subsequent Interventions –…"
 image_alt: "지정학 리스크 리포트 - 2026-08-15 - 글로벌 이슈 뉴스 요약 이미지"
 ---

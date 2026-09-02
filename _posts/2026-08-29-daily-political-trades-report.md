@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-29.png"
 excerpt: "2026-08-29 정치인 거래·정책 리포트: SEC 내부자 15건, 트럼프 정책 12건, 한국 정치인 1건, 중앙은행 9건, 총 37건 수집"
 permalink: "/political-trades/2026/08/29/daily-political-trades-report/"
-description: "Kanzhun (NASDAQ: BZ) insider details latest share trades - Stock Titan. 정치인 거래·정책 37건 (SEC 내부자 15건, 트럼프 정책 12건)."
+description: "정치인 거래·정책 37건 (SEC 내부자 15건, 트럼프 정책 12건)."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-29 - 정치인 거래 뉴스 요약 이미지"
 ---
 

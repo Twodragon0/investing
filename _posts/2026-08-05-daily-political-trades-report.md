@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-05.png"
 excerpt: "2026-08-05 정치인 거래·정책 리포트: SEC 내부자 14건, 트럼프 정책 1건, 중앙은행 7건, 총 22건 수집"
 permalink: "/political-trades/2026/08/05/daily-political-trades-report/"
-description: "Rocky Brands (RCKY) director reports 3,000-share sale and option exerc. 정치인 거래·정책 22건 (SEC 내부자 14건, 트럼프 정책 1건)."
+description: "정치인 거래·정책 22건 (SEC 내부자 14건, 트럼프 정책 1건)."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-05 - 정치인 거래 뉴스 요약 이미지"
 ---
 

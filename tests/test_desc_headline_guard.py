@@ -19,12 +19,11 @@
 써도 값이 같으면 런타임으로는 구별되지 않고, import 는 지워도 다른 관용구로
 대체되면 동작이 바뀔 뿐 예외가 나지 않는다. 그래서 AST/소스 수준에서 확인한다.
 
-## 호출부 가드가 지금 노란 이유
+## 호출부 가드의 범위
 
-`select_korean_headline` 호출부 전환은 수집기별로 나뉘어 병렬 진행 중이다. 이
-브랜치는 `collect_fmp_calendar.py` 만 담당하므로 나머지 4개는 `xfail`(비-strict)로
-표시했다. 각 브랜치가 머지되면 해당 파라미터는 XPASS 로 바뀌고, 그때 `xfail` 마크를
-지우는 것이 정리 작업이다. 마크가 비-strict 이므로 XPASS 는 스위트를 깨지 않는다.
+`description_ko` 를 헤드라인으로 시작하는 수집기 6개를 모두 고정한다. 새 수집기가
+같은 패턴을 쓰면서 목록에 빠지면 이 가드는 잡지 못하므로, 수집기를 추가할 때
+목록도 함께 늘려야 한다.
 """
 
 from __future__ import annotations
@@ -59,34 +58,13 @@ _HEADLINE_IMPORT_RE = re.compile(
     re.MULTILINE,
 )
 
-_OWNED_BY_THIS_BRANCH = "collect_fmp_calendar.py"
-_PENDING_REASON = (
-    "호출부 전환이 수집기별 병렬 브랜치로 진행 중이다. 이 브랜치는 "
-    f"{_OWNED_BY_THIS_BRANCH} 만 담당한다 — 해당 브랜치 머지 후 XPASS 로 바뀐다."
-)
-
 _HEADLINE_COLLECTORS = [
-    pytest.param(_OWNED_BY_THIS_BRANCH, id="fmp_calendar"),
-    pytest.param(
-        "collect_political_trades.py",
-        id="political_trades",
-        marks=pytest.mark.xfail(reason=_PENDING_REASON),
-    ),
-    pytest.param(
-        "collect_crypto_news.py",
-        id="crypto_news",
-        marks=pytest.mark.xfail(reason=_PENDING_REASON),
-    ),
-    pytest.param(
-        "collect_geopolitical.py",
-        id="geopolitical",
-        marks=pytest.mark.xfail(reason=_PENDING_REASON),
-    ),
-    pytest.param(
-        "collect_worldmonitor_news.py",
-        id="worldmonitor_news",
-        marks=pytest.mark.xfail(reason=_PENDING_REASON),
-    ),
+    pytest.param("collect_fmp_calendar.py", id="fmp_calendar"),
+    pytest.param("collect_political_trades.py", id="political_trades"),
+    pytest.param("collect_crypto_news.py", id="crypto_news"),
+    pytest.param("collect_geopolitical.py", id="geopolitical"),
+    pytest.param("collect_worldmonitor_news.py", id="worldmonitor_news"),
+    pytest.param("collect_social_media.py", id="social_media"),
 ]
 
 

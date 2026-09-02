@@ -9,7 +9,7 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-security-report-2026-08-30.png"
 permalink: "/security-alerts/2026/08/30/daily-security-report/"
-description: "Audited Protocols Account for 88% of Crypto Hack Losses…. 블록체인 보안 뉴스 13건 분석 - Investing Dragon 자동 수집 분석 리포트."
+description: "블록체인 보안 뉴스 13건 분석 - Investing Dragon 자동 수집 분석 리포트."
 excerpt: "보안/해킹 (13건): security, exploit, logic 보안 이슈 (13건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요. 이더리움 (6건):…"
 image_alt: "블록체인 보안 리포트 - 2026-08-30 - 보안 뉴스 요약 이미지"
 ---

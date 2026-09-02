@@ -10,7 +10,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-political-trades-report-2026-08-25.png"
 excerpt: "2026-08-25 정치인 거래·정책 리포트: 의회 거래 5건, SEC 내부자 15건, 트럼프 정책 6건, 중앙은행 7건, 총 33건 수집"
 permalink: "/political-trades/2026/08/25/daily-political-trades-report/"
-description: "Nancy Pelosi Discloses Up to $13.5 Million in Stock, Options Trades —. 정치인 거래·정책 33건 (의회 거래 5건, SEC 내부자 15건)."
+description: "정치인 거래·정책 33건 (의회 거래 5건, SEC 내부자 15건)."
 image_alt: "정치인 거래·정책 리포트 - 2026-08-25 - 정치인 거래 뉴스 요약 이미지"
 ---
 
