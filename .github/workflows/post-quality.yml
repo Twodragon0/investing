@@ -40,32 +40,36 @@ jobs:
           echo "---"
           echo "Quality audit complete."
 
+      # 예전 grep 패턴은 dry-run 출력에 존재하지 않는 문구를 찾았다 — 각 포스트는
+      # `[DRY] <file>: …` 로, 총계는 `Posts modified: N` 으로 보고된다. 실측:
+      # 출력 36줄 중 패턴 매칭 0건, `[DRY]` 26건. 즉 이 스텝은 언제나
+      # "Issues found: 0" 이었다. 이제 스크립트가 스스로 내는 요약 줄을 읽는다.
+      #
+      # 설명은 `run:` 밖에 둔다 — 안에 두면 이 배선을 지키는 가드 테스트가
+      # 주석 문구에 매칭돼 항상 실패하고, 명백한 "수정"이 동작이 아니라 주석을
+      # 지우는 쪽이 된다.
       - name: Check for issues
         run: |
-          ISSUES=$(grep -c 'would fix\|would change\|would clean' /tmp/quality-report.txt 2>/dev/null || echo 0)
+          set -euo pipefail
+          ISSUES=$(sed -n 's/^Posts modified:[[:space:]]*\([0-9]\+\).*/\1/p' /tmp/quality-report.txt | tail -1)
+          if [ -z "$ISSUES" ]; then
+            echo "::error::dry-run 리포트에 'Posts modified:' 요약이 없다 — 출력 형식이 바뀌었는지 확인하라"
+            exit 1
+          fi
           echo "Issues found: $ISSUES"
           if [ "$ISSUES" -gt 50 ]; then
             echo "::warning::High number of quality issues detected: $ISSUES"
           fi
 
+      # 예전 구현은 대상을 `find _posts -newer /tmp/quality-report.txt` 로 골랐다.
+      # 그 리포트는 **같은 잡의 앞선 스텝**이 만들고, 그 시점엔 체크아웃이 이미
+      # 모든 포스트를 써놓았다 — 리포트가 항상 더 새로워 find 는 0건을 낸다.
+      # find 는 매칭이 없어도 exit 0 이라 `|| … tail -20` 폴백도 안 돈다.
+      # 결과: 루프 본문이 한 번도 실행되지 않았다(run 33591232799 실측 — 스텝
+      # 시작 9.8ms 뒤에 "Untranslated lines found: 0" 출력).
+      #
+      # 이제 파일명 날짜로 대상을 고르고(mtime 무관, 결정적), 스캔 건수가 0이면
+      # 스크립트가 실패한다 — 아무것도 보지 않은 검사가 green 을 보고하는 것이
+      # 검사가 없는 것보다 나쁘다.
       - name: Detect untranslated English in post bodies
-        run: |
-          echo "=== Checking for untranslated English sentences ==="
-          ISSUES=0
-          for f in $(find _posts -name "*.md" -newer /tmp/quality-report.txt 2>/dev/null || find _posts -name "*.md" | tail -20); do
-            # Skip front matter, check body only
-            BODY=$(sed -n '/^---$/,/^---$/!p' "$f" | sed '1,/^---$/d')
-            # Find lines that are >80% ASCII alpha (likely untranslated)
-            while IFS= read -r line; do
-              TOTAL=$(echo "$line" | tr -cd '[:alpha:]' | wc -c | tr -d ' ')
-              ASCII=$(echo "$line" | tr -cd 'A-Za-z' | wc -c | tr -d ' ')
-              if [ "$TOTAL" -gt 30 ] && [ "$ASCII" -gt 0 ]; then
-                PCT=$((ASCII * 100 / TOTAL))
-                if [ "$PCT" -gt 80 ]; then
-                  echo "::warning file=$f::Untranslated: ${line:0:100}"
-                  ISSUES=$((ISSUES + 1))
-                fi
-              fi
-            done <<< "$BODY"
-          done
-          echo "Untranslated lines found: $ISSUES"
+        run: python3 scripts/tools/check_untranslated_body.py --days 7
