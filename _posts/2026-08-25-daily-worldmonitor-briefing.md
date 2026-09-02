@@ -11,7 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-08-25.png"
 permalink: "/market-analysis/2026/08/25/daily-worldmonitor-briefing/"
 description: "글로벌 20건 수집. 사회/기타, 지정학/안보, 에너지 등 주요 테마 분석. Iconic Palestinian artist Sliman Mansour; Displaced Palestinians in Gaza face inte 등 핵심 이슈 포함. 주요 출처: WorldMonitor/Al"
-excerpt: "시장 분석 브리핑: WorldMonitor 글로벌 인텔리전스 브리핑. 주요 자산군의 상관관계와 방향성을 점검합니다."
+excerpt: "글로벌 20건 수집. 사회/기타, 지정학/안보, 에너지 등 주요 테마 분석. Iconic Palestinian artist Sliman Mansour; Displaced…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-25 - 시장 분석 뉴스 요약 이미지"
 ---
 

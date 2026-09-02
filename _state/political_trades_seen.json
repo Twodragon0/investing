@@ -1,9 +1,5 @@
 {
   "seen": {
-    "f571a373d1d937b46c8012c4": "2026-08-01T23:28:53",
-    "f87ed167520be08689302dc7": "2026-08-01T23:28:53",
-    "0c932f7b0aab193d15b990b3": "2026-08-01T23:28:53",
-    "4b8671108ea8056cdf8af7c5": "2026-08-01T23:28:53",
     "724c6e7fc57e5f7200c1822b": "2026-08-03T12:42:50",
     "06d50b8411f26fa8a372272e": "2026-08-03T12:42:50",
     "10dbba6454f63593fea4ce80": "2026-08-03T23:35:18",
@@ -621,7 +617,47 @@
     "b8e1985e46d984818aabf6b6": "2026-08-31T00:45:37",
     "1bb68cb4a48d7cf3783ec04d": "2026-08-31T00:45:37",
     "34985aa8047b363bd4e59f83": "2026-08-31T00:45:37",
-    "00e21178b4623ce209469034": "2026-08-31T00:45:37"
+    "00e21178b4623ce209469034": "2026-08-31T00:45:37",
+    "7ee91ae5595643f0a3378ab9": "2026-08-31T17:12:13",
+    "0d285806d0eaf54fd63a3f02": "2026-08-31T17:12:13",
+    "c79897a57eef9d333ee2c4e5": "2026-08-31T17:12:13",
+    "b722fd42c66f662ca9d968d8": "2026-08-31T17:12:13",
+    "72cbdcc06a375286243e3393": "2026-08-31T17:12:13",
+    "41205dc8521145af27bb39e6": "2026-08-31T17:12:13",
+    "af15abae8e7e737b853f9487": "2026-08-31T17:12:13",
+    "c681662eedbb0e5c81af250e": "2026-08-31T17:12:13",
+    "dc5802d203de8d1776899545": "2026-08-31T17:12:13",
+    "0dcd9712d55cd99982b19eca": "2026-08-31T17:12:13",
+    "5ed581420fab0c0875d12b2e": "2026-08-31T17:12:13",
+    "f314d5482f52af3aaa90a70b": "2026-08-31T17:12:13",
+    "ae374f3a4a2d4917b85477f5": "2026-08-31T17:12:13",
+    "379a9283683846d511a84de6": "2026-08-31T17:12:13",
+    "cb8f33c9e485f5d775be0351": "2026-08-31T17:12:13",
+    "bb527f01549ab368f19223bb": "2026-08-31T17:12:13",
+    "f6801abe35100b679019cf18": "2026-08-31T17:12:13",
+    "5903745771960fc2e52c431a": "2026-08-31T17:12:13",
+    "86ece0edf2f10f4db664ccfe": "2026-08-31T17:12:13",
+    "af3d325437e27f1ae983b623": "2026-08-31T17:12:13",
+    "eb602482c5517fcb47e2d940": "2026-08-31T17:12:13",
+    "c55cdccfee34973febfe669a": "2026-08-31T17:12:13",
+    "028562acaa50671daa6ba649": "2026-09-02T00:24:56",
+    "5359ab5146835bbb342a493e": "2026-09-02T00:24:56",
+    "765733b6230362cd6c7e88e7": "2026-09-02T00:24:56",
+    "3919a6c6b479068417755c19": "2026-09-02T00:24:56",
+    "60edcae38c1d675692d15fb8": "2026-09-02T00:24:56",
+    "4e9b1cf5ccaa88b380b2d590": "2026-09-02T00:24:56",
+    "c0b96a346f2cfcaf0e91c214": "2026-09-02T00:24:56",
+    "53a260ae336477bace0c6681": "2026-09-02T00:24:56",
+    "65ec9f0c28fc44e887e233da": "2026-09-02T00:24:56",
+    "084d124446bf228ba71e96d5": "2026-09-02T00:24:56",
+    "b393c6a3a7563845634ff061": "2026-09-02T00:24:56",
+    "498235d0bab672ebdb883238": "2026-09-02T00:24:56",
+    "5fd41c29eb182ac5609c3e02": "2026-09-02T00:24:56",
+    "1f7b4099ba84e99202e7a887": "2026-09-02T00:24:56",
+    "cf3a863835934018f7d2d5f9": "2026-09-02T00:24:56",
+    "cb4e4b2f2d7707e47db52c48": "2026-09-02T00:24:56",
+    "5855ff03313b0a8825368945": "2026-09-02T00:24:56",
+    "db09c3f6b86956813b8c67c4": "2026-09-02T00:24:56"
   },
   "titles": [
     [
@@ -16691,6 +16727,166 @@
     [
       "정치인 거래정책 리포트 20260831",
       "2026-08-31"
+    ],
+    [
+      "verizon nyse vz insider reports new stock trades in sec filing stock titan",
+      "2026-09-01"
+    ],
+    [
+      "winnebago industries nyse wgo insider logs share trade stock titan",
+      "2026-09-01"
+    ],
+    [
+      "net power nasdaq npwr insiders log new stock trades stock titan",
+      "2026-09-01"
+    ],
+    [
+      "texas pacific land nyse tpl holder horizon kinetics adds 1 share stock titan",
+      "2026-09-01"
+    ],
+    [
+      "donegal group dgica 10 holder snaps up 20k shares stock titan",
+      "2026-09-01"
+    ],
+    [
+      "xcel brands nasdaq xelb ceo buys 5500 shares without 10b51 plan stock titan",
+      "2026-09-01"
+    ],
+    [
+      "presurance holdings prhi director sells remaining shares stock titan",
+      "2026-09-01"
+    ],
+    [
+      "nuo therapeutics aurx ceo buys 8773 shares outside preset plan stock titan",
+      "2026-09-01"
+    ],
+    [
+      "horizon kinetics hkhc director adds 200 shares at 2620 stock titan",
+      "2026-09-01"
+    ],
+    [
+      "muncy columbia financial ccfn tech chief buys more stock stock titan",
+      "2026-09-01"
+    ],
+    [
+      "verizon nyse vz evp holds 84873655 phantom stock units stock titan",
+      "2026-09-01"
+    ],
+    [
+      "wixcom ltd wix director sells 5718 shares under 10b51 trading plan stock titan",
+      "2026-09-01"
+    ],
+    [
+      "big digital energy bgde ceolinked firm adds more stock stock titan",
+      "2026-09-01"
+    ],
+    [
+      "verizon nyse vz legal chief adds cashsettled phantom stock stock titan",
+      "2026-09-01"
+    ],
+    [
+      "bladex nyse blx cfo lifts stake with 1454share buy stock titan",
+      "2026-09-01"
+    ],
+    [
+      "트럼프 우주사관학교 설립 행정명령 우주에서 2등 지구에서 1등 못 돼",
+      "2026-09-01"
+    ],
+    [
+      "구글맵 美서 온타리오호아메리카호 변경트럼프 행정명령 반영",
+      "2026-09-01"
+    ],
+    [
+      "trump tariffs take 11 billion toll on ohio axios",
+      "2026-09-01"
+    ],
+    [
+      "ontarios premier says trade war would be devastating for us and canada abc news breaking news latest news and videos",
+      "2026-09-01"
+    ],
+    [
+      "barclays sees two more fed rate hikes this year after warsh speech",
+      "2026-09-01"
+    ],
+    [
+      "fed chair warshs jackson hole debut what he said and didnt say about rate hikes the motley fool",
+      "2026-09-01"
+    ],
+    [
+      "정치인 거래정책 리포트 20260901",
+      "2026-09-01"
+    ],
+    [
+      "an insider at ucloudlink ucl reports new stock trades in a fresh sec form 4 filing stock titan",
+      "2026-09-02"
+    ],
+    [
+      "insider moves at avery dennison nyse avy detailed stock titan",
+      "2026-09-02"
+    ],
+    [
+      "insider activity surfaces at ww grainger nyse gww stock titan",
+      "2026-09-02"
+    ],
+    [
+      "velocity financial vel legal chief sells shares under 10b51 plan stock titan",
+      "2026-09-02"
+    ],
+    [
+      "avery dennison corp avy insider records share trades stock titan",
+      "2026-09-02"
+    ],
+    [
+      "freight technologies frgt insider buys 5625 shares stock titan",
+      "2026-09-02"
+    ],
+    [
+      "insider at trilogy metals tmq logs new share trades stock titan",
+      "2026-09-02"
+    ],
+    [
+      "southern first bancshares sfst director offloads 400 shares stock titan",
+      "2026-09-02"
+    ],
+    [
+      "cpi card pmts tweaks insider filing adds new power of attorney stock titan",
+      "2026-09-02"
+    ],
+    [
+      "brinker international nyse eat officer uses 762 shares at 23035 leaving 8600 owned stock titan",
+      "2026-09-02"
+    ],
+    [
+      "block xyz director sells 18000 shares in preset trading plan stock titan",
+      "2026-09-02"
+    ],
+    [
+      "ingredion ingr insider logs new stock trades stock titan",
+      "2026-09-02"
+    ],
+    [
+      "nlight nasdaq lasr director exercises options sells 15000 shares in plan trade stock titan",
+      "2026-09-02"
+    ],
+    [
+      "insider trades logged at ncs multistage nasdaq ncsm stock titan",
+      "2026-09-02"
+    ],
+    [
+      "director cashes out thousands of whitefiber wyfi shares stock titan",
+      "2026-09-02"
+    ],
+    [
+      "trumps canada tariff fight reaches critical point as house gop summons trade chief wfin",
+      "2026-09-02"
+    ],
+    [
+      "9월 미국일본 금리 결정 임박한국 채권시장도 긴장 스트레이트뉴스",
+      "2026-09-02"
+    ],
+    [
+      "정치인 거래정책 리포트 20260902",
+      "2026-09-02"
     ]
   ],
   "seen_urls": {}

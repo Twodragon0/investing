@@ -11,7 +11,7 @@ lang: "ko"
 image: "/assets/images/generated/og-daily-worldmonitor-briefing-2026-08-30.png"
 permalink: "/market-analysis/2026/08/30/daily-worldmonitor-briefing/"
 description: "글로벌 20건 수집. 사회/기타, 에너지, 지정학/안보 등 주요 테마 분석. Ontario’s Doug Ford prods Trump with sig; What’s behind the US deal to seize contr 등 핵심 이슈 포함. 주요 출처: WorldMonitor/Al"
-excerpt: "WorldMonitor 글로벌 인텔리전스 브리핑 — 시장 전반의 흐름과 크로스에셋 투자 시사점을 분석합니다."
+excerpt: "글로벌 20건 수집. 사회/기타, 에너지, 지정학/안보 등 주요 테마 분석. Ontario’s Doug Ford prods Trump with sig; What’s behind…"
 image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-08-30 - 시장 분석 뉴스 요약 이미지"
 ---
 
