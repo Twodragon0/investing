@@ -55,8 +55,8 @@
         </aside>
         <h2>
             <span class="text">530 statements &nbsp;</span>
-            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">517<span class="text"> run</span></button>
-            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">13<span class="text"> missing</span></button>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">520<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">10<span class="text"> missing</span></button>
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
@@ -65,7 +65,7 @@
             <a id="nextFileLink" class="nav" href="z_71968377c4619f9c_summarizer_chart_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.15.4">coverage.py v7.15.4</a>,
-            created at 2026-09-01 06:32 +0000
+            created at 2026-09-02 02:02 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -783,13 +783,13 @@
     <p class="pln"><span class="n"><a id="t701" href="#t701">701</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t702" href="#t702">702</a></span><span class="t">        <span class="com"># Case 4: General multi-theme</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t703" href="#t703">703</a></span><span class="t">        <span class="key">if</span> <span class="nam">top_themes</span> <span class="key">and</span> <span class="nam">len</span><span class="op">(</span><span class="nam">top_themes</span><span class="op">)</span> <span class="op">&gt;=</span> <span class="num">2</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t704" href="#t704">704</a></span><span class="t">            <span class="nam">theme_names</span> <span class="op">=</span> <span class="op">[</span><span class="fst">f&quot;</span><span class="fst">**</span><span class="op">{</span><span class="nam">t</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">}</span><span class="fst">**(</span><span class="op">{</span><span class="nam">t</span><span class="op">[</span><span class="num">3</span><span class="op">]</span><span class="op">}</span><span class="fst">&#44148;)</span><span class="fst">&quot;</span> <span class="key">for</span> <span class="nam">t</span> <span class="key">in</span> <span class="nam">top_themes</span><span class="op">[</span><span class="op">:</span><span class="num">3</span><span class="op">]</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t705" href="#t705">705</a></span><span class="t">            <span class="nam">intro</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t706" href="#t706">706</a></span><span class="t">                <span class="fst">f&quot;</span><span class="fst">&#52509; </span><span class="op">{</span><span class="nam">total</span><span class="op">}</span><span class="fst">&#44148;&#51032; &#45684;&#49828;&#50640;&#49436; </span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t707" href="#t707">707</a></span><span class="t">                <span class="fst">f&quot;</span><span class="op">{</span><span class="str">&#x27;, &#x27;</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">theme_names</span><span class="op">[</span><span class="op">:</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="op">)</span><span class="op">}</span><span class="fst">&#44284; </span><span class="op">{</span><span class="nam">theme_names</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="op">}</span><span class="fst"> &#49692;&#51004;&#47196; </span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t708" href="#t708">708</a></span><span class="t">                <span class="fst">f&quot;</span><span class="fst">&#47566;&#51008; &#48372;&#46020;&#44032; &#51665;&#51473;&#46104;&#44256; &#51080;&#49845;&#45768;&#45796;.</span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis mis2 show_mis"><span class="n"><a id="t709" href="#t709">709</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
-    <p class="mis show_mis"><span class="n"><a id="t710" href="#t710">710</a></span><span class="t">            <span class="key">return</span> <span class="nam">intro</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t704" href="#t704">704</a></span><span class="t">            <span class="nam">theme_names</span> <span class="op">=</span> <span class="op">[</span><span class="fst">f&quot;</span><span class="fst">**</span><span class="op">{</span><span class="nam">t</span><span class="op">[</span><span class="num">0</span><span class="op">]</span><span class="op">}</span><span class="fst">**(</span><span class="op">{</span><span class="nam">t</span><span class="op">[</span><span class="num">3</span><span class="op">]</span><span class="op">}</span><span class="fst">&#44148;)</span><span class="fst">&quot;</span> <span class="key">for</span> <span class="nam">t</span> <span class="key">in</span> <span class="nam">top_themes</span><span class="op">[</span><span class="op">:</span><span class="num">3</span><span class="op">]</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t705" href="#t705">705</a></span><span class="t">            <span class="nam">intro</span> <span class="op">=</span> <span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t706" href="#t706">706</a></span><span class="t">                <span class="fst">f&quot;</span><span class="fst">&#52509; </span><span class="op">{</span><span class="nam">total</span><span class="op">}</span><span class="fst">&#44148;&#51032; &#45684;&#49828;&#50640;&#49436; </span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t707" href="#t707">707</a></span><span class="t">                <span class="fst">f&quot;</span><span class="op">{</span><span class="str">&#x27;, &#x27;</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="nam">theme_names</span><span class="op">[</span><span class="op">:</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="op">)</span><span class="op">}</span><span class="fst">&#44284; </span><span class="op">{</span><span class="nam">theme_names</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="op">}</span><span class="fst"> &#49692;&#51004;&#47196; </span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t708" href="#t708">708</a></span><span class="t">                <span class="fst">f&quot;</span><span class="fst">&#47566;&#51008; &#48372;&#46020;&#44032; &#51665;&#51473;&#46104;&#44256; &#51080;&#49845;&#45768;&#45796;.</span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t709" href="#t709">709</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t710" href="#t710">710</a></span><span class="t">            <span class="key">return</span> <span class="nam">intro</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t711" href="#t711">711</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t712" href="#t712">712</a></span><span class="t">        <span class="com"># Fallback</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t713" href="#t713">713</a></span><span class="t">        <span class="key">return</span> <span class="fst">f&quot;</span><span class="fst">&#52509; **</span><span class="op">{</span><span class="nam">total</span><span class="op">}</span><span class="fst">&#44148;**&#51032; &#45684;&#49828;&#44032; &#49688;&#51665;&#46104;&#50632;&#49845;&#45768;&#45796;.</span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
@@ -1357,7 +1357,7 @@
             <a class="nav" href="z_71968377c4619f9c_summarizer_chart_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.15.4">coverage.py v7.15.4</a>,
-            created at 2026-09-01 06:32 +0000
+            created at 2026-09-02 02:02 +0000
         </p>
     </div>
 </footer>
