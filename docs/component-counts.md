@@ -14,6 +14,6 @@
 | GitHub Actions 워크플로우 (.github/workflows/*.yml) | 54 |
 | main 직접 푸시 워크플로우 (python-collect 경유 + 자체 push) | 24 |
 | 카테고리 페이지 (pages/*.md) | 15 |
-| 테스트 파일 (tests/test_*.py) | 184 |
+| 테스트 파일 (tests/test_*.py) | 187 |
 
 <!-- component-counts:end -->
