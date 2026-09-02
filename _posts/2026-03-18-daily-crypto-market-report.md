@@ -28,7 +28,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-18 | HYPE +5.3% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +5.34%</li><li>🟢 <strong>TRON</strong> (TRX): +2.65%</li><li>🔴 <strong>Monero</strong> (XMR): -1.85%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

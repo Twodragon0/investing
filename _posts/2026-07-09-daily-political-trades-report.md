@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-07-09 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(12회), **연준**(7회), **의회**(3회), **SEC(미국증권거래위원회)**(3회), **공시**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-07-09 정치권 핵심 이슈: 의회 구매 공개에 대한 Entegris Stock(ENTG)의 의견 | ENTG 주식 뉴스 - Quiver Quantitative. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 22건 (미국 의회 거래 2건, SEC 내부자 거래…
-- 1. 의회 구매 공개에 대한 Entegris Stock(ENTG)의 의견 | ENTG 주식 뉴스 - Quiver Quantitative Quiver의 데이터세트를 기반으로 구축된 백테스트된 거래 전략의 성과 및 보유량 추적 Quantbase와의 파트너십을 통해 엄선된 Quiver…
 
 ## 1. 미국 의회 거래 동향
 
