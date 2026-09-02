@@ -50,7 +50,7 @@ W.W.의 내부자 활동 표면
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **4. [VEL(Velocity Financial) 법률 책임자는 10b5-1 계획에 따라 주식을 판매합니다. - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxPU1FEcEVvZ2JvXzVlbGgyMC1PbVBkQ3hpSlFyN1RDR2tmcmNQbHA0SEJNTkxyZlE3LUw0Mjg2cjVIVmdEYV9DY3hYYTRsV3RabXRKVlZMd0VpUmhfSjRPUVoxYVlGX09QUm56QWpzYW91YWw1ejdqNXVuM0VlX2NHWFhTRUUyRTJydkViWDdQeXZUOVdUdlk3eTZ3T2FsRTRkbU40M3RCMEtpQjVGcXZXcGlUR0dyQQ?oc=5)**
-Velocity Financial (VEL) legal chief sells shares under 10b5-1 plan Stock Titan
+VEL(Velocity Financial) 법률 책임자는 10b5-1 계획에 따라 주식을 판매합니다 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **5. [Avery Dennison Corp (AVY) insider records share trades - Stock Titan](https://news.google.com/rss/articles/CBMisgFBVV95cUxQbHQwQjdEbVVZZi1jQjhTV3d4SlJmNE80ZTNMb196ek5JNVBiak92UFl5RDFKWGF5di15Y3JHQS1XM3FodWRtVEZDNkFDNm5fMVkzNDZwWDlLbHBldUNYbS05MXloM1dhSlhWQ0k4b25ob0lRWmdSMENIUFVtZXNNSHVuX1AzV0psSHBjTkRZVDRFWC1lMlNFUGZHV25DeTQzbWZLMm1ueEVrMUk5T1NaN0tB?oc=5)**
@@ -62,7 +62,7 @@ Freight Technologies(FRGT) 내부자가 Stock Titan 5,625주를 매입합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **7. [Insider at Trilogy Metals (TMQ) logs new share trades - Stock Titan](https://news.google.com/rss/articles/CBMisAFBVV95cUxPa0Utbl8xUXNpd3phTlZId3RmZ0FCYmdPZWNpc1RIMEVXa0pVU3g3eWt0Vm9hbXNSbmZVVkg2WkpDcTVtT1hRczgxUXcyS0VnVVdDdlltT1RiRUJUbFdYNE5WemFxa3hNRV93Ylo2VHQ0eVF0dnZPcjJKanVmdmI1WE5SZ3lqek01U0c5YnNaZnZkaTNYN0VfWnR6QXNObExCZ181YUxlUXVNVlRhZXVydg?oc=5)**
-Insider at Trilogy Metals (TMQ) logs new share trades Stock Titan
+Trilogy Metals(TMQ)의 Insider는 Stock Titan에 새로운 주식 거래를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **8. [Southern First Bancshares (SFST) director offloads 400 shares - Stock Titan](https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbGZYN1dUWWwyUlNQeER1VUNPUzI1Q0NNY1ZyN0p3UkVPM2RUSE1XaTBFZVRUNjlPOGlrZGZrX01tUlZscVItckltaUVIZzNHZy1acTNZTnp2a0ctWklMN0p0Tm5ESFZCUTI1U05reXEwOTBMYmhEZHE5N2lzTzhpOVpIekNDVHlydmg2V2RhYThIS1NJYzZkR1NTdG1QOUNhTkw1Qk80UFRTdEs2X3Z2M0U5d19nVUJWR1dLZGFKWDg?oc=5)**

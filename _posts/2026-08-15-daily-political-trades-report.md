@@ -32,7 +32,7 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-15 - 정치인 거래 �
 ## 1. 미국 의회 거래 동향
 
 **1. [투자자들은 투자 아이디어에 대해 Nancy Pelosi를 거의 워런 버핏만큼 신뢰합니다. 그 이유는 다음과 같습니다 - 247wallst.com](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFFxRDJWR3BlZkRJaU9UTlZ0a3phUFg5MUJvZ09rRkN2bkdmdWdNOU9heDBxZTd5ei03V3pyWm54d1k0aWpaTll4MEdWenY3aDVLd29kNUViSUxKOWVQbExLVGEyNFBNaEFNN1dnN1ZzaGZWZUM5NXZmaGVUMlNiZjduQWoya1ZMS3dza1lTNVpoYjNEakNGRk40SE9IZEpJcUFmWE1ZRnlQbnJxN2dIQVFoYjB4SUpEMl9Gbk4zMmNReWYyUjcyUUNXQm11ZFVJaGc?oc=5)**
-Retail investors now follow Nancy Pelosi's stock trades almost as closely as Warren Buffett's, and their reason for doing so reveals something troubling about what they think is actually happening in
+이제 소매 투자자들은 Nancy Pelosi의 주식 거래를 거의 워런 버핏의 주식 거래만큼 밀접하게 따르고 있으며, 그렇게 하는 이유는 그들이 실제로 일어나고 있다고 생각하는 일에 대해 뭔가 문제가 있음을 드러냅니다.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **2. [바이런 도널드(Byron Donalds)는 의회의 '5%-7%'가 적극적으로 주식을 거래하지만 자신은 그중에 속하지 않는다고 말합니다.](https://news.google.com/rss/articles/CBMi9gFBVV95cUxOal9ZQ0ZWUUU3eDk2eXExNFRJb0NtcE4xS1RLTW1jSUJfNEcyYjY0dWlaMnJ6bkxqZnRUMzBZUnB0VWtLMFhlN0x6MnZ0MGVna3JKd3RuU3ZJcU0zQWtrLUc2WkFHY1lVZkpfSjRFVlBXWGxsV1RoMmpoNXF3V0lWNTR5TXZkcDdOMk5ocVRhY3NQSTVJcmQyVDByeTVWN3ZCOEZhV1hxcEctN3UxYXU0VlFmUXBrMVFEZzVHMkZPODIxWU9WLUtOUHZOX1hUZG1JdXI5SndBNXo4RnpWdEtKX1JUOWZxV0xjSzJ6UmFRYWUxMVV3cUHSAfsBQVVfeXFMUFpBYTFsVGl5NlRBMW01TFdmbmZmaTNSa0VYYVcwWTVRYThQX3BqVndKbGJnVy1oUVNFWDdRbzI4S0JLbUZQa3NQNlhOQVE2UFVSWnI1STdEQ2NTeVFtYmZZczBod0dwSncwWjJvTG9KLU9aWnU4YXRrM0lpeFhJQnVudEFqYU5GU3FYUXc4Z2JaZ0Q2dXFMalNqQXVqWWg4Ti1OenV2WkJGNGxFNkMybUplb2dLRmx5ZHdQdFQ3LUtEamd3N2cycVhaTk5ITnhsSndjNUd2UFlCczF5SnUteDFWSWxURzZaVXZtYmFpbzFsREJadDRIc1ZGeHM?oc=5)**
@@ -56,7 +56,7 @@ Third Rock Ventures V, L.P.는 Form 4에 주당 $50.27에 총 147,200주의 인�
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **2. [Interface Inc.(TILE) 이사 Joseph Keough는 8,442주의 선의의 선물을 보고했습니다. - Stock Titan](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNmZLQnhOQmdVbFBXalo3UmNJQXdIUEp4SVJaT21PeFExc0IxNWlPdGZ0eGtxSEVERlJad3k2STFGWFoydFloNmNFUFFDZ0xyQUxfQ0d1NnJMTWYxci1mZ0tfS3R5bEREck42Vm1OT3d5N0NQYURfclMwZVFiT2Q0OTNOTFQ2NGxwUzNTZWF0VmF3bV9ZbDZLZkd6ZjlaalVLM19POWVnbXNxNkE?oc=5)**
-Director Joseph Keough reported a bona fide gift of 8,442 Interface Inc.
+Joseph Keough 이사는 8,442 Interface Inc.의 선의의 기부를 보고했습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **3. [Fastly(FSLY) 이사 Paula Loop는 사전 설정된 10b5-1 거래에서 7,332주를 매도합니다. - Stock Titan](https://news.google.com/rss/articles/CBMipwFBVV95cUxPRHNPOVJTX0htTV81OHJpRWlOWTVidi1BdzhIQVpyQnVKNDhGMkM3aWNPUThMaGtKWUhUV2Yyb21MV3JfWUtsZkRlbjh1bjlmTy1IdG9FYXJZbmRyWTh5azQ2S1dZaEVPaHpnZGtmMHlfSGJramNuUTk0X3g0UWFpVE9SWlVka3prZENtN2JHZjdyNGxpazVRbnhmcHFuck1WOFZPRE1qcw?oc=5)**

@@ -116,7 +116,7 @@ Wise Group plc(WSE)는 Stock Titan 내부자 주식 거래를 보고합니다.
 <span class="source-tag" data-source-type="regulator">한국은행 금리결정</span>
 
 **2. [Fed Minutes, Iran Top Economic News This Week | National News | U.S. News](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUUdvMjlFa3FlbzVaQS1kOWNrd3ZuSFIxcWFBRmRxZkVrU0ZydFBrZVRSblZLeWRsTjYzbWE3THFIRVp5dnhMT2ltb3lUYXhGd3RBbXRfei1DNVYxTEduUi1WZnZDM3lmV3dMN2xQZUczV3ZVUnh5a19Da0NkeFRhdmQyTGRPTVE1bmdLeExYc3BEN2tCTG44LWo0dm9FaVM5eWhZM2IyU2t4QQ?oc=5)**
-Fed Minutes, Iran Top Economic News This Week | National News | U.S.
+연준 회의록, 이란 이번 주 주요 경제 뉴스 | 전국 뉴스 | 우리를.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **3. [연준 금리 동결에도 불구하고 미국 재무부 수익률 급등](https://news.google.com/rss/articles/CBMijgFBVV95cUxOc0pnQmNyamZGVFpyb1pfOUhWMlUzdm4zVkYwN2VucEQ5dTBKUjZGa0RQMzQ1ZG5ySTlVRFBnLUZIaEMzRlg3NHRDalFMbEFzZmZpYlY2cldVbHVWamtLVXg3QlRNZ0RIMnp6SDFPV3BNMVRvVzFLV3RQeXFURUI2bTNSUTJZRDA5NUw4aU5B?oc=5)**

@@ -71,5 +71,16 @@ jobs:
       # 이제 파일명 날짜로 대상을 고르고(mtime 무관, 결정적), 스캔 건수가 0이면
       # 스크립트가 실패한다 — 아무것도 보지 않은 검사가 green 을 보고하는 것이
       # 검사가 없는 것보다 나쁘다.
+      # 상한 유도 근거. 이 검사는 advisory 로 시작해 7일 창에서 106건을 보고했고,
+      # advisory 는 아무것도 막지 않았다. 원인은 translate_to_korean 의 fail-open
+      # (실패 시 원문 반환 + DEBUG 로그, 재시도 없음)이고, 재시도만으로 106 → 0 이
+      # 됐다(2026-09-02, scripts/tools/fix_untranslated_body.py).
+      #
+      # 상한 10 은 현재 상태 0 위의 순수 헤드룸이다: 113개 포스트가 도는 7일 창에서
+      # 일시적 누락 몇 건은 통과시키되, 막으려는 회귀(106건)는 확실히 잡는다.
+      # 0 으로 조이지 않는 이유는 자동 커밋 저장소에서 일시적 실패 한 건이 main 을
+      # red 로 만들기 때문이다. 상한이 성립하는 전제는 python-collect 액션의
+      # "Retry translation for untranslated body lines" 스텝이다 — 그 스텝을 빼면
+      # 미번역이 하루 ~15건씩 재축적되어 이 상한은 며칠 안에 터진다.
       - name: Detect untranslated English in post bodies
-        run: python3 scripts/tools/check_untranslated_body.py --days 7
+        run: python3 scripts/tools/check_untranslated_body.py --days 7 --max-findings 10

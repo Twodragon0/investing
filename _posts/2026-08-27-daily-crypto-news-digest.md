@@ -267,7 +267,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 
 ### 🟣 DeFi (13건)
 
-*A new survey finds broad skepticism toward crypto in workplace retirement plans as US policymakers move to expand.*
+*미국 정책 입안자들이 확장을 시도함에 따라 직장 은퇴 계획에서 암호화폐에 대한 광범위한 회의론이 새로운 조사에 나타났습니다.*
 
 
 <div class="news-card-item news-sev-high">
@@ -322,7 +322,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 ## 거래소 공지사항
 
 **1. [Binance Will Support the Corning Incorporated (GLW) and Goldman Sachs Group (GS) Cash Dividend Distribution via bStocks](https://www.binance.com/en/support/announcement/detail/976184f11cda4cfeb7717379177de027)**
-Binance Will Support the Corning Incorporated (GLW) and Goldman Sachs Group (GS) Cash Dividend Distribution via bStocks.
+바이낸스는 bStocks를 통해 Corning Incorporated(GLW) 및 골드만삭스 Group(GS) 현금 배당금 분배를 지원합니다.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **2. [Trade All ZAR, XAF, UGX, MZN and RWF Trading Pairs on Binance P2P with Zero Fees](https://www.binance.com/en/support/announcement/detail/ef169550b5934404a0ae44fcdf9b23f6)**
@@ -330,7 +330,7 @@ Trade All ZAR, XAF, UGX, MZN and RWF Trading Pairs on Binance P2P with Zero Fees
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **3. [Complete Your First USD Deposit to Receive Up to $500 in SPCXB Token Vouchers!](https://www.binance.com/en/support/announcement/detail/1d66621a261040a087497839c5df1882)**
-Complete Your First USD Deposit to Receive Up to $500 in SPCXB Token Vouchers. ($500)
+첫 번째 USD 입금을 완료하고 최대 $500의 SPCXB 토큰 바우처를 받으세요. ($500)
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **4. [Binance Will Add 1 bStocks Tokenized Securities as Collateral Asset - 2026-08-26](https://www.binance.com/en/support/announcement/detail/8837d1a33b97422597c14d38ead5dc82)**

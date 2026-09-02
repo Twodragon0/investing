@@ -262,7 +262,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 
 ### 🔵 규제/정책 (5건)
 
-*The Himalayan nation called for specialist foreign assistance and its finance minister told Reuters it would also.*
+*히말라야 국가는 전문적인 해외 지원을 요청했으며 재무 장관도 그렇게 할 것이라고 Reuters에 말했습니다.*
 
 
 <div class="news-card-item news-sev-medium">

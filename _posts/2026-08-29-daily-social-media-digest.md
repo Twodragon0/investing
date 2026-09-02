@@ -55,7 +55,7 @@ image_alt: "소셜 미디어 동향 - 2026-08-29 - 소셜 미디어 뉴스 요�
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **4. [워시, 미국 금리 인상 의지 시사 - Michael West Media](https://news.google.com/rss/articles/CBMihwFBVV95cUxNTndTWXV3OTZMX2VWeUlwc0FGNGNrUTY0OGxfQ1pnY2JJVkNCMjlNaElrWkttbTlxbmhDWGtXSjZLZU5rRXkycVlScDJSaGFqNVhmS2NKd1ZvYlh5MFM3MjFZS2VnMmYyeGV1d1QxbWx0cmI1M0hTV3VuY2RWbmt5VDFNOFBielk?oc=5)**
-Warsh signals willingness to raise US interest rates Michael West Media
+워시, 미국 금리 인상 의지 표명 Michael West Media
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **5. [1년9개월만에 '기준금리 3% 시대'…한은, 물가 우려에 '백투백' 인상 - 머니투데이](https://news.google.com/rss/articles/CBMia0FVX3lxTFBZQUEtd1dudk1lR2Z5bmdqbkhPLVNQTlpwQkdKWk41cHZLbndCcWFpb2NDc3JqTFJYY2tkSlNFenowZ29kV3VYcmZEbnRDdWxtRFdXRzFsOHpaQzhtS205Vk9iSG9sbXQ1d3B30gFwQVVfeXFMTllnUWFKeFlmSktZVG5oaDhxOXdvS0RNVDAtaDVXVlppSHotYXBienAwM2tST212SnRmdzBzZ0U0MmRkSkgxTWpwQ1NwUktvT2RWWFM3MTZQSWIyUk5YR3hFWDZvLTU0d0JTS0licEotNg?oc=5)**

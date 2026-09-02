@@ -136,6 +136,13 @@ done <<<"$RECENT_POSTS_RAW"
 
 if [[ ${#RECENT_POSTS[@]} -gt 0 ]]; then
   run_py scripts/improve_existing_posts.py --files "${RECENT_POSTS[@]}"
+  # translate_to_korean 은 fail-open 이다 — 실패 시 원문을 돌려주고 DEBUG 로만
+  # 남기므로 일시적 실패 한 번이 영어 원문을 영구히 발행한다. 실측: 7일 창에
+  # 106건이 누적(하루 ~15건)했고 재시도만으로 0건이 됐다.
+  # 이 크론이 09:10 KST 포스팅의 1차 책임이므로, GitHub Actions 쪽
+  # python-collect 액션과 같은 재시도가 여기에도 있어야 post-quality.yml 의
+  # --max-findings 상한이 성립한다.
+  run_py scripts/tools/fix_untranslated_body.py --apply --files "${RECENT_POSTS[@]}"
 fi
 
 echo "$LOG_PREFIX clean translation cache"

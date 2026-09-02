@@ -51,7 +51,7 @@ UAE 대통령 동생, 트럼프 가족 암호화폐 은행 지주사 49% 확보 
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **3. [Trump administration policy changes reduce crypto oversight| Letters - The Newark Advocate](https://news.google.com/rss/articles/CBMi8wFBVV95cUxPUWtWYkVtOUg4M1h4ZHd1RnhhejVCX243OWNGZ0pJb3owMUYwNXYzUWUyR01VYXV3djRRdXV0MTJETHRqMXlVLVphVDB6NHUtdzNUaVlLeWxVS19EMHU1R2lHVld2VHhrZi00Q2xvSGpzRWhpOG02S2RSMkdSc2ZoaHQzdkFTc0JjNElXQ0hqTUtWWGhSRkV5UUY0YkJsczRrTzdBU1Ayd0Q2LURTVWpXVWN2ZVBIN01RNXUyaTVZdV96QTFmc0w3ai1HODR5alU0Y1htQVVoVTFfY0dpZkw4aWYwMmZhblRIR3NXRExFdWs0TWM?oc=5)**
-President Trump profited heavily from crypto last year, and policy changes by his administration aid corruption. Congress should investigate.| Letters
+트럼프 대통령은 작년에 암호화폐로 큰 이익을 얻었으며 그의 행정부 지원 부패로 인해 정책이 변경되었습니다. 의회는 조사해야 한다.| 편지
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 **4. [2026년 Donald 트럼프의 암호화폐 벤처에 대한 최종 가이드 - CoinMarketCap](https://news.google.com/rss/articles/CBMihAFBVV95cUxQZEdDZHF4UTRORFBpSEZCYWVObmlNVXBxMDM4NC1WeEpwUEJocDZQUm91S0tIWE5wNXBILW1qbkRfQzFRa3VnQjVucHh2anNCMlhvTkdvbVZ5MWRTU1hOck5aUXR6WGJSTWtLR0dhb0VVLXQ2Z2Z3c0JaR1RfZ2o5RE1mNlY?oc=5)**
@@ -108,7 +108,7 @@ President Trump profited heavily from crypto last year, and policy changes by hi
 - [영상\ 부동산정책 영향? 이재명 대통령 지지율 취임 후 최저](https://news.google.com/rss/articles/CBMiUkFVX3lxTFBUZTRSeGdMNF9hcVQxeUtYLTMwT2VJUGFqdl9IT0NscUpNaGVmTUxRQkd5c0xmejM2al9qZjcwSXZid2hzRHhBTU1wd2VmTkQtYVE?oc=5) — 이재명 경제정책
  > [주요 이슈 브리핑] ■ 부동산 정책 리스크 본격화: 이재명 대통령 국정 지지율이 42%로 취임 후 최저치를 기록한 가운데, 부정 평가 이유 1위(27%)가 4주 연속 ‘부동산 정책’으로 집계됐다. 정책 신뢰도 하락이 이어지는 국면에서 추가 규제 또는 방향 전환 가능성
 - [Trump administration policy changes reduce crypto oversight| Letters - The Newark Advocate](https://news.google.com/rss/articles/CBMi8wFBVV95cUxPUWtWYkVtOUg4M1h4ZHd1RnhhejVCX243OWNGZ0pJb3owMUYwNXYzUWUyR01VYXV3djRRdXV0MTJETHRqMXlVLVphVDB6NHUtdzNUaVlLeWxVS19EMHU1R2lHVld2VHhrZi00Q2xvSGpzRWhpOG02S2RSMkdSc2ZoaHQzdkFTc0JjNElXQ0hqTUtWWGhSRkV5UUY0YkJsczRrTzdBU1Ayd0Q2LURTVWpXVWN2ZVBIN01RNXUyaTVZdV96QTFmc0w3ai1HODR5alU0Y1htQVVoVTFfY0dpZkw4aWYwMmZhblRIR3NXRExFdWs0TWM?oc=5) — Trump Crypto Policy
- > President Trump profited heavily from crypto last year, and policy changes by his administration aid corruption. Congress should investigate.| Letters
+ > 트럼프 대통령은 작년에 암호화폐로 큰 이익을 얻었으며 그의 행정부 지원 부패로 인해 정책이 변경되었습니다. 의회는 조사해야 한다.| 편지
 
 ### 🔵 규제/정책 (3건)
 

@@ -61,11 +61,11 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-29 - 규제 뉴스 요�
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **3. [SEC: 38 Entities Feigned Legitimacy as U.S. Advisers Through False Filings to Lure Retail Investors](https://news.google.com/rss/articles/CBMi2gFBVV95cUxNa2N2X3VOR2JZR1BjdHZnVUtuRXZxYXp0LWxFczJ5TkgyaWJPM2NhWk8tSjVQYVR1bDVuRGJfSDk0T3Z2alQ2THlFbEtrTU14NXU5eFlKYURPYkUtb1ZJaS02bVc0T3BHUml6bDFhdE9nZFVJSFJ0WXpYWldUb2ZlWHE0YnNPMU1sa2g5cnZ1MTROR2JzQ3FvYl9FbFhQdnk4dndjODBzWWM3eUZYQlpYYVdYWGt0Y21uSXViSDNNckJETzA2aWRjQjR2VGVSb3lZTzhUak9DY0pGZw?oc=5)**
-SEC: 38 Entities Feigned Legitimacy as U.S.
+SEC: 미국처럼 합법성을 가장한 38개 단체
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **4. [FingerMotion Sets Out New Management's Strategic Plan with BlueFlare Energy Solutions.](https://news.google.com/rss/articles/CBMigwFBVV95cUxQS2lWQ05SbXpGVXQ1NEJrRlAteGtrc3NBZ2g2eTZGQUpUMmRoa21fWl9pYzlOVkppeUtBNm1pM0VxTGVwQ1FpV0I0U0R2Nm9kZFZ4OVM2UGFTNmxaS19zSUhQcDZvN3hIck1ZcEtjOFo0SDZhbnBwRlZhUms4cmNFWk5hdw?oc=5)**
-FingerMotion Sets Out New Management's Strategic Plan with BlueFlare Energy Solutions.
+FingerMotion은 BlueFlare Energy Solutions를 통해 새로운 경영진의 전략 계획을 수립합니다.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **5. [연준 위원회는 Banco Popular de Puerto Rico의 전 직원에게 집행 조치를 발부합니다.](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260827a.htm)**
@@ -101,7 +101,7 @@ FingerMotion Sets Out New Management's Strategic Plan with BlueFlare Energy Solu
 ## 3. 아시아 규제 동향
 
 **1. [Councils,The sixth meeting of the Working Group on Corporate Disclosure of the Financial System Council](https://www.fsa.go.jp/en/news/2026/20260904.html)**
-The Working Group on Corporate Disclosure of the Financial System Council will hold its sixth meeting on September 4, 2026 as follows.
+금융시스템협의회 기업공시 실무그룹은 2026년 9월 4일 제6차 회의를 다음과 같이 개최할 예정입니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 **2. [증권,금융상품업무 Q&A 개정 관련](https://www.fsa.go.jp/en/news/2026/20260827/20260827.html)**
@@ -134,7 +134,7 @@ The Working Group on Corporate Disclosure of the Financial System Council will h
  > 미국 증권거래위원회(SEC) — Document
 - [SEC: 38 Entities Feigned Legitimacy as U.S. Advisers Through False Filings to Lure Retail Investors](https://news.google.com/rss/articles/CBMi2gFBVV95cUxNa2N2X3VOR2JZR1BjdHZnVUtuRXZxYXp0LWxFczJ5TkgyaWJPM2NhWk8tSjVQYVR1bDVuRGJfSDk0T3Z2alQ2THlFbEtrTU14NXU5eFlKYURPYkUtb1ZJaS02bVc0T3BHUml6bDFhdE9nZFVJSFJ0WXpYWldUb2ZlWHE0YnNPMU1sa2g5cnZ1MTROR2JzQ3FvYl9FbFhQdnk4dndjODBzWWM3eUZYQlpYYVdYWGt0Y21uSXViSDNNckJETzA2aWRjQjR2VGVSb3lZTzhUak9DY0pGZw?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
- > SEC: 38 Entities Feigned Legitimacy as U.S.
+ > SEC: 미국처럼 합법성을 가장한 38개 단체
 
 ### 🟠 비트코인 (1건)
 
@@ -167,7 +167,7 @@ The Working Group on Corporate Disclosure of the Financial System Council will h
 **주요 동향:**
 - [Councils,The sixth meeting of the Working Group on Corporate Disclosure of the Financial System Council](https://www.fsa.go.jp/en/news/2026/20260904.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
- > The Working Group on Corporate Disclosure of the Financial System Council will hold its sixth meeting on September 4,.
+ > 금융시스템협의회 기업공시 실무그룹은 9월 4일 제6차 회의를 개최할 예정이다.
 - [증권,금융상품업무 Q&A 개정 관련](https://www.fsa.go.jp/en/news/2026/20260827/20260827.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
  > 일본 기업의 주식을 기초자산으로 하는 해외 단일종목 레버리지 ETF의 유통은 일본 증권거래소에 상장된 기초주식의 시장가격 변동을 증폭시켜 일본 금융시장의 가격 형성에 상당한 영향을 미칠 수 있습니다.

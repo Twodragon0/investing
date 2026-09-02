@@ -52,7 +52,7 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-25 - 규제 뉴스 요�
 ## 1. 미국 규제 동향
 
 **1. [cryptex digital market cap etf](https://news.google.com/rss/articles/CBMimAFBVV95cUxPdEtiVHJXZjJSVHNqQzJKd0JmaW5vb0NZclU1WUJQVnQ5bzg4UUlKcHJhWjFobDVqZDJMOWRTdzZVNDJkbFBLNlVvTGhkU25GcS1meEZ2dTRJMWdCdGtZNGNhZ0JaUTRPeGtYbXJTVkZRM1dMSEJuNHNOdUpmNExYVl92dEQ2QnhGS3c5dGZHSFR6X0dkclNyZg?oc=5)**
-cryptex digital market cap etf.
+cryptex 디지털 시가총액 ETF.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 ---
@@ -104,15 +104,15 @@ cryptex digital market cap etf.
 ## 3. 아시아 규제 동향
 
 **1. [Publication,FSA Weekly Review No.700 August 24, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/700.html)**
-This page contains the latest in events, developments, and updates to the FSA website.For files in HTML formats, when you click original press release links, and click the "Language" button on the
+이 페이지에는 FSA 웹사이트에 대한 최신 이벤트, 개발 및 업데이트가 포함되어 있습니다. HTML 형식의 파일의 경우 원본 보도 자료 링크를 클릭하고 화면의 "언어" 버튼을 클릭하세요.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 **2. [Councils,Joint session of the 57th general meeting of Financial System Council and the 45th meeting of Sectional Committee on Financial System](https://www.fsa.go.jp/en/news/2026/20260831.html)**
-Joint session of the 57th general meeting of Financial System Council and the 45th meeting of Sectional Committee on Financial System will be held on August 31, 2026 as follows.
+제57차 금융시스템협의회 총회와 제45차 금융시스템분과위원회 합동회의가 2026년 8월 31일에 다음과 같이 개최됩니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 **3. [Kyber Network Says It’s Not Regulated by Singapore’s MAS. Its Own Contracts Show Why.](https://news.google.com/rss/articles/CBMiWkFVX3lxTFAyOTRBTUZVeUZidTNTVHdFNnQxd2ZxM0pON3c1NXR4Njl4ZFk1NGVXVFJ2dHM2LWtqY1YwSlJtUGdiTEtROC00azdyZVk0Z0QtM1ZWMDVEcXF3dw?oc=5)**
-Kyber Network Says It’s Not Regulated by Singapore’s MAS.
+Kyber Network는 싱가포르 MAS의 규제를 받지 않는다고 밝혔습니다
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
 ---
@@ -157,7 +157,7 @@ Kyber Network Says It’s Not Regulated by Singapore’s MAS.
 **주요 동향:**
 - [cryptex digital market cap etf](https://news.google.com/rss/articles/CBMimAFBVV95cUxPdEtiVHJXZjJSVHNqQzJKd0JmaW5vb0NZclU1WUJQVnQ5bzg4UUlKcHJhWjFobDVqZDJMOWRTdzZVNDJkbFBLNlVvTGhkU25GcS1meEZ2dTRJMWdCdGtZNGNhZ0JaUTRPeGtYbXJTVkZRM1dMSEJuNHNOdUpmNExYVl92dEQ2QnhGS3c5dGZHSFR6X0dkclNyZg?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
- > cryptex digital market cap etf.
+ > cryptex 디지털 시가총액 ETF.
 - [국내-해외상장 ETF간 비대칭 규제 해소를 위한 단일종목 레버리지 상품(ETF·ETN) 관련 설명](https://www.fsc.go.kr/no010102/87552)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도참고</span>
  > 국내-해외상장 ETF간 비대칭 규제 해소를 위한 단일종목 레버리지 상품(ETF·ETN) 관련 설명.
@@ -184,7 +184,7 @@ Kyber Network Says It’s Not Regulated by Singapore’s MAS.
 **주요 동향:**
 - [cryptex digital market cap etf](https://news.google.com/rss/articles/CBMimAFBVV95cUxPdEtiVHJXZjJSVHNqQzJKd0JmaW5vb0NZclU1WUJQVnQ5bzg4UUlKcHJhWjFobDVqZDJMOWRTdzZVNDJkbFBLNlVvTGhkU25GcS1meEZ2dTRJMWdCdGtZNGNhZ0JaUTRPeGtYbXJTVkZRM1dMSEJuNHNOdUpmNExYVl92dEQ2QnhGS3c5dGZHSFR6X0dkclNyZg?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
- > cryptex digital market cap etf.
+ > cryptex 디지털 시가총액 ETF.
 - [보이스피싱 범죄조직 핵심 가담자 효과적 검거를 위한 사법협조자 형벌감면제도가 도입됩니다. 「통신사기피해환급법」 개정안 국회 본회의 통과(‘26.8.20.)](https://www.fsc.go.kr/no010101/87571)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
  > 보이스피싱 범죄조직 핵심 가담자 효과적 검거 를 위한 사법협조자 형벌감면제도 가 도입됩니다.

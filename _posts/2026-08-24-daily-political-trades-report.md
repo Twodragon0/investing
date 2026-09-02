@@ -27,16 +27,16 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-24 - 정치인 거래 �
 ## 전체 뉴스 요약
 
 - 2026-08-24 정치권 핵심 이슈: Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold - 24/7. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 13건 (미국 의회 거래 2건, 중앙은행…
-- 1. Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold - 24/7 Wall St. President Trump's accounts executed more than 1,000 trades in a…
+- 1. 트럼프는 빠른 속도로 주식 거래를 계속합니다: 버크셔 매입, 메타 매도 - 24/7 Wall St. 회장 트럼프의 계좌는 한 해 동안 1,000건 이상의 거래를 실행했습니다.
 
 ## 1. 미국 의회 거래 동향
 
 **1. [Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold - 24/7 Wall St.](https://news.google.com/rss/articles/CBMitgFBVV95cUxOM0Y2R2FLM1FEY0FYdFRhMjAtd2d1ck1taGVfTUdZOVF2VzlfV1dJS2JYcGxuQW9hWUc0OEE1NXJTbEpkVnFVU2VpVWdjQkhTQWRPWG9vNkVsZDVmUUZyU2JKajNPS1V3YWc0UGg3aXZiRkM4ODMzd3ZDaHhfS3c0V1BOTlJubjF2MVpraE45QWw5dFdIaGFIamtQb2VDVEVwZmZZQ3h3XzZ0azJYelFpTk1TeE9ydw?oc=5)**
-President Trump's accounts executed more than 1,000 trades in a single month, including moves in a major defense contractor timed suspiciously close to a surprise geopolitical agreement, and Congress
+트럼프 대통령의 계정은 한 달에 1,000건 이상의 거래를 실행했습니다. 여기에는 주요 방산업체의 움직임이 의심스러울 정도로 놀라운 지정학적 합의에 가까워진 시점과 의회가 포함됩니다.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **2. [Trump made more than 1,000 trades in June totaling millions, financial disclosures reveal - Yahoo News New Zealand](https://news.google.com/rss/articles/CBMib0FVX3lxTE5BVER2cHhSeXQtVHFoazJwMEFGRGw1T0laeVY1dzU2RGMzWktMUUVMSVpjYVh0Z2RmMDNzUGIyTjg4a3hrcTZjVC1zLTRBZXdDY002R3cwdGpVQmpJeWprbTNVYmlUSGpQWkVHR21BUQ?oc=5)**
-Trump’s trades in June come as Congress debates stock-trading ban
+트럼프의 6월 거래는 의회가 주식 거래 금지를 논의하는 가운데 이루어졌습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 ## 2. 중앙은행 정책 동향

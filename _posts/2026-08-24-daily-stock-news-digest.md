@@ -152,7 +152,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-24 - 주식 뉴스 요약 이�
 
 ### 🟠 비트코인 (6건)
 
-*Stocks posted weekly losses after a bond sell-off this week put pressure on tech and AI stocks.*
+*주식은 이번 주 채권 매도 이후 주간 손실을 기록하여 기술 및 AI 주식에 압력을 가했습니다.*
 
 
 <div class="news-card-item news-sev-medium">

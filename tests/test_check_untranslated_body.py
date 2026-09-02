@@ -168,3 +168,31 @@ class TestWorkflowWiring:
 
     def test_untranslated_check_uses_the_script(self):
         assert "check_untranslated_body.py" in self._run_bodies(self.WORKFLOW)
+
+    def test_untranslated_check_is_not_advisory_only(self):
+        """Advisory reported 106 findings on the 7-day window and blocked
+        nothing. Without ``--max-findings`` the step is a report, not a gate."""
+        assert "--max-findings" in self._run_bodies(self.WORKFLOW), (
+            "상한이 사라졌다 — 검사가 다시 advisory 로 돌아가 회귀를 통과시킨다."
+        )
+
+
+class TestCollectorRetryWiring:
+    """The cap in ``post-quality.yml`` only holds because the collector retries.
+
+    ``translate_to_korean`` is fail-open with no retry, so untranslated lines
+    re-accumulate at roughly 15/day. Remove the retry step and the cap of 10
+    fails within days — these two changes are load-bearing for each other.
+    """
+
+    ACTION = Path(__file__).resolve().parent.parent / ".github" / "actions" / "python-collect" / "action.yml"
+
+    def test_action_retries_translation_on_created_posts(self):
+        import yaml
+
+        cfg = yaml.safe_load(self.ACTION.read_text(encoding="utf-8"))
+        bodies = "\n".join(str(step.get("run", "")) for step in (cfg or {}).get("runs", {}).get("steps") or [])
+        assert "fix_untranslated_body.py" in bodies, (
+            "번역 재시도 스텝이 사라졌다 — post-quality.yml 의 --max-findings 상한이 곧 터진다."
+        )
+        assert "CREATED_POSTS_MANIFEST" in bodies, "재시도는 매니페스트가 고른 신규 포스트만 대상으로 해야 한다"

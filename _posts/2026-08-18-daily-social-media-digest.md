@@ -55,7 +55,7 @@ Donald 트럼프 Crypto Summit 신호 CLARITY Act 조치 — 4 AI 모델은 비�
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 **4. [Nykredit 전략가는 "불분명하고, 일관되지 않으며, 일관성이 없습니다:" Warsh 하에서 연준 신뢰성이 의심스럽다고 말합니다. - AMWatch](https://news.google.com/rss/articles/CBMib0FVX3lxTE1QYUhTSUhSdkdlX205OTF4UWNKUTBHWkZKRHVQUDd0OHJWcGtZVHhTNEZSMGxqQzRIUHF4T3kxOWdndHl4b3M5eDdsNGo4eFVVMVlOeDlVcThucFUxUmxDRDBFM1E1RVlXNFJkWTFfRQ?oc=5)**
-The Fed voted 9-3 to hold rates at a target rate of 3.5-3.75% at July’s meeting, with the Federal Open Market Committee’s meeting minutes due…
+연준은 7월 회의에서 목표 금리를 3.5-3.75%로 유지하기로 9-3으로 투표했으며, 연방공개시장위원회 회의록 마감일이…
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **5. [연준 동결 신호에도 불구하고 미국 장기 수익률 급등](https://news.google.com/rss/articles/CBMijgFBVV95cUxNMS1MZ0dIZnJIbnV0RmhUbWhMa2hJSUxTWkZuT1BfVEtXeEtEZnlQbmNBSWttdDJGLS1yamlyTFFUTUIwbzVkbk1PQnV0dnlmaVEzUmNiU3RrT2NKREgyMGQwWXozNEtrWnl0NGFZaTVRVmRjSm1hMVBJQmF3WlVQVkczYmQwcUs4eVhtcnJR?oc=5)**
@@ -93,7 +93,7 @@ The Fed voted 9-3 to hold rates at a target rate of 3.5-3.75% at July’s meetin
 전체의 63%로 압도적 비중을 차지합니다. 주요 출처: 한국은행 금리정책(10건), Fed Policy(2건).
 
 - ["Unclear, incoherent, inconsistent:" Fed credibility in doubt under Warsh, says Nykredit strategist - AMWatch](https://news.google.com/rss/articles/CBMib0FVX3lxTE1QYUhTSUhSdkdlX205OTF4UWNKUTBHWkZKRHVQUDd0OHJWcGtZVHhTNEZSMGxqQzRIUHF4T3kxOWdndHl4b3M5eDdsNGo4eFVVMVlOeDlVcThucFUxUmxDRDBFM1E1RVlXNFJkWTFfRQ?oc=5) — Fed Policy
- > The Fed voted 9-3 to hold rates at a target rate of 3.5-3.75% at July’s meeting, with the Federal Open Market Committee’s meeting minutes due.
+ > 연준은 7월 회의에서 3.5-3.75%의 목표 금리로 금리를 유지하기로 9대3으로 투표했으며, 연방공개시장위원회 회의록이 마감되었습니다.
 - [U.S. Long-Term Yields Surge Despite Fed Freeze Signals](https://news.google.com/rss/articles/CBMijgFBVV95cUxNMS1MZ0dIZnJIbnV0RmhUbWhMa2hJSUxTWkZuT1BfVEtXeEtEZnlQbmNBSWttdDJGLS1yamlyTFFUTUIwbzVkbk1PQnV0dnlmaVEzUmNiU3RrT2NKREgyMGQwWXozNEtrWnl0NGFZaTVRVmRjSm1hMVBJQmF3WlVQVkczYmQwcUs4eVhtcnJR?oc=5) — Fed Policy
  > 연준 동결 신호에도 불구하고 미국 장기 수익률 급등 Warsh의 소극적 입장, 미국 재정 ​​불안정으로 인해 채권 매각이 발생하여 한국에 영향
 - [가계 빚 2천조 원 돌파.금리 인상에 부실관리 시급 - YTN](https://news.google.com/rss/articles/CBMiXkFVX3lxTE9EN2thUWVtVkdhRHE5NkFDSG42MTI4Q2RRdTk3bGlkYVhDYWQ2b3FrWEdFVTg4MmVyY1o3TkVrbzI5QVFvT0QxUUp6QVo2aFRuX1NoM0VWVjVoSE9Bdnc?oc=5) — 한국은행 금리정책

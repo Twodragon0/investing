@@ -155,7 +155,7 @@ image_alt: "일일 뉴스 종합 요약 - 2026-08-30 - 시장 분석 뉴스 요�
 
 **주요 규제 이슈:**
 - FingerMotion, BlueFlare Energy Solutions를 통해 새로운 경영진의 전략 계획 수립
-- CFTC Orders Gabriel Perez to Pay $172,000 for Insider Trading of Mention Market Event Contracts
+- CFTC은 Gabriel Perez에게 멘션 마켓 이벤트 계약의 내부자 거래에 대해 $172,000를 지불하도록 명령합니다.
 - 보도자료 - 금융위원회
 
 [상세 보기](https://investing.2twodragon.com/regulatory-news/2026/08/30/daily-regulatory-report/)
@@ -170,9 +170,9 @@ image_alt: "일일 뉴스 종합 요약 - 2026-08-30 - 시장 분석 뉴스 요�
 ### 보안 리포트 (2건)
 
 **주요 보안 이슈:**
-- Trump-promoted brand touts GOLD before token collapse
+- 트럼프-프로모션 브랜드는 토큰이 붕괴되기 전에 GOLD를 홍보합니다.
 - OneKey는 오래된 Ledger 이더리움 앱에 대한 거래 대체 공격을 재현합니다
-- The Sandbox pledges 1:1 repayment after $700K bridge exploit
+- 샌드박스는 $700,000 브릿지 익스플로잇 후 1:1 상환을 약속합니다.
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -187,7 +187,7 @@ image_alt: "일일 뉴스 종합 요약 - 2026-08-30 - 시장 분석 뉴스 요�
 **화제 토픽:**
 - UAE 대통령 동생, 트럼프 가족 암호화폐 은행 지주사 49% 확보 : 경제 - 재경일보
 - 영상\ 부동산정책 영향? 이재명 대통령 지지율 취임 후 최저
-- Trump administration policy changes reduce crypto oversight| Letters - The Newark Advocate
+- 트럼프 관리 정책 변경으로 암호화 감독 감소| 편지 - 뉴어크 옹호자
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/08/30/daily-social-media-digest/)
 
@@ -313,18 +313,18 @@ image_alt: "일일 뉴스 종합 요약 - 2026-08-30 - 시장 분석 뉴스 요�
 
 **해킹** (11건 연관)
 - 샌드박스는 $700,000 브릿지 익스플로잇 후 1:1 상환을 약속합니다
-- Ajna V2 exploit: Liquidation Logic Flaw
+- Ajna V2 악용: 청산 논리 결함
 - Avici 악용: 출금 논리 결함
 - Moonwell 대출 악용: 현물 가격 조작
 
 **트럼프** (7건 연관)
-- Trump-promoted brand touts GOLD before token collapse
+- 트럼프-프로모션 브랜드는 토큰이 붕괴되기 전에 GOLD를 홍보합니다.
 - UAE 대통령 동생, 트럼프 가족 암호화폐 은행 지주사 49% 확보 : 경제 - 재경일보
-- Trump administration policy changes reduce crypto oversight| Letters - The…
+- 트럼프 관리 정책 변경으로 암호화 감독 감소| 편지 - 그…
 - 2026년 Donald 트럼프의 암호화폐 벤처에 대한 최종 가이드 - CoinMarketCap
 
 **금리** (7건 연관)
-- Councils,The sixth meeting of the Working Group on Corporate Disclosure of the…
+- 이사회, 기업 공시 실무 그룹의 여섯 번째 회의…
 - FingerMotion, BlueFlare Energy Solutions를 통해 새로운 경영진의 전략 계획 수립
 - 나경원 “한은 금리 올리는데 정부는 820조 슈퍼 예산…기형적 충돌”
 - 사설\ 한은 연속 금리 인상, 침체에 빠진 지역 경제는 어쩌나

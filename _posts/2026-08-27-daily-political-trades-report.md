@@ -27,82 +27,82 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-27 - 정치인 거래 �
 ## 전체 뉴스 요약
 
 - 2026-08-27 정치권 핵심 이슈: Nancy Pelosi Discloses Big Investment in This AI Energy Play. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 36건 (미국 의회 거래 3건, SEC 내부자 거래 15건, 트럼프 정책…
-- 1. Nancy Pelosi Discloses Big Investment in This AI Energy Play Nancy Pelosi Discloses Big Investment in This AI Energy Play Barron's
+- 1. Nancy Pelosi는 AI 에너지 플레이에 대한 대규모 투자를 공개합니다. Nancy Pelosi는 AI 에너지 플레이에 대한 대규모 투자를 공개합니다. Barron's
 
 ## 1. 미국 의회 거래 동향
 
 **1. [Nancy Pelosi Discloses Big Investment in This AI Energy Play](https://news.google.com/rss/articles/CBMifkFVX3lxTE9lVmZaUVBDdm9QNDR5M3lwQTNVdmxJS2c4ckJZVGRvVlFyRkw4X2tsY1p2Y0d5MFRaVi15ZlJNQjZQNzVRS2EzV2ZOMjZBcV9ES2Z5RDZUb3R2V1dKYllnUXBnX1FRRVc5UmVpMFNnMDRDaUFHVjU2Q0M5SDB6UQ?oc=5)**
-Nancy Pelosi Discloses Big Investment in This AI Energy Play Barron's
+Nancy Pelosi는 AI 에너지 플레이 Barron's에 대한 대규모 투자를 공개합니다.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **2. [Pelosi Family Makes First Bet on AI Power Stocks, Spending Millions to Build Bloom Energy Position - finance.biggo.com](https://news.google.com/rss/articles/CBMidkFVX3lxTFB5ZGdfUlVLeFRFeDRyaV94WEw2X2dQbV9xZmRtc3JBVGNoVk9DZkhoQXBSc0kzQjVTT29Ydm1xeGgyYW93dmdqZmVBN2xGbjNMZVZvdWQ5N1E1dEhFUGxSUzVob2VVUjNtS2tkZVo3cFZYRG1RUmc?oc=5)**
-Pelosi Family Makes First Bet on AI Power Stocks, Spending Millions to Build Bloom Energy Position finance.biggo.com
+Pelosi 가족, AI 전력주에 첫 번째 베팅, Bloom Energy 포지션 구축을 위해 수백만 달러 지출 Finance.biggo.com
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **3. [U.S. Rep. Michael Rulli misses deadlines to disclose stock transactions](https://news.google.com/rss/articles/CBMiekFVX3lxTE80LU9mN0JYNHBCamJOUUtUQkc0RWJHaXl0aE94NGRjQmxXM2NuVFpZemZWQ0xka2puOXFJamsxU3RMT2JpbnI3cUNIOGxQSGlTOGlNbTR4alJlVFNoTGU1QV82cEF0a1IxSGJJcEpmWmxEaG9veTllbTdn?oc=5)**
-U.S. Rep. Mike Rulli missed the deadline to disclose 31 stock purchases or sales he made from late 2024 to July 2026.
+마이크 룰리(Mike Rulli) 미국 하원의원은 2024년 말부터 2026년 7월까지 31건의 주식 매입 또는 매각 내역을 공개해야 하는 마감일을 놓쳤습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 ## 2. 트럼프 행정명령/정책
 
 **1. [Trump signs executive order banning foreign equipment from US grid - Daily Finland](https://news.google.com/rss/articles/CBMirwFBVV95cUxPUGozTTZBcTZVdS1LbGtZcmdORGVZQUI0dHpfQ19zUDBsaE5VTG1FR1M1dHQ0ejVaVklqUmlHUzd0QUJkU3VsOG1CQmdKOHFYOHo1ZllSeDZnZjNWQ1pCT2tFQ25oMi1TVGk2ZWVZeDB5VG40RFBNLVhYN0tERExHT3pFNUV1MTBfTE9qWTEwVUdwYVhsVE5SLXdzTnEtYjBCOFlSU3hYNVJxMnlKZ0FV?oc=5)**
-US President Donald Trump declared a national emergency over what his administration said were vulnerabilities in the country's bulk-power system,
+도널드 트럼프 미국 대통령은 자신의 행정부가 국가의 대량 전력 시스템에 취약점이 있다고 말한 것에 대해 국가 비상사태를 선포했습니다.
 <span class="source-tag" data-source-type="default">Trump EO Economy</span>
 
 ## 3. SEC 내부자 거래 (Form 4)
 
 **1. [Xos (XOS) insider reports latest share transactions in new SEC filing - Stock Titan](https://news.google.com/rss/articles/CBMiogFBVV95cUxNVzVIWkIwUlRObHJ5MUhGdG1mcG02Q0JENGZ6Y1FkaE1KUnNuTExBYWxMRXVoTmZpbEI0a3NqZ1Zaa2xLZWFNdkNfTmRSV0VIdlhkalBaZUYzZXRtSi15RlV2d1VINVZTX1p2MVotSnJpdkRoa2lkc2xFWl9kOVVlYm95bnVFazJvZXYwdW5qSEpjWFRFLXVSMU02X2lFQVp3T2c?oc=5)**
-Xos, Inc.(symbol: XOS) is the issuer of record for a Form 4 filing submitted to the SEC.
+Xos, Inc.(기호: XOS)는 SEC에 제출된 Form 4 서류에 대한 기록 발행인입니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **2. [Nu Holdings (NU) insider logs new share transaction - Stock Titan](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTWcwSDdJbVdEVHlZU3BUaWNhYWZQWEwyV2d5U2JJczBtT0g4V3RLMkRwOE9QUFQ0TVhOSWJPb2pXWEtSeU9lcVRRNkxicXMtWDYtb05TWllad01aTzl5cHU1czktMC1HYUFtQkJtRFB3MWpRdnQ3eG1Ub2QzWHVVMDEwWlA2Q0ZiaWVVZkYyMmQ0R0JQb29WTDlUYzJ3d2g3ZENJNzdaNjE1Y2c?oc=5)**
-An insider at Nu Holdings reports a stock transaction in a Form 4 filing, updating the SEC on changes in company share ownership and holdings.
+Nu Holdings의 내부자는 Form 4 서류에 주식 거래를 보고하고, 회사 주식 소유권 및 지분 변동에 대한 SEC을 업데이트합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **3. [Genco Shipping (NYSE: GNK) logs new insider trades - Stock Titan](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNT1NfZXVFTFI3aGxxeW9jNnh1dEpjNzVHQ201U0MtSzBBOHUyS01mRlpBSDduNFBHRWtzUmc0dXVnYXQ5Tzg4MUJiTng0UTFtd20teE1tUHltOVVFLXQ3YWN4Q2RPX1pTSFdmM1diZFdTSFU5UEhBWktncGFxaFdwcHhxS3lMTFlWeEtGeUJkTGRTNE51LVpHaXF1cjZzNl9UYzBiWHltX1FjZTNsRXR5VDdvMDVzRTlYbElN?oc=5)**
-Genco Shipping (NYSE: GNK) logs new insider trades Stock Titan
+Genco Shipping(NYSE: GNK)은 Stock Titan에 새로운 내부 거래를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **4. [GeoPark (GPRK) insider details latest share trades - Stock Titan](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYkdTYkpFOXRkQThUTUluRWxOamNfSGwxalpxdThMbDJOZEI2bU5JaHhEaTZ2eGl2WUVrVUh4YzdKX0lsWnJZcmVXQU5KMWl2Q0pyRFZoX1kzVVhzRWlmUnc2TXI3aU8ySlQtZmk5WjV5bXBNTS1iRXZmWnRaWDdMWUlrZzE5Z1VpMjEtdVZyNGc2aWk1MXZRVjA1a2RlWnRWSDA2dmk0UE9XUQ?oc=5)**
-GeoPark (GPRK) insider details latest share trades Stock Titan
+GeoPark(GPRK) 내부자 세부 최신 주식 거래 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **5. [ReNew Energy Global (RNW) insider trades in latest filing - Stock Titan](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQclhYQ1FTb1dXX1V5dERXQTMwRlAwTWZQWXJwbFZWa0VGeFJlSlJ2U2RsSGVOeUlTQTBNOXNtR2taR0tFZlBtM2NJbTN0QWJFUy1obkNiU2tKOWUyS1puMnQ2OEJ1MjVWNUpYeVFoQzc0MTAzWFZSRERaN0FZRUo3LUhCdDhGcV9YR3o1UWZIanVZbzJiLXhUR3YtTjJTdFBOcm1DME9HLW5vUFFvXzYyVFVfU005ZlA5?oc=5)**
-ReNew Energy Global (RNW) insider trades in latest filing Stock Titan
+ReNew Energy Global(RNW) 내부자는 최신 서류 Stock Titan에서 거래합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **6. [Aqua Metals (NASDAQ: AQMS) records insider trade filing - Stock Titan](https://news.google.com/rss/articles/CBMirgFBVV95cUxPcktjN1FmM0hQMDl5Q3lYMEQwZGpSRG8zOUVJQUVWRUlFRVA5WC16dG9ZbVlRdl8wVTdPZE0wd3JJT3Y2c0VVSmk1bGdzR2hubFpHYlFmYnFWM0ZqTHlJMkZvZURJS2liMmxHY25ZNE5xNlVCTjZiNl84ZGU2M2tzRHZ4QVg5UUd0MVZRTUlKU25VTHJ5bHhwRThBaW92Vm5MNzQzejVLX0VuSUIyRVE?oc=5)**
-Aqua Metals (NASDAQ: AQMS) records insider trade filing Stock Titan
+Aqua Metals(나스닥: AQMS)는 내부자 거래 신고 Stock Titan을 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **7. [Eos Energy (NASDAQ: EOSE) logs new insider share trades - Stock Titan](https://news.google.com/rss/articles/CBMivAFBVV95cUxNWUdHaFhGVFRMSHlMNWVfVnFvSjU3dXBjMHNtZVlMUUhxTFhyUXdhOUlyTWU2RDJhMWFsS25XT0IwbGpIMERxNkRDMUNRU2gxX05CWEdDYTAtVk5FUFdwWGZEaXA1TVB1Q0pZWGRfLVpMQlRVZzBiajJ6LTVyWEliMDFvQjZETks3QlFYR2NzWGxaUFBOVGsxR2t3aDg3YjdfSXF3SFpBa2ZKUkVJWVFrLTZfaXRnSWYtMWZlcw?oc=5)**
-Eos Energy (NASDAQ: EOSE) logs new insider share trades Stock Titan
+Eos Energy(나스닥: EOSE)는 Stock Titan에 새로운 내부 주식 거래를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **8. [Strategy Inc (MSTR) director sells 3,700 shares at $122–$127 - Stock Titan](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRzlLbFA1ajRMbUpEUlNaMHdoOXFhT2txbTBCVnNORTU3bFlwWEROR01mWlNmQnloajNHSTFaZHBkb0xEZnRUWXpvUTNhYURaMzFhcUE4MzBBS1NJMmtyVVd4cFNWNEF5ZlRXbEp6OXFNcUVHUVJhSS1yekMtM2VKZnlXWFpsS1BKc0RoT0UxdVVlLVRlNnFsWWRheDFGdDYtR1d1dXpNdW9WQQ?oc=5)**
-Strategy Inc (MSTR) director sells 3,700 shares at $122–$127 Stock Titan
+Strategy Inc(MSTR) 이사는 Stock Titan $122–$127에 3,700주를 판매합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **9. [Wealthfront Corp (NASDAQ: WLTH) reports insider stock trades - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxQWVk2c0lPSjhDNVFvSXM3LWtMQTZ2RzZ1MlFqWm1iaThEZzYxd1g1aGZKSWhzWXd2Q1hvaFFudHk5S2I1ZzZQRTZTYlFIRUlmeTV0b2s4T3ZjWWx5NVlRek9KMWxjWWlpejJDQ2NvaGlqZWRWbDNreVZqQUZ3QmhDc0d2eWxDX0NzU1pDY0FjZ1ZnMmNlR1V6YlBtTnViWmRxUU5fMEdSM3BvdjZrNVZr?oc=5)**
-Wealthfront Corp (NASDAQ: WLTH) reports insider stock trades Stock Titan
+Wealthfront Corp(나스닥: WLTH)는 Stock Titan에 내부 주식 거래를 보고합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **10. [Light & Wonder (LNWO) CFO gains 879 shares on RSU vesting - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxNMzduWHhGbldqOVFNNlRTTDhERzVzeTRCdHBfanNYb2FTdndoNk9ERGJHRkNqOGZYUExNQ2l3bHZPMm5NX0UybWEyMVpRN3BXV0hCcjBoT3FDd0lYLUVsTmVKM0dEdHpUZ0o0YVdzeWhMalI5bkVreHI3aUZnUXBRakE3Mmh1V3ZHc3U5djV3QkhnTHZreGt6V0xrZDROX0FTd1hSVUdheS1RZXFlWHJj?oc=5)**
-Light & Wonder (LNWO) CFO gains 879 shares on RSU vesting Stock Titan
+Light & Wonder(LNWO) CFO은 Stock Titan RSU 베스팅에서 879주를 얻습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 ## 4. 중앙은행 정책 동향
 
 **1. [‘Honeymoon’s Over’: Warsh Under Pressure as Fed Weighs Raising Rates](https://news.google.com/rss/articles/CBMijAFBVV95cUxQdlYtdVJDU0FtRVMzTE16TWhHYWZ4bGNWSmxoNVJGdTRoc2t0UktWSEVJblJudGhRd3ZVOGFrcU5jM0tpaEJnX3lNZnBwSUZCRFJaLWRPSThpdHg1bjd6WFZJNURnTDZtUEhDZGVoUnBnbHROQ3h4ZkJtb21tblBRRHNEVHVGVTJoeUoxRA?oc=5)**
-‘Honeymoon’s Over’: Warsh Under Pressure as Fed Weighs Raising Rates The New York Times
+'신혼여행은 끝났다': 연준이 금리 인상에 무게를 두면서 압력을 받고 있는 Warsh The New York Times
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **2. [Will Fed Chair Warsh actually say anything in his big Friday speech?](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUlpvVjBmNkEtR3pXNE1kQzRLOGFSSmgtLTNGXzlnRE52OU41TXJyTmlsQXhrZC1oc1B5T1JkYnZOdzA5YWdYdV9SZDBLZEJ3WktZaXAxbkNabE1RYzNCSlMyOWRWOXhXVk9tV2RCMFhlU1VDYjVKQUJYX0R6cFpQQTh2LVAzS3ZNVWVmcjlhekFBWFpzaGg0SGM4LVgzUE4xeHJvT0ZHYXJJdw?oc=5)**
-Warsh has said that he doesn't want to forecast what the Fed plans to do.
+Warsh는 연준이 무엇을 할 계획인지 예측하고 싶지 않다고 말했습니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **3. [Four regional Fed banks sought discount rate hike ahead of July FOMC hold - investingLive](https://news.google.com/rss/articles/CBMitAFBVV95cUxPclpET2xlNTRVelhjZ294WEpEVDVqYkVfRXo5Tk54VU1BcmZSTF9VcmtVWEEwRUszTkwwZDFXV05hMlJIRFpFcjNIdURXN2tzck9WbXJ5Z2tqbXpQS1UxTzRLYWhtd1BsS1ZDbHVBRm9iMnFYQ1haNFhMXzY0U1F0Nlh6WGtpZkw2RTMxdEM0M1R1T1JXcTRKbXhxWmZBd3N6ODBYcVJvaG5qWEwzSnpDbVJBVWc?oc=5)**
-Reuters reports minutes from the Fed's discount rate meetings show directors at four of its twelve regional banks, Dallas, Cleveland, Minneapolis and Kansas…
+Reuters는 연준의 할인율 회의 회의록에 12개 지역 은행 중 댈러스, 클리블랜드, 미니애폴리스, 캔자스 등 4개 지역 은행의 이사들이 참석했다고 보고합니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **4. [7·8월 이어 기준금리 오를까…한은 오늘 드디어 결정](https://news.google.com/rss/articles/CBMiWkFVX3lxTE43cHNYcjdlbElmSTJhT2VRVVo2OXcxRzljN1oyanZOOXY2X0xRd0w4VklyOFVlNW1RTjlSREdjRG8wVkQ4bjdjcTBuZGJUcFk3REEyQVVlNllqZw?oc=5)**

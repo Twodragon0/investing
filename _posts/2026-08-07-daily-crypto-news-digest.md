@@ -109,7 +109,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-07 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (20건)
 
-*Ashkelon couple indicted for allegedly spying for Iran in exchange for cryptocurrency Yahoo*
+*암호화폐 Yahoo를 대가로 이란을 염탐한 혐의로 기소된 Ashkelon 부부*
 
 
 <div class="news-card-item news-sev-medium">
