@@ -496,3 +496,58 @@ class TestSanitizeSummaryBullets:
         new, changed = iep.sanitize_summary_bullets(body)
         assert changed is False
         assert new == body
+
+
+# ---------------------------------------------------------------------------
+# rebuild_low_quality_metadata — excerpt must keep a content signal
+#
+# `_layouts/post.html` renders `page.excerpt` as the visible 요약 section and
+# `scripts/check_post_summary.py` fails a post whose summary carries no number,
+# proper noun, or headline lead-in.
+#
+# This script runs inside `.github/actions/python-collect` ("Improve quality for
+# newly generated posts"), on every file newer than the collection marker — which
+# includes posts merely rewritten by `backfill_post_summaries.py`. On 2026-09-01
+# that path reverted PR #1259's excerpt backfill on
+# `_posts/2026-08-27-daily-geopolitical-risk-report.md` (commit 6880034f5) and
+# left main failing `check_post_summary`: the rebuild prefers
+# `_extract_description(body)` over the description, and the body's first
+# scannable paragraph was a section intro that states no fact.
+# ---------------------------------------------------------------------------
+
+
+class TestRebuiltExcerptKeepsSignal:
+    _SIGNAL_FREE_BODY = (
+        "**2026-08-27** 지정학 핵심 이슈: **Conflict With Iran** (Google News).\n\n"
+        "## 1. 예측 시장 동향\n\n"
+        "글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. "
+        "거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.\n"
+    )
+    _DESCRIPTION = (
+        "핵심 이슈: Conflict With Iran - Global Conflict Tracker. "
+        "총 48건 (15 Polymarket / 30 GDELT / 3 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
+    )
+
+    def _rebuild(self, excerpt: str) -> str:
+        fm = {
+            "title": '"지정학 리스크 리포트 - 2026-08-27"',
+            "categories": "[worldmonitor]",
+            "description": f'"{self._DESCRIPTION}"',
+            "excerpt": f'"{excerpt}"',
+        }
+        iep.rebuild_low_quality_metadata(fm, self._SIGNAL_FREE_BODY)
+        return iep._strip_wrapping_quotes(fm["excerpt"])
+
+    def test_rebuilt_excerpt_is_not_signal_free(self):
+        """An ASCII-heavy excerpt is rebuilt — but not into a fact-free intro."""
+        from common.summary_quality import has_positive_signal
+
+        rebuilt = self._rebuild(
+            "핵심 이슈: Conflict With Iran &124; Global Conflict Tracker - Council on Foreign. 총 48건 (15 Polymarket…"
+        )
+        assert has_positive_signal(rebuilt), f"rebuilt excerpt lost every content signal: {rebuilt!r}"
+
+    def test_signal_carrying_excerpt_is_left_alone(self):
+        """Guard against over-correction: a good excerpt must not be touched."""
+        good = "총 48건 (15 Polymarket / 30 GDELT / 3 뉴스), 주요 테마: 기타 지정학, 군사/분쟁."
+        assert self._rebuild(good) == good
