@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-30 | 시총 $2.60T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Zcash</strong> (ZEC): -4.06%</li><li>🔴 <strong>Ethereum</strong> (ETH): -3.03%</li><li>🔴 <strong>Chainlink</strong> (LINK): -2.80%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

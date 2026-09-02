@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-06 | BCH -3.6% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -3.62%</li><li>🟢 <strong>Monero</strong> (XMR): +2.75%</li><li>🔴 <strong>Dogecoin</strong> (DOGE): -2.52%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

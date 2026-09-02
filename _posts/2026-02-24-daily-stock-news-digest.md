@@ -36,6 +36,7 @@ permalink: "/stock-news/2026/02/24/daily-stock-news-digest/"
 </div>
 
 
+
 ## 전체 뉴스 요약
 
 - 한국 증시는 KOSPI 5,936.78 (+1.74%)으로 마감했습니다.
