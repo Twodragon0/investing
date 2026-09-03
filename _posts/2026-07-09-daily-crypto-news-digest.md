@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.coindesk.com/policy/2026/07/08/citadel-drops-u-s-portofino-suit-seeks-bankruptcy-order-against-firm-s-founder-in-uk">Citadel은 전 직원에 대한 파산 명령에 초점을 맞추기 위해 다년간의 암호화폐 소송을 포기했습니다.</a> <span class="p0-desc">600만 파운드에 달하는 런던 중재 판정을 받은 후 Citadel은 미국 영업 비밀 사건을 기각하며 또 다른 판결이 미수집될 가능성이 높다고 말했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **109건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-07-09 암호화폐 핵심 뉴스: 이미선의 크립토ON] 비트코인 4년주기, 끝나지 않았다. 총 109건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
