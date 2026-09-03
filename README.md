@@ -90,7 +90,7 @@
 | scripts/common/themed\_news\_renderer.py          |      134 |        0 |    100% |           |
 | scripts/common/themes.py                          |       12 |        0 |    100% |           |
 | scripts/common/time\_series\_state.py             |      278 |       27 |     90% |55, 59, 158, 162, 242, 358-366, 395-401, 432, 460-462, 482-483, 488-490, 541-544 |
-| scripts/common/translator.py                      |      206 |        0 |    100% |           |
+| scripts/common/translator.py                      |      266 |        4 |     98% |770-774, 820 |
 | scripts/common/utils.py                           |      178 |        8 |     96% |226-227, 261-264, 304-306 |
 | scripts/common/worldmonitor\_utils.py             |        5 |        0 |    100% |           |
 | scripts/continuous\_improvement\_loop.py          |       89 |        1 |     99% |       293 |
@@ -134,7 +134,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24861** | **3056** | **88%** |           |
+| **TOTAL**                                         | **24921** | **3060** | **88%** |           |
 
 
 ## Setup coverage badge
