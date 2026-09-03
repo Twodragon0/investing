@@ -209,7 +209,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-02 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (8건)
 
-*The Dow Jones index dropped on the stock market today as President Trump gave an AI warning.*
+*다우존스 지수는 트럼프 대통령이 AI 경고를 내림에 따라 오늘 주식 시장에서 하락했습니다.*
 
 
 <div class="news-card-item news-sev-high">

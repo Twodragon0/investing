@@ -52,7 +52,7 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-27 - 규제 뉴스 요�
 ## 1. 미국 규제 동향
 
 **1. [Minutes of the Board's discount rate meetings on July 20 and July 29, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20260825a.htm)**
-The Federal Reserve Board on Tuesday released the minutes from its recent meetings to review and determine the discount rates provided to depository institutio
+연준 이사회는 예금 기관에 제공되는 할인율을 검토하고 결정하기 위한 최근 회의 회의록을 화요일에 발표했습니다.
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
 ---
@@ -104,7 +104,7 @@ The Federal Reserve Board on Tuesday released the minutes from its recent meetin
 ## 3. 유럽 규제 동향
 
 **1. [Great Britain Is Finally Opening the Door to Crypto: What the UK’s New Rules Mean for Bitcoin - Bitcoin Foundation](https://news.google.com/rss/articles/CBMi1AFBVV95cUxNQVlFUldBMTlGMDl1SXNZSWc3REtaOFBnQU05cS1DTDFDaXMwQU52cFp0U2JjVFpEYUs0ZDVsdVB6WHIyYVJoUElxU1h3Yzd3NjdWX1hQSlEteUkzYkhxZTFNUGZUTWRrZjY4WS1nWVEweHZtN25TUkQxbUFRclNZdWR6LVpORHJMeFJ3Y2xZYnBudXNER0x0THE5LVBrMVd3UEtpSExfYXNSYTJaalRPWG02TXZoNm5WZEt3YjBOVWZhQnF6RjNhUHJ5Mk0yYmJqN25jWA?oc=5)**
-Great Britain Is Finally Opening the Door to Crypto: What the UK’s New Rules Mean for Bitcoin - Bitcoin Foundation.
+영국이 마침내 암호화폐의 문을 열었습니다: 비트코인 - 비트코인 재단에 대한 영국의 새로운 규칙의 의미.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 ---
@@ -149,7 +149,7 @@ Great Britain Is Finally Opening the Door to Crypto: What the UK’s New Rules M
 **주요 동향:**
 - [Great Britain Is Finally Opening the Door to Crypto: What the UK’s New Rules Mean for Bitcoin - Bitcoin Foundation](https://news.google.com/rss/articles/CBMi1AFBVV95cUxNQVlFUldBMTlGMDl1SXNZSWc3REtaOFBnQU05cS1DTDFDaXMwQU52cFp0U2JjVFpEYUs0ZDVsdVB6WHIyYVJoUElxU1h3Yzd3NjdWX1hQSlEteUkzYkhxZTFNUGZUTWRrZjY4WS1nWVEweHZtN25TUkQxbUFRclNZdWR6LVpORHJMeFJ3Y2xZYnBudXNER0x0THE5LVBrMVd3UEtpSExfYXNSYTJaalRPWG02TXZoNm5WZEt3YjBOVWZhQnF6RjNhUHJ5Mk0yYmJqN25jWA?oc=5)
  <span class="source-tag" data-source-type="regulator">UK FCA</span>
- > Great Britain Is Finally Opening the Door to Crypto: What the UK’s New Rules Mean for Bitcoin - Bitcoin Foundation.
+ > 영국이 마침내 암호화폐의 문을 열었습니다: 비트코인 - 비트코인 재단에 대한 영국의 새로운 규칙의 의미.
 
 ### 📈 가격/시장 (16건)
 

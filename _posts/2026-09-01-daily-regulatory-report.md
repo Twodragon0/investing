@@ -57,11 +57,11 @@ description: "규제 동향 브리핑: 글로벌 규제 동향 리포트. 각국
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **3. [EDGAR Filing Documents for 0001193125-26-375463](https://news.google.com/rss/articles/CBMingFBVV95cUxPRXlQWnpJZE9IeW8zMVZsanQ1WXRhQUJ4VDFybEZhMEdiQ0NGUXkwOWNHUmVfOElrcDZjWGJ6Q1JhckVSSV96enJMME9JVEVER053dUVtVkVfLUp1dWRndDFJQjBuVWRhdFhYalFaOS15ZEFMS1ZmcVFmYUFLMjJ6cnctYnVjNVM2eGl0dFE3cDNJRnlrTURtcjY4TzZNUQ?oc=5)**
-EDGAR Filing Documents for 0001193125-26-375463.
+0001193125-26-375463에 대한 EDGAR 제출 문서.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **4. [CFTC Further Extends Compliance Date for Amendments to Form PF](https://www.cftc.gov/PressRoom/PressReleases/9290-26)**
-The CFTC published a Joint Final Rule with the SEC further extending the compliance date for the amendments to Form PF that were adopted on February 8, 2024 (“Form PF Amendments”), from October 1,
+CFTC은 SEC과 함께 2024년 2월 8일에 채택된 PF 양식 수정안('PF 양식 수정안')의 준수 날짜를 10월 1일부터 10월 1일까지 더 연장하는 공동 최종 규칙을 발표했습니다.
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 ---
@@ -85,11 +85,11 @@ The CFTC published a Joint Final Rule with the SEC further extending the complia
 ## 3. 아시아 규제 동향
 
 **1. [Press Conference by KATAYAMA Satsuki, Minister of Finance and Minister of State for Financial Services (August 25, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260825.html)**
-Regarding next fiscal year’s tax reform, there have been various proposals under discussion, including making Japanese Government Bonds (JGBs) for individual investors eligible for NISAs and introducing other tax incentives.
+차기 연도 세제 개혁에 대해서는 개인 투자자를 위한 일본 국채(JGB)의 NISA 적격화, 기타 세제 혜택 도입 등 다양한 제안이 논의되고 있습니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 **2. [Publication,FSA Weekly Review No.701 August 31, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/701.html)**
-This page contains the latest in events, developments, and updates to the FSA website.For files in HTML formats, when you click original press release links, and click the "Language" button on the
+이 페이지에는 FSA 웹사이트에 대한 최신 이벤트, 개발 및 업데이트가 포함되어 있습니다. HTML 형식의 파일의 경우 원본 보도 자료 링크를 클릭하고 화면의 "언어" 버튼을 클릭하세요.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 ---
@@ -107,7 +107,7 @@ This page contains the latest in events, developments, and updates to the FSA we
  > 미국 증권거래위원회(SEC) — Document
 - [CFTC Further Extends Compliance Date for Amendments to Form PF](https://www.cftc.gov/PressRoom/PressReleases/9290-26)
  <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
- > The CFTC published a Joint Final Rule with the SEC further extending the compliance date for the amendments to Form PF.
+ > CFTC은 SEC과 함께 PF 양식 수정안의 준수 날짜를 추가로 연장하는 공동 최종 규칙을 발표했습니다.
 - ['가상자산 고래' 시장 흔들어도 규제 사각…금융위서 제도 보완론](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBwYWkzMmZoaWJLRzlPclVVZmVGcHlUeU53WHkyNkkycGZhSDJpMm9xYXd1TzlYVWFwbEx3VGtTc3Q2czluWU9QcHVwQmtZMzQ?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > '가상자산 고래' 시장 흔들어도 규제 사각…금융위서 제도 보완론.

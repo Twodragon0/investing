@@ -209,7 +209,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-01 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (7건)
 
-*Here’s what to know about an executive order to expand retirement account access for those who don’t have access to.*
+*다음은 WHO에 접근할 수 없는 사람들을 위해 퇴직 계좌 접근 권한을 확대하기 위한 행정 명령에 대해 알아야 할 사항입니다.*
 
 
 <div class="news-card-item news-sev-medium">

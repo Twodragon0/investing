@@ -25,31 +25,33 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-26 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
+- 2026-08-26 정치권 핵심 이슈: Bloom Energy Shares Jump After Nancy Pelosi Trade Disclosure. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 32건 (미국 의회 거래 6건, SEC 내부자 거래 15건, 트럼프 정책…
+- 1. 낸시 펠로시(Nancy Pelosi) 거래 공개 이후 Bloom Energy 주가 급등 Bloom Energy(NYSE:BE) 주가 급등 6.
 
 ## 1. 미국 의회 거래 동향
 
 **1. [Bloom Energy Shares Jump After Nancy Pelosi Trade Disclosure](https://news.google.com/rss/articles/CBMimwFBVV95cUxOai1xNmZBbEF6MkcxdzEwQ3h0RzBxYVI4dFVscWZ0dFpnZl9DaFZLYkFPTkM3czRNaU1STkJhM0NCRkFpZTE3bnBGY2NQY2ZESWRVdVpQSncxRnVsblAtVHNtOERLa253bEtWRzEydm1Bcld4aml0alZldTBPbTFRYnBZNTJ3WDFCUndqS3NkN2JYM0FsZ0RfNDVGQQ?oc=5)**
-Bloom Energy (NYSE:BE) shares surged 6.
+Bloom Energy (NYSE:BE) 주가 급등 6.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **2. [INTEL CORPORATION - COMMON STOCK - Nancy Pelosi Congressional Trade on Jul. 24, 2026 - Quiver Quantitative](https://news.google.com/rss/articles/CBMidkFVX3lxTFAwWUQwTFhOVDRKbVI2S0d3UXJqQ3dOUE94VHRUS0s5SkJxQndPUVJTS0hUVl9EOVRFYUxrZnV0V01pa21tMG1QOGM2RFA4SVlkbzRGbjJNRzFuSGhTSHBpSWxRRUthNmFSVk54bFBzQUR4Z3oxRnc?oc=5)**
-See details for Nancy Pelosi's trade of INTC - INTEL CORPORATION - COMMON STOCK on Jul.
+7월 Nancy Pelosi의 INTC - 인텔 CORPORATION - COMMON STOCK 거래에 대한 자세한 내용을 확인하세요.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **3. [U.S. Rep. Michael Rulli misses deadlines to disclose stock transactions - Canton Repository](https://news.google.com/rss/articles/CBMi4AFBVV95cUxQZUJYZ3RFRGNaRndiSzBZRTJtbkJsU2Y0RE44d3hBQVRzT1hkVzZnUTFRX3FzUHVPeHVBNHBwdThWUUdCeVhJU2ppMzFUdmNFUGQ1SzNxTExXZzF1Mk45X1NEc1RLdHd3UTBybTJLc1B3azJEOGtfWGdXRHFvQkFaMTRKckpmNGhrQ25mUElaSHgzTkM2anVmQ2xSSlZScFBoX0dXUkV3dlVBUVhnWWg0VXBDcU9xM25SaGNYblpzVnRfNk9Ia0UwS19HX1o3Z1VfamlVLWZFdEhKSUg4YWlfTw?oc=5)**
-U.S. Rep. Mike Rulli missed the deadline to disclose 31 stock purchases or sales he made from late 2024 to July 2026.
+마이크 룰리(Mike Rulli) 미국 하원의원은 2024년 말부터 2026년 7월까지 31건의 주식 매입 또는 매각 내역을 공개해야 하는 마감일을 놓쳤습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 **4. [Bloom Energy Climbs 5% on Nancy Pelosi Disclosure, FuelCell Rises 4%, Plug Power Advances 2% - 24/7 Wall St.](https://news.google.com/rss/articles/CBMiywFBVV95cUxNdmQwVEx0MXIzVV81RTFVcXd1dmJMajNoUnhOZUNqUlMydkRDY25lMEpYTzJWVTFfVnQ0T1haSEpUdWo4UmRiYXB2Z1E5NU5IdGNzSEVwR1l0aWNqZmZ3d1EtR1MtYXNfaWhmT21XYnpYd2xYaUZLYmRwY0swb042YTZ6dGN4UXNONGZZQ2JlZy02c1RLd2ZKNjFlZjdXZE1nTGdlYUZyTUJHcFVZQTZYd282WjZCRDJNMmF3N1g1ZmhvcG1Ha0xkU2tBZw?oc=5)**
-A congressional disclosure just turned one fuel cell stock into the morning's biggest mover, but the filer's cost basis tells a very different story than today's price tag.
+의회의 공개로 인해 한 연료전지 주식이 오전의 가장 큰 변동폭으로 바뀌었지만, 신고자의 비용 기준은 오늘날의 가격표와는 매우 다른 이야기를 말해줍니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 **5. [Latest Trump Financial Disclosure Reveals Dubiously Timed Stock Sales - The New Republic](https://news.google.com/rss/articles/CBMif0FVX3lxTE01LWVzMGZ3YXFmRHZvX2xfN1hPS0hycTdka1FoWnRLa2ZhUjZnR1cxXzlyYnF2RmROT1BRY1RPc3R5Z2JIYmxUTVFOWUxqWVdVc0lXY2lKcFJUV3JEbVlMV1Q5cnhGNXdhQjlmdVVzWlRFYjVlUGwzRjMzbEJpckE?oc=5)**
-The president, as the kids say, isn’t beating the charges (of insider trading).
+아이들이 말했듯이 대통령은 (내부자 거래의) 혐의를 이기지 못하고 있습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 **6. [Congressman Buys Magnificent Seven Stock, Blue Chip Stock — And a Stock You’ve Never Heard Of - TradingView](https://news.google.com/rss/articles/CBMi4wFBVV95cUxON08yVndUckk5LWFVd2pscGJIYzdrblI2X2NCaWhJZGtrN2d1eDRPT2tKbFU2VWtKM3F3MkZuWnlON2hnV19FWmlveDdhOHloUmZjQWdYLXFSb2hobWNDazZTTjF6NWxRcmJFLTNJbUJZeW1yUlJ5bEFoaWQzSUJmSjZsRmw5MWp3MmJVcURIS0NrejZMNWJQblBrUkZWdkxMRzBrN3RnZWNja3NqbElDNTJ1d2t2VlpLd2Jwc3g4SjJJOGROaHhQUlk3d19RSFZHYXRWNHJKanhGMVZwU3pzbUV2WQ?oc=5)**
-The trading activity by members of Congress continues to be closely monitored by retail investors, with items such as the size of the transactions, the timing of the trades and any conflicts of
+의회 의원들의 거래 활동은 거래 규모, 거래 시기, 이해 상충 등의 항목을 통해 소매 투자자들에 의해 지속적으로 면밀히 모니터링되고 있습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 ## 2. 트럼프 행정명령/정책
@@ -59,63 +61,63 @@ The trading activity by members of Congress continues to be closely monitored by
 <span class="source-tag" data-source-type="default">트럼프 행정명령 KR</span>
 
 **2. [Trump says U.S. could rename Lake Ontario as Lake America amid Canada trade war - The Washington Post](https://news.google.com/rss/articles/CBMiswFBVV95cUxQaUNLNkh5SzRuNndiSHdxelZlR2k0aXBRNmNjVTRnZS1NS0hETkx1bXNITmNJcmFnRTczWUdtTXZkNlJseGQ1Z1NydGNiSk9ya0tSZll4U0xLSnU2SkRXT3BFS2pDVnh5cU02V3B5bTNrQ1dBaUI5VkdxX3ViNlRSbWJZVm12X2ZBMkpOZlJZS3N6ZHB4RllHa1F6dFExQVFBdURJcmo1WDFsa2ljdDBfT201RQ?oc=5)**
-Trump says U.S. could rename Lake Ontario as Lake America amid Canada trade war The Washington Post
+트럼프는 캐나다 무역 전쟁 중에 미국이 온타리오 호수의 이름을 레이크 아메리카로 바꿀 수 있다고 말합니다.
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 ## 3. SEC 내부자 거래 (Form 4)
 
 **1. [TechTarget (TTGT) records new insider share trade - Stock Titan](https://news.google.com/rss/articles/CBMirgFBVV95cUxQdFNOM1JfR2ZzRUM2VWFtVjZxYjQtcXh2OXJVZDZoSDZMWU9jQ3p5YTNoQndEelBJcjIxLXJtS0dkZmVzVElPdUdvZXdZT1FETjFZVzJiYloxRXFROVpxREgtUEs0SXRjSHF0N0JrbWxiRUhtWDNwazVuSFd6MlhQckh6TktjVHpIaG9TaklFbzJZVUU1aWFmWVNmcXJ4dnE3RWdNaHEtcHFaSC1talE?oc=5)**
-A new Form 4 shows a TechTarget insider changing their stake in company stock.
+새로운 Form 4은 TechTarget 내부자가 회사 주식 지분을 변경하는 것을 보여줍니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **2. [Fidelity National (NYSE: FIS) insider stock moves disclosed in SEC filing - Stock Titan](https://news.google.com/rss/articles/CBMiygFBVV95cUxONERSNlJqSjFRMTQtWWlFZHVSODdSRkg4ZURlaFZkTUlaMUNfazEySVdEZkhiT19HT2VpclNtYko3SW0tZHlHNnUxNXV1emdUUVZXRjNVOWluaU5Mcll0ZW1lYm04UWt3NzN3Um5nWkYyMHFyT3BnRUdfb2FKb3Y5dTcxYkRuVkstamlrOFlZRGZDb08tdFk4UW5GS0JESnhBVHE3dEE3aE9lRndWTDlMa2FVS1FEV05JbEpjT1dPYklsX3p5ZGhGeldR?oc=5)**
-An insider at Fidelity National Information Services filed a Form 4 with the SEC detailing recent transactions in company stock and updated holdings.
+Fidelity National Information Services의 내부자는 회사 주식의 최근 거래 및 업데이트된 보유 자산을 자세히 설명하는 Form 4을 SEC과 함께 제출했습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **3. [Socket Mobile (NASDAQ: SCKT) insider details new share moves - Stock Titan](https://news.google.com/rss/articles/CBMisAFBVV95cUxPdWRmbTdRSnY3U2tsTWtLX2gzclFicHlSaUVnaHYxamZOS0FYNmhVZ1N3eDgzTHJsLU9pcHdKZE04SXBrM3JSZmdqM1M2czFkbHJwVmliRmpuN2FMYkVFM1ZscWxlWnRQV2lBS19LX05GaE5wcG5qbXdNVkxKZGRPVk5DZHpGaUIzNjJ3U2Vnc2tzRktIOEZCTlNoaHk1MTl0MS1wUDVWaDZSSVVvWm11ag?oc=5)**
-Socket Mobile (NASDAQ: SCKT) insider details new share moves Stock Titan
+Socket Mobile(나스닥: SCKT) 내부자 세부 정보 새로운 주식 이동 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **4. [Nano Dimension (NNDM) insider reports share holdings - Stock Titan](https://news.google.com/rss/articles/CBMisgFBVV95cUxNdEZ5MkVDQ2E4R00yQlRHc0ZOWE9JMVg2QTR1NFMteGhHWFFjRzhhd1BJQkxGVUNqeXY4d0F0VjFXWHpRS3Jib0lZVFA3ajk0eTgwWjZwcXZ5UjR4S05fOFlwZm5PSHk4X19pUUNNY09MRmpCcWx5WUVDRU51LUxtdEZ2SUZMWGppb3BNMDNma0lNaDFwaHBodHdTLW9ab2NMNjZNZzl2V2w1b3NVTk10aDRB?oc=5)**
-Nano Dimension (NNDM) insider reports share holdings Stock Titan
+Nano Dimension(NNDM) 내부자 보고 주식 보유량 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **5. [Mount Logan Capital (MLCI) updates insider trading report - Stock Titan](https://news.google.com/rss/articles/CBMixgFBVV95cUxNQVBXR09oZGktdWp3ZXhqQkZYaUxKZ3A1clFuUy0yenJ0Z05WM3VpOTlZXzVTNVBMSmp4V1Rka1BzZV9UbDlrMG8xbHBjWWpvb0ExcDhjVEdBSDN0bUg0M3pfOE1OdnBiR2RZeHkzLXU3eHJzU2E0b0hBR0ZEeHNfSVFEUGQtYzlILUN0TGJfVFJQRWN3MENoU0lKaG9KSVVYRmhMRDlsMGczX2VRWjBIaHdmYVlYeDFUc2xvc1JhUzB3aXE2QXc?oc=5)**
-Mount Logan Capital (MLCI) updates insider trading report Stock Titan
+MLCI(Mount Logan Capital) 업데이트 내부자 거래 보고서 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **6. [Canopy Growth (NASDAQ: CGC) logs new insider trade filing - Stock Titan](https://news.google.com/rss/articles/CBMisAFBVV95cUxOc1AyOWptbl85SVAzUmxIMXFZdFpxbEttMDcwRGxRUDJhOGY4RnY2M3d2SzRRZkNxV0NKbGw2TTdoTl9KWTdmYlBiVno0X0hrT0FLUDVCVG5BQ0h5cXRDRjVlQVM0VXBPa25UeUtPNHVUTTN6WG92eEd3cE0wUkZ1cXkxRzQyZzc0TFFVdnlrT2ZpRkM2alNhOVg0VlNCemV0a3ZwS1VGVzB2WC1hbTBDSQ?oc=5)**
-Canopy Growth (NASDAQ: CGC) logs new insider trade filing Stock Titan
+Canopy Growth(나스닥: CGC)는 Stock Titan에 새로운 내부 거래 신고를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **7. [EZCORP (NASDAQ: EZPW) insider details recent stock moves - Stock Titan](https://news.google.com/rss/articles/CBMipwFBVV95cUxQUDlJaTR6VDVaOGQ1Yk9zUGlIaURzdXhhMFBHM0pBRlFuRlotQ3luVGRUd01wUHpuVDRSZVdJbjNhc2h6NlVPN2pQeDV4b0JQRVhMdFBoOHRQNFR2NlktcGV1djR3VW1hb2ZiVzVVUWNSeWlnM0pyTHpVYXowbHc1c2tDc0htUEZzc1dqM2xYVkFZOHB3V3F3djVTMS1wWnVVNGxfbjVIVQ?oc=5)**
-EZCORP (NASDAQ: EZPW) insider details recent stock moves Stock Titan
+EZCORP(나스닥: EZPW) 내부자 세부 최근 주식 변동 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **8. [Solaris Energy (SEI) insider updates share holdings in new filing - Stock Titan](https://news.google.com/rss/articles/CBMixAFBVV95cUxOQmtrdkJnZDFWNUNyWE5lay05b1BjWEhMUWlXYkYxamZDZ3VTVXA4MVR0dWVWdlctbkl0bVhHcTRmbDlUSkNSaDdkeWhHeXJSSjdqeF80dUhLUUVjcG1MdEJTeDFFZU9mMHhNc25LRm5sVERzWmVVbmtmZlRHc0s5QkRJc2ZFU2dGYWFpRkIwbThKdUNXODBseUFGM3JESm1SUjNaalB2NHNYRzRKM2xyWVB2UWNyU2FvQXJwaXZQNFlTMjh0?oc=5)**
-Solaris Energy (SEI) insider updates share holdings in new filing Stock Titan
+Solaris Energy(SEI) 내부자는 Stock Titan에 새로운 서류로 주식 보유량을 업데이트합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **9. [Solaris Energy Infrastructure (SEI) details insider share activity - Stock Titan](https://news.google.com/rss/articles/CBMixAFBVV95cUxPWmFxdE96NmxWYWlwbUxUVjBHV3IwMS1DUEJXRTRSWWU4NlMxZ3hCMjBsSmY2eGdpTzRISmVEdW8yU1oyZ3UxYnI1WEJVMGpJc0dHNnl0TklaZVh5NUdiam80X0RQWUppZHhyV3lCSkV5QjMzMHY5YWNUWi1WTTNMR1RuSHo1ZUlUdkNnWThSS05lMkZ5dVdIYmlNYm1aOTQ2M3luZm56cFZ4TVdaWUdwWEVRTmdjX3BydVVFNmNtVDhfNU82?oc=5)**
-Solaris Energy Infrastructure (SEI) details insider share activity Stock Titan
+솔라리스 에너지 인프라(SEI)는 내부 공유 활동을 자세히 설명합니다. Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **10. [Nu-Med Plus (NUMD) insider logs new stock transaction - Stock Titan](https://news.google.com/rss/articles/CBMirgFBVV95cUxQMzVrOU5wMHNRM1BxN1A2elRQV1N5ZmpWRWZHU09xQWg2RzJ2dTdNM0dwM0x4cGI0ZTBiZWdaTDlZUy1IMXJCTWFvYjEzUHRRcUYwOTg0Q2daNkNyWWdfeFpqdk9heFA2LWZ6VHFsRG95WkxKekZKVEExZ2lTVzUtdlFfdGRKSS10ZW5Sb2YwSG8zMDNDT1Etdlh6RWxUNVY0eGhod1QxWVM0b2Q1amc?oc=5)**
-Nu-Med Plus (NUMD) insider logs new stock transaction Stock Titan
+Nu-Med Plus(NUMD) 내부자가 새로운 주식 거래를 Stock Titan 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 ## 4. 중앙은행 정책 동향
 
 **1. [Four Regional Fed Bank Directors Sought A Rate Hike Ahead Of July Meeting, Minutes Show - TradingView](https://news.google.com/rss/articles/CBMi4AFBVV95cUxOOXYzQlhVZkRfdDU5dmx1TXE5UVozV3pWb0Ridk9iTnV4S05xOUFVV3dBQklQSXVOTXoxMTFLQUZGeC1HQnBxdzlZb3BBaU9TY1hNNHR1MlJkaWFSVTQ4aF80cGpqem9veEUyS0Zkd2JDWXVmby1zTXh0RU1oMU9SclFSc2RfcUZ2Umw5dkZ4RE51ZlVPMVBiYU1Sc2lfdTJMSkQzNmZKelRuWVB6VktMdGRpc0xseGFGcXI1eWRCU2FhV3hhOHFtVmJHTmxBYktQTEZDQzF3UzJkbjFiQ256ag?oc=5)**
-Newly released meeting minutes on Tuesday revealed that four regional Reserve Bank boards advocated for an interest rate hike ahead of the central bank's monetary policy gathering in late
+화요일에 새로 발표된 회의록에 따르면 4개 지역 중앙은행 이사회가 늦은 밤 중앙은행의 통화 정책 회의를 앞두고 금리 인상을 옹호한 것으로 나타났습니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **2. [Bond market anxiety raises stakes for Warsh's debut Jackson Hole speech](https://news.google.com/rss/articles/CBMisAFBVV95cUxQcnNlclhfMG4yZE9OTExTUEQ4Zi1sUml5RFdoUVZiU2tXd3EtaTJSc0E4YlRBQUp4T1hvSzdmVHRBeFhobTMxV1hodmhsRl80Zm4zSldlTzBWTGJMeTNEd0RnekpmLV9RaVprUWp4SlBCQXJheXc1ZUt4NEx2T3pON0NQQTVlQTlldVA0SWRWdmN6OWVwc25jUlRBeGFTUFIzaC1YNlRQSzFrREtrQ3FXWQ?oc=5)**
-Bond market anxiety raises stakes for Warsh's debut Jackson Hole speech Reuters
+채권시장 불안으로 워쉬 데뷔 잭슨홀 연설에 대한 관심 높아져 - Reuters
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **3. [Fed Rate Split Widens as Four Regional Banks Sought Discount-Rate Increase - bloomingbit](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5xWXdYNnFqQ1hORnBfV0VYVl96UmZJdWJJdlItaTloSmZmQTlubkRjeUdIS1d0V1hzZUtla3ZZa2xOSW9Qd2RkV0FqbHJFOFlrbTBncw?oc=5)**
-Divisions within the Federal Reserve over interest-rate policy are widening.
+금리 정책에 대한 연준 내의 구분이 확대되고 있습니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **4. [신현송 한은 총재가 말한 금리 인상 조건 셋 중 둘 ‘충족’…“백투백 금리 인상, 가능성 열려 있다”](https://news.google.com/rss/articles/CBMijgFBVV95cUxPX2VfLXd2YjhsandQTUowOHBoYUZzOEFjTjVpTDFvcnhBUmN0bWNLeUZPYW00OEZHcG5hREdLLVJaT2JyWFFBZDN4Tm9Zc3daRy1qXzVmUW1XN0g5cl9yRTc4V0NIV2ozSkR2QnVXQllXUGtTOHF1c2NZa2hJR2tPOTRtZ0FkbGVSclR5c3h3?oc=5)**

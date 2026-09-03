@@ -160,7 +160,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 
 ### 🔵 규제/정책 (23건)
 
-*Bitcoin and gold shot higher this week, with both getting a boost from some frantic action surrounding the bond.*
+*비트코인과 금은 이번 주에 채권을 둘러싼 광적인 움직임으로 인해 상승세를 보였습니다.*
 
 
 <div class="news-card-item news-sev-low">

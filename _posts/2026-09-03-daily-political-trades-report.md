@@ -38,7 +38,7 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-03 - 정치인 거래 �
 ## 1. 트럼프 행정명령/정책
 
 **1. [Where Trump's tariffs hit Massachusetts the hardest - Axios](https://news.google.com/rss/articles/CBMifkFVX3lxTE84NWx6M1YxUWk1ZlQ1UnlUMGNuS2xtUzRqTHB5UG1uODdjUjR5SjQwaTViZGhNcnBxRjRRUjE2N1hfV0FCZHZZTV9HdDRCZUlyZXhuNU80VGRtOWFiLVQtMzFReHlQbnQ3ZXRDaEVaQVhUYXlqLXp1U0R6S2Z5QQ?oc=5)**
-Where Trump's tariffs hit Massachusetts the hardest Axios
+트럼프의 관세가 매사추세츠를 강타한 곳 Axios
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 ## 2. SEC 내부자 거래 (Form 4)
@@ -86,7 +86,7 @@ Decoy Therapeutics(DCOY) 이사는 2027년에 2,000주의 보조금을 받습니
 ## 3. 중앙은행 정책 동향
 
 **1. [미국은 연준 9월에 금리를 인상할 예정입니까? - 모닝스타](https://news.google.com/rss/articles/CBMijwFBVV95cUxPRTNZMUd5VmhBMXRRT1lKeUVVNGc3NUZROFVNclJTM2RhR1p5MnBDdUFheXBnME56S3EyYkk0T0VOSnIzVjZXUTVGQ2VyWlFJQkdGd3VfNklOWHhDWWFveEJlSUs1Rk41aTJ3VW9qM0xINGtQLW1TR1dncmJtU0dUT2lIdXhrd1dOMVVrZFlaUQ?oc=5)**
-Will the US Fed Hike Interest Rates in September? Morningstar
+미국은 연준 9월에 금리를 인상할 예정입니까? 모닝스타
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **2. [트럼프는 연준을 눌러 이자율을 낮춥니다. 그 반대일 수도 있다 - USA Today](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOW1HMWVELXRDcWFjVDA5VEdEZ195enpBbnBvRFJmMjg5MFd4NTBZWWdoV1dVVEpnMFliRExJSVREQVJWbkRVWmRDbFdfN3VTdXRTVjRIZ0VlR2xJZENCaER4MVdCODgtV2VIalh1TU0zNFAxLTA3MTVFU0ROeWQ1dktwVnNTaDlPOTU4RmdCbEdJYVlQZHo0UzQxSUdkV0tENlYtSzNtYUM?oc=5)**

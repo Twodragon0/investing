@@ -207,7 +207,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-27 - 주식 뉴스 요약 이�
 
 ### 🏦 거래소 (8건)
 
-*Bill Gates warned governments are not adequately preparing for how AI could displace workers, strain social systems.*
+*빌 게이츠는 정부가 AI이 노동자를 대체하고 사회 시스템에 부담을 줄 수 있는 방법에 대해 적절하게 준비하지 않고 있다고 경고했습니다.*
 
 
 <div class="news-card-item news-sev-medium">

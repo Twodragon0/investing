@@ -41,14 +41,24 @@ _HANGUL_RE = re.compile(r"[가-힣]")
 _MIN_ALPHA = 30
 
 
-def split_body(text: str) -> str:
-    """Return the post body, dropping YAML front matter."""
+def split_front_matter(text: str) -> tuple[str, str]:
+    """Return ``(front_matter, body)``; the halves concatenate to *text*.
+
+    ``fix_untranslated_body.py`` rewrites only the body, so it needs the head
+    back verbatim. Splitting in one place keeps the writer from disagreeing
+    with the reader about where the body starts.
+    """
     if not text.startswith("---"):
-        return text
+        return "", text
     closing = text.find("\n---", 3)
     if closing == -1:
-        return text
-    return text[closing + 4 :]
+        return "", text
+    return text[: closing + 4], text[closing + 4 :]
+
+
+def split_body(text: str) -> str:
+    """Return the post body, dropping YAML front matter."""
+    return split_front_matter(text)[1]
 
 
 def is_untranslated(line: str) -> bool:
@@ -89,15 +99,24 @@ def select_posts(posts_dir: Path, days: int) -> list[Path]:
     return selected
 
 
+def scan_lines(body: str) -> list[str]:
+    """Return the untranslated-looking lines of a post *body*.
+
+    The single detection entry point. ``fix_untranslated_body.py`` measures
+    before/after with this same function so a repair pass cannot report success
+    against a laxer rule than the check that reports the finding.
+    """
+    return [line.strip() for line in body.splitlines() if _is_scannable(line) and is_untranslated(line)]
+
+
 def scan(posts_dir: Path, days: int) -> tuple[int, list[tuple[Path, str]]]:
     """Return (files_scanned, findings)."""
     findings: list[tuple[Path, str]] = []
     posts = select_posts(posts_dir, days)
     for path in posts:
         body = split_body(path.read_text(encoding="utf-8", errors="ignore"))
-        for line in body.splitlines():
-            if _is_scannable(line) and is_untranslated(line):
-                findings.append((path, line.strip()[:120]))
+        for line in scan_lines(body):
+            findings.append((path, line[:120]))
     return len(posts), findings
 
 

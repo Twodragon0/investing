@@ -263,7 +263,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-15 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (11건)
 
-*Stock Market Today: The Dow Jones index falls Friday after surprise retail sales data.*
+*오늘의 주식 시장: 다우존스 지수는 깜짝 소매 판매 데이터 이후 금요일 하락했습니다.*
 
 
 <div class="news-card-item news-sev-medium">

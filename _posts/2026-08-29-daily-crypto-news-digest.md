@@ -53,7 +53,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 
 ### 🟠 비트코인 (54건)
 
-*Investors have found fresh reasons to buy Solana beyond Bitcoin’s comeback.*
+*투자자들은 비트코인의 복귀 이후 솔라나을 매수해야 할 새로운 이유를 찾았습니다.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -108,7 +108,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 
 ### 📈 가격/시장 (33건)
 
-*Deribit's Friday settlement covers nearly a fifth of the exchange's Bitcoin open interest, and max pain sits below.*
+*Deribit의 금요일 결산은 거래소의 비트코인 미결제약정의 거의 5분의 1을 차지하며 최대 고통은 아래에 있습니다.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -163,7 +163,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 
 ### 📊 매크로/금리 (20건)
 
-*Bitcoin's price slid before spiking again after the Federal Reserve chair said inflation in the U.S.*
+*비트코인의 가격은 하락했다가 연준 의장이 미국에서 인플레이션을 언급한 후 다시 급등했습니다.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -270,7 +270,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 
 ### 🔷 이더리움 (13건)
 
-*Cryptocurrency and blockchain broken into 20 clear explanations covering Bitcoin, Ethereum, wallets, mining, NFTs,.*
+*암호화폐와 블록체인은 비트코인, 이더리움, 지갑, 채굴, NFT 등을 다루는 20개의 명확한 설명으로 나뉩니다.*
 
 
 <div class="news-card-item news-sev-medium">

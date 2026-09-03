@@ -78,7 +78,7 @@ Generac Holdings 이사가 128주를 수여했습니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **9. [Williams Companies(NYSE: WMB) 내부 보고서에는 주식 또는 옵션 거래가 기재되어 있지 않습니다. - Stock Titan](https://news.google.com/rss/articles/CBMitgFBVV95cUxPbzRLbmMxM1BsdlVKUGFpTXZaZTJhNTgyM0IxOGdfTGpHWkxHVldxemZuTGRjZTFmQW1jNDFiTGZIN1VSMXR6T09FNGtmZEJxN1p2cTl2RnduWGxnRmI4MVN3Uk12eDRRbkVQNk9CbnBLZzdEVGxFQ2dsSHgtY3RHODlpeloyeGcyWU04OU8xV01yWGx0bEFGRGZfRFcxazNOVWhyM2d2OFlUX3I1cHBVTHRTSzZGQQ?oc=5)**
-Williams Companies (NYSE: WMB) insider report lists no stock or option trades Stock Titan
+Williams Companies(NYSE: WMB) 내부 보고서에는 주식 또는 옵션 거래가 기재되어 있지 않습니다. Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 ## 4. 중앙은행 정책 동향

@@ -180,7 +180,7 @@ CFTC은 미국 뉴욕 남부 지방 법원이 미국 달러 스왑 거래자이�
 ## 4. 유럽 규제 동향
 
 **1. [CryptoUK, FCA A&D 프레임워크 변경 사항 공개](https://news.google.com/rss/articles/CBMiVkFVX3lxTFB1SFRUSVRoV1RBdVQxdnRJcGhEbFktOWdSLWg1c0RNT21jUjZSVmdVWmVGNzM2Rl9hdGhCT1RJbEpoWW9SX2dBOWlYRl84OFJsaVJyNnZ3?oc=5)**
-CryptoUK Reveals Changes to FCA’s A&D Framework.
+CryptoUK는 FCA의 A&D 프레임워크 변경 사항을 공개합니다.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 ---

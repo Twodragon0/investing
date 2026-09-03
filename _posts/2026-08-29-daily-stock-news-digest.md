@@ -100,7 +100,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-29 - 주식 뉴스 요약 이�
 
 ### 📊 매크로/금리 (40건)
 
-*With Thursday's advance, the three major indexes are on track to end the week higher.*
+*목요일의 상승으로 3대 주요 지수는 한 주를 더 높게 마감할 것으로 예상됩니다.*
 
 
 <div class="news-card-item news-sev-high">

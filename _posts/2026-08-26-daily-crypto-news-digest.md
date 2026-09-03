@@ -345,7 +345,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-26 - 암호화폐 뉴스 요
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **5. [현물 거래 토너먼트 시즌 3: 거래하여 최대 500,000 USDC 토큰 바우처를 공유하세요](https://www.binance.com/en/support/announcement/detail/2c1effd4bcaf4113b761b34a89737932)**
-Spot Trading Tournament Season 3: Trade to Share Up to 500,000 USDC Token Vouchers.
+현물 거래 토너먼트 시즌 3: 거래하여 최대 500,000 USDC 토큰 바우처를 공유하세요.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 

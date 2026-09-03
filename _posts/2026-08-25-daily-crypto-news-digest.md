@@ -108,7 +108,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 
 ### 📈 가격/시장 (37건)
 
-*A surprise bond buyback triggered a squeeze that liquidated over $4 billion in bearish crypto bets and sent bitcoin.*
+*깜짝 채권 환매로 인해 약세 암호화폐 베팅에서 40억 달러 이상을 청산하고 비트코인을 송금하는 압박이 촉발되었습니다.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -267,7 +267,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (11건)
 
-*Hollywood actor Ben McKenzie speaks to ABC News about what led him to investigate one of the biggest financial.*
+*할리우드 배우 Ben McKenzie가 ABC 뉴스에서 가장 큰 금융 기관 중 하나를 조사하게 된 계기에 대해 이야기합니다.*
 
 
 <div class="news-card-item news-sev-medium">

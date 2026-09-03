@@ -54,11 +54,11 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-08-30 - 규제 뉴스 요�
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **2. [FingerMotion Sets Out New Management's Strategic Plan with BlueFlare Energy Solutions.](https://news.google.com/rss/articles/CBMigwFBVV95cUxQS2lWQ05SbXpGVXQ1NEJrRlAteGtrc3NBZ2g2eTZGQUpUMmRoa21fWl9pYzlOVkppeUtBNm1pM0VxTGVwQ1FpV0I0U0R2Nm9kZFZ4OVM2UGFTNmxaS19zSUhQcDZvN3hIck1ZcEtjOFo0SDZhbnBwRlZhUms4cmNFWk5hdw?oc=5)**
-FingerMotion Sets Out New Management's Strategic Plan with BlueFlare Energy Solutions.
+FingerMotion은 BlueFlare Energy Solutions를 통해 새로운 경영진의 전략 계획을 수립합니다.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
 **3. [CFTC Orders Gabriel Perez to Pay $172,000 for Insider Trading of Mention Market Event Contracts](https://www.cftc.gov/PressRoom/PressReleases/9289-26)**
-The CFTC announced an order filing and settling charges against Gabriel Perez for misappropriating material, nonpublic information obtained through his federal government employment in order to trade
+CFTC은 가브리엘 페레즈(Gabriel Perez)가 연방 정부 고용을 통해 얻은 자료, 비공개 정보를 거래하기 위해 남용한 혐의로 기소된 명령을 제출하고 화해한다고 발표했습니다.
 <span class="source-tag" data-source-type="regulator">CFTC Enforcement</span>
 
 ---
@@ -90,7 +90,7 @@ The CFTC announced an order filing and settling charges against Gabriel Perez fo
 ## 3. 아시아 규제 동향
 
 **1. [Councils,The sixth meeting of the Working Group on Corporate Disclosure of the Financial System Council](https://www.fsa.go.jp/en/news/2026/20260904.html)**
-The Working Group on Corporate Disclosure of the Financial System Council will hold its sixth meeting on September 4, 2026 as follows.
+금융시스템협의회 기업공시 실무그룹은 2026년 9월 4일 제6차 회의를 다음과 같이 개최할 예정입니다.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 ---
@@ -108,7 +108,7 @@ The Working Group on Corporate Disclosure of the Financial System Council will h
  > 미국 증권거래위원회(SEC) — Document
 - [CFTC Orders Gabriel Perez to Pay $172,000 for Insider Trading of Mention Market Event Contracts](https://www.cftc.gov/PressRoom/PressReleases/9289-26)
  <span class="source-tag" data-source-type="regulator">CFTC Enforcement</span>
- > The CFTC announced an order filing and settling charges against Gabriel Perez for misappropriating material, nonpublic.
+ > CFTC은 비공개 자료를 남용한 혐의로 Gabriel Perez에 대한 명령 제출 및 기소를 발표했습니다.
 - [보도자료 - 금융위원회](https://news.google.com/rss/articles/CBMioAFBVV95cUxPLVp0bWRLZWh1c05jdVBfMVNOUWE1cm10dldkd09FVHdUWGNMQkRnSHZxRWwxRkZfb3dmNklmUkEzMmR0ZFp5UXhpS1hxa0owczJiZlhoTGwxQ3RVdDBZbm9FSXFwMzdhV1c3R0ZVY1ZJTlVQczY3UWRlaUwwTEktZXB2UHdKNUJpVU5SckhhLWp1blQ4WHpqWVZ1bmxSaVd5?oc=5)
  <span class="source-tag" data-source-type="regulator">금융위원회 보도자료</span>
  > 보도자료.
@@ -123,7 +123,7 @@ The Working Group on Corporate Disclosure of the Financial System Council will h
  > 금융위, 내달 디지털자산기본법 정부안 제시…국회 의원입법 유력.
 - [Councils,The sixth meeting of the Working Group on Corporate Disclosure of the Financial System Council](https://www.fsa.go.jp/en/news/2026/20260904.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
- > The Working Group on Corporate Disclosure of the Financial System Council will hold its sixth meeting on September 4,.
+ > 금융시스템협의회 기업공시 실무그룹은 9월 4일 제6차 회의를 개최할 예정이다.
 
 ### 🏦 거래소 (1건)
 

@@ -37,11 +37,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-01 - 정치인 거래 �
 <span class="source-tag" data-source-type="default">트럼프 행정명령 KR</span>
 
 **3. [Trump tariffs take $11 billion toll on Ohio - Axios](https://news.google.com/rss/articles/CBMihAFBVV95cUxPclIzSE84bDNQaC1LWVE4czd1TW0yaF9ySGRPM1J4a2ZjeTI4YnBmcVJKQjhKV1hiU3lDblVqN1ZsX1FvLVNjckJXMmtCc1RkQTg5N3E3dEVXdmFVX1ExTUo4bTRLdzFfNU1xWXhmbHBKOXlZRDVkWXpqQnVFVVR4OFV1TFU?oc=5)**
-Trump tariffs take $11 billion toll on Ohio Axios
+트럼프 관세로 인해 오하이오 Axios에 110억 달러의 피해가 발생함
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 **4. [Ontario's premier says trade war would be 'devastating' for US and Canada - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMinAFBVV95cUxOaDU2Z1JYQkRIOVlnUTAyOHpyN0Rnc1RiTUFFQVdwQWFBX2FVV0Ewc3lNMDFCN3B6ZkhsNzZwSGl6Z3hPblJkWDMxUGFzY3VEMUJXNkM3ZURuaDBwaWw5ZGU0ZW9US25fNWs2MnBoeTNDQzFjOFZiVmNkTFA1RnRqdFlMaWNLbmhrcF80cHBXVnNRZlR5ck40R3h1OHfSAaIBQVVfeXFMTjZNVkZvUmQ3Z2dnQk5HMEc3VDNMVmV3WnVjZ1ZPOVdVSG90VXlHLTY1NzRpQ1dLT0ZUTEs5X0JmV0hMNUVCQjlubDEwZFV1NERfWXN5bnhMT0JIZm5TZG1VNHlLQWJWekxLR0dpY0F4a3g3ckVmUldSQ05fUGpYdWdBSnlxZHBMUXVFcGJNcW5YbzBhLTJJdVh3QTNrN0RVdnZB?oc=5)**
-Ford also called Trump's renaming of Lake Ontario "disappointing."
+Ford는 또한 트럼프의 온타리오 호수 이름 변경이 "실망스럽다"고 말했습니다.
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 ## 2. SEC 내부자 거래 (Form 4)
@@ -55,15 +55,15 @@ Winnebago Industries 내부자는 주식 거래를 자세히 설명하는 Form 4
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **3. [Net Power(나스닥: NPWR) 내부자는 새로운 주식 거래를 기록합니다 - Stock Titan](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQM1ZDSjYzZER4UzgxeDZkYXhWQW8zOGR0WDlJN2JFUXVsd0lYNHd0N0h5RjNuaEVXMVg3Q01RS0o3MjlGeGd1YnpNQVVLTVNTZEVwY0sybG41QXlhaHhPWXZieU1xQkw3SWNhZXdhVE9SQUFpcXJwYmV6eFNycTB1ajdDWEdPQUhMckJ4X1YyMkM0S25wMUc0NEFuMDJpN1BpT3BpOHF5ZEtJb1E?oc=5)**
-Net Power (NASDAQ: NPWR) insiders log new stock trades Stock Titan
+Net Power(나스닥: NPWR) 내부자는 Stock Titan에 새로운 주식 거래를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **4. [Texas Pacific Land (NYSE: TPL) holder Horizon Kinetics adds 1 share - Stock Titan](https://news.google.com/rss/articles/CBMitwFBVV95cUxOanVIZFZlUUxaU29iQk96MXNCeEZLeHJoUmJEdWRuQzR1NkpiZDZ4NklpNlJ1bFUzY3lsVkROcjY5djNqa2dUUGVyRE1sRFkwUzRzb2dKQ0tIQlRlck1pa2tDODN4eGhNbzBMc094bDc4QjkzUTV5S3dLeUx1VjlIaWZTdWN6eXlwRGlPQUxDcEt6TG45VXkxb1JhUjJfYnJ5M0VjYUhXS2wzbXJ6WDRONzYxcjdKYTQ?oc=5)**
-Texas Pacific Land (NYSE: TPL) holder Horizon Kinetics adds 1 share Stock Titan
+Texas Pacific Land(NYSE: TPL) 보유자 Horizon Kinetics가 Stock Titan에 1주를 추가합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **5. [Donegal Group (DGICA) 10% holder snaps up 20K shares - Stock Titan](https://news.google.com/rss/articles/CBMisgFBVV95cUxPZmItWDdCSFBIWmlqUkVnRV9EWjF3REVSVUlPdWdDbjhCQ184dDJzWHVnTmJUX3lnTUlGV2lDVE5OVWlkS2MyX0tLZGNObUVNTVJ0b1htNC16ZG9wek1VWjl0LU1MdWdkWXV5WFBKSnZVSFlkaG5yWnJWWXBBODFtUzRqVFhMLXZmYWlaOFg2dGE2ZURobEFLcEtSQi1mMTI3WWtteHVtRzRsYUE2eTVEX2VB?oc=5)**
-Donegal Group (DGICA) 10% holder snaps up 20K shares Stock Titan
+Donegal Group (DGICA) 10% 보유자가 Stock Titan 20,000주를 매입합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **6. [XCel Brands (NASDAQ: XELB) CEO buys 5,500 shares without 10b5-1 plan - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxNaWpUQ0tab1YwV1ZjWWcxbkpWb0o3OFVRSmktelpNVFo1Z1VwaVFnMmZXZUllR0VRb1FWODRVU3JVLXl0dUhGeHphaHlvaWpJcU5ERzl0QlU3QlF1bllGbTBKX1Ezd2tabXktcUVLVnhPckloUEVUUEF6Y3VLQXVlT05lYlFMWlA4VVQ1VzNvQkdSUHItWDFUZHlhSWJVM0Y1b3ZUQkJNMVA3NjdpQjdr?oc=5)**
@@ -71,7 +71,7 @@ XCel Brands(나스닥: XELB) CEO는 10b5-1 계획 없이 5,500주를 매입합�
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **7. [Presurance Holdings(PRHI) 이사가 남은 주식을 매각합니다 - Stock Titan](https://news.google.com/rss/articles/CBMiuAFBVV95cUxORnhBWVplME5uWDM5VThpT09ubm05OTJqTEdfZFlickZ3UjNWdWUzRk9PVVF0VklYYV8taE1DZGxZdXB0Z3MwZzh6S2Jxb3V3blBCMW9ESnNnb25qNUhUOVVSUjlxbXVQdm1KY3ZJSGsxNXMtQWFuVUN5ZVAwSlMyb2dUVjRoSDE1YXduMkVxQXFUSnRIUlhWOUJMbWpIUGNXTVRKWWFHMVlNTHhYMGdDWUNPLXFOMlFX?oc=5)**
-Presurance Holdings (PRHI) director sells remaining shares Stock Titan
+Presurance Holdings (PRHI) 이사가 남은 주식을 매각합니다 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **8. [Nuo Therapeutics (AURX) CEO buys 8,773 shares outside preset plan - Stock Titan](https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQVVsdnBjYTFSbWVWR2NKQlVFV0hySnhwQnZPNmFNVEZlOFdKNmdTY2trcHB1dVIwc0FRT1pMR0prRVdCNENjTS0tZ0tMY2lOdzAwbmJFcHhEZWlnNkFyaFo5bjZyamZtQmozbkFCb09hTWIxVVdmUG9GaHpmX1d4dzhiLWlHMkdaT3FxUjdFVmk2RU8yd3pGcktUNmtZaTB5N0NKZkVhS05EVXRoMjM4QkpaUWc3anIxOHNjUkNBNjZOdw?oc=5)**
@@ -79,7 +79,7 @@ Nuo Therapeutics (AURX) CEO은 사전 설정된 계획을 벗어나 8,773주를 
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **9. [Horizon Kinetics (HKHC) director adds 200 shares at $26.20 - Stock Titan](https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRzg4TlFhVHAyVVYzbVJ5X3JpZEk2RS1FNF95SU1sSWVVOWFVY2pRTkxLSFJPa09OVWctbGNsMDk2TXF3T0ZWb1V5YjFUWDdHb1VSUkZ4THpvOG9sZ3RwaHBhcVlScWZJbzdqSXFndnNRaExIVHhod09aWGJtTUJvekFXemxhZ1RGZkZRX2h4Q0ZJdGdMc3pETnd2NXlBbm5yR3NIRUVlVEZXV1RMU0ZwYURYMEd2TWhNM1JsSU1mWVc?oc=5)**
-Horizon Kinetics (HKHC) director adds 200 shares at $26.20 Stock Titan
+Horizon Kinetics(HKHC) 이사는 Stock Titan $26.20에 200주를 추가합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **10. [Muncy Columbia Financial (CCFN) tech chief buys more stock - Stock Titan](https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdzlBOEJaVXh3WTd3dmpBRDNhREh5SEI0RGV6ZkZEMG1ISThnUlgzamJlbWcwbktFSC1LUkpBanZlbFVsQ25ZRk1VaFNSM2JfMjdNQWZCWjY5NlVkYmo1ZWpSWUk2aWh2QTJna3RWUzlISTVaWGsyNW9qRFd0NlVWR01UU1NLQmlYYW1aM3dzcTRCZlp4RlVzQllQY3phd2VGTHRHR2xubDMwam1ya2tyV0Nwd2lQME1GRzlzYlUtN1Q?oc=5)**
@@ -93,7 +93,7 @@ Barclays는 Warsh 연설 이후 올해 두 차례 더 연준 금리 인상을 �
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **2. [Fed Chair Warsh's Jackson Hole Debut: What He Said, and Didn't Say, About Rate Hikes - The Motley Fool](https://news.google.com/rss/articles/CBMimAFBVV95cUxPcDVzem85bUJDOTgyb3R3blF4a21oWFJ2NUVrQVZaOWFvQUdjMHZXaEdhNWZCOWljUlpPUUEwTy1sU3RldFhXaHNSMEFrVklwM3RFaDhfcVA3bGpOZkhGWDlUQlFkY0k4SGRzRGE4X1R4SUYxVEtZQndQME8tc250RDJnWEQ0VlJWb21EZV8yOHdObjFnNFdZSw?oc=5)**
-Fed Chair Kevin Warsh is keeping investors guessing about the next interest rate decision.
+연준 Kevin Warsh 의장은 투자자들이 다음 금리 결정에 대해 계속 추측하도록 하고 있습니다.
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 ---

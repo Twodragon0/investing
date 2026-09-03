@@ -209,7 +209,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (12건)
 
-*The S&P 500 and Nasdaq Composite declined Monday as semiconductor stocks dropped, while the Dow Jones Industrial.*
+*반도체 주가 하락으로 인해 S&P 500 및 나스닥 복합재는 월요일 하락세를 보인 반면, 다우존스 산업재는 하락했습니다.*
 
 
 <div class="news-card-item news-sev-high">
@@ -262,7 +262,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 
 ### 🔵 규제/정책 (7건)
 
-*Money is flooding into equal-weight stock market ETFs this year.*
+*올해 동일비중 주식시장 ETF에 자금이 넘쳐나고 있습니다.*
 
 
 <div class="news-card-item news-sev-medium">

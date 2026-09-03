@@ -25,28 +25,30 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-25 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 1. Nancy Pelosi Discloses Up to $13.5 Million in Stock, Options Trades — 77.6x Her Annual Salary Nancy Pelosi discloses two new stocks bought, with millions…
+- 2026-08-25 정치권 핵심 이슈: Nancy Pelosi Discloses Up to $13.5 Million in Stock, Options Trades — 77.6x Her . 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 33건 (미국 의회 거래 5건, SEC…
+- 1. Nancy Pelosi는 최대 1,350만 달러의 주식, 옵션 거래를 공개합니다. — 연봉의 77.6배 Nancy Pelosi는 수백만 달러 규모의 신규 매입 주식 2개를 공개합니다.
+- 1. Nancy Pelosi는 최대 1,350만 달러의 주식, 옵션 거래를 공개합니다. — 연봉의 77.6배 Nancy Pelosi는 수백만 달러 규모의 신규 매입 주식 2개를 공개합니다.
 
 ## 1. 미국 의회 거래 동향
 
 **1. [Nancy Pelosi Discloses Up to $13.5 Million in Stock, Options Trades — 77.6x Her Annual Salary](https://news.google.com/rss/articles/CBMi2wFBVV95cUxNY0lzc1l0Z3JYU3FZSzBkVzNVeTJ2WThDUHhYX05LVGx2NU9iWlpUS29jZWFaVlJONXRXVjhwcTZ3dnRNU0NkRjVEV2VmdHoxUGdGZW9aUFd5N2UxYTlEMVNvZEZfWVFJYnpqOWVjV0h4dFU4RmoxRThHWXB5b2R1U0VMcENTcThYbXNua1dBVk4tX3dBUGt0YnBHMFlTRG9tRDEybW1jRnk3UmJWbXRoNnpYZWFaNkZLNUxWSFpiR29sOThXWVFDZWpFVjBpUFFuMUtPMjVIMV8tRXM?oc=5)**
-Nancy Pelosi discloses two new stocks bought, with millions of dollars in options and shares traded in July.
+낸시 펠로시(Nancy Pelosi)는 7월에 수백만 달러의 옵션과 주식이 거래된 두 개의 새로운 주식을 매입했다고 공개했습니다.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **2. [Nancy Pelosi makes super suspicious $12 million bet on this data center stock - Finbold](https://news.google.com/rss/articles/CBMingFBVV95cUxNMHBmejFObTF6R0FLMllXb3JqdDZBNkdIbmhkaFBtSWFOUWNPNWl6ODgtbVBEY0tnUXJiYWtsdlB6YVQ4eDBpNU03LUx2VHhTY0lpUTFoT3pKVWJYZHlwUEFxS1dUTjZfRjk5eUYtRlQwQ1VzRjVmSERqTFF2S3luTDJsUW5zWE10RjFjNkNNWU5oYlpId19QUVRCanp6UQ?oc=5)**
-Former House Speaker Nancy Pelosi's household, through her husband, has disclosed a new investment in Bloom Energy (NYSE: BE).
+낸시 펠로시(Nancy Pelosi) 전 하원 의장의 가족은 남편을 통해 Bloom Energy(NYSE: BE)에 대한 신규 투자를 공개했습니다.
 <span class="source-tag" data-source-type="default">Pelosi Trades</span>
 
 **3. [Trump’s oil and gas stocks gained up to $15.5 million amid Iran war, congressional Democrats say](https://news.google.com/rss/articles/CBMikgFBVV95cUxNVnk0dk1CZnV3SHdna29hNGpmQUI3azFrd2FSNnctTy1wY1BxSS16Vk5lbzFkOVh0LUotRjhhSW1xRFdNWjZiaUs1R1NSdE1kaWNIalA2MW81M1EtNXFtRzVreFpRb2F5bGhrbkVuNzRFb1FYdFlJVzY0NEZjU2g4Q1FxNnJrNk1mU3Nvb19fVURTd9IBlwFBVV95cUxOXzdNN0N5Zzd5NHluZG1ZeThwNGFJX3h3XzJPZS1GNE5FRDFna05yTDJkcFpobmdNV0p5TU1Uakt4Q3RNYUZJbC1FZUNmTm41TVJDb05jU1BrZWFIeFJSdU1xUnhSTVQzWU5sUUxWQ2JuWm9tbmcxU2s0d3A4bFBnaU9xa0dZWF91V1Q5ZmFTZkMtX0pzenJj?oc=5)**
-Trump’s stock trading could face heightened congressional scrutiny if Democrats retake either chamber in the midterms.
+트럼프의 주식 거래는 민주당이 중간선거에서 두 의원 모두를 다시 차지할 경우 의회의 엄격한 조사를 받을 수 있습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 **4. [Trump disclosed over 1,000 stock trades in June, filing shows](https://news.google.com/rss/articles/CBMiakFVX3lxTE5NRElwZWVPbHJuWER3SGRQMVVqMVEyMTN4LVVuTEQxQmFTWWlJUVJXVjFNbjk2eHk3WEhPTGx1bWVLVFZVV2pMdDZHZE5jMmtwSDNNdEpHYnU3dDFpckRYbGRtLTVsS3Jhb3c?oc=5)**
-Trump reported more than 21,000 stock trades in 2025 and over 1,000 in June alone, drawing Democratic demands for disclosure of his investment managers.
+트럼프는 2025년에 21,000건이 넘는 주식 거래를 보고했으며 6월에만 1,000건이 넘는 주식 거래를 보고하여 자신의 투자 관리자를 공개하라는 민주당 요구를 불러일으켰습니다.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 **5. [Trump June stock disclosure: more than 1,000 trades, big in the VIG](https://news.google.com/rss/articles/CBMipAFBVV95cUxQVkUwa2U5aFdsaUtOTjQxa1Q5V0NlYUZ2cUlnODNKS1QxUnRjU0tHUTVPdnZudjgwZEc4ZW1sN3VnZkYtX25ZNTRfT0J6N2tNN3QtTDVmZGoxZS1KS2R2b2NvZFNKMHJXVXBmMVh2dHhFbHhnLWZRU0xUcnNzVWs3cDhPY3JMT3o1RXF0UDBLWHZRSDdsMFZOMFNOdnRfMDNWbXd4dg?oc=5)**
-Trump’s June disclosure shows 1,000+ trades, big buys in Berkshire, Visa, Mastercard and Palantir, plus blind-trust claims—see the full details now.
+트럼프의 6월 공개에는 1,000건 이상의 거래, Berkshire, Visa, Mastercard 및 Palantir의 대량 구매와 맹목적인 신뢰 주장이 나와 있습니다. 지금 전체 세부정보를 확인하세요.
 <span class="source-tag" data-source-type="default">Congressional Trades EN</span>
 
 ## 2. 트럼프 행정명령/정책
@@ -56,71 +58,71 @@ Trump says additional U.S.
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
 **2. [Trump vows 50% tariffs on Canada cars, trucks, auto parts, steel - Supply Chain Dive](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOEZzYWlXczdBYkliZTZ6UzRhN2FkMXpScENmcDVPUGpKV1RwajZLdnVPTjBiSm11U2FwaUtXQTdFd3V6TDFIaXIwTGZLSHhac2JVYlo0WE5qTW4yaEFMUm9HaFpzejhRUkkxRmIteVNqT3U0UnpBa0VHQnhxSUJVaWxPaEc0bVRxWWJnSEU1LTBZTWxlY20xb0d1WTNaSnByaHJwaVVBdVg?oc=5)**
-The president announced the new levies, effective Jan.
+대통령은 1월부터 새로운 부과금을 발표했다.
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 **3. [The U.S.–Canada trade war escalates. - Tangle News](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9JUERaeEl2QVY5YnNWczlaWXI3YmR2VVZ4aGZ1ZXEtaVZROEk0OHNKX3lJLXluTWxtSlRMU2VTV0xYYm1WZWhTc0tNeks0b0tFZFQ5NDgtbDZjalZkdVNOMTN3?oc=5)**
-The U.S. imposed 50% tariffs on roughly $20 billion of Canadian goods, and Canada vowed to retaliate.
+미국은 약 200억 달러 규모의 캐나다 제품에 50% 관세를 부과했고, 캐나다는 보복하겠다고 다짐했습니다.
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 **4. [Trump says he'll impose new 50% tariffs on Canadian cars and steel in January, escalating trade war - Everett Post](https://news.google.com/rss/articles/CBMizwFBVV95cUxPa3NFQVhDNXg5dXU2RkE1eE9qSE82T0tEdk52Z1FpQ29IbzVFZHV3VTRZcXk3eWdJbGQ5WDVRcV9FWnJrRUlGVGU3bnE5YVR0bU5rZl8xRzhKb3FuQzBQOW9Gblc5SmtzVWNCZ2dwYVZsVHA3X2pxLWdIWlh2OW1TSmt3ZWZkb2pYMmpZWHhkd3psa0hESGd2OVNGMDBFTjgzLVJYQTdZRDV1UmZkSjFYdmxwT1I0aFhNemNwZUZuamN0Vzc3SEMtSnNfTmFLR0E?oc=5)**
-(WASHINGTON) — President Donald Trump on Monday said in a social media post that he will ratchet up tariffs on […]
+(워싱턴) — 도널드 트럼프 대통령은 월요일 소셜 미디어 게시물을 통해 다음 품목에 대한 관세를 인상할 것이라고 말했습니다.
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 **5. [Automakers warn Trump’s 50% tariffs would be ‘devastating’ - The Logic](https://news.google.com/rss/articles/CBMiakFVX3lxTFBXdWJEcGRyOUlSZWctNzNMUHRtVG5zRHBUUmxBZFVNQ1IyQTNwSXJBLVFMcEZXNHd4YXloOTJuMHFpa3c4WEQ1eXFwMEM0b29VVzJIbEtNQlIyWF9ZdUNVNWtPS2RKWm9Hb2c?oc=5)**
-Automakers warn Trump’s 50% tariffs would be ‘devastating’ The Logic
+자동차 제조사들은 트럼프의 50% 관세가 '파괴적'이 될 것이라고 경고합니다 The Logic
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 **6. [How Trump’s tariffs are hitting Canadian goods - CHAT News Today](https://news.google.com/rss/articles/CBMiigFBVV95cUxQLTJrQzF2R3YxRm9qVERYV2trS00zYkFfNUhRaTMwa1lQUWYwd1RQOElDTWQ4R2dRMGRnUGhYdGpkcnNRdjhOeVFlajEwMzNJM2VwcFFhRFhxRmJxUld0T3BOZ2pIYWgtazFrTzFDMFE0akh6WHVZQzVDMFpnM2NqVXdRYk9VczlIZ1E?oc=5)**
-OTTAWA — The United States introduced new 50 per cent tariffs on billions of dollars in Canadian exports on Saturday after trade talks failed to reach a deal.
+오타와 — 미국은 무역 회담이 합의에 이르지 못한 후 토요일에 캐나다 수출품 수십억 달러에 대해 새로운 50% 관세를 도입했습니다.
 <span class="source-tag" data-source-type="default">Trump Tariff Policy</span>
 
 ## 3. SEC 내부자 거래 (Form 4)
 
 **1. [Key Tronic (KTCC) flags new insider share move in latest SEC filing - Stock Titan](https://news.google.com/rss/articles/CBMirgFBVV95cUxNOGxRTExBNUgxTUkxWEU2NzkwZ0ZvMUgwelc3SWFaMC1FZnJrWlBlZUZvNGx1QXBoMEltMGNnWHk4YnBWZkg3UWVKaWYxdlJYQTFFLVNxb2RTTHQwa2VsMFZSUTM2NXM4ejlMTTM0ZUwtYThHWVNtS3hJZFBreC1oaHZmM09TRUhWdGczYXBrQXVORTRKS1lMUlFpWjA5cGE0aVNSeWhYM3dLVnFKNUE?oc=5)**
-Latest Form 4 from Key Tronic shows an insider share transaction at KTCC.
+Key Tronic의 최신 Form 4은 KTCC의 내부 주식 거래를 보여줍니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **2. [Cardlytics (NASDAQ: CDLX) revises earlier insider trade filing - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxQVy0tc2FlWjd5VUZ0cDdqYlIwZlZiTm0yT29yMGVDak0xX0Jld3hRMkpYQ1Iwemc1SHYtS3FWd3R2ZEdxcXVHS2pBSkgzeWtpdlExVUFLUDRPd01BdndUM2ZwVEtCRVNtWFE1SXQ3eXowdTIwbzlDWVA2TE1lUF9zN29UVUVkNlJUWU5JVjlWT1R3WkNwaG9hT1V0aUdDUUU5ZzZ5Y285VXNQVUpoSnFxU0VuWlZHeXBpU2c?oc=5)**
-An amended Form 4/A from Cardlytics updates details of a previously reported insider stock transaction, refining its earlier SEC disclosure.
+Cardlytics의 수정된 Form 4/A은 이전에 보고된 내부자 주식 거래의 세부 정보를 업데이트하여 이전 SEC 공개를 개선합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **3. [Pluri Inc. (PLUR) insider logs stock trades in new SEC filing - Stock Titan](https://news.google.com/rss/articles/CBMipgFBVV95cUxQTWVaNTlVNzVGdjRUbWF5S1lNMFRWODluc19FZmN4WUNoeHB1b0JYTzlKZU1Dam9WQ0d6cTlMY0MyamRyTHNVMmY5NWgxRGEtTXpTXzc5eGx2LXQtQ3B0c056allsMXZwOHBuWUxVeDZ5dDltcmtnNjR3X3d2TjNIbFY0MVVIUG93OGhwMk1tTlQwOHlwd01wTHk5WlJiMHR6YVAyaVlB?oc=5)**
-Pluri Inc. (PLUR) insider logs stock trades in new SEC filing Stock Titan
+Pluri Inc.(PLUR) 내부자는 새로운 SEC 서류 Stock Titan에 주식 거래를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **4. [OptimizeRx (NASDAQ: OPRX) insider logs new stock trade - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxNSjhaZW14TXhWUmE0b1p3OUloMUl2MjZrRzZ3T25xUTRQU3plbXE3WTZKNVpublVCcVEzRWwzMHZaWXRSVV9JYWNIS3RtbkxDM1RhT3phNHVTMkdENkFkNGhFMlFrSTBaSEp6cUViVDZLQWNkNzAyejhVSURvVTVMTWhXUmFwU29FZnFLNWJqcUE4djV5ZWxOMkhTb1YzUnJVdmtwZVdtUXlFTzJ0Qjdz?oc=5)**
-OptimizeRx (NASDAQ: OPRX) insider logs new stock trade Stock Titan
+OptimizeRx(나스닥: OPRX) 내부자가 새로운 주식 거래를 기록합니다 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **5. [Charter Communications (CHTR) records new insider trades - Stock Titan](https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUkM1bE1mMGw1cHNwZ0dtYm50RDZiWmowZE9kbmItU0NsUnlsbkRmLVAxUXdxOW5yQUVqSnUwSVhpM2F4QVVERnhWMjdYOGg5Z2NDUDUxU2VoaEVsNFVfNG1kcmpDbGNtRG1DS0xDNlRyZkRWUWItb3dxbUhwMmlEdkRzM2dFY1RvWlRSNDlZQWF0Y2JZOVNtRnVsU0otaDBjSko5RVVBSEZtZTFmTjVYdjA0dTVxWnNCZ004OVkwWkY?oc=5)**
-Charter Communications (CHTR) records new insider trades Stock Titan
+Charter Communications(CHTR)는 새로운 내부자 거래를 기록합니다 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **6. [Peoples Bancorp (NASDAQ: PEBK) insider logs new share trades - Stock Titan](https://news.google.com/rss/articles/CBMiywFBVV95cUxQN0xVSUw0aWtGb1hRLWtXdFh2X05VbzM4Rl83eVJhN2h4ZnZia3NVeWd5YXh1SlNXekxQZ2FXUlRVdTgwSUFiRV96TVkzREtaV0Q5SHhzRS1ScDBvZlVwV0hVS1FGLVh2Zmk4OGRGUmhRN0hDWlNva1NTU2ZIZW9wejFwRDIxY0hURlVyZk1YbFphTDllNEpPcks1N2NTaEtNT2k0VEg3anZtbERQMjBGQXBraTZlTW5CTTY4S1FRYi13eDVCaGlhejJZVQ?oc=5)**
-Peoples Bancorp (NASDAQ: PEBK) insider logs new share trades Stock Titan
+Peoples Bancorp(나스닥: PEBK) 내부자가 Stock Titan에 새로운 주식 거래를 기록합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **7. [Norfolk Southern (NYSE: NSC) details insider trades - Stock Titan](https://news.google.com/rss/articles/CBMitAFBVV95cUxPYmlUNE8zUWJKaFpVRll3aEc0Y2ZSX25mVWNiVDhjOElrNGFFVTh5b2pSZ3RiVXYtV0Y5a05hbzJKTFEzQVBTcTlETlV0ZVVZZHRCb1J6SmxwOWs5dC1JeVdXS0pvcHdoNGg2R0dDbVJoUUF5T2g3ZmFEbmhHZUNYOXFFbm5WLUxaT0dYV1k2SGI2TlQyMmpVZVdydk5Nb2l0VTZQdEFXaWZldWtCb2QwNTI2Rkw?oc=5)**
-Norfolk Southern (NYSE: NSC) details insider trades Stock Titan
+Norfolk Southern(NYSE: NSC)은 Stock Titan 내부자 거래를 자세히 설명합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **8. [AST SpaceMobile (NASDAQ: ASTS) updates insider trade filing - Stock Titan](https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRDNKbGkybDJNRmRyOWhxRU9jeER2cnlGNVJtdGE2c0FQOEdmSWMyTUFMWTJIMmxZU1JjcHZPOFNlMkVfZjlXZWRNOC1ZekVyTkxoNmVTMWpkMkxHd1FNV3YzY3BzVm5FWkJqYTY3NnlpWko4c290eVEyeDY0UFdwNTVmNWRzZFhoZDl1T1U4ZkJNVTFNV0FRQm9GWjJSM054aEdyd0YxREhXY1RZUFg1SEZybTN0aXk0dEpYdTVXRWRRZw?oc=5)**
-AST SpaceMobile (NASDAQ: ASTS) updates insider trade filing Stock Titan
+AST SpaceMobile(나스닥: ASTS)이 내부자 거래 신고 Stock Titan을 업데이트합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **9. [RE/MAX Holdings (NYSE: RMAX) insider updates share holdings - Stock Titan](https://news.google.com/rss/articles/CBMiswFBVV95cUxNUDdPYlZVV3dIU0FMU3A2aHpVcWN5a2k3T1hjOWJkZUFzaXBmQktrTkNuUUR3QTYxMjVhZlVLTkdwa1N3ekFhLVJ5TkJ2T0xzTTI0NXo1VGZhUy1heXNIbnpRNmVBbDVhTGpMZFdqNTJxeE1fVFV4cFk5Z0xlMVBReXRmNkFIQ2I0NFJ3SjRHekc0RmVEbUE4X1RqUVNqRTJpLVl4cXdoQlB0V0puVzRCSVhIRQ?oc=5)**
-RE/MAX Holdings (NYSE: RMAX) insider updates share holdings Stock Titan
+RE/MAX Holdings (NYSE: RMAX) 내부자 업데이트 주식 보유 Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 **10. [Merchants Bancorp (NASDAQ: MBIN) details latest insider share move - Stock Titan](https://news.google.com/rss/articles/CBMisAFBVV95cUxOZ1BSLTM5bUpZMW5zdHFuMkJxWEw4X0E0ODAtR2lJbTI2TE0wT1VFVlhHNlBNMjlyX1hXcWVncm5icjA2YXVteHJoSTgzQ2ViRURPN2I5bmFZaFo1QlNZcEZvSjdYRHJMRWc1Y3U2b1dsYUY0bUdLZ0IydDJ0cVFEdllsZjY0Um42V0Q1djIxRDlIZzllX0t3bzRjMUtNZi1sTlZYVWdyVDloZmE1MjIxMw?oc=5)**
-Merchants Bancorp (NASDAQ: MBIN) details latest insider share move Stock Titan
+Merchants Bancorp(나스닥: MBIN)에서 최신 내부자 주식 이동 Stock Titan을 자세히 설명합니다.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 ## 4. 중앙은행 정책 동향
 
 **1. [Nvidia Earnings and PCE Land Same Day: September Rate Decision Starts Wednesday - Tech Times](https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWUljRVJYQjlubTlWbFVZbnJ1dXN1TnBla0VndV9sandCTmFYMHIwbmZEcUI5TktORnhrUzVTUllYMVY0b0xOQWl6VnRDN1NpZFRMbEJ1NDNXQ29NaXlGNGNTdHFXTDFmSk1JZmwxckhVUU5mdENoMnZyOWFIT0VOSFZfbGxLM2FhenZmMjlzQ2ZOLWlWX0ZibnFtQmhNcmhVUmRFOEg4UDBBNnlNeGtJYTREVGpYLXpTUmlld2lHeXM5MHJ3Z2llVg?oc=5)**
-Nvidia earnings and PCE inflation both land August 26, compressing three market-moving signals into one session: July PCE at 8:30 a.m.
+엔비디아 수익과 PCE 인플레이션은 모두 8월 26일에 시작되어 시장을 움직이는 3개의 신호를 하나의 세션으로 압축합니다: 7월 PCE 오전 8시 30분
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 **2. [금통위 인터뷰\ BNP파리바 "8월 동결 전망…금리인상 속도조절" |](https://news.google.com/rss/articles/CBMidEFVX3lxTE10V3ZuOTFtc0Q3azQ0bnA4YkdsZERaT2NJT1BmSGoya2N0Sk84SmZaY2FNOUE3bFN0RWZOUzRqcHFNSlljMW9aSUFyNF8wVTgxMnlsZFpMbUV3MWdCaVBadXNrQTNKSnFEVHRSb3FxS1FKdDFl?oc=5)**
