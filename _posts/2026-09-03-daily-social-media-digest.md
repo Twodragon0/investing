@@ -29,48 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-03 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” - 30건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong>: 이재명, 정부 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 금리인상, 금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 금리인상, 대통령 주목</li><li>🤖 <strong>AI/기술</strong>: 코스피, 외국인 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAzTTJUVGgyNjg4UUNPdzlkcmZOc0FoaUlrY291WDMydUlaY1V2X1hPeUtnYlNzeS1rQmFUNDNwYThHbmdXdjJxUk94OV9ZTWZlLVBrMld5eEkxV1NqdXZoSjBmLVFlU1BLT25n?oc=5">이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”</a> <span class="p0-desc">이재명 대통령이 30일 “조기 대량 공급, 투기 수요 억제, 고금리에 의한 대출 연체와 경매 폭증 등으로 주택가격이 폭락할 경우에 대비해 공공주택 보유용으로 ​일정 기준 이하의 주.</span></li><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeUxjcERJSDVINVoxRF9GazhDY180RWYyUl9mMWlKSlZSR2VnWlFOb1VFME9CZ1JYSThDVjR1RWRFQkxhd0lfRHJXNHgyUWxGQTNjOGVoVTBWT1pvdkpWdDhmQl8yUG10cG9HcWRobGZXQkFRTWlKcWh2cjROWDNjM2FFdUVGclpXOVZqMjFKeS05YkJ5MXZPX0Qyd0psYVZDeDhPUmF5LTFzT2RORkdrOHZYNmhFdzB5MUZn?oc=5">BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO</a> <span class="p0-desc">토론토, 9월 1일 (Reuters) - 투자자들이 다음 달 연준 금리 인상에 베팅하고 글로벌 채권 시장의 매도는 캐나다 은행(Bank of Canada) 금리 결정을 앞두고 국내.</span></li><li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE52Q0loR0NFSm1vMlBvOFByeE53S1QxTXYzazIyb01fTWszclhuYnBHZ1dNd0xhRzUxb1NrZXF0bkZENUdWRDhZRW1TSVVEMmM2cHlXMg?oc=5">Impax는 연준의 9월 금리 결정이 너무 가까웠으며 데이터 주변의 재무 변동성을 확인했다고 말합니다.</a> <span class="p0-desc">임팩스자산운용은 9월 연준의 기준금리 결정을 예측하기 어렵다고 밝혔다. 회사는 또한 휘발성이라고 말했다</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 30건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 30건 중 텔레그램 0건, 소셜 0건, 정치·경제 30건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **🏛️ 정치/정책** (19건): 이재명, 정부, 경제 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📊 매크로/금리** (16건): 금리인상, 금리, 인플레이션 매크로 변수 (16건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (14건): 금리인상, 대통령, 이재명 가격 변동 (14건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO
-- Impax는 연준의 9월 금리 결정이 너무 가까웠으며 데이터 주변의 재무 변동성을 확인했다고 말합니다.
-
-### 주요 이슈
-
-- 김용범 정책실장 전격 사퇴…경제·부동산 라인 전면 교체
-
-### 투자자 체크포인트
-
-- 정치·경제 30건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:84%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:74%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:11%"></div></div><span class="theme-count">2건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-03.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

@@ -27,6 +27,7 @@ permalink: "/market-analysis/2026/03/07/daily-crypto-market-report/"
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Chainlink</strong> (LINK): -5.27%</li><li>🔴 <strong>Ethereum</strong> (ETH): -5.26%</li><li>🔴 <strong>Monero</strong> (XMR): -4.58%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:

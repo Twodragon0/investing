@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-19 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 하이닉스, 삼성전자 부각 194건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채, 달러 관련 24건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 하이닉스 주목</li><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 이슈 부각</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,869.83 (-1.55%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 834.20 (-3.52%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-19 주식 시장에서 194건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,869.83(-1.55%), KOSDAQ 834.20(-3.52%), USD/KRW 1,411.47(-0.36%).
 - *코스피가 장 초반 크게 상승하며 7,200선을 회복했지만, 매도 물량이 쏟아지며 하락 전환해 6,800선에서 마감했습니다.미국 반도체주 훈풍 속에 상승 기대감도 있었지만,.*
 
 ## 테마별 주요 뉴스

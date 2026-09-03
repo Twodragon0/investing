@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-13 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/bonzo-lend-9m-oracle-exploit-hedera?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bonzo Lend, Hedera의 오라클 악용으로 900만 달러 손실</a> <span class="p0-desc">공격자는 Supra의 온체인 오라클 검증기의 결함을 통해 SAUCE 담보의 가치를 부풀리고 Bonzo Lend로부터 900만 달러를 빌렸습니다.</span></li><li><a href="https://www.coindesk.com/markets/2026/07/12/stablecoin-market-cap-has-shrunk-by-usd10-billion-since-may-but-analyst-sees-no-reason-to-panic">스테이블코인 시가총액은 5월 이후 100억 달러 감소했지만 분석가는 당황할 이유가 없다고 생각합니다.</a> <span class="p0-desc">시장은 6월에만 77억 달러 감소했는데, 이는 2022년 5월 Terra-Luna 폭락 이후 가장 큰 달러 금액이지만 스테이블코인은 장기적인 성장을 재개할 가능성이 높다고 한 분석.</span></li><li><a href="https://www.coindesk.com/web3/2026/07/11/lending-protocol-bonzo-loses-77-of-value-locked-as-usd9-million-oracle-exploit-rattles-hedera">대출 프로토콜 Bonzo는 900만 달러 규모의 오라클 익스플로잇이 Hedera를 뒤흔들면서 잠긴 가치의 77%를 잃었습니다.</a> <span class="p0-desc">Bonzo Lend는 공격자가 Hedera 네트워크의 제3자 Supra 오라클 계약의 확인 결함을 악용한 후 약 905만 달러의 손실을 입었습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **79건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-07-13 암호화폐 핵심 뉴스: 비트코인이 약세장에 갇힌 3가지 이유와 한 분석가가 연말까지 $100,000로 반등할 것으로 예측하는 이유 - Fortune. 총 79건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

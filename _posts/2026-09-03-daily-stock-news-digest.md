@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-03 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문 - 194건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 국채 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 실적 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 정책 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1YN3RQa2xycXpVVHpYLTBxNDZ6ZEhXRmlzQWZXdzNwMm84R0tUMXZFSTl5OGJSVnVfcFdVMmRNUGthRklxM29Za3ZjZlB1Xy1uNXNlcVNyZnktTmdZYnNpVnNqYkFCbmtBNzE1LXRqWXA?oc=5">코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문</a> <span class="p0-desc">[코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 한국강사신문</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBHNzhHckk4UkkydU90azBfU0lLOFJvNVlTaUwtb09DVEE1VGdUT0dNSTM1VGdLU2QxaTl6QWxfVlBmbVpES08wV05jZkxwbzJKV1VVOFFyRTlLNkt6ZG5mVVBsUE4tbGk4dGZISlVUOXkzVHM?oc=5">속보] 코스피 4% 급락 6,562.72 마감…코스닥도 2%대 하락 - 스페셜타임스</a> <span class="p0-desc">[속보] 코스피 4% 급락 6,562.72 마감…코스닥도 2%대 하락 스페셜타임스</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5pRlpTanBkQ3dxVDFWaWRyemJGRDE4ekgxOGpVQlJrQkJkQ2oxMnQ0X1RyNVhBRTFCWk9NTEJvd3QtZU1ycTNRRGZSTEVCNXdyTzRjMmktQWZSOHNkMnphTS1rLXBnOEd1?oc=5">국제유가 폭등과 국채금리 상승에 삼성·SK하이닉스 4%대 급락 - 2news.co.kr</a> <span class="p0-desc">국제유가 폭등과 국채금리 상승에 삼성·SK하이닉스 4%대 급락 2news.co.kr</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 194건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (52건): 코스피, 코스닥, 하락 가격 변동 (52건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (29건): 인플레이션, 국채, 채권 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🔴 보안/해킹** (8건): 실적 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문
-- 속보] 코스피 4% 급락 6,562.72 마감…코스닥도 2%대 하락 - 스페셜타임스
-- 국제유가 폭등과 국채금리 상승에 삼성·SK하이닉스 4%대 급락 - 2news.co.kr
-
-### 주요 이슈
-
-- 오늘의 주식 시장: 트럼프가 AI 경고를 제공하면서 다우 스키드; 테슬라 앞으로 O
-- Phibro(PAHC)의 대규모 인수 베팅이 첫 해를 마감했습니다.
-- AI 다음 주 Oracle 수입으로 거래 얼굴 테스트
-- 외 19건
-
-### 투자자 체크포인트
-
-- 한국 기사 67건, 글로벌 기사 127건 수집
-- 한국 지수: KOSPI 6,562.72(-3.99%), KOSDAQ 803.98(-2.10%), USD/KRW 1,359.43(-1.09%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">52건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:56%"></div></div><span class="theme-count">29건</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:15%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:15%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:13%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-03.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,562.72 (-3.99%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 803.98 (-2.10%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-03 주식 시장에서 194건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,562.72(-3.99%), KOSDAQ 803.98(-2.10%), USD/KRW 1,359.43(-1.09%).
+- *이재명 정부 출범과 함께 시작된 코스피 5000 목표는 지난 1월 27일 조기에 초과 달성됐다.*
 
 ## 테마별 주요 뉴스
 

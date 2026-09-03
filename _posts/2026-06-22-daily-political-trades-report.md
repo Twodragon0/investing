@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-06-22 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(2회), **연준**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-06-22 정치권 핵심 이슈: Moskowitz 의원의 퀄컴 판매 신호는 무엇입니까 - Kavout. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 3건 (미국 의회 거래 2건, 중앙은행 1건)을 종합 정리합니다
+- 1. Moskowitz 의원의 퀄컴 판매 신호는 무엇입니까 - Kavout InvestGPT 및 Smart Money Tracker부터 AI Stock Picker 및 Smart Signals에 이르기까지 Kavout의 AI 에이전트를 통해 투자 역량을 강화하세요.
 
 ## 1. 미국 의회 거래 동향
 

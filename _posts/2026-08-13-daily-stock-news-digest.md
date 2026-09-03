@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-13 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlFsM0tYUV9IdDJnOFNqWGVBYzl1dTFqc3hlWXlvdndWRjRVaDBkY3ZnZ3FkOUhlekxwZjBsMjdQT0x0ajM0UWVGLUMxNFRIb0NNSlRBRVQtd0h1WnhCRGpqaXJLQXJBWmcwWTdKejlUb1l3QWhTZ0t0aXNtc1Z5T2wzc0JyYmV0?oc=5">특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세'</a> <span class="p0-desc">[특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세' 글로벌이코노믹</span></li><li><a href="https://www.sedaily.com/article/20078637">12분기 연속 흑자에도 못 웃는 한전…2분기 별도 영업익 96% 급락</a></li><li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSElSejJBWHN6OVFxLU1ZblMxcVVxbEFVMlVJenJhMC14cEI5eTFXU1ZsSGsxTDF5Z0ZlUzIzMWhqRW5LTW5mSWk5ZlJMc1JtLWVSNWlrRUJjb1A4bXRibXVWMExReW1RNnlqcFNwWEZtcXhJenh5ekRzaUhyd2UyZm1ncWRJMC1vSVBOcDZadHhjdkRsYXFHNzEyaVVNQWE3dVVoME9XY1hEOS1LNHZYSlVrZ1pCWFcwYnFFYXgyYVAzZw?oc=5">Colombia to Declare Economic Emergency as Quake Toll Tops 180</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,579.04 (+3.68%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 858.91 (+0.12%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-13 주식 시장에서 211건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,579.04(+3.68%), KOSDAQ 858.91(+0.12%), USD/KRW 1,418.17(+0.40%).
 - *한국거래소가 같은 날 발표한 두 가지 중요한 공시를 함께 살펴보려고 합니다.*
 
 ## 테마별 주요 뉴스

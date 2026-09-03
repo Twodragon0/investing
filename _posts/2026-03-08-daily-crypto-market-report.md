@@ -28,6 +28,7 @@ permalink: "/market-analysis/2026/03/08/daily-crypto-market-report/"
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Cardano</strong> (ADA): -3.03%</li><li>🔴 <strong>Solana</strong> (SOL): -2.78%</li><li>🔴 <strong>Dogecoin</strong> (DOGE): -2.75%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
