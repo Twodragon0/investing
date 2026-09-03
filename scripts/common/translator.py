@@ -646,11 +646,190 @@ def _postprocess_translation(text: str) -> str:
     return text.strip()
 
 
+# ---------------------------------------------------------------------------
+# Retry policy
+# ---------------------------------------------------------------------------
+
+# Matches ``utils.request_with_retry`` (max_retries=2, base_delay=2.0), so the
+# repo has one backoff policy rather than two. Delays are 2s then 4s.
+#
+# The delays must stay at or above ``tests/conftest.py`` SKIPPED_SLEEP_FLOOR_S
+# (0.25s): that fixture skips deliberate pacing sleeps and records them, so a
+# 2s/4s schedule costs no wall-clock under test and can be asserted directly.
+# A sub-0.25s delay would actually sleep in every test that triggers it.
+_MAX_RETRIES = 2
+_RETRY_BASE_DELAY = 2.0
+
+# After this many consecutive *give-ups* — calls that exhausted their attempts,
+# not individual attempt failures — the process stops retrying and falls
+# straight through to fail-open. A call whose retry succeeds resets the count,
+# so scattered failures in an otherwise healthy run never trip it.
+#
+# Measured 2026-09-02: sweeping 433 posts through the translator rate-limited
+# the endpoint, and retrying *within* that pass did not recover — three
+# separate later invocations were needed. Under rate limiting an immediate
+# retry spends the budget and still fails, so continuing to pay 6s per call is
+# strictly worse than giving up. This bounds the worst case at
+# 5 * 6s = 30s per process instead of ~48 calls * 6s = 288s, which is what
+# keeps the four 10-minute collect workflows inside their timeout.
+_CIRCUIT_BREAKER_FAILURES = 5
+
+_consecutive_failures = 0
+_retries_disabled = False
+_failure_total = 0
+_failure_warned = False
+
+_exception_policy: Optional[tuple] = None
+
+
+def _retry_exceptions() -> tuple:
+    """Return ``(retryable, fatal)`` exception tuples for deep-translator.
+
+    Resolved lazily and cached: ``_translate_once`` imports the library inside
+    the call so this module stays importable when deep-translator is absent,
+    and resolving the classes at module scope would undo that.
+
+    ``TranslationNotFound`` is retryable. ``GoogleTranslator.translate`` raises
+    it when the response HTML carries neither result container — the shape of a
+    consent or captcha interstitial served under rate limiting — so it
+    describes the response, not the input. The fatal set is the input-side
+    mirror of ``request_with_retry``'s 401-422 list: retrying cannot change a
+    payload that is the wrong type or too long.
+    """
+    global _exception_policy
+    if _exception_policy is not None:
+        return _exception_policy
+
+    import requests
+    from deep_translator import exceptions as dte
+
+    fatal = (
+        dte.NotValidPayload,
+        dte.NotValidLength,
+        dte.LanguageNotSupportedException,
+        dte.InvalidSourceOrTargetLanguage,
+    )
+    retryable = (
+        dte.TooManyRequests,
+        dte.RequestError,
+        dte.TranslationNotFound,
+        requests.exceptions.RequestException,
+    )
+    _exception_policy = (retryable, fatal)
+    return _exception_policy
+
+
+def _translate_once(text: str) -> Optional[str]:
+    """One translation attempt. Returns None when the service gave nothing back.
+
+    Raises whatever deep-translator raises — classification is the caller's job.
+    """
+    from deep_translator import GoogleTranslator
+
+    modified, replacements = _apply_term_overrides(text)
+    translated = GoogleTranslator(source="en", target="ko").translate(modified)
+    if not translated:
+        return None
+    return _postprocess_translation(_restore_terms(translated, replacements))
+
+
+def _note_failure(text: str, exc: BaseException) -> None:
+    """Count a give-up and surface the first one, then trip the breaker.
+
+    The old code logged every failure at DEBUG, which nobody reads — 106
+    untranslated lines accumulated over seven days without a single visible
+    signal. One warning at the first failure and one when retries are disabled
+    is enough to notice; the rest stay at DEBUG so a degraded endpoint cannot
+    flood the log.
+    """
+    global _consecutive_failures, _retries_disabled, _failure_total, _failure_warned
+
+    _failure_total += 1
+    _consecutive_failures += 1
+
+    if not _failure_warned:
+        _failure_warned = True
+        logger.warning("Translation failed for '%s': %s (fail-open — 원문을 유지한다)", text[:50], exc)
+    else:
+        logger.debug("Translation failed for '%s': %s", text[:50], exc)
+
+    if not _retries_disabled and _consecutive_failures >= _CIRCUIT_BREAKER_FAILURES:
+        _retries_disabled = True
+        logger.warning(
+            "번역 연속 실패 %d회 — 이 프로세스에서 재시도를 중단한다. 이후 호출은 1회 시도 후 원문을 유지한다.",
+            _consecutive_failures,
+        )
+
+
+def _translate_with_retry(text: str) -> Optional[str]:
+    """Translate with exponential backoff. Returns None when it gave up."""
+    global _consecutive_failures
+
+    try:
+        retryable, fatal = _retry_exceptions()
+    except Exception as exc:  # noqa: BLE001
+        # deep-translator missing or restructured: keep the pre-retry behaviour
+        # rather than turning an optional dependency into a hard failure.
+        logger.debug("Retry policy unavailable (%s) — single attempt", exc)
+        retryable, fatal = (), ()
+
+    attempts = 1 if _retries_disabled else _MAX_RETRIES + 1
+    last_exc: Optional[BaseException] = None
+
+    for attempt in range(attempts):
+        try:
+            result = _translate_once(text)
+        except fatal as exc:
+            # Input problem. Not a transient failure, so it must not count
+            # toward the circuit breaker — a run full of over-long strings
+            # would otherwise disable retries for the genuinely transient ones.
+            logger.debug("Translation rejected input '%s': %s", text[:50], exc)
+            return None
+        except retryable as exc:
+            last_exc = exc
+        except Exception as exc:  # noqa: BLE001
+            # Unclassified. Fail open immediately rather than paying backoff
+            # for something whose retryability we have not established.
+            _note_failure(text, exc)
+            return None
+        else:
+            if result:
+                _consecutive_failures = 0
+                return result
+            # Falsy means the service returned the input unchanged. Retrying
+            # cannot change that answer.
+            return None
+
+        if attempt < attempts - 1:
+            delay = _RETRY_BASE_DELAY * (2**attempt)
+            logger.debug(
+                "Translation attempt %d/%d failed (%s) — retrying in %.1fs",
+                attempt + 1,
+                attempts,
+                last_exc,
+                delay,
+            )
+            time.sleep(delay)
+
+    _note_failure(text, last_exc if last_exc else RuntimeError("unknown"))
+    return None
+
+
+def translation_failure_count() -> int:
+    """Failures this process gave up on. Read by ``save_translation_cache``."""
+    return _failure_total
+
+
 def translate_to_korean(text: str) -> str:
     """Translate English text to Korean. Returns original on failure.
 
     Uses Google Translate via deep-translator with term override
     protection and result caching.
+
+    Fail-open is deliberate and unchanged: a translation outage must not stop
+    13 collectors from publishing. The retry inside only changes *when* it
+    gives up. Failures are never cached — that is what lets
+    ``scripts/tools/fix_untranslated_body.py`` repair them on a later run.
     """
     if not text or not text.strip():
         return text
@@ -664,31 +843,15 @@ def translate_to_korean(text: str) -> str:
     if key in cache:
         return cache[key]
 
-    try:
-        from deep_translator import GoogleTranslator
+    result = _translate_with_retry(text)
+    if not result:
+        return text
 
-        # Protect known terms with placeholders
-        modified, replacements = _apply_term_overrides(text)
-
-        translated = GoogleTranslator(source="en", target="ko").translate(modified)
-
-        if translated:
-            # Restore Korean terms from placeholders
-            result = _restore_terms(translated, replacements)
-            # Post-process to fix Google Translate artifacts
-            result = _postprocess_translation(result)
-
-            # Cache the result and flush to disk
-            global _cache_dirty
-            cache[key] = result
-            _cache_dirty = True
-            _save_cache()
-
-            return result
-    except Exception as e:  # noqa: BLE001
-        logger.debug("Translation failed for '%s': %s", text[:50], e)
-
-    return text
+    global _cache_dirty
+    cache[key] = result
+    _cache_dirty = True
+    _save_cache()
+    return result
 
 
 def translate_batch(texts: List[str]) -> List[str]:
@@ -800,5 +963,17 @@ def save_translation_cache() -> None:
 
     Call this at the end of a collection run to ensure all
     translations are persisted.
+
+    Also reports the run's give-up count. This is the one place the pipeline
+    already treats as "end of run" (``enrichment.py`` calls it after its
+    translation pass), so it is where a total belongs — the per-failure logs
+    are latched to avoid flooding, which means without this line a run that
+    lost 40 translations looks the same as one that lost 1.
     """
     _save_cache()
+    if _failure_total:
+        logger.warning(
+            "번역 실패 누적 %d건 — 해당 항목은 원문(영어)으로 남았다. "
+            "scripts/tools/fix_untranslated_body.py 가 다음 런에서 재시도한다.",
+            _failure_total,
+        )
