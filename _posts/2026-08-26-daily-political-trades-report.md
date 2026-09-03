@@ -25,7 +25,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-26 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-08-26 정치권 핵심 이슈: Bloom Energy Shares Jump After Nancy Pelosi Trade Disclosure. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 32건 (미국 의회 거래 6건, SEC 내부자 거래 15건, 트럼프 정책…
 - 1. 낸시 펠로시(Nancy Pelosi) 거래 공개 이후 Bloom Energy 주가 급등 Bloom Energy(NYSE:BE) 주가 급등 6.
 
 ## 1. 미국 의회 거래 동향

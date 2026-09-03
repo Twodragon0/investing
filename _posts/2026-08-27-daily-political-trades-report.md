@@ -25,8 +25,7 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-27 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-08-27 정치권 핵심 이슈: Nancy Pelosi Discloses Big Investment in This AI Energy Play. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 36건 (미국 의회 거래 3건, SEC 내부자 거래 15건, 트럼프 정책…
-- 1. Nancy Pelosi는 AI 에너지 플레이에 대한 대규모 투자를 공개합니다. Nancy Pelosi는 AI 에너지 플레이에 대한 대규모 투자를 공개합니다. Barron's
+- 1. Nancy Pelosi는 AI 에너지 플레이에 대한 대규모 투자를 공개합니다. Barron's
 
 ## 1. 미국 의회 거래 동향
 
