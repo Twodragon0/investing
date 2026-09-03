@@ -153,6 +153,128 @@ class TestActionUsesManifestNotMtime:
         assert "GITHUB_RUN_ID" in self._run_bodies(self.ACTION), "매니페스트 경로에 런 고유값이 없다"
 
 
+class TestOgStepIsFailClosed:
+    """The OG step's date extraction must fail loudly, not skip quietly.
+
+    It used to run ``DATES=$(grep -oP … | sort -u)`` and, when ``DATES`` came
+    out empty, print ``::warning`` and ``exit 0``. Two different situations
+    collapsed into that one branch: grep matching nothing, and grep failing to
+    run at all (rc=2 — a grep without ``-P``, or an unreadable manifest). The
+    pipeline's exit code is ``sort``'s, so without ``pipefail`` grep's rc was
+    discarded outright. Result: OG images silently skipped, job green.
+
+    These tests execute the step's real ``run:`` body against stub ``grep`` and
+    ``python`` on PATH, so they assert behaviour rather than the presence of a
+    string — and they behave identically on macOS (BSD grep, no ``-P``) and on
+    the Linux runner.
+    """
+
+    ACTION = Path(__file__).resolve().parent.parent / ".github" / "actions" / "python-collect" / "action.yml"
+    STEP_NAME = "Generate OG images for new posts"
+
+    # A GNU-equivalent `grep -oP`, so the test does not depend on the host grep.
+    _GREP_OK = """#!/usr/bin/env python3
+import re, sys
+args = sys.argv[1:]
+if args[:1] == ["-oP"]:
+    hits = [m.group(0) for m in re.finditer(args[1], open(args[2]).read())]
+    print("\\n".join(hits))
+    sys.exit(0 if hits else 1)
+sys.exit(2)
+"""
+
+    # Stands in for a grep that cannot run the request at all (BSD grep + -P).
+    _GREP_BROKEN = """#!/bin/sh
+echo "grep: invalid option -- P" >&2
+exit 2
+"""
+
+    @classmethod
+    def _step_run_body(cls) -> str:
+        import yaml
+
+        cfg = yaml.safe_load(cls.ACTION.read_text(encoding="utf-8"))
+        for step in ((cfg or {}).get("runs") or {}).get("steps") or []:
+            if step.get("name") == cls.STEP_NAME:
+                return str(step.get("run", ""))
+        raise AssertionError(f"'{cls.STEP_NAME}' 스텝이 사라졌다")
+
+    def _run(self, tmp_path, *, manifest: str, grep: str):
+        import os
+        import stat
+        import subprocess
+
+        bin_dir = tmp_path / "bin"
+        bin_dir.mkdir(exist_ok=True)
+        for name, body in (("grep", grep), ("python", self._python_stub(tmp_path))):
+            target = bin_dir / name
+            target.write_text(body, encoding="utf-8")
+            target.chmod(target.stat().st_mode | stat.S_IEXEC)
+
+        manifest_path = tmp_path / "created-posts.txt"
+        manifest_path.write_text(manifest, encoding="utf-8")
+        script = tmp_path / "step.sh"
+        script.write_text(self._step_run_body(), encoding="utf-8")
+
+        env = dict(
+            os.environ,
+            PATH=f"{bin_dir}:{os.environ['PATH']}",
+            CREATED_POSTS_MANIFEST=str(manifest_path),
+        )
+        result = subprocess.run(
+            ["bash", str(script)],
+            cwd=tmp_path,
+            env=env,
+            capture_output=True,
+            text=True,
+            timeout=60,
+            stdin=subprocess.DEVNULL,
+        )
+        calls_file = tmp_path / "calls.log"
+        calls = calls_file.read_text(encoding="utf-8").splitlines() if calls_file.exists() else []
+        return result, calls
+
+    @staticmethod
+    def _python_stub(tmp_path) -> str:
+        return f'#!/bin/sh\necho "$*" >> "{tmp_path}/calls.log"\n'
+
+    def test_broken_grep_fails_the_step(self, tmp_path):
+        result, calls = self._run(
+            tmp_path,
+            manifest="/repo/_posts/2026-09-03-a.md\n",
+            grep=self._GREP_BROKEN,
+        )
+        assert result.returncode != 0, "grep 이 실행에 실패했는데 스텝이 통과했다 — OG 이미지가 조용히 건너뛰어진다"
+        assert "::error::" in result.stdout
+        assert calls == [], "실패했는데 이미지 생성기를 호출했다"
+
+    def test_manifest_without_parsable_dates_fails_the_step(self, tmp_path):
+        """A non-empty manifest holds date-prefixed post paths. Zero dates means
+        the format changed, which is a broken invariant, not a reason to skip."""
+        result, calls = self._run(tmp_path, manifest="/repo/_posts/no-date-here.md\n", grep=self._GREP_OK)
+        assert result.returncode != 0
+        assert "::error::" in result.stdout
+        assert calls == []
+
+    def test_empty_manifest_is_a_clean_skip(self, tmp_path):
+        """No new posts is the normal case for a dedup-only run, not an error."""
+        result, calls = self._run(tmp_path, manifest="", grep=self._GREP_OK)
+        assert result.returncode == 0, result.stderr
+        assert "No new posts" in result.stdout
+        assert calls == []
+
+    def test_generates_once_per_unique_date(self, tmp_path):
+        result, calls = self._run(
+            tmp_path,
+            manifest=("/repo/_posts/2026-09-03-a.md\n/repo/_posts/2026-09-03-b.md\n/repo/_posts/2026-08-30-c.md\n"),
+            grep=self._GREP_OK,
+        )
+        assert result.returncode == 0, result.stderr
+        dates = sorted(c.split("--date ")[1].split()[0] for c in calls)
+        assert dates == ["2026-08-30", "2026-09-03"], f"기대 날짜 2건과 다르다: {calls}"
+        assert all("--force --update-frontmatter" in c for c in calls)
+
+
 def test_manifest_env_var_name_is_stable():
     """The action and the recorder must agree on the variable name.
 

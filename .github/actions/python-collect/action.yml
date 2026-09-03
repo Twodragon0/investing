@@ -190,21 +190,38 @@ runs:
         fi
         xargs python scripts/tools/fix_untranslated_body.py --apply --files < "$CREATED_POSTS_MANIFEST"
 
+    # 예전에는 정렬되지 않은 `find` 출력의 **첫 줄** 날짜 하나만 처리했다.
+    # 백필이 과거 포스트를 건드리면 그 날짜가 뽑혀, 오늘 생성된 포스트는
+    # 이미지 없이 남고 엉뚱한 날짜가 `--force` 로 재생성됐다.
+    # 이제 매니페스트에 실제로 담긴 날짜를 전부 처리한다.
+    #
+    # 날짜 추출은 fail-closed 다. 예전에는 `grep` 이 실행에 실패해도(rc=2 —
+    # 예를 들어 `-P` 를 지원하지 않는 grep, 또는 파일을 읽지 못함) 결과가
+    # "매칭 0건"과 구별되지 않아 `::warning` 후 `exit 0` 했다. 그러면 OG
+    # 이미지가 조용히 건너뛰어진 채 잡은 green 이다. 파이프라인의 종료코드는
+    # `sort` 것이라 `pipefail` 없이는 grep 의 rc 가 사라진다.
+    # 그리고 비어 있지 않은 매니페스트는 날짜 접두 포스트 경로만 담으므로
+    # 날짜 0건은 정상 상태가 아니다 — warning 이 아니라 실패다.
+    #
+    # 설명은 `run:` 밖에 둔다 — 안에 두면 이 배선을 지키는 가드 테스트가
+    # 주석 문구에 매칭돼 판정이 뒤집힌다(이 저장소에서 always-green 과
+    # always-red 가 각각 발생했다).
     - name: Generate OG images for new posts
       shell: bash
       run: |
+        set -uo pipefail
         if [ ! -s "$CREATED_POSTS_MANIFEST" ]; then
           echo "No new posts for OG image generation"
           exit 0
         fi
-        # 예전에는 정렬되지 않은 `find` 출력의 **첫 줄** 날짜 하나만 처리했다.
-        # 백필이 과거 포스트를 건드리면 그 날짜가 뽑혀, 오늘 생성된 포스트는
-        # 이미지 없이 남고 엉뚱한 날짜가 `--force` 로 재생성됐다.
-        # 이제 매니페스트에 실제로 담긴 날짜를 전부 처리한다.
-        DATES=$(grep -oP '\d{4}-\d{2}-\d{2}' "$CREATED_POSTS_MANIFEST" | sort -u)
+        DATES=$(grep -oP '\d{4}-\d{2}-\d{2}' "$CREATED_POSTS_MANIFEST" | sort -u) && GREP_RC=0 || GREP_RC=$?
+        if [ "$GREP_RC" -gt 1 ]; then
+          echo "::error::날짜 추출이 실패했다 (grep rc=$GREP_RC) — 매니페스트를 읽지 못했거나 grep 이 -P 를 지원하지 않는다"
+          exit 1
+        fi
         if [ -z "$DATES" ]; then
-          echo "::warning::Manifest has entries but no parsable date — skipping OG images"
-          exit 0
+          echo "::error::매니페스트에 항목이 있는데 파싱 가능한 날짜가 0건이다 — 매니페스트 형식이 바뀌었는지 확인하라"
+          exit 1
         fi
         for d in $DATES; do
           echo "Generating OG images for $d"
