@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HeDZPbmR5OEllYjBxaGswdzZfS2xJUjJqaGViNE1QbHFWejZQQXUzQWJJaWNLbldyWDhQOVdpZWRsNTI3Y09KQUV2VkljaHIxbEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">8월 반도체 수출 호조.코스피 전약후강 마감 - 매일경제 마켓</a>
-<p class="news-desc">8월 반도체 수출 호조.코스피 전약후강 마감 매일경제 마켓</p>
+<p class="news-desc">반도체 조정 속 금융주 랠리신한지주 3.6% 올라 신고가1년새 주가는 76.4%나 상승KB·하나·우리금융지주 등변동성장서 방어력 돋보여주주환원율 50%돌파 가시화변동성 장세에서 금융지주 주식이 방어력을 뽐내며 거침없는 상승 랠리를 이어가고 있다. KB·신한·하나·우리 등 4대 금융지주의 주주환원율이 큰 폭으로 확대된 데다 최근 들어 기준금리 인상과 원화값 ...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

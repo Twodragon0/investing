@@ -143,7 +143,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNcVlNMkNTeXlja0lzaVBmRFVwUXJYY1N3b1o2d3pNSXY2V0Jpcjgwb0ZYdjJWZU1RS2dSZE82eHR2ek5qMmNxN0ttQ1JLeXFIUTV4WnRKbVVrb3BYSER0SjJhbU9JeDc4LUpUakFTc2FmOF9CVmt3T25qNkgyekQ1Tm9ra1Yxc3hBVkQ1TEhYTzhzMVRabmJKQThfSWY3ZXNzSjhCbDU1enY2Zkhy?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">경찰과 암호화폐 거래소의 공동 운영으로 사기 피경쟁 우위가 거의 900만 달러 손실을 입지 않도록 방지 - The Straits Times</a>
-<p class="news-desc">경찰과 암호화폐 거래소는 공동 운영과 고급 블록체인 분석을 통해 사기로 인한 손실을 약 900만 달러 예방했습니다. straitstimes.com에서 자세한 내용을 읽어보세요. straitstimes.com에서 자세한 내용을 읽어보세요.</p>
+<p class="news-desc">싱가포르 – 경찰과 디지털 결제 토큰(DPT) 서비스 제공업체의 공동 운영 덕분에 7월과 8월에 355명 이상의 피해자가 암호화폐 사기로 인한 894만 달러 이상의 손실을 피했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
