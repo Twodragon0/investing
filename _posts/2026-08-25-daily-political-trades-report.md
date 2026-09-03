@@ -23,10 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-25 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(30회), **트럼프**(15회), **관세**(9회), **펠로시**(4회), **SEC(미국증권거래위원회)**(4회)</div>
 
 
-
 ## 전체 뉴스 요약
 
 - 2026-08-25 정치권 핵심 이슈: Nancy Pelosi Discloses Up to $13.5 Million in Stock, Options Trades — 77.6x Her . 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 33건 (미국 의회 거래 5건, SEC…
+- 1. Nancy Pelosi는 최대 1,350만 달러의 주식, 옵션 거래를 공개합니다. — 연봉의 77.6배 Nancy Pelosi는 수백만 달러 규모의 신규 매입 주식 2개를 공개합니다.
 - 1. Nancy Pelosi는 최대 1,350만 달러의 주식, 옵션 거래를 공개합니다. — 연봉의 77.6배 Nancy Pelosi는 수백만 달러 규모의 신규 매입 주식 2개를 공개합니다.
 
 ## 1. 미국 의회 거래 동향

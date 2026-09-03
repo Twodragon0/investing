@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-08-21 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE8wVlk0NXpuVVVCeE1ZUzZLenp3cGVCbFVoRzQ0MUd4Vi1tRmhTVFVjUVg0UWtPdnNXMl94SThqNEVwTG14U2xYbzltQVRWRTlxX1JrcHk0YWFoMnMwMXd6Z0pvLXc3RmtvWER3?oc=5">코스피, 외국인·기관 ‘쌍끌이 매도’에 5.8% 급락…6500선 붕괴 - 뉴스인</a> <span class="p0-desc">[뉴스인] 김태엽 기자 =코스피가 외국인과 기관의 동반 매도 공세에 19일 6% 가까이 급락하며 6500선 아래로 내려앉았다. 최근 상승장을 이끌었던 삼성전자와 SK하이닉스 등 반.</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1hRGYzRmt2TldseTQzZHRXeWhaVWJYZXV6ZjBfdXEzaERhMjFTOHBYUTM4dXAzMzREalJDa21PcHZPaTlpNGsteVZhdXNLSUhqemc?oc=5">기관 이어 외국인마저 “팔자”…코스피, 5%대 급락 마감 - 매일경제 마켓</a> <span class="p0-desc">코스피가 19일 기관에 이어 외국인마저 장 초반 순매도로 돌아서면서 장중 매도 사이드카까지 발동된 가운데 동반 순매도세에 5%대 하락 마감했다. 코스피는 이날 전일 대비 398.6.</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUYjhZaWpDdkVPUVY2eEo2THpzNHNZUEtoQUJYRGNrR09TY0hESllWbzFxR2lKaEp5UkFCZ3d1UGNWYmkwRzV1QWhCMEM1SE5HeWFFeGFB?oc=5">이상렬의 시시각각] 이재명 정부 경제팀의 세 가지 오류</a> <span class="p0-desc">뜨거운 여름이었다. 그러나 폭염보다 국민들을 더 힘들게 만든 건 경제 실정(失政)이었다. 부동산은 수도권 매매·전세·월세 시장이 모두 급등하는 전례 없는 대란을 겪고 있고, 주가는.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 35건 중 텔레그램 0건, 소셜 0건, 정치·경제 35건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 35건 중 텔레그램 0건, 소셜 0건, 정치·경제 35건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

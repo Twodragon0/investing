@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-15 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **관세**(5회), **펠로시**(2회), **의회**(2회), **내부자**(2회), **트럼프**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-08-15 정치권 핵심 이슈: 투자자들은 투자 아이디어에 대해 Nancy Pelosi를 거의 워런 버핏만큼 신뢰합니다. 그 이유는 다음과 같습니다 - 247wallst.com. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 21건 (미국 의회 거래 2건, SEC…
-- 1. 투자자들은 투자 아이디어에 대해 Nancy Pelosi를 거의 워런 버핏만큼 신뢰합니다. 그 이유는 다음과 같습니다 - 247wallst.com Retail investors now follow Nancy Pelosi's stock trades almost as closely…
 
 ## 1. 미국 의회 거래 동향
 

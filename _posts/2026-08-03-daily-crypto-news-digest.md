@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-03 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi_wFBVV95cUxQWURfM2RhS0luT1BNLWRMbzRnRXl2UU1ob1dLU3h2UzBvamQxSVk4cGwyb01PbUN5VWhsMjJrQjlwR19Dc3dIUmFmV083bDNIWjdxanJ3a0xqOF8wa2ozczBja2lhWG45a3NBSHlnVEVqalUxdlJ2UHF3YTNCQjhjVl9CdER5REFrbEFiUDFIQU1UV1FHWnh3Y0ZQUkVsdk80ZWZFOWRQNU5yeDRHQ2tWTFV5ZG8yOWpPYWt2SjNLTnFwd05OZGNjQUdaSmlUUHRxZHEyaXVTcHd1UEEwWmFsYjFqU3dfTHowamZvNm0zVTlKTDctU05fcVVRbURDdlnSAYQCQVVfeXFMTXFOLW02LUZfRHExaWhyNllFMFNUeW82NkFXTjdBZlpUMnNELXFsX2NhMEk1MnM5X3F3TmtWZUVLRWFZTUx0R2V2cFA1bmhPVmFhZG1rcEhNUU0zeG9qWmdoX2pfbnJ2aEJNV1JxZE5QTmtCQ1hGLUY3Vl9YSXJ4dE5oMFFXX2pHbVRPS1ZWQ0pSZFFZSkxSblpyLWVMcU50UmwxUHFmemR4LW9GU1F1TTduYnRzQ2RmcDJVUGthSHI0eEhjUk9HNGNRS0R1YjFKYWNtVzhHZk5TaGVncXU0WFhvOGhDRkpvbEFBU1NLdnkzT2hta3BnUE4wNWcwczBnVm41UmE?oc=5">비트코인 해킹으로 5천만 달러 보유자 확보 - News.com.au</a> <span class="p0-desc">비트코인 News.com.au 5천만 달러 보유자 해킹</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9keFNQVHpBZGczOERtZFZha2NETmhXVWhVRUI5OGhmYkV6S21QQTRuZHJMbkZYXzdjVlgxbnF6NlFsb0U2djM3M2xIYy1TT3FncWR4RGxvU3dKOTh6Y24tLXJ2anJoeUtFSV95Zg?oc=5">D-BIZ 암호화폐 뉴스] 콜드카드 해킹 사태, 비트코인 투자자 행동 반전…FTX 사태와 정반대 흐름 - 데일리비즈온</a> <span class="p0-desc">[D-BIZ 암호화폐 뉴스] 콜드카드 해킹 사태, 비트코인 투자자 행동 반전…FTX 사태와 정반대 흐름 데일리비즈온</span></li><li><a href="https://cointelegraph.com/news/coldcard-biggest-sub-1-btc-transfer-ftx-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 해킹으로 FTX 이후 가장 큰 하위 1 BTC 움직임 촉발: CryptoQuant</a> <span class="p0-desc">Coldcard 해킹이 계속되면서 비트코인 사용자는 소액 거래로 39,600 BTC을 이동했으며 연구원들은 공격이 계속 진행 중이라고 경고했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **81건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-08-03 암호화폐 핵심 뉴스: 중국 경찰 AI 알고리즘은 90% 정확도로 비트코인 자금세탁을 추적합니다 - South China Morning Post. 총 81건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
