@@ -28,7 +28,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-20 | HYPE -5.9% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -5.92%</li><li>🔴 <strong>Zcash</strong> (ZEC): -4.75%</li><li>🔴 <strong>Ethereum</strong> (ETH): -2.27%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

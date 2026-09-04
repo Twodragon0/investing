@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-14 | 시총 $2.73T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Toncoin</strong> (TON): -10.12%</li><li>🔴 <strong>Solana</strong> (SOL): -3.13%</li><li>🔴 <strong>Zcash</strong> (ZEC): -3.00%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집
