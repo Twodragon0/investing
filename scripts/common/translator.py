@@ -678,6 +678,10 @@ _consecutive_failures = 0
 _retries_disabled = False
 _failure_total = 0
 _failure_warned = False
+#: Highest ``_failure_total`` already reported by ``save_translation_cache``.
+#: That function is a flush point called once per enrichment pass, not once per
+#: run, so without a watermark it reprints the same total on every pass.
+_failure_reported = 0
 
 _exception_policy: Optional[tuple] = None
 
@@ -959,21 +963,28 @@ def get_display_description(item: Dict[str, Any]) -> str:
 
 
 def save_translation_cache() -> None:
-    """Flush any pending cache writes to disk.
+    """Flush pending cache writes and report give-ups accumulated since the
+    last flush.
 
-    Call this at the end of a collection run to ensure all
-    translations are persisted.
+    This is a *flush point*, not the end of the run. ``enrichment.py`` calls it
+    once per ``enrich_items`` pass and collectors run several passes, so an
+    unconditional report here prints the same total repeatedly. Measured on
+    2026-09-04: run 33816242897 printed "번역 실패 누적 2건" three times, while
+    33820978572 — which did lose a translation — printed it zero times because
+    its failure landed after the last flush.
 
-    Also reports the run's give-up count. This is the one place the pipeline
-    already treats as "end of run" (``enrichment.py`` calls it after its
-    translation pass), so it is where a total belongs — the per-failure logs
-    are latched to avoid flooding, which means without this line a run that
-    lost 40 translations looks the same as one that lost 1.
+    The watermark makes the line mean "these are new since you last saw a
+    total", which is true at every call site. Failures after the final flush
+    still go unreported here, but they are not invisible: the first give-up of
+    the process always emits its own warning.
     """
+    global _failure_reported
+
     _save_cache()
-    if _failure_total:
+    if _failure_total > _failure_reported:
         logger.warning(
             "번역 실패 누적 %d건 — 해당 항목은 원문(영어)으로 남았다. "
             "scripts/tools/fix_untranslated_body.py 가 다음 런에서 재시도한다.",
             _failure_total,
         )
+        _failure_reported = _failure_total
