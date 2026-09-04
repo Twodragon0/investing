@@ -660,22 +660,38 @@ def _postprocess_translation(text: str) -> str:
 _MAX_RETRIES = 2
 _RETRY_BASE_DELAY = 2.0
 
-# After this many consecutive *give-ups* — calls that exhausted their attempts,
-# not individual attempt failures — the process stops retrying and falls
-# straight through to fail-open. A call whose retry succeeds resets the count,
-# so scattered failures in an otherwise healthy run never trip it.
+# The breaker opens on whichever of these comes first, and once open the
+# process stops calling the endpoint at all — not merely stops retrying.
 #
-# Measured 2026-09-02: sweeping 433 posts through the translator rate-limited
-# the endpoint, and retrying *within* that pass did not recover — three
-# separate later invocations were needed. Under rate limiting an immediate
-# retry spends the budget and still fails, so continuing to pay 6s per call is
-# strictly worse than giving up. This bounds the worst case at
-# 5 * 6s = 30s per process instead of ~48 calls * 6s = 288s, which is what
-# keeps the four 10-minute collect workflows inside their timeout.
+# Why two triggers. The consecutive count alone does **not** bound the worst
+# case, because a success resets it: an alternating "4 give-ups, 1 success"
+# pattern never reaches the threshold while each give-up still pays full
+# freight. That was survivable when a failure returned instantly, but a give-up
+# now costs up to
+#   (_MAX_RETRIES + 1) * REQUEST_TIMEOUT + backoff = 3*15 + 6 = 51s,
+# so ~48 items in that pattern would spend half an hour. The cumulative time
+# budget closes that hole for any failure pattern.
+#
+# Consecutive count — measured 2026-09-02: sweeping 433 posts rate-limited the
+# endpoint, and retrying *within* that pass did not recover (three separate
+# later invocations were needed). Under rate limiting an immediate retry spends
+# budget and still fails, so giving up fast is strictly better.
 _CIRCUIT_BREAKER_FAILURES = 5
 
+# Wall-clock spent on give-ups before the breaker opens. Worst case per process
+# is this budget plus the one call that crosses it (<= 51s), so ~231s. Against
+# the four collect workflows on a 10-minute timeout, whose observed runtime is
+# ~115s (run 33699622716), that leaves headroom rather than eating it.
+#
+# Observed give-ups per run are 0-6 (seven runs, 2026-09-04), each costing ~6s
+# before the timeout existed, so ordinary traffic is nowhere near this.
+_FAILURE_TIME_BUDGET_S = 180.0
+
 _consecutive_failures = 0
-_retries_disabled = False
+#: True once the breaker has opened. Named for the state, not the mechanism:
+#: it suppresses the call itself, not just the retries.
+_breaker_open = False
+_failure_time_spent = 0.0
 _failure_total = 0
 _failure_warned = False
 #: Highest ``_failure_total`` already reported by ``save_translation_cache``.
@@ -723,12 +739,94 @@ def _retry_exceptions() -> tuple:
     return _exception_policy
 
 
+class _TimeoutRequests:
+    """Wraps deep-translator's ``requests`` module to inject a timeout.
+
+    ``GoogleTranslator.translate`` calls
+    ``requests.get(base_url, params=…, proxies=…)`` with **no** ``timeout``, and
+    ``base.py`` never sets one (verified against the 1.11.4 sdist, the version
+    ``scripts/requirements.lock`` pins). A server that accepts the connection
+    and never answers therefore blocks forever, and no retry or breaker can
+    help because control never comes back.
+
+    Two alternatives were measured and rejected on 2026-09-03:
+
+    * ``socket.setdefaulttimeout`` does nothing here. urllib3 runs
+      ``conn.timeout = read_timeout`` and ``Timeout.from_float(None)
+      .read_timeout`` is ``None``, so it assigns ``None`` to the socket and
+      overrides the process default. It bounds connect, not read; the hang is
+      a read.
+    * ``ThreadPoolExecutor`` + ``future.result(timeout=…)`` returns control but
+      its ``atexit`` handler joins the abandoned worker, so the interpreter
+      never exits — the collector would finish its work and then hang before
+      "Commit and push". Strictly worse than the hang it fixes.
+
+    Patching at the call site keeps the blast radius to this one caller: the
+    other 12 collectors, yfinance and Playwright are untouched. The resulting
+    ``requests.exceptions.ReadTimeout`` is already in the retryable set.
+    """
+
+    def __init__(self, inner, timeout: float) -> None:
+        self._inner = inner
+        self._timeout = timeout
+
+    def get(self, *args, **kwargs):
+        kwargs.setdefault("timeout", self._timeout)
+        return self._inner.get(*args, **kwargs)
+
+    def __getattr__(self, name):
+        return getattr(self._inner, name)
+
+
+_timeout_patched = False
+_timeout_warned = False
+
+
+def _ensure_timeout() -> None:
+    """Install the timeout shim on deep-translator's ``requests``, once.
+
+    **Best-effort.** If the module cannot be resolved — a restructured library,
+    or a test stub that provides ``GoogleTranslator`` without the ``google``
+    submodule — translation proceeds *without* the timeout instead of failing.
+    That trade is deliberate: a missing timeout risks a rare hang, while
+    raising here would stop all 13 collectors from translating at all.
+
+    It is not silent about it. The first miss warns, and
+    ``TestHttpTimeoutShim.test_the_timeout_reaches_the_transport_through_translate``
+    fails in CI if the wiring drifts, so this cannot quietly become a no-op —
+    the failure mode this repo keeps hitting.
+    """
+    global _timeout_patched, _timeout_warned
+
+    if _timeout_patched:
+        return
+    try:
+        import deep_translator.google as module
+
+        from .config import REQUEST_TIMEOUT
+
+        if not isinstance(module.requests, _TimeoutRequests):
+            module.requests = _TimeoutRequests(module.requests, REQUEST_TIMEOUT)
+        _timeout_patched = True
+    except Exception as exc:  # noqa: BLE001
+        if not _timeout_warned:
+            _timeout_warned = True
+            logger.warning(
+                "번역 HTTP timeout 을 설치하지 못했다 (%s) — 응답 없는 read 에서 hang 가능성이 남는다",
+                exc,
+            )
+
+
 def _translate_once(text: str) -> Optional[str]:
     """One translation attempt. Returns None when the service gave nothing back.
 
     Raises whatever deep-translator raises — classification is the caller's job.
     """
     from deep_translator import GoogleTranslator
+
+    # Lazy so this module stays importable without deep-translator, matching
+    # the import above.
+    _ensure_timeout()
 
     modified, replacements = _apply_term_overrides(text)
     translated = GoogleTranslator(source="en", target="ko").translate(modified)
@@ -737,19 +835,21 @@ def _translate_once(text: str) -> Optional[str]:
     return _postprocess_translation(_restore_terms(translated, replacements))
 
 
-def _note_failure(text: str, exc: BaseException) -> None:
+def _note_failure(text: str, exc: BaseException, elapsed: float = 0.0) -> None:
     """Count a give-up and surface the first one, then trip the breaker.
 
     The old code logged every failure at DEBUG, which nobody reads — 106
     untranslated lines accumulated over seven days without a single visible
-    signal. One warning at the first failure and one when retries are disabled
-    is enough to notice; the rest stay at DEBUG so a degraded endpoint cannot
+    signal. One warning at the first failure and one when the breaker opens is
+    enough to notice; the rest stay at DEBUG so a degraded endpoint cannot
     flood the log.
     """
-    global _consecutive_failures, _retries_disabled, _failure_total, _failure_warned
+    global _consecutive_failures, _breaker_open, _failure_total, _failure_warned
+    global _failure_time_spent
 
     _failure_total += 1
     _consecutive_failures += 1
+    _failure_time_spent += elapsed
 
     if not _failure_warned:
         _failure_warned = True
@@ -757,17 +857,35 @@ def _note_failure(text: str, exc: BaseException) -> None:
     else:
         logger.debug("Translation failed for '%s': %s", text[:50], exc)
 
-    if not _retries_disabled and _consecutive_failures >= _CIRCUIT_BREAKER_FAILURES:
-        _retries_disabled = True
+    if _breaker_open:
+        return
+
+    if _consecutive_failures >= _CIRCUIT_BREAKER_FAILURES:
+        _breaker_open = True
         logger.warning(
-            "번역 연속 실패 %d회 — 이 프로세스에서 재시도를 중단한다. 이후 호출은 1회 시도 후 원문을 유지한다.",
+            "번역 연속 실패 %d회 — 이 프로세스에서 번역 호출을 중단한다. 이후 항목은 원문(영어)으로 남고 다음 런에서 재시도된다.",
             _consecutive_failures,
+        )
+    elif _failure_time_spent >= _FAILURE_TIME_BUDGET_S:
+        _breaker_open = True
+        logger.warning(
+            "번역 실패에 누적 %.0f초를 썼다 (예산 %.0f초) — 이 프로세스에서 번역 호출을 중단한다. "
+            "연속 실패가 아니어도 워크플로우 예산을 지키기 위해 멈춘다.",
+            _failure_time_spent,
+            _FAILURE_TIME_BUDGET_S,
         )
 
 
 def _translate_with_retry(text: str) -> Optional[str]:
     """Translate with exponential backoff. Returns None when it gave up."""
-    global _consecutive_failures
+    global _consecutive_failures, _failure_time_spent
+
+    if _breaker_open:
+        # Skip the call outright. Merely dropping the retries is not enough
+        # once each attempt can wait REQUEST_TIMEOUT: the remaining items would
+        # still pay one timeout each, which is the bulk of the cost.
+        logger.debug("Translation breaker open — skipping '%s'", text[:50])
+        return None
 
     try:
         retryable, fatal = _retry_exceptions()
@@ -777,8 +895,9 @@ def _translate_with_retry(text: str) -> Optional[str]:
         logger.debug("Retry policy unavailable (%s) — single attempt", exc)
         retryable, fatal = (), ()
 
-    attempts = 1 if _retries_disabled else _MAX_RETRIES + 1
+    attempts = _MAX_RETRIES + 1
     last_exc: Optional[BaseException] = None
+    started = time.monotonic()
 
     for attempt in range(attempts):
         try:
@@ -794,7 +913,7 @@ def _translate_with_retry(text: str) -> Optional[str]:
         except Exception as exc:  # noqa: BLE001
             # Unclassified. Fail open immediately rather than paying backoff
             # for something whose retryability we have not established.
-            _note_failure(text, exc)
+            _note_failure(text, exc, time.monotonic() - started)
             return None
         else:
             if result:
@@ -815,7 +934,7 @@ def _translate_with_retry(text: str) -> Optional[str]:
             )
             time.sleep(delay)
 
-    _note_failure(text, last_exc if last_exc else RuntimeError("unknown"))
+    _note_failure(text, last_exc if last_exc else RuntimeError("unknown"), time.monotonic() - started)
     return None
 
 
