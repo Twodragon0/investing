@@ -343,6 +343,51 @@ def _isolate_translation_cache(request, tmp_path, monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def _reset_translator_breaker(monkeypatch):
+    """Give every test a closed translation circuit breaker.
+
+    ``common.translator`` keeps the breaker in module globals on purpose — it
+    exists to stop a *process* from burning its workflow budget — so nothing
+    resets it between tests. Give-ups accumulate across unrelated tests, and at
+    five consecutive the breaker latches open for the rest of the session.
+
+    That used to be invisible: the old breaker only dropped the retries, so a
+    call still went out and could succeed. Now it skips the call entirely, so a
+    leaked open breaker makes ``translate_to_korean`` return its input and any
+    later test that expects a translation fails. Measured 2026-09-04: with no
+    reset, ``test_translator.py::…::test_translation_result_cached`` failed in
+    the full suite while passing alone, and a probe at that point read
+    ``breaker_open=True consecutive=5``.
+
+    ``_timeout_patched`` is left alone deliberately — the shim is installed on
+    the real ``deep_translator.google`` module and is safe to keep across tests;
+    the shim's own tests reset it themselves when they need to.
+
+    The ``_breaker_reset_for_test`` marker exists because the reset values are
+    also the module defaults, so a guard that only asserted "breaker closed"
+    would pass with the fixture removed — the harness reported exactly that
+    (VACUOUS). Mirrors the ``_http_block_stub`` / ``_ssrf_dns_stub`` /
+    ``_no_real_sleep_stub`` tripwires: something the guard can observe that is
+    true only while the fixture is active.
+    """
+    try:
+        import common.translator as translator
+    except ImportError:
+        return
+
+    for name, value in (
+        ("_consecutive_failures", 0),
+        ("_breaker_open", False),
+        ("_failure_time_spent", 0.0),
+        ("_failure_total", 0),
+        ("_failure_warned", False),
+        ("_failure_reported", 0),
+        ("_breaker_reset_for_test", True),
+    ):
+        monkeypatch.setattr(translator, name, value, raising=False)
+
+
+@pytest.fixture(autouse=True)
 def _isolate_tvl_history_state(request, tmp_path, monkeypatch):
     """Redirect ``collect_defi_llama`` TVL-history writes to a per-test tmp file.
 

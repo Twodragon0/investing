@@ -6,14 +6,21 @@ window during a collection run therefore published English prose permanently —
 106 untranslated lines accumulated over seven days (measured 2026-09-02) with
 no visible signal, and every one of them translated fine on a later call.
 
-Two properties are pinned here, and they pull against each other:
+Three properties are pinned here, and they pull against each other:
 
 * **Retry**, so a transient failure does not become a permanent one.
+* **A per-attempt timeout**, because deep-translator passes none and an
+  unanswered read blocks forever — a state no retry or breaker can escape,
+  since control never returns.
 * **A circuit breaker**, because retrying into a rate limit does not recover.
   Sweeping 433 posts rate-limited the endpoint, and retries *inside* that pass
-  did not help — three separate later invocations were needed. Without the
-  breaker the worst case is ~48 calls x 6s = 288s, which does not fit the four
-  collect workflows on a 10-minute timeout.
+  did not help — three separate later invocations were needed.
+
+The breaker has two triggers and needs both. The consecutive count catches a
+sustained outage fast, but a success resets it, so an alternating
+"give up, succeed" pattern slips past while every give-up still pays full
+freight — ~48 items at 51s each is half an hour. The cumulative time budget
+bounds that pattern regardless of shape.
 
 Fail-open itself is not under test as a nice-to-have: an outage must not stop
 13 collectors from publishing, so every path here still ends in the original
@@ -33,26 +40,11 @@ _ENGLISH = "The Federal Reserve signalled a rate cut as price pressures cooled."
 _KOREAN = "연방준비제도가 물가 압력 완화를 근거로 금리 인하 가능성을 시사했습니다."
 
 
-@pytest.fixture(autouse=True)
-def reset_retry_state():
-    """Clear the module-level failure counters between tests.
-
-    The breaker is process-scoped by design — it exists to stop a *run* from
-    burning its budget — which makes it global mutable state. Left alone, one
-    test that trips the breaker silently disables retries for every test after
-    it, and the suite's result would depend on ordering.
-    """
-    tr._consecutive_failures = 0
-    tr._retries_disabled = False
-    tr._failure_total = 0
-    tr._failure_warned = False
-    tr._failure_reported = 0
-    yield
-    tr._consecutive_failures = 0
-    tr._retries_disabled = False
-    tr._failure_total = 0
-    tr._failure_warned = False
-    tr._failure_reported = 0
+# The breaker's globals are reset for every test by ``conftest``'s autouse
+# ``_reset_translator_breaker``. It lives there rather than here because the
+# leak is not local to this file: give-ups accumulate across the whole suite,
+# and a latched-open breaker makes ``translate_to_korean`` return its input in
+# any later test.
 
 
 @pytest.fixture
@@ -120,26 +112,79 @@ class TestBackoffSchedule:
 
 
 class TestCircuitBreaker:
-    def test_stops_retrying_after_consecutive_failures(self, isolated_cache, sleep_calls):
+    def test_an_open_breaker_skips_the_call_entirely(self, isolated_cache, sleep_calls):
+        """Dropping only the retries is not enough once an attempt can wait
+        ``REQUEST_TIMEOUT``: the remaining items would still pay one timeout
+        each, which is the bulk of the cost."""
         with patch("common.translator._translate_once", side_effect=_retryable_exc()) as once:
-            for i in range(tr._CIRCUIT_BREAKER_FAILURES + 3):
+            for i in range(tr._CIRCUIT_BREAKER_FAILURES):
                 tr.translate_to_korean(f"{_ENGLISH} {i}")
+            assert tr._breaker_open is True
+            before = once.call_count
 
-        assert tr._retries_disabled is True
-        # Only the calls made before the breaker tripped paid backoff.
+            for i in range(3):
+                assert tr.translate_to_korean(f"after breaker {i}") == f"after breaker {i}"
+
+        assert once.call_count == before, "브레이커가 열린 뒤에는 엔드포인트를 호출해서는 안 된다"
         assert len(sleep_calls.calls) == tr._CIRCUIT_BREAKER_FAILURES * tr._MAX_RETRIES
-        expected = tr._CIRCUIT_BREAKER_FAILURES * (tr._MAX_RETRIES + 1) + 3
-        assert once.call_count == expected, "브레이커 후 호출은 1회 시도만 해야 한다"
 
-    def test_worst_case_delay_is_bounded_by_the_breaker(self):
+    def test_worst_case_is_bounded_including_the_request_timeout(self):
         """The number that makes the 10-minute collect workflows safe.
 
-        Without the breaker the bound scales with items per run (~48), which is
-        ~288s. Pin it so raising a constant cannot quietly reintroduce that.
+        The retry-only bound was 5 give-ups x 6s = 30s. Adding a per-attempt
+        ``REQUEST_TIMEOUT`` raises a give-up to 3*15 + 6 = 51s, so the bound has
+        to be recomputed with the timeout in it — asserting the backoff sum
+        alone would keep passing while the real cost grew 8x.
         """
-        per_call = sum(tr._RETRY_BASE_DELAY * (2**i) for i in range(tr._MAX_RETRIES))
-        worst_case = per_call * tr._CIRCUIT_BREAKER_FAILURES
-        assert worst_case <= 60, f"최악 재시도 지연 {worst_case}s — 10분 예산 워크플로우가 위험하다"
+        from common.config import REQUEST_TIMEOUT
+
+        backoff = sum(tr._RETRY_BASE_DELAY * (2**i) for i in range(tr._MAX_RETRIES))
+        per_give_up = (tr._MAX_RETRIES + 1) * REQUEST_TIMEOUT + backoff
+        # The breaker opens on whichever trigger fires first, and the call that
+        # crosses the time budget is already in flight when it does.
+        worst_case = min(tr._CIRCUIT_BREAKER_FAILURES * per_give_up, tr._FAILURE_TIME_BUDGET_S + per_give_up)
+        assert worst_case <= 300, (
+            f"최악 번역 실패 비용 {worst_case}s — 실측 런타임 ~115초와 합치면 10분 예산 워크플로우가 위험하다"
+        )
+
+    def test_time_budget_bounds_a_pattern_the_consecutive_count_misses(self, isolated_cache, sleep_calls, monkeypatch):
+        """The hole the consecutive counter leaves open.
+
+        A success resets the count, so alternating "give up, succeed" never
+        reaches the threshold while every give-up still pays full freight. That
+        was survivable when a failure returned instantly; with a 15s timeout per
+        attempt, ~48 items in that pattern would spend half an hour.
+
+        The clock is faked rather than ``_failure_time_spent`` pre-set, because
+        pre-setting it does not exercise the accumulation: deleting
+        ``_failure_time_spent += elapsed`` would leave such a test green while
+        the budget trigger became unreachable in production.
+        """
+        advance = tr._FAILURE_TIME_BUDGET_S + 1
+        clock = {"t": 0.0}
+
+        def _fake_monotonic() -> float:
+            clock["t"] += advance
+            return clock["t"]
+
+        monkeypatch.setattr(tr.time, "monotonic", _fake_monotonic)
+
+        with patch("common.translator._translate_once", side_effect=_retryable_exc()):
+            tr.translate_to_korean("crosses the budget")
+
+        assert tr._failure_time_spent >= advance, "give-up 소요 시간이 누적되지 않았다"
+        assert tr._breaker_open is True, "시간 예산이 브레이커를 열어야 한다"
+        assert tr._consecutive_failures < tr._CIRCUIT_BREAKER_FAILURES, (
+            "연속 카운터가 아니라 시간 예산으로 열렸음을 확인해야 판별력이 있다"
+        )
+
+    def test_instant_give_ups_do_not_charge_the_budget(self, isolated_cache, sleep_calls):
+        """The counterpart: a give-up that costs no wall-clock must not consume
+        budget, or a fast-failing endpoint would open the breaker for free."""
+        with patch("common.translator._translate_once", side_effect=_retryable_exc()):
+            tr.translate_to_korean("instant failure")
+
+        assert tr._failure_time_spent < 1.0, f"즉시 실패가 예산을 {tr._failure_time_spent}s 나 썼다"
 
     def test_a_give_up_then_a_success_resets_the_counter(self, isolated_cache, sleep_calls):
         """The breaker must trip on a *sustained* outage, not on give-ups
@@ -157,11 +202,17 @@ class TestCircuitBreaker:
         with patch("common.translator._translate_once", return_value=_KOREAN):
             assert tr.translate_to_korean("succeeds") == _KOREAN
         assert tr._consecutive_failures == 0, "성공이 연속 카운터를 되돌려야 한다"
-        assert tr._retries_disabled is False
+        assert tr._breaker_open is False
 
-    def test_breaker_needs_consecutive_give_ups_not_a_total(self, isolated_cache, sleep_calls):
-        """Alternating give-up / success must never trip the breaker, however
-        many give-ups accumulate in total."""
+    def test_the_consecutive_trigger_needs_consecutive_give_ups(self, isolated_cache, sleep_calls):
+        """Alternating give-up / success must not fire the *consecutive*
+        trigger, however many give-ups accumulate in total.
+
+        That is the hole the time budget exists to close — see
+        ``test_time_budget_bounds_a_pattern_the_consecutive_count_misses``.
+        Here the give-ups are instant (mocked), so the budget is untouched and
+        only the consecutive rule is under test.
+        """
         for i in range(tr._CIRCUIT_BREAKER_FAILURES + 2):
             with patch("common.translator._translate_once", side_effect=_retryable_exc()):
                 tr.translate_to_korean(f"fail {i}")
@@ -169,7 +220,7 @@ class TestCircuitBreaker:
                 tr.translate_to_korean(f"ok {i}")
 
         assert tr._failure_total > tr._CIRCUIT_BREAKER_FAILURES
-        assert tr._retries_disabled is False, "연속이 아닌 실패는 브레이커를 올려서는 안 된다"
+        assert tr._breaker_open is False, "연속이 아닌 실패는 브레이커를 올려서는 안 된다"
 
 
 class TestFatalInputErrors:
@@ -189,7 +240,7 @@ class TestFatalInputErrors:
         with patch("common.translator._translate_once", side_effect=_fatal_exc()):
             for i in range(tr._CIRCUIT_BREAKER_FAILURES + 2):
                 tr.translate_to_korean(f"{_ENGLISH} {i}")
-        assert tr._retries_disabled is False
+        assert tr._breaker_open is False
         assert tr._failure_total == 0
 
     def test_unclassified_errors_fail_open_without_backoff(self, isolated_cache, sleep_calls):
@@ -242,7 +293,7 @@ class TestFailureVisibility:
             for i in range(tr._CIRCUIT_BREAKER_FAILURES):
                 tr.translate_to_korean(f"text {i}")
 
-        assert any("재시도를 중단" in r.getMessage() for r in caplog.records)
+        assert any("번역 호출을 중단" in r.getMessage() for r in caplog.records)
 
     def test_run_end_reports_the_total(self, isolated_cache, sleep_calls, caplog):
         """Per-failure logs are latched, so without a total a run that lost 40
@@ -310,6 +361,127 @@ class TestFailureVisibility:
         ):
             tr.save_translation_cache()
         assert not [r for r in caplog.records if "번역 실패 누적" in r.getMessage()]
+
+
+class TestHttpTimeoutShim:
+    """``GoogleTranslator.translate`` passes no ``timeout`` to ``requests.get``.
+
+    Without one, a server that accepts the connection and never answers blocks
+    forever, and neither the retry nor the breaker can help because control
+    never returns. ``socket.setdefaulttimeout`` does not fix it (urllib3
+    assigns ``None`` to the socket, overriding the process default) and
+    ``ThreadPoolExecutor`` makes it worse (its ``atexit`` join stops the
+    interpreter from exiting), so the timeout is injected at the call site.
+    """
+
+    def test_shim_injects_the_repo_timeout(self):
+        from common.config import REQUEST_TIMEOUT
+
+        captured = {}
+
+        class _FakeRequests:
+            def get(self, *args, **kwargs):
+                captured.update(kwargs)
+                return "response"
+
+        shim = tr._TimeoutRequests(_FakeRequests(), REQUEST_TIMEOUT)
+        assert shim.get("http://example.invalid/") == "response"
+        assert captured["timeout"] == REQUEST_TIMEOUT
+
+    def test_shim_does_not_override_an_explicit_timeout(self):
+        captured = {}
+
+        class _FakeRequests:
+            def get(self, *args, **kwargs):
+                captured.update(kwargs)
+
+        tr._TimeoutRequests(_FakeRequests(), 15).get("http://example.invalid/", timeout=1)
+        assert captured["timeout"] == 1
+
+    def test_install_does_not_wrap_a_shim_in_a_shim(self, monkeypatch):
+        import deep_translator.google as dt_google
+
+        monkeypatch.setattr(dt_google, "requests", dt_google.requests, raising=False)
+        monkeypatch.setattr(tr, "_timeout_patched", False)
+        tr._ensure_timeout()
+        first = dt_google.requests
+        assert isinstance(first, tr._TimeoutRequests)
+
+        monkeypatch.setattr(tr, "_timeout_patched", False)
+        tr._ensure_timeout()
+        assert dt_google.requests is first, "shim 을 shim 으로 다시 감싸서는 안 된다"
+
+    def test_a_library_without_the_submodule_still_translates(self, isolated_cache, monkeypatch, caplog):
+        """Best-effort install. A stub or restructured library must cost the
+        timeout, not the translation — raising here would stop all 13
+        collectors from translating."""
+        import sys
+
+        class _MockTranslator:
+            def __init__(self, source, target):
+                pass
+
+            def translate(self, text):
+                return _KOREAN
+
+        stub = type("deep_translator", (), {"GoogleTranslator": _MockTranslator})
+        monkeypatch.setattr(tr, "_timeout_patched", False)
+        monkeypatch.setattr(tr, "_timeout_warned", False)
+        monkeypatch.setitem(sys.modules, "deep_translator", stub)
+        monkeypatch.delitem(sys.modules, "deep_translator.google", raising=False)
+
+        with caplog.at_level(logging.WARNING, logger="common.translator"):
+            assert tr.translate_to_korean(_ENGLISH) == _KOREAN
+
+        assert any("timeout 을 설치하지 못했다" in r.getMessage() for r in caplog.records), (
+            "설치 실패를 조용히 넘기면 안 된다"
+        )
+
+    def test_the_timeout_reaches_the_transport_through_translate(self, monkeypatch):
+        """End-to-end wiring, observed at the layer that consumes the value.
+
+        A unit test on ``_TimeoutRequests`` alone would keep passing if
+        ``_translate_once`` stopped installing it, or if deep-translator stopped
+        calling ``requests.get``. Asserting at ``HTTPAdapter.send`` — the last
+        hop before the socket — covers the whole chain.
+
+        The suite blocks real outbound HTTP there (``conftest._block_real_http``),
+        so this reuses that seam instead of standing up a socket: no network,
+        and the hang mode it guards against cannot be reproduced in-process
+        anyway. The real stalled-server behaviour was verified out-of-suite.
+        """
+        from requests.adapters import HTTPAdapter
+
+        from common.config import REQUEST_TIMEOUT
+
+        seen = {}
+
+        def _capture(self, request, *args, **kwargs):
+            seen.update(kwargs)
+            raise RuntimeError("blocked in test")
+
+        monkeypatch.setattr(HTTPAdapter, "send", _capture)
+        monkeypatch.setattr(tr, "_timeout_patched", False)
+
+        # Unclassified RuntimeError -> fail-open, which is fine: the assertion
+        # is about what reached the transport, not what came back.
+        tr._translate_with_retry("A sentence whose request never leaves the harness.")
+
+        assert seen.get("timeout") == REQUEST_TIMEOUT, (
+            f"timeout 이 전송 계층에 도달하지 않았다: {seen.get('timeout')!r}"
+        )
+
+    def test_the_timeout_error_is_already_retryable(self):
+        """The shim needs no new classification work: its exception is a
+        ``RequestException``, which ``_retry_exceptions`` already retries."""
+        import requests
+
+        tr._exception_policy = None
+        try:
+            retryable, _fatal = tr._retry_exceptions()
+        finally:
+            tr._exception_policy = None
+        assert issubclass(requests.exceptions.ReadTimeout, retryable)
 
 
 class TestExceptionPolicyMatchesTheLibrary:

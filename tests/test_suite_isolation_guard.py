@@ -102,6 +102,38 @@ def test_signal_history_redirected_off_repo_tree():
     )
 
 
+def test_translator_breaker_closed_at_test_start():
+    """``_reset_translator_breaker`` must hand every test a closed breaker.
+
+    ``common.translator`` keeps the circuit breaker in module globals on
+    purpose — it exists to stop a *process* from burning its workflow budget —
+    so give-ups accumulate across unrelated tests and latch it open at five
+    consecutive. Once open, ``translate_to_korean`` skips the call and returns
+    its input, so any later test expecting a translation fails.
+
+    Measured 2026-09-04: without the fixture,
+    ``test_translator.py::TestTranslateToKoreanDeepTranslator::
+    test_translation_result_cached`` failed in the full suite while passing
+    alone, and a probe at that point read ``breaker_open=True consecutive=5``.
+    Asserting the state here turns that ordering-dependent failure into a
+    direct one that names the cause.
+
+    The marker is load-bearing, not decoration: the reset values *are* the
+    module defaults, so asserting only "breaker closed" passes with the fixture
+    removed — the falsifiability harness reported this guard VACUOUS until the
+    marker was added. Same reason ``_http_block_stub`` and
+    ``_no_real_sleep_stub`` exist.
+    """
+    assert getattr(translator, "_breaker_reset_for_test", False), (
+        "_reset_translator_breaker conftest fixture 가 비활성이다. "
+        "번역 서킷 브레이커는 프로세스 전역이라, 이전 테스트의 give-up 5건이 "
+        "누적되면 열린 채로 남아 이후 번역 테스트가 순서에 따라 깨진다."
+    )
+    assert translator._breaker_open is False
+    assert translator._consecutive_failures == 0
+    assert translator._failure_total == 0
+
+
 def test_translation_cache_redirected_off_repo_tree():
     """``_isolate_translation_cache`` must redirect translator writes off the tree.
 
