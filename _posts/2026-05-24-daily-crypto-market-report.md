@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-24 | 시총 $2.62T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -6.29%</li><li>🔴 <strong>Toncoin</strong> (TON): -6.21%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +2.66%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

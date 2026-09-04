@@ -30,51 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-04 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” - 33건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 코스피, 경제 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 대통령, 이재명 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>🤖 <strong>AI/기술</strong>: 코스피, 외국인 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAzTTJUVGgyNjg4UUNPdzlkcmZOc0FoaUlrY291WDMydUlaY1V2X1hPeUtnYlNzeS1rQmFUNDNwYThHbmdXdjJxUk94OV9ZTWZlLVBrMld5eEkxV1NqdXZoSjBmLVFlU1BLT25n?oc=5">이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”</a> <span class="p0-desc">이재명 대통령이 30일 “조기 대량 공급, 투기 수요 억제, 고금리에 의한 대출 연체와 경매 폭증 등으로 주택가격이 폭락할 경우에 대비해 공공주택 보유용으로 ​일정 기준 이하의 주.</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9JVUNCSEw3eC1BVmlrRmlLMnNwMDFtZ3hLT01Bd3BQSXA0anl1aFV6Q3M2WEkwM2NBZjdiZElubTFUcjJaVl9pNm8wRHU2V0I3YkdmQ3N4UWNzYVdyWUNTYVZXX2c2MVU?oc=5">‘이유 없이 뚝’ 코스피…개인·외국인·기관 모두 던져</a> <span class="p0-desc">미 국채 금리가 하락하고 국제 유가 상승세도 잠잠해지면서 코스피가 3일 상승 출발했지만, 장 마감 전 급락하며 6400선까지 주저앉았다. 뚜렷한 악재가 없어 증권가에서도 해석.</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IZFUyMzc2SUMwYkhYcTVhbmZRblQ5SFlzRldRZ3I0bkw2eGY5aUpwaXE3Yjh0NHRfUEhtdHlYQkgyZUs4OVhGTjJHRWlSZzBoaFlVZktpc2NONHk2aVE?oc=5">26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치</a> <span class="p0-desc">인싸잇=임종옥 기자ㅣ코스피가 외국인과 기관의 대규모 순매도에 4% 가까이 급락하며 6500선까지 밀렸다. 삼성전자와 SK하이닉스의 대규모 자사주 매입이 증시 수급의 안전판 역할을.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 33건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
+오늘 수집된 총 33건 중 텔레그램 0건, 소셜 1건, 정치·경제 32건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (25건): 코스피, 경제, 금리 매크로 변수 (25건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (9건): 대통령, 이재명, 정부 정치 이슈 (9건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📈 가격/시장** (15건): 코스피, 외국인, 기관 가격 변동 (15건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”
-- ‘이유 없이 뚝’ 코스피…개인·외국인·기관 모두 던져
-- 26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치
-
-### 주요 이슈
-
-- 뛰는 기준금리] ④ 李대통령 '금리' 앞세워 부동산 경고…전문가들 "현실과 큰 간극"
-- 외국인·기관…사라진 매수 주체에도, 버티는 '코스피 6500선'의 비밀
-- 연준의 9월 결정은 마이크론 자체 수익보다 더 큰 타격을 줄 수 있습니다 - The Motley Fool
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 32건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:36%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:60%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:4%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-04.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

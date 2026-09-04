@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-04 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치 - 198건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 44건</li><li>📊 <strong>매크로/금리</strong>: 연준, 환율 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체주, 삼성전자 관련 21건</li><li>🏛️ <strong>정치/정책</strong>: 선거 관련 8건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IZFUyMzc2SUMwYkhYcTVhbmZRblQ5SFlzRldRZ3I0bkw2eGY5aUpwaXE3Yjh0NHRfUEhtdHlYQkgyZUs4OVhGTjJHRWlSZzBoaFlVZktpc2NONHk2aVE?oc=5">26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치</a> <span class="p0-desc">인싸잇=임종옥 기자ㅣ코스피가 외국인과 기관의 대규모 순매도에 4% 가까이 급락하며 6500선까지 밀렸다. 삼성전자와 SK하이닉스의 대규모 자사주 매입이 증시 수급의 안전판 역할을 하고 있지만, 거센 외국인·기관 매도세를 막기에는 역부족이었다. 2일 유가증권시장에서 코스피는 전 거래일보다 273.08포인트(-3.99%) 내린 6562.72에 거래를 마쳤다.</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBfakRrV2pMWC1IQ0tBbE5QM2ZnMDFHdW5oQ09LOUh1UVEySTZHQ1c4aDNvbTNrTDlwbzlRZnd3eW4xQWdjN21jQ29SZFNFWlF0TXdSOHltcncwYmlZbUpGbkllWklPRWcyT1BDZ3prNXVjQQ?oc=5">속보] 코스피 6,400선 하락 전환…코스닥 2%대 급락 - 스페셜타임스</a> <span class="p0-desc">3일 코스피 지수가 장중 하락세로 돌아서며 6,400선으로 내려앉았습니다. 같은 시간 코스닥 지수 또한 2% 이상의 하락 폭을 기록하며 투자 심리가 위축된 모습입니다.· · · · · · · · · ·관련기사▶ 코스피, 중동 지정학적 리스크에 6,780선 후퇴…코스닥 1%대 하락▶ 코</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1YN3RQa2xycXpVVHpYLTBxNDZ6ZEhXRmlzQWZXdzNwMm84R0tUMXZFSTl5OGJSVnVfcFdVMmRNUGthRklxM29Za3ZjZlB1Xy1uNXNlcVNyZnktTmdZYnNpVnNqYkFCbmtBNzE1LXRqWXA?oc=5">코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문</a> <span class="p0-desc">[한국강사신문 한상형 기자] 중동 지역의 군사적 긴장이 다시 고조되면서 국내 증시가 큰 폭으로 흔들렸다. 코스피는 4% 가까이 급락하며 6,500선으로 내려앉았고, 코스닥 역시 2% 넘게 하락했다. 삼성전자와 SK하이닉스의 자사주 관련 매수세가 유입됐지만 외국인과 기관의 대규모 매도 공세를 막기에는 역부족이었다.2일 코스피는 전 거래일보다 273.08포인트(3.99%) 떨어진 6,562.72에 거래를 마쳤다. 지난달 28일 이후 3거래일 만에 하락세로 돌아선 것이다.이날 지수는 210.33포인트(3.08%) 내린 6,625.47로</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 198건의 뉴스 중 P1 주요 이슈도 26건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (44건): 코스피, 코스닥, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (34건): 연준, 환율, 국채 매크로 변수 (34건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (21건): 반도체주, 삼성전자, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치
-- 속보] 코스피 6,400선 하락 전환…코스닥 2%대 급락 - 스페셜타임스
-- 코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문
-
-### 주요 이슈
-
-- 거래자들이 Fedspeak와 수익을 분석함에 따라 미국 주식 선물 상승
-- 반도체 급등 따라가지 못하는 소부장 기업…실적 기대감은 유효 - 매일일보
-- Cairn Homes H1 수익 통화 하이라이트
-- 외 23건
-
-### 투자자 체크포인트
-
-- 한국 기사 68건, 글로벌 기사 130건 수집
-- 한국 지수: KOSPI 6,579.48(+0.26%), KOSDAQ 790.21(-1.71%), USD/KRW 1,355.80(-0.23%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">44건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:77%"></div></div><span class="theme-count">34건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:48%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:18%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-04.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,579.48 (+0.26%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 790.21 (-1.71%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-09-04 주식 시장에서 198건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,579.48(+0.26%), KOSDAQ 790.21(-1.71%), USD/KRW 1,355.80(-0.23%).
+- *인싸잇=임종옥 기자ㅣ코스피가 외국인과 기관의 대규모 순매도에 4% 가까이 급락하며 6500선까지 밀렸다.*
 
 ## 테마별 주요 뉴스
 

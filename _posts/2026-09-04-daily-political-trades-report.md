@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 23건 수집. SEC 내부자 15건,
 image_alt: "정치인 거래·정책 리포트 - 2026-09-04 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-04.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-04** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **23건** — SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 7건
@@ -25,15 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-04 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(10회), **내부자**(10회), **관세**(8회), **트럼프**(4회), **SEC(미국증권거래위원회)**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **23건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 7건입니다.
-
-**트럼프 정책** 관련으로는 In the wake of the US Supreme Court’s decision on tariffs, US President Donald Trump said there is no change in the trade deal with India and emphasised that the India deal is on. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 매일일보 = 김재호 전문기자 | 소비자물가 상승률이 두달만에 3%대를 기록하며 한국은행의 기준금리 향방에 관심이 쏠린다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-09-04 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 23건 — SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 7건
+- 1. 백악관, 미국 대법원 판결 이후 인도에 임시 10% 관세 확정 - News On AIR 미국 대법원의 관세 결정 이후 도널드 트럼프 미국 대통령은 인도와의 무역 협정에는 변화가 없으며 인도 협정이 계속되고 있음을 강조했습니다.
 
 ## 1. 트럼프 행정명령/정책
 

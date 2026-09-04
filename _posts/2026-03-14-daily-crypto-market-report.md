@@ -37,8 +37,10 @@ permalink: "/market-analysis/2026/03/14/daily-crypto-market-report/"
 ---
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-03-14 크립토 모니터 v3.0 기반 시장, 뉴스, 보안, 경제지표, 내부자거래 데이터를 종합 분석했습니다.
 - Upbit KRW 마켓 총 거래량: 9,588.9억
 
 ## 시장 현황

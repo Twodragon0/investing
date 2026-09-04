@@ -41,39 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-04 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: OpenAI, GPT-6 Astra 출시: AGI에 가장 가까운 AI 모델 - 84건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 만달러 주목</li><li>🏦 <strong>거래소</strong>: 스테이블코인 주목</li><li>📈 <strong>가격/시장</strong>: 만달러, 달러 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 선물 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/377341/openai-releases-gpt-6-astra-agi">OpenAI, GPT-6 Astra 출시: AGI에 가장 가까운 AI 모델</a> <span class="p0-desc">이 모델은 강화된 시스템 전체에서 알려지지 않은 보안 결함을 독립적으로 발견하고 활용하여 대중이 접근하기 전에 단계적 출시와 백악관 검토를 촉발할 수 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: OpenAI, GPT-6 Astra 출시: AGI에 가장 가까운 AI 모델 
-총 84건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (43건): 비트코인, 만달러, 달러 관련 (43건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (13건): 스테이블코인, 배분 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **📈 가격/시장** (21건): 만달러, 달러, 코인 가격 변동 (21건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- OpenAI, GPT-6 Astra 출시: AGI에 가장 가까운 AI 모델
-
-### 주요 이슈
-
-- Kraken 모기업, IPO을 이르면 2027년 2분기로 연기 - 금융계 거물들
-- 아메리칸 비트코인, 나스닥 상장 1주년…비트코인(BTC) 8300개 보유 - 블루밍비트
-- D-BIZ 암호화폐 뉴스] 암호화폐 기업 실적보고서, 수치 기준 달라 오해 유발…"분기보고서보다 연간재무제표 확인하세요" - 데일리비즈온
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News KR(15건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-04.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **84건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-09-04 암호화폐 핵심 뉴스: 법무부, 하마스에 기부한 암호화폐 56만 달러 이상 압류. 총 84건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

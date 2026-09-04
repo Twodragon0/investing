@@ -25,6 +25,7 @@ permalink: "/social-media/2026/02/23/daily-social-media-digest/"
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5acVpDR0ItM0pKdjlWbnY4SkpTUm04cGxjU1NlR1dzTHYydW1seE5zeEhTbVkzN19ZMF9EOWJ4OG5vMzdZS1MtZkQtbmk0bFNua2E5aVlpLUtsXzZ3aUVGYnZfbE1vOFJVSjZCY0pnaU1nQm5LMjBj0gF8QVVfeXFMTnNsVGxFUEhYSjFIVXNFeGh1NGJ4WTNnYTRORVVEcUJ6LVNfXzBzc2tlY3ZsQW9zdWx5cTdndFlqdGY3bm1Lb05FcTNHRjFnTF92MWx0WWZNd0E0Wm5Td3FqUjhGT1lfMEU0NVVkNjI4bGhRRWEySmZhYzZFMg?oc=5">S&P 500 rises, Dow gains 200 points after Supreme Court strikes down Trump emergency tariffs: Live updates - CNBC</a> — 미국 정치·정책 관련 소식입니다. 정책 변화는 특정 섹터와 글로벌 무역 환경에 영향을 줄 수 있습니다.</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 41건 중 텔레그램 20건, 소셜 2건, 정치·경제 19건으로 정치/정책 및 매크로/금리 이슈가 주요 화제입니다.

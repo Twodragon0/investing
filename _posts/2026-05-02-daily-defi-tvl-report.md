@@ -22,9 +22,11 @@ image_alt: "DeFi TVL 리포트 - 2026-05-02 - DeFi 뉴스 요약 이미지"
 <div class="alert-box alert-info"><strong>DeFi 생태계 $140.51B 규모 분석</strong><ul><li>🏆 <strong>최상위 프로토콜</strong>: Lido — TVL $20.94B (Liquid Staking)</li><li>⛓️ <strong>최상위 체인</strong>: Ethereum — TVL $45.56B (56.9%)</li><li>📊 <strong>최다 카테고리</strong>: Liquid Staking — $29.45B</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - Lido로 TVL $20.94B (14.9%)로 1위이나, 생태계가 상당히 분산되어 있습니다. 프로토콜 간 경쟁이 활발한 건강한 구조입니다.
+- 2026-05-02 DeFi Llama 기준 DeFi 생태계 TVL(Total Value Locked, 총 예치 자산) 현황을 정리합니다. 상위 20개 프로토콜의 총 TVL은 $140.51B이며, 상위 15개 체인의 총 TVL은 $80.07B입니다.
 - 총 20개 프로토콜, 15개 체인의 TVL 데이터를 분석했습니다.
 
 ## 전체 요약

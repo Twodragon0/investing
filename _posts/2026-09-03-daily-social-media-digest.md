@@ -30,12 +30,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-03 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” - 30건 분석</strong><ul><li>🏛️ <strong>정치/정책</strong>: 이재명, 정부 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 금리인상, 금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 금리인상, 대통령 주목</li><li>🤖 <strong>AI/기술</strong>: 코스피, 외국인 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAzTTJUVGgyNjg4UUNPdzlkcmZOc0FoaUlrY291WDMydUlaY1V2X1hPeUtnYlNzeS1rQmFUNDNwYThHbmdXdjJxUk94OV9ZTWZlLVBrMld5eEkxV1NqdXZoSjBmLVFlU1BLT25n?oc=5">이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”</a> <span class="p0-desc">이재명 대통령이 30일 “조기 대량 공급, 투기 수요 억제, 고금리에 의한 대출 연체와 경매 폭증 등으로 주택가격이 폭락할 경우에 대비해 공공주택 보유용으로 ​일정 기준 이하의 주.</span></li><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeUxjcERJSDVINVoxRF9GazhDY180RWYyUl9mMWlKSlZSR2VnWlFOb1VFME9CZ1JYSThDVjR1RWRFQkxhd0lfRHJXNHgyUWxGQTNjOGVoVTBWT1pvdkpWdDhmQl8yUG10cG9HcWRobGZXQkFRTWlKcWh2cjROWDNjM2FFdUVGclpXOVZqMjFKeS05YkJ5MXZPX0Qyd0psYVZDeDhPUmF5LTFzT2RORkdrOHZYNmhFdzB5MUZn?oc=5">BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO</a> <span class="p0-desc">토론토, 9월 1일 (Reuters) - 투자자들이 다음 달 연준 금리 인상에 베팅하고 글로벌 채권 시장의 매도는 캐나다 은행(Bank of Canada) 금리 결정을 앞두고 국내.</span></li><li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE52Q0loR0NFSm1vMlBvOFByeE53S1QxTXYzazIyb01fTWszclhuYnBHZ1dNd0xhRzUxb1NrZXF0bkZENUdWRDhZRW1TSVVEMmM2cHlXMg?oc=5">Impax는 연준의 9월 금리 결정이 너무 가까웠으며 데이터 주변의 재무 변동성을 확인했다고 말합니다.</a> <span class="p0-desc">임팩스자산운용은 9월 연준의 기준금리 결정을 예측하기 어렵다고 밝혔다. 회사는 또한 휘발성이라고 말했다</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 30건 중 텔레그램 0건, 소셜 0건, 정치·경제 30건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 30건 중 텔레그램 0건, 소셜 0건, 정치·경제 30건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

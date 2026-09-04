@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-29 | 시총 $2.62T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>MemeCore</strong> (M): -11.36%</li><li>🔴 <strong>Zcash</strong> (ZEC): -6.72%</li><li>🔴 <strong>Hyperliquid</strong> (HYPE): -6.11%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집
