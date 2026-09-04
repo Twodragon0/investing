@@ -73,7 +73,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5SeGdkS01VSHdOUnpkeGlJNmhZZ3h5TERsMlliZUVBNDB3R2xWS1RLOHV2NHlsNURnTnNYaWZwd2tTU200X0FRQkxRck00T2RsRTFRZHY2eXIxeTFST0U4czBLaXlxMlk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 9월 3일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">비트코인은 정부, 은행 등에 의해 통제되는 대신 P2P 네트워크에서 실행됩니다. 이를 통해 중개자 없이 다른 사람에게 직접 가치를 보낼 수 있습니다.</p>
+<p class="news-desc">At 8 a.m. Eastern Time on September 3, 2026, the going rate for one Bitcoin (BTC) is $77,934.11. That’s $1,262.10 higher than yesterday morning’s level and about $33,775 below where it stood a year ago.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
