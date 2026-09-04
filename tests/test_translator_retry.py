@@ -46,11 +46,13 @@ def reset_retry_state():
     tr._retries_disabled = False
     tr._failure_total = 0
     tr._failure_warned = False
+    tr._failure_reported = 0
     yield
     tr._consecutive_failures = 0
     tr._retries_disabled = False
     tr._failure_total = 0
     tr._failure_warned = False
+    tr._failure_reported = 0
 
 
 @pytest.fixture
@@ -258,6 +260,48 @@ class TestFailureVisibility:
         totals = [r.getMessage() for r in caplog.records if "번역 실패 누적" in r.getMessage()]
         assert len(totals) == 1
         assert "2건" in totals[0]
+
+    def test_repeated_flushes_do_not_reprint_the_same_total(self, isolated_cache, sleep_calls, caplog):
+        """``save_translation_cache`` is a flush point, not the end of the run.
+
+        ``enrichment.py`` calls it once per ``enrich_items`` pass and collectors
+        run several passes. Production, 2026-09-04: run 33816242897 printed
+        "번역 실패 누적 2건" three times for the same two failures.
+        """
+        with patch("common.translator._translate_once", side_effect=_retryable_exc()):
+            tr.translate_to_korean("first")
+            tr.translate_to_korean("second")
+
+        with (
+            caplog.at_level(logging.WARNING, logger="common.translator"),
+            patch("common.translator._save_cache"),
+        ):
+            tr.save_translation_cache()
+            tr.save_translation_cache()
+            tr.save_translation_cache()
+
+        totals = [r.getMessage() for r in caplog.records if "번역 실패 누적" in r.getMessage()]
+        assert len(totals) == 1, f"같은 총계를 반복 출력했다: {totals}"
+
+    def test_a_later_failure_is_reported_on_the_next_flush(self, isolated_cache, sleep_calls, caplog):
+        """The watermark must not silence genuinely new failures — a later
+        enrichment pass that loses more translations still reports."""
+        with patch("common.translator._translate_once", side_effect=_retryable_exc()):
+            tr.translate_to_korean("first")
+
+        with (
+            caplog.at_level(logging.WARNING, logger="common.translator"),
+            patch("common.translator._save_cache"),
+        ):
+            tr.save_translation_cache()
+            with patch("common.translator._translate_once", side_effect=_retryable_exc()):
+                tr.translate_to_korean("second")
+            tr.save_translation_cache()
+
+        totals = [r.getMessage() for r in caplog.records if "번역 실패 누적" in r.getMessage()]
+        assert len(totals) == 2, f"새 실패가 보고되지 않았다: {totals}"
+        assert "1건" in totals[0]
+        assert "2건" in totals[1]
 
     def test_run_end_is_silent_when_nothing_failed(self, isolated_cache, caplog):
         with (
