@@ -90,7 +90,7 @@
 | scripts/common/themed\_news\_renderer.py          |      134 |        0 |    100% |           |
 | scripts/common/themes.py                          |       12 |        0 |    100% |           |
 | scripts/common/time\_series\_state.py             |      278 |       27 |     90% |55, 59, 158, 162, 242, 358-366, 395-401, 432, 460-462, 482-483, 488-490, 541-544 |
-| scripts/common/translator.py                      |      268 |        4 |     99% |774-778, 824 |
+| scripts/common/translator.py                      |      305 |        6 |     98% |778, 861, 892-896, 943 |
 | scripts/common/utils.py                           |      178 |        8 |     96% |226-227, 261-264, 304-306 |
 | scripts/common/worldmonitor\_utils.py             |        5 |        0 |    100% |           |
 | scripts/continuous\_improvement\_loop.py          |       89 |        1 |     99% |       293 |
@@ -123,7 +123,7 @@
 | scripts/tools/fix\_untranslated\_body.py          |       87 |       40 |     54% |35, 107-108, 119-165, 169 |
 | scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |        5 |     98% |253-257, 416, 421, 561 |
-| scripts/tools/guard\_falsifiability.py            |      190 |       81 |     57% |149, 666-670, 680-682, 711-720, 725, 739-748, 780-784, 789-823, 833-881, 899-925, 929 |
+| scripts/tools/guard\_falsifiability.py            |      190 |       81 |     57% |150, 667-671, 681-683, 712-721, 726, 740-749, 781-785, 790-824, 834-882, 900-926, 930 |
 | scripts/tools/indexnow\_submit.py                 |      174 |       28 |     84% |89-132, 222-229, 347-348, 358 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
@@ -134,7 +134,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24923** | **3060** | **88%** |           |
+| **TOTAL**                                         | **24960** | **3062** | **88%** |           |
 
 
 ## Setup coverage badge
