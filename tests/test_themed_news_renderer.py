@@ -426,6 +426,36 @@ class TestDescriptionBranches:
         out = ThemedNewsRenderer(items, mock_summarizer).render()
         assert "fallback-desc-for::Title that drives fallback" in out
 
+    def test_fallback_receives_korean_title_when_available(
+        self, mock_summarizer: MagicMock, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """The synthesizer must be handed the Korean title, not the raw one.
+
+        The card anchor already renders ``title_ko``; feeding ``orig_title`` to
+        the fallback put the same headline back in English directly beneath it.
+        Corpus scan 2026-09-04: 235 of 252 leaking blurbs had a Korean anchor
+        sitting right above the English blurb.
+        """
+        import common.summarizer as _sumr
+
+        monkeypatch.setattr(_sumr, "_is_generic_desc", lambda desc: True)
+        articles = [
+            _make_article(
+                "BTC price near $78,000 as Arbitrum surges",
+                link="https://example.com/ko",
+                description="generic filler that flags",
+                title_ko="BTC 가격이 아비트럼 급등에 힘입어 $78,000에 근접",
+            )
+        ]
+        items = articles + [{"title": f"pad{i}"} for i in range(4)]
+        mock_summarizer._theme_articles = {"k": articles}
+        mock_summarizer.get_top_themes.return_value = [("N", "k", "*", 1)]
+
+        out = ThemedNewsRenderer(items, mock_summarizer).render()
+        # The echo stub makes this discriminating: it names which title arrived.
+        assert "fallback-desc-for::BTC 가격이 아비트럼 급등에 힘입어 $78,000에 근접" in out
+        assert "fallback-desc-for::BTC price near" not in out
+
     def test_boilerplate_translated_desc_dropped(
         self, mock_summarizer: MagicMock, monkeypatch: pytest.MonkeyPatch
     ) -> None:

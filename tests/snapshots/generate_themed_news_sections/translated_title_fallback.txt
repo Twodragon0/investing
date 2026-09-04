@@ -1,0 +1,101 @@
+## 테마별 주요 뉴스
+
+### 🟠 비트코인 (3건)
+
+*현물 비트코인 ETF에 3주 연속 자금이 들어오며 누적 순유입이 사상 최대를 기록했다고 집계 기관이 밝혔습니다.*
+
+
+<div class="news-card-item news-sev-high">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-high">HIGH</span>
+<a href="https://example.com/btc/arbitrum" class="news-title" target="_blank" rel="noopener noreferrer">BTC 가격이 아비트럼 급등에 힘입어 $78,000에 근접</a>
+<p class="news-desc">BTC 가격이 아비트럼 급등에 힘입어 $78,000에 근접. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/halving" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반감기 서사가 매집을 이끈다</a>
+<p class="news-desc">비트코인 반감기 서사가 매집을 이끈다. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
+<span class="source-tag" data-source-type="default">Example Crypto</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">3</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/btc/etf-inflows" class="news-title" target="_blank" rel="noopener noreferrer">현물 비트코인 ETF, 3주 연속 순유입 기록</a>
+<p class="news-desc">현물 비트코인 ETF에 3주 연속 자금이 들어오며 누적 순유입이 사상 최대를 기록했다고 집계 기관이 밝혔습니다.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+### 🔵 규제/정책 (2건)
+
+*우리의 목적은 세상을 더 잘 이해하도록 돕는 것입니다.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/mica/phase" class="news-title" target="_blank" rel="noopener noreferrer">미카(MiCA) 프레임워크 협의가 다음 단계로</a>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">2</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/sec/disclosure" class="news-title" target="_blank" rel="noopener noreferrer">SEC, 등록법인 대상 공시 지침을 명확화</a>
+<p class="news-desc">SEC, 등록법인 대상 공시 지침을 명확화. 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
+<span class="source-tag" data-source-type="default">Example Wire</span>
+</div>
+</div>
+
+
+### 🔷 이더리움 (1건)
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/btc/arbitrum" target="_blank" rel="noopener noreferrer">BTC 가격이 아비트럼 급등에 힘입어 $78,000에 근접</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+
+
+### 📊 매크로/금리 (1건)
+
+*재무부가 스테이블코인 발행사에 분기별 준비금 구성 내역을 제출하도록 요구하는 규칙 초안을 공개했습니다.*
+
+
+<div class="news-card-item news-sev-medium">
+<div class="news-card-num">1</div>
+<div class="news-card-thumb news-card-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></div>
+<div class="news-card-body">
+<span class="news-severity news-severity-med">MED</span>
+<a href="https://example.com/treasury/stablecoin" class="news-title" target="_blank" rel="noopener noreferrer">재무부, 스테이블코인 준비금 보고 규칙을 제시</a>
+<p class="news-desc">재무부가 스테이블코인 발행사에 분기별 준비금 구성 내역을 제출하도록 요구하는 규칙 초안을 공개했습니다.</p>
+<span class="source-tag" data-source-type="default">Example Brief</span>
+</div>
+</div>
+
+
+### 📈 가격/시장 (1건)
+
+<details><summary>그 외 1건 보기</summary><div class="details-content"><ol class="news-overflow-list">
+<li class="overflow-preview"><span class="overflow-thumb overflow-thumb--favicon"><img src="https://stub.invalid/favicon.ico" alt="" loading="lazy"></span><span class="overflow-body"><a href="https://example.com/btc/arbitrum" target="_blank" rel="noopener noreferrer">BTC 가격이 아비트럼 급등에 힘입어 $78,000에 근접</a><span class="overflow-source">Example Crypto</span></span></li>
+</ol></div></details>
+

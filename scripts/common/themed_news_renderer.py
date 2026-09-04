@@ -57,7 +57,6 @@ class ThemedNewsRenderer:
         num: int,
         title: str,
         description: str,
-        orig_title: str,
         theme_key: str,
         sumr_module: Any,
     ) -> str:
@@ -125,14 +124,27 @@ class ThemedNewsRenderer:
             and not sumr_module._is_generic_desc(description)
             and not _NAV_LINK_LIST_RE.search(description)
         ):
-            # Additional boilerplate check for translated descriptions
+            # Additional boilerplate check for translated descriptions.
+            #
+            # KNOWN GAP (measured 2026-09-04, deliberately not closed here):
+            # `description != title` above compares against the *Korean* title,
+            # so a description that is just the untranslated English headline
+            # slips through as real content. Corpus-wide that path plus a second
+            # synthesizer carry ~222 English blurbs. Adding
+            # `contains_english_clause(description)` here closes it, but it also
+            # drops every English blurb on an all-English card, which is a
+            # content-removal decision of a different size than this fix.
             if not sumr_module._is_boilerplate_desc(description):
                 desc_text = normalize_blurb(_strip_trailing_artifacts(_truncate_sentence(description, max_len=300)))
                 if desc_text:
                     card_parts.append(f'<p class="news-desc">{_esc(desc_text, quote=True)}</p>')
         else:
-            # Fallback: generate analytical description from title
-            fallback_desc = sumr_module._generate_title_based_desc(orig_title, theme_key)
+            # Fallback: generate analytical description from title.
+            # `title` (= `title_ko` when present), not the raw `article["title"]`:
+            # the anchor above already renders the Korean title, and feeding the
+            # raw one here put the same headline back in English directly
+            # beneath it.
+            fallback_desc = sumr_module._generate_title_based_desc(title, theme_key)
             if fallback_desc:
                 card_parts.append(f'<p class="news-desc">{_esc(fallback_desc, quote=True)}</p>')
 
@@ -297,7 +309,6 @@ class ThemedNewsRenderer:
                         num=shown + 1,
                         title=title,
                         description=description,
-                        orig_title=orig_title,
                         theme_key=key,
                         sumr_module=_sumr,
                     )

@@ -678,6 +678,64 @@ def test_count_blurb_quality_on_empty_body():
     assert cdq.count_blurb_quality("") == (0, 0)
 
 
+# ---------------------------------------------------------------------------
+# Per-URL blurb language (2026-09-04) — chrome detection is not a language check
+# ---------------------------------------------------------------------------
+
+# The exact shape the title-based fallback synthesizer emitted for 252 blurbs
+# across 158 posts while the chrome metric read 2.4% and front-matter ASCII 0%.
+_LEAK = (
+    "BTC price near $78,000 as Arbitrum surges on Robinhood Chain revenue: "
+    "Crypto Markets Today. $78,000, BTC — 비트코인 시장 심리와 가격 흐름에 주목하세요."
+)
+
+
+def test_count_blurb_language_flags_english_clause_before_korean_tail():
+    assert cdq.count_blurb_language(_NEWS_DESC.format(_LEAK)) == (1, 1)
+
+
+def test_whole_blurb_ascii_ratio_would_have_missed_this_leak():
+    """Guards the *reason* this detector is not a plain ``is_ascii_dominant``.
+
+    The Korean tail drags the whole-string ratio under the threshold. Measured
+    2026-09-04: whole-blurb ``is_ascii_dominant`` caught only 1 of 4 real leak
+    samples. If a later refactor swaps the Hangul-free-run scan for a
+    whole-blurb ASCII check, this test is what says the swap blinds the metric.
+    """
+    from common.summary_quality import is_ascii_dominant
+
+    # Real corpus blurb, _posts/2026-08-29-daily-crypto-news-digest.md.
+    subthreshold = (
+        "Live updates: Bitcoin trades near $80,000 as stocks close with gains. "
+        "$80,000 — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다."
+    )
+    assert not is_ascii_dominant(subthreshold)
+    assert cdq.count_blurb_language(_NEWS_DESC.format(subthreshold)) == (1, 1)
+
+
+def test_count_blurb_language_allows_korean_quoting_english_names():
+    """Korean prose naming an English product must not trip the detector."""
+    body = _NEWS_DESC.format("Robinhood Chain 수익이 급증하면서 Arbitrum 생태계의 TVL이 늘었습니다.")
+    assert cdq.count_blurb_language(body) == (0, 1)
+
+
+def test_count_blurb_language_flags_fully_english_blurb():
+    body = _NEWS_DESC.format(
+        "Nvidia is due to report earnings on Wednesday, and a very broad universe "
+        "of companies is tied to the themes that the chip giant represents."
+    )
+    assert cdq.count_blurb_language(body) == (1, 1)
+
+
+def test_count_blurb_language_counts_p0_segments():
+    body = f'<span class="p0-desc">{_LEAK}</span>'
+    assert cdq.count_blurb_language(body) == (1, 1)
+
+
+def test_count_blurb_language_on_empty_body():
+    assert cdq.count_blurb_language("") == (0, 0)
+
+
 def test_classify_posts_aggregates_blurb_counts():
     chrome = "일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다."
     posts = [_make_post_dict("정상 요약입니다.", body=_NEWS_DESC.format(chrome))]
