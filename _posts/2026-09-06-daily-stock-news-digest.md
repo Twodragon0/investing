@@ -297,7 +297,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPRlNKb1RILWptMFVtX1gzOGNoczdYaDJneDZrZDlJZ1VZTnVmVTNDQmhwME5pMTE4ejV6al90ME5UcVY1aU80bEZCZmc2bU92ZFhBQ0FEMzBQOXJRUjBpSmpVNjBBbHc0RGYzRk5uUVFMRVM5dDFlTEx1OXpoZU9tMnhIQk55b2lweHdxYw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Datavault AI 주가 25% 하락; 나스닥 Cure는 이제 390% 리바운드가 필요합니다 - TechStock²</a>
-<p class="news-desc">Datavault AI 주가 25% 하락; 나스닥 Cure에는 이제 390% 리바운드가 필요합니다 TechStock²</p>
+<p class="news-desc">Datavault AI 주가 25% 하락; 나스닥 Cure는 이제 390% 리바운드가 필요합니다 - TechStock²</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
