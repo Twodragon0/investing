@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE4yMU9lZUlOVURMVXl3bVhpVExWaGU4VVd4Q2ExX3l0cE5XNVNFdFZ4MmRnSkVFVU5oM2drclNzTVJCMkh6MmFz?oc=5">증시 레이더] 코스피 1.79%↓ 6,788선⋯삼성전자·SK하이닉스 동반 급락 - 포커스온경제</a> <span class="p0-desc">[증시 레이더] 코스피 1.79%↓ 6,788선⋯삼성전자·SK하이닉스 동반 급락 포커스온경제</span></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFA3c3V5Rm5lZ3ZGS0o3LVFDVlZjM29DQ0xzMl9LeEJhTTlwd3hTZjdnc0N1Y3duNUdMVWxsYmx3YjNRclZHaENrMWgzTDBpbm1IemhISE5GN0Jrd1BETXVVdmVSdUg0VHVrd2l2NjhZeGZpVkRBeFdrb3NOcEhjaEE?oc=5">I asked ChatGPT if the S&P 500 will crash 50% due to the AI bubble and it said… - Yahoo Finance UK</a></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPWkpJR2Q5ZmxPTGEyNFdoQnZyVnVndnduWk53R19BeWhwQTkzR0hOOEpmY3VTNFA3STNyMTdSUldmLVQxQ29aaUFnNXkwU1VXYnViMDBIUXp0OUxVckdOQzdYYVZFYmx4TExjMklIMG1GSzVtU0IwcXItcmVGV1hnU3Vqc9IBlwFBVV95cUxNQm5vZHc1X2gxUkdFUWVKaGdmcmpHUVVRWmUyamd3ZWVKSnFMTTBmay01aDRxeEZKMHNtUGtiWTB0WVQtVVp5Vm9iTURlaC0ycGVrT1BMRUdTRDExaXVEd01WS25LbnpfbXdCd3p2TjBNUVhLLXhLejJJdnBGZDc3bHRhVzluWlRBU2tMQUR3WThLRG5FTFQ0?oc=5">‘유령주식’ 판결에 빗썸 촉각… 오지급 뒤 가격 급락, 어디까지 배상? - 조선비즈 - Chosunbiz</a> <span class="p0-desc">‘유령주식’ 판결에 빗썸 촉각… 오지급 뒤 가격 급락, 어디까지 배상?</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,788.88 (-1.79%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 838.41 (+0.09%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-08-30 주식 시장에서 172건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,788.88(-1.79%), KOSDAQ 838.41(+0.09%), USD/KRW 1,371.50(-0.69%).
 - *월스트리트은 연준 의장 Warsh가 인플레이션 싸움을 재확인한 후 하락세로 종료됨 Reuters*
 
 ## 테마별 주요 뉴스

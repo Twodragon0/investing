@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-20 | Fear 25 - 시장
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +6.45%</li><li>🟢 <strong>Zcash</strong> (ZEC): +5.88%</li><li>🟢 <strong>Toncoin</strong> (TON): +2.74%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

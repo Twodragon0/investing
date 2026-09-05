@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-05 | 시총 $2.73T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Chainlink</strong> (LINK): +2.41%</li><li>🟢 <strong>Monero</strong> (XMR): +1.53%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +1.50%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집

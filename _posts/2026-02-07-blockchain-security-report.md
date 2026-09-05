@@ -18,7 +18,6 @@ permalink: "/security-alerts/2026/02/07/blockchain-security-report/"
 ## 전체 뉴스 요약
 
 - 총 **10건** 수집
-- 스마트 컨트랙트 보안 동향: 최신 보안 패턴과 위협 요소들을 살펴봅니다.
 - 총 수집된 보안 사고: 10건
 
 

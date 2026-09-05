@@ -19,7 +19,6 @@ image_alt: "주요 경제 캘린더 및 실적 일정 (2026-09-05) - 시장 분�
 ## 전체 뉴스 요약
 
 - 총 **5건** 수집
-- 2026-09-05 오늘 일정 핵심: 주요 경제 이벤트 독일 예선 CPI m/m. 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 26건(고·중간 중요도), 대형주 실적 3건, IPO 일정 5건을 정리했습니다
 
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">주요 지수</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">실적 발표</div></div><div class="stat-item"><div class="stat-value">26</div><div class="stat-label">경제 이벤트</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">IPO 일정</div></div></div>
