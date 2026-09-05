@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-04 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비” - 33건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 코스피, 경제 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 대통령, 이재명 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>🤖 <strong>AI/기술</strong>: 코스피, 외국인 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAzTTJUVGgyNjg4UUNPdzlkcmZOc0FoaUlrY291WDMydUlaY1V2X1hPeUtnYlNzeS1rQmFUNDNwYThHbmdXdjJxUk94OV9ZTWZlLVBrMld5eEkxV1NqdXZoSjBmLVFlU1BLT25n?oc=5">이 대통령 “집값 폭락 대비, 공공주택용 대량 매입 시스템 준비”</a> <span class="p0-desc">이재명 대통령이 30일 “조기 대량 공급, 투기 수요 억제, 고금리에 의한 대출 연체와 경매 폭증 등으로 주택가격이 폭락할 경우에 대비해 공공주택 보유용으로 ​일정 기준 이하의 주.</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9JVUNCSEw3eC1BVmlrRmlLMnNwMDFtZ3hLT01Bd3BQSXA0anl1aFV6Q3M2WEkwM2NBZjdiZElubTFUcjJaVl9pNm8wRHU2V0I3YkdmQ3N4UWNzYVdyWUNTYVZXX2c2MVU?oc=5">‘이유 없이 뚝’ 코스피…개인·외국인·기관 모두 던져</a> <span class="p0-desc">미 국채 금리가 하락하고 국제 유가 상승세도 잠잠해지면서 코스피가 3일 상승 출발했지만, 장 마감 전 급락하며 6400선까지 주저앉았다. 뚜렷한 악재가 없어 증권가에서도 해석.</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IZFUyMzc2SUMwYkhYcTVhbmZRblQ5SFlzRldRZ3I0bkw2eGY5aUpwaXE3Yjh0NHRfUEhtdHlYQkgyZUs4OVhGTjJHRWlSZzBoaFlVZktpc2NONHk2aVE?oc=5">26.9.2 증시 인싸잇] 코스피, 외국인·기관 4조대 순매도에 4% 급락… 6500선 턱걸이 - 미디어워치</a> <span class="p0-desc">인싸잇=임종옥 기자ㅣ코스피가 외국인과 기관의 대규모 순매도에 4% 가까이 급락하며 6500선까지 밀렸다. 삼성전자와 SK하이닉스의 대규모 자사주 매입이 증시 수급의 안전판 역할을.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 33건 중 텔레그램 0건, 소셜 1건, 정치·경제 32건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 33건 중 텔레그램 0건, 소셜 1건, 정치·경제 32건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

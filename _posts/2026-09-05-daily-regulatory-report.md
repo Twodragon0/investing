@@ -28,29 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-09-05 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 스테이블코인, 가상자산 관련 10건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 스테이블코인, 가상자산 동향 주시</li><li>🏦 <strong>거래소</strong>: 1건 수집</li><li>📊 <strong>매크로/금리</strong>: 뉴스토마토, 금융당국 관련 1건</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 10건의 뉴스 중 **규제/정책** 관련이 7건(70%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (7건): 스테이블코인, 가상자산, 규제 규제 움직임 (7건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (1건): participants, reporting, position 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📊 매크로/금리** (1건): 뉴스토마토, 금융당국, 가상자산 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 연준 이사회는 United Texas Bank, Quontic Bank Acquisition Corp. 및 Quontic Bank Holding
-- 금융당국, 가상자산 이원화 규제 검토 - 뉴스토마토
-- 가상자산, '더딘' 제도화·'앞선' 규제···시장 혼란·경쟁력 우려 - 서울파이낸스
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 6건, 미국 2건, 아시아 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 10건
 - **한국**: 6건

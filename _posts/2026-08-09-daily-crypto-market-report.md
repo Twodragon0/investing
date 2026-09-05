@@ -29,9 +29,11 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-08-09 | 시총 $2.30T (+
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🟢 <strong>Solana</strong> (SOL): +3.53%</li><li>🟢 <strong>Monero</strong> (XMR): +3.42%</li><li>🟢 <strong>Stellar</strong> (XLM): +2.61%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
+- 2026-08-09 비트코인 $64,989 (24h +0.4%) · 공포·탐욕 지수 30/100 (Fear) · BTC 도미넌스 56.6%. 상위 30개 코인의 시세 및 모멘텀을 정리합니다.
 
 ## 시장 인사이트
 

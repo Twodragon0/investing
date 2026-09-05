@@ -33,51 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-05 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: "원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證 - 193건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 연준, 채권 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 제재 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5LR1p4WnExejVQNXlWUWR2bnZjdlV6Z2M5bXZ0WW5NR3NzMmxXZExsWngxaUV4M0FhUVBjRUpobTdCVF9iLUZOTFZnbHBWSXRmQS1MTTNUUFNxYjRwT1B1OFowNmxlQzJCT1Q5ZVUtU2ZNbi1pY3JN?oc=5">"원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證</a> <span class="p0-desc">원달러 환율이 두달 만에 1550원대에서 1350원대까지 급락했다. 반도체 수출호조에 따른 달러공급 물량이 늘어난 게 환율 하락의 한 요인으로 꼽힌다. 한국의 거시 경제 여건을 감안하면 현재 환율 수준은 적당하지만 속도는 과도하다는 평가가 나왔다. 환율하락은 수입물가 하락에 이어 국내 소비자물가를 낮추고 궁극으로는 한국은행이 기준금리를 동결하거나 낮출 수 있는 근거를 제공하지만 한국 수출제품의 수출가격을 높여 가격 경쟁력을 낮추는 요인이 될 수 있다.한국투자증권은 4일 "원달러 환율이 7월초 1550원대에서 두 달 만에 200원 하</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOXlkSVRVRy1sM051Nk5ncWZzeDJYRzQ2c3B0WkY2dXJ5a2lMQWc3V25QY0NXYnBSeS1lbUNTYXhIMlZ3OElaaFc2bXZNNXBQYmtyWkRRSDJtbVNlbUphOW5pSHpnTUNnUkdSQVFKSzlkaXpLRDVVekE2am1LdGszV0FZdDJnemtq0gGcAUFVX3lxTE0zT2NtYl8zV3M2dWJYRW1FXzJYaDZiVU9NSDY3R1BqWjBsODdQTko0VmJvX1pUUVVYT2lXOW1VT1lSQUxNbDdodTEzclNReUN6eXJKV1BfZE56Y3FfTTRNVi0tRDA5c3pPZGN0dW10WUFjNjU0OS1PeXo2U2pTT3N2bTdIbnZOaUpvSWJMS3hPMEZDb2lzaHMtVlZvdA?oc=5">특징주] ‘시총 미달’ 상폐 코이즈…정리매매 첫날 50% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">[특징주] ‘시총 미달’ 상폐 코이즈…정리매매 첫날 50% 급락</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: "원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 193건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (41건): 코스피, 코스닥, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (31건): 연준, 채권, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (12건): 반도체, 엔비디아, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- "원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證
-- 특징주] ‘시총 미달’ 상폐 코이즈…정리매매 첫날 50% 급락 - 조선비즈 - Chosunbiz
-
-### 주요 이슈
-
-- Here’s how people are building their nest eggs using ‘rent and invest’ strategie
-- U.S. sanctions Turkish bank accused of enabling Iran as Bessent says he 'hopes f
-- 미국, 최근 이란에 압력을 가하고 있는 터키 은행과 자회사 2곳을 제재
-- 외 19건
-
-### 투자자 체크포인트
-
-- 한국 기사 62건, 글로벌 기사 131건 수집
-- 한국 지수: KOSPI 6,687.21(+1.64%), KOSDAQ 813.50(+2.95%), USD/KRW 1,346.47(-0.73%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">41건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:76%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:29%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:34%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:54%"></div></div><span class="theme-count">22건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-05.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,687.21 (+1.64%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 813.50 (+2.95%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-05 주식 시장에서 193건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,687.21(+1.64%), KOSDAQ 813.50(+2.95%), USD/KRW 1,346.47(-0.73%).
+- *[인포스탁데일리=윤서연 기자] 정부가 내년 1월로 예정된 코스닥 상장폐지 시가총액 기준의 추가 상향을 6개월 유예한다.*
 
 ## 테마별 주요 뉴스
 

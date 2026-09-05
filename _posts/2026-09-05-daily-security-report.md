@@ -16,29 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 14건 분석. 주목 사건: **[Security] Trezor says data breach affects another 67K US cu** / 보안 뉴스 헤드라인: Aquifer Exploit Drains $2.5M as August Hacks Hit 50 [2026.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Notional V2 exploit: Arithmetic Error 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 14건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (14건): security, exploit, manipulation 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🔷 이더리움** (4건): exploit, error, manipulation 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🟣 DeFi** (4건): drains, hacks, thorchain DeFi 동향 (4건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] Notional V2 익스플로잇: 산술 오류
-- [보안] Aquifer 익스플로잇: 임의 외부 호출
-- [보안] Ankr 익스플로잇: Unbacked Mint
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 4건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 14건

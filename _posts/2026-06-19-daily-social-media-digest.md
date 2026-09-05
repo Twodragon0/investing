@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-06-19 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.nytimes.com">연준 회의 실시간 업데이트: Kevin Warsh는 연준 금리를 안정적으로 유지함에 따라 미국 경제에 대해 설명합니다.</a> <span class="p0-desc">연준 회의 실시간 업데이트: Kevin Warsh가 연준 금리를 안정적으로 유지하면서 미국 경제에 대해 설명 The New York Times 연준 금리를 안정적으로 유지하고 인하.</span></li><li><a href="https://www.investopedia.com">연준의 금리 결정이 귀하의 재정에 미치는 영향 - Investopedia</a> <span class="p0-desc">금융 교육은 모든 배경의 독자에게 서비스를 제공해야 합니다. 우리는 콘텐츠, 직원, 기여자 및 파트너 조직이 모든 인종, 성별, 세대, 성적 취향, 능력 및 사회 경제적 배경을 가.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 28건 중 텔레그램 0건, 소셜 0건, 정치·경제 28건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 28건 중 텔레그램 0건, 소셜 0건, 정치·경제 28건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향

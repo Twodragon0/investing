@@ -14,7 +14,6 @@ description: "Winnie Brinks는 John James가 의회에서 주머니를 채우는
 image_alt: "정치인 거래·정책 리포트 - 2026-09-05 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-05.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-05** 정치권 핵심 이슈: **Winnie Brinks는 John James가 의회에서 주머니를 채우는 것에 대해 비난합니다 - 미시간 민주당**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **27건** (미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책 3건, 중앙은행 7건)을 종합 정리합니다
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-05 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(8회), **트럼프**(7회), **관세**(7회), **의회**(4회), **내부자**(3회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **27건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책 3건, 중앙은행 7건입니다.
-
-**트럼프 정책** 관련으로는 Watch: Trump to sign beef-related executive order after easing tariffs The Hill 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 Yesterday, Senate Majority Leader and Democratic nominee for Lieutenant Governor Winnie Brinks exposed John James’ skyrocketing wealth and corrupt stock trading while in office. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 [편집자주] 과거 1960~1970년대에도 은 ‘주간 이슈’라는 타이틀로 한 주간의 이슈를 독자들에게 전달했습니다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-09-05 정치권 핵심 이슈: Winnie Brinks는 John James가 의회에서 주머니를 채우는 것에 대해 비난합니다 - 미시간 민주당. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 27건 (미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책…
+- 1. Winnie Brinks는 John James가 의회에서 주머니를 채우는 것에 대해 비난합니다 - 미시간 민주당 어제 상원 다수당 지도자이자 Winnie Brinks 부지사의 민주당 후보는 John James의 재임 기간 동안 치솟는 부와 부패한 주식 거래를 폭로했습니다.
 
 ## 1. 미국 의회 거래 동향
 

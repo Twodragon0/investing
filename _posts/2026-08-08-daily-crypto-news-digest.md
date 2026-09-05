@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-08 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcWh3ZEFOWlZzbko2Tk51Qmo0RG1VYVJLNGwzSkhGZV9hTTg4aUUzYWtobWo2X2pfbjc4Y2tTemFIYnBqX2trM0NxSzBBWVBxRkRFcmw2Ny05d3NZRGo0OVJHd0F6VVNBcXV2cDZtU3BBOEVia1c1UDNVRDRnSE9yaTdDWS1HMzlpbEpTODlYbzdJLUswSE1takVTVlRud0FHbGFDTkNQQWFlejdNdGJZdi1GY3gyU2FORVFJY0pOa1VseU91VzV2LQ?oc=5">Bybit, 15억 달러 규모의 해킹에 대해 북한과 Lazarus Group을 고소하고 자산 동결 보장 - CoinDesk</a> <span class="p0-desc">"이 명령은 소송이 진행되는 동안 식별된 도난당한 디지털 자산을 보존하기 위한 것이며, 이는 자금 회수, 국제 법 집행 조사 지원, 대규모 사이버 범죄에 대한 책임 강화를 위한 B.</span></li><li><a href="https://cointelegraph.com/features/bitcoiners-turn-to-dice-throws-as-self-custody-setups-are-re-evaluated?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">자기 관리 설정이 재평가됨에 따라 Bitcoiners는 주사위 던지기로 전환합니다.</a> <span class="p0-desc">Coldcard 해킹 이후 주사위 엔트로피가 새로운 표준이 될 수 있습니다.</span></li><li><a href="https://cointelegraph.com/news/coldcard-exploit-july-second-worst-month-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 익스플로잇으로 인해 7월 손실이 2억 4,700만 달러로 2026년 두 번째로 최악의 달이 되었습니다.</a> <span class="p0-desc">1억 달러 이상의 손실을 초래한 Coldcard 익스플로잇으로 인해 7월 암호화폐 도난 규모는 2억 4,700만 달러로 늘어나 2026년 두 번째로 최악의 달이 되었습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **104건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-08-08 암호화폐 핵심 뉴스: 비트코인의 변동성은 거의 사라졌습니다. 위험은 없습니다: Crypto Daily. 총 104건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

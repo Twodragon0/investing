@@ -29,49 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-05 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: Fed Rate Decision Still Hangs on Inflation After Jobs Report - 26건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 트럼프 주목</li><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 연준 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 외국인, 코스피 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-04/fed-rate-decision-still-hangs-on-inflation-after-jobs-report">Fed Rate Decision Still Hangs on Inflation After Jobs Report</a></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9JVUNCSEw3eC1BVmlrRmlLMnNwMDFtZ3hLT01Bd3BQSXA0anl1aFV6Q3M2WEkwM2NBZjdiZElubTFUcjJaVl9pNm8wRHU2V0I3YkdmQ3N4UWNzYVdyWUNTYVZXX2c2MVU?oc=5">‘이유 없이 뚝’ 코스피…개인·외국인·기관 모두 던져</a> <span class="p0-desc">미 국채 금리가 하락하고 국제 유가 상승세도 잠잠해지면서 코스피가 3일 상승 출발했지만, 장 마감 전 급락하며 6400선까지 주저앉았다. 뚜렷한 악재가 없어 증권가에서도 해석.</span></li><li><a href="http://www.e-today.kr/news/articleViewAmp.html?idxno=913865">오후 2시 갑자기 급락?…'수급 절벽' 코스피 6600선 아래로[시황종합] - 경제투데이</a> <span class="p0-desc">3일 오후 서울 중구 하나은행 딜링룸 현황판에 전장대비 16.76(0.26%) 상승한 6,579.48을 나타내고 있다. 2026.9.3 ⓒ 뉴스1 이광호 기자 3일 오전 서울 중구.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Fed Rate Decision Still Hangs on Inflation After Jobs Report 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 26건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 26건 중 텔레그램 0건, 소셜 0건, 정치·경제 26건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (17건): 연준, 트럼프, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (16건): 코스피, 외국인, 기관 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏛️ 정치/정책** (9건): 트럼프, 연준 정치 이슈 (9건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨
-- ‘이유 없이 뚝’ 코스피…개인·외국인·기관 모두 던져
-- 오후 2시 갑자기 급락?…'수급 절벽' 코스피 6600선 아래로[시황종합] - 경제투데이
-
-### 주요 이슈
-
-- 뛰는 기준금리] ④ 李대통령 '금리' 앞세워 부동산 경고…전문가들 "현실과 큰 간극" - 뉴스핌
-
-### 투자자 체크포인트
-
-- 정치·경제 26건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:94%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:53%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:41%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:12%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-05.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

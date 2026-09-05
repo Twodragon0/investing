@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: IRS Drops Crypto Scam Victims’ Tax Bill on Theft Loss Deduction - 101건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, XRP 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 33건 수집</li><li>🔵 <strong>규제/정책</strong>: 17건 수집</li><li>📊 <strong>매크로/금리</strong>: 16건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.bloombergtax.com/daily-tax-report/irs-drops-crypto-scam-victims-tax-bill-on-theft-loss-deduction">IRS Drops Crypto Scam Victims’ Tax Bill on Theft Loss Deduction</a></li><li><a href="https://decrypt.co/377412/openai-agents-hack-german-website">OpenAI Agents Hack German Website to Share Rule-Breaking Tactics: Report</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: IRS Drops Crypto Scam Victims’ Tax Bill on Theft Loss Deduction 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 101건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (59건): 비트코인, XRP 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (33건): jobs, estimate, $80,000 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (17건): clarity, act, association 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- IRS, 암호화폐 사기 피해자의 도난 손실 공제에 대한 세금 청구서 삭제
-- OpenAI 에이전트, 규칙 위반 전술 공유를 위해 독일 웹사이트 해킹: 보고서
-
-### 주요 이슈
-
-- 법무장관, 분산형 금융 암호화폐 거래소에 대해 경고 - CT Ne
-- 코인 시황] 비트코인 8만1000달러 돌파…금리 인상 기대 후퇴·ETF 자금 유입에 위험선호 확산 - 뉴스핌
-- 비트코인 8만 1천 달러 돌파. 금리인상 우려 완화, 규제 기대감 ↑ - Investing.com 한국어
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News(20건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-05.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **101건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-09-05 암호화폐 핵심 뉴스: 비트코인 $80,000 돌파: '암호화폐 겨울이 거의 끝났습니다'. 총 101건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
