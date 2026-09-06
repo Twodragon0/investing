@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-06 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: The AI Bubble: Why NVIDIA and the Stock Market Could Crash - 166건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 연준 관련 15건</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 반도체 주목</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPYVVZRTlrbUx6bjVKM3VBMG1DQTBwd1plQ2xjRGhYbFpYZzEwMEg1a0VOanJ2cjRwa01kdTk2STJ4ZENjdVoyTU45Tngzcm5Jd3FfQklWc3VaX3BpV0F1ZFg0ektGZkZmT1NKeVZhZ0NIRE0xS2pBb3IyZVRJQmYzRktmNzFXc3VJV19lckx5MHpUQjQ?oc=5">The AI Bubble: Why NVIDIA and the Stock Market Could Crash</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5LR1p4WnExejVQNXlWUWR2bnZjdlV6Z2M5bXZ0WW5NR3NzMmxXZExsWngxaUV4M0FhUVBjRUpobTdCVF9iLUZOTFZnbHBWSXRmQS1MTTNUUFNxYjRwT1B1OFowNmxlQzJCT1Q5ZVUtU2ZNbi1pY3JN?oc=5">"원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證</a> <span class="p0-desc">"원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證 thecommoditiesnews.com</span></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPZUFsSzlKaVdGa3hDT3FJNllHbHJTWVFVYWZuNzdJVFB5dk5kN3RsUEFjdTIzbXBDT09mNVdyUEJvTHhiTXh1aEtmd2dRck1vcThfQUNhZmNYUW15SUNSX3ktZjhEUnRkaTVOS0U2ZndjY3ZiZW96cUh3aGZ4ZXdpdmZ6VVUwTGs4a3h0bkpWYUFiMzhKbVc0?oc=5">If a Market Crash Is Coming, Here's the 1 Thing You Should Do, According to Warren Buffett</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: The AI Bubble: Why NVIDIA and the Stock Market Could Crash 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 166건의 뉴스 중 P1 주요 이슈도 21건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (31건): 코스피, 코스닥, 소년한국일보 가격 변동 (31건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (15건): 연준, 조선비즈 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (10건): 엔비디아, 반도체 기술 이슈 (10건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- AI 버블: 엔비디아과 주식 시장이 폭락일 수 있는 이유
-- "원달러 환율, 두달 만에 1350원대까지 200원 급락, 속도 과도"한투證
-- 폭락 시장이 다가오면 워런 버핏에 따라 해야 할 한 가지 일은 다음과 같습니다.
-
-### 주요 이슈
-
-- 中 YMTC 상장 추진…삼전·하이닉스 주가 또 흔들리나
-- 비트코인은 일자리 데이터가 연준 인상 베팅을 높이면서 $80,000 미만을 유지합니다. ETF 유입은 계속됩니다
-- Bulls vs. Bears: Whither Credo Technology after post-earnings selloff
-- 외 18건
-
-### 투자자 체크포인트
-
-- 한국 기사 50건, 글로벌 기사 116건 수집
-- 한국 지수: KOSPI 6,687.21(+1.64%), KOSDAQ 813.50(+2.95%), USD/KRW 1,351.10(-0.39%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:48%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:32%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:39%"></div></div><span class="theme-count">12건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-06.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,687.21 (+1.64%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 813.50 (+2.95%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-06 주식 시장에서 166건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,687.21(+1.64%), KOSDAQ 813.50(+2.95%), USD/KRW 1,351.10(-0.39%).
+- *[인포스탁데일리=윤서연 기자] 정부가 내년 1월로 예정된 코스닥 상장폐지 시가총액 기준의 추가 상향을 6개월 유예한다.*
 
 ## 테마별 주요 뉴스
 

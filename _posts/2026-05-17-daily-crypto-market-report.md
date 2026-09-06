@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-17 | 시총 $2.69T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -7.24%</li><li>🔴 <strong>Canton</strong> (CC): -5.11%</li><li>🔴 <strong>Toncoin</strong> (TON): -3.95%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **14건** 수집

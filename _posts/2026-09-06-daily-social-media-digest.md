@@ -29,45 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-06 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨 - 21건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준 관련 14건</li><li>📈 <strong>가격/시장</strong>: 코스피, 기관 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 연준 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 코스피, 기관 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-04/fed-rate-decision-still-hangs-on-inflation-after-jobs-report">연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨</a> <span class="p0-desc">연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨 Bloomberg.com</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1abG8xdkdEVkpzMHV6b0R6TjlFS0xCZHN5bTFBNHZPc2lqczlzbUJJX3M4QTFkOUJwejFyLW1naHpPb3JBZ2hKalhXR1docGxKR3k1UUxPd29WX1U?oc=5">8월 일자리 보고서는 연준 요율 결정에 영향을 미칠 수 있습니다.</a> <span class="p0-desc">Heritage Foundation 수석 경제학자 EJ Antoni가 'Making Money'에 참여하여 8월 일자리 보고서와 연준 금리 결정에 미치는 잠재적 영향에 대해 논의합.</span></li><li><a href="https://www.crainscleveland.com/news/ccl-fed-rate-decision-upcoming-20260904/">연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Crain's Cleveland</a> <span class="p0-desc">연준 금리 결정은 Crain's Cleveland의 일자리 보고 이후에도 여전히 인플레이션에 달려 있습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 21건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (14건): 연준, 기준금리 매크로 변수 (14건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (11건): 코스피, 기관, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏛️ 정치/정책** (6건): 트럼프, 연준, 인하 정치 이슈 (6건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨
-- 8월 일자리 보고서는 연준 요율 결정에 영향을 미칠 수 있습니다.
-- 연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Crain's Cleveland
-
-### 투자자 체크포인트
-
-- 정치·경제 21건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:79%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:43%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:43%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-06.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

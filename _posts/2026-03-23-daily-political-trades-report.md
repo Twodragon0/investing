@@ -21,9 +21,12 @@ image_alt: "정치인 거래·정책 리포트 - 2026-03-23 - 정치인 거래 �
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">중앙은행</div></div></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 중앙은행 정책: 1건. 금리 결정과 통화정책 기조를 면밀히 주시해야 합니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+- 1. 환율 1500원대 고착에…한은, 금리결정 ‘딜레마’ - 대한경제 환율 1500원대 고착에…한은, 금리결정 ‘딜레마’ 대한경제
 
 ## 중앙은행 정책 동향
 
