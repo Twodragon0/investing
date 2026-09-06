@@ -119,6 +119,28 @@ def test_is_bad_flags_empty() -> None:
     assert mod._is_bad("", "제목") is True
 
 
+def test_is_bad_flags_english_headline_with_korean_tail() -> None:
+    """The 252-blurb population: chrome and title-repeat checks both pass it.
+
+    Real corpus blurb, _posts/2026-08-28-daily-crypto-news-digest.md. The two
+    asserts above ``_is_bad`` are what make this discriminating — of the 252,
+    only 2 tripped ``is_boilerplate``, so a sample must be drawn from the 250
+    that did not or the test would pass without the language arm existing.
+    """
+    leaked = (
+        "Why Bitcoin Surged to USD 80,000, and What May Come Next. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다."
+    )
+    title = "비트코인이 8만 달러로 급등한 이유"
+    assert mod.is_boilerplate(leaked) is False
+    assert mod._is_desc_duplicate_of_title(leaked, title) is False
+    assert mod._is_bad(leaked, title) is True
+
+
+def test_is_bad_passes_korean_summary_quoting_english_names() -> None:
+    desc = "Robinhood Chain 수익이 급증하면서 Arbitrum 생태계의 총예치금이 늘었다고 집계 기관이 밝혔습니다."
+    assert mod._is_bad(desc, "아비트럼 TVL 증가") is False
+
+
 def test_collect_targets_returns_only_flagged(tmp_path: Path) -> None:
     _write(tmp_path, "2026-08-05-x.md", _CARD_POST)
     targets = mod.collect_targets(tmp_path, days=None)
@@ -227,6 +249,50 @@ def test_refetch_translates_non_korean_result(monkeypatch: pytest.MonkeyPatch) -
     monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
 
     assert mod.refetch(_blurb()) == korean
+
+
+def test_refetch_translates_blurb_that_already_contains_hangul(monkeypatch: pytest.MonkeyPatch) -> None:
+    """The trigger is an embedded English clause, not "zero Hangul".
+
+    The leaked shape is "<English headline>. <Korean context>", which *has*
+    Hangul — the old ``_HANGUL_RE.search`` trigger skipped translation for
+    exactly the population this tool was extended to repair.
+    """
+    mixed = "The KOSPI index rose 3% on Tuesday as semiconductor shares led gains. 시장 모멘텀을 반영합니다."
+    korean = "코스피 지수가 화요일 3% 상승했으며 반도체주가 시장 전반의 상승을 이끌었습니다."
+    monkeypatch.setattr(mod, "fetch_page_metadata", lambda url, title="": {"description": mixed})
+    monkeypatch.setattr(mod, "translate_to_korean", lambda text: korean)
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    assert mod.refetch(_blurb()) == korean
+
+
+def test_refetch_drops_text_when_translation_fails_open(monkeypatch: pytest.MonkeyPatch) -> None:
+    """``translate_to_korean`` returns its input unchanged when it cannot run.
+
+    Accepting that echo would write the English text straight back, leaving the
+    blurb flagged forever while the run counts it as repaired. Discriminating
+    against an identity mock specifically: a mock that returned "" would make
+    this pass without the result being re-checked at all.
+    """
+    english = "The KOSPI index rose 3% on Tuesday as semiconductor shares led broad gains across the market."
+    monkeypatch.setattr(mod, "fetch_page_metadata", lambda url, title="": {"description": english})
+    monkeypatch.setattr(mod, "translate_to_korean", lambda text: text)  # fail-open echo
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    assert mod.refetch(_blurb()) == ""
+
+
+def test_refetch_drops_text_when_translation_raises(monkeypatch: pytest.MonkeyPatch) -> None:
+    english = "The KOSPI index rose 3% on Tuesday as semiconductor shares led broad gains across the market."
+    monkeypatch.setattr(mod, "fetch_page_metadata", lambda url, title="": {"description": english})
+    monkeypatch.setattr(mod, "_is_title_related_description", lambda title, desc: True)
+
+    def _raise(text):
+        raise RuntimeError("translator unavailable")
+
+    monkeypatch.setattr(mod, "translate_to_korean", _raise)
+    assert mod.refetch(_blurb()) == ""
 
 
 def test_refetch_returns_empty_when_google_news_link_unresolvable(monkeypatch: pytest.MonkeyPatch) -> None:
