@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-11 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://thehackernews.com">공격자들, 'Ill Bloom' 취약점을 악용해 암호화폐 지갑에서 500만 달러 이상 유출 - 해커 뉴스</a> <span class="p0-desc">Hacker News는 정보보안 전문가와 의사결정자를 위한 실시간 업데이트, 위협 인텔리전스, 데이터 위반 보고서, 전문가 분석 및 실행 가능한 통찰력을 제공하는 최고의 사이버 보.</span></li><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPX2g5ZTczTlp2dVMydUUyVVozaFdBU2RnaXhBWkt4NklXeV81M2V2amdUcnU4ejcwRHpVSUNnX0lSUF91c2d1eXVmTHdidUo0SEh4ZkRaTDJiWU1oTFo2Wm5xaFpicFlFMFlDSGU1cjUxclBSRzRFU212alU0ZklETlNaOU5JUQ?oc=5">에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해</a> <span class="p0-desc">에릭 트럼프의 오판… '95% 폭락' 암호화폐 제국 6억 달러 공중 분해 글로벌이코노믹</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-07-11 암호화폐 핵심 뉴스: 정치인과 제재 국가가 암호화폐를 수용하는 이유는 무엇입니까? - 알자지라. 총 103건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
