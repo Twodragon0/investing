@@ -14,6 +14,7 @@ import logging
 import os
 import re
 import tempfile
+import threading
 import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -263,6 +264,26 @@ _TERM_LOOKUP: Dict[str, tuple] = {k.lower(): (k, v) for k, v in TERM_OVERRIDES.i
 _cache: Optional[Dict[str, str]] = None
 _cache_dirty = False
 
+# Collectors run the translator from thread pools (``enrich_items`` uses 6-8
+# workers, ``fix_post_url_summaries`` takes ``--workers``). Serializing the
+# cache while another thread inserts into it raises ``RuntimeError: dictionary
+# changed size during iteration``; the mojibake-strip passes hit the same
+# problem through their ``del`` loops. Every mutation goes through
+# ``_cache_put`` or runs under this lock so the dict has one owner at a time.
+# Re-entrant because the load path mutates while already holding it.
+_cache_lock = threading.RLock()
+
+
+def _cache_put(key: str, value: str) -> None:
+    """Insert one entry under the cache lock and mark the cache dirty."""
+    global _cache_dirty
+    with _cache_lock:
+        if _cache is None:
+            return
+        _cache[key] = value
+        _cache_dirty = True
+
+
 # Regex matching 3+ consecutive Latin-1 extended characters (U+00C0–U+00FF).
 # A run of these in text that should be Korean/English strongly indicates
 # mojibake (e.g. Latin-1 bytes re-decoded as UTF-8).
@@ -292,6 +313,20 @@ def _load_cache() -> Dict[str, str]:
     global _cache, _cache_dirty
     if _cache is not None:
         return _cache
+
+    # Under the lock for the same reason ``_save_cache`` is: the sweeps below
+    # iterate and ``del`` while worker threads may already be inserting. It
+    # also keeps two threads racing the first load from each building a
+    # separate dict and one silently discarding the other's inserts.
+    with _cache_lock:
+        if _cache is not None:
+            return _cache
+        return _load_cache_locked()
+
+
+def _load_cache_locked() -> Dict[str, str]:
+    """Body of :func:`_load_cache`; callers must hold ``_cache_lock``."""
+    global _cache, _cache_dirty
 
     _cache = {}
     if _CACHE_PATH.exists():
@@ -338,33 +373,55 @@ def _save_cache() -> None:
     if not _cache_dirty or _cache is None:
         return
 
-    # Evict oldest entries if over limit (FIFO order)
-    if len(_cache) > _MAX_CACHE_ENTRIES:
-        evict_count = len(_cache) - _MAX_CACHE_ENTRIES
-        keys = list(_cache.keys())
-        for k in keys[:evict_count]:
+    # Hold the lock across eviction, the mojibake sweep and serialization: all
+    # three iterate ``_cache`` while worker threads may be inserting into it.
+    with _cache_lock:
+        # Evict oldest entries if over limit (FIFO order)
+        if len(_cache) > _MAX_CACHE_ENTRIES:
+            evict_count = len(_cache) - _MAX_CACHE_ENTRIES
+            keys = list(_cache.keys())
+            for k in keys[:evict_count]:
+                del _cache[k]
+            logger.info("Evicted %d old cache entries (limit: %d)", evict_count, _MAX_CACHE_ENTRIES)
+
+        # Strip any mojibake entries that may have been inserted this session.
+        bad_keys = [k for k, v in _cache.items() if _is_mojibake(v)]
+        for k in bad_keys:
             del _cache[k]
-        logger.info("Evicted %d old cache entries (limit: %d)", evict_count, _MAX_CACHE_ENTRIES)
+        if bad_keys:
+            logger.warning(
+                "Skipped saving %d mojibake-corrupted entries from translation cache",
+                len(bad_keys),
+            )
 
-    # Strip any mojibake entries that may have been inserted this session.
-    bad_keys = [k for k, v in _cache.items() if _is_mojibake(v)]
-    for k in bad_keys:
-        del _cache[k]
-    if bad_keys:
-        logger.warning(
-            "Skipped saving %d mojibake-corrupted entries from translation cache",
-            len(bad_keys),
-        )
-
-    _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    try:
-        fd, tmp = tempfile.mkstemp(dir=str(_CACHE_PATH.parent), suffix=".tmp")
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(_cache, f, ensure_ascii=False)
-        os.replace(tmp, str(_CACHE_PATH))
-        _cache_dirty = False
-    except OSError as e:
-        logger.warning("Translation cache save failed: %s", e)
+        _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        tmp = None
+        # ``except Exception``, not ``except OSError``: the failure this pass
+        # actually sees is ``RuntimeError``/``KeyError`` from concurrent
+        # mutation, which slipped past the narrower clause and escaped into
+        # callers. ``fix_post_url_summaries`` wraps ``translate_to_korean`` in
+        # ``except Exception`` -> ``logger.debug``, so an escape was charged to
+        # translation with nothing logged. Saving the cache is best-effort by
+        # design (a cache outage must not stop 13 collectors publishing), but
+        # it has to be *visible*.
+        try:
+            fd, tmp = tempfile.mkstemp(dir=str(_CACHE_PATH.parent), suffix=".tmp")
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                json.dump(_cache, f, ensure_ascii=False)
+            os.replace(tmp, str(_CACHE_PATH))
+            tmp = None  # consumed by the rename
+            _cache_dirty = False
+        except Exception as e:
+            logger.warning("Translation cache save failed: %s", e)
+        finally:
+            # ``os.replace`` consumes the temp file on success; on any failure
+            # after ``mkstemp`` it stayed behind. A 2026-09-07 backfill run left
+            # four ~900KB orphans in ``_state/``.
+            if tmp is not None:
+                try:
+                    os.unlink(tmp)
+                except OSError:
+                    logger.debug("Could not remove temp cache file %s", tmp)
 
 
 # ---------------------------------------------------------------------------
@@ -970,9 +1027,7 @@ def translate_to_korean(text: str) -> str:
     if not result:
         return text
 
-    global _cache_dirty
-    cache[key] = result
-    _cache_dirty = True
+    _cache_put(key, result)
     _save_cache()
     return result
 
