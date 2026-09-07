@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/29/tech-backlash-ai-data-centers-elections.html" class="news-title" target="_blank" rel="noopener noreferrer">Tech backlash reaches fever pitch as AI angst collides with social media fears</a>
-<p class="news-desc">데이터 센터 문제가 주요 선거 쟁점이 되고 메타 소셜 미디어 사건에서 획기적인 합의가 이루어지면서 기술 반발이 더욱 커지고 있습니다.</p>
+<p class="news-desc">데이터 센터 문제가 주요 선거 쟁점이 되고 메타 소셜 미디어 사건에서 합의가 이루어지면서 기술 반발이 더욱 커지고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
