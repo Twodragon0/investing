@@ -245,7 +245,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/markets/bitcoin-dips-below-78k-as-stocks-gold-fall-on-higher-us-pce-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin dips below $78K as stocks, gold fall on higher US PCE Inflation data</a>
-<p class="news-desc">Bitcoin stayed away from challenging $80,000 after July US PCE inflation data came in slightly higher than anticipated, pressuring gold and risk assets.</p>
+<p class="news-desc">비트코인은 주식과 금이 하락하면서 미국 PCE 인플레이션 데이터가 높아짐에 따라 압력을 느끼고 있으며, 엔비디아 수익은 트레이더의 다음 레이더에 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -274,7 +274,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/77-of-americans-see-crypto-in-retirement-plans-as-risky-survey?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">77% of Americans see crypto in retirement plans as risky: Survey</a>
-<p class="news-desc">A new survey finds broad skepticism toward crypto in workplace retirement plans as US policymakers move to expand access to alternative assets.</p>
+<p class="news-desc">새로운 조사에 따르면 미국 정책 입안자들이 대체 자산에 대한 접근을 확대하려는 움직임을 보이면서 미국인 중 77%가 직장 퇴직 계획에서 암호화폐를 위험하다고 생각하는 것으로 나타났습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -298,7 +298,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://cointelegraph.com/news/revolut-eurr-euro-stablecoin-europe-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Revolut rolls out euro stablecoin in 3 European markets</a>
-<p class="news-desc">The Bridge-issued EURR token will support multiple blockchains and external wallets, with wider EEA availability expected this year.</p>
+<p class="news-desc">Revolut는 Stripe 소유 Bridge가 발행한 유로 담보 스테이블코인인 EURR을 덴마크, 폴란드 및 포르투갈의 선택된 고객에게 출시하기 시작했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

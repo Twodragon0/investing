@@ -184,7 +184,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/376846/bitcoin-rally-stalls-sentiment-bullish" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Rally Stalls, But Long-Term Sentiment Remains Bullish</a>
-<p class="news-desc">BTC gave back some of its gains after Fed Chair Kevin Warsh talked tough on inflation, but prediction market traders are still leaning bullish.</p>
+<p class="news-desc">비트코인은 연준 의장 Kevin Warsh가 인플레이션에 대해 강경하게 말한 후 이익 중 일부를 반환했지만 수많은 거래자들은 여전히 ​​강세에 기울고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -196,7 +196,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/376840/xrp-treasury-evernorths-clears-sec-nasdaq" class="news-title" target="_blank" rel="noopener noreferrer">XRP Treasury Company Gets One Step Closer to Listing on Nasdaq</a>
-<p class="news-desc">Evernorth has gained SEC clearance, teeing up a shareholder vote on its Nasdaq listing—while the firm's XRP stash sits well below what it paid for it.</p>
+<p class="news-desc">증권 거래 위원회는 XRP 재무 회사인 Evernoth Holdings가 나스닥에 상장할 수 있는 길을 열었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

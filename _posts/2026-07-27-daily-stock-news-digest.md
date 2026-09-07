@@ -261,7 +261,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/shein-reveals-key-financials-ahead-134128865.html" class="news-title" target="_blank" rel="noopener noreferrer">Shein은 홍콩을 앞두고 분기 손실을 기록했습니다. IPO</a>
-<p class="news-desc">Shein swings to quarterly loss ahead of Hong Kong IPO. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Shein은 미국이 소형 패키지에 대한 수입관세 면제와 막대한 일회성 회계 비용을 폐지한 후 판매 둔화로 인해 9900만 달러의 분기 손실을 입었다고 일요일에 온라인 소매업체의 IPO 이전 재무 서류에 나타났습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

@@ -251,7 +251,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/376429/morning-minute-coinbase-puts-tokenized-stocks-on-base" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: Coinbase Puts Tokenized Stocks on Base</a>
-<p class="news-desc">These aren’t derivatives tracking stock prices; each token has a direct claim on a share including its rights.</p>
+<p class="news-desc">Morning Minute는 Tyler Warner가 작성한 일일 뉴스레터입니다. 표현된 분석 및 의견은 본인의 것이며 반드시 Decrypt의 의견을 반영하는 것은 아닙니다. 코인베이스 발행된 토큰화된 주식은 애플 및 엔비디아의 부분주로 시작하여 Baseon 월요일에 실시간으로 거래되었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

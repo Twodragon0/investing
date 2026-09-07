@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/spacex-1-75-trillion-ipo-163111038.html" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX의 1조 7500억 달러 IPO 가치 평가가 금요일의 시장 대패에서 살아남을 수 있을까요?</a>
-<p class="news-desc">목요일 종가 기준 Amplify Junior Silver Miners ETF(NYSEARCA:SILJ)의 $10,000 포지션은 금요일 종가 기준 약 $8,900의 가치가 있었습니다.</p>
+<p class="news-desc">SpaceX의 오랫동안 기다려온 IPO은 6월 12일에 출시되지만 최근 시장 역사상 가장 공격적인 가치 평가 논쟁 중 하나의 중심에 앉아 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

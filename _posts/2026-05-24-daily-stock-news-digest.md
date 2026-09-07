@@ -189,7 +189,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/jim-cramer-breaks-down-nvidia-145543670.html" class="news-title" target="_blank" rel="noopener noreferrer">Jim Cramer가 엔비디아의 최근 분기를 분석했습니다.</a>
-<p class="news-desc">Jim Cramer Breaks Down NVIDIA’s Latest Quarter. AI 기술 혁신이 산업 전반의 투자 기회를 창출합니다.</p>
+<p class="news-desc">엔비디아 Corporation(나스닥:NVDA)은 Jim Cramer가 현재 반도체 및 AI 인프라 주식을 담당하고 있음을 강조하면서 레이더의 주식 중 하나였습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

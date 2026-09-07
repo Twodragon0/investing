@@ -240,7 +240,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/06/15/spacex-ipo-spcx-greenshoe-overallotment.html" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX IPO raises total of $85.7 billion as underwriters exercise 'greenshoe' overallotment option</a>
-<p class="news-desc">Elon Musk's space and artificial intelligence company raised an initial $75 billion on Thursday.</p>
+<p class="news-desc">일론 머스크의 우주 및 인공 지능 회사는 목요일에 처음으로 750억 달러를 모금했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

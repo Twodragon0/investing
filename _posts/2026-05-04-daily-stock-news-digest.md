@@ -177,7 +177,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/economy-news/us-attorney-pirro-says-fed-igs-findings-will-dictate-future-of-her-powell-probe-4654884" class="news-title" target="_blank" rel="noopener noreferrer">Pirro 미국 검사는 연준 IG의 조사 결과가 그녀의 파월 조사의 미래를 좌우할 것이라고 말했습니다.</a>
-<p class="news-desc">US Attorney Pirro says Fed IG’s findings will dictate future of her Powell probe. US, IG — 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
+<p class="news-desc">Pirro 미국 검사는 연준 IG의 조사 결과가 그녀의 파월 조사의 미래를 좌우할 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

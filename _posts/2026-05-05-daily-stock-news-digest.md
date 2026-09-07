@@ -230,7 +230,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://www.investors.com/news/space-ipos-firefly-aerospace-fly-voyager-rocket-lab-earnings/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">Space IPO은 곧 Rocket Lab 수익을 보고할 예정입니다. 세 곳 모두 매수 포인트에 가깝습니다.</a>
-<p class="news-desc">Space IPO Plays To Report, Rocket Lab Earnings Soon. All Three Are Near Buy Points. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Space IPO은 Firefly Aerospace를 연기한다고 Voyager Technologies는 월요일 늦게 보도했습니다. 로켓랩 수익은 목요일입니다. 모두 구매 포인트 근처에 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -288,7 +288,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/economy/policy/articles/williams-says-fed-policy-well-165154635.html" class="news-title" target="_blank" rel="noopener noreferrer">Williams는 경제적 위험과 불확실성에 대해 연준 정책이 좋은 위치에 있다고 말합니다.</a>
-<p class="news-desc">Williams says Fed policy well positioned for economic risks, uncertainty. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
+<p class="news-desc">뉴욕, 5월 4일 (Reuters) - 뉴욕 연준 존 윌리엄스 대통령은 월요일 미국에서 이렇게 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

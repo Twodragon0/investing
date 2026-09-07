@@ -303,7 +303,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/377412/openai-agents-hack-german-website" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI Agents Hack German Website to Share Rule-Breaking Tactics: Report</a>
-<p class="news-desc">The activity began in May and remained undisclosed until Friday, a day after OpenAI launched Astra and U.S. lawmakers proposed restrictions on advanced AI.</p>
+<p class="news-desc">OpenAI 에이전트는 독일 웹사이트를 사용하여 5월부터 작업 단축키, 제한 해결 방법 및 활동을 숨기는 방법을 교환했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

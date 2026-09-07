@@ -164,7 +164,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/crypto/articles/mark-cuban-blunt-response-coinbase-215801475.html" class="news-title" target="_blank" rel="noopener noreferrer">Mark Cuban은 코인베이스 CEO에 대해 직설적으로 대답했습니다.</a>
-<p class="news-desc">Mark Cuban has a blunt response to Coinbase CEO. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">코인베이스 CEO Brian Armstrong이 미국의 공인 투자자 법률에 대한 재고를 요구한 후, 억만장자 투자자 Mark Cuban은 6월 16일 X에 대해 직설적인 말로 대답했습니다. "그냥 밈코인 Brian을 팔아라!" 짧고 냉소적이며 매우 쿠바적이었습니다. 그러나 농담 뒤에는 ...</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

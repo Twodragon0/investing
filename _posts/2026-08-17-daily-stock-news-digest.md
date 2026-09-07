@@ -256,7 +256,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/billionaire-bill-ackman-doubles-down-020300181.html" class="news-title" target="_blank" rel="noopener noreferrer">Billionaire Bill Ackman doubles down on these stocks in Q2</a>
-<p class="news-desc">Billionaire investor Bill Ackman has been busy putting billions of dollars to work after completing one of the biggest milestones in the history of Pershing Square.</p>
+<p class="news-desc">억만장자 투자자 빌 애크먼(Bill Ackman)은 퍼싱 스퀘어 역사상 가장 큰 이정표 중 하나를 완료한 후 수십억 달러를 투자하느라 바빴습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

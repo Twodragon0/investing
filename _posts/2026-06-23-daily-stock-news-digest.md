@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investors.com/news/technology/google-stock-top-artificial-intelligence-scientists-leave-openai-anthropic/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">구글 주식이 최고로 하락 AI 과학자들이 OpenAI, Anthropic으로 결함</a>
-<p class="news-desc">구글 주식이 최고로 하락 AI 과학자들이 OpenAI, Anthropic으로 결함.</p>
+<p class="news-desc">구글 주가는 OpenAI와 Anthropic의 경쟁자인 두 명의 최고 인공 지능 과학자가 손실되면서 월요일에 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/vimeo-owner-bending-spoons-seeks-172943084.html" class="news-title" target="_blank" rel="noopener noreferrer">Vimeo 소유자 Bending Spoons는 IPO에 16억 2천만 달러를 추구한다고 소식통에 따르면</a>
-<p class="news-desc">Vimeo owner Bending Spoons seeks $1.62 billion US IPO, sources say. $1.62, US — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">소프트웨어 사업을 인수하고 개편하는 이탈리아 기술 회사인 Bending Spoons는 미국에서 최대 16억 2천만 달러의 자금 조달을 모색하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -239,7 +239,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investors.com/research/how-to-find-the-best-stocks-to-buy/billiontoone-blln-spacex-ipo/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX가 미끄러지면서 이 IPO 주식은 긍정적인 예측을 촉발합니다</a>
-<p class="news-desc">As SpaceX Slides, This IPO Stock Sparks A Positive Prognosis. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">SpaceX가 실패하면서 올 11월 IPO은 새로운 돌파구를 목표로 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

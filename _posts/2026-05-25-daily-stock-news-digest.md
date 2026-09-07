@@ -283,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/swot-analysis/republic-services-swot-analysis-stock-navigates-margin-strength-amid-revenue-concerns-93CH-4708212" class="news-title" target="_blank" rel="noopener noreferrer">Republic Services의 SWOT 분석: 주식은 수익 우려 속에서 마진 강세를 탐색합니다.</a>
-<p class="news-desc">Republic Services’ SWOT analysis: stock navigates margin strength amid revenue concerns. SWOT — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Republic Services의 SWOT 분석: 주식은 수익 우려 속에서 마진 강세를 탐색합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>
@@ -295,7 +295,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/swot-analysis/qorvos-swot-analysis-semiconductor-stock-navigates-merger-path-93CH-4708211" class="news-title" target="_blank" rel="noopener noreferrer">Qorvo의 SWOT 분석: 반도체 주식이 합병 경로를 탐색합니다.</a>
-<p class="news-desc">Qorvo’s SWOT analysis: semiconductor stock navigates merger path. SWOT — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Qorvo의 SWOT 분석: 반도체 주식이 합병 경로를 탐색합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

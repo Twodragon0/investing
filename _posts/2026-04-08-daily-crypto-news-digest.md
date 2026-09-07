@@ -598,7 +598,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/363579/solana-exchange-stabble-warns-users-north-korean-hacker-scare" class="news-title" target="_blank" rel="noopener noreferrer">Solana Exchange Stabble Warns Users to Pull Liquidity After North Korean Hacker Scare</a>
-<p class="news-desc">A decentralized exchange on Solana urged its users to exit after a former executive was alleged to be a North Korean hacker.</p>
+<p class="news-desc">솔라나에 한 탈중앙화 거래소는 전직 임원이 북한 해커로 의심되자 사용자들에게 탈퇴를 촉구했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

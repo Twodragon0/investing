@@ -255,7 +255,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/cantor-fitzgerald-says-robinhood-coinbase-163100346.html" class="news-title" target="_blank" rel="noopener noreferrer">Cantor Fitzgerald는 Robinhood와 코인베이스가 예측 시장 성장에 가장 적합한 위치에 있다고 말합니다.</a>
-<p class="news-desc">Cantor Fitzgerald Says Robinhood and Coinbase Are Best Positioned for Prediction Market Growth. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Cantor Fitzgerald는 Robinhood(나스닥: $HOOD) 및 코인베이스(나스닥: $COIN)을 가장 명확한 공개 시장 방식으로 보고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

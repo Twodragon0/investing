@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/29/tech-backlash-ai-data-centers-elections.html" class="news-title" target="_blank" rel="noopener noreferrer">Tech backlash reaches fever pitch as AI angst collides with social media fears</a>
-<p class="news-desc">With data center concerns becoming a major election issue and Meta reaching a landmark settlement in a social media case, the tech backlash is gaining steam.</p>
+<p class="news-desc">데이터 센터 문제가 주요 선거 쟁점이 되고 메타 소셜 미디어 사건에서 획기적인 합의가 이루어지면서 기술 반발이 더욱 커지고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/28/trump-announces-deal-with-venezuela-to-secure-more-than-65-billion-barrels-of-oil-reserves.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump announces deal with Venezuela to secure more than 65 billion barrels of oil reserves</a>
-<p class="news-desc">The U.S. struck a deal with Venezuela to get majority control of more than 65 billion barrels of oil reserves, Trump said in a social media post.</p>
+<p class="news-desc">트럼프는 소셜 미디어 게시물을 통해 미국이 베네수엘라와 650억 배럴 이상의 석유 매장량에 대한 대부분의 통제권을 얻기로 합의했다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -269,7 +269,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/29/nepal-seeks-technical-help-and-billions-of-dollars-for-flood-recovery.html" class="news-title" target="_blank" rel="noopener noreferrer">Nepal resumes flood rescue, seeks technical help and billions of dollars</a>
-<p class="news-desc">The Himalayan nation called for specialist foreign assistance and its finance minister told Reuters it would also need up to $5 billion to rebuild.</p>
+<p class="news-desc">히말라야 국가는 전문적인 해외 지원을 요청했으며 재무 장관은 재건을 위해 최대 50억 달러가 필요할 것이라고 Reuters에 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/29/cftc-fines-ex-white-house-aide-for-trading-on-trump-speech-information.html" class="news-title" target="_blank" rel="noopener noreferrer">CFTC fines former White House aide $172,000 for trading on Trump speech information</a>
-<p class="news-desc">Perez ⁠had access to Trump's speeches before they were delivered and used that information to ‌trade the contracts for his personal benefit, the CFTC said.</p>
+<p class="news-desc">Perez는 연설이 전달되기 전에 트럼프의 연설에 접근했으며 그 정보를 사용하여 개인적인 이익을 위해 계약을 거래했다고 CFTC이 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

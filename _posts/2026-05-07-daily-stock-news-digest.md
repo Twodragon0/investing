@@ -235,7 +235,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/company-news/ferroglobe-q1-2026-slides-volumes-rise-but-costs-crush-margins-93CH-4664074" class="news-title" target="_blank" rel="noopener noreferrer">Ferroglobe 2026년 1분기 슬라이드: 수량은 증가하지만 비용은 마진을 압도합니다.</a>
-<p class="news-desc">Ferroglobe Q1 2026 slides: volumes rise but costs crush margins. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Ferroglobe 2026년 1분기 슬라이드: 수량은 증가하지만 비용은 마진을 압도합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

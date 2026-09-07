@@ -136,7 +136,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-03-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/business/2026/03/28/crypto-s-future-is-bright-in-the-context-of-ai-s-assault-on-software-firms-says-kraken-backed-investment-firm" class="news-title" target="_blank" rel="noopener noreferrer">Crypto's future is bright in the context of AI's assault on software firms, says Kraken-backed investment firm</a>
-<p class="news-desc">Crypto’s latest bear cycle is a mere blip when compared with the existential threat AI now poses to traditional software services, says Ravi Tanuku, CEO of KRAKacquisition Corp.</p>
+<p class="news-desc">KRAKacquisition Corp의 CEO인 Ravi Tanuku는 암호화폐의 최신 약세 주기는 AI이 현재 전통적인 소프트웨어 서비스에 가하는 실존적 위협과 비교할 때 단순한 순간일 뿐이라고 말합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>

@@ -164,7 +164,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/spacex-shares-tumble-post-ipo-170153850.html" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX 주식은 IPO 이후의 열광이 증기를 잃으면서 하락했습니다.</a>
-<p class="news-desc">SpaceX shares tumble as post-IPO frenzy loses steam. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">SpaceX의 주가는 목요일에 6% 이상 하락했습니다. Elon ‌Musk의 AI 회사를 세계에서 가장 가치 있는 상위 5개 회사 중 하나로 잠시 자리매김했던 IPO 이후의 열광이 흐지부지되는 것처럼 보였기 때문입니다. 공모가 135달러보다 여전히 30% 이상 높았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investors.com/stock-lists/ipo-analysis/ai-stock-everus-ecg/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">IPO 금주의 주식: AI 데이터 센터 리더 Everus Construction, 최신 매수 포인트 주목</a>
-<p class="news-desc">IPO 금주의 주식: AI 데이터 센터 리더 Everus Construction은 최신 매수 포인트를 주목합니다.</p>
+<p class="news-desc">AI 주식 Everus Construction은 최근 매수 지점에 접근하고 있습니다. 최근 세션에서 주요 지원 수준에서 반등했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

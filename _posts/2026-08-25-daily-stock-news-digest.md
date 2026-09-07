@@ -242,7 +242,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/president-trump-portfolio-added-2-162941904.html" class="news-title" target="_blank" rel="noopener noreferrer">President Trump’s Portfolio Added 2 Stocks Bill Gates and Bill Ackman Also Own</a>
-<p class="news-desc">The latest filings covering President Donald Trump’s assets show that securities held on his behalf included purchases of Mastercard (NYSE: MA) and Home Depot (NYSE: HD) in June.</p>
+<p class="news-desc">Donald 트럼프 대통령의 자산을 다루는 최근 서류에 따르면 그를 대신하여 보유한 증권에는 6월 Mastercard(NYSE: MA) 및 Home Depot(NYSE: HD) 구매가 포함되어 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -283,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/24/nvidia-says-groq-racks-will-be-online-this-year-after-20-billion-deal.html" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia says Groq racks will be online this year following $20 billion purchase</a>
-<p class="news-desc">Nvidia's race to manufacture Groq chips and make them available to customers highlights the growing importance in AI of low-latency inference.</p>
+<p class="news-desc">Groq 칩을 제조하여 고객에게 제공하려는 엔비디아의 경쟁은 AI에서 지연 시간이 짧은 추론의 중요성이 커지고 있음을 강조합니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

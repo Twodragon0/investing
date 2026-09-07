@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-what-to-do-market-rally-test-spacex-ipo-apple-oracle/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">다우존스 선물: 시장에서 해야 할 일 랠리이 첫 번째 실제 테스트에 직면합니다. SpaceX IPO, 애플, Oracle Loom</a>
-<p class="news-desc">Dow Jones Futures: What To Do As Market Rally Faces First Real Test; SpaceX IPO, Apple, Oracle Loom. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">SpaceX IPO, 애플의 AI 추진과 Oracle 수입이 곧 다가옵니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
