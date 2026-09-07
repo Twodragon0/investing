@@ -576,6 +576,21 @@ _KO_STOPWORDS = frozenset(
         "설명",
         "언급",
         "제기",
+        # Added 2026-09-07 from the same corpus run: bare adnominals and
+        # quantifiers with no noun stem left to strip, plus two generic nouns
+        # of the same class as 관련/내용 above. Handled here rather than as
+        # endings because each is the whole token.
+        "많은",
+        "높은",
+        "낮은",
+        "있는",
+        "없는",
+        "같은",
+        "오른",
+        "받은",
+        "새로운",
+        "현재",
+        "업계",
     }
 )
 
@@ -602,11 +617,45 @@ _KO_PREDICATE_ENDINGS = (
     "되고",
     "할까",
     "될까",
+    # Added 2026-09-07 after running `korean_keywords` over all 4,652 card
+    # titles in `_posts/`. The list above only covered *finite* endings, so
+    # connectives, adnominals and the polite interrogative still came through
+    # ("주요 키워드: 포트폴리오, 싶으신가요, 고려해야"). Comments give the
+    # token-instance weight from that run.
+    "면서",  # 32 — 뜨거워지면서, 넘어서면서
+    "는데",  # 10 — 팔았는데, 노리는데
+    "하지",  # 8 — 반등하지, 투자하지
+    "해야",  # 7 — 구매해야, 고려해야
+    "되지",  # 6 — 개선되지, 붕괴되지
+    "하면",  # 5 — 인상하면, 하락하면
+    "라고",  # 5 — 시기라고, 아니라고
+    "인데",  # 3 — 실적인데, 강세인데
+    "으면",  # 3 — 넘으면, 않으면
+    "하던",  # 3 — 급락하던, 주춤하던
+    "했던",  # 1 — 부진했던
+    "되던",
+    "하려",  # 1 — 플레이하려
+    "려면",  # 1 — 해결하려면
+    "어난",  # 1 — 일어난
+    # The interrogative is spelled out rather than filtered as bare "가요":
+    # 가요 is itself a noun, and a two-syllable ending would discard it.
+    "인가요",  # 메이커인가요
+    "신가요",  # 싶으신가요
 )
+
+# Derivational, not predicative: dropping the token would throw away the topic
+# along with the ending, so this is stripped the way a particle is. Weight 56
+# in the same run, dominated by 토큰화된(21) — `토큰화` is exactly the subject.
+_KO_DERIVATIONAL_SUFFIXES = ("된",)
 
 # Bare units and currencies: the figure carries the information, the unit alone
 # does not ("주요 키워드: 요원, 러시아, 달러").
 _KO_UNIT_WORDS = frozenset({"달러", "원화", "유로", "엔화", "위안", "포인트", "퍼센트", "억원", "조원"})
+
+# Label for the keyword clause. Read by `improve_existing_posts`, which treats
+# the clause as a defect and strips it — with the literal copied on both sides,
+# renaming it here would silently stop the removal from matching.
+KEYWORD_TAIL_LABEL = "주요 키워드:"
 
 _SENTENCE_ENDERS = (".", "!", "?", "…")
 
@@ -624,6 +673,19 @@ def _strip_particle(token: str) -> str:
     return token
 
 
+def _strip_derivational(token: str) -> str:
+    """Remove a trailing derivational suffix, leaving the noun stem.
+
+    Separate from the predicate list on purpose: `토큰화된` must become
+    `토큰화`, not be discarded. The same ``>= 2`` floor as the particle strip
+    keeps a one-syllable remainder from surviving.
+    """
+    for suffix in _KO_DERIVATIONAL_SUFFIXES:
+        if token.endswith(suffix) and len(token) - len(suffix) >= 2:
+            return token[: -len(suffix)]
+    return token
+
+
 def korean_keywords(title: str, limit: int = 3) -> list:
     """Topical Hangul keywords from a title, or ``[]`` when none survive.
 
@@ -632,7 +694,8 @@ def korean_keywords(title: str, limit: int = 3) -> list:
     """
     seen: list = []
     for raw in re.findall(r"[가-힣]{2,}", title):
-        token = _strip_particle(raw)
+        # Normalize before the `seen` check so 토큰화 and 토큰화된 dedupe.
+        token = _strip_derivational(_strip_particle(raw))
         if len(token) < 2 or token in seen:
             continue
         if token in _KO_STOPWORDS or token in _KO_UNIT_WORDS:
@@ -727,7 +790,7 @@ def _analyze_korean_title(title: str) -> str:
         return _join_clauses(clean[:120], context_suffix.strip())
     if kr_entities:
         entity_str = ", ".join(kr_entities)
-        return _join_clauses(clean[:120], f"주요 키워드: {entity_str}.")
+        return _join_clauses(clean[:120], f"{KEYWORD_TAIL_LABEL} {entity_str}.")
     return _join_clauses(clean[:150]) if len(clean) > 15 else _join_clauses(title)
 
 
