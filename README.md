@@ -8,7 +8,7 @@
 | scripts/backfill\_post\_summaries.py              |      837 |        2 |     99% | 146, 1231 |
 | scripts/backfill\_signal\_history\_accuracy.py    |       84 |        7 |     92% |30, 161-164, 171, 210 |
 | scripts/backfill\_signal\_history\_btc\_price.py  |      181 |        2 |     99% |   24, 347 |
-| scripts/check\_description\_quality.py            |      296 |       24 |     92% |73, 84, 169, 180, 185, 214-215, 405, 432, 443-445, 448-450, 453-455, 458-466, 553-554, 568 |
+| scripts/check\_description\_quality.py            |      316 |       26 |     92% |74, 85, 142, 198, 209, 214, 243-244, 334, 446, 475, 486-488, 491-493, 496-498, 501-509, 596-597, 611 |
 | scripts/check\_jekyll\_build.py                   |       19 |        1 |     95% |        28 |
 | scripts/check\_post\_images.py                    |       67 |        3 |     96% |48, 84, 107 |
 | scripts/check\_post\_summary.py                   |       78 |       21 |     73% |39, 98, 120-145, 149 |
@@ -73,14 +73,14 @@
 | scripts/common/severity.py                        |       10 |        0 |    100% |           |
 | scripts/common/signal\_composer.py                |      489 |        2 |     99% |   882-883 |
 | scripts/common/signal\_tracker.py                 |      185 |        6 |     97% |203-205, 320-321, 382-383 |
-| scripts/common/summarizer.py                      |      530 |       10 |     98% |155, 467, 577, 579, 589, 754, 976, 1011, 1086, 1152 |
+| scripts/common/summarizer.py                      |      512 |        9 |     98% |422, 532, 534, 544, 709, 931, 966, 1041, 1107 |
 | scripts/common/summarizer\_chart.py               |       16 |        0 |    100% |           |
 | scripts/common/summarizer\_keywords.py            |        2 |        0 |    100% |           |
 | scripts/common/summarizer\_priority.py            |       35 |        0 |    100% |           |
 | scripts/common/summary\_analysis.py               |      177 |        5 |     97% |260, 262, 365, 371, 485 |
 | scripts/common/summary\_post\_categorizers.py     |       84 |        5 |     94% | 30, 34-37 |
 | scripts/common/summary\_post\_parsing.py          |      110 |        1 |     99% |       174 |
-| scripts/common/summary\_quality.py                |       75 |        2 |     97% |   84, 417 |
+| scripts/common/summary\_quality.py                |       84 |        3 |     96% |84, 124, 451 |
 | scripts/common/summary\_sections.py               |      607 |       10 |     98% |179, 188, 401, 534, 546, 558, 794, 833, 1010, 1040 |
 | scripts/common/summary\_text\_ko.py               |       72 |        2 |     97% |    71, 75 |
 | scripts/common/text\_lang.py                      |       27 |        2 |     93% |     58-60 |
@@ -98,7 +98,7 @@
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
 | scripts/fix\_post\_descriptions.py                |      275 |       13 |     95% |25, 164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
 | scripts/fix\_post\_number\_format.py              |       54 |        1 |     98% |        98 |
-| scripts/fix\_post\_url\_summaries.py              |      291 |       77 |     74% |248, 267-269, 315, 320-322, 405-415, 477-494, 498-569, 573 |
+| scripts/fix\_post\_url\_summaries.py              |      291 |       74 |     75% |263, 282-284, 330, 430-440, 502-519, 523-594, 598 |
 | scripts/fix\_scenario\_na\_placeholders.py        |       41 |        1 |     98% |        77 |
 | scripts/generate\_daily\_summary.py               |      283 |       59 |     79% |121-122, 125-145, 154-155, 158, 166, 196-198, 249, 325-335, 346-360, 400-401, 492-493, 517-518, 533, 535, 537, 539, 541, 596 |
 | scripts/generate\_market\_summary.py              |      673 |       27 |     96% |240-241, 396-397, 430-431, 552-553, 603, 1047-1048, 1169-1171, 1174-1177, 1245-1250, 1306, 1384, 1393 |
@@ -134,7 +134,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24960** | **3062** | **88%** |           |
+| **TOTAL**                                         | **24971** | **3061** | **88%** |           |
 
 
 ## Setup coverage badge
