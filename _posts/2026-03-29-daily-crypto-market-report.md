@@ -23,7 +23,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-29 | DOGE +4.9% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Dogecoin</strong> (DOGE): +4.92%</li><li>🟢 <strong>Canton</strong> (CC): +4.77%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +3.51%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집

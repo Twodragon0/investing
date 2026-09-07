@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-25 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-gb/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-here">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://african.business">Tinubu는 나이지리아가 암호화폐를 개방함에 따라 행정명령에 서명했습니다.</a> <span class="p0-desc">African Business Magazine은 대륙 전체의 비즈니스 문제에 대한 뉴스 및 심층 보고서를 제공하는 선도적인 간행물입니다.</span></li><li><a href="https://bloomingbit.io">美 클래리티법 통과 확률 38%로 급락…비트코인, 유가·금리 상승에 하락 - 블루밍비트</a> <span class="p0-desc">美 클래리티법 통과 확률 38%로 급락…비트코인, 유가·금리 상승에 하락 블루밍비트</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-07-25 암호화폐 핵심 뉴스: 비트코인, 이더리움 연결 프로토콜은 몇 시간 간격으로 여러 차례 공격을 받아 3,500만 달러의 손실을 입었습니다.. 총 100건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

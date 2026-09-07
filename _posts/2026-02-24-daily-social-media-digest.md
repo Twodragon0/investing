@@ -25,7 +25,6 @@ permalink: "/social-media/2026/02/24/daily-social-media-digest/"
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi3wNBVV95cUxQa3BGTjBYVjJmcTFVeW1KWEZNaEU1dUxibVotUFdUdXl1cTlqcVJoUXdjcmRudGN2cVVySm1iaGJrMkMxak5kbl9NN1lKN1dzVFRobmxZQUpCWExORFBtNTRaV0RsSUhNMTdvclNjd2dlNjg3S21Vd21wTHM0Z1ZYeTdnUW11VUZ6ZFFQWDhBSS1tb0dzM2V2ZWVzTURib0FlRnBjTmp4VkM4T0U0OUc1QlozX0kwblhMVUlybkFJaURsbEtGSWlyckEtRXV0VFhtOFhCTFVKWmx5MS1EREo1ODBTV29kTDNHb29EeGZBN0hvdnhCdW9rYXZwVEZpbUNVc0RCVVprOGVXSjM4M2luRFU0UzNMNl9VbFBOcFZ3a25HU1dTbWVBNmQtMDRjVVdaNDdtN3NxS0ZMUjdqSWNOMEFsTHhoRmctOGw0RnJLNFNlbDBWdzg3QVhMVS1SSmVQQURpRVhvcDdrSzRtX3pZWUU4RkNaLU5qakVSZE5XNmJWQ0NQMFNiUnoxbXVuSk8xRGhuUXRZREtkOVdHVV9ma3MtRFRBQUViSF9LaEh4Q1ZITmJRaHNOa3M2WWlnVE1UZEZsbXJJMmUtQUhjd016ZlROVUVlTjVEZ0JDc1l1WQ?oc=5">Fed’s Waller says next jobs report, not Supreme Court ruling, will be key for March interest rate decision - MarketWatch</a> — 연준 통화정책 관련 소식입니다. 금리 결정은 글로벌 자산 배분에 가장 큰 영향을 미치는 변수입니다.</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 46건 중 텔레그램 20건, 소셜 1건, 정치·경제 25건으로 정치/정책 및 매크로/금리 이슈가 주요 화제입니다.

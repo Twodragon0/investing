@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-15 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMinwFBVV95cUxNWExIb2tqMHVHQlc2YlZKRmhPdWduU1Z6bEIwelNGMHNvR1laYm42bnJTZVpZRnlCYi1DTHBsY002VG92VWphYXF3QkZpVXRLUFp2RElPYmpuU1JQY1dhcGZGQ1Qzb0pxUC1SaVljMU9LVEFIZEdCaHhmQXRvajRwV21HQTNMbDhkbmtLcWh0dzA5b05OTzhzSWFKZmc0MjQ?hl=en-US&gl=US&ceid=US%3Aen">의견: 비트코인은 무에서 왔으며 무로 돌아갈 것입니다.</a> <span class="p0-desc">2025년 7월 패서디나 근처 주유소에 있는 비트코인 ATM을 광고하는 표지판. Mario Tama/Getty Images John Rapley는 The Globe and Mail.</span></li><li><a href="https://cointelegraph.com/news/humanity-protocol-hack-linked-north-korean-actors-quantstamp?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Humanity Protocol의 3,600만 달러 해킹은 북한 해커로 의심됨: Quantstamp</a> <span class="p0-desc">Quantstamp에 따르면 3,600만 달러 규모의 Humanity Protocol 해킹에 사용된 가짜 Bithumb 이메일은 북한 위협 행위자가 관여했음을 지적합니다.</span></li><li><a href="https://cointelegraph.com/markets/eth-futures-flash-bearish-signal-but-stakers-resilience-points-to-underlying-strength?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">ETH 선물은 약세 신호를 깜박이지만 스테이커의 회복력은 근본적인 강점을 나타냅니다.</a> <span class="p0-desc">ETH 레버리지에 대한 수요는 여전히 낮지만 기업 축적과 지분 보유자의 헌신으로 인해 Ether 가격이 폭락 $1,500로 떨어지는 것을 막을 수 있습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **78건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-06-15 암호화폐 핵심 뉴스: 주요 거래소는 SpaceX IPO 할당을 취소합니다.. 총 78건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

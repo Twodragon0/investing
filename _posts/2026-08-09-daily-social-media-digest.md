@@ -32,13 +32,12 @@ image_alt: "소셜 미디어 동향 - 2026-08-09 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOWkV3WmFpUmlEQlBFQ2hBNzk2eUx2d3RSZjlTT044WXc3Rjl5Mm53SmJqdnZFTHRPVmF2VFlKTUdQZjQ2LXdTU01TS0c5VDJBWjFrNnQwVHc4QnVidzgtSVFiYzZlc19fcXlyUVEzMk1lWHdmUkg5c2VTT2JJbnQtNDh2NFlGQmtUMU1TM1NIOXpYU0lCVTYxNA?oc=5">연준은 9월에 금리를 인상할 것으로 예상되었습니다. 경제학자들은 지금은 그것에 베팅하지 말라고 말합니다.</a> <span class="p0-desc">고용 부진으로 인해 연준의 9월 이자율 결정에 대한 전망이 극적으로 바뀌었습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBJak1KdURfNlF4ckYyVlVRQWhWYmQ1VUhjbXJmOUlZQlFvM0x6NW1nZ0xWUWtuYklvMHJkZmpBRjRnZXFGM1dRYkpIX2o3UzY4RTB2NldGTEFWSnFDR3MwdGNjbE4xZlgyWWc?oc=5">연준 비율 결정 예측 및 확률 - 디파이 비율</a> <span class="p0-desc">연준은 기준 금리를 2026년 7월 29일 3.50%~3.75%로 변경하지 않았는데, 이는 Kalshi 및 Polymarket과 같은 예측 시장이 며칠 동안 신호를 보낸 것과 일치.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 18건 중 텔레그램 0건, 소셜 3건, 정치·경제 15건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 18건 중 텔레그램 0건, 소셜 3건, 정치·경제 15건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

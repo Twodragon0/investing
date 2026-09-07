@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-11 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sankyungtoday.com">기관 매수에 증시 급반등…코스피·코스닥 동반 ‘매수 사이드카’ - 산경투데이</a> <span class="p0-desc">기관 매수에 증시 급반등…코스피·코스닥 동반 ‘매수 사이드카’ 산경투데이</span></li><li><a href="https://www.dailian.co.kr">매수 사이드카 코스피·코스닥, 상승 마감…기관 홀로 '사자' [시황</a> <span class="p0-desc">매수 사이드카 코스피·코스닥, 상승 마감…기관 홀로 '사자' [시황] 데일리안</span></li><li><a href="https://www.speconomy.com">코스피·코스닥, 동반 매수 사이드카 발동 - 스페셜경제</a> <span class="p0-desc">코스피·코스닥, 동반 매수 사이드카 발동 스페셜경제</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,475.94 (+2.52%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 837.43 (+5.47%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-07-11 주식 시장에서 198건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,475.94(+2.52%), KOSDAQ 837.43(+5.47%), USD/KRW 1,501.20(-0.36%).
 - *일시적인 문제가 발생했습니다.*
 
 ## 테마별 주요 뉴스
