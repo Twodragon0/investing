@@ -1871,6 +1871,121 @@ class TestEnrichItems:
 
 
 # ---------------------------------------------------------------------------
+# enrich_items translation gate — language layer
+# ---------------------------------------------------------------------------
+
+
+class TestEnrichItemsTranslationGate:
+    """The description translation gate and its post-translation verification.
+
+    ``TestEnrichItems._run`` stubs ``common.utils.detect_language`` outright, so
+    no test there can observe what the gate actually decides. These run the real
+    detector: the leak shape this covers is precisely one the whole-string
+    detector calls Korean.
+    """
+
+    def _run(self, items, translate_ret):
+        """Run the translation pass with the real language detector.
+
+        Returns the list of strings handed to ``translate_to_korean`` so a test
+        can assert on *entry* to translation, not only on the field it writes.
+        """
+        from common.enrichment import enrich_items
+
+        calls: list[str] = []
+
+        def _translate(text):
+            calls.append(text)
+            return translate_ret(text) if callable(translate_ret) else translate_ret
+
+        with (
+            patch("common.enrichment.fetch_images_concurrent", return_value=0),
+            patch("common.enrichment.fetch_descriptions_concurrent", return_value=0),
+            patch("common.translator.TRANSLATION_ENABLED", True),
+            patch("common.translator.translate_to_korean", side_effect=_translate),
+            patch("common.translator.save_translation_cache"),
+        ):
+            enrich_items(items, fetch_url=False)
+        return calls
+
+    def test_hybrid_english_clause_description_is_translated(self):
+        """An English clause with a Korean tail must enter translation.
+
+        Corpus shape (2026-09-04): "<English headline>. <Korean context>".
+        ``detect_language`` reads the whole string and answers ``ko`` because of
+        the tail, so the ``== "en"`` gate skipped exactly the population the
+        language work targets.
+        """
+        hybrid = (
+            "Bitcoin could be the big winner if the U.S.-Iran conflict drags on for months. "
+            "지정학적 리스크가 글로벌 시장 심리에 영향을 주고 있습니다."
+        )
+        items = [
+            {
+                "title": "미국-이란 분쟁이 길어지면 비트코인이 최대 수혜자가 될 수 있다",
+                "description": hybrid,
+                "source": "Reuters",
+                "link": "",
+            }
+        ]
+
+        calls = self._run(items, translate_ret="지정학적 갈등이 장기화되면 비트코인이 최대 수혜자가 될 수 있습니다.")
+
+        assert hybrid in calls, "hybrid description never reached translate_to_korean"
+        assert items[0].get("description_ko") == "지정학적 갈등이 장기화되면 비트코인이 최대 수혜자가 될 수 있습니다."
+
+    def test_translation_that_stays_english_is_not_published(self):
+        """A changed-but-still-English result must not become ``description_ko``.
+
+        ``!= desc`` cannot tell a real translation from a mangled echo, and
+        ``translate_to_korean`` is fail-open. The renderer reads
+        ``description_ko or description``, so writing an English string here
+        publishes English either way. Same re-check contract as
+        ``headline.select_korean_headline``.
+
+        The stub returns a *different* English string on purpose: an identity
+        echo would leave ``!= desc`` False and could not discriminate.
+        """
+        items = [
+            {
+                "title": "Coinbase CEO says crypto bill nears a vote",
+                "description": "Coinbase CEO Brian Armstrong says the next major crypto bill is nearing a critical vote.",
+                "source": "CoinDesk",
+                "link": "",
+            }
+        ]
+
+        calls = self._run(
+            items,
+            translate_ret="Coinbase chief executive Brian Armstrong said the next crypto bill nears a critical vote.",
+        )
+
+        assert calls, "translation was never attempted"
+        assert "description_ko" not in items[0], "an English translation result was published as Korean"
+
+    def test_pure_korean_description_is_not_translated(self):
+        """Widening the gate must not turn it into "translate everything".
+
+        Without this the previous two tests are satisfied by a gate that always
+        fires, which would re-translate Korean copy and burn the quota.
+        """
+        korean = "국내 기관 투자자들이 비트코인 현물 ETF 보유를 늘리며 시장 유동성이 개선되고 있습니다."
+        items = [
+            {
+                "title": "기관 투자자 비트코인 ETF 보유 확대",
+                "description": korean,
+                "source": "연합뉴스",
+                "link": "",
+            }
+        ]
+
+        calls = self._run(items, translate_ret="SHOULD NOT BE CALLED")
+
+        assert korean not in calls
+        assert "description_ko" not in items[0]
+
+
+# ---------------------------------------------------------------------------
 # fetch_page_description wrapper — line 495
 # ---------------------------------------------------------------------------
 

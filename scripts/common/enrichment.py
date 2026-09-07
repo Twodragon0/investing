@@ -56,7 +56,10 @@ from .enrichment_synthetic import (  # noqa: F401  (re-exported for backward com
     _is_title_related_description,
     generate_synthetic_description,
 )
-from .summary_quality import _is_site_boilerplate  # noqa: F401  (re-exported for backward compat)
+from .summary_quality import (  # noqa: F401  (_is_site_boilerplate re-exported for backward compat)
+    _is_site_boilerplate,
+    contains_english_clause,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -465,9 +468,17 @@ def enrich_items(
                 item["title_ko"] = ko
 
         desc = item.get("description", "")
+        # Two detectors, because neither covers the other's population.
+        # ``detect_language`` judges the whole string, which is right for a
+        # short all-English description but answers "ko" for the leak shape
+        # "<English headline>. <Korean context>" — the Korean tail carries the
+        # verdict. ``contains_english_clause`` measures the longest Hangul-free
+        # run instead, so it catches the hybrid; its 6-word floor is why it does
+        # not replace ``detect_language`` outright ("English description text."
+        # is 3 words). Pure Korean copy trips neither.
         if (
             desc
-            and detect_language(desc) == "en"
+            and (detect_language(desc) == "en" or contains_english_clause(desc))
             and not any(
                 desc.startswith(prefix)
                 for prefix in (
@@ -513,7 +524,16 @@ def enrich_items(
                 body, suffix = desc, ""
             ko_body = translate_to_korean(body)
             ko_desc = (ko_body.rstrip() + suffix) if suffix else ko_body
-            if ko_desc != desc:
+            # Re-check the result instead of trusting it — the same contract
+            # ``headline.select_korean_headline`` uses. ``translate_to_korean``
+            # is fail-open (returns its input on outage), and ``!= desc`` cannot
+            # tell a real translation from a mangled echo. The renderer reads
+            # ``description_ko or description``, so an English string written
+            # here publishes English. Leaving the field unset keeps the English
+            # original available to the retry pass
+            # (``tools/fix_untranslated_body.py``), which is what repairs it:
+            # translation failures are deliberately not cached.
+            if ko_desc != desc and not contains_english_clause(ko_desc):
                 item["description_ko"] = ko_desc
 
     save_translation_cache()
