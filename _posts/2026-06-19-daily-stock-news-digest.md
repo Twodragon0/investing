@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-19 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.advisorperspectives.com">Fed’s Interest Rate Decision: June 17, 2026 - Advisor Perspectives</a></li><li><a href="https://finance.yahoo.com">Is a Stock Market Crash Coming in 2026? History Has Good and Bad News for Investors.</a></li><li><a href="https://www.investing.com/news/general-news/us-cdc-activates-107-million-in-emergency-funding-for-ebola-response-4750435">US CDC activates $107 million in emergency funding for Ebola response</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 9,063.84 (+2.25%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,000.93 (-3.01%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-06-19 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 9,063.84(+2.25%), KOSDAQ 1,000.93(-3.01%), USD/KRW 1,535.18(+0.51%).
 - *Equiti는 국제 트레이더를 위한 안전한 고급 플랫폼을 제공합니다.*
 
 ## 테마별 주요 뉴스

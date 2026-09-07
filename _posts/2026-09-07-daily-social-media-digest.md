@@ -30,46 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-07 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 인플레이션 - 19건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 기준금리 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 기준금리, 프리즘 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTlNhaWl1MENGTDlmdXZjVkJza21HdDBxNGhqM28xY055Q0ZKNlo5VDE4VTJ5STNuYjVaODhWb1VEMWNjY2VCSHY4Wk1DeWlEckx6aXdRVElQMWR5dFBESDkwYUhvNElaOXRtMkdNamg3M2ZCamVXYkF1dlhGNEdpM2pvR2UxTTZnQ3hnMm5ieUxGdzV0UVBhNk1jakUzWk9sbldHa3lNLTl2azRJMzloOEZUMlkyOWpTZ0F6QVBQeTZ5U2w2RHQ1bTgxSEdNUUh5Ql9FQg?oc=5">Top White House Economist Points to 1.6% Inflation as Evidence the Fed Doesn't Need Higher Rates - 24/7 Wall St.</a> <span class="p0-desc">케빈 해셋(Kevin Hassett)은 인플레이션을 촉발하지 않고 경제가 활황이라고 말하지만, 전직 연준 관료들, 기록적인 휘발유 가격, 회의적인 분석가들이 다음 금리 결정 전에.</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1abG8xdkdEVkpzMHV6b0R6TjlFS0xCZHN5bTFBNHZPc2lqczlzbUJJX3M4QTFkOUJwejFyLW1naHpPb3JBZ2hKalhXR1docGxKR3k1UUxPd29WX1U?oc=5">8월 일자리 보고서는 연준 요율 결정에 영향을 미칠 수 있습니다.</a> <span class="p0-desc">Heritage Foundation 수석 경제학자 EJ Antoni가 'Making Money'에 참여하여 8월 일자리 보고서와 연준 금리 결정에 미치는 잠재적 영향에 대해 논의합.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Top White House Economist Points to 1.6% Inflation as Evidence the Fed Doesn't Need Higher Rates. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 19건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 1건, 정치·경제 18건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (16건): 금리, 연준, 인플레이션 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (8건): 트럼프, 기준금리, 연준 정치 이슈 (8건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📈 가격/시장** (12건): 기준금리, 프리즘, 인상 가격 변동 (12건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 백악관 최고 이코노미스트는 연준에 더 높은 금리가 필요하지 않다는 증거로 1.6% 인플레이션을 지적합니다. - 2
-- 8월 일자리 보고서는 연준 요율 결정에 영향을 미칠 수 있습니다.
-
-### 주요 이슈
-
-- 채권-주간] FOMC 앞두고 美 물가 주시…국제유가도 주목 - KB Think
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 18건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:75%"></div></div><span class="theme-count">12건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-07.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 2건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

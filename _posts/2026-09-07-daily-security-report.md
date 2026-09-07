@@ -16,28 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-07 - 보안 뉴스 요약 �
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Dream Health Chain exploit: Reward Logic Flaw** / 보안 뉴스 헤드라인: How to Secure an iPhone Crypto Wallet Against Malware and We.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Dream Health Chain exploit: Reward Logic Flaw 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 12건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): exploit, security, manipulation 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **📈 가격/시장** (3건): manipulation, exploit, spot 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔷 이더리움** (5건): exploit, error, manipulation 생태계 동향 (5건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] Reddio RedSonic 익스플로잇: 잘못된 공유 계산
-- [보안] Notional V2 익스플로잇: 산술 오류
-
-### 투자자 체크포인트
-
-- 보안 사건 8건, 보안 뉴스 4건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건

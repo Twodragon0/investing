@@ -41,39 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-07 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 폴란드, Zondacrypto 스캔들이 확대됨에 따라 암호화 법안 거부권 유지 - 58건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 동향 주시</li><li>📈 <strong>가격/시장</strong>: 암호화폐 관련 23건</li><li>🏦 <strong>거래소</strong>: 암호화폐, XRP 관련 9건</li><li>🤖 <strong>AI/기술</strong>: 6건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/poland-upholds-crypto-bill-veto-zondacrypto-scandal-widens?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">폴란드, Zondacrypto 스캔들이 확대됨에 따라 암호화 법안 거부권 유지</a> <span class="p0-desc">Zondacrypto 조사가 확대되고 에스토니아 운영자가 파산함에 따라 폴란드 국회의원들은 암호화폐 법안에 대한 대통령의 거부권을 뒤집지 못했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 폴란드, Zondacrypto 스캔들이 확대됨에 따라 암호화 법안 거부권 유지 
-총 58건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (29건): 비트코인, 암호화폐, BTC 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (23건): 암호화폐, XRP 가격 변동 (23건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (9건): 암호화폐, XRP, 거래량 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 폴란드, Zondacrypto 스캔들이 확대됨에 따라 암호화 법안 거부권 유지
-
-### 주요 이슈
-
-- SEC, XRP·솔라나 상품 기준 편입…암호화폐 ETF '15% 룰' 열렸다
-- A16z 지원 OpenReserve, 풀서비스 국립은행 승인 획득
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 2건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Decrypt(14건), Google News KR(12건), Cointelegraph(11건)
-- 시장 영향 가능성이 있는 거래소 공지 1건 포함
-- 프로모션성 거래소 공지 4건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-07.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **58건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-09-07 암호화폐 핵심 뉴스: 1 암호화폐가 2029년까지 515% 더 상승하기 전에 3주 만에 29% 상승 - 현재.att.yahoo.com. 총 58건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-26 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-62k-as-ai-stocks-rally-etf-outflows-worsen-4759807">비트코인은 PCE 인플레이션 게이지가 2023년 이후 최고 수준에 도달한 후 $60,000 아래로 폭락</a> <span class="p0-desc">비트코인은 PCE 인플레이션 게이지가 2023년 이후 최고 수준에 도달한 후 $60,000 아래로 하락합니다.</span></li><li><a href="https://bloomingbit.io">"트럼프의 양자 보안 행정명령, 비트코인엔 호재"…업계 기대감 - 블루밍비트</a> <span class="p0-desc">"트럼프의 양자 보안 행정명령, 비트코인엔 호재"…업계 기대감 블루밍비트</span></li><li><a href="https://decrypt.co/372068/morning-minute-strategys-mstr-and-strc-crash-to-52-week-lows">오전 분: 전략의 MSTR 및 STRC 폭락에서 52주 최저치까지</a> <span class="p0-desc">엄청난 마이크론 수익 감소로 인해 글로벌 시장이 상승했으며 어제의 끔찍한 매도가 BTC $60,000 미만을 기록한 후 암호화폐가 더 높아졌습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **106건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-26 암호화폐 핵심 뉴스: 비트코인은 시장 심리가 악화되면서 20개월 최저치를 기록했습니다.. 총 106건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
