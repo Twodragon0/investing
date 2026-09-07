@@ -44,7 +44,7 @@
 | scripts/common/crypto\_api.py                     |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                           |      158 |        0 |    100% |           |
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
-| scripts/common/enrichment.py                      |      187 |        4 |     98% |169, 206-208 |
+| scripts/common/enrichment.py                      |      187 |        4 |     98% |172, 209-211 |
 | scripts/common/enrichment\_images.py              |       51 |        0 |    100% |           |
 | scripts/common/enrichment\_network.py             |      354 |        5 |     99% |   645-652 |
 | scripts/common/enrichment\_synthetic.py           |      229 |        1 |     99% |       637 |
