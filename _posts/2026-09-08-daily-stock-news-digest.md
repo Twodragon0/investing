@@ -197,7 +197,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9lcEY4cEp0eU1EUEJhMmNsWUlIT1hyXzBGV1BmVloxV1ZneFdScl93Nk9raF9xVkJaM0hSVzJCbEJ1aFNwNXBlTWdyTEtfbnF6MlBPNE0xOUFINWs?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 삼성전자·SK하이닉스 동반 강세…美 반도체주 훈풍 - 에너지경제신문</a>
-<p class="news-desc">[특징주] 삼성전자·SK하이닉스 동반 강세…美 반도체주 훈풍 에너지경제신문</p>
+<p class="news-desc">삼성전자와 SK하이닉스가 7일 장 초반 동반 강세를 보이고 있다. 미국 증시에서 메모리 반도체주가 일제히 오른 가운데 국내 대표 반도체주에도 매수세가 유입되는 모습이다. 한국거래소..</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

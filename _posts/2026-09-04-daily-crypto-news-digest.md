@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5SeGdkS01VSHdOUnpkeGlJNmhZZ3h5TERsMlliZUVBNDB3R2xWS1RLOHV2NHlsNURnTnNYaWZwd2tTU200X0FRQkxRck00T2RsRTFRZHY2eXIxeTFST0U4czBLaXlxMlk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2026년 9월 3일 비트코인의 현재 가격 - Fortune</a>
-<p class="news-desc">At 8 a.m. Eastern Time on September 3, 2026, the going rate for one Bitcoin (BTC) is $77,934.11. That’s $1,262.10 higher than yesterday morning’s level and about $33,775 below where it stood a year ago.</p>
+<p class="news-desc">2026년 9월 3일 동부 표준시 오전 8시에 비트코인(BTC) 1개의 환율은 $77,934.11입니다. 이는 어제 아침 수준보다 $1,262.10 높고 1년 전 수준보다 약 $33,775 낮습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

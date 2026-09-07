@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMi2AFBVV95cUxOaXZpZm5HVUlmNHk4MXNYNm9LLXF3N09rZkdwbW5Cdy1iQm5fVTlzR1dwUlA5LWpna3d3MzJSV0ZCRW1sUUx3RVlpcHVETDhtcS1zYjdxT3FuZ3ZrLVNHWGZLVTNURC1id1N0QTdXSzFJNzlycC10S3VhbC1LQ2dPeHV1QVp0LTJsVTV5czBmRVBRb0tYVlBYRlFYSnJDQ2FiNTJRcFVnWVZOZ05hZGJZQUlDdExIUENTRFF6bE1wc3FMbDRfazV3XzNUMzdkOFJnbHBObjhib2M?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin, XRP, Dogecoin Gain; Ethereum Dips as Jobs Data Trims Rate Hike Odds: Correction Not Lessening A</a>
-<p class="news-desc">The cryptocurrency market remained calm on Wednesday, Sept. 2, even as softer private employment data modestly reduced the odds of a rate hike.</p>
+<p class="news-desc">민간 고용 지표가 완화되면서 금리 인상 가능성이 어느 정도 줄어들었음에도 불구하고 암호화폐 시장은 9월 2일 수요일 조용함을 유지했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMirgFBVV95cUxOMWdaaU1qVzJma0hLRHppRm44Mm1ld25waW1LX3lYbEVWMXFweUlkV3lGUnJYR0pYZWFsM0FvczNSMlluVGdMYm82UVVvM3hrWnVMUnBFMC1JNUtFSHRYWGVyNjUwOTFlMThWb3YzRFFXeWg0TlFCRzhRV3BMUFhPTWNKcEFjaVhra2QzRnFXXzIzdnRRYlZIc3FIaEd3dnQ4NlZTWXdlVTlDakdGY1E?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">IRS Drops Crypto Scam Victims’ Tax Bill on Theft Loss Deduction</a>
-<p class="news-desc">The IRS reached an agreement with a New York couple that they no longer owed taxes or penalties, after previously disallowing their $965,000 theft loss deduction related to a cryptocurrency investment scam, according to a US Tax Court decision Friday.</p>
+<p class="news-desc">금요일 미국 세무법원의 판결에 따르면, IRS는 이전에 암호화폐 투자 사기와 관련된 도난 손실 공제액 965,000달러를 불허한 후 뉴욕의 한 부부와 더 이상 세금이나 벌금을 내지 않기로 합의했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -279,7 +279,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMitwFBVV95cUxQVVFtRWxVNDNEc3BwMTY1VEpXdHRlT3hOSzA3WVRVZnpzWV9xMkVraVNyZVVUUng1eE1TVVNhOWxHbjdvUmJWNUQxVXlQMlV0WlkwX3I2eVd6R0d3djN0M3NUYWpuODFrSW9XcHc0NXlKMW56WmtGWjMwS29wamlMTXB3LUhSdTBtVmRDSzJERldpc0lucnY2d2FYcDJ5VlBaRkdzaWVYME9tUklkN1pSUUs3S0stWXM?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">FinCEN Says Stopping Crypto Scams Means Catching How Customers Fund Them</a>
-<p class="news-desc">Crypto investment scams may end on blockchain rails, but a new analysis by FinCEN shows victims often expose the fraud earlier.</p>
+<p class="news-desc">암호화폐 투자 사기는 블록체인 레일에서 끝날 수 있지만 FinCEN의 새로운 분석에 따르면 피해자는 종종 사기를 더 일찍 폭로하는 것으로 나타났습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -291,7 +291,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNRUNjTmlkX1hNM19QUFloOVdsZGFIUl9ndWJpUlJhdFUxZEN5azBMamlvREp1LU5BVUZ5QllwQlEwbVlSSHExMGQwbXNmbWZic0hHQkVIV2M0dHRXaTJUWFY2YXZXUW9MSXhfY0tPNTJQZzkxR09wc1hVdUFSRVJRVl9nSmduSXV4OTNXazdDbzRUNHlnLTJyaUdDQ1VTazc3ZXZhd0ZkbVlDd3RTeUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Attorney General Warns Of Decentralized Finance Cryptocurrency Exchanges - CT News Junkie</a>
-<p class="news-desc">Connecticut Attorney General William Tong is warning consumers about what he called significant financial and security risks associated with unregulated, offshore “decentralized finance” (DeFi) cryptocurrency exchanges.</p>
+<p class="news-desc">코네티컷주 법무장관 윌리엄 통(William Tong)은 규제되지 않은 역외 “분산형 금융”(디파이) 암호화폐 거래소와 관련된 심각한 금융 및 보안 위험에 대해 소비자들에게 경고하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

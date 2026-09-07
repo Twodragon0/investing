@@ -290,7 +290,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOTEdZOWE1aVdjQUFnSVpzMFZOOTE0MVFJdy1mdW9SX0xsS05nd0VXc0lhT1pHSlZvREM5RTc3VDJVMllQeHNMbktYSjZxdUEzUVotN1NZVU5kanhjd3RCWURicXRDel9GUjV4SkxEUDVkZnlSdFZTTkxNb0FzRHBhMG1rRmk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">US and Iran exchange fire for the first time in more than a month</a>
-<p class="news-desc">Oil prices rise after American military hits island in Strait of Hormuz and Tehran retaliates with attack on Jordan</p>
+<p class="news-desc">미군이 호르무즈 해협 섬을 공격하고 테헤란이 요르단에 대한 보복 공격을 가한 후 유가가 상승했습니다.</p>
 <span class="source-tag" data-source-type="default">FT via Google</span>
 </div>
 </div>

@@ -138,7 +138,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE5NUFNaSzBESTk5dkFKZWo5UXdaZXBwZTA0Z19FUEpHbDAtUGI3SDdmTmtoc2Q0bi1EUzRqUENfV3k2V0FFbW9FV0p3YTVkM0hZTFRsMEpXOGdUTkhUM1JWRTdBTGdoQzA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 8월 31일 비트코인의 현재 가격</a>
-<p class="news-desc">At 8:30 a.m. Eastern Time on August 31, 2026, the price of Bitcoin (1 BTC) is $78,414.14. That marks a $363.45 decrease from yesterday morning—and approximately a $29,846 fall compared with one year ago. Bitcoin is the original cryptocurrency and remains the most popular crypto coin on the market.</p>
+<p class="news-desc">2026년 8월 31일 동부 표준시 오전 8시 30분에 비트코인(1 BTC)의 가격은 $78,414.14입니다. 이는 어제 오전보다 $363.45 감소한 수치이며, 1년 전과 비교하면 약 $29,846 감소한 수치입니다. 비트코인은 최초의 암호화폐이며 여전히 시장에서 가장 인기 있는 암호화폐입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

@@ -137,7 +137,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxOSzU0V0U0eGtGUmU2WDdzWXF1Ql96V1JqU1NlMUF5LTZSU09QRzZFUmxncEk2dlpZZW9zNC1sYXlFWi13XzlGbGxOdVBFOC1sY2tuQnlzclNrN01xZFc3UEJlMUlsTk9DdlFhTXpLQkdmZ0VfbW5CNk5meDlNc2ZDLXRwQ0JvTDIyWnBUa2pNdHdUNEdVNTdEMUxaWWlLMlo2ZTV5X0x1VE1xM0dRSUcwNQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Jordi Visser Calls Warsh’s Hawkish Talk ‘Showmanship,’ Says Bessent Matters For Crypto</a>
-<p class="news-desc">Wall Street veteran investor Jordi Visser gave a long-term Bitcoin price prediction of $600,000-$1 million based on a hypothetical $100 trillion crypto market cap, but did not provide a firm target.</p>
+<p class="news-desc">월스트리트 베테랑 투자자 Jordi Visser는 가상의 100조 달러 암호화폐 시가총액을 기준으로 비트코인 장기 가격 예측을 600,000~100만 달러로 제시했지만 확고한 목표는 제공하지 않았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -220,7 +220,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimAFBVV95cUxPTVlfVkR3LU5lbGVRMWtQdmtfSlNnZi1uYl9zREJLanhJN0pwdm9zT2FPV203Vmp6X25OR0dteUVXM0ZnVm54UV9wZ1B1VEtxZm13VEszdkNEZHRUTVlkUXlXNUZtVVAyLTFUX0phNk0yNk1oMmViWTd3cVFtc2Ryc0NLT1BDbl9zeS1LTkRIUW9jbTB1aFRYcA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase CEO Brian Armstrong Says Bitcoin Could Soar as High as $400,000 By 2030. Here's Why That's Going to Happen.</a>
-<p class="news-desc">The world's top cryptocurrency could soar more than 400% over the next four years.</p>
+<p class="news-desc">세계 최고의 암호화폐는 향후 4년 동안 400% 이상 급등할 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -232,7 +232,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMilwFBVV95cUxNOUtnZEZmbS1saVFqN09EZ3V3WDNFalVLRGFaRWQ0bnRUNHhzQ3dkR0wtcUNzMUJ5ODBnTXM4YV9yRVZabmdnM2IxUHZEMU5JM2dNeGxubDVkOGRkSm96TFFkdFdBTmpjNXdEdmdCRzhYY1pZLUtMQ3VENjJxQWwzWEdlaWtyWnZKaVFaOGYxaGdVS1Z1aVow?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Would You Use a Debit Card That Offers 2% Cashback in Bitcoin? This Popular Cryptocurrency Exchange Thinks You Will.</a>
-<p class="news-desc">This is an untraditional yet intriguing way to earn Bitcoin.</p>
+<p class="news-desc">이것은 비트코인을(를) 얻는 전통적이면서도 흥미로운 방법입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMinwFBVV95cUxPS0ZPS3VRbDZDb0Q3eW1xeTNLVlpDTGxZdl8weFRxR2otUXMwZUZ0TmNkNG13NGhkd3VjZmJfMzBBVFFzbTMtVktLbDlQclNxVGdCNkFLOEZJb2MwNzVzbnFkdEU3OGVNcm53TldjMVE2TlgyU1F3ZEowUWdROFNZX3dwamRaVDktbGdHR25XcHZCN0xjZlRUZGZYaTd3Wnc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase CEO Says Crypto Is 'Updating the Financial System' as Trump Pushes CLARITY Act</a>
-<p class="news-desc">Coinbase CEO Brian Armstrong says the next major piece of U.S. crypto legislation is nearing a critical vote as blockchain adoption across the financial system continues to expand. Will Crypto Update the Entire Financial System? Speaking on the Katie Miller.</p>
+<p class="news-desc">코인베이스 CEO 브라이언 암스트롱(Brian Armstrong)은 금융 시스템 전반에 걸쳐 블록체인 채택이 계속 확대됨에 따라 미국 암호화폐 법안의 다음 주요 부분이 중요한 투표에 가까워지고 있다고 말했습니다. 암호화폐가 전체 금융 시스템을 업데이트할까요? 케이티 밀러에 대해 말하자면...</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

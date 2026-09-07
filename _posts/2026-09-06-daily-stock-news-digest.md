@@ -239,7 +239,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPU3h5alpFRlhBcS1vRUJyc1dyWDBycUx6elAtbVZPTlJMZ3A4TmZveF9iZzBTVlhabi1vRGNUNFhyRjZ2LU1VRWZRblNHQW9MdW5HWHFXdWVHSGtJclktMGdqbTE3cmhKSGx4VlN3cXZqN19qelJ0NkMwT1ZibDhaekp5Q3FaSWV4SlNJR0s3UXBoeDR2QmI1UGk3dGJzbjQ5N1hKUDI4LWhKWjlwTFI4LTd3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">EXEC: Oura Ring Maker Heads to the Public Markets with Initial S-1 Documents Filed for IPO</a>
-<p class="news-desc">The latest initial public offering (IPO) in the active lifestyle market is finally making it to the starting gate after Ōura Health Oy (Ōura), the Finnish maker of smart rings that track health, fitness and sleep, is seeking to raise up to $3 billion.</p>
+<p class="news-desc">건강, 피트니스, 수면을 추적하는 핀란드의 스마트 링 제조업체인 Ōura Health Oy(Ōura)가 최대 30억 달러의 자금 조달을 모색함에 따라 액티브 라이프스타일 시장의 최신 기업공개(IPO)가 마침내 출발 관문에 들어섰습니다.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

@@ -283,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQbWtDWmZMVkJIQTFjcENWUkhVQ3l0RnhHUGhRS2hQRmJJeXktSG95U0hjNjVmOXJxTmUzbDFjelh3dWg5bm9VZC1GOUQ5R1FTR2JoajdHVnVkSXdFWHc1dkhVaF81U0wtVnQ0WHhERHhkT25paWRhTkNWWml6VEtYcm95MmgyeklNMGJJbW1nNkwwdFVxb1k0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">This S&P 500 ETF Is Outperforming the Index So Far in 2026. Here's How It's Doing It and Why You Should Consider It for Your Portfolio. - The Motley Fool</a>
-<p class="news-desc">The bull market is entering a new phase and this ETF is benefiting.</p>
+<p class="news-desc">강세장은 새로운 국면에 접어들고 있으며 이번 ETF은 이익을 얻고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

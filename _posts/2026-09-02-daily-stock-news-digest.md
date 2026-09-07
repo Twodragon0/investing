@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOT09fdFlYQ2tEY1ZOTkZjUUM3RVdKaldYVFBOcWdGb1o2NGJLSUlXVUFPTUlXTVFVTHhwRnRiWlBWd05fUlpEZDhxbWE4Z1pRR2lfLW1SSFRadlI0TlNyYnJWLUNFT0pXczRTcV9vLUNpYS1DR013TXZ2NmtobkxGZXdwdV9QdG1GcExxMzRWVEdhRlhYeWxZLTZNTkZaMF84dllMOVNycXRyWTJyQVRRRC1jZ3NfTXpfRFljczZZYkJpRERuNkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">How soaring Treasury yields could hit your finances</a>
-<p class="news-desc">Bond yields rise as bond prices fall, impacting everything from stock and bond markets to loan rates and savings returns.</p>
+<p class="news-desc">채권 가격이 하락하면 채권 수익률은 상승하며, 이는 주식 및 채권 시장부터 대출 금리 및 저축 수익에 이르기까지 모든 것에 영향을 미칩니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -218,7 +218,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQVU52cWprRHhYZUQ1alRRWHpXd2FBcWVPUGJtRHR0UFVFUHg5SGtpbUdPUXFRaWY2eEx3YUdUc2xwZm1rRVVYbTlIRWJvUTB0LThrSUxON0hndTZHTnM1OFB0R3JuQVFjNmpCcEtEVVRIZ0VWX1NEZ204RkROdG92TUtYcDFnZERkU1hreTRER2tiUnp2dzgzOGFfZ1JVSkZhWE4tTGpXOTRSUXNJd1Q5X0pMbw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow Skids As Trump Gives This AI Warning; Tesla Pops Ahead Of Key Event - Investor's Business Daily</a>
-<p class="news-desc">The Dow Jones index dropped on the stock market today as President Trump gave an AI warning. Tesla jumped and some equities tested entries.</p>
+<p class="news-desc">다우존스 지수는 트럼프 대통령이 AI 경고를 내림에 따라 오늘 주식 시장에서 하락했습니다. 테슬라가 급등했고 일부 주식은 항목을 테스트했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>

@@ -109,7 +109,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPZ1liaE1mY3JJQjZvWXVpNWVjWDZYOUdmYVcySlozNDBpNGw4cFk0MHcxMGlsbzV0ZkhLMWdTYVFrVVJKbWpON2ItNG10S3Zzd3lwU1FQeTFycnQ1VlFTZy0tMmJmMjZ1ak1qVnNXUGJuMFp4cTRKajAzR3hRR2tndjNYVTN0YXFlU01JdmVac2M3OVh5ekhQSHZqVEtCdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Dan Ives Says Nvidia's 15% AI Server Price Hike Is Bullish for Tech. Could Micron Be the Real Winner?</a>
-<p class="news-desc">Prices for Nvidia-powered AI servers are rising more than 15% as memory costs surge. Dan Ives says the move is bullish, but Micron could benefit most.</p>
+<p class="news-desc">엔비디아 기반 AI 서버의 가격은 메모리 비용이 급증함에 따라 15% 이상 상승하고 있습니다. Dan Ives는 이전이 강세이지만 마이크론이 가장 큰 이익을 얻을 수 있다고 말합니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -218,7 +218,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPLXd4eU5QWGZRV3Y2ZUtpNUdUZEh1WE9hY0doLTVhVlViZktwZnE2YjFpUDVIenZ5SDlHTy1YTmVOQlM3allHbWM4WmxhNW9xbXBBNGhGdHZLbm9TZ0NkWldwUVpxQXd6dG80SS1lV0dNY19ETzQtZWhXZ2ZMLUR1MkFndFR1cDROWVp6NXRUTnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Nasdaq, S&P 500 Slip as Chip Stocks Sink; Oil Falls Ahead of Bessent Press Conference on Iran Sanctions - Investopedia</a>
-<p class="news-desc">The S&P 500 and Nasdaq Composite declined Monday as semiconductor stocks dropped, while the Dow Jones Industrial Average advanced.</p>
+<p class="news-desc">S&amp;P 500 및 나스닥 종합지수는 반도체 주가 하락으로 월요일 하락세로 마감했고, 다우존스 산업평균지수는 상승했습니다. 한편, 투자자들이 미국의 이란에 대한 새로운 제재 조치에 동참하면서 원유 가격은 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

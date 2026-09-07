@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimAFBVV95cUxQQzBGQ2NRd3FSc1A0Vm1aSXpScU5IeGFsbExrYWk2QmlpOS1MbkxuR1VfbjBiOTdZRGptZHc2MnVyTHh0ZzRDWmdJaTZldXpDVkxSUW15VWs2RUNhek9ucV9yZ2Via2hfdmo5TndjZURaVmYtUG5ndC1kdVJzVVJBQnBPWG9qeTVWYmFzbDZQX2dsUHV5djhlNw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin ETFs Just Posted Their Best Week Since October 2025. That's Why I'm Bullish on Bitcoin.</a>
-<p class="news-desc">The iShares Bitcoin Trust ETF and friends are packing on assets again, and that may be a bullish signal for Bitcoin.</p>
+<p class="news-desc">iShares 비트코인 Trust ETF과 친구들은 다시 자산을 챙기고 있으며 이는 비트코인에 대한 강세 신호일 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMifkFVX3lxTE1GMjlsQWNVMFA4MG5mczZJTWhZQ0RwMnotSmtibms4YXhlaTB3aDhZdEJGSUdJcmdfY2VEZlE5ZkNScWRhQVNlY0dybG5aVUpZREUyWHNmTTZ6WGlJTnhkR0JncDVjYkhaMF8tUFlvUzRSaDVUdGktMlRpc0VNZw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Drops Before Shrugging Off Fed Chair’s Inflation Comments</a>
-<p class="news-desc">Bitcoin's price slid before spiking again after the Federal Reserve chair said inflation in the U.S. was "concerning."</p>
+<p class="news-desc">비트코인의 가격은 하락했다가 연준 의장이 미국의 인플레이션이 "우려스럽다"고 말한 후 다시 급등했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -224,7 +224,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMizwFBVV95cUxObzBPeUgtMTRpdWJxcHV4UV9BRGV6RTc2T0s0MXlTUXVSaWRtQ3g4QnY5RF9HVDk0SXpUYkFfTzlZQzctMnFLRTRhZThZTktOdlF1SlBEcW80UzBaOVJqNjIxS2E5aDNfQVdRUkM3djdqbWhLbDlQNWlSVzZKQlYwclJET3lldjBINzRHREp4UXRvcGpVbnQ0czlhNGowS0J5NVdsZFV5X3h6Mzhxc2phTmwyMnF0dEZYX3RjdU4wNDN1QmVUczdQOE4zUXMxRXc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Plunges to $78,000 After Jackson Hole but Bulls Stay Upbeat - Coinbase Global (NASDAQ:COIN)</a>
-<p class="news-desc">Bitcoin rejected at $80,000, may have more room to run according to Bankless host and venture capitalist. AI spending may compete with US debt.</p>
+<p class="news-desc">비트코인은 $80,000에 거부되었으며 Bankless 호스트 및 벤처 투자가에 따르면 운영할 여지가 더 있을 수 있습니다. AI 지출은 미국 부채와 경쟁할 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -279,7 +279,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiaEFVX3lxTE81S0Y2NzRPOHVOTFgtTWhjNEFjN28yeXI3bHZwUWpJWFhiWlprNF9ZdGpuS0NJcVJhRE5WRW1DRWtCZHJ3T1pzeHlSTnB6NnNRdThDZFIwQnFzVDZIVGhzY2ZzcW5fSTNi?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Cryptocurrency and blockchain, explained in 20 facts</a>
-<p class="news-desc">Cryptocurrency and blockchain broken into 20 clear explanations covering Bitcoin, Ethereum, wallets, mining, NFTs, DeFi and the mechanics behind digital money</p>
+<p class="news-desc">암호화폐와 블록체인은 비트코인, 이더리움, 지갑, 채굴, NFT, 디파이 및 디지털 화폐의 메커니즘을 다루는 20가지 명확한 설명으로 나뉩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

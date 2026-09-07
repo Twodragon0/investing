@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1HWEJVQzBRR09VcEhXVExhR2I0UG04dm1zY0ZSU2hHWGRWVmxLZzBHRS00SGdoOTNVdlVld0lMUTFKdEpnNXRuUHhUYnIzejREY2NzbF83VThxZWxTenF4elNoS2Jyc3NXOV9vRms1c1p4bnM0TWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Oil is back above $92 and inflation fears are sending U.S. bond yields to their highest since January 2025 - Fortune</a>
-<p class="news-desc">Rising energy prices are fueling inflation fears and expectations that the Fed could raise interest rates again.</p>
+<p class="news-desc">상승하는 에너지 가격은 인플레이션에 대한 두려움과 연준이 금리를 다시 인상할 수 있다는 기대를 불러일으키고 있습니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -213,7 +213,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQVU52cWprRHhYZUQ1alRRWHpXd2FBcWVPUGJtRHR0UFVFUHg5SGtpbUdPUXFRaWY2eEx3YUdUc2xwZm1rRVVYbTlIRWJvUTB0LThrSUxON0hndTZHTnM1OFB0R3JuQVFjNmpCcEtEVVRIZ0VWX1NEZ204RkROdG92TUtYcDFnZERkU1hreTRER2tiUnp2dzgzOGFfZ1JVSkZhWE4tTGpXOTRSUXNJd1Q5X0pMbw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow Skids As Trump Gives This AI Warning; Tesla Pops Ahead Of Key Event - Investor's Business Daily</a>
-<p class="news-desc">The Dow Jones index dropped on the stock market today as President Trump gave an AI warning. Tesla jumped and some equities tested entries.</p>
+<p class="news-desc">다우존스 지수는 트럼프 대통령이 AI 경고를 내림에 따라 오늘 주식 시장에서 하락했습니다. 테슬라가 급등했고 일부 주식은 항목을 테스트했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>

@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMi6AFBVV95cUxOeHkwMjRsRV9PLVMtMGtNR1pKZ0lqLWFkVkdhRVpkTm1ISHh0WHZ5dG4xTXhYX1BoMlNxZDh6dkhsdkZZWDNSYk1VR3R3bFdQd3B3aVBqVm5zSzhfeGc5bkFGcXhEQ2kwSlFHZnFrTUt3ZWhWV2FuLUtvbTNnR1R3RFNualpuZnQ1SWxrQUp4RDh1cjVNZGcwcU5JQjR3MnM3b0U1ZlFiWldiaXJkOUZxRTBGalU0a3ZGQk9KLW5mTG5fSlhHZy1mOVdzNVdPdF96c1JGTTJrYW1sczNpMXp3SXptMXBOZ3Jy?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Scott Bessent just kicked the bitcoin debasement trade into another gear: Chart of the Day</a>
-<p class="news-desc">Bitcoin had its best week in more than three years — Scott Bessent helped light the match.</p>
+<p class="news-desc">비트코인은 3년여 만에 최고의 한 주를 보냈습니다. Scott 베센트이 경기의 조명을 도왔습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimAFBVV95cUxQVXFRc2xWUW9YUVgzcGlQc255SUNYMjFIOHUyRFoyY091c3JHN0hxbHVYWWFBMFBpRldnckM0akd3RzQybzd4Z2hBSHdDeW0wd01GUkNSc25RZDl6M0wzQk5YSnJvcHluMUItdHdoNjBNY1R5M2RhT1JVaGhxdm1kcjM3ZERfOVZERG1JZURhUExoT0pLaE1UNg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Prediction: 1 Cryptocurrency That Will Be Worth More Than Bitcoin and Ethereum Combined</a>
-<p class="news-desc">If there's one cryptocurrency with a chance of outpacing Bitcoin and Ethereum over the next five years, it's Solana.</p>
+<p class="news-desc">향후 5년 동안 비트코인 및 이더리움을 능가할 가능성이 있는 암호화폐가 하나 있다면 그것은 솔라나입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
