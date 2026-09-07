@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import logging
 import tempfile
 from pathlib import Path
 from unittest.mock import patch
@@ -566,6 +567,167 @@ class TestSaveCache:
         with patch("common.translator._save_cache") as mock_save:
             save_translation_cache()
             mock_save.assert_called_once()
+
+
+class TestSaveCacheFailureHandling:
+    """``_save_cache`` must not leak its temp file or fail silently.
+
+    Observed 2026-09-07 after a 6-worker backfill run: four orphaned
+    ``_state/tmp*.tmp`` files (~900KB each) holding partial cache snapshots,
+    with **no** ``Translation cache save failed`` warning in the log. The
+    missing warning is the tell — the OSError branch never fired, so the
+    failure escaped the handler entirely. Callers that wrap
+    ``translate_to_korean`` in ``except Exception`` (``fix_post_url_summaries``)
+    then count the escape as a translation failure with nothing logged.
+    """
+
+    def _run_with_failing_dump(self, exc):
+        """Save into an isolated dir with ``json.dump`` raising ``exc``.
+
+        Returns ``(escaped_exception_name_or_None, orphaned_tmp_names)``.
+        """
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache_path = Path(tmpdir) / "translation_cache.json"
+            tr_mod._cache = {"k": "한국어 번역"}
+            tr_mod._cache_dirty = True
+
+            def _boom(*_args, **_kwargs):
+                raise exc("boom")
+
+            escaped = None
+            try:
+                with (
+                    patch.object(tr_mod, "_CACHE_PATH", cache_path),
+                    patch("common.translator.json.dump", _boom),
+                ):
+                    _save_cache()
+            except Exception as caught:  # noqa: BLE001 - recording the escape is the assertion
+                escaped = type(caught).__name__
+            finally:
+                tr_mod._cache = original_cache
+                tr_mod._cache_dirty = original_dirty
+
+            return escaped, sorted(p.name for p in Path(tmpdir).glob("*.tmp"))
+
+    def test_oserror_does_not_leak_temp_file(self):
+        """The handled branch logs a warning but never unlinked the temp file."""
+        escaped, orphans = self._run_with_failing_dump(OSError)
+
+        assert escaped is None, f"OSError should stay handled, got {escaped}"
+        assert orphans == [], f"temp file left behind: {orphans}"
+
+    def test_non_oserror_is_reported_and_does_not_leak(self, caplog):
+        """A non-OSError must not slip past the handler unlogged.
+
+        ``except OSError`` cannot see ``RuntimeError: dictionary changed size
+        during iteration``, which is what concurrent mutation of ``_cache``
+        actually raises. Escaping silently is worse than the lost save: the
+        caller charges it to translation.
+        """
+        with caplog.at_level(logging.WARNING, logger="common.translator"):
+            escaped, orphans = self._run_with_failing_dump(RuntimeError)
+
+        assert escaped is None, f"non-OSError escaped _save_cache as {escaped}"
+        assert orphans == [], f"temp file left behind: {orphans}"
+        assert any("cache save failed" in r.message.lower() for r in caplog.records), (
+            f"failure was not logged at WARNING: {[r.message for r in caplog.records]}"
+        )
+
+
+class TestSaveCacheConcurrency:
+    """Concurrent mutation of ``_cache`` must not break serialization.
+
+    ``_cache`` had no lock while six workers wrote to it, so ``json.dump`` and
+    the mojibake-strip loop iterated a dict another thread was mutating.
+    """
+
+    def test_translate_to_korean_writes_through_the_guarded_accessor(self):
+        """The production writer must go through the lock, not a bare ``[]=``.
+
+        Without this the concurrency test below can pass while
+        ``translate_to_korean`` still mutates ``_cache`` unguarded — the lock
+        would protect only whatever the test itself calls.
+        """
+        import common.translator as tr_mod
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        try:
+            tr_mod._cache = {}
+            with (
+                patch.object(tr_mod, "TRANSLATION_ENABLED", True),
+                patch.object(tr_mod, "_translate_with_retry", return_value="번역 결과"),
+                patch.object(tr_mod, "_save_cache"),
+                patch.object(tr_mod, "_cache_put", wraps=tr_mod._cache_put) as spy,
+            ):
+                translate_to_korean("Bitcoin rallies past eighty thousand dollars today")
+            assert spy.called, "translate_to_korean bypassed _cache_put"
+        finally:
+            tr_mod._cache = original_cache
+            tr_mod._cache_dirty = original_dirty
+
+    def test_writes_during_save_do_not_raise(self):
+        import threading
+
+        import common.translator as tr_mod
+
+        # A missing accessor must fail here, not silently kill the mutator
+        # threads and leave the assertions vacuously true.
+        assert hasattr(tr_mod, "_cache_put"), "no guarded cache accessor to exercise"
+
+        original_cache = tr_mod._cache
+        original_dirty = tr_mod._cache_dirty
+        errors: list[str] = []
+        stop = threading.Event()
+        writes = [0]
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache_path = Path(tmpdir) / "translation_cache.json"
+            # Large enough that a dump spans many mutations.
+            tr_mod._cache = {f"k{i}": "한국어 번역 결과 문장입니다" * 20 for i in range(4000)}
+
+            def mutator(n: int) -> None:
+                i = 0
+                while not stop.is_set():
+                    tr_mod._cache_put(f"new-{n}-{i}", "새 번역 항목")
+                    writes[0] += 1
+                    i += 1
+
+            def saver() -> None:
+                for _ in range(40):
+                    tr_mod._cache_dirty = True
+                    try:
+                        _save_cache()
+                    except Exception as exc:  # noqa: BLE001 - recording the escape is the assertion
+                        errors.append(f"{type(exc).__name__}: {exc}")
+
+            try:
+                with patch.object(tr_mod, "_CACHE_PATH", cache_path):
+                    mutators = [threading.Thread(target=mutator, args=(n,), daemon=True) for n in range(6)]
+                    for t in mutators:
+                        t.start()
+                    savers = [threading.Thread(target=saver) for _ in range(2)]
+                    for t in savers:
+                        t.start()
+                    for t in savers:
+                        t.join()
+                    stop.set()
+                    for t in mutators:
+                        t.join(timeout=5)
+            finally:
+                stop.set()
+                tr_mod._cache = original_cache
+                tr_mod._cache_dirty = original_dirty
+
+            # Guards the assertions above: zero writes means the mutators died
+            # on entry and proved nothing about concurrent access.
+            assert writes[0] > 1000, f"mutators barely ran ({writes[0]} writes)"
+            assert errors == [], f"serialization raced with writers: {errors[:3]} ({len(errors)} total)"
+            assert sorted(p.name for p in Path(tmpdir).glob("*.tmp")) == []
 
 
 # ---------------------------------------------------------------------------
