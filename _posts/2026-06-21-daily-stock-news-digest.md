@@ -178,7 +178,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/technology/ai/articles/forget-spacex-see-overlooked-ai-153143545.html" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX는 잊어버리세요: Donald 트럼프의 포트폴리오에서 간과된 AI 주식을 확인하세요</a>
-<p class="news-desc">Forget SpaceX: See This Overlooked AI Stock in Donald Trump’s Portfolio. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
+<p class="news-desc">방금 Donald 트럼프 주식 포트폴리오: 2026년 10대 베스트 AI 및 기술 주식 추천을 다루었습니다. Extreme Networks(나스닥:EXTR)가 7위를 차지했습니다(Donald 트럼프 주식 포트폴리오: 2026년 5대 베스트 AI 및 기술 주식 추천 참조).</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

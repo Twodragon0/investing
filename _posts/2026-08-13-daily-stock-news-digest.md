@@ -245,7 +245,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investing.com/news/stock-market-news/cencora-says-walgreens-volumes-shift-reaffirms-guidance-shares-sink-93CH-4855724" class="news-title" target="_blank" rel="noopener noreferrer">Cencora는 Walgreens의 볼륨이 변화하고 지침을 재확인하며 주가가 하락했다고 말합니다.</a>
-<p class="news-desc">Cencora says Walgreens volumes shift, reaffirms guidance, shares sink. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Cencora는 Walgreens의 볼륨이 변화하고 지침을 재확인하며 주가가 하락했다고 말합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

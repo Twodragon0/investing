@@ -189,7 +189,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/09/05/ai-cybersecurity-ciso-executive.html" class="news-title" target="_blank" rel="noopener noreferrer">Meet the CISO: A new front line star in the AI cybersecurity war</a>
-<p class="news-desc">The OpenAI-Hugging Face agent hack sent shockwaves through the business world and helped put the chief information security officer into the spotlight.</p>
+<p class="news-desc">OpenAI-Hugging Face 에이전트 해킹은 비즈니스 세계에 충격을 주며 최고 정보 보안 책임자(CIO)가 주목을 받는 데 도움이 되었습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

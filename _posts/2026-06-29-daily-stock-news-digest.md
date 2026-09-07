@@ -166,7 +166,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/technology/ai/articles/australias-firmus-technologies-strikes-ai-140253776.html" class="news-title" target="_blank" rel="noopener noreferrer">호주의 Firmus Technologies는 엔비디아과 AI 액세스 계약을 체결했습니다.</a>
-<p class="news-desc">Australia's Firmus Technologies strikes AI access deal with Nvidia. AI 기술 혁신이 산업 전반의 투자 기회를 창출합니다.</p>
+<p class="news-desc">호주의 AI 인프라 회사인 Firmus Technologies는 월요일 엔비디아 Corp과 전략적 파트너십을 체결하여 신흥 AI 기업에 컴퓨팅 성능에 대한 보다 비용 효과적인 접근을 제공할 수 있도록 지원했다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -262,7 +262,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/healthcare/articles/billionaire-mark-cuban-says-fined-151501736.html" class="news-title" target="_blank" rel="noopener noreferrer">억만장자 마크 쿠반(Mark Cuban)은 보험 회사와 서비스 제공자에게 초과 청구할 때마다 100달러의 벌금을 부과하면 '국가 부채를 갚을 수 있다'고 말합니다.</a>
-<p class="news-desc">Billionaire Mark Cuban Says If We Fined Insurance Companies and Providers $100 Each Time They Overbilled, ‘We Could P. $100 — 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
+<p class="news-desc">Cuban은 보험 과다 청구 및 잘못된 거부로 인해 100달러의 벌금이 미국 부채를 갚을 수 있다고 믿습니다. 의료비 청구 오류에 대해 연방 데이터가 보여주는 내용은 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -274,7 +274,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/healthcare/articles/abbott-laboratories-abt-must-face-153214128.html" class="news-title" target="_blank" rel="noopener noreferrer">Abbott Laboratories(ABT)는 PediaSure, 아동 성장에 관한 진술에 대한 소송에 직면해야 합니다.</a>
-<p class="news-desc">Abbott Laboratories (ABT) must face a Lawsuit over PediaSure, Statements about Children’s Growth. ABT — 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
+<p class="news-desc">Abbott Laboratories(NYSE:ABT)는 최고의 두뇌-컴퓨터 인터페이스 주식 중 하나입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

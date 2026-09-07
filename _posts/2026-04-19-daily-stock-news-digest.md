@@ -222,7 +222,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investing.com/news/economy-news/adb-chief-warns-of-yen-pressure-from-japans-tooslow-rate-hikes-4622167" class="news-title" target="_blank" rel="noopener noreferrer">ADB 총재, 일본의 너무 느린 금리 인상으로 인한 엔화 압박 경고</a>
-<p class="news-desc">ADB chief warns of yen pressure from Japan’s too-slow rate hikes. ADB — 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
+<p class="news-desc">ADB 총재, 일본의 너무 느린 금리 인상으로 인한 엔화 압박 경고</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>
@@ -256,7 +256,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/crypto/articles/x-says-cashtags-drove-1-150700942.html" class="news-title" target="_blank" rel="noopener noreferrer">X, Cashtags가 이틀 만에 거래량 10억 달러를 돌파했다고 밝혔습니다</a>
-<p class="news-desc">X Says Cashtags Drove $1 Billion in Trading Volume Within Two Days. $1 — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">X는 새로운 Cashtags 기능이 첫 이틀 만에 약 10억 달러의 글로벌 거래량을 창출했다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

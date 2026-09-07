@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/rockets-hard-elon-musk-responds-151500401.html" class="news-title" target="_blank" rel="noopener noreferrer">'로켓은 어렵다': 일론 머스크은 자신의 SpaceX가 $1.8T IPO로 활공하면서 Jeff Bezos의 로켓 폭발에 반응합니다.</a>
-<p class="news-desc">'Rockets are hard': Elon Musk responds to Jeff Bezos' rocket explosion as his own SpaceX glides to a $1.8T IPO. $1.8T — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Blue Origin의 New Glenn 로켓은 뜨거운 화재 테스트 중에 폭발했으며 SpaceX가 아직 가장 큰 IPO을 향해 나아가는 동안 일론 머스크은 이에 대해 몇 가지 생각을 했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

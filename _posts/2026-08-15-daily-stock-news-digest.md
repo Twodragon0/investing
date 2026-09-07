@@ -233,7 +233,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/technology/ai/articles/openai-just-hit-40-billion-164532728.html" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI가 400억 달러의 실행 속도를 달성했습니다. 그렇다면 최고 경영진이 IPO 이전에 출구를 향해 질주하는 이유는 무엇입니까?</a>
-<p class="news-desc">Two senior OpenAI executives announced their departures in the same week that the company reported staggering revenue growth, and the timing points to forces most headlines are missing entirely.</p>
+<p class="news-desc">두 명의 OpenAI 고위 임원이 회사가 엄청난 수익 성장을 보고한 같은 주에 사임을 발표했으며 대부분의 헤드라인을 강제할 시점이 완전히 누락되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

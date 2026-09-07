@@ -229,7 +229,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/03/28/trump-no-kings-protests.html" class="news-title" target="_blank" rel="noopener noreferrer">'No Kings' protest rallies against Trump planned in thousands of U.S. cities</a>
-<p class="news-desc">More than 3,200 events were planned in all 50 states for what could be the largest single-day nonviolent protest in U.S. history, organizers said.</p>
+<p class="news-desc">주최측은 미국 역사상 최대 규모의 일일 비폭력 시위를 위해 50개 주 전체에서 3,200개 이상의 행사가 계획됐다고 밝혔다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

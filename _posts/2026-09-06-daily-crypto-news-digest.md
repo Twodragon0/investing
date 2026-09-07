@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/fincen-crypto-overseas-scam-centers-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">FinCEN ties $13B in crypto scams to non-US operations</a>
-<p class="news-desc">The agency reported that “transnational criminal organizations” based in compounds in Southeast Asia were largely behind digital asset scams targeting US residents.</p>
+<p class="news-desc">FinCEN은 2023년부터 2025년 사이에 접수된 33,000개 이상의 보고서를 분석한 결과 암호화폐 사기로 의심되는 금융 거래가 약 130억 달러에 달하는 것으로 확인했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/trezor-data-breach-affects-67k-us-customers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Trezor says data breach affects another 67K US customers</a>
-<p class="news-desc">Trezor said an additional 67,000 US users were affected by its shipping provider’s data breach, opening the path to potential phishing attacks and social engineering scams.</p>
+<p class="news-desc">2019년부터 2021년 중반 사이에 Trezor 지갑을 주문한 67,000명의 미국 사용자(WHO)가 배송업체의 데이터 유출에 노출되어 피싱 공격의 경로가 만들어졌을 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -294,7 +294,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/kalshi-traffic-soars-regulatory-pressure-mounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Kalshi US visits soar 1,500% as regulatory pressure mounts</a>
-<p class="news-desc">Kalshi’s US web traffic climbed more than 1,500% in less than a year, while trading volume grew even faster and legal scrutiny of its sports contracts intensified.</p>
+<p class="news-desc">Kalshi는 플랫폼에 대한 직접 접근이 제한된 캐나다와 영국에서도 트래픽이 급증함에 따라 7월에 1,540만 명의 미국 방문을 기록했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

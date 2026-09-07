@@ -279,7 +279,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/crypto/articles/stablecoin-card-spending-forecast-hit-070656894.html" class="news-title" target="_blank" rel="noopener noreferrer">Stablecoin card spending forecast to hit $50 billion a year by 2028 - RedotPay</a>
-<p class="news-desc">Global stablecoin card spending is expected to quadruple to $50 billion a ‌year by 2028, stablecoin payments company RedotPay ‌said on Tuesday.</p>
+<p class="news-desc">스테이블코인 결제 회사 RedotPay는 화요일에 전 세계 스테이블코인 카드 지출이 2028년까지 연간 500억 달러로 4배 증가할 것으로 예상한다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

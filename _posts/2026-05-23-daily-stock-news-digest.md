@@ -312,7 +312,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investing.com/news/economy-news/kevin-warsh-sworn-in-as-new-fed-chair-4707162" class="news-title" target="_blank" rel="noopener noreferrer">Kevin Warsh가 새로운 연준 의장으로 선서했으며 트럼프는 자신이 독립하기를 원한다고 말했습니다.</a>
-<p class="news-desc">Kevin Warsh sworn in as new Fed chair, Trump says wants him to be independent. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
+<p class="news-desc">Kevin Warsh가 새로운 연준 의장으로 취임했으며 트럼프는 자신이 독립하기를 원한다고 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

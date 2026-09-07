@@ -255,7 +255,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/sectors/technology/articles/tiktok-challenges-eu-gatekeeper-status-094409550.html" class="news-title" target="_blank" rel="noopener noreferrer">TikTok, 유럽 최고 법원에서 EU '문지기' 지위에 도전</a>
-<p class="news-desc">TikTok challenges EU 'gatekeeper' status at Europe's top court. EU — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">화요일 바이트댄스(Bytedance)의 소셜 미디어 플랫폼인 TikTok은 유럽 최고 법원에서 EU 규정에 따라 "문지기" 지정을 취소하기 위해 최후의 시도를 했습니다. 이 규정은 규제 당국이 거대 기술의 힘을 억제하려고 노력함에 따라 더욱 엄격한 기준을 충족해야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

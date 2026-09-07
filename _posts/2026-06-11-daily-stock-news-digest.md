@@ -160,7 +160,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/seagate-technology-stx-gaining-unprecedented-171421688.html" class="news-title" target="_blank" rel="noopener noreferrer">전례 없는 AI에 따른 수요로 이익을 얻고 있는 Seagate Technology(STX)</a>
-<p class="news-desc">Seagate Technology (STX) Gaining on Unprecedented AI-Driven Demand. STX — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Seagate Technology Holdings plc(나스닥:STX)는 전례 없는 AI에 따른 수요에 힘입어 지난 12개월 동안 550% 이상의 수익을 올렸습니다. 분석가들은 회사가 향후 5년 동안 EPS를 약 70% 증가시킬 것으로 예상합니다. 이 주식은 투자할 수 있는 멈출 수 없는 성장주 상위 10개 중 하나입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

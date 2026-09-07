@@ -142,7 +142,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/hyperliquid-rwa-contracts-rise-32-trading-q2?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Hyperliquid RWA 계약은 2분기 거래 활동의 32%로 증가합니다.</a>
-<p class="news-desc">Tokenized real-world assets accounted for more than a third of Hyperliquid’s quarterly trading volume, generating 6.6% of the protocol’s $169 million quarterly revenue.</p>
+<p class="news-desc">Hyperliquid 분기별 거래량의 1/3 이상이 토큰화된 실제 자산에 의해 주도되었으며, 이는 프로토콜 분기별 수익 1억 6900만 달러의 6.6%를 창출했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

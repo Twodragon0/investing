@@ -296,7 +296,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/media-advertising/articles/trump-media-pitched-100-000-165416714.html" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 미디어는 미국 대통령 게시물의 '가장 빠른' 피드를 위해 월 100,000달러의 수수료를 제시했다고 FT 보고서에서 밝혔습니다</a>
-<p class="news-desc">Trump Media pitched $100,000 monthly fee for 'fastest' feed of US president's posts, FT reports. $100,000, US, FT — 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
+<p class="news-desc">이 문제에 정통한 사람들에 따르면 Donald 트럼프의 소셜 미디어 회사는 월스트리트 거래자와 투자 회사에 자신의 Truth Social 플랫폼에 있는 미국 대통령의 게시물에 더 빠르게 접근할 수 있는 대가로 한 달에 최대 100,000달러를 청구하는 것을 논의했다고 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

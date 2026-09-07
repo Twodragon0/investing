@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/company-news/delhivery-q1-fy27-slides-volumes-surge-55-as-margins-compress-93CH-4847668" class="news-title" target="_blank" rel="noopener noreferrer">Delhivery Q1 FY27 슬라이드: 마진이 줄어들면서 거래량이 55% 급증</a>
-<p class="news-desc">Delhivery Q1 FY27 slides: volumes surge 55% as margins compress. 55% — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Delhivery Q1 FY27 슬라이드: 마진이 줄어들면서 거래량이 55% 급증</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-delhivery-q1-2026-revenue-rises-28-as-volumes-jump-93CH-4847665" class="news-title" target="_blank" rel="noopener noreferrer">수익 통화 기록: Delhivery 2026년 1분기 수익은 물량이 증가함에 따라 28% 증가합니다.</a>
-<p class="news-desc">Earnings call transcript: Delhivery Q1 2026 revenue rises 28% as volumes jump. 28% — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">수익 통화 기록: Delhivery 2026년 1분기 매출은 물량이 증가함에 따라 28% 증가합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

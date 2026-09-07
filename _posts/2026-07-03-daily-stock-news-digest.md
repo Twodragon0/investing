@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/technology/articles/singapores-bdx-says-open-ipo-085143633.html" class="news-title" target="_blank" rel="noopener noreferrer">싱가포르의 BDx는 AI 붐이 아시아 확장을 촉진함에 따라 IPO에 개방적이라고 말합니다.</a>
-<p class="news-desc">Singapore's BDx says open to an IPO as AI boom fuels Asia expansion. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">싱가포르의 BDx 데이터 센터는 아시아 전역으로 확장하고 급증하는 AI 수요를 최대한 활용하기 위해 자본을 모색하기 때문에 기업 공개가 옵션 중 하나라고 말했습니다. 그는 잠재적인 IPO에 대한 일정은 없으며 가능한 상장 장소도 배제하지 않았다고 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

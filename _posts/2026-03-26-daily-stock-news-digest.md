@@ -252,7 +252,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-03-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/polymarket-72-sure-goldman-lead-162759729.html" class="news-title" target="_blank" rel="noopener noreferrer">Polymarket은 Goldman이 SpaceX의 IPO을 이끌 것이라고 72% 확신합니다.</a>
-<p class="news-desc">Polymarket is 72% Sure That Goldman Will Lead SpaceX's IPO. 72% — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">예측 시장을 제외한 모든 곳에서 골드만삭스 및 모건스탠리은 역사상 가장 큰 IPO 명령에 대한 확률을 나누고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

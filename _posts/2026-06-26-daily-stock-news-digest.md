@@ -241,7 +241,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/jd-sports-upgrades-listing-broaden-165103729.html" class="news-title" target="_blank" rel="noopener noreferrer">JD Sports, 미국 투자자 접근 확대를 위해 상장 업그레이드</a>
-<p class="news-desc">JD Sports Upgrades Listing to Broaden U.S. Investor Access. JD — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">미국 JD Sports의 주식은 이제 Pink Limited Market의 OTCQX 거래소에서 거래되어 더 깊은 자본 풀에 대한 접근이 확대됩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

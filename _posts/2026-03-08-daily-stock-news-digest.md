@@ -164,7 +164,7 @@ permalink: "/stock-news/2026/03/08/daily-stock-news-digest/"
 <div class="news-card-thumb"><img src="https://media.zenfs.com/en/insidermonkey.com/b10a2e4a0f1765f120e5d313263ebe63" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
 <div class="news-card-body">
 <a href="https://finance.yahoo.com/news/xplr-infrastructure-lp-xifr-target-201039904.html" class="news-title" target="_blank" rel="noopener noreferrer">XPLR 인프라, LP(XIFR) 목표가 Barclays에서 12달러로 증가됨</a>
-<p class="news-desc">XPLR Infrastructure, LP (XIFR) Target Increased to $12 at Barclays. $12, XPLR, LP — 디파이 생태계의 성장과 리스크에 관한 내용입니다.</p>
+<p class="news-desc">XPLR 인프라, LP(NYSE:XIFR)는 지금 구매할 수 있는 가장 저평가된 유틸리티 주식 11개 중 하나입니다. 2월 12일 Barclays는 비중축소 등급을 유지하면서 XPLR 인프라, LP(NYSE:XIFR)에 대한 회사 목표 가격을 10달러에서 12달러로 높였습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

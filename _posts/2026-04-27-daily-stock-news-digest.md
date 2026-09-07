@@ -251,7 +251,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/economy-news/sen-tillis-clears-path-for-trumps-fed-pick-after-doj-drops-powell-probe-4637482" class="news-title" target="_blank" rel="noopener noreferrer">Sen Tillis는 DOJ이 파월 프로브를 삭제한 후 트럼프의 연준 선택에 대한 경로를 지웁니다.</a>
-<p class="news-desc">Sen Tillis clears path for Trump’s Fed pick after DOJ drops Powell probe. DOJ — 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
+<p class="news-desc">Sen Tillis는 DOJ이 파월 프로브를 삭제한 후 트럼프의 연준 선택에 대한 경로를 지웁니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

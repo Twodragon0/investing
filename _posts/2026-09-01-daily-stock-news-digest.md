@@ -232,7 +232,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/articles/trump-says-465k-savings-makes-110500861.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump says $465K in savings makes you 'rich.' Financial experts warn it falls short — how much do you actually need?</a>
-<p class="news-desc">Here’s what to know about an executive order to expand retirement account access for those who don’t have access to workplace retirement savings plans.</p>
+<p class="news-desc">다음은 WHO이 직장 퇴직 저축 계획에 접근할 수 없는 사람들을 위한 퇴직 계좌 접근 권한을 확대하기 위한 행정 명령에 대해 알아야 할 사항입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/31/trump-venezuela-oil-gas-price.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump announced a massive oil deal with Venezuela. Why it won't lower gas prices anytime soon</a>
-<p class="news-desc">President Donald Trump announced Friday that the U.S. secured majority control over 65 billion barrels of Venezuela's proven oil reserves.</p>
+<p class="news-desc">도널드 트럼프 대통령은 금요일 미국이 베네수엘라의 확인된 석유 매장량 중 650억 배럴에 대한 대부분의 통제권을 확보했다고 발표했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

@@ -258,7 +258,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/stocks/articles/colgate-cl-faces-cautious-outlook-165934096.html" class="news-title" target="_blank" rel="noopener noreferrer">Colgate (CL)는 Barclays, BofA 트림 가격 목표로 조심스러운 전망에 직면</a>
-<p class="news-desc">Colgate (CL) Faces Cautious Outlook as Barclays, BofA Trim Price Targets. CL — 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
+<p class="news-desc">Colgate-Palmolive Company(NYSE:CL)는 조기 퇴직 포트폴리오: 매수할 상위 15개 주식에 포함되어 있습니다. 4월 14일 Barclays 분석가 Lauren Lieberman은 Colgate-Palmolive Company(NYSE:CL)에 대한 회사의 권장 가격을 88달러에서 79달러로 낮췄습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

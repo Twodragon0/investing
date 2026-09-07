@@ -135,7 +135,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/04/anthropic-names-global-affairs-chief-as-trump-tensions-persist.html" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic names global affairs chief to tackle AI policy as Trump tensions persist</a>
-<p class="news-desc">Cuéllar is tasked with finding common ground with Trump's Republican administration, which blacklisted and ordered controls around Anthropic's AI this year.</p>
+<p class="news-desc">Cuéllar는 올해 Anthropic의 AI에 대한 통제를 블랙리스트에 올리고 명령을 내린 트럼프의 공화당 행정부와 공통점을 찾는 임무를 맡고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

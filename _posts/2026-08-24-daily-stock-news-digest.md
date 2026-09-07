@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/technology/ai/articles/nvidia-cloverleaf-partnering-advance-data-152523132.html" class="news-title" target="_blank" rel="noopener noreferrer">NVIDIA, Cloverleaf Partnering to Advance Data Center Development</a>
-<p class="news-desc">Technology giant NVIDIA is furthering its support of artificial intelligence (AI) and data center construction.</p>
+<p class="news-desc">거대 기술 기업인 엔비디아는 인공 지능(AI) 및 데이터 센터 구축에 대한 지원을 강화하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

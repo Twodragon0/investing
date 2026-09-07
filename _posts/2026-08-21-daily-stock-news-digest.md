@@ -289,7 +289,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/08/20/california-ag-bonta-paramount-wbd-lawsuit-remedies.html" class="news-title" target="_blank" rel="noopener noreferrer">California AG는 CNBC에 Paramount-WBD 소송을 해결하려면 '강력한 구조적 구제책'이 필요하다고 말했습니다.</a>
-<p class="news-desc">California AG Rob Bonta discussed the states' antitrust case to block the Paramount Skydance-Warner Bros. Discovery merger with CNBC's David Faber.</p>
+<p class="news-desc">California AG Rob Bonta는 Paramount Skydance-Warner Bros. Discovery와 CNBC의 David Faber 합병을 막기 위한 주의 독점 금지 소송에 대해 논의했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

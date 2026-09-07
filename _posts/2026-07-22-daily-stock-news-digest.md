@@ -279,7 +279,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/economy-news/carney-says-he-will-intensify-trade-talks-with-trump-most-premiers-pledge-to-keep-us-alcohol-bans-4803954" class="news-title" target="_blank" rel="noopener noreferrer">Carney는 트럼프과의 무역 협상을 강화할 것이라고 말했습니다. 대부분의 총리는 미국의 알코올 금지를 유지하겠다고 약속합니다.</a>
-<p class="news-desc">Carney says he will intensify trade talks with Trump; most premiers pledge to keep US alcohol bans. US — 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
+<p class="news-desc">Carney는 트럼프과의 무역 협상을 강화할 것이라고 말했습니다. 대부분의 총리는 미국의 알코올 금지를 유지하겠다고 약속합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

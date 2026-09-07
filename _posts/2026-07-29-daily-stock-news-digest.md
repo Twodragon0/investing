@@ -263,7 +263,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/markets/article/6-members-of-congress-have-bought-spacex-stock-including-one-democrat-130256608.html" class="news-title" target="_blank" rel="noopener noreferrer">민주당 의원 1명을 포함해 6명의 의회 의원이 SpaceX 주식을 매입했습니다.</a>
-<p class="news-desc">6 members of Congress have bought SpaceX stock, including one Democrat. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
+<p class="news-desc">최근 일론 머스크의 SpaceX가 공개 시장에 진출하면서 Capitol Hill에 대한 투자 관심이 높아졌습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
