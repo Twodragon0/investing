@@ -100,30 +100,39 @@ class TestFaviconUrlException:
 
 
 class TestGenerateTitleBasedDescBranches:
-    def test_korean_title_no_entity_with_ctx(self):
-        """Line 283: ctx exists but entity_str is empty → return f'{clean}. {ctx}'."""
-        # A Korean title with no extractable numbers/percentages → entity_str empty
+    def test_korean_title_with_ctx(self):
+        """Known theme → ``f'{clean}. {ctx}'``."""
         result = _generate_title_based_desc("비트코인 시장 동향 분석 보고서", "bitcoin")
-        assert isinstance(result, str)
-        assert len(result) > 0
+        assert result.startswith("비트코인 시장 동향 분석 보고서.")
+        assert result.endswith("비트코인 시장 심리와 가격 흐름에 주목하세요.")
 
-    def test_english_title_over_120_chars_truncated(self):
-        """Line 297: clean > 120 → clean[:117] + '...'."""
+    def test_korean_title_without_ctx_returns_bare_title(self):
+        """Unknown theme → no context sentence is appended."""
+        result = _generate_title_based_desc("비트코인 20% 급등해 신고가 경신", "unknown_theme_xyz")
+        assert result == "비트코인 20% 급등해 신고가 경신"
+
+    def test_korean_title_over_80_chars_truncated(self):
+        """clean > 80 → ``clean[:77] + '...'``."""
+        long_title = "비트코인이 기관 수요 급증에 힘입어 " + "사상 최고가를 경신하고 있으며 " * 5
+        assert len(long_title) > 80
+        result = _generate_title_based_desc(long_title, "bitcoin")
+        assert "..." in result
+        assert len(result.split(".")[0]) <= 80
+
+    def test_english_title_short_circuits_before_truncation(self):
+        """An ASCII-dominant title returns early, so length handling never runs."""
         long_title = "Bitcoin ETF sees unprecedented inflows as " + "institutional demand surges " * 5
         assert len(long_title) > 120
-        result = _generate_title_based_desc(long_title, "bitcoin")
-        assert isinstance(result, str)
-        assert len(result) > 0
+        assert _generate_title_based_desc(long_title, "bitcoin") == ""
 
-    def test_entity_str_with_ctx(self):
-        """Line 300-301: entity_str and ctx both present."""
-        result = _generate_title_based_desc("Bitcoin surges 15% to $100K milestone", "bitcoin")
-        assert "15%" in result or "$100K" in result or "비트코인" in result
+    def test_mixed_language_title_judged_by_ratio_not_presence(self):
+        """One Hangul token does not make a mostly-English title Korean.
 
-    def test_entity_str_without_ctx(self):
-        """Line 303-304: entity_str present, ctx empty (unknown theme)."""
-        result = _generate_title_based_desc("BTC surges 20% to new ATH", "unknown_theme_xyz")
-        assert isinstance(result, str)
+        The old predicate was ``re.search(r'[가-힣]', title)``, so a single
+        Korean word was enough to route an English headline into the Korean
+        branch and out into the body verbatim.
+        """
+        assert _generate_title_based_desc("Bitcoin ETF sees record inflows this week 비트코인", "bitcoin") == ""
 
 
 # ---------------------------------------------------------------------------

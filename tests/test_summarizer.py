@@ -91,14 +91,25 @@ class TestGenerateTitleBasedDesc:
         result = _generate_title_based_desc("비트코인 가격이 급등하며 신고가 돌파", "unknown_theme")
         assert len(result) > 0
 
-    def test_english_title_with_known_theme(self):
-        result = _generate_title_based_desc("Bitcoin ETF sees record inflows this week", "bitcoin")
-        assert len(result) > 10
+    # An English title means no Korean rendition of this item exists. The body
+    # is Korean-first, so the function emits nothing rather than dressing the
+    # raw English headline with a Korean tail. Corpus scan 2026-09-04: the old
+    # English branch produced 252 leaking blurbs across 158 posts, 97% of every
+    # blurb it ever generated.
+    def test_english_title_returns_empty(self):
+        assert _generate_title_based_desc("Bitcoin ETF sees record inflows this week", "bitcoin") == ""
 
-    def test_english_title_with_ticker_extraction(self):
-        result = _generate_title_based_desc("BTC and ETH rally 15% on institutional demand", "price")
-        # Tickers/percentages should be embedded
-        assert len(result) > 10
+    def test_english_title_with_tickers_returns_empty(self):
+        assert _generate_title_based_desc("BTC and ETH rally 15% on institutional demand", "price") == ""
+
+    def test_english_title_never_leaks_headline_words(self):
+        title = "Bitcoin trades near $80,000 as stocks close with gains"
+        result = _generate_title_based_desc(title, "price_market")
+        # Discriminating assertion: not merely "empty", but that no fragment of
+        # the English headline survives into the body under any theme.
+        assert result == ""
+        for word in ("Bitcoin", "trades", "stocks", "$80,000"):
+            assert word not in result
 
     def test_english_title_removes_source_suffix(self):
         result = _generate_title_based_desc("Bitcoin hits all-time high - Reuters", "bitcoin")
@@ -108,12 +119,12 @@ class TestGenerateTitleBasedDesc:
         result = _generate_title_based_desc("Fed holds rates steady - Bloomberg", "macro")
         assert "Bloomberg" not in result
 
-    def test_percentage_extraction(self):
-        result = _generate_title_based_desc("BTC surges 25.5% in one week", "price_market")
+    def test_korean_title_keeps_percentage(self):
+        result = _generate_title_based_desc("비트코인 한 주 만에 25.5% 급등", "price_market")
         assert "25.5%" in result
 
-    def test_dollar_value_extraction(self):
-        result = _generate_title_based_desc("Bitcoin reaches $100K milestone today", "bitcoin")
+    def test_korean_title_keeps_dollar_value(self):
+        result = _generate_title_based_desc("비트코인 $100K 고지 도달", "bitcoin")
         assert "$100K" in result
 
     def test_long_korean_title_truncated(self):

@@ -6,7 +6,10 @@ for the full plan. The fixtures cover the 8 cases from the plan's matrix:
 ``cross_theme_dedup_heavy``, ``korean_only_titles``,
 ``mixed_lang_with_synthetic_desc``, and ``image_variants``, plus
 ``punctuation_edge_cases`` added 2026-08-06 after a hyphen-truncation
-regression reached main — the golden that caught it did so by accident.
+regression reached main — the golden that caught it did so by accident, and
+``translated_title_fallback`` added 2026-09-04 for the body-blurb Korean
+guard (every pre-existing fixture sets ``title_ko: None``, so the branch that
+carried 93% of the leaked blurbs had no snapshot at all).
 
 To regenerate the golden after an intentional output change:
     UPDATE_GOLDEN=1 pytest tests/test_summarizer_themed_news_golden.py -q
@@ -34,6 +37,7 @@ from tests.fixtures.themed_news import (  # noqa: E402
     punctuation_edge_cases,
     small,
     tiny_below_threshold,
+    translated_title_fallback,
 )
 
 # Each entry: (golden_name, fixture_module). The ``ITEMS`` list on each
@@ -49,6 +53,7 @@ _CASES = [
     ("mixed_lang_with_synthetic_desc", mixed_lang_with_synthetic_desc),
     ("image_variants", image_variants),
     ("punctuation_edge_cases", punctuation_edge_cases),
+    ("translated_title_fallback", translated_title_fallback),
 ]
 
 

@@ -21,6 +21,7 @@ from common.summary_quality import (
     ASCII_MIN_LEN,
     ASCII_RATIO_THRESHOLD,
     ascii_ratio,
+    contains_english_clause,
     is_ascii_heavy,
 )
 from common.summary_quality import is_boilerplate as _is_boilerplate
@@ -115,6 +116,34 @@ def count_blurb_quality(body: str) -> tuple[int, int]:
         if _is_boilerplate(text):
             bad += 1
     return bad, total
+
+
+def count_blurb_language(body: str) -> tuple[int, int]:
+    """Return ``(english, total)`` per-URL blurbs in a post body.
+
+    ``count_blurb_quality`` asks whether a blurb is *chrome*; it never asks what
+    *language* it is in, and ``_is_boilerplate`` is not a language check. That
+    blind spot let "<English headline>. <entities> — <Korean context>" blurbs
+    accumulate unobserved: on 2026-09-04 the chrome metric read 2.4% and the
+    front-matter ASCII check read 0% while the body carried ~474 English
+    blurbs.
+
+    Whole-blurb ``is_ascii_dominant`` is *not* usable here — the Korean tail
+    drags the ratio under the threshold, and it caught only 1 of 4 real leaks
+    when measured. The signature is a leading English clause, so this looks for
+    a Hangul-free run instead.
+    """
+    if not body:
+        return 0, 0
+    english = total = 0
+    for match in _BODY_DESC_SEG_RE.finditer(body):
+        text = _BLURB_TAG_RE.sub("", match.group(1) or match.group(2) or "").strip()
+        if not text:
+            continue
+        total += 1
+        if contains_english_clause(text):
+            english += 1
+    return english, total
 
 
 # Front matter description field patterns (description_ko or description)
@@ -253,6 +282,8 @@ def classify_posts(posts: list[dict]) -> dict:
     blurb_bad = 0
     blurb_total = 0
     blurb_posts: list[dict] = []
+    blurb_english = 0
+    blurb_english_posts: list[dict] = []
     boilerplate_items = []
     title_repeat_items = []
     real_items = []
@@ -296,12 +327,19 @@ def classify_posts(posts: list[dict]) -> dict:
         blurb_total += total_blurbs
         if bad_blurbs:
             blurb_posts.append({**p, "bad_blurbs": bad_blurbs, "total_blurbs": total_blurbs})
+        # Language of the same layer — chrome detection is not a language check.
+        english_blurbs, _ = count_blurb_language(body)
+        blurb_english += english_blurbs
+        if english_blurbs:
+            blurb_english_posts.append({**p, "english_blurbs": english_blurbs})
 
     return {
         "total": total,
         "blurb_bad": blurb_bad,
         "blurb_total": blurb_total,
         "blurb_posts": blurb_posts,
+        "blurb_english": blurb_english,
+        "blurb_english_posts": blurb_english_posts,
         "no_desc": no_desc_items,
         "boilerplate": boilerplate_items,
         "title_repeat": title_repeat_items,
@@ -335,6 +373,8 @@ def format_text(stats: dict, days: int) -> str:
     bl_bad = stats.get("blurb_bad", 0)
     bl_total = stats.get("blurb_total", 0)
     bl_posts = len(stats.get("blurb_posts", []))
+    en_bad = stats.get("blurb_english", 0)
+    en_posts = len(stats.get("blurb_english_posts", []))
 
     lines = [
         f"Description Quality Report (last {days} day(s))",
@@ -347,6 +387,7 @@ def format_text(stats: dict, days: int) -> str:
         f"  Mojibake (body) : {mj_count} ({_pct(mj_count, total)})",
         f"  Body desc artifacts: {ba_posts} post(s), {ba_segs} segment(s)",
         f"  URL blurb chrome: {bl_bad}/{bl_total} ({_pct(bl_bad, bl_total)}) in {bl_posts} post(s)",
+        f"  URL blurb English: {en_bad}/{bl_total} ({_pct(en_bad, bl_total)}) in {en_posts} post(s)",
         f"  No description  : {nd_count} ({_pct(nd_count, total)})",
     ]
     if stats["boilerplate"]:
@@ -418,6 +459,8 @@ def format_markdown(stats: dict, days: int) -> str:
         f"| Mojibake (인코딩) | {mj_count} | {_pct(mj_count, total)} |",
         f"| URL 블러브 크롬 | {stats.get('blurb_bad', 0)} | "
         f"{_pct(stats.get('blurb_bad', 0), stats.get('blurb_total', 0))} (블러브 기준) |",
+        f"| URL 블러브 영어 누출 | {stats.get('blurb_english', 0)} | "
+        f"{_pct(stats.get('blurb_english', 0), stats.get('blurb_total', 0))} (블러브 기준) |",
         f"| 본문 desc 잔재 | {ba_posts} | {ba_segs} segment(s) |",
         f"| description 없음 | {nd_count} | {_pct(nd_count, total)} |",
     ]

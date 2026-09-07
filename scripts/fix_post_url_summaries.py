@@ -13,6 +13,11 @@ market-data error notices, navigation bars, newsletter solicitations. The
 detector strengthening that keeps *new* posts clean ships separately; this
 backfills what is already published.
 
+A second population joined 2026-09-04: blurbs left in English by the title-based
+synthesizer. Neither the chrome check nor the title-duplicate check asks what
+language a blurb is in, so 386 of them across 186 posts were invisible here even
+though the sourcing order below is exactly what they need.
+
 Sourcing order, mirroring the collection pipeline so a repaired blurb is
 indistinguishable from a well-collected one:
 
@@ -20,7 +25,10 @@ indistinguishable from a well-collected one:
    its description, accepting it only if it passes the same quality gates a
    fresh collection would apply — not boilerplate, not a restatement of the
    title, long enough to inform.
-2. **Translate** to Korean when the recovered text is not already Korean.
+2. **Translate** to Korean when the recovered text carries an English clause.
+   The trigger is an embedded run of Hangul-free words, not "zero Hangul" — the
+   leaked shape is "<English headline>. <Korean context>", which has Hangul in
+   it. A translation that fails open is dropped, never written back.
 3. **Synthesize** from title + source when the fetch yields nothing usable
    (dead link, consent wall, paywall).
 
@@ -69,7 +77,7 @@ from common.enrichment_synthetic import (  # noqa: E402
     _is_title_related_description,
     generate_synthetic_description,
 )
-from common.summary_quality import is_boilerplate  # noqa: E402
+from common.summary_quality import contains_english_clause, is_boilerplate  # noqa: E402
 from common.text_utils import _strip_trailing_artifacts, normalize_blurb  # noqa: E402
 from common.translator import translate_to_korean  # noqa: E402
 
@@ -106,7 +114,6 @@ _P0_RE = re.compile(
 
 _TAG_RE = re.compile(r"<[^>]+>")
 _DATE_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})-")
-_HANGUL_RE = re.compile(r"[가-힣]")
 
 
 class Blurb(NamedTuple):
@@ -136,10 +143,18 @@ def _post_date(path: Path) -> date | None:
 
 
 def _is_bad(text: str, title: str) -> bool:
-    """A blurb worth replacing: site chrome, or the headline restated."""
+    """A blurb worth replacing: site chrome, the headline restated, or English.
+
+    The language arm was added 2026-09-04. Neither ``is_boilerplate`` nor the
+    title-duplicate check asks what language a blurb is in, so the 252 blurbs
+    the title-based synthesizer had emitted as
+    "<English headline>. <entities> — <Korean context>" across 158 posts were
+    invisible to this tool even though its sourcing order (re-fetch →
+    translate → synthesize) is exactly what they need.
+    """
     if not text:
         return True
-    return is_boilerplate(text) or _is_desc_duplicate_of_title(text, title)
+    return is_boilerplate(text) or _is_desc_duplicate_of_title(text, title) or contains_english_clause(text)
 
 
 def find_blurbs(path: Path) -> list[Blurb]:
@@ -314,14 +329,24 @@ def refetch(blurb: Blurb) -> str:
     if not _is_title_related_description(blurb.title, desc):
         return ""
 
-    if not _HANGUL_RE.search(desc):
+    # Trigger on an embedded English clause, not on "zero Hangul": a blurb that
+    # leads with an English headline and trails a Korean sentence has Hangul in
+    # it, so the old check skipped translation for exactly the shape this tool
+    # was extended to repair.
+    if contains_english_clause(desc):
         try:
             translated = translate_to_korean(desc)
         except Exception as exc:
-            logger.debug("Translation failed, keeping source text: %s", exc)
+            logger.debug("Translation failed, dropping English text: %s", exc)
             translated = ""
-        if translated and not is_boilerplate(translated):
-            desc = translated
+        # translate_to_korean is fail-open — it returns its input unchanged when
+        # the service is disabled or errors. Re-check rather than trust, the
+        # same contract headline.select_korean_headline uses. Without this a
+        # failed translation writes the English text straight back: the blurb
+        # stays flagged forever while the run reports it as repaired.
+        if not translated or is_boilerplate(translated) or contains_english_clause(translated):
+            return ""
+        desc = translated
 
     return desc
 

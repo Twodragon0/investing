@@ -39,6 +39,7 @@ from .summarizer_priority import classify_priority as _classify_priority
 from .summary_quality import (  # noqa: F401  (_is_boilerplate_desc / _BOILERPLATE_DESC_PHRASES re-exported for backward compat)
     _BOILERPLATE_DESC_PHRASES,
     _is_boilerplate_desc,
+    is_ascii_dominant,
 )
 from .text_utils import (  # noqa: F401  (_best_favicon_link, _favicon_url re-exported for golden test monkey-patching)
     _best_favicon_link,
@@ -100,78 +101,32 @@ def _generate_title_based_desc(title: str, theme_key: str) -> str:
         "stablecoin": "스테이블코인 유통량 변화가 시장 유동성의 선행 지표로 작용합니다.",
     }
 
-    # Extract key entities from title for specificity
-    tickers = re.findall(r"\b[A-Z]{2,5}\b", title)
-    _NOISE = {
-        "CEO",
-        "IPO",
-        "SEC",
-        "FED",
-        "GDP",
-        "CPI",
-        "ETF",
-        "AI",
-        "USD",
-        "FOR",
-        "THE",
-        "ARE",
-        "HAS",
-        "NOT",
-        "BUT",
-        "ALL",
-        "CAN",
-        "NOW",
-        "HOW",
-        "NEW",
-        "CBS",
-        "FBI",
-        "GOP",
-        "RSS",
-        "API",
-    }
-    tickers = [t for t in tickers if t not in _NOISE][:2]
-    values = re.findall(r"\$[\d,.]+[KkMmBbTt]?|\d+(?:\.\d+)?%", title)[:2]
-    kr_nouns = re.findall(r"[가-힣]{2,}", title)[:3]
+    # An ASCII-dominant title means no Korean rendition of this item exists.
+    # The body is Korean-first, so emit nothing rather than dressing the raw
+    # English headline with a Korean tail — that shape ("<English headline>.
+    # <entities> — <Korean context>") is what a 2026-09-04 corpus scan found in
+    # 252 blurbs across 158 posts, 97% of every blurb this function produced.
+    # It sat directly beneath a card anchor that already showed the Korean
+    # title. Recovering those items is a translation-backfill concern upstream,
+    # not something this renderer can synthesize.
+    #
+    # `is_ascii_dominant` is the repo-wide language SSoT (``summary_quality``),
+    # the same one ``headline.select_korean_headline`` re-checks translations
+    # with, so a mixed-language title is judged by ratio rather than by "has at
+    # least one Hangul syllable".
+    if is_ascii_dominant(title):
+        return ""
 
-    # Build entity string for specificity
-    key_parts = values + tickers + kr_nouns
-    entity_str = ", ".join(key_parts[:3]) if key_parts else ""
-
-    # Check if title is already Korean
-    has_korean = bool(re.search(r"[가-힣]", title))
-    if has_korean:
-        # Korean title: condense and add entity-specific context
-        # `\s+` (not `\s*`): a hyphen inside a compound is not a delimiter. With zero
-        # spaces allowed this cut "(BTC-USD:Cryptocurrency)" down to "(BTC" — 21 such
-        # titles in the corpus. Cost of the stricter rule is an outlet glued on
-        # without a space, which is the cheaper failure.
-        clean = re.sub(r"\s+[-–—|]\s*\S+$", "", title).strip()
-        ctx = _THEME_CONTEXT.get(theme_key, "")
-        if len(clean) > 80:
-            clean = clean[:77] + "..."
-        if entity_str and ctx:
-            return f"{clean}. {ctx}"
-        if ctx:
-            return f"{clean}. {ctx}"
-        return clean
-
-    # English title: build entity-rich Korean description
-    # Remove source suffix (expanded list)
-    clean = re.sub(
-        r"\s*[-–—|]\s*(?:Reuters|Bloomberg|CNBC|CNN|BBC|AP|Forbes|WSJ"
-        r"|MarketWatch|Yahoo\s*Finance|The\s*(?:Block|Verge|Guardian)"
-        r"|Decrypt|CoinDesk|CoinTelegraph|Barron'?s)\s*$",
-        "",
-        title,
-        flags=re.I,
-    ).strip()
-    if len(clean) > 120:
-        clean = clean[:117] + "..."
-
-    ctx = _THEME_CONTEXT.get(theme_key, "시장 참여자들이 주목하는 소식입니다.")
-    if entity_str:
-        return f"{clean}. {entity_str} — {ctx}"
-    return f"{clean}. {ctx}"
+    # Korean title: condense and append the theme context.
+    # `\s+` (not `\s*`): a hyphen inside a compound is not a delimiter. With zero
+    # spaces allowed this cut "(BTC-USD:Cryptocurrency)" down to "(BTC" — 21 such
+    # titles in the corpus. Cost of the stricter rule is an outlet glued on
+    # without a space, which is the cheaper failure.
+    clean = re.sub(r"\s+[-–—|]\s*\S+$", "", title).strip()
+    if len(clean) > 80:
+        clean = clean[:77] + "..."
+    ctx = _THEME_CONTEXT.get(theme_key, "")
+    return f"{clean}. {ctx}" if ctx else clean
 
 
 # Generic/synthetic description detection now lives in common.summary_quality.

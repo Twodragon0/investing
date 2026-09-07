@@ -97,6 +97,40 @@ def is_ascii_heavy(text: str) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Embedded-English detection (2026-09-04)
+#
+# The ratio checks above judge a string as a whole, which is the right question
+# for a front-matter description but the wrong one for a rendered body blurb:
+# a leading English clause followed by a Korean tail scores *under* the
+# threshold. Measured on the corpus that day, whole-string ``is_ascii_dominant``
+# caught 1 of 4 real leak samples. The signature is a Hangul-free stretch long
+# enough to be a clause, so that is what this measures.
+#
+# 6 words: calibrated over all 6,219 body blurbs. It catches the 252 known
+# title-fallback leaks at 100% recall, and a sample of the 222 additional hits
+# were all genuine leaks (untranslated source descriptions, foreign-site
+# chrome) rather than false alarms. Dropping to 3 adds 415 hits that are
+# mostly Korean prose quoting an English product name.
+# ---------------------------------------------------------------------------
+ENGLISH_CLAUSE_MIN_WORDS = 6
+
+_HANGUL_SPLIT_RE = re.compile(r"[가-힣]")
+_ASCII_WORD_RE = re.compile(r"[A-Za-z]{2,}")
+
+
+def longest_hangul_free_word_run(text: str) -> int:
+    """Return the ASCII-word count of the longest Hangul-free stretch."""
+    if not text:
+        return 0
+    return max(len(_ASCII_WORD_RE.findall(chunk)) for chunk in _HANGUL_SPLIT_RE.split(text))
+
+
+def contains_english_clause(text: str, min_words: int = ENGLISH_CLAUSE_MIN_WORDS) -> bool:
+    """Return True if an English clause is embedded in otherwise Korean text."""
+    return longest_hangul_free_word_run(text) >= min_words
+
+
+# ---------------------------------------------------------------------------
 # Canonical positive-signal pattern.
 # ---------------------------------------------------------------------------
 ARTICLE_SPECIFIC_RE = re.compile(
