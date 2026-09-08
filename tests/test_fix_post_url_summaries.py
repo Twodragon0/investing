@@ -155,6 +155,117 @@ def test_collect_targets_honours_days_window(tmp_path: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Ordering
+#
+# `--limit` slices whatever order `collect_targets` returns, so the order *is*
+# the selection policy. Measured 2026-09-08 on the live corpus: with the
+# newest-first default, `--limit 60` reaches 11 droppable blurbs; ordering
+# droppable first reaches 60. The legacy population that deletion targets sits
+# in 2026-03..05, which no small `--limit` can reach from the newest end — that
+# is why `--days` looked inert when combined with `--limit 60` (90/180/365-day
+# windows all selected the identical newest 60).
+# ---------------------------------------------------------------------------
+
+# A post whose flagged blurb is droppable: the blurb restates the title and
+# adds only an outlet name.
+_DROPPABLE_POST = """---
+title: "삭제 적격 포스트"
+---
+
+<div class="news-card-item">
+<a href="https://example.com/dup" class="news-title">EXCLUSIVE: Anthropic IPO launch shifts toward mid-October, sources say</a>
+<p class="news-desc">EXCLUSIVE: Anthropic IPO launch shifts toward mid-October, sources say Reuters</p>
+</div>
+"""
+
+
+def test_default_order_is_newest_first(tmp_path: Path) -> None:
+    """The scheduled job depends on this. A silent change reroutes every run.
+
+    `backfill-url-summaries.yml` runs daily with a small `--limit`; if the
+    default order moved, the set of blurbs it processes every night would change
+    with no other signal. Pinned separately from the opt-in mode below, because
+    a test that only checks `droppable-first` cannot catch a regression here.
+    """
+    _write(tmp_path, "2026-08-01-old.md", _DROPPABLE_POST)
+    _write(tmp_path, "2026-09-01-new.md", _CARD_POST)
+
+    targets = mod.collect_targets(tmp_path, days=None)
+
+    assert [t.path.name for t in targets] == ["2026-09-01-new.md", "2026-08-01-old.md"]
+
+
+def test_droppable_first_order_front_loads_deletable_blurbs(tmp_path: Path) -> None:
+    """Opt-in mode: the deletable blurb comes first even though its post is older."""
+    _write(tmp_path, "2026-08-01-old.md", _DROPPABLE_POST)
+    _write(tmp_path, "2026-09-01-new.md", _CARD_POST)
+
+    targets = mod.collect_targets(tmp_path, days=None, order="droppable-first")
+
+    assert mod._is_droppable(targets[0].text, targets[0].title), (
+        f"first target is not droppable: {targets[0].text[:60]!r}"
+    )
+    assert targets[0].path.name == "2026-08-01-old.md"
+    # Nothing is dropped from the population — only reordered.
+    assert len(targets) == len(mod.collect_targets(tmp_path, days=None))
+
+
+def test_droppable_first_keeps_newest_first_within_each_group(tmp_path: Path) -> None:
+    """Order must be stable, or a staged rollout cannot review the same slice twice.
+
+    Two droppable posts and two non-droppable ones: within each group the newer
+    post still comes first, so `--limit` slices are reproducible across runs.
+    """
+    _write(tmp_path, "2026-07-01-drop-old.md", _DROPPABLE_POST)
+    _write(tmp_path, "2026-08-01-drop-new.md", _DROPPABLE_POST)
+    _write(tmp_path, "2026-07-15-keep-old.md", _CARD_POST)
+    _write(tmp_path, "2026-08-15-keep-new.md", _CARD_POST)
+
+    names = [t.path.name for t in mod.collect_targets(tmp_path, days=None, order="droppable-first")]
+
+    assert names == [
+        "2026-08-01-drop-new.md",
+        "2026-07-01-drop-old.md",
+        "2026-08-15-keep-new.md",
+        "2026-07-15-keep-old.md",
+    ]
+
+
+def test_unknown_order_is_rejected(tmp_path: Path) -> None:
+    """A typo must fail loudly rather than silently falling back to newest-first."""
+    with pytest.raises(ValueError, match="order"):
+        mod.collect_targets(tmp_path, days=None, order="oldest-first")
+
+
+def test_droppable_first_requires_the_drop_flag() -> None:
+    """Reordering without `--drop-unresolvable` would starve the repair mission.
+
+    Droppable-first pushes the newest posts' real-content blurbs past `--limit`,
+    and those are the ones translation still has to fix. The combination is
+    only coherent when deletion is actually enabled.
+    """
+    parser = mod.build_parser()
+    with pytest.raises(SystemExit):
+        parser.parse_args(["--order", "droppable-first"])
+    args = parser.parse_args(["--order", "droppable-first", "--drop-unresolvable"])
+    assert args.order == "droppable-first"
+
+
+def test_drop_cap_is_reachable_in_one_run(tmp_path: Path) -> None:
+    """With droppable-first, `--limit` at the cap makes the cap load-bearing.
+
+    Until now the cap was never exercised end-to-end: newest-first never
+    surfaced enough droppable blurbs in one slice to hit it.
+    """
+    for i in range(mod._MAX_DROPS_PER_RUN + 10):
+        _write(tmp_path, f"2026-08-{(i % 28) + 1:02d}-d{i}.md", _DROPPABLE_POST)
+    targets = mod.collect_targets(tmp_path, days=None, order="droppable-first")
+    repairs = [(b, "", "unresolved") for b in targets]
+
+    assert len(mod.select_drops(repairs)) == mod._MAX_DROPS_PER_RUN
+
+
+# ---------------------------------------------------------------------------
 # Rewriting
 # ---------------------------------------------------------------------------
 

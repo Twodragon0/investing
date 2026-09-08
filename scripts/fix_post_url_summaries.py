@@ -269,8 +269,33 @@ def find_blurbs(path: Path) -> list[Blurb]:
     return found
 
 
-def collect_targets(posts_dir: Path, days: int | None) -> list[Blurb]:
-    """Flagged blurbs across the corpus, newest post first."""
+ORDER_NEWEST = "newest"
+ORDER_DROPPABLE_FIRST = "droppable-first"
+ORDERS = (ORDER_NEWEST, ORDER_DROPPABLE_FIRST)
+
+
+def collect_targets(posts_dir: Path, days: int | None, order: str = ORDER_NEWEST) -> list[Blurb]:
+    """Flagged blurbs across the corpus.
+
+    ``--limit`` slices whatever order this returns, so the order *is* the
+    selection policy.
+
+    ``newest`` (default) is what the daily scheduled job depends on and must not
+    change without noticing. ``droppable-first`` moves deletable blurbs to the
+    front while keeping newest-first inside each group, which is the only way a
+    small ``--limit`` reaches the legacy population: those blurbs sit in
+    2026-03..05, and from the newest end `--limit 60` reached 11 of them where
+    droppable-first reaches 60 (measured 2026-09-08). It also explains why
+    ``--days`` looked inert next to a small ``--limit`` — 90/180/365-day windows
+    all selected the identical newest 60.
+
+    Reordering does not change the resolver cost: Google News accounts for 86.3%
+    of droppable blurbs and 88.9% of the rest, so the request profile is the
+    same either way.
+    """
+    if order not in ORDERS:
+        raise ValueError(f"unknown order {order!r}; expected one of {ORDERS}")
+
     cutoff = None if days is None else datetime.now(UTC).date() - timedelta(days=days)
     targets: list[Blurb] = []
     for path in sorted(posts_dir.glob("*.md"), reverse=True):
@@ -278,6 +303,12 @@ def collect_targets(posts_dir: Path, days: int | None) -> list[Blurb]:
         if cutoff is not None and (posted is None or posted < cutoff):
             continue
         targets.extend(b for b in find_blurbs(path) if _is_bad(b.text, b.title))
+
+    if order == ORDER_DROPPABLE_FIRST:
+        # `sorted` is stable, so newest-first survives inside each group. That
+        # matters for the staged rollout: an unstable order would hand a
+        # different slice to every run and make reviewing one impossible.
+        targets.sort(key=lambda b: not _is_droppable(b.text, b.title))
     return targets
 
 
@@ -657,6 +688,25 @@ def _run_text_only(args) -> int:
     return 0
 
 
+class _Parser(argparse.ArgumentParser):
+    """Parser that rejects incoherent flag combinations at parse time.
+
+    Validating here rather than in ``main`` keeps the rule reachable from a
+    test: ``build_parser().parse_args([...])`` has to be the thing that fails,
+    or the check can only be exercised by running the whole tool.
+    """
+
+    def parse_args(self, args=None, namespace=None):  # type: ignore[override]
+        parsed = super().parse_args(args, namespace)
+        if parsed.order == ORDER_DROPPABLE_FIRST and not parsed.drop_unresolvable:
+            # Droppable-first pushes the newest posts' real-content blurbs past
+            # `--limit`, and those are exactly the ones translation still has to
+            # repair. Reordering without enabling deletion starves the tool's
+            # primary mission for no gain.
+            self.error("--order droppable-first requires --drop-unresolvable")
+        return parsed
+
+
 def build_parser() -> argparse.ArgumentParser:
     """The CLI parser, exposed so flag defaults are testable.
 
@@ -664,7 +714,7 @@ def build_parser() -> argparse.ArgumentParser:
     is a safety property, and a test that cannot reach the parser can only
     skip — which proves nothing.
     """
-    parser = argparse.ArgumentParser(description="Backfill per-URL summaries in published posts.")
+    parser = _Parser(description="Backfill per-URL summaries in published posts.")
     parser.add_argument("--days", type=int, default=None, help="최근 N일 포스트만 (기본: 전체)")
     parser.add_argument("--limit", type=int, default=None, help="처리할 블러브 최대 개수")
     parser.add_argument("--workers", type=int, default=6, help="동시 재수집 스레드 수 (기본 6)")
@@ -688,6 +738,16 @@ def build_parser() -> argparse.ArgumentParser:
         "--skip-synthetic",
         action="store_true",
         help="재수집 실패 시 합성 폴백을 쓰지 않고 원문 유지 (품질 저하 방지)",
+    )
+    parser.add_argument(
+        "--order",
+        choices=ORDERS,
+        default=ORDER_NEWEST,
+        help=(
+            "대상 정렬. 기본 newest 는 일일 스케줄 job 이 의존하는 순서다. "
+            "droppable-first 는 삭제 적격을 앞으로 몰아 작은 --limit 이 레거시 "
+            "모집단에 닿게 하며, --drop-unresolvable 과 함께만 쓸 수 있다"
+        ),
     )
     parser.add_argument(
         "--drop-unresolvable",
@@ -725,7 +785,7 @@ def main() -> int:
     if args.text_only:
         return _run_text_only(args)
 
-    targets = collect_targets(POSTS_DIR, args.days)
+    targets = collect_targets(POSTS_DIR, args.days, order=args.order)
     if args.limit is not None:
         targets = targets[: args.limit]
 
