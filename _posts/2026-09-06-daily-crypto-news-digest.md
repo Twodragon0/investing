@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBKd0NUU2dmRUxtOGNnbGVnNWMwQVJYRDAya3NidGotRWx5SkMwWHBYc2owUlB3d3ZwSGdvX1dVVTNKblQ0dDlFMmMwN29yOGh5cmpuc25JU2FKX3ZXZHpxdzEzY2txOXBnYk9aMDNkdl9aZU0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미 강력 고용 데이터에 연준 금리 인상 우려 재점화, 비트코인 8만 달러 하회 - Investing.com 한국어</a>
-<p class="news-desc">미 강력 고용 데이터에 연준 금리 인상 우려 재점화, 비트코인 8만 달러 하회 Investing.com 한국어</p>
+<p class="news-desc">고용지표에 연준 금리인상 기대감 고조… 비트코인 8만 달러 밑돌아도 ETF 유입은 지속</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
