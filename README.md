@@ -125,6 +125,7 @@
 | scripts/tools/gsc\_index\_audit.py                |      234 |        5 |     98% |253-257, 416, 421, 561 |
 | scripts/tools/guard\_falsifiability.py            |      190 |       81 |     57% |150, 667-671, 681-683, 712-721, 726, 740-749, 781-785, 790-824, 834-882, 900-926, 930 |
 | scripts/tools/indexnow\_submit.py                 |      174 |       28 |     84% |89-132, 222-229, 347-348, 358 |
+| scripts/tools/measure\_blurb\_inflow.py           |       75 |       19 |     75% |69-71, 99, 111, 133-136, 150-184, 188 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
 | scripts/tools/review\_alerting\_quality.py        |      228 |      109 |     52% |27, 111-120, 125, 128-129, 133, 150-151, 159-171, 175-192, 196-200, 271-274, 276-280, 287-299, 305, 320-328, 332-342, 346-350, 354-368, 372 |
 | scripts/tools/tune\_risk\_threshold.py            |      175 |       16 |     91% |26, 76, 92, 95-96, 98, 116, 119-120, 122, 124, 188-189, 205, 293, 402 |
@@ -134,7 +135,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **25070** | **3087** | **88%** |           |
+| **TOTAL**                                         | **25145** | **3106** | **88%** |           |
 
 
 ## Setup coverage badge
