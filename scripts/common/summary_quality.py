@@ -423,6 +423,19 @@ _BOILERPLATE_DESC_PHRASES = [
     "선두주자입니다",
     "motley fool",
     "seeking alpha",
+    # Added 2026-09-08. Both reached published card bodies verbatim and neither
+    # was caught: `is_boilerplate` did not know them, and their word overlap
+    # with the (Korean) card title is ~0.07, so the title-duplicate check
+    # missed them too. 4 blurbs corpus-wide.
+    #
+    # Long exact literals, not patterns. These gate
+    # `fix_post_url_summaries --drop-unresolvable`, and a heuristic guess at
+    # "site tagline" cannot be trusted with a delete. Each is long enough that
+    # real copy sharing its vocabulary does not match — "a time-weighted return
+    # of 8.2% for the quarter" and "Breaking news today: the Fed raised rates"
+    # both stay clear, which the discrimination tests pin.
+    "view the latest news and breaking news today",  # CNN site tagline
+    "calculated by time-weighted return since",  # Motley Fool return disclaimer
 ]
 
 
