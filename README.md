@@ -39,14 +39,14 @@
 | scripts/common/browser.py                         |      127 |        1 |     99% |       103 |
 | scripts/common/collector\_config.py               |       75 |       11 |     85% |26-28, 100-101, 136-138, 156-158 |
 | scripts/common/collector\_metrics.py              |       14 |        0 |    100% |           |
-| scripts/common/config.py                          |      115 |        9 |     92% |12-13, 34-35, 58-63, 140-142, 173 |
+| scripts/common/config.py                          |      116 |        9 |     92% |12-13, 34-35, 58-63, 140-142, 173 |
 | scripts/common/content\_filters.py                |       51 |        2 |     96% |  195, 214 |
 | scripts/common/crypto\_api.py                     |       57 |        0 |    100% |           |
 | scripts/common/dedup.py                           |      158 |        0 |    100% |           |
 | scripts/common/encoding\_guard.py                 |       29 |        0 |    100% |           |
 | scripts/common/enrichment.py                      |      187 |        4 |     98% |172, 209-211 |
 | scripts/common/enrichment\_images.py              |       51 |        0 |    100% |           |
-| scripts/common/enrichment\_network.py             |      354 |        5 |     99% |   645-652 |
+| scripts/common/enrichment\_network.py             |      355 |        5 |     99% |   649-656 |
 | scripts/common/enrichment\_synthetic.py           |      236 |        1 |     99% |       700 |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
@@ -134,7 +134,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **25002** | **3064** | **88%** |           |
+| **TOTAL**                                         | **25004** | **3064** | **88%** |           |
 
 
 ## Setup coverage badge
