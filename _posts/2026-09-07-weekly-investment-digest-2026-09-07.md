@@ -54,9 +54,11 @@ image_alt: "주간 투자 다이제스트 - 2026년 09월 07일 - 시장 분석 
 - 2026-09-07 [암호화폐 시장 종합 리포트 - 2026-09-07 | 시총 $2.69T (-3.3%)](/market-analysis/2026/09/07/daily-crypto-market-report/) -- 현재가 $6.95, 24시간 +9.59% 상승, 7일 +34.87%. 시가총액 $4.33B
 - 2026-09-07 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-07](/market-analysis/2026/09/07/daily-worldmonitor-briefing/) -- 2026-09-07 글로벌 핵심 이슈: AfD는 제2차 세계대전 이후 독일 최초의 극우 주 정부를 구성할 수 있을까? (지정학/안보). WorldMonitor 연계 소스 기준 총 20건의 글로벌…
 - 2026-09-07 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-07](/market-analysis/2026/09/07/daily-worldmonitor-briefing/) -- 9 마이애미 공항에서 아마존 화물기 폭락 사고로 최소 5명 사망 사회/기타 낮음 WorldMonitor/Al Jazeera
-- 2026-09-07 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-07](/market-analysis/2026/09/07/daily-worldmonitor-briefing/) -- 오늘의 글로벌 리스크 스냅샷 총 수집: 20건 핵심 테마: 사회/기타, 지정학/안보, 정책/법률 집중 출처: WorldMonitor/Al Jazeera
-- 2026-09-07 [주요 경제 캘린더 및 실적 일정 (2026-09-07)](/market-analysis/2026/09/07/fmp-economic-calendar/) -- 2026-09-07 오늘 일정 — 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 15건(고·중간 중요도), 대형주 실적 3건, IPO 일정 7건을 정리했습니다
-- 2026-09-07 [주요 경제 캘린더 및 실적 일정 (2026-09-07)](/market-analysis/2026/09/07/fmp-economic-calendar/) -- Mon, 31 Aug 2026 16:10:02 GMT
+<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+<li>총 수집: N/A</li>
+<li>핵심 테마: N/A</li>
+<li>집중 출처: N/A</li>
+</ul></div>
 
 ## 암호화폐 뉴스 (8건)
 

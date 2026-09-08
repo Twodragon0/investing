@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-08 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다 - 74건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 주목</li><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 바이든, 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://apnews.com/article/cryptocurrency-scam-malone-lam-guilty-3d40f81fd3ba0b5e28d6b962ca6b343d">암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다</a> <span class="p0-desc">암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO은 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다 AP 뉴스</span></li><li><a href="https://www.reuters.com/technology/bitcoin-based-liquid-network-says-320-million-withdrawn-hack-2026-09-07/">비트코인 기반의 Liquid Network는 해킹으로 인해 3억 2천만 달러가 인출되었다고 밝혔습니다</a> <span class="p0-desc">비트코인 기반의 Liquid Network는 해킹으로 인해 3억 2천만 달러가 인출되었다고 밝혔습니다 Reuters</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9fVk1xMWpGVnRPdkhPQWd1VmxvNHBKcWMzUEhyZGVrVUhqbGk1S0wtV3FJMXE3WmVpWG93dkU2cUdjVzFEaXo0RnU1RzlabmtUbGlLRk9RaUt6aWhqUmJub0JnM3lNYllDa2NmOTRyY0FlZw?oc=5">AI, 비트코인 50% 폭락할까…비탈릭 부테린 견해</a> <span class="p0-desc">비탈릭 부테린은 AI가 주도하는 비트코인 50% 폭락 전망을 거부합니다. 그리고 자신의 순자산 중 90%가 이미 반대 포지션을 취하고 있다고 말합니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 74건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (28건): 암호화폐, 달러 가격 변동 (28건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (11건): 연준, 인플레이션, BTC 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 기반의 Liquid Network는 해킹으로 인해 3억 2천만 달러가 인출되었다고 밝혔습니다
-- AI, 비트코인 50% 폭락할까…비탈릭 부테린 견해
-
-### 주요 이슈
-
-- SEC, XRP·솔라나 상품 기준 편입…암호화폐 ETF '15% 룰' 열렸다
-- 비트코인, 저점 대비 38% 반등…9만달러 돌파 기대감
-- 비트코인 ETF 다음은 ‘RWA’인가…윈터뮤트 “차기 가상자산 강세장 이끌 새로운 자금 통로” - 블록체인투데이
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Google News KR(15건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-08.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **74건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- 2026-09-08 암호화폐 핵심 뉴스: 암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다. 총 74건 분석, 핵심 테마는 비트코인, 가격/시장, 매크로/금리입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-12 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5vRVJJVV9uSkh6enNhTS1aaW4xU0g2MGxLZEhGTzNzYWN6dG5ablVkdnFISE5feDZaandibHBuVEFCRE42eUIwZTlyUVNxM1gyUW5maXI4eE5MWFVRMDlFY21pSTZRVjBrc1pReUNoVVfSAXRBVV95cUxPSVpiMnNYNzAtMU9lYXVkekJnT3FMY2lGYkY1RE1CRndOV3dQS2w2Z2llNXlBT0pDR0doQ0g5VjFlZVZkaUJXNFhUeU9IbmtaVE5CcG5SendHSnh1Z2l4R1RkVEJaVGVBb1hISFBBTGxkcWc1TA?oc=5">코스닥 장중 6%대 급등…매수 사이드카 발동, 코스피는 상승폭 축소 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 한승수 기자] 국내 증시가 10일 오전 동반 상승세를 보이는 가운데 코스닥이 장중 6% 넘게 뛰며 코스피보다 두드러진 강세를 나타내고 있다.코스닥에서는 지수 급등으로 매수 사이드카까지 발동됐다.이날 오전 코스닥지수는 전 거래일보다 47.29포인트(5.92%) 오른 846</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQlFsM0tYUV9IdDJnOFNqWGVBYzl1dTFqc3hlWXlvdndWRjRVaDBkY3ZnZ3FkOUhlekxwZjBsMjdQT0x0ajM0UWVGLUMxNFRIb0NNSlRBRVQtd0h1WnhCRGpqaXJLQXJBWmcwWTdKejlUb1l3QWhTZ0t0aXNtc1Z5T2wzc0JyYmV0?oc=5">특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세'</a> <span class="p0-desc">[특징주] 삼성전자·SK하이닉스, 美 반도체 지수 급락. '약세' 글로벌이코노믹</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,345.53 (+0.73%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 857.84 (+0.39%).
+- 2026-08-12 주식 시장에서 195건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,345.53(+0.73%), KOSDAQ 857.84(+0.39%), USD/KRW 1,412.31(-0.39%).
 - *유가가 상승했고 투자자들은 주요*
 
 ## 테마별 주요 뉴스

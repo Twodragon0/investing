@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-07 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 인플레이션 - 19건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 기준금리 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 기준금리, 프리즘 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTlNhaWl1MENGTDlmdXZjVkJza21HdDBxNGhqM28xY055Q0ZKNlo5VDE4VTJ5STNuYjVaODhWb1VEMWNjY2VCSHY4Wk1DeWlEckx6aXdRVElQMWR5dFBESDkwYUhvNElaOXRtMkdNamg3M2ZCamVXYkF1dlhGNEdpM2pvR2UxTTZnQ3hnMm5ieUxGdzV0UVBhNk1jakUzWk9sbldHa3lNLTl2azRJMzloOEZUMlkyOWpTZ0F6QVBQeTZ5U2w2RHQ1bTgxSEdNUUh5Ql9FQg?oc=5">Top White House Economist Points to 1.6% Inflation as Evidence the Fed Doesn't Need Higher Rates - 24/7 Wall St.</a> <span class="p0-desc">케빈 해셋(Kevin Hassett)은 인플레이션을 촉발하지 않고 경제가 활황이라고 말하지만, 전직 연준 관료들, 기록적인 휘발유 가격, 회의적인 분석가들이 다음 금리 결정 전에.</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1abG8xdkdEVkpzMHV6b0R6TjlFS0xCZHN5bTFBNHZPc2lqczlzbUJJX3M4QTFkOUJwejFyLW1naHpPb3JBZ2hKalhXR1docGxKR3k1UUxPd29WX1U?oc=5">8월 일자리 보고서는 연준 요율 결정에 영향을 미칠 수 있습니다.</a> <span class="p0-desc">Heritage Foundation 수석 경제학자 EJ Antoni가 'Making Money'에 참여하여 8월 일자리 보고서와 연준 금리 결정에 미치는 잠재적 영향에 대해 논의합.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 19건 중 텔레그램 0건, 소셜 1건, 정치·경제 18건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 1건, 정치·경제 18건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

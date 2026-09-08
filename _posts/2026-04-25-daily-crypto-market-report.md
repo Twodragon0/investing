@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-25 | 시총 $2.67T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Zcash</strong> (ZEC): +6.99%</li><li>🟢 <strong>Dogecoin</strong> (DOGE): +2.02%</li><li>🟢 <strong>Cardano</strong> (ADA): +1.84%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

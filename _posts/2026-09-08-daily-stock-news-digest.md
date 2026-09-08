@@ -33,50 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-08 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Federal investigators probe Amazon cargo jet's fiery runway crash that killed 5 in Miami - 136건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 주목</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 대통령 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/09/07/federal-investigators-probe-amazon-cargo-jets-fiery-runway-crash-that-killed-5-in-miami.html">Federal investigators probe Amazon cargo jet's fiery runway crash that killed 5 in Miami</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Federal investigators probe Amazon cargo jet's fiery runway crash that killed 5 in Miami 
-총 136건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (44건): 코스피, 코스닥, 환율 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (10건): 환율, 금리, 주식 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (11건): 삼성전자, 하이닉스, 반도체 기술 이슈 (11건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연방 수사관은 마이애미에서 5명의 목숨을 앗아간 아마존 화물기의 불타는 활주로 폭락을 조사합니다.
-
-### 주요 이슈
-
-- 아슈/美 국채금리 5%대 경고] 한국도 환율·부채·증시 ‘복합 압박’ 우려 - 코리아포스트 한글판
-- 주식시장은 1871년 이후 단 6번만 경고를 발하고 있으며, 역사
-- 삼성전자·SK하이닉스 3분기 실적 전망 상향…주가도 동반 반등
-- 외 11건
-
-### 투자자 체크포인트
-
-- 한국 기사 57건, 글로벌 기사 79건 수집
-- 한국 지수: KOSPI 6,995.39(+4.61%), KOSDAQ 822.19(+1.07%), USD/KRW 1,345.38(-0.05%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">44건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:23%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:25%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:14%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-08.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,995.39 (+4.61%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 822.19 (+1.07%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-09-08 주식 시장에서 136건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,995.39(+4.61%), KOSDAQ 822.19(+1.07%), USD/KRW 1,345.38(-0.05%).
+- *이재명 정부 출범과 함께 시작된 코스피 5000 목표는 지난 1월 27일 조기에 초과 달성됐다.*
 
 ## 테마별 주요 뉴스
 

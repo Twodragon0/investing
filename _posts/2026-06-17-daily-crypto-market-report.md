@@ -29,9 +29,11 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-06-17 | Fear 23 - 시장
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +8.09%</li><li>🔴 <strong>Cardano</strong> (ADA): -6.70%</li><li>🔴 <strong>XRP</strong> (XRP): -4.46%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
+- 2026-06-17 비트코인 $65,595 (24h -1.5%) · 공포·탐욕 지수 23/100 (Extreme Fear) · BTC 도미넌스 56.2%. 상위 30개 코인의 시세 및 모멘텀을 정리합니다.
 
 ## 시장 인사이트
 
