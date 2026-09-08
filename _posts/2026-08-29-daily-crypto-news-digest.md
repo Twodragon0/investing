@@ -62,7 +62,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMif0FVX3lxTE16TGJUTC1QbmhNVkxzOFdISEZ3Y0hkTWs2YUJtUjE1VnhxbU5iWDU4Q2M2bFA2T2dXcVNkTE14S2NVTUFBXy1yZFA4eFE1ek8xYVZrNTd0Rm9iUmJWdzV2Zi0tV0JXWHhlT1Z3UHZLWmRBeUFGeDJ4VnY2SjNwTlk?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin is having a great month—but Solana is doing even better as coin soars above $100</a>
-<p class="news-desc">Investors have found fresh reasons to buy Solana beyond Bitcoin’s comeback.</p>
+<p class="news-desc">투자자들은 비트코인의 복귀 이후 솔라나을 매수해야 할 새로운 이유를 찾았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -303,7 +303,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiiAJBVV95cUxNb0g5UXlkTm1aUi0wNkxyVmJ6UzVHbVdyWGd2ZTdseXJ4ZmxtemVrSnBqV2lEejBKVlVRYWR0Q3Y2aFM1bEJ5bWFiY0E4dmN0aHprdHdOOGZYdTEzUmJ4SFBqaEtXNVA1dUpOUkNIT0pXaHlrWFZ0MEs2eEg0bzlUc0p4R1gwaXdsMnJNNjlKYl93WDJCS182VE1hMERBWmNiU2RoSnVUNlFwYjh4YVZ6cmxodFdZQmc1a0dwNmpzQnlaZFlEcVlQdGRWVFUyQk1sc3pueE5RUXJzUEgycHJacl81QWZvRXpOd1hVMjhFQTlmdFpuc1Znc24zRnJHRmJtUEU2Nk4yS2Q?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin and ethereum prices today, Friday, August 28, 2026: Bitcoin moves above $81,000 before falling back</a>
-<p class="news-desc">Bitcoin opened at $80,261.86 on Friday, August 28, 2026, 1.5% higher than Thursday's opening price. As of 7:00 a.m. ET, bitcoin moved down to $79,560.02. Ethereum opened at $2,511.31, up 0.2% from Thursday's opening price. Ethereum moved lower this morning to $2,505.68 as of 7:00 a.m. ET.</p>
+<p class="news-desc">비트코인은 2026년 8월 28일 금요일 $80,261.86에 개장했는데, 이는 목요일 개장 가격보다 1.5% 높은 가격입니다. 오전 7시(ET) 현재 비트코인 가격은 $79,560.02로 하락했습니다. 이더리움은 목요일 개장가보다 0.2% 오른 $2,511.31에 개장했습니다. 이더리움은 오늘 아침 오전 7시(ET) 현재 $2,505.68로 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

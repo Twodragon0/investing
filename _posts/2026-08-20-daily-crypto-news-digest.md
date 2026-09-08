@@ -126,7 +126,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiZ0FVX3lxTE83ZXZDaWpfLVVsMXUxNzhXQ0tuNXhMVlFhTExSYmhOb0RldEplU0xhUjNzWk54UDhBSzhqbnktME1KRk5lSnZwdEttUGpka0ppcExDd1hCQ0x0YjRRaVdhQTdzdVJNanc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">2026년 8월 19일 비트코인의 현재 가격</a>
-<p class="news-desc">At 6:30 a.m. Eastern Time on August 19, 2026, one Bitcoin (BTC) is priced at $64,339.33. That’s up 203.85 from where it stood yesterday morning and roughly $48,600 lower than it was at this time last year.</p>
+<p class="news-desc">2026년 8월 19일 동부 표준시 오전 6시 30분에 비트코인(BTC) 하나의 가격은 $64,339.33입니다. 이는 어제 오전보다 203.85달러 오른 것으로 지난해 이맘때보다 약 48,600달러 낮은 수준이다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

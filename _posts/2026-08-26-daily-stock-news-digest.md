@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNMnE5STlmSDJyVHIzYkNOSzRsUGtHZFd0THZDdThJQzdhT0x1SXdfaXJhMkxVOXF3ZDlhQU1DbTNOS3JONFEtQ2Y2bHhZa3d5V0RSN3JHbUFaY0JtLVkwLWRyWkQ4ZEYtbWhKR0JsSGp0QzB1b18tcFI3YkZfRlhCV0V6UlhGUHFwSTF2SlBjaHp0Q2I1QTROMnpwYjNPM1hZRW5xcVotd2NTV2lGMTFQNXk0N245UQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow Up As Trump Says This On Canada; Nvidia Shares Skid Despite AI Move - Investor's Business Daily</a>
-<p class="news-desc">The Dow Jones average rises but other indexes fall as President Trump lashes out at Canada. Nvidia dives but a stock clears an entry.</p>
+<p class="news-desc">다우존스 평균은 상승하지만 트럼프 대통령이 캐나다를 비난함에 따라 다른 지수는 하락합니다. 엔비디아가 하락했지만 주식이 진입을 취소했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -296,7 +296,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMzl6cGlERS15WTVLZkFYRDVZdlN5ZUtSN05RaVR5ZkNFOHVaWjdnRE1EWUdPdjl3WVRoQWNYdTBSSm4za2hYSG5qSEQzc0hnTHdLN2E2LVN3MEl0Q0o3b3ctTjNOWWJPeTBjR0pWcjlOMTlaYkczcnhOb2JqR3l6T3ZwN3ViZ2dhSzZMOXJsT09vaXhjU0ZPX2FnNFJsTF9BZ1hVcEZQVW9aRVU4TF9BV204MWhSeEl2WGZSZzhSbk5PMHoyX3NnZW1VT2tlYXlGWVRsWVl2UHh6RjlzQ052SGtNXzU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Tempsens Instruments IPO allotment date likely today. GMP, how to check allotment status online - TradingView</a>
-<p class="news-desc">New Delhi, Aug. 25 -- Tempsens Instruments IPO allotment: Bidding for the initial public offering (IPO) of Tempsens Instruments (India) Ltd ended on 24th August 2026. In three days of bidding, the public issue received a strong response from investors. According to the Tempsens Instruments IPO subs…</p>
+<p class="news-desc">뉴델리, 8월 25일 -- Tempsens Instruments IPO 할당: Tempsens Instruments (India) Ltd의 최초 공모(IPO) 입찰이 2026년 8월 24일에 종료되었습니다. 입찰 3일 만에 공개 발행은 투자자들로부터 강한 반응을 얻었습니다. Tempsens Instruments IPO 하위에 따르면…</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

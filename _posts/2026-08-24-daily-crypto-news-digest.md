@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMirwFBVV95cUxNM3BaMUF5SjZLdl85SXUyU1BDandsNW9uY3Q0a0dMTHQ3N1dZZnBpZnRPUExLbklJelNnUWd6aUNPd0hFQm94bTFTUVl2bHVDd0ZPYXl4N2tJNDBVeXNiX1ZEQldhajA2N0p4U05QcU1vTS03MTcxM0lOMWFrQ0JtSFdtMzJtQ1hDWUdXeXAtSlByeWNWdVVaMlFkMFJrQ00tSmVVSkhVVXZGSlZsNTk40gHDAUFVX3lxTFByaVZodXJJdGpQcEJnQXBwSlY2TldsWUFCem16dmM2ZXhKWXB0alRnNWZZRy1ZcWthUnFlQ2plY2Jrd2NNdkt4U1hYZjNLR3hjY1lJRHN2OWgxNkJjTFVYdXNCaUNGaXY1LWFaUE9JTnEyWVdBTjZoX21kM241dERBNFVZSkc2dDVpSTN5MGhhNXBhVVRZRkdvRXdCaTRPbWhIMktQM19DWXFGYU1hRTNTaU5CVkZBLXpjTzQwaUtLWFdNYw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">90-year-old reunites with officer who kept her from losing nearly $10,000 to crypto scam</a>
-<p class="news-desc">A 90-year-old woman says she almost lost $10,000 to a scammer before a police officer stopped her at a bitcoin kiosk outside a gas station.</p>
+<p class="news-desc">90세 여성은 주유소 밖에 있는 비트코인 키오스크에서 경찰이 그녀를 제지하기 전에 사기꾼에게 거의 10,000달러를 잃을 뻔했다고 말했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMihwFBVV95cUxNQmRPOWlVTUNrTGZROWNmYmZveWlvb3MweTdtOFQxQklHNUI2eE55Vy1SU3pEeHYwNzhpTXoyZHdkc0liTl8ybWZEeTFLX2tacjlnaVVwX25RQ2hucFhKVkJRUUlycWxOU2hZY1RsZ3NMSHR2bE5IcTgtOGRwaTR5TjUxeVRyekE?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Traders bet bitcoin was stuck below $67,000. The Treasury blew that trade up in one afternoon</a>
-<p class="news-desc">A surprise bond buyback triggered a squeeze that liquidated over $4 billion in bearish crypto bets and sent bitcoin past $77,000.</p>
+<p class="news-desc">깜짝 채권 환매로 인해 약세 암호화폐 베팅에서 40억 달러 이상을 청산하고 비트코인에 77,000달러를 초과하는 압박이 촉발되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -273,7 +273,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMi4AFBVV95cUxNYk9RYTA0dnNuWjNxZmpZMkQxUTFqZzRNejdwQ21hVTVjbF9GRmZiVjJzVHZtZHg4T2ZkZGlyNGh5YWFXRFBoMWs3UzNSMnNjU3p0clc4UVVlTmZ4OFFzc0lMTFFFemR2X1ZHZ3dpUnJKOVBxQlB5LW5JZ2N1MHI1Nmk5TVFKeWhMUTVXcVV0dlNNWTY4Z2dMR1dHZGNiaFhRbVV4ZXdaQ2tlYTRvX1kwZnBoTzhOM2w2aDNaN2pmZHc4ZkJ3d3dyRXd6ZUJHSWVIbXZHY3lWczRaTkVNR2pKTg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Weekend Round-Up: Bitcoin's Best Week Since 2023, Coinbase CEO's Bullish Outlook and More</a>
-<p class="news-desc">Bitcoin posted its best week since 2023, while crypto leaders and analysts turned bullish on Bitcoin, Ethereum and the broader market.</p>
+<p class="news-desc">비트코인은 2023년 이후 최고의 주를 기록했으며, 암호화폐 리더와 분석가들은 비트코인, 이더리움 및 더 넓은 시장에서 강세를 전환했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

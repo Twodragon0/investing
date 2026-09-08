@@ -271,7 +271,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5IckxLSXNzT3VrdlV5UzNXRDUxTlQ3d1BBOWFEVk1xOXVTOU1xcGdaS2NxR1k3NmFrSFRaYUJtMTN6ZjRWbEJIakc4a3JPNEFxX01uV3liV2UtUVR4eG5tLTRMekJFOFJ0bGJ2QXVmanpZdV9wYWlzUFh30gF_QVVfeXFMTTNBUjd2b2JhclhwMnhVT1pZempacXhGd1FIZXRkeW9teGgtdmNURHBlYVFmOTB4QVh4a0RTRTV5T1dOUVdmUEZOZXZjaS1NMWIzWFhoaXhEVDBNSUU3LVJwclk1UVUtZ0t2akZId1REWUVlWGlpY2NnNHZPUnUzUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Equal-weight S&P 500 is leading the 2026 market and its flagship trade just hit $100 billion</a>
-<p class="news-desc">Money is flooding into equal-weight stock market ETFs this year. Investing experts say it's not a fad.</p>
+<p class="news-desc">올해에는 동일 가중치 주식 시장 ETF에 돈이 넘쳐납니다. 투자 전문가들은 이것이 유행이 아니라고 말한다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMihwFBVV95cUxNQmRPOWlVTUNrTGZROWNmYmZveWlvb3MweTdtOFQxQklHNUI2eE55Vy1SU3pEeHYwNzhpTXoyZHdkc0liTl8ybWZEeTFLX2tacjlnaVVwX25RQ2hucFhKVkJRUUlycWxOU2hZY1RsZ3NMSHR2bE5IcTgtOGRwaTR5TjUxeVRyekE?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">거래자들의 내기 비트코인은 $67,000 미만으로 유지되었습니다. 재무부는 어느 날 오후에 거래를 폭파했습니다.</a>
-<p class="news-desc">A surprise bond buyback triggered a squeeze that liquidated over $4 billion in bearish crypto bets and sent bitcoin past $77,000.</p>
+<p class="news-desc">깜짝 채권 환매로 인해 약세 암호화폐 베팅에서 40억 달러 이상을 청산하고 비트코인에 77,000달러를 초과하는 압박이 촉발되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimgFBVV95cUxOU2taT3BZSUl5LTZSSVJ5ZEtlSjR1N1NsdmRldjNBaWhfeWtBSVBqR0xFR0pKVjZLUW50RkF6VnVBMVJLWjZrYVhUZEpXakg2Q29jQXA3R3BQQ2hla1ZWZ0VHd05Jc1ptdmZhWTZxazFJRWZPME1lVTZfQzNoV1c2OFNjcGVTaFBnQ3dOVFVSWEV4RXhTNEh1YzVB0gGfAUFVX3lxTFA0RUhQT3dVbUo4OTA3azBmRHFRV1lCYXhlb2pJQzRDV2o5N2lpSWlwamoyeGRLclFReHJMZ1V5NldQUTNvQWhpc1dCLTAwNVFMUkpvRmhyVG1qbjVYZGxpdjExdHh6SndiU2dBNzNIMm1lS1VRYnV2QXc4cmo3RW9IdjdRS0dhdjRRbjBxRElaamV5clp2eEpTSVJWNU40OA?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Crypto extends gains after biggest 3-day rally since 2023</a>
-<p class="news-desc">Bitcoin and crypto stocks extended their rally after the flagship cryptocurrency broke out of its trading range.</p>
+<p class="news-desc">비트코인 및 암호화폐 주식은 주력 암호화폐가 거래 범위를 벗어난 후 랠리을 연장했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Today's Crypto News: Bitcoin, Ether and Altcoin Insights</a>
-<p class="news-desc">The crypto market is buzzing as Bitcoin hits US$77,692, up 22 percent, following Trump's push for the CLARITY Act. Ethereum and XRP join the rally, while macroeconomic changes fuel the surge. What does this mean for the future of digital assets? Explore the implications and market shifts.</p>
+<p class="news-desc">비트코인은 놀라운 미국 고용 보고서가 강력한 성장을 보여 암호화폐 시장을 뒤흔든 후 US$79,200까지 하락했습니다. 연준의 다음 행보에 대해 거래자들은 다가오는 소비자 물가 지수 보고서를 주목하고 있습니다. 이것이 귀하의 암호화폐 포트폴리오에 어떤 영향을 미치나요?</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiwwFBVV95cUxQNDVaUlp2VHFFNEowLWlyUFBoMjEwSjBtZVJJSlFkZFk5U0VKOHlweWNFczVvR1NTS1ozWlpMQjRtdnRqQmhLU2ItXzNVTENGMEdtUVZDdVlJcVNnZTNndXhDSzB1S0Z6SFp2aXMycjhmVUdRelkxdTJVWkxYNWppd3Z4X2VuOFkzUjZhLXVTdTZPX1dtN3dmMF9DUFZCSGh4RWVNZTlBQUNQckpkWGM1R1JYVkdMZHJvRFNaMjBTRElRdGs?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Fed Study Finds Bitcoin Gains Can Trigger More Crypto Buying Among U.S. Households</a>
-<p class="news-desc">Bitcoin’s past returns can raise crypto demand among U.S. households, with Fed research linking performance data to later purchases.</p>
+<p class="news-desc">비트코인의 과거 수익률은 미국 가구의 암호화폐 수요를 증가시킬 수 있으며, 연준 연구에서는 성과 데이터를 이후 구매와 연결합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -276,7 +276,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMipwFBVV95cUxPN1pKUjlLT2hiWEs0anBlSDYwcFhCVzY1cEFRWmpCb2U0WHNpVkxLTndyM1BVODllY0VHYWsxb1ktLXl5bDVET2lqQ1liaWlTbEcwMnp2ZDZkUG1SZDUxWDIxRFc1djlibnBtNG1iTEZqQm42VllhX3NIVHFPcGhRY3VKenp4eTBycURUS0dfYjNvNldsSy0tZm1naTBqMkRnQXgwTkh0UQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Former The OC actor on crusade to take down 'stupid' cryptocurrency</a>
-<p class="news-desc">Hollywood actor Ben McKenzie speaks to ABC News about what led him to investigate one of the biggest financial movements of the decade.</p>
+<p class="news-desc">할리우드 배우 벤 맥켄지는 ABC 뉴스에서 지난 10년간 가장 큰 금융 동향 중 하나를 조사하게 된 이유에 대해 이야기합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNckJwT3lYQkt4WE45OVR4Wmt2ZjVCaHQ2MW9DUENQSGlrd0NVZkcxM3V3RTRSQzdqNW8tVll4c1lyUmsxeUd2YmNMTG8tTU81Nzk1MTBJZ0dsMzlKenptdnh3ZW5fd044bzIzdFZoTTRlS2Y5Rmw5ZzBYeFlQMXJ5MkZFUGJWSVBQU0dJcFhaSnpBMlp1SVBrOQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Meet the Vanguard ETF That's Crushing the S&P 500 and Nasdaq-100 Despite Not Owning Micron, Sandisk, or Any of the "Magnificent Seven" Stocks - The Motley Fool</a>
-<p class="news-desc">Small-cap stocks are finally recovering after years of underperforming the major indexes.</p>
+<p class="news-desc">소형주는 주요 지수에 비해 수년간 저조한 성과를 보인 후 마침내 회복되고 있습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>

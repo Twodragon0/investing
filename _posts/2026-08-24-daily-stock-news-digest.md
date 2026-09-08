@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQWFlMaEp3UHluWU1XTmcwV196dDd3SnR0ckE5M3FQRERfbTNXUmZPb19IT3ZHZzdLenJ6T3p3d3FKTXRrRTNVeklRWlJqU3NrdC1ub3RSQ3l6NmtSbFBpRWpVNjZZaFZBaXROdVRETUFFY1lwaGpTVUprY01IMFQtOVc2TWV5OHBHSWtpeW8tTlJETmwzMVhKb3Y3LU5Ydw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'The U.S. is not the only game in town anymore' — Treasury debt faces more competition from higher-yielding bonds overseas than in recent decades - Fortune</a>
-<p class="news-desc">Yields on U.K. bonds have reached 5.81%, and German bonds are also paying 3.76%, versus 5.27% for a comparable U.S. bond. It's a big reason U.S. rates have been drifting higher.</p>
+<p class="news-desc">영국 채권 수익률은 5.81%에 달했고, 독일 채권도 3.76%를 기록했는데, 이에 비해 미국 채권은 5.27%를 기록했습니다. 미국 금리가 계속 오르는 가장 큰 이유는 바로 이것이다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -159,7 +159,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOcFNqSWRIYXRJNzh3TUVQM3VpZktWTVVUdlhuUS14by1sTTBOQXF5WTR3Tm5Ham9iVGNFcERheUp1M19Sb0ZGTU1aOE9OTF9OS21ZUGhLekUzM2lNMTBhTjF5Z3ZUMlNFbDNncGxKVzZzTWFrYTYzRnI1Wk5vd2dhZ2NFQmViMWs1bE0xRlpaMzB0SWR0aFdVekpSV0M3STQwMDhlaFhrY3VpNW5XalZ1Mi1qd0gwZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock market today: Dow, S&P 500, Nasdaq post weekly losses as bond volatility remains in focus, bitcoin soars</a>
-<p class="news-desc">Stocks posted weekly losses after a bond sell-off this week put pressure on tech and AI stocks.</p>
+<p class="news-desc">이번 주 채권 매도 이후 주식은 주간 손실을 기록하여 기술 및 AI 주식에 압력을 가했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQZXpqZERoaWxuVjJfb0lXOGJkX0NVdi1XVndHZTJQWjlvcjJqQnpzcV91ajNaTDlkQWFsd05Ba1RyNExmUGszWG4yZkNFV3hMaFQ5ckNaX0ZaOGN6LXBqMGZVNUN5WU9WUjRJYmxlMW0xYUxBOEFhZUF2SWtqYmplUUdGa3NVUF9TS3JLdUdEbTU4azQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">History Says You Should Know These 3 Things Before Buying the Vanguard S&P 500 ETF (VOO) - The Motley Fool</a>
-<p class="news-desc">To benefit from the compounding ability of owning the S&P 500 index, investors must keep some key information in mind.</p>
+<p class="news-desc">S&amp;P 500 지수 소유에 따른 복리 효과를 활용하려면 투자자는 몇 가지 주요 정보를 염두에 두어야 합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

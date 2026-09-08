@@ -271,7 +271,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEw5NEVCWFpXNW1aZS1qSjM1M0d3dUdWbzF2MEVPS19OQi1iYnM5NXh6alZKZ2VlUF91RXpyY0JZclpSWVlEUWhMZGh3SVA3ZzV2MHZld1BJRVppNkRJaGt4MC00NVlKSlg3UHdkZVJYc1gzM29aUmNoX3NVUTdPNzFZZC1KU1ktTHhWWW5hRXUybGEtbEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Meet the Super Semiconductor ETF Obliterating the S&P 500 and the Nasdaq-100 in 2026 - The Motley Fool</a>
-<p class="news-desc">This fund has one-quarter of its assets parked in Nvidia, Micron Technology, and Advanced Micro Devices.</p>
+<p class="news-desc">이 펀드는 자산의 1/4을 엔비디아, 마이크론 Technology 및 Advanced Micro Devices에 보관하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
