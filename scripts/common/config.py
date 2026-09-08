@@ -219,6 +219,16 @@ REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "15"))
 # JS-heavy sites (Twitter/X, CoinMarketCap). Collectors should import this
 # and pass it to BrowserSession rather than hardcoding the literal.
 BROWSER_TIMEOUT_MS = int(os.environ.get("BROWSER_TIMEOUT_MS", "30000"))
+# Seconds `googlenewsdecoder` sleeps after each decode, its documented lever for
+# the Google News rate limit. Default 0 = disabled, which is the behaviour the
+# resolver has always had: the daily backfill
+# (`.github/workflows/backfill-url-summaries.yml`) completes inside its budget
+# today, so pacing every decode by default would slow it for no measured gain.
+# Raise this — not the workflow's `--limit` — when the resolver starts returning
+# empty. 2026-08-06 is the reference incident: refetch yield collapsed
+# 523 -> 71 -> 0 across consecutive runs because failed redirect requests
+# extend the block rather than being free.
+GNEWS_DECODE_INTERVAL_SEC = float(os.environ.get("GNEWS_DECODE_INTERVAL_SEC", "0"))
 USER_AGENT = "Mozilla/5.0 (compatible; InvestingDragon/1.0)"
 BROWSER_USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "

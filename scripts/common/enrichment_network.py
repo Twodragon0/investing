@@ -31,7 +31,7 @@ from urllib.parse import urlparse
 import requests
 
 from . import summary_quality as _summary_quality_mod
-from .config import get_verify_ssl
+from .config import GNEWS_DECODE_INTERVAL_SEC, get_verify_ssl
 from .encoding_guard import force_utf8_if_mislabelled, sanitize_mojibake
 from .enrichment_images import _is_valid_image_url, is_logo_like_url
 from .enrichment_synthetic import _is_title_related_description
@@ -564,7 +564,11 @@ def _resolve_via_gnewsdecoder(url: str) -> str:
     try:
         from googlenewsdecoder import gnewsdecoder
 
-        result = gnewsdecoder(url)
+        # `interval` makes the library sleep that many seconds after each
+        # decode — its documented rate-limit lever. Only forwarded when set, so
+        # the default (0) keeps the call exactly as it was.
+        kwargs = {"interval": GNEWS_DECODE_INTERVAL_SEC} if GNEWS_DECODE_INTERVAL_SEC else {}
+        result = gnewsdecoder(url, **kwargs)
         if result and result.get("status") and result.get("decoded_url"):
             decoded_url = result["decoded_url"]
             if is_private_url(decoded_url):

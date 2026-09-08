@@ -3334,6 +3334,44 @@ class TestResolveViaGnewsdecoder:
             result = _resolve_via_gnewsdecoder("https://news.google.com/rss/articles/CBMi")
         assert result == ""
 
+    def _decode_kwargs(self, interval):
+        """Call the resolver with ``GNEWS_DECODE_INTERVAL_SEC`` set and return the kwargs used."""
+        mock_gnews_mod = MagicMock()
+        mock_gnews_mod.gnewsdecoder.return_value = {
+            "status": True,
+            "decoded_url": "https://real-article.com/news",
+        }
+        with (
+            patch.dict("sys.modules", {"googlenewsdecoder": mock_gnews_mod}),
+            patch("common.enrichment_network.is_private_url", return_value=False),
+            patch("common.enrichment_network.GNEWS_DECODE_INTERVAL_SEC", interval),
+        ):
+            _resolve_via_gnewsdecoder("https://news.google.com/rss/articles/CBMi")
+        return mock_gnews_mod.gnewsdecoder.call_args
+
+    def test_default_interval_is_not_passed(self):
+        """The default must leave call behaviour exactly as it was.
+
+        The daily backfill currently completes inside its budget; turning a
+        delay on by default would slow it for no measured gain. 0 means "same
+        as before", so the resolver must not start passing an interval.
+        """
+        call = self._decode_kwargs(0.0)
+        assert call.kwargs.get("interval") in (None, 0, 0.0), (
+            f"a zero interval must not be handed to the decoder: {call.kwargs!r}"
+        )
+
+    def test_configured_interval_is_passed_through(self):
+        """A non-zero setting must reach the library, not just be read.
+
+        `gnewsdecoder(source_url, interval=None, proxy=None)` sleeps `interval`
+        seconds after each decode, which is the documented lever for the Google
+        News rate limit. Asserting the *value* rather than "was called" is what
+        distinguishes wiring from a config constant nobody reads.
+        """
+        call = self._decode_kwargs(1.5)
+        assert call.kwargs.get("interval") == 1.5, f"interval not forwarded: {call.kwargs!r}"
+
 
 # ---------------------------------------------------------------------------
 # Line 527: _is_valid_image_url — long GIF allowed path
