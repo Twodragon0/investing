@@ -16,7 +16,15 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common.enrichment_synthetic import KEYWORD_TAIL_LABEL  # noqa: E402
 from common.markdown_utils import sanitize_summary_bullet  # noqa: E402
+
+# The label is produced by ``common.enrichment_synthetic`` and treated as a
+# defect here. Both sides read the one constant so renaming it cannot leave
+# this removal silently unmatched.
+_KEYWORD_TAIL_RE = re.compile(rf"\s*{re.escape(KEYWORD_TAIL_LABEL)}[\s\w,.-]+\.?\s*$")
+_BODY_KEYWORD_TAIL_SENTENCE_RE = re.compile(rf"\.\s*{re.escape(KEYWORD_TAIL_LABEL)}[^<\n]{{3,80}}\.")
+_BODY_KEYWORD_TAIL_TAG_RE = re.compile(rf"\s*{re.escape(KEYWORD_TAIL_LABEL)}[^<\n]{{3,80}}\.?(?=</)")
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -218,7 +226,7 @@ def clean_description(fm: dict[str, str]) -> bool:
     # Remove markdown bold
     inner = re.sub(r"\*\*([^*]+)\*\*", r"\1", inner)
     # Remove trailing raw tag strings (e.g., "주요 키워드: crypto, news, daily-digest.")
-    inner = re.sub(r"\s*주요 키워드:[\s\w,.-]+\.?\s*$", "", inner)
+    inner = _KEYWORD_TAIL_RE.sub("", inner)
     # Collapse whitespace
     inner = re.sub(r"\s+", " ", inner).strip()
 
@@ -261,7 +269,7 @@ def rebuild_low_quality_metadata(fm: dict[str, str], body: str) -> dict[str, int
         if any(token in cleaned for token in ("http://", "https://", "](", "<div", "<span")):
             return True
         # Raw tag strings leaking into description
-        if "주요 키워드:" in cleaned:
+        if KEYWORD_TAIL_LABEL in cleaned:
             return True
         ascii_letters = len(re.findall(r"[A-Za-z]", cleaned))
         hangul_letters = len(re.findall(r"[가-힣]", cleaned))
@@ -856,8 +864,8 @@ def process_post(filepath: Path, dry_run: bool = False) -> dict[str, int]:
 
     # Remove "주요 키워드: ..." tails from body text (HTML and markdown)
     _body_before = body
-    body = re.sub(r"\.\s*주요 키워드:[^<\n]{3,80}\.", ".", body)
-    body = re.sub(r"\s*주요 키워드:[^<\n]{3,80}\.?(?=</)", "", body)
+    body = _BODY_KEYWORD_TAIL_SENTENCE_RE.sub(".", body)
+    body = _BODY_KEYWORD_TAIL_TAG_RE.sub("", body)
     if body != _body_before:
         stats["body_keyword_tail_cleaned"] = 1
 

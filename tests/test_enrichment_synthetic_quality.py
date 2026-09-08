@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import pytest
 
-from common.enrichment_synthetic import generate_synthetic_description
+from common.enrichment_synthetic import generate_synthetic_description, korean_keywords
 
 
 def _synth(title: str, source: str = "") -> str:
@@ -203,3 +203,116 @@ def test_title_cleaning_keeps_hyphen_compounds(title: str) -> None:
     result = _synth(title)
     tail = title.rsplit("-", 1)[-1].rstrip(").")
     assert tail in result, f"compound tail {tail!r} was truncated out of {result!r}"
+
+
+# ---------------------------------------------------------------------------
+# 5. Conjugated forms the first predicate list missed
+#
+# Measured 2026-09-07 by running `korean_keywords` over all 4,652 card titles
+# in `_posts/`: `_KO_PREDICATE_ENDINGS` covered finite endings (`-습니다`,
+# `-했다`, …) but not connectives, adnominals or the polite interrogative, so
+# verb fragments were still presented as topics. Weights are token-instances
+# from that run.
+#
+# These call `korean_keywords` directly rather than going through
+# `generate_synthetic_description`. The end-to-end tests above are guarded by
+# `if "주요 키워드" in result`, which passes vacuously whenever the title routes
+# to a category branch instead of the keyword tail — 10 of 15 candidate titles
+# did exactly that when this was first written, so the assertions never ran.
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "junk",
+    [
+        "뜨거워지면서",  # -면서 connective (weight 32)
+        "넘어서면서",
+        "고려해야",  # -해야 (weight 7), named in the 2026-09-07 backfill review
+        "구매해야",
+        "팔았는데",  # -는데 (weight 10)
+        "반등하지",  # -하지 (weight 8)
+        "개선되지",  # -되지 (weight 6)
+        "인상하면",  # -하면 (weight 5)
+        "넘으면",  # -으면 (weight 3)
+        "시기라고",  # -라고 (weight 5)
+        "싶으신가요",  # polite interrogative
+        "메이커인가요",
+        "일어난",  # -어난 adnominal
+        "급락하던",  # -하던 (weight 3)
+        "부진했던",  # -했던 (weight 1)
+        "해결하려면",  # -려면
+        "많은",  # bare quantifier/adnominal, no stem left (weight 10)
+        "높은",
+        "있는",
+        "없는",
+        "같은",
+        "오른",
+        "받은",
+        "업계",  # generic noun, same class as the existing 관련/내용 stopwords
+    ],
+)
+def test_conjugated_and_adnominal_forms_are_not_keywords(junk: str) -> None:
+    """A connective, adnominal or interrogative form is not a topic.
+
+    Two real topics pad the title so the ``>= 2 surviving`` rule cannot make
+    the assertion pass by emptying the list.
+    """
+    title = f"비트코인 {junk} 반도체"
+    assert junk not in korean_keywords(title), f"{junk!r} survived filtering"
+
+
+@pytest.mark.parametrize(
+    ("token", "stem"),
+    [
+        # `-된` is derivational, not a full predicate: discarding the token
+        # throws away the topic along with the ending. Weight 56, dominated by
+        # 토큰화된(21).
+        ("토큰화된", "토큰화"),
+        ("압수된", "압수"),
+        ("연결된", "연결"),
+    ],
+)
+def test_adnominal_done_form_is_normalized_not_discarded(token: str, stem: str) -> None:
+    """Strip `-된` back to the noun the way a particle is stripped.
+
+    `토큰화된` is wrong as a keyword but `토큰화` is exactly the topic.
+    """
+    kws = korean_keywords(f"비트코인 {token} 시장")
+    assert stem in kws, f"stem {stem!r} lost from {kws!r}"
+    assert token not in kws
+
+
+@pytest.mark.parametrize(
+    ("title", "expected"),
+    [
+        # Discrimination guard: a filter that discards everything satisfies the
+        # tests above, so pin what must survive. Each token ends in a syllable
+        # the widened rules inspect.
+        ("토큰화 규제안이 국회를 통과", "토큰화"),
+        ("코스피 반등 배경은 외국인 순매수", "코스피"),
+        # `korean_keywords` keeps only the first 3 survivors, so the expected
+        # token has to be within that window — 반도체 is 4th here.
+        ("엔비디아 실적 발표를 앞둔 반도체 업종", "엔비디아"),
+        ("삼성전자 하이닉스 목표가 상향", "삼성전자"),
+    ],
+)
+def test_widened_filter_keeps_real_topics(title: str, expected: str) -> None:
+    """The widened filter must still return the title's actual subject."""
+    kws = korean_keywords(title)
+    assert expected in kws, f"{expected!r} missing from {kws!r} for {title!r}"
+
+
+def test_keyword_label_literal_has_one_owner() -> None:
+    """The label is produced in one module and stripped in another.
+
+    `improve_existing_posts` treats a `주요 키워드:` tail as a defect and removes
+    it in three places while `enrichment_synthetic` emits it. With the literal
+    copied into both, renaming the label silently stops the removal from
+    matching. Both sides must read the same constant.
+    """
+    import improve_existing_posts as iep
+
+    from common.enrichment_synthetic import KEYWORD_TAIL_LABEL
+
+    assert KEYWORD_TAIL_LABEL == "주요 키워드:"
+    assert iep.KEYWORD_TAIL_LABEL is KEYWORD_TAIL_LABEL
