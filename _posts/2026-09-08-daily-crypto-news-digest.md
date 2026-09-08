@@ -171,7 +171,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE8xb043TVQ4NWFHeTFpWHpUVVR0WlktcHMzOEtwZmFRU25ObnNuYUJ5ekFySnBkVlhaQkJvLXlNVnRUNlY0UnE5ZGtmejJlUlVadURFNEhqaFBkWGM2MHZ4TWgxV05MMFAyYlpITFBsOEpSRWM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 연준 금리 인상 전망·유가 급등에 8만 달러 아래로 하락 - Investing.com 한국어</a>
-<p class="news-desc">비트코인, 연준 금리 인상 전망·유가 급등에 8만 달러 아래로 하락 Investing.com 한국어</p>
+<p class="news-desc">비트코인 8만 달러 하회... 연준 금리인상 베팅·유가 급등에 하락</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

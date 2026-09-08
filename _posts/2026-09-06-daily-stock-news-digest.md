@@ -227,7 +227,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNcHVnRVBYTlF2Z1Zwc3NNRnMyZFkyZDVvM0NqUUcyOTZJSE5FUlhMaVR4WkVwWjBqSmNOXzdnY3hsTHBza2tSand0REo3M3NiU1AxWkFBNUwwZU5XLXNYNkEzcUl0QkRValFFYUdCeFFPdVUzcmNyZDJjZ3REZE5UaC1jR1dWSHJfcFkyZkVMZjE3bzFuOC1icDU2M1JlclRxdlE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">EXCLUSIVE: Anthropic IPO launch shifts toward mid-October, sources say</a>
-<p class="news-desc">EXCLUSIVE: Anthropic IPO launch shifts toward mid-October, sources say Reuters</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>
