@@ -77,7 +77,7 @@ from common.enrichment_synthetic import (  # noqa: E402
     _is_title_related_description,
     generate_synthetic_description,
 )
-from common.summary_quality import contains_english_clause, is_boilerplate  # noqa: E402
+from common.summary_quality import contains_english_clause, is_boilerplate, is_generic_desc  # noqa: E402
 from common.text_utils import _strip_trailing_artifacts, normalize_blurb  # noqa: E402
 from common.translator import translate_to_korean  # noqa: E402
 
@@ -155,6 +155,99 @@ def _is_bad(text: str, title: str) -> bool:
     if not text:
         return True
     return is_boilerplate(text) or _is_desc_duplicate_of_title(text, title) or contains_english_clause(text)
+
+
+# A blurb whose English words are mostly already in the card's title restates
+# the headline. 0.5 is deliberately below `_is_desc_duplicate_of_title`'s bar:
+# that check exists to reject an RSS artifact, this one to decide whether
+# deleting loses anything, and a half-shared vocabulary means it does not.
+_TITLE_OVERLAP_DROP_THRESHOLD = 0.5
+_WORD_RE = re.compile(r"[A-Za-z]{3,}")
+_FIRST_HANGUL_RE = re.compile(r"[가-힣]")
+
+# Deletion has no per-item review step, so this bound is the only thing between
+# a predicate regression and a mass delete. Sized to sit under the population
+# the 2026-09-08 scan judged droppable (315) so a full sweep still takes several
+# reviewed runs.
+_MAX_DROPS_PER_RUN = 60
+
+
+def _title_overlap(text: str, title: str) -> float:
+    """Share of the blurb's English words that already appear in the title."""
+    words = {w.lower() for w in _WORD_RE.findall(text)}
+    if not words:
+        return 0.0
+    return len({w.lower() for w in _WORD_RE.findall(title)} & words) / len(words)
+
+
+def _is_droppable(text: str, title: str) -> bool:
+    """True when removing the blurb outright loses nothing the card still shows.
+
+    Only reached for blurbs the resolver could not repair. The card keeps its
+    Korean title, link and source, so the question is whether the blurb adds
+    anything beyond those.
+
+    Scoped to English leaks: a Korean blurb is never deleted here, whatever
+    ``_is_bad`` thought of it.
+
+    The hybrid arm requires the Hangul remainder to be *recognised filler*, not
+    merely present. Measured over the 279 hybrid blurbs in ``_posts/`` on
+    2026-09-08: 205 boilerplate tails + 53 generic tails, but **21 (7.5%) were
+    real Korean prose quoting a long English proper-noun run**
+    ("…Mario Tama/Getty Images John Rapley는 The Globe and Mail") — the residual
+    false positive that ``ENGLISH_CLAUSE_MIN_WORDS = 6`` is documented to leave.
+    "Has an English clause and some Hangul" would have deleted all 21.
+    """
+    if not text or not contains_english_clause(text):
+        return False
+
+    match = _FIRST_HANGUL_RE.search(text)
+    if match:
+        remainder = text[match.start() :]
+        # Filler tail -> the English part is a pasted headline the Korean title
+        # already carries. Substantive Korean -> keep it.
+        return is_generic_desc(remainder) or is_boilerplate(remainder)
+
+    # No Hangul at all: keep it unless it says nothing new. Distinct English
+    # content is a translation job, not a deletion.
+    return (
+        is_boilerplate(text)
+        or _is_desc_duplicate_of_title(text, title)
+        or _title_overlap(text, title) >= _TITLE_OVERLAP_DROP_THRESHOLD
+    )
+
+
+def _cap_drops(candidates: list) -> list:
+    """Bound one run's deletions to ``_MAX_DROPS_PER_RUN``."""
+    return candidates[:_MAX_DROPS_PER_RUN]
+
+
+def drop_from_post(content: str, old_raw: str, kind: str) -> tuple[str, bool]:
+    """Remove a blurb's whole element, not just its inner text.
+
+    Blanking the text would leave ``<p class="news-desc"></p>``, which renders
+    as a gap in the card. The surrounding markup for the two blurb kinds is
+    fixed by ``ThemedNewsRenderer``, so the element is reconstructed from the
+    inner text rather than re-parsed.
+
+    Refuses an ambiguous anchor for the same reason ``replace_in_post`` does:
+    identical copies in one post point at different articles.
+    """
+    if kind == "news-desc":
+        element = f'<p class="news-desc">{old_raw}</p>'
+    elif kind == "p0-desc":
+        element = f'<span class="p0-desc">{old_raw}</span>'
+    else:
+        return content, False
+
+    occurrences = content.count(element)
+    if occurrences != 1:
+        return content, False
+    # Take one adjacent newline with a card blurb so the element does not leave
+    # a blank line inside `news-card-body`.
+    if kind == "news-desc" and f"{element}\n" in content:
+        return content.replace(f"{element}\n", "", 1), True
+    return content.replace(element, "", 1), True
 
 
 def find_blurbs(path: Path) -> list[Blurb]:
@@ -440,6 +533,51 @@ def repair(
     return [r for r in results if r is not None]
 
 
+def select_drops(repairs: list[tuple[Blurb, str, str]]) -> list[Blurb]:
+    """Blurbs the resolver gave up on that are safe to delete outright.
+
+    Only ``unresolved`` results are eligible: a blurb the resolver could still
+    repair is repaired, never deleted. ``skipped`` is excluded too — that is
+    "not attempted this run" (``--direct-only``), not "unrepairable".
+    """
+    candidates = [
+        blurb
+        for blurb, text, source in repairs
+        if not text and source == "unresolved" and _is_droppable(blurb.text, blurb.title)
+    ]
+    return _cap_drops(candidates)
+
+
+def apply_drops(drops: list[Blurb]) -> tuple[int, int]:
+    """Delete blurb elements from disk, grouped per post.
+
+    Returns ``(blurbs_dropped, posts_changed)``. Deliberately separate from
+    ``apply_repairs`` so a run's deletions land in their own commit: the diff is
+    then the record of what was removed, and one ``git revert`` restores all of
+    it.
+    """
+    by_post: dict[Path, list[Blurb]] = {}
+    for blurb in drops:
+        by_post.setdefault(blurb.path, []).append(blurb)
+
+    dropped = 0
+    posts_changed = 0
+    for path, items in by_post.items():
+        content = path.read_text(encoding="utf-8", errors="replace")
+        changed_here = 0
+        for blurb in items:
+            content, ok = drop_from_post(content, blurb.raw, blurb.kind)
+            if ok:
+                changed_here += 1
+            else:
+                logger.warning("Skipped ambiguous blurb anchor for drop in %s: %r", path.name, blurb.raw[:60])
+        if changed_here:
+            path.write_text(content, encoding="utf-8")
+            dropped += changed_here
+            posts_changed += 1
+    return dropped, posts_changed
+
+
 def apply_repairs(repairs: list[tuple[Blurb, str, str]], all_copies: bool = False) -> tuple[int, int]:
     """Write resolved replacements to disk, grouped per post.
 
@@ -519,7 +657,13 @@ def _run_text_only(args) -> int:
     return 0
 
 
-def main() -> int:
+def build_parser() -> argparse.ArgumentParser:
+    """The CLI parser, exposed so flag defaults are testable.
+
+    Extracted from ``main`` because ``--drop-unresolvable`` defaulting to off
+    is a safety property, and a test that cannot reach the parser can only
+    skip — which proves nothing.
+    """
     parser = argparse.ArgumentParser(description="Backfill per-URL summaries in published posts.")
     parser.add_argument("--days", type=int, default=None, help="최근 N일 포스트만 (기본: 전체)")
     parser.add_argument("--limit", type=int, default=None, help="처리할 블러브 최대 개수")
@@ -545,6 +689,19 @@ def main() -> int:
         action="store_true",
         help="재수집 실패 시 합성 폴백을 쓰지 않고 원문 유지 (품질 저하 방지)",
     )
+    parser.add_argument(
+        "--drop-unresolvable",
+        action="store_true",
+        help=(
+            f"재수집·번역이 모두 실패했고 카드가 이미 담고 있는 내용인 블러브를 삭제 "
+            f"(런당 최대 {_MAX_DROPS_PER_RUN}건). 실질 콘텐츠는 삭제하지 않는다"
+        ),
+    )
+    return parser
+
+
+def main() -> int:
+    parser = build_parser()
     args = parser.parse_args()
 
     setup_logging()
@@ -586,9 +743,22 @@ def main() -> int:
 
     print(format_report(repairs, applied=args.apply))
 
+    drops = select_drops(repairs) if args.drop_unresolvable else []
+    if args.drop_unresolvable:
+        unresolved = sum(1 for _b, text, source in repairs if not text and source == "unresolved")
+        print(f"\n삭제 대상   : {len(drops)}건 (해결 실패 {unresolved}건 중, 런당 상한 {_MAX_DROPS_PER_RUN})")
+        for blurb in drops[:3]:
+            print(f"  [{blurb.path.name}] {blurb.text[:80]}")
+
     if args.apply:
         written, posts = apply_repairs(repairs)
         print(f"\n적용: 블러브 {written}건 / 포스트 {posts}개")
+        if drops:
+            # Written after the replacements so the two land in separate
+            # commits when the caller commits between phases; the deletion diff
+            # is the only record of removed text, so it must stay reviewable.
+            dropped, drop_posts = apply_drops(drops)
+            print(f"삭제: 블러브 {dropped}건 / 포스트 {drop_posts}개")
     else:
         print("\n(dry-run — 적용하려면 --apply)")
     return 0
