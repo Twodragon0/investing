@@ -47,7 +47,7 @@
 | scripts/common/enrichment.py                      |      187 |        4 |     98% |172, 209-211 |
 | scripts/common/enrichment\_images.py              |       51 |        0 |    100% |           |
 | scripts/common/enrichment\_network.py             |      354 |        5 |     99% |   645-652 |
-| scripts/common/enrichment\_synthetic.py           |      229 |        1 |     99% |       637 |
+| scripts/common/enrichment\_synthetic.py           |      236 |        1 |     99% |       700 |
 | scripts/common/entity\_extractor.py               |      106 |        1 |     99% |       180 |
 | scripts/common/fmp\_api.py                        |      247 |        0 |    100% |           |
 | scripts/common/formatters.py                      |       30 |        0 |    100% |           |
@@ -106,7 +106,7 @@
 | scripts/generate\_ops\_10am\_digest.py            |      284 |        1 |     99% |       480 |
 | scripts/generate\_weekly\_digest.py               |      475 |        5 |     99% |421-422, 474-475, 785 |
 | scripts/generate\_weekly\_report.py               |      216 |        1 |     99% |       444 |
-| scripts/improve\_existing\_posts.py               |      490 |      218 |     56% |212, 249-250, 260, 262, 265, 271, 273, 278-280, 286, 356, 362, 395-396, 433, 437, 459, 526-531, 540, 555-578, 582-587, 592-618, 623-624, 635-683, 692-732, 767, 777-778, 784-785, 793-881, 885-970, 974 |
+| scripts/improve\_existing\_posts.py               |      494 |      218 |     56% |220, 257-258, 268, 270, 273, 279, 281, 286-288, 294, 364, 370, 403-404, 441, 445, 467, 534-539, 548, 563-586, 590-595, 600-626, 631-632, 643-691, 700-740, 775, 785-786, 792-793, 801-889, 893-978, 982 |
 | scripts/migrate\_images\_to\_r2.py                |      165 |       19 |     88% |28, 59-61, 89-95, 261-262, 320-321, 327-328, 338-339, 356 |
 | scripts/post\_loop\_to\_slack.py                  |       67 |        1 |     99% |       114 |
 | scripts/respond\_ai\_mentions.py                  |      243 |        2 |     99% |   67, 434 |
@@ -134,7 +134,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **24991** | **3064** | **88%** |           |
+| **TOTAL**                                         | **25002** | **3064** | **88%** |           |
 
 
 ## Setup coverage badge
