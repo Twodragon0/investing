@@ -148,6 +148,47 @@ class TestIsBoilerplateDesc:
     def test_none_returns_false(self):
         assert _is_boilerplate_desc(None) is False  # type: ignore[arg-type]
 
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # CNN's site tagline. Reached the card body verbatim; `is_boilerplate`
+            # did not know it, and its overlap with the Korean title is 0.07, so
+            # neither the chrome check nor the title-duplicate check saw it.
+            "View the latest news and breaking news today for U.S., world, weather, "
+            "entertainment, politics and health at CNN.com.",
+            # The Motley Fool return disclaimer. "motley fool" was already on the
+            # list, but the disclaimer never names the outlet.
+            "Calculated by Time-Weighted Return since 2002. Volatility profiles based "
+            "on trailing-three-year calculations of the standard deviation of service "
+            "investment returns.",
+        ],
+    )
+    def test_known_site_chrome_is_flagged(self, desc):
+        """Two exact literals added 2026-09-08, 4 blurbs corpus-wide.
+
+        Exact literals rather than a heuristic: these carry no false-positive
+        risk, which is what lets `fix_post_url_summaries --drop-unresolvable`
+        act on them. A pattern that guessed at "site tagline" could not be
+        trusted with a delete.
+        """
+        assert _is_boilerplate_desc(desc) is True
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # Discrimination: the literals must stay narrow. Real copy that
+            # shares vocabulary with them must not be flagged — otherwise the
+            # delete path they enable starts eating article content.
+            "The fund reported a time-weighted return of 8.2% for the quarter, "
+            "beating its benchmark by 140 basis points.",
+            "Breaking news today: the Federal Reserve raised rates by 25 basis points.",
+            "Analysts view the latest earnings beat as evidence that AI spending has not yet peaked.",
+            "Volatility profiles across the S&P 500 narrowed after the Fed decision.",
+        ],
+    )
+    def test_real_copy_sharing_vocabulary_is_not_flagged(self, desc):
+        assert _is_boilerplate_desc(desc) is False
+
     def test_boilerplate_phrase_detected(self):
         """Positive case to confirm the function works."""
         from common.summarizer import _BOILERPLATE_DESC_PHRASES

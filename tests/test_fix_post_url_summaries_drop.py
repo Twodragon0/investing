@@ -71,6 +71,20 @@ fpus = importlib.import_module("fix_post_url_summaries")
             "다우 지수가 조정 국면에 진입했습니다",
             "Sign up for our newsletter to receive the latest crypto market updates every morning.",
         ),
+        # CNN site tagline — recognised since the 2026-09-08 literal was added.
+        (
+            "다우 지수가 조정 국면에 진입했습니다",
+            "View the latest news and breaking news today for U.S., world, weather, "
+            "entertainment, politics and health at CNN.com.",
+        ),
+        # Motley Fool return disclaimer, same batch. "motley fool" was already
+        # on the phrase list but the disclaimer never names the outlet.
+        (
+            "S&P 500 장기 수익률 분석",
+            "Calculated by Time-Weighted Return since 2002. Volatility profiles based on "
+            "trailing-three-year calculations of the standard deviation of service "
+            "investment returns.",
+        ),
     ],
 )
 def test_droppable_when_the_card_already_carries_it(title: str, text: str) -> None:
@@ -80,20 +94,18 @@ def test_droppable_when_the_card_already_carries_it(title: str, text: str) -> No
 @pytest.mark.parametrize(
     ("title", "text"),
     [
-        # CNN's site tagline. Genuinely worthless, and genuinely not recognised:
-        # `is_boilerplate` misses it and its title overlap is 0.07, so the
-        # predicate keeps it.
+        # Site taglines `is_boilerplate` still does not know. Corpus-wide
+        # remainder after the CNN / Motley Fool literals were added
+        # (2026-09-08): 2 blurbs.
         (
-            "다우 지수가 조정 국면에 진입했습니다",
-            "View the latest news and breaking news today for U.S., world, weather, "
-            "entertainment, politics and health at CNN.com.",
+            "AI stock Xiao-I Corporation (Nasdaq:AIXI) makes gains",
+            "Explore the best investing ideas for 2025 at Investorideas.com. Get stock "
+            "news, podcasts, videos, and insights on AI, crypto, cannabis and mining.",
         ),
-        # The Motley Fool disclaimer, same story.
         (
-            "S&P 500 장기 수익률 분석",
-            "Calculated by Time-Weighted Return since 2002. Volatility profiles based on "
-            "trailing-three-year calculations of the standard deviation of service "
-            "investment returns.",
+            "암호화폐 산업의 선구자 중 하나인 크라켄이 TradingView에 합류했습니다",
+            "Read fresh TradingView updates: Kraken, one of the pioneers of the "
+            "cryptocurrency industry, joins TradingView. Discover more in our blog.",
         ),
     ],
 )
@@ -101,10 +113,14 @@ def test_unrecognised_chrome_is_kept_not_guessed_at(title: str, text: str) -> No
     """Documented limitation, asserted so it cannot change silently.
 
     Deleting is not reversible per-item, so the predicate only fires on signals
-    the repo already owns. Site taglines that `is_boilerplate` does not know
-    stay put; widening this belongs in `summary_quality`'s phrase list — with
-    exact literals, which carry no false-positive risk — not in a heuristic
-    here. Measured 2026-09-08: 4 such blurbs corpus-wide.
+    the repo already owns. A tagline `is_boilerplate` has never seen stays put;
+    widening belongs in `summary_quality`'s phrase list as an **exact literal**,
+    which carries no false-positive risk, not in a heuristic here.
+
+    This test earned its place: it was written on 2026-09-08 holding the CNN
+    tagline and the Motley Fool disclaimer, and it went red the moment those
+    two literals were added — which is exactly the signal it exists to give.
+    Those two moved to the must-drop list above.
     """
     assert not fpus._is_droppable(text, title)
 
