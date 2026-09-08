@@ -98,7 +98,7 @@
 | scripts/fix\_defi\_tvl\_history.py                |       52 |        1 |     98% |       117 |
 | scripts/fix\_post\_descriptions.py                |      275 |       13 |     95% |25, 164, 168, 235, 250, 256-258, 265, 267, 319-320, 572 |
 | scripts/fix\_post\_number\_format.py              |       54 |        1 |     98% |        98 |
-| scripts/fix\_post\_url\_summaries.py              |      291 |       74 |     75% |263, 282-284, 330, 430-440, 502-519, 523-594, 598 |
+| scripts/fix\_post\_url\_summaries.py              |      357 |       98 |     73% |179, 238-241, 250, 356, 375-377, 423, 523-533, 559-578, 640-657, 704-764, 768 |
 | scripts/fix\_scenario\_na\_placeholders.py        |       41 |        1 |     98% |        77 |
 | scripts/generate\_daily\_summary.py               |      283 |       59 |     79% |121-122, 125-145, 154-155, 158, 166, 196-198, 249, 325-335, 346-360, 400-401, 492-493, 517-518, 533, 535, 537, 539, 541, 596 |
 | scripts/generate\_market\_summary.py              |      673 |       27 |     96% |240-241, 396-397, 430-431, 552-553, 603, 1047-1048, 1169-1171, 1174-1177, 1245-1250, 1306, 1384, 1393 |
@@ -134,7 +134,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **25004** | **3064** | **88%** |           |
+| **TOTAL**                                         | **25070** | **3088** | **88%** |           |
 
 
 ## Setup coverage badge
