@@ -21,11 +21,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-06-21 - 정치인 거래 �
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">중앙은행</div></div></div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-06-21 정치권 핵심 이슈: 라이브: 라가르드, 오늘 주요 금리 결정 후 ECB 기자 회견 개최 | DWS 뉴스 | AC14 알리샤(DpZlGwfo57) . 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 2건 (중앙은행 2건)을 종합 정리합니다
-- 1. 라이브: 라가르드, 오늘 주요 금리 결정 후 ECB 기자 회견 개최 | DWS 뉴스 | AC14 알리샤(DpZlGwfo57) - Mshale 라이브: 라가르드, 오늘 주요 금리 결정 후 ECB 기자 회견 개최 | DWS 뉴스 | AC14 알리샤(DpZlGwfo57) Mshale
 
 ## 1. 중앙은행 정책 동향
 

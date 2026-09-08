@@ -14,8 +14,6 @@ description: "정치인 거래·정책 동향 5건 수집. 의회 거래 1건, �
 image_alt: "정치인 거래·정책 리포트 - 2026-09-08 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-
-
 **2026-09-08** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **5건** — 미국 의회 거래 1건, 트럼프 정책 1건, 중앙은행 3건
 
 ## 한눈에 보기
@@ -27,7 +25,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-08 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-09-08 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 5건 — 미국 의회 거래 1건, 트럼프 정책 1건, 중앙은행 3건
 - 1. Nancy Pelosi’s new suspicious stock trade just earned a major bullish signal - Finbold A multimillion-dollar Bloom Energy purchase linked to former House…
 
 ## 1. 미국 의회 거래 동향

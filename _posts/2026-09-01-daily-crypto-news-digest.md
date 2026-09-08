@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-01 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiogFBVV95cUxQdWZkRDVDNEkwcjNvdnE0b3NYUzFNVEFZZjRMemo3WnBzZl9QdFNRamhDUklITUhwTXVzX0lSZjRqTzJsdW5xR3VRanQwel8xY3IzQVkxbmpuSVU0blRDbEpTWEE5NkNKbW9SczI2SzAzTWRfbFhial9CY1g5STF1dmlNOHd2cUpJVG5DVkNjUEg2dUViRnptbjhVN0l5UmVxbnc?hl=en-US&gl=US&ceid=US%3Aen">전문가는 글로벌 유동성이 9월 암호화폐 시장을 주도할 수 있다고 말합니다.</a> <span class="p0-desc">글로벌 유동성이 9월 암호화폐 시장에 대한 연준의 다음 금리 결정보다 더 중요할 수 있다고 합니다.</span></li><li><a href="https://cointelegraph.com/news/cronos-network-halt-tectonic-exploit-75-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Cronos는 약 7,500만 달러에 달하는 Tectonic 익스플로잇 이후 네트워크를 중단합니다.</a> <span class="p0-desc">Crypto.com CEO Kris Marszalek은 회사의 앱과 거래소가 Tectonic 침해의 영향을 받지 않았으며 계속 정상적으로 운영되고 있다고 말했습니다.</span></li><li><a href="https://decrypt.co/376913/crypto-coms-cronos-halts-entire-blockchain-after-75m-tectonic-exploit">Crypto.com's Cronos Halts Entire Blockchain After $75M Tectonic Exploit</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **95건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
-- 2026-09-01 암호화폐 핵심 뉴스: 비트코인, 이더리움 또는 XRP: 지금 구매하기에 가장 좋은 암호화폐는 무엇일까?. 총 95건 분석, 핵심 테마는 비트코인, 가격/시장, 이더리움입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

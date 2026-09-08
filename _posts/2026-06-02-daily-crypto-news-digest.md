@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-02 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</span></li><li><a href="https://cointelegraph.com/news/gnosis-hit-by-fresh-exploit-team-vows-to-fully-cover-user-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">팀이 환불을 약속함에 따라 Gnosis Pay 악용으로 인해 지연 모듈이 발생함</a> <span class="p0-desc">공동 창립자인 Martin Köppelmann이 사용자에게 자금을 인출하고 영향을 받은 사람들에게 상환하겠다고 촉구하면서 Gnosis Pay는 지연 모듈에서 적극적인 악용에 직면했.</span></li><li><a href="https://cointelegraph.com/news/crypto-exploit-losses-fall-by-90-in-may-to-68m-certik?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">5월 암호화폐 익스플로잇 손실은 전월 대비 90% 감소한 6,800만 달러를 기록했습니다: CertiK</a> <span class="p0-desc">CertiK는 5월이 2026년 현재까지 암호화폐 손실이 1억 달러 미만으로 기록된 세 번째 달이라고 밝혔습니다</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **91건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-06-02 암호화폐 핵심 뉴스: 코인베이스는 현지 통화 출시를 통해 인도의 급성장하는 30억 달러 암호화폐 시장에 큰 역할을 합니다.. 총 91건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

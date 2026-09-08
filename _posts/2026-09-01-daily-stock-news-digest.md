@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-01 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZZDI3ZzQzb0JjNWVkbXJrUG9HOHhoVktPbVhwRmpPMURIT1BDTHFRNjJuSFRqeGU3RUZnSGhZQ2tPVHhjSnJlV05mU29FNWpEUmZfSEcyY1Q2SnNManRDdtIBYEFVX3lxTFBZZDI3ZzQzb0JjNWVkbXJrUG9HOHhoVktPbVhwRmpPMURIT1BDTHFRNjJuSFRqeGU3RUZnSGhZQ2tPVHhjSnJlV05mU29FNWpEUmZfSEcyY1Q2SnNManRDdg?oc=5">코스피, 장중 1%대 하락해 6,600대…코스닥은 3% 급락 중</a> <span class="p0-desc">(서울=연합뉴스) 이민영 기자 = 코스피가 31일 장중 1% 넘게 내려 6,600대를 나타내고 있다. 코스닥 지수는 3% 넘게 급락 중이다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9WSWpwUURyaGVyODBBaDZSci1FU051VmlTMW9OQ2NRT0htVUYybVJpdzZmcDhNS0lyVEphSGl0dWkzU2pfWGhUTHNGa0FjcVVnMmtKeFFoNnJUN3lNNmxuZ2ZHYWpiUlBuVTExQmNWTHLSAXRBVV95cUxQNm9sOUEyRnAwdnZyTmJBNUVpVnR1clJwRzE5V3hNOTRrRlBKeEtEcktLUEZRZTdxZTlBd1VabllRQnZKdlNfd2IzX1VGbnBjR2VpMHdBR2FpRk9ORlJGOWN0WWcwU2JOUmRId01raTdwb0VmVQ?oc=5">외국인·기관 ‘팔자’에 코스피 1.9%↓…코스닥은 3%대 급락 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 미국의 기준금리 인상 가능성이 다시 부각되면서 국내 증시의 투자심리가 크게 위축되고 있다.코스피는 외국인과 기관의 동반 매도에 6,600선으로 밀렸고, 코스닥은 바이오·성장주를 중심으로 낙폭이 3%를 넘어섰다.31일 오전 코스피는 전 거래일보다 129.19</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5Kc01saFFGbmFEQ1F4amFmRmFnOFBxTE5Ea1J2YXJLTDdGRl9vTEF3U0h2S3Q2SU1mMVdmN1BxSmQyOHVKbHRjOWtZTGFmWGVV?oc=5">삼성전자·SK하이닉스 4%대 급락…美 금리 인상 우려·中 반도체 추격 '겹악재' - 블루밍비트</a> <span class="p0-desc">미국의 기준금리 인상 가능성이 다시 부각된 가운데 뉴욕증시 반도체주가 일제히 약세를 보이면서 삼성전자와 SK하이닉스가 31일 장 초반 4% 넘게 하락하고 있다. 이날 오전 9시9분 기준 삼성전자는 전 거래일 대비 4.09% 내린 24만6500원에 거래되고 있다. SK하</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,820.02 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 834.29 (-0.49%).
-- 2026-09-01 주식 시장에서 182건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,820.02(+0.46%), KOSDAQ 834.29(-0.49%), USD/KRW 1,367.57(-0.59%).
 - *(서울=연합뉴스) 이민영 기자 = 코스피가 31일 장중 1% 넘게 내려 6,600대를 나타내고 있다.*
 
 ## 테마별 주요 뉴스

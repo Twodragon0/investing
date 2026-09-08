@@ -24,11 +24,9 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-07-22 | Fear 25 - 시장
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">25</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.34T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">56.8%</div><div class="stat-label">BTC 도미넌스</div></div></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
-- 2026-07-22 공포·탐욕 지수 25/100 (Extreme Fear) · BTC 도미넌스 56.8%. 상위 0개 코인의 시세 및 모멘텀을 정리합니다.
 
 ## 시장 인사이트
 
