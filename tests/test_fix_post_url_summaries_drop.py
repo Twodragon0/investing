@@ -85,18 +85,8 @@ fpus = importlib.import_module("fix_post_url_summaries")
             "trailing-three-year calculations of the standard deviation of service "
             "investment returns.",
         ),
-    ],
-)
-def test_droppable_when_the_card_already_carries_it(title: str, text: str) -> None:
-    assert fpus._is_droppable(text, title), f"should be droppable: {text[:70]!r}"
-
-
-@pytest.mark.parametrize(
-    ("title", "text"),
-    [
-        # Site taglines `is_boilerplate` still does not know. Corpus-wide
-        # remainder after the CNN / Motley Fool literals were added
-        # (2026-09-08): 2 blurbs.
+        # Second literal batch (2026-09-09): the corpus-wide remainder after the
+        # first, both previously held by the limitation test below.
         (
             "AI stock Xiao-I Corporation (Nasdaq:AIXI) makes gains",
             "Explore the best investing ideas for 2025 at Investorideas.com. Get stock "
@@ -109,6 +99,30 @@ def test_droppable_when_the_card_already_carries_it(title: str, text: str) -> No
         ),
     ],
 )
+def test_droppable_when_the_card_already_carries_it(title: str, text: str) -> None:
+    assert fpus._is_droppable(text, title), f"should be droppable: {text[:70]!r}"
+
+
+@pytest.mark.parametrize(
+    ("title", "text"),
+    [
+        # Not drawn from the corpus: as of 2026-09-09 the corpus-wide
+        # unrecognised-chrome population is 0, both prior entries having moved
+        # to the must-drop list above. These are constructed to have the *shape*
+        # of a site tagline while naming an outlet the phrase list has never
+        # seen, which is the condition the predicate must decline to guess at.
+        (
+            "반도체 수요 회복 조짐",
+            "Examplewire Markets brings you coverage of equities, rates, and "
+            "commodities from our newsroom in Singapore.",
+        ),
+        (
+            "국채 금리 급등",
+            "Discover Samplefeed Pro: live quotes, screeners, and analyst research "
+            "across global markets, all in one workspace.",
+        ),
+    ],
+)
 def test_unrecognised_chrome_is_kept_not_guessed_at(title: str, text: str) -> None:
     """Documented limitation, asserted so it cannot change silently.
 
@@ -117,10 +131,13 @@ def test_unrecognised_chrome_is_kept_not_guessed_at(title: str, text: str) -> No
     widening belongs in `summary_quality`'s phrase list as an **exact literal**,
     which carries no false-positive risk, not in a heuristic here.
 
-    This test earned its place: it was written on 2026-09-08 holding the CNN
-    tagline and the Motley Fool disclaimer, and it went red the moment those
-    two literals were added — which is exactly the signal it exists to give.
-    Those two moved to the must-drop list above.
+    This test earns its place by going red when the boundary moves: written
+    2026-09-08 holding the CNN tagline and the Motley Fool disclaimer, it went
+    red when those literals landed; refilled with the Investorideas and
+    TradingView taglines, it went red again on 2026-09-09 when those landed.
+    Both pairs are now in the must-drop list. Because the corpus remainder is
+    now empty, the cases here are synthetic — they pin the *policy*, not a
+    live finding, and a real tagline found later should replace them.
     """
     assert not fpus._is_droppable(text, title)
 

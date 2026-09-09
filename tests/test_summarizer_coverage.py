@@ -189,6 +189,45 @@ class TestIsBoilerplateDesc:
     def test_real_copy_sharing_vocabulary_is_not_flagged(self, desc):
         assert _is_boilerplate_desc(desc) is False
 
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # Investorideas site tagline (2026-04-08 stock digest).
+            "Explore the best investing ideas for 2025 at Investorideas.com. Get stock "
+            "news, podcasts, videos, and insights on AI, crypto, cannabis, cleantech, mining.",
+            # TradingView blog solicitation (2026-08-28 crypto digest).
+            "Read fresh TradingView updates: Kraken, one of the pioneers of the "
+            "cryptocurrency industry, joins TradingView. Discover more in our blog.",
+        ],
+    )
+    def test_second_batch_of_site_chrome_is_flagged(self, desc):
+        """Added 2026-09-09 — the remainder after the CNN / Motley Fool batch.
+
+        Corpus-wide these were the only two English blurbs that still looked
+        like a site tagline and were neither recognised by `is_boilerplate` nor
+        reachable by the title-duplicate check (overlap < 0.3).
+        """
+        assert _is_boilerplate_desc(desc) is True
+
+    @pytest.mark.parametrize(
+        "desc",
+        [
+            # Discrimination for the second batch. Both literals must stay
+            # narrow enough that real copy naming the same product is safe.
+            "TradingView charts show Kraken's BTC pair breaking a six-month descending trendline on heavy volume.",
+            "Investors explore the best hedges for a rate-hike cycle, with gold "
+            "and short-duration Treasuries leading inflows.",
+            # Pins the narrowing: the Investorideas literal is anchored on the
+            # site name, because the tagline's opening clause on its own reads
+            # like ordinary outlook copy.
+            "Explore the best investing ideas for 2026 in our quarterly outlook "
+            "on rate cuts, AI capex, and the dollar.",
+            "Kraken said it will list three new spot pairs after the CLARITY Act vote.",
+        ],
+    )
+    def test_second_batch_does_not_flag_real_copy(self, desc):
+        assert _is_boilerplate_desc(desc) is False
+
     def test_boilerplate_phrase_detected(self):
         """Positive case to confirm the function works."""
         from common.summarizer import _BOILERPLATE_DESC_PHRASES

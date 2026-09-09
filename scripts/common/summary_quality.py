@@ -436,6 +436,11 @@ _BOILERPLATE_DESC_PHRASES = [
     # both stay clear, which the discrimination tests pin.
     "view the latest news and breaking news today",  # CNN site tagline
     "calculated by time-weighted return since",  # Motley Fool return disclaimer
+    # Domain-anchored on purpose: the surrounding "explore the best investing
+    # ideas for <year>" reads like ordinary outlook copy, so anchoring on the
+    # site name is what keeps the literal safe to delete on.
+    "investorideas.com. get stock news",  # Investorideas site tagline
+    "read fresh tradingview updates",  # TradingView blog solicitation
 ]
 
 
