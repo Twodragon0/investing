@@ -224,7 +224,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMitAFBVV95cUxObEtwdkR5X1loME42cjROdVRiM2NIcENxdWNsWEhVV0h0LVdxelpXMWZEZm5VRDJIWG5yaC1hZzd4eDU5TFBiZldBWHZCbmEzYkw3V01KSGN2dGJ2bGtVTnVESHZFX2hmaVlCOV94M3dLZWJyTEpZSURUNHowTWR3Vm0xckpZZWcxSzR0SnM2Y1AyZmk5Tmw3WUZYM0Q5RkFhNGprbXM1SFFnaFM1TmFuLWhYNG8?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 암호화폐 동맹국 David Bailey, 99% 주식 붕괴 후 재건</a>
-<p class="news-desc">Trump Crypto Ally David Bailey Rebuilds After 99% Stock Collapse. 99% — 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

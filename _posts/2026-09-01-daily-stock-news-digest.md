@@ -278,7 +278,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/stock-market-news/colgate-vs-pg-valuation-margins-and-the-pairs-trade-93CH-4883149" class="news-title" target="_blank" rel="noopener noreferrer">Colgate vs P&G: valuation, margins, and the pairs trade</a>
-<p class="news-desc">Colgate vs P&G: valuation, margins, and the pairs trade. 거래소 정책 변화는 유동성과 접근성에 직결됩니다.</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

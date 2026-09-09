@@ -114,7 +114,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMixwFBVV95cUxQRExySjdES3hXMHZXcl9Hck5BeXNPd3hIVG5tWE5wajQ1aEtRY3NnSnhXTE1SaFZMTlZ1TkdOajFQNV9RRTNYQU5ySmtLSjlOMkM1THk5elpYXzk3MTFjY0VybEhTbTNfUFFoM2duS3JiSW1xYlhKYXlCM2d5TTEyY0JTNVBqVENudU5qaWRuaXFfckE1S0ZtNkhJdGE1T1N5X2hwWEYzRUhZcGg4Z3ZpdUJja0s5bF9IVVBENFJLM0tLWjIwcDdF?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">이란에 대한 미국의 공격은 BTC 가격을 자극하지 못했으며 2024년 이후 가장 좋은 달을 기록했습니다: 오늘의 암호화폐 시장</a>
-<p class="news-desc">U.S. strikes on Iran fail to stir BTC price, on track for best month since 2024: Crypto Markets Today. BTC — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

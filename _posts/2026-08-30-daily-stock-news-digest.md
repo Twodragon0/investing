@@ -78,7 +78,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPV0RZc2d1bUQzUzdVeGVnNVZmQjhpeDExd29aMHRoN3dHaFRScVkwdnJRSVJTeDFnNU42RGxGd3pkN0trMGdMLU9RZ2RyTW1EMkRpcUx0TTVoSEE2QXJVeTFHQVFQbXEzLTBaUHQ1bDZQekhzWFJjM0dfTlg4bjVlVnhQTC01T0xldWdHY2p4OHh1cEhEdi0xNFJjRS1KeXhOdVl5cERacDhxSnRaMFJOemVFUUtXWTNVbW9vT3ZaUXhKcm8tcWRFTmE3RGxXbnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Short-Term Treasury Yields Rise as Warsh Targets Inflation in Jackson Hole Speech</a>
-<p class="news-desc">Short-Term Treasury Yields Rise as Warsh Targets Inflation in Jackson Hole Speech WSJ</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>

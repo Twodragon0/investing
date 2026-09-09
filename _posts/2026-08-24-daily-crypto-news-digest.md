@@ -193,7 +193,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimwFBVV95cUxQMzJDRzQ0ektxb1FaSk9oUVFPbTNUV1hTWTI2SkR0ekUzUjJfT0t0V0pnb2hGY3FKenRZb3RaNy15U25JYm9Ea2wyVXh0ZFRMX0JMRHdrZ2pOTlY2NHJCX0NCOGcwODZIQkM4OHR6WVFGNkZSaXFtZ3p1bTZreGxLTlA2WEVTQjhqaUZ6M0FMVThBT3o1ZDhrUjRJSQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 의회가 통과하고 암호화폐 법안에 대해 토론하면서 현금을 얻습니다.</a>
-<p class="news-desc">Trumps cash in as Congress passes, debates crypto bills. 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -221,7 +220,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxPVmM3elp4cktvVklVUlVBN3BvWkliX2FDX2RjbkdWQkhfcVdzVmFweEoxNkZzS3ZuMDhyRGZWOXRiQ2laWFlpUHhzcENKVklXMzduOGNzZFQydl9qMTJpRFczOU5paEU3VmpEYlRFMVlwU01OY21JTWRrbXItQXd4R1lZMUhaQXN5V1RtOVAzeXUwdUdLNDZ0T3ZNVENOVE5hUkYyV2t1d0xPRmEtTmRuQQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">재무부가 자사주 매입을 두 배로 늘려 위험 자산을 늘린 후 암호화폐 주가 상승</a>
-<p class="news-desc">Crypto shares climb after Treasury's doubled buybacks boost risk assets. 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -285,7 +283,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiiAFBVV95cUxOYzFNS0JGbEZXYVlzRE1pVHNwV3B3NHhITWd5NWRTRGRrOHhPb3ZHUWVWbU5tSkdZZHpMa2ZJcWZqZHhlWGZkZWNHQnRTd1l6UjhXRG1zTUhSU2JIZVdUVDkwLXJyem55WXNiZlktR250RlUxeTF6bWU2NlQwbFR0NUI5WmpsMVJO?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Transfer Crypto from Ledger Live to Exchange</a>
-<p class="news-desc">Transfer Crypto from Ledger Live to Exchange.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

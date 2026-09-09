@@ -113,7 +113,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMilwFBVV95cUxOY0FVSXl1TEVRM19XYWpJYm1hTWQxYVRySFlTVFk5X3cxQURiSDVhN19qOGp5QW9PbzNlSkU1TUVBX3JGbE0za3BZLVJNazB3cGZqTTRHMHBGdlRBTU0tSUNsWlRGQUhzVHdEdExZOXoyMGxkTTdMOEtnQmYwalh5SS1nVVV6TWFzZVQ4cWYwWkZFOTZ0TExB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이 USD 80,000로 급등한 이유와 앞으로 일어날 일</a>
-<p class="news-desc">Why Bitcoin Surged to USD 80,000, and What May Come Next. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -125,7 +124,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMizgFBVV95cUxPNzdVRjNJSjhrcmRsS2Y4RUlUa1JnVzhOd2tLRk5Cay1teHZISkdVdHNxaURzN0ZHME8wbE12eVRZa1BOQ1pHUFNEUjlEbWd0dHZDVUlCam04WlJ1SnNzNmFUTUpMQ3pwbVA3ZlVBT2hueG9QOHMxNGViZjg0YXlSTWpKMENRUzBzY1hPa2hoNlVQTEpfWThVVkJvbmlIVXFnWnNtWk1WMGdpQUJBZlRDZFZBeC1jOWNaeTZzLVhDTS1qMGF5R1FKdHdBX3RvUQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin price slips below $78,000 as ‘digital gold’ narrative faces fresh test</a>
-<p class="news-desc">Bitcoin price slips below $78,000 as ‘digital gold’ narrative faces fresh test. ($78,000)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

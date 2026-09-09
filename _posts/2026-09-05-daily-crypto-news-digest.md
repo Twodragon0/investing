@@ -236,7 +236,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMitAFBVV95cUxQWW40amQ5Y21mTHU2NzY5Z3BKV1hKZVpaeGthd3hwZ2JNa0ltajNUN1VyX0VOOFY5Q193TzN6Qkx2Y1RJVEViTFdXWGJYanYtdmthel9RWWZkUVdPSlJneWsxRExUSnFXTmpKYWZQSWFueTNfb1A1T2tkc25URTVPS3V6UUI5UUJFbHJKLU9yM1J0a1JmSllrR2xKcm4xVDdadzdHTnY5d3pGV3VueEx6eXBLdWI?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Drops Below $80,000 as Hot Jobs Data Spurs Fed-Hike Bets</a>
-<p class="news-desc">Bitcoin Drops Below $80,000 as Hot Jobs Data Spurs Fed-Hike Bets. ($80,000)</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

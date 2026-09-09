@@ -74,7 +74,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMijAJBVV95cUxQeUR6WG5mSEpNUWtmSmNMMkhEeWxNeEhwR2ZubkczRHlPbnJBQVJURXRNZ0F2R3U3cVZ4QVVCNHZpelhBQ3NWeUphRF9qZjFPSl9xUTE1WTRpeXZIeXdiUEdabXBKa2dfdEhrNDAwNVpEVFk4LXFNOTR4SnBwVFE4YXpnZFpmVEY5ZEhPWVVjRkE0Z3BmeWdmc0RxUWhsZHUyZWk1R0pjanQ4R0JUazZycDVmT040dndGaXVrd29Zczc4NjRSUnhCMDd0NGdQY25BTXRrTFBkTVFrWG54c1NpUjhMVndJZHlLMzBKOUdYSTZubHZhT1NEckJDc1drRWxzVnVRY1lrbjB2dGNT?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 및 Ether 곰은 '압착'으로 인한 랠리 속에서 와해되고 Musk의 X는 스테이블코인에서 제작자에게 비용을 지불하려고 합니다: 암호화폐의 5가지 이야기 주</a>
-<p class="news-desc">Bitcoin and Ether bears get decimated amid 'squeeze-led' rally and Musk's X wants to pay creators in stablecoins: Cry. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -114,7 +113,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxPVmM3elp4cktvVklVUlVBN3BvWkliX2FDX2RjbkdWQkhfcVdzVmFweEoxNkZzS3ZuMDhyRGZWOXRiQ2laWFlpUHhzcENKVklXMzduOGNzZFQydl9qMTJpRFczOU5paEU3VmpEYlRFMVlwU01OY21JTWRrbXItQXd4R1lZMUhaQXN5V1RtOVAzeXUwdUdLNDZ0T3ZNVENOVE5hUkYyV2t1d0xPRmEtTmRuQQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">재무부가 자사주 매입을 두 배로 늘려 위험 자산을 늘린 후 암호화폐 주가 상승</a>
-<p class="news-desc">Crypto shares climb after Treasury's doubled buybacks boost risk assets. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

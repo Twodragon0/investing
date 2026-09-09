@@ -74,7 +74,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxOeXNlMlhrZldhRUFxVFpaVmJDWnVjdERCQTVQbGJNX3BFNmxQc1p3Y0VWc0xjLWJoSUdPUHJUejFvVEV1SXJ4NkR4SExEMGtTb3FXaEplbU9vc0JCTVBKcTVxZ2RGaXJhLWtmMWF3MzVMM1VLd3NBZVVLUThZLUdGSTdtQmpkVW9tV3dodklSbHZhSDN2b2QtTFNjN2g3dmp4bGJBSnhXUS1qeW0yQXdrWg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 백악관 회의를 앞두고 3월 이후 가장 많은 급증</a>
-<p class="news-desc">Bitcoin Surges Most Since March Ahead of White House Meeting. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -86,7 +85,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMikAFBVV95cUxOQ2UxYURzc3FLSkZ2QWxNZmlxc0Fjb0ktdndWbXVhOHMtUVRfRFlkY3B1QTFYWVlMN2xFaGVHQmFzU1ZqOEFsRGxvRVIzTjBUbXVpLUtSQkU0ZFQyRmttYWV3SW9KZFduT1ZjMlNBdFk0RTZzUS11UkQyeWlCU2FVZElxMGJYek5EZlpXS0F0V1Q?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 이더리움 및 XRP이 갑자기 최고치로 급등했습니다. 오늘 암호화폐 가격이 상승하는 이유는 무엇입니까?</a>
-<p class="news-desc">Bitcoin, Ethereum, and XRP are suddenly soaring to fresh highs: Why are crypto prices up today. XRP — 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -117,7 +115,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxPVmM3elp4cktvVklVUlVBN3BvWkliX2FDX2RjbkdWQkhfcVdzVmFweEoxNkZzS3ZuMDhyRGZWOXRiQ2laWFlpUHhzcENKVklXMzduOGNzZFQydl9qMTJpRFczOU5paEU3VmpEYlRFMVlwU01OY21JTWRrbXItQXd4R1lZMUhaQXN5V1RtOVAzeXUwdUdLNDZ0T3ZNVENOVE5hUkYyV2t1d0xPRmEtTmRuQQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">재무부가 자사주 매입을 두 배로 늘려 위험 자산을 늘린 후 암호화폐 주가 상승</a>
-<p class="news-desc">Crypto shares climb after Treasury's doubled buybacks boost risk assets. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -129,7 +126,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMiuwFBVV95cUxOaFMzREFDaGl0SVIzV3hWRUNtMVFValB0cExwSWJNeVYtZjFvazRUYmsyWlpEQlFnR2pMWk4zR01lWXBYc01LOWRVNGhMRXYxTVlDRHFFQ2ZNeWRNZWNocUFFY1pMODFscnk3am9KRWxEdWt0Wld3U0NjeDMxVzRMSEtiQjlPTy1vNzRnV3FkcW1MSXU4SmNhRzQ4WXROMzBZVWNFTUo0dUduUDBwY3RvUW9IWUlNdWh4aFlF?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">낙관적인 백악관 회의 이후 암호화폐 주식은 계속 급등</a>
-<p class="news-desc">Crypto Stocks Continue to Surge After Upbeat White House Meeting. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -169,7 +165,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMifkFVX3lxTE52MVEyRGNNNVgzbjhyV09XTzh5ajFrcEs5QWhseTd4MHZoUXVIdDZ2eXI5UXdLX2Y0OHp3Y2dXOU5rbXBKWlFhRmxFNnBQdWlDMHR3eVhFQVFWYVJpaVBJSExXa19GTGdRVDdRQS00cE1EYkE3VVVNSV9rTS0wUQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 가족의 암호화폐 제국에 은행이 생겼습니다. 하지만 당신이 생각하는 그런 종류는 아니야</a>
-<p class="news-desc">The Trump family's crypto empire is getting a bank. But not the kind you think. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -248,7 +243,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiogFBVV95cUxPVDhGNi11LTFCVXRvcHRUV19ROEdfdWhVeEZmTmRpUkxFd0tKWlcxSXNlRFprYVFFQ3Q5SHgyd3BuUC1mMWNrNHZ0U3RCb1NhQ0ZETjJTdzMzNm9nd3lhVEdfQ05TVnQ5M0FkMEVqc3ZjOU5sRHBxZ0RfSS1zUDNsN29PTnpLcUIwUkhINXp6S0xEcm1xc3g3Ulh3bVZyVnNsdEE?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인은 트럼프가 의회에 암호화폐 법안 통과를 압력을 가하면서 $70,000를 넘어섰습니다.</a>
-<p class="news-desc">Bitcoin tops $70k as Trump pressures Congress to pass crypto bill. $70k — 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -279,7 +273,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMi3AFBVV95cUxPc05VMXV2c3NSVFNOMUF3LVp3b0dyejhsU1duLWVGZVdGQlFBR2pNa1VaS2E5eHpXcndKR2x4WkkzR2lUT3VnWFdlcC1WQmJ5d3ZIdXphM0xlUGxGbEFPMnZxaERuam1UX3NpY2x6MnlUMmNLcC12aEdkRGh3dHl1Vno4QTYtemg1ODdxWTc3RXBmbWVGSGU1azgxajJZUDdkaWhjYTgxRllXMWxlajJpQVRDQW1HdXVwWm94SWF4X21zOUhvTXptNXQ5TExhb3dGRDI4Nk1aVExyQmJB0gHiAUFVX3lxTE9HSjhacGd4SGFDYk9wYlNfZ2g1Z0c5dGx2UF9DNVY3SFRUVHF1bEJwbVBHSHlDdUZSXzVtYi15R0VPa0p6blNMV0NaLXdaRXh4VnVROXVMXzY5cXg4clNVaWlhbUhibU1BMmZWR0hVd09FSFRra2E0VXRrQjl2aGJUemdFQXl6MkMyVU5LSV91ZHREcWQ5VU5xd29QSURVN2h3MWVPTHpxajJkM0lwMVJEemluZjZpdi0yZHVjUHJRTUpnNW84OXRRN0JKZXdFZDVhSnE5THhJLUVGNGhSREJvanc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">시청: 트럼프는 백악관에서 암호화폐 지도자들을 초대하면서 북한과 금리에 대해 이야기합니다.</a>
-<p class="news-desc">WATCH: Trump talks about North Korea, interest rates while hosting cryptocurrency leaders at the White House. WATCH — 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

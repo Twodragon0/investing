@@ -169,7 +169,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiqwFBVV95cUxOcnpKYTYwa0FwU3piSWZUczBZck1ZTHJIWWVULUhjZ2FlYmV6TWwyZGxhNkxVUEgxYlNNRVhrU0s1RS1qZk1aLTNvdkU4b2JpUG5wUF9KTl9lNV96aGJsRVNKUEtqVEttR21HN1IyaGNEbVR3bEFjeXBMUDNtNWphT2E5YXl3dndRdDRKWG9DeFRlWjVKb0tLWDFRMmVuRHFkcHB4MlZ5NDZkcms?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">독점 &#124; 트럼프 가족의 새로운 암호화폐 은행은 아부다비 셰이크의 지원을 받습니다</a>
-<p class="news-desc">Exclusive &#124; Trump Family’s New Crypto Bank Is Backed by Abu Dhabi Sheikh. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

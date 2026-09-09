@@ -85,7 +85,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMisgFBVV95cUxQWEN0dEtXVHBxTkFRMkdpWjBtYmkzbVc5Y2xFNTRtSWlScWpadzA0czQ1bTRDWlFGTE1BN28xOURsR1hYa25ZQ2VOS1BnQTNLclN6Y3p3ZnliQkd6aDlXM2FlLTJzS0hsY0ZTSzZhZ1NRS05CWnNzX0xfNS1wSDBQNlpNMThMZFd0b3c0R1lNOXlYeGMxWFNpQklFclR5N3I5UVRBQ1NVVTQ2c2FHbnhka2d3?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin and Gold Funds Draw $7 Billion as Scarcity Trade Surges</a>
-<p class="news-desc">Bitcoin and Gold Funds Draw $7 Billion as Scarcity Trade Surges. $7 — 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -113,7 +112,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMipAFBVV95cUxONUlKbmFyUWdlZXRtRng3UmVOTFBRTUE5Y2VNVk9JaXVWU1R0LURpNy1pTFpnbTdxbThBU3gwSEt2U0QzUmpnYmszLUhjU0xPQ3JIX0pvb1FVM3owNkNjY0VzUFJURjBHRFh3RjROSENMVFh6N3dLSGxxTDVERnh6eXBTc295VXk1LXF4YS1kdm5xVGFsWnYtVkR1eWVPdElWQ1YyYQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이 USD 80,000로 급등한 이유와 앞으로 일어날 일</a>
-<p class="news-desc">Why Bitcoin Surged to USD 80,000, and What May Come Next. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -137,7 +135,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMikAFBVV95cUxNNW05dUFtdzlpWmZic2FCQ2Jab3gtbGo0T1AtdXgxbDd3cHpNZGpLaXVTWmtVQ2JQalVqYmRYTGQtdlBrWHUwU0JQQl8yNWx2TTYyQUNGNzl6T2lmUmsxaXJzV2phYXB4SXdkUmNRZFBfYlUxQ1dLcllUNURRU1pycE9WOWk2ZDl0Wjl2N2ltWHc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 랠리 3개월 최고치로 뛰어든 후 일시 중지</a>
-<p class="news-desc">Bitcoin Rally Pauses After Jumping to Three-Month High. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -221,7 +218,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiswFBVV95cUxPWDkycGFHb3NwbmI1VTVIbDJIeWkzalRUaGVqVUZ0SkozOFpuSkROZ1BjQTNpbXFNbk9ZX3d4R1N0RHYybHFZVXk2bU56UE9iOGYxN0lwUUpKMjlGWUdOamkyMXBKZkdvYTNIVktLVU9vM0IxQmtzYmU5RWE4UlJlUXowdEFhakE2S0tsR01Tc3UzRERxMU1veUl4NkhuREFIOU5BTjh4WGR2MHFUNmVta3BaTQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Rally Stalls at $80,000 as Traders Await Inflation Data</a>
-<p class="news-desc">Bitcoin Rally Stalls at $80,000 as Traders Await Inflation Data. $80,000 — 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

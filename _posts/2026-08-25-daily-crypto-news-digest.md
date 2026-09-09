@@ -129,7 +129,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMitgFBVV95cUxPQnJFb0cxOHNxTGRzczlpTi1fVWY1QjViVEJLM1AwM1ZfYXVBY05IRHZnU1JfcFpmVFR1WXg3amstckQ0WEItclhCMVNnUjZpR2g3cUlwcGUzVUREdmZRMEw2QU1ub3FuNkR0SkdVUVV5SWl5dTlwX2xqbnNEd0lHUlN6SUFNY1lNVkljRURTTGtNckJCdl81Wmwzc2tUbTlaRmVQd1VtZE84bEhkZXhvZ3hKdnpjdw?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin ETFs See Biggest Weekly Inflow in 10 Months During Rally</a>
-<p class="news-desc">Bitcoin ETFs See Biggest Weekly Inflow in 10 Months During Rally. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -181,7 +180,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMigAFBVV95cUxNRGJYSFdrYWp2NnRoZVFrOE1mR2NaVjZJVGIxbWprTEFmS0FJWnVCMVo3ZVQ5cjV4XzMtUlo4YmJ6WTZMUHdhNlgtLUxMbnV2RUc0WWtMRGh6c01oV0FqczBHWUZIbTlXYnFQdWZmd081dWgyLXhYd2pOc1VnQ1ZGWQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Strategy Stock Rises More Than Bitcoin as Coinbase, Robinhood Lag</a>
-<p class="news-desc">Strategy Stock Rises More Than Bitcoin as Coinbase, Robinhood Lag.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -245,7 +243,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiqwFBVV95cUxNZ3F3VHZrbWdLSmNBekY0WnR0dkx0Nl9rOWl4M2hTZDg0YnZuUU54MHo1SXRHT1VNbTcyRjhUQmdZVVlQbFJjcHd3TGt6TW5NSkktN3VtYUtvTEM4UVh3a0NMNHFwS3phZkxFRWtZTHJMNkZvT2VVNER3Z19PWjBxNGQ2RFl5N3JiakkwMFZMTm4wc215OGdzZHRzTHFnODlMMVppWHhmWU1nZHM?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">How Trump’s Crypto Push Is Linked to Bessent’s Treasury Moves</a>
-<p class="news-desc">How Trump’s Crypto Push Is Linked to Bessent’s Treasury Moves. 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
