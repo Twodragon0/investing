@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiugFBVV95cUxPNEpodHRVa1pfaTBLN0s2cmZSb3JpQkVWa0hqT21hcFFRYkt6RGJVZDJmRnE0UUFmR0xObnlHVklXVmU0alZNVE5vMWZlT3VjT0JMSmZHc1dlSFl1NGM2bTEtRGVLZDFmSjFDM3Ftemd1Q3BBV1JHNkRBUUY2Rkl5NE5US1lrblgzQkJQdkxDaG1wNHk3cHR5VTlSS2VvVWxQUi1xTEJ3Qkd6S0lCYXhiV2hIZjhPYTVWb3c?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">We checked 6 years of bitcoin data. The NFP report isn't big price mover</a>
-<p class="news-desc">We checked 6 years of bitcoin data. The NFP report isn't big price mover.</p>
+<p class="news-desc">암호화폐 시장의 하루: 2026년 9월 4일</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

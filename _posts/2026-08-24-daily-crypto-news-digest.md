@@ -138,7 +138,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiuAFBVV95cUxQM3JIVGt3dzVSZFVsbDVqRDFzSWF0Z0drS1o3aC03S243bjRfRWFMWHFhUnQ4QTRfOXJhVlBJZkV6ckRVMFFyOFlHSXlhWkRPR0lENFZpLUVVOTRBanBfRms4c0JRRjhfSjBfY1BHZDdpRVBHN2FoN2lGd0dDdG1rcmp2NjdxbE1iRjNCWFNfSHJ5MVBRUExPVnlsdDQtN2hiS3AxS1F2UW1oY18xOHRVOVVSejF3ZmZy?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin slips under $77,000 as rally boosts mining economics</a>
-<p class="news-desc">Bitcoin slips under $77,000 as rally boosts mining economics. $77,000 — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
+<p class="news-desc">비트코인은 최근 랠리이 새로운 모멘텀을 찾음에 따라 손실을 줄였습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

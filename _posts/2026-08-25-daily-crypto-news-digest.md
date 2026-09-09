@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMirwFBVV95cUxOS0R5bnNXVUJacklGb1RmRWRkVkgzSmMwMER2YUVNYVFUWGtZakJtZkxJT1BPZkRFWktyUHg4cFBCczAzaDZLZkxGaS16azZvM3hBdi1xM1RKY1RDRGVtcS1JR0szcTI3MDVFeDNMWmJCazdhT3hVUnhBTmQwV1ZEVXNhbmJhS0lNWlRvLTFhb21zUnB0SFZhVjItcHA3b1VLNE9xQjdQRlotQTAzOVVZ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Fed experiment shows how bitcoin rallies attract new crypto buyers</a>
-<p class="news-desc">Fed experiment shows how bitcoin rallies attract new crypto buyers. 거시경제 흐름이 위험자산 선호도를 좌우합니다.</p>
+<p class="news-desc">비트코인의 전년도 수익률을 확인한 가구는 후속 조사에서 암호화폐를 소유하고 있다고 보고할 가능성이 약 23% 더 높았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
