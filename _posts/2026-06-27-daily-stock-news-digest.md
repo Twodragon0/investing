@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ilyo.co.kr">코스피 급락 마감…코스닥도 하락 - 일요신문</a> <span class="p0-desc">[일요신문] 지금 생각해보니 젊은 날 읽었던 ‘카라마조프가의 형제들’은 읽은 게 아니었다. 여자를 놓고 아버지와 다투는 아들, 집안을 챙기기는커녕 자식들을 이리저리 버려두고 자기 욕망에만 끌려 다니는 욕심덩어리 아버지, 지참금에만 관심이 있는 남자를 남편으로 맞아 속을 끓이다가 애도도 받지 못한 채 죽어간 아내들, 젊은 날 카라마조프가는 이상하고도 이상했다...</span></li><li><a href="https://www.gokorea.kr">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐?</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐? 공감신문</span></li><li><a href="https://www.specialtimes.co.kr">삼성전자와 SK하이닉스 주가 급락… 반도체 시장 위기감 확산 - 스페셜타임스</a> <span class="p0-desc">스페셜타임스, 인터넷뉴스, 뉴스, 미디어, 인터넷신문, 신문, 언론</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 8,411.21 (-5.81%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 851.37 (-4.10%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-06-27 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,411.21(-5.81%), KOSDAQ 851.37(-4.10%), USD/KRW 1,534.73(-0.61%).
 - *제약바이오 등 헬스케어산업 경제 전문지, 병원/약국, 의약품, 건강정보*
 
 ## 테마별 주요 뉴스

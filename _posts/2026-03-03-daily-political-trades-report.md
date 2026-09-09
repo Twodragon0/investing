@@ -22,12 +22,9 @@ permalink: "/political-trades/2026/03/03/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **insider**(14회), **tariff(관세)**(6회), **trump(트럼프)**(2회), **sec(미국증권거래위원회)**(2회), **fed(연방준비제도)**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 2건(40%), 매도 신호 3건(60%). 매수·매도가 균형을 이루며, 시장 방향에 대한 정치권의 의견이 엇갈리고 있습니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
-- 1. 미국, 대법원 결정에 따라 IEEPA 기반 관세 폐지 - White & Case LLP 미국, 대법원 판결에 따라 IEEPA 기반 관세 폐지 White & Case LLP
 
 ## 트럼프 행정명령/정책
 
