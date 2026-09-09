@@ -109,7 +109,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1faUw2ZTJwa2ljbUpyTkFFbGRFYVlZd29pb24wVHFxM005UWl4RXFxX2pWckkyaGcyc09TdmlkczNmeXloWUo2blE3NGdyTU1DY0FjZUpOZUtURVNxakNaV3pibTJmdnZnSzhPcm1WM28zcWhq?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">What the Jump in Global Interest Rates Means for the Economy</a>
-<p class="news-desc">What the Jump in Global Interest Rates Means for the Economy nytimes.com</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>

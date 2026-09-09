@@ -121,7 +121,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQZmVCQWYzaWpzTVpmVFJPV0xRdEtUcXg0N2JKZHB5Z2JFZWpWRHFwS0Q3R2NtVHp1c29rem5scXhwa0FZMFZJNGtqM3ZCRlVOa1doNGNtWEcxVVZCYXFDSXlEbmJwODhKbG5Kdk15RDJpbDFleUFpWkdmbWEtMkhGWnF0U1FWWVpmSnp4aXp4UzlPc2hzaFNTWllwSm5UVWlpNWtWQlkzX1dqOHJNbkg5ag?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Tech drags S&P 500, Nasdaq lower as Iran tensions, Nvidia earnings loom</a>
-<p class="news-desc">Tech drags S&P 500, Nasdaq lower as Iran tensions, Nvidia earnings loom Reuters</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -133,7 +132,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFB5blVoaFFxSGNnQTgwbWlVa1czOUd6VlU4amhwaDJ4cGpvLXczX2hEMmFiMWMyMXViZDEyQ05fWVQ2WEhYZVBKZTE2RFlneEpGLVd1S0kxaktNZUhLOFFYQlVITjdsTERfd28yTm5ZeGp1WG9HWWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow Rises, Nasdaq, S&P Open Down; Nvidia, Micron, Marvell, Super Micro, More Movers</a>
-<p class="news-desc">Stock Market Today: Dow Rises, Nasdaq, S&P Open Down; Nvidia, Micron, Marvell, Super Micro, More Movers Barron's</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

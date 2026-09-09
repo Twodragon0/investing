@@ -74,7 +74,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMikAFBVV95cUxNNW05dUFtdzlpWmZic2FCQ2Jab3gtbGo0T1AtdXgxbDd3cHpNZGpLaXVTWmtVQ2JQalVqYmRYTGQtdlBrWHUwU0JQQl8yNWx2TTYyQUNGNzl6T2lmUmsxaXJzV2phYXB4SXdkUmNRZFBfYlUxQ1dLcllUNURRU1pycE9WOWk2ZDl0Wjl2N2ltWHc?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 랠리 3개월 최고치로 뛰어든 후 일시 중지</a>
-<p class="news-desc">Bitcoin Rally Pauses After Jumping to Three-Month High. 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -129,7 +128,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMitgFBVV95cUxPM3BNRV81ZmQ4ZDJwZGotRUw3YmRHeC1zMndpblgwcWV6U2JSeWZyNVFBT3pST1Q0bGNNYmpPVllfeTR6dGI1X3UxNjM4WHE0WW9IdnYxX0d3LVJaaV9nSFF0dWlFWmlTN2dvN0pTX1RqQlRHSVVNc2lJN1dCMmhFTi1SdlRKaHNwVDYxYjVMYlJFbUN5VG43X3haRXZLOUdRdWdPTWFHU0RSMk5vMXN2a3VPb3RtQQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인의 $80,000 이상 급등은 과도한 레버리지가 아닌 공매도에 의해 주도되었습니다.</a>
-<p class="news-desc">Bitcoin’s surge above $80,000 was driven by short covering, not excessive leverage. $80,000 — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -141,7 +139,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMisgFBVV95cUxPUG54cnh0XzJTWVMyVnl0b19hdFN1TGhnWE1xcE1ER2h5VnpTNmpOdkxEUWpRaWt5WnVUS1JCVnFWb0lxSElTQ3pENlNCVFNvYnBMWE9KbVdNNmJjOU55SzNIa3VkcFpwcFlXcXVSekZkdTBqSlA0LVRIYzVBYkZLYkpodkdPYWhvRFQzLWNIaTRlVVdPT0F4WmpDeFl6SjJ3c21ZRVl4UzNCUkVPVjR5ZU9B?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인과 금이 어떻게 단 며칠 만에 슬럼프에서 MVP 주간으로 변했는지</a>
-<p class="news-desc">How bitcoin and gold went from a slump to an MVP week in just a few days. MVP — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

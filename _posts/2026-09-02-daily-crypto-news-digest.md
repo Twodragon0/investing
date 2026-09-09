@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMixwFBVV95cUxPbVp6RlRyREJFZ2FabklPS2JYbXliWndQZjBnblNjcVBfNVU3SXhVaEFpMVNLR3FhOWJlQ0RMN3hjUUtuMEJTTkJ3REIxMzBJelViU2YxOUQ4WXVWbExJVGh0VG8xaW5RT1NNYm1MbTF1ZXBPUDNPLWJJdzdMcHBLZEp5STNCR1hZLUg1MlpyNHJ2NGlKUlU4NzRpWU1qOXhmODdpNDRacXJ5WEQ2TVNELU15MEVjYWlObzlqWFVNVHZLRGJ3S0RB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">BTC 가격은 아비트럼에 Robinhood Chain 수익이 급증하면서 $78,000에 가까워졌습니다. 오늘의 암호화폐 시장</a>
-<p class="news-desc">BTC price near $78,000 as Arbitrum surges on Robinhood Chain revenue: Crypto Markets Today. $78,000, BTC — 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
+<p class="news-desc">BTC은 지난주 랠리 이후 $81,428로 하락했고, ARB는 Robinhood Chain의 일일 수수료가 200만 달러를 돌파하면서 디파이 상승을 주도했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

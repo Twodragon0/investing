@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMiyAFBVV95cUxPRm5MNk1SZDlNRG1GM2FQcHhhOU9SalNIUlI5WFI1bjlCV2lEczNGOFFGOUxSYlBJZGhpcEplU04ycklGTWlrUGg4U1Izb0UwWWVJZFY1YWNsNU1RLWhJdjFxeGxCWm41OXNYUHoyWDZnYWpGZmRUYkMtTnV6azFYbkxMRy1mMWpES1NFeDRla0NySTktU1U5eDBRX21IYmlTdzVUaDVLMzRwdnNDOFQzWkI1ZW92eDBTUURmbVRVZjZNMzBaNF9mRQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">Live updates: Bitcoin trades near $80,000 as stocks close with gains</a>
-<p class="news-desc">Live updates: Bitcoin trades near $80,000 as stocks close with gains. $80,000 — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
+<p class="news-desc">미국 현물 비트코인 펀드는 운용이 시작된 이래로 28억 달러를 유치했으며, Ether ETF는 날마다 이를 일치시키고 있습니다. 8월을 2025년 10월 이후 최고의 달로 만들려면 세 번의 세션이 남았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

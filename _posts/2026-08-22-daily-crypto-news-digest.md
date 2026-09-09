@@ -117,7 +117,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxPVmM3elp4cktvVklVUlVBN3BvWkliX2FDX2RjbkdWQkhfcVdzVmFweEoxNkZzS3ZuMDhyRGZWOXRiQ2laWFlpUHhzcENKVklXMzduOGNzZFQydl9qMTJpRFczOU5paEU3VmpEYlRFMVlwU01OY21JTWRrbXItQXd4R1lZMUhaQXN5V1RtOVAzeXUwdUdLNDZ0T3ZNVENOVE5hUkYyV2t1d0xPRmEtTmRuQQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">재무부가 자사주 매입을 두 배로 늘려 위험 자산을 늘린 후 암호화폐 주가 상승</a>
-<p class="news-desc">Crypto shares climb after Treasury's doubled buybacks boost risk assets. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -129,7 +128,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMihAFBVV95cUxQZjhYLWRvY1c5TnNteV9UUFlJT2dNcVJiS0NtU3lRSDNpblJncGh0aWpKYzgtWDNpOEItTnZic0tHYzBVNnZNVnc5R2M1c0RHQmFDbXR5OTV2cVU1RlAzTF9aRFBOYkxvMHBWSWphNWpuSmg2NFZoUGYyZVNVNUhSQVpSVHU?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 및 베센트의 채권 시장 개입이 달러에 부담을 주면서 금이 급등했습니다.</a>
-<p class="news-desc">Bitcoin and gold surge as Bessent’s bond market intervention weighs on dollar. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -141,7 +139,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisAFBVV95cUxOeXNlMlhrZldhRUFxVFpaVmJDWnVjdERCQTVQbGJNX3BFNmxQc1p3Y0VWc0xjLWJoSUdPUHJUejFvVEV1SXJ4NkR4SExEMGtTb3FXaEplbU9vc0JCTVBKcTVxZ2RGaXJhLWtmMWF3MzVMM1VLd3NBZVVLUThZLUdGSTdtQmpkVW9tV3dodklSbHZhSDN2b2QtTFNjN2g3dmp4bGJBSnhXUS1qeW0yQXdrWg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 백악관 회의를 앞두고 3월 이후 가장 많은 급증</a>
-<p class="news-desc">Bitcoin Surges Most Since March Ahead of White House Meeting. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -233,7 +230,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMimwFBVV95cUxQMzJDRzQ0ektxb1FaSk9oUVFPbTNUV1hTWTI2SkR0ekUzUjJfT0t0V0pnb2hGY3FKenRZb3RaNy15U25JYm9Ea2wyVXh0ZFRMX0JMRHdrZ2pOTlY2NHJCX0NCOGcwODZIQkM4OHR6WVFGNkZSaXFtZ3p1bTZreGxLTlA2WEVTQjhqaUZ6M0FMVThBT3o1ZDhrUjRJSQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 의회가 통과하고 암호화폐 법안에 대해 토론하면서 현금을 얻습니다.</a>
-<p class="news-desc">Trumps cash in as Congress passes, debates crypto bills. 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

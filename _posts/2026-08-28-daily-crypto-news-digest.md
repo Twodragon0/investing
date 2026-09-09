@@ -114,7 +114,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMilwFBVV95cUxOY0FVSXl1TEVRM19XYWpJYm1hTWQxYVRySFlTVFk5X3cxQURiSDVhN19qOGp5QW9PbzNlSkU1TUVBX3JGbE0za3BZLVJNazB3cGZqTTRHMHBGdlRBTU0tSUNsWlRGQUhzVHdEdExZOXoyMGxkTTdMOEtnQmYwalh5SS1nVVV6TWFzZVQ4cWYwWkZFOTZ0TExB?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이 USD 80,000로 급등한 이유와 앞으로 일어날 일</a>
-<p class="news-desc">Why Bitcoin Surged to USD 80,000, and What May Come Next. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -138,7 +137,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMisgFBVV95cUxQWEN0dEtXVHBxTkFRMkdpWjBtYmkzbVc5Y2xFNTRtSWlScWpadzA0czQ1bTRDWlFGTE1BN28xOURsR1hYa25ZQ2VOS1BnQTNLclN6Y3p3ZnliQkd6aDlXM2FlLTJzS0hsY0ZTSzZhZ1NRS05CWnNzX0xfNS1wSDBQNlpNMThMZFd0b3c0R1lNOXlYeGMxWFNpQklFclR5N3I5UVRBQ1NVVTQ2c2FHbnhka2d3?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 및 금 기금은 희소성 무역 급증으로 70억 달러를 유치합니다.</a>
-<p class="news-desc">Bitcoin and Gold Funds Draw $7 Billion as Scarcity Trade Surges. $7 — 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -181,7 +179,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBuclN3NnNZeWtJUjFwVGZ6ZUZmQ2dTTU5JZXF5LWk3bjYtT3VVVUp2V3lDdUtyOUN5TEw4Mjc5MkdEWVgzR2hKQi14ZlI0bVRxaU02ckxYR1liSEtzWDNCNjF6eno5YWFhRGtxekZvenQ5ZUpJdmc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 산업의 선구자 중 하나인 크라켄이 TradingView에 합류했습니다 - TradingView</a>
-<p class="news-desc">Read fresh TradingView updates: Kraken, one of the pioneers of the cryptocurrency industry, joins TradingView. Discover more in our blog and stay connected with the latest platform news.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

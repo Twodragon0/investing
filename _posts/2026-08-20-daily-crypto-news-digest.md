@@ -86,7 +86,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMi6AFBVV95cUxQdU5rYXJfTUNuZS10WGQ4aEYyWlQ1aHlXckNSV3FKSS1vbWo2NWxOYkl1Zkpka2VvU21tWGx5T0FYRkptT2Q1eEJoRjVUODBCQkt6Mkd6T0xoLTl5OUthUjVQb0U2Um9hR0VTQkhScHZPWTYyRDZjY29EVTgwRk40Qm5qMk1ETWoxZmY0ZG9kVGhBQ3p4cjVQaWVvLXZLOUs1N0JyVVdtd3hLYWpBU2FfOFpTN1dlNklpTU02Q0FPcll1UTJXVHJzRTZ5X1E5aF9mbHM1djR6cFNRbTVPd0ozcWN2ZzZxeEJF?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 $68,000 이상 상승, 암호화폐 주식 급등</a>
-<p class="news-desc">Bitcoin Rises Above $68,000, Crypto Stocks Surge. $68,000, — 비트코인 시장 심리와 가격 흐름에 주목하세요.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -114,7 +113,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/read/CBMimAFBVV95cUxOUkJNa0hNbWlmT0RVbU5ZLWNaM3ZldXUzelVEWjFhNmFQYjRhYUNsUGJUNm8xSHdZdm5qRmxLbEJvSUNxZktjcWRMRmw0ZGhmQVZpNjdadlpxRHJ4YXczdzNnVzM4cjdUYW5NNko2TjNHRFZwYnpXLW1taFhzdS1rOTFFcTZraTNoU0ZJSkV4XzE0QWVNQ0pHcg?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다.</a>
-<p class="news-desc">Looking to Diversify Your Portfolio? Here's 1 Cryptocurrency You Should Consider. 시장 모멘텀과 투자 심리를 반영하는 핵심 지표입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -169,7 +167,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMipwFBVV95cUxNeXlaZ0VhOGd4LUliRjFMSVhSaWxjVE5rTGp5ZjFxaHJKLVFGRGhPYjV2VXJiaXVnQXJCRi1GMmJ3bUlFM0FETnlmaC1hM2s3UzhvNk5HRUVGREV4UjdrejZPaFBxUTFyT0JXY2lMdEM3bkZnaVo1UWtzbkc1VFpuT2tteEFPVmJ0YXRuN295RXpENE9zVWp5UXhBY1VzUGZmXzh0N3p5VQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프는 SEC이 규정을 고려함에 따라 암호화폐 경영진을 호스팅합니다.</a>
-<p class="news-desc">Trump to host crypto executives as SEC considers regulations. 규제 방향이 시장 구조를 바꿀 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -220,7 +217,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMifkFVX3lxTE52MVEyRGNNNVgzbjhyV09XTzh5ajFrcEs5QWhseTd4MHZoUXVIdDZ2eXI5UXdLX2Y0OHp3Y2dXOU5rbXBKWlFhRmxFNnBQdWlDMHR3eVhFQVFWYVJpaVBJSExXa19GTGdRVDdRQS00cE1EYkE3VVVNSV9rTS0wUQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 가족의 암호화폐 제국에 은행이 생겼습니다. 하지만 당신이 생각하는 그런 종류는 아니야</a>
-<p class="news-desc">The Trump family's crypto empire is getting a bank. But not the kind you think. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>
@@ -232,7 +228,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/read/CBMivwFBVV95cUxPQW5FN1FiTHlqcnktM0xnazRRWHFpaHM3bDdLWlNIckszLTJId3QyN1NZc0VTdlk3VFFlZG1qWVlQQUo3SUN4R083SlZaNmpKTkdMb1NKTnNZM2VpcERyUm5TZGhzT1N0UGhhNExIWGY3NXBxWUczMm4xWFctRkNVR0ZwbTJib0szTUhpUkZOWk9sVDFmbmp2Q0pFOERwbEhVYVd3RHNXSHdzR3FGdlFBQmk2Xy1JV3d1TnRkdk5SUQ?hl=en-US&gl=US&ceid=US%3Aen" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 기관은 암호화폐 정책을 청구 지연으로 설정하여 업계 이익을 제한합니다.</a>
-<p class="news-desc">Trump agencies to set crypto policy as bill stalls, limiting industry's gains. 정치적 결정이 시장 불확실성의 핵심 변수로 작용합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News</span>
 </div>
 </div>

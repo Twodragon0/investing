@@ -176,7 +176,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNX3hVcFo4aXJweEVPYXpCUHNOMy1uWUlRX2luTGVLZW1YazRkMW1BNm9aRFd2ZnFIUWxiaFlmbUt3Tm85SmhxOHlqM2NCSG5LX1Zkckk5MGtwZzIzNUFzeEtIdTFFd1VJYUxtaEl5VE8tOUxFM21ueER3TTE5WDZ1bTB1TzRWY0xoU1VuQ2RGS0NuSGJWdjJPY3lHSTdraGJTeFBWY1dHUl95dXpJX3NyUEN5VQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">애플의 반AI 입장이 갑자기 주식 시장의 짐이 되었습니다</a>
-<p class="news-desc">Apple’s Anti-AI Position Suddenly Becomes Stock Market Baggage Bloomberg.com</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>

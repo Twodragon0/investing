@@ -121,7 +121,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOdmhxOE10Q2J5RzR6U1lxZjRCX0FUYmdxdkl5SE5fT1N2SG5RSmMxb0xPekZ2eDNjbVhyVE54N0FIOTByZEdrMFUtSmp0U3A0R2RLVldRczJ2aW5PU2QzUzZ6Y0FYUThQU01jdEJOdzdtbndvdThwXzhUbDAzQ2lHeVIwbHE4dkZITlhxZ0JLLWVEVHdzZmcxYTdub3dWRjh1QnRNUzRhU0V3bnJZV2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Wall St recovers as tech bounces back before Nvidia results, inflation data</a>
-<p class="news-desc">Wall St recovers as tech bounces back before Nvidia results, inflation data Reuters</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -133,7 +132,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQMmppYXRlMmZSS0t6SEhHTjR6R3p3M3VZenBVS2YwbnhlVk8yQmZnTHQ4dE1rY295S3FsckpoNzlmbUI3VmZHQTJBNzFVbUd2UjUyNzB0ZWs0RHRoU0gyRTNRbVUxemxVUUVNV2c5NjVxR3NhRkFYb3lHcUQ5TWRFbk8xMGlQbmJRTWdOajd5Wno4R29vNkxhY3dGLUZldXZEclhIRFR5akFQMVRV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Tech Rally Helps Lift US Futures Ahead of Nvidia Earnings</a>
-<p class="news-desc">Tech Rally Helps Lift US Futures Ahead of Nvidia Earnings Bloomberg</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -164,7 +162,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNaWVGY1ZWdmpsaVlnRUZjNy1hZGwwUWlLODVETDFuNEFtTVhYUk9lSmxNel8zc3hCVE9fbHpnZ2VXWmZhX1d1VGRLNXhzeEs0NFJyTkNhaXR1LXFxZWdnbXpDRW9jUkVrM1ZCTVBmYTEwOWg4cDhHb2NZTWNYcUxvMFJFX1A?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">What’s Behind the U.S. Treasury’s Latest Attempt to Lower Interest Rates</a>
-<p class="news-desc">What’s Behind the U.S. Treasury’s Latest Attempt to Lower Interest Rates The New York Times</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -188,7 +185,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQX3R5QjNWRy1aNU9kcXZoRjU5emFRXy1SR1h3QU5rUWM4bEJ6b2pIckdPNFg0RmlQVFpiRVp1Z29FV3NoRUd6UEM0T21NbjI4c3dCRG1RZWVzU2EwcXR2UU5wZHhJc3FiNjhkWDQ3ek81SDg0anRKQm9FY1E2YXphS05MSTRVOVFjUnlhOFRoenpvaWlCWHVqZWl1NTBlelhKbmFENnI2ZHlsZmhDUHA4LWhwRjJxY201?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow and S&P 500 edge higher, chip stocks jump a day ahead of Nvidia results and inflation data; global oil prices below $88 a barrel</a>
-<p class="news-desc">Stock Market Today: Dow and S&P 500 edge higher, chip stocks jump a day ahead of Nvidia results and inflation data; global oil prices below $88 a barrel MarketWatch</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
