@@ -54,10 +54,14 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
+import json
 import logging
+import os
 import re
 import sys
+import tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
@@ -288,12 +292,131 @@ def find_blurbs(path: Path) -> list[Blurb]:
     return found
 
 
+# ---------------------------------------------------------------------------
+# Attempt memory
+#
+# `--limit` slices whatever order `collect_targets` returns, so under `newest`
+# the daily job re-spends its whole request budget on whatever sits at the top
+# -- and a blurb the resolver permanently cannot fix stays there forever.
+# Measured 2026-09-09: the newest-200 window spanned 2026-08-06..09-09, leaving
+# 2,403 flagged blurbs unreachable *at any yield*; the 2026-09-07 run failed 173
+# of its 200, and 150 of the current window are those same August posts. New
+# inflow is only ~6/day, so the window's composition is dominated by sticky
+# failures rather than by fresh work.
+#
+# Reordering by defect class does not fix this -- title-duplicate is 1,546 of
+# the 2,603 flagged, so a `title-dup-first` order moved `--limit 200` reach from
+# 5 to 7 of a 36-blurb probe set. Remembering *what was already tried* is what
+# makes the window advance.
+# ---------------------------------------------------------------------------
+
+_ATTEMPT_LOG_DEFAULT = REPO_ROOT / "_state" / "url_summary_attempts.json"
+
+# Recorded outcome for "the resolver saw this and could not fix it". ``skipped``
+# is deliberately never recorded: `--direct-only` skips Google News links
+# without issuing a request, and counting that as an attempt would push a blurb
+# the resolver never saw to the back of the queue -- the same `skipped` vs
+# `unresolved` distinction that keeps `--drop-unresolvable` from deleting
+# untried blurbs.
+_ATTEMPT_UNRESOLVED = "unresolved"
+
+
+def _attempt_key(blurb: Blurb) -> str:
+    """Stable identity for one card across runs.
+
+    Hashed rather than stored verbatim because Google News redirect URLs run to
+    several hundred characters and the corpus carries ~2,600 flagged blurbs. The
+    post name is stored alongside the hash so the file stays diagnosable.
+
+    Keyed on (post, url) rather than on the blurb text: the text is what changes
+    when a repair lands, and a repaired blurb stops being flagged anyway.
+    """
+    return hashlib.sha256(f"{blurb.path.name}\x00{blurb.url}".encode()).hexdigest()[:16]
+
+
+def load_attempts(path: Path) -> dict[str, dict]:
+    """Read the attempt log, or ``{}`` when there is nothing usable to read.
+
+    Fail-open on purpose. This is a scheduling hint, not correctness: in CI the
+    file arrives from ``actions/cache``, and a cache miss has to degrade to the
+    previous ordering rather than abort the daily backfill. An empty log makes
+    every blurb look untried, which `least-recently-tried` orders exactly like
+    `newest`.
+    """
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    except (OSError, ValueError) as e:
+        logger.warning("Attempt log unreadable, treating every blurb as untried: %s", e)
+        return {}
+    if not isinstance(raw, dict):
+        logger.warning("Attempt log is %s, not an object; ignoring", type(raw).__name__)
+        return {}
+    return {k: v for k, v in raw.items() if isinstance(v, dict)}
+
+
+def save_attempts(path: Path, attempts: dict[str, dict]) -> bool:
+    """Write the log atomically. Returns ``False`` when the write did not land."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = None
+    try:
+        fd, tmp = tempfile.mkstemp(dir=str(path.parent), suffix=".tmp")
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(attempts, f, ensure_ascii=False, sort_keys=True)
+        os.replace(tmp, str(path))
+        tmp = None  # consumed by the rename
+        return True
+    except Exception as e:  # noqa: BLE001 - a log outage must not stop the backfill
+        logger.warning("Attempt log save failed: %s", e)
+        return False
+    finally:
+        # `os.replace` consumes the temp file on success; on any failure after
+        # `mkstemp` it stayed behind. `common/translator.py` leaked four ~900KB
+        # orphans into `_state/` exactly this way on 2026-09-07 (#1284).
+        if tmp is not None:
+            try:
+                os.unlink(tmp)
+            except OSError:
+                logger.debug("Could not remove temp attempt log %s", tmp)
+
+
+def record_attempts(
+    attempts: dict[str, dict],
+    repairs: list[tuple[Blurb, str, str]],
+    today: date | None = None,
+) -> int:
+    """Fold this run's unresolved outcomes into ``attempts`` in place.
+
+    Successes are not recorded: a repaired blurb stops being flagged, so it
+    never reaches `collect_targets` again and a record would only grow the file.
+    """
+    stamp = (today or datetime.now(UTC).date()).isoformat()
+    recorded = 0
+    for blurb, text, source in repairs:
+        if text or source != _ATTEMPT_UNRESOLVED:
+            continue
+        attempts[_attempt_key(blurb)] = {
+            "tried": stamp,
+            "outcome": _ATTEMPT_UNRESOLVED,
+            "post": blurb.path.name,
+        }
+        recorded += 1
+    return recorded
+
+
 ORDER_NEWEST = "newest"
 ORDER_DROPPABLE_FIRST = "droppable-first"
-ORDERS = (ORDER_NEWEST, ORDER_DROPPABLE_FIRST)
+ORDER_LEAST_RECENTLY_TRIED = "least-recently-tried"
+ORDERS = (ORDER_NEWEST, ORDER_DROPPABLE_FIRST, ORDER_LEAST_RECENTLY_TRIED)
 
 
-def collect_targets(posts_dir: Path, days: int | None, order: str = ORDER_NEWEST) -> list[Blurb]:
+def collect_targets(
+    posts_dir: Path,
+    days: int | None,
+    order: str = ORDER_NEWEST,
+    attempts: dict[str, dict] | None = None,
+) -> list[Blurb]:
     """Flagged blurbs across the corpus.
 
     ``--limit`` slices whatever order this returns, so the order *is* the
@@ -307,6 +430,12 @@ def collect_targets(posts_dir: Path, days: int | None, order: str = ORDER_NEWEST
     droppable-first reaches 60 (measured 2026-09-08). It also explains why
     ``--days`` looked inert next to a small ``--limit`` — 90/180/365-day windows
     all selected the identical newest 60.
+
+    ``least-recently-tried`` reads ``attempts`` (see the attempt-memory block
+    above) and puts never-tried blurbs first, then the rest oldest-attempt
+    first. With an empty or missing log every blurb looks untried, so it
+    reproduces ``newest`` exactly -- that is the required behaviour on a CI
+    cache miss, not an accident.
 
     Reordering does not change the resolver cost: Google News accounts for 86.3%
     of droppable blurbs and 88.9% of the rest, so the request profile is the
@@ -328,6 +457,12 @@ def collect_targets(posts_dir: Path, days: int | None, order: str = ORDER_NEWEST
         # matters for the staged rollout: an unstable order would hand a
         # different slice to every run and make reviewing one impossible.
         targets.sort(key=lambda b: not _is_droppable(b.text, b.title))
+    elif order == ORDER_LEAST_RECENTLY_TRIED:
+        log = attempts or {}
+        # `""` for an untried blurb sorts ahead of every ISO date, so untried
+        # goes first and the rest follow oldest-attempt first. Stable, so
+        # newest-first survives inside each group.
+        targets.sort(key=lambda b: log.get(_attempt_key(b), {}).get("tried", ""))
     return targets
 
 
@@ -763,9 +898,21 @@ def build_parser() -> argparse.ArgumentParser:
         choices=ORDERS,
         default=ORDER_NEWEST,
         help=(
-            "대상 정렬. 기본 newest 는 일일 스케줄 job 이 의존하는 순서다. "
-            "droppable-first 는 삭제 적격을 앞으로 몰아 작은 --limit 이 레거시 "
-            "모집단에 닿게 하며, --drop-unresolvable 과 함께만 쓸 수 있다"
+            "대상 정렬. 기본 newest 는 최신순이며, 작은 --limit 과 함께 쓰면 영구 "
+            "실패가 창 상단에 눌러앉아 예산을 재소비한다. droppable-first 는 삭제 "
+            "적격을 앞으로 몰며 --drop-unresolvable 과 함께만 쓸 수 있다. "
+            "least-recently-tried 는 --attempt-log 를 읽어 미시도 → 오래된 시도 순으로 "
+            "정렬해 창을 전진시킨다 (일일 job 이 쓰는 값)"
+        ),
+    )
+    parser.add_argument(
+        "--attempt-log",
+        type=Path,
+        default=_ATTEMPT_LOG_DEFAULT,
+        help=(
+            "미해결 시도를 기록할 JSON 경로. --order least-recently-tried 가 이걸 읽는다. "
+            "CI 에서는 actions/cache 로 런 간 유지되며 캐시 미스는 newest 동작으로 "
+            "degrade 된다 (기본: _state/url_summary_attempts.json)"
         ),
     )
     parser.add_argument(
@@ -804,7 +951,11 @@ def main() -> int:
     if args.text_only:
         return _run_text_only(args)
 
-    targets = collect_targets(POSTS_DIR, args.days, order=args.order)
+    # Loaded under every order, not just `least-recently-tried`: recording runs
+    # unconditionally, so switching orders later inherits the history instead of
+    # starting from an empty log.
+    attempts = load_attempts(args.attempt_log)
+    targets = collect_targets(POSTS_DIR, args.days, order=args.order, attempts=attempts)
     if args.limit is not None:
         targets = targets[: args.limit]
 
@@ -830,6 +981,13 @@ def main() -> int:
             print(f"  [{blurb.path.name}] {blurb.text[:80]}")
 
     if args.apply:
+        # Recorded before the writes so a throttled run -- which repairs nothing
+        # and whose workflow step therefore commits nothing -- still advances the
+        # window next time. That day is exactly when the record matters most.
+        recorded = record_attempts(attempts, repairs)
+        if recorded and save_attempts(args.attempt_log, attempts):
+            print(f"\n시도 기록: 미해결 {recorded}건 (누적 {len(attempts)}건)")
+
         written, posts = apply_repairs(repairs)
         print(f"\n적용: 블러브 {written}건 / 포스트 {posts}개")
         if drops:
