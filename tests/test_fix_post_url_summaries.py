@@ -80,6 +80,58 @@ def test_find_blurbs_extracts_p0_alert_entries(tmp_path: Path) -> None:
     assert "시장 데이터는 현재 지연" in blurbs[0].text
 
 
+# A card whose blurb was never emitted: title anchor present, no
+# `<p class="news-desc">`. It sits between two cards that do have one, which is
+# the shape that let `_CARD_RE` pair a title with the *next* card's blurb.
+_BLURB_LESS_MIDDLE_POST = """---
+title: "테스트 포스트"
+---
+
+<div class="news-card-item">
+<a href="https://example.com/a" class="news-title">첫 번째 기사 제목</a>
+<p class="news-desc">첫 번째 기사의 한국어 요약입니다.</p>
+</div>
+
+<div class="news-card-item">
+<a href="https://example.com/b" class="news-title">블러브가 없는 기사 제목</a>
+<span class="source-tag">Google News</span>
+</div>
+
+<div class="news-card-item">
+<a href="https://example.com/c" class="news-title">세 번째 기사 제목</a>
+<p class="news-desc">세 번째 기사의 한국어 요약입니다.</p>
+</div>
+"""
+
+
+def test_find_blurbs_does_not_pair_a_blurb_with_an_earlier_cards_title(tmp_path: Path) -> None:
+    """A blurb belongs to the nearest preceding title, never an earlier one.
+
+    Falsifiability: drop the `(?!class="news-title")` lookahead from `_CARD_RE`
+    and the second blurb comes back carrying card B's title and URL while its
+    text is card C's. The count stays 2 either way, so asserting only the count
+    proves nothing — the title/URL identity is what discriminates.
+
+    Consequence of the wrong pairing is not cosmetic: `refetch` keys off
+    `Blurb.url`, so card B's article would be summarized into card C's blurb.
+    """
+    path = _write(tmp_path, "2026-08-05-z.md", _BLURB_LESS_MIDDLE_POST)
+    blurbs = [b for b in mod.find_blurbs(path) if b.kind == "news-desc"]
+
+    assert [(b.url, b.title) for b in blurbs] == [
+        ("https://example.com/a", "첫 번째 기사 제목"),
+        ("https://example.com/c", "세 번째 기사 제목"),
+    ]
+    # The blurb-less card contributes nothing rather than stealing a neighbour's.
+    assert "https://example.com/b" not in {b.url for b in blurbs}
+    # Every emitted blurb is still found: the constraint must not lose coverage.
+    assert len(blurbs) == _BLURB_LESS_MIDDLE_POST.count('<p class="news-desc">')
+    assert [b.text for b in blurbs] == [
+        "첫 번째 기사의 한국어 요약입니다.",
+        "세 번째 기사의 한국어 요약입니다.",
+    ]
+
+
 def test_plain_strips_tags_and_decodes_entities() -> None:
     assert mod._plain("<b>KCRG</b> &#124; 뉴스") == "KCRG | 뉴스"
 
