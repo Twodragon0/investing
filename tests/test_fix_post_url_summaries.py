@@ -11,6 +11,9 @@ hermetic-writes guard.
 
 from __future__ import annotations
 
+import logging
+import sys
+from datetime import date
 from pathlib import Path
 
 import fix_post_url_summaries as mod
@@ -315,6 +318,226 @@ def test_drop_cap_is_reachable_in_one_run(tmp_path: Path) -> None:
     repairs = [(b, "", "unresolved") for b in targets]
 
     assert len(mod.select_drops(repairs)) == mod._MAX_DROPS_PER_RUN
+
+
+# ---------------------------------------------------------------------------
+# Attempt memory
+#
+# `--limit` slices the order, so under `newest` a blurb the resolver can never
+# fix sits at the top of every run and re-spends the day's budget. Measured
+# 2026-09-09: the newest-200 window covered only 2026-08-06..09-09, leaving
+# 2,403 flagged blurbs unreachable at any yield.
+# ---------------------------------------------------------------------------
+
+
+def _tried(blurb: mod.Blurb, day: str) -> tuple[str, dict]:
+    return mod._attempt_key(blurb), {"tried": day, "outcome": "unresolved", "post": blurb.path.name}
+
+
+def test_least_recently_tried_puts_untried_before_tried(tmp_path: Path) -> None:
+    """The newest post goes *last* once it has been tried — that is the point.
+
+    Asserting only "the untried one is present" would pass under `newest`; the
+    discriminating claim is that a recorded attempt demotes the newest post
+    below an older, untried one.
+    """
+    _write(tmp_path, "2026-07-01-old.md", _DROPPABLE_POST)
+    _write(tmp_path, "2026-09-01-new.md", _DROPPABLE_POST)
+
+    newest = mod.collect_targets(tmp_path, days=None)
+    assert [t.path.name for t in newest] == ["2026-09-01-new.md", "2026-07-01-old.md"]
+
+    log = dict([_tried(newest[0], "2026-09-08")])
+    ordered = mod.collect_targets(tmp_path, days=None, order="least-recently-tried", attempts=log)
+
+    assert [t.path.name for t in ordered] == ["2026-07-01-old.md", "2026-09-01-new.md"]
+
+
+def test_least_recently_tried_orders_tried_oldest_attempt_first(tmp_path: Path) -> None:
+    """Within the tried group the staler attempt is retried first."""
+    _write(tmp_path, "2026-08-01-a.md", _DROPPABLE_POST)
+    _write(tmp_path, "2026-08-02-b.md", _DROPPABLE_POST)
+    by_name = {t.path.name: t for t in mod.collect_targets(tmp_path, days=None)}
+
+    log = dict(
+        [
+            _tried(by_name["2026-08-02-b.md"], "2026-09-01"),
+            _tried(by_name["2026-08-01-a.md"], "2026-09-07"),
+        ]
+    )
+    ordered = mod.collect_targets(tmp_path, days=None, order="least-recently-tried", attempts=log)
+
+    # b was tried longer ago, so it leads even though a is not the newer post.
+    assert [t.path.name for t in ordered] == ["2026-08-02-b.md", "2026-08-01-a.md"]
+
+
+@pytest.mark.parametrize("attempts", [None, {}])
+def test_least_recently_tried_without_a_log_matches_newest(tmp_path: Path, attempts) -> None:
+    """A CI cache miss must degrade to the previous ordering, not reshuffle.
+
+    Compared as full lists rather than "is non-empty": the required property is
+    that the two orders are *identical*, which is what makes a missing log safe
+    to ship on the daily schedule.
+    """
+    for day in ("01", "05", "09", "15"):
+        _write(tmp_path, f"2026-08-{day}-p.md", _DROPPABLE_POST)
+
+    baseline = [t.path.name for t in mod.collect_targets(tmp_path, days=None)]
+    degraded = [
+        t.path.name for t in mod.collect_targets(tmp_path, days=None, order="least-recently-tried", attempts=attempts)
+    ]
+
+    assert degraded == baseline
+
+
+def test_least_recently_tried_does_not_require_the_drop_flag() -> None:
+    """Unlike droppable-first, this order does not hand out deletion authority."""
+    args = mod.build_parser().parse_args(["--order", "least-recently-tried"])
+    assert args.order == "least-recently-tried"
+    assert args.drop_unresolvable is False
+
+
+def test_attempt_log_default_lives_under_state(tmp_path: Path) -> None:
+    args = mod.build_parser().parse_args([])
+    assert args.attempt_log.parent.name == "_state"
+    assert args.attempt_log.name == "url_summary_attempts.json"
+
+
+def test_load_attempts_returns_empty_for_a_missing_file(tmp_path: Path) -> None:
+    assert mod.load_attempts(tmp_path / "nope.json") == {}
+
+
+def test_load_attempts_fails_open_on_corrupt_json(tmp_path: Path, caplog) -> None:
+    """A truncated cache entry must not abort the daily backfill."""
+    path = tmp_path / "attempts.json"
+    path.write_text('{"abc": {"tried": "2026-09-0', encoding="utf-8")
+
+    with caplog.at_level(logging.WARNING, logger="fix_post_url_summaries"):
+        assert mod.load_attempts(path) == {}
+    assert any("untried" in r.message or "unreadable" in r.message for r in caplog.records), (
+        f"corrupt log was swallowed without a warning: {[r.message for r in caplog.records]}"
+    )
+
+
+def test_load_attempts_rejects_a_non_object_document(tmp_path: Path) -> None:
+    path = tmp_path / "attempts.json"
+    path.write_text("[1, 2, 3]", encoding="utf-8")
+    assert mod.load_attempts(path) == {}
+
+
+def test_load_attempts_drops_non_object_entries(tmp_path: Path) -> None:
+    """One bad entry must not discard the whole log."""
+    path = tmp_path / "attempts.json"
+    path.write_text('{"good": {"tried": "2026-09-08"}, "bad": "2026-09-08"}', encoding="utf-8")
+    assert mod.load_attempts(path) == {"good": {"tried": "2026-09-08"}}
+
+
+def test_save_attempts_round_trips(tmp_path: Path) -> None:
+    path = tmp_path / "sub" / "attempts.json"
+    payload = {"abc123": {"tried": "2026-09-09", "outcome": "unresolved", "post": "p.md"}}
+
+    assert mod.save_attempts(path, payload) is True
+    assert mod.load_attempts(path) == payload
+
+
+def test_save_attempts_does_not_leak_a_temp_file_on_failure(tmp_path: Path, monkeypatch) -> None:
+    """`common/translator.py` leaked four ~900KB orphans into `_state/` this way.
+
+    The failure is injected at `json.dump`, i.e. after `mkstemp` has already
+    created the file — injecting earlier would leave nothing to leak and the
+    assertion would hold vacuously.
+    """
+    path = tmp_path / "attempts.json"
+
+    def _boom(*_a, **_k):
+        raise RuntimeError("disk full")
+
+    monkeypatch.setattr(mod.json, "dump", _boom)
+    assert mod.save_attempts(path, {"a": {"tried": "2026-09-09"}}) is False
+    assert sorted(p.name for p in tmp_path.glob("*.tmp")) == []
+    assert not path.exists(), "a failed save must not leave a partial log behind"
+
+
+def test_record_attempts_records_only_unresolved() -> None:
+    """`skipped` is not an attempt — the resolver never issued a request.
+
+    Same distinction `--drop-unresolvable` relies on. Recording a skip would
+    demote a blurb nobody has tried yet to the back of the queue.
+    """
+    blurbs = [
+        mod.Blurb(Path(f"2026-08-0{i}-p.md"), "news-desc", f"https://example.com/{i}", "t", "raw", "text")
+        for i in range(1, 5)
+    ]
+    repairs = [
+        (blurbs[0], "", "unresolved"),
+        (blurbs[1], "", "skipped"),
+        (blurbs[2], "복구된 한국어 요약입니다.", "refetch"),
+        (blurbs[3], "합성된 요약입니다.", "synthetic"),
+    ]
+    log: dict[str, dict] = {}
+
+    assert mod.record_attempts(log, repairs, today=date(2026, 9, 9)) == 1
+    assert set(log) == {mod._attempt_key(blurbs[0])}
+    assert mod._attempt_key(blurbs[1]) not in log, "a skipped blurb was recorded as an attempt"
+    assert log[mod._attempt_key(blurbs[0])] == {
+        "tried": "2026-09-09",
+        "outcome": "unresolved",
+        "post": "2026-08-01-p.md",
+    }
+
+
+def test_record_attempts_refreshes_an_existing_stamp() -> None:
+    """A retried blurb moves to the back, or the window oscillates."""
+    blurb = mod.Blurb(Path("2026-08-01-p.md"), "news-desc", "https://example.com/1", "t", "raw", "text")
+    log = dict([_tried(blurb, "2026-08-20")])
+
+    mod.record_attempts(log, [(blurb, "", "unresolved")], today=date(2026, 9, 9))
+
+    assert log[mod._attempt_key(blurb)]["tried"] == "2026-09-09"
+
+
+def test_attempt_key_separates_the_same_url_in_different_posts() -> None:
+    """The same story appears in several digests and each copy is its own card."""
+    a = mod.Blurb(Path("2026-08-01-a.md"), "news-desc", "https://example.com/x", "t", "raw", "text")
+    b = mod.Blurb(Path("2026-08-02-b.md"), "news-desc", "https://example.com/x", "t", "raw", "text")
+    assert mod._attempt_key(a) != mod._attempt_key(b)
+
+
+def _run_main(monkeypatch: pytest.MonkeyPatch, tmp_path: Path, argv: list[str]) -> Path:
+    """Drive `main()` over a temp corpus with the network stubbed out.
+
+    `POSTS_DIR` is patched on the module rather than imported into the test, so
+    nothing here can write into the real `_posts/`.
+    """
+    monkeypatch.setattr(mod, "POSTS_DIR", tmp_path)
+    monkeypatch.setattr(mod, "repair", lambda targets, *a, **k: [(b, "", "unresolved") for b in targets])
+    log = tmp_path / "attempts.json"
+    monkeypatch.setattr(sys, "argv", ["fix_post_url_summaries.py", "--attempt-log", str(log), *argv])
+    assert mod.main() == 0
+    return log
+
+
+def test_dry_run_does_not_write_the_attempt_log(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    """A dry run must stay side-effect free, log included.
+
+    Paired with the `--apply` case below on purpose: asserting only that the
+    file is absent would also pass if recording were broken outright.
+    """
+    _write(tmp_path, "2026-08-01-p.md", _DROPPABLE_POST)
+
+    log = _run_main(monkeypatch, tmp_path, [])
+
+    assert not log.exists(), "dry-run wrote the attempt log"
+
+
+def test_apply_writes_the_attempt_log(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    _write(tmp_path, "2026-08-01-p.md", _DROPPABLE_POST)
+
+    log = _run_main(monkeypatch, tmp_path, ["--apply"])
+
+    recorded = mod.load_attempts(log)
+    assert len(recorded) == 1, f"expected one unresolved record, got {recorded}"
+    assert next(iter(recorded.values()))["post"] == "2026-08-01-p.md"
 
 
 # ---------------------------------------------------------------------------
