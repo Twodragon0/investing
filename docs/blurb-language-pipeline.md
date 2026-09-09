@@ -239,9 +239,65 @@ python scripts/tools/measure_blurb_inflow.py [--since <ref>] [--json]
    (위), 대신 R2/R3 복구에 의존한다.
 2. **잔여 398건의 차단 요인** — Google News 리다이렉트 88.6%(스로틀), 재수집 영구 실패,
    앵커 모호. 삭제 적격 291건은 `--order droppable-first` 로 회차당 최대 60건씩 처리 가능.
-3. **합성 폴백 재활성화 여부** — `korean_keywords` 품질은 고쳤지만
-   `improve_existing_posts` 가 여전히 그 산출물을 제거한다. 생산자/제거 규칙 중 하나를
-   없애는 결정이 남았다.
+3. **합성 폴백 재활성화 여부 — 결론: 재활성화하지 않는다** (2026-09-09).
+   `--skip-synthetic` 을 유지한다. "생산자를 없앨지 제거 규칙을 없앨지" 는 잘못 놓인
+   질문이었다.
+
+   `generate_synthetic_description` 은
+   `if analysis and analysis != title and len(analysis) > 20: return analysis` 로
+   게이트하고, **`주요 키워드:` 꼬리가 바로 그 `analysis != title` 을 만족시키는
+   물건**이다. 꼬리만 빼면 게이트가 무너진다. 고유 카드 제목 4,704건 중 그 분기로
+   떨어지는 **1,032건(21.94%)** 을 대상으로 분기만 격리해 실측:
+
+   | 분기 제거 후 | 건수 |
+   |---|---:|
+   | 제목 그대로 반환 → 제목-중복 결함 | 617 (59.8%) |
+   | 래퍼 폴스루 → `<제목>.. 부문은, 연준으로 관련 보도.` | 415 (40.2%) |
+   | `_is_desc_duplicate_of_title` 판정 | 680 (65.9%) |
+
+   폴스루 쪽은 중복 마침표와 조사 붙은 토큰(`부문은`, `연준으로`)을 낸다 — 현행 꼬리보다
+   나쁘고, `..` 는 `normalize_blurb` 가 고치려고 존재하는 아티팩트다.
+
+   제거 규칙이 옳다는 건 확정이다. `kr_entities = korean_keywords(title)`
+   (`enrichment_synthetic.py:732`, 이 모듈의 유일한 호출처)이므로 꼬리는 제목 밖 정보를
+   담을 수 **구조적으로** 없다. 2026-09-07 의 junk-token 수정은 서술어 어미를 잡았고
+   부사·조사 조각·제목 관형어는 남아 있다 — `주요 키워드: 헐값, 거래, 어떻게` / `등에`.
+
+   **방치 비용이 0이다.** 코퍼스에 `주요 키워드:` 는 포스트 1개·2건만 남았고,
+   `--skip-synthetic` 은 워크플로우(`backfill-url-summaries.yml`)와
+   `tests/test_backfill_url_summaries_workflow_guard.py` 가 고정한다. 이 항목은
+   재활성화를 원할 때만 load-bearing 해진다.
+
+   **재활성화 선행조건**: 생산자 제거가 아니라 **폴스루 체인이 그 22% 에 대해 `""` 를
+   반환하게** 만드는 것. 꼬리 제거를 단독 커밋으로 내면 40.2% 가 악화된다.
+
+   재현 (저장소 루트에서, 위 네 수치를 모두 낸다):
+   ```python
+   python - <<'PY'
+   import html, pathlib, re, sys
+   sys.path.insert(0, "scripts")
+   import common.enrichment_synthetic as es
+   from common.enrichment_synthetic import KEYWORD_TAIL_LABEL as L
+   from common.enrichment_synthetic import generate_synthetic_description as gen
+
+   TITLE = re.compile(r'class="news-title"[^>]*>(.*?)</a>', re.S)
+   titles = sorted({
+       html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
+       for p in pathlib.Path("_posts").glob("*.md")
+       for m in TITLE.finditer(p.read_text(encoding="utf-8", errors="replace"))
+   } - {""})
+   tail = [t for t in titles if L in (gen(t, "", None) or "")]
+   print(f"고유 제목 {len(titles)} / keyword-tail 분기 {len(tail)}")
+
+   es.korean_keywords = lambda title, limit=3: []  # 호출처는 L732 한 곳뿐이라 격리된다
+   after = [gen(t, "", None) or "" for t in tail]
+   fell = sum(1 for o in after if "관련 보도" in o or ".." in o)
+   print(f"분기 제거 후: 제목만 {len(after) - fell} / 폴스루 {fell}")
+   PY
+   ```
+
+   `korean_keywords` 를 통째로 스텁하면 래퍼의 정당한 폴스루가 스텁 누출처럼 보인다 —
+   호출처가 `_analyze_korean_title` 한 곳뿐임을 먼저 확인하고 두 갈래를 분리해 세라.
 4. **미인식 사이트 크롬 2건** — Investorideas 태그라인, TradingView 블로그 유도.
    `_BOILERPLATE_DESC_PHRASES` 에 정확 리터럴로 추가하는 것이 해법이며(패턴 추측은 삭제
    권한을 줄 수 없다), 현재는 보수적으로 보존 중이다.
