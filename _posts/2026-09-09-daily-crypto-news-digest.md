@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-09 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 싱가포르 남성, DC 거주자로부터 2억 4천만 달러 비트코인 절도를 주도한 혐의로 유죄를 인정 - 79건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 주목</li><li>🟣 <strong>DeFi</strong>: 스테이블코인, 디파이 관련 12건</li><li>📊 <strong>매크로/금리</strong>: 8건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://apnews.com/article/cryptocurrency-scam-malone-lam-guilty-58db2e40ba8b20bff8c70eb5d9d6b537">싱가포르 남성, DC 거주자로부터 2억 4천만 달러 비트코인 절도를 주도한 혐의로 유죄를 인정</a> <span class="p0-desc">싱가포르 남성, DC 거주자로부터 2억 4천만 달러 비트코인 절도를 주도한 혐의로 유죄 인정 AP 뉴스</span></li><li><a href="https://apnews.com/article/cryptocurrency-scam-malone-lam-guilty-3d40f81fd3ba0b5e28d6b962ca6b343d">암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다</a> <span class="p0-desc">암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO은 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다 AP 뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQV1lpQVdhRENMSUQ3NnJWZkxyRlRjN0hHS2xsek1XbFo2ZEVCNnJ6RGRsNUZubmRCUURNbl9hbk5WSXJ4X0ZrTVJ3YW4wdHl5d05lOER2a1JZRUtkQmxKcy1DVjFGdFJfTGF5b1JtbE5BLVNoMGhGVEZKdm5ZZlcwQU9EQ2U4MWlmZEtNbEdxb1d1cWtSQzlLckJsdHRpWEM2TlJ2S0JYVnNySXM?oc=5">비트코인 기반의 Liquid Network는 해킹으로 인해 3억 2천만 달러가 인출되었다고 밝혔습니다</a> <span class="p0-desc">비트코인 기반 결제 및 정산 네트워크인 Liquid Network는 일요일에 해킹으로 인해 연방 지갑에서 약 3억 2천만 달러가 인출되었다고 밝혔습니다</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 싱가포르 남성, DC 거주자로부터 2억 4천만 달러 비트코인 절도를 주도한 혐의로 유죄를 인정 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 79건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (38건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (22건): 암호화폐, 달러, 하락 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🟣 DeFi** (12건): 스테이블코인, 디파이, BTC DeFi 동향 (12건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 싱가포르 남성, DC 거주자로부터 2억 4천만 달러 비트코인 절도를 주도한 혐의로 유죄를 인정
-- 암호화폐 사기꾼을 위한 파티는 끝났습니다 WHO 2억 4천만 달러의 비트코인 절도 후 흥청망청 돈을 썼습니다
-- 비트코인 기반의 Liquid Network는 해킹으로 인해 3억 2천만 달러가 인출되었다고 밝혔습니다
-
-### 주요 이슈
-
-- 비트코인, 저점 대비 38% 반등…9만달러 돌파 기대감
-- Visa, 금융 스테이블코인 카드 프로그램에 온체인 대출 도입
-- 오전 시간: 참호는 트럼프 이후 가장 큰 한 주를 보냈습니다.
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 디파이, AI
-- **주요 출처**: Decrypt(15건), CoinDesk(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-09.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **79건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- 2026-09-09 암호화폐 핵심 뉴스: Hunter 바이든 노트북 테마 암호화폐 출시. 총 79건 분석, 핵심 테마는 비트코인, 가격/시장, DeFi입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

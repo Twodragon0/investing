@@ -32,45 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-09 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">811.88</div><div class="stat-label">KOSDAQ -1.25%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 코스닥, 외국인 부각 192건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 48건</li><li>📊 <strong>매크로/금리</strong>: 환율, 조선비즈 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 대통령 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 192건의 뉴스에서 **가격/시장**(48건)과 **매크로/금리**(15건)이 동시에 부각되고 있습니다. 거시경제 이벤트와 시장 가격이 밀접하게 연동되고 있어 경제 지표 발표에 주목해야 합니다
-
-### 테마별 동향
-
-- **📈 가격/시장** (48건): 코스피, 코스닥, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (15건): 환율, 조선비즈, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (15건): 삼성전자, 하이닉스, 반도체주 기술 이슈 (15건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- 삼전·닉스 3분기 실적 눈높이 '쑥'…주가 반등세 이어질까
-- 삼성전자·SK하이닉스 3분기 실적 전망 상향…주가도 동반 반등
-- 수익이 너무 강해서 전 세계적으로 주식이 계속 저렴해지고 있습니다.
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 74건, 글로벌 기사 118건 수집
-- 한국 지수: KOSPI 6,954.52(-0.58%), KOSDAQ 811.88(-1.25%), USD/KRW 1,340.75(-0.31%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">48건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:31%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:31%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:31%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:19%"></div></div><span class="theme-count">9건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-09.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,954.52 (-0.58%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 811.88 (-1.25%).
+- 2026-09-09 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,954.52(-0.58%), KOSDAQ 811.88(-1.25%), USD/KRW 1,340.75(-0.31%).
+- *마이크론 기술(나스닥:MU) 주식은 인공 지능 서버와 관련된 고대역폭 메모리 수요가 업계 전반에 걸쳐 공급을 초과함에 따라 랠리을 확장합니다.*
 
 ## 테마별 주요 뉴스
 

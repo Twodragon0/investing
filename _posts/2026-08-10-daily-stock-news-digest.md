@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-10 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5rcU1JbW9lVi1LV3FHanFIejJJeVhBV3c3QUtHdkg4WlVYU3NTZVAzT1RXYy1mMWdUQjJKRmowemUxY0RhdkdoM3dqWUI2M1hZNm5ncjhSNVBaVEdfMnJaZHloSHF5bTBLWkZkUXdjWjXSAXRBVV95cUxPZGd5QmNJc3l0T25Ec3pVTWRXOHhWUnlWaU9CNkpod3hyd3I2dE1aZlkwaFEtaWY5T2pfTlJEcUlaeG1ubTNwZU9HWHBJZ0NuNGphdU1sRHg0Z1pubW1jb3Nya2dKNm5vblc5V1VrT054cHFrZA?oc=5">모건스탠리 “메모리주 급락 조정 끝났다”…삼성·하이닉스 재진입 기회 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이준영 기자] 최근 급격한 주가 조정을 받은 삼성전자와 SK하이닉스 등 국내 메모리 반도체주에 대해 글로벌 투자은행 모건스탠리가 투자 매력이 다시 높아졌다는 평가를 내놨다.단기적인 주가 충격은 상당 부분 해소됐으며 현 주가 수준에서 투자자들이 다시 매수를 검토할 만하다는</span></li><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQNmUxRFlvcUFjN2I5ZWNFTzZRb2ttWnd1cjl5cEdMTDZnbkRpaDRfMFdlSzdZOTJaSFlCM1pjb3pGSWpyai1NLVpiTk5IbXhfUFh3Q241dk4xSVFVbWdBMWhrZjFmR3d6blcyZEpvUHRmVDFFa3JNcE5lLUZlX21IS2xFQk9meGs?oc=5">모건스탠리 "메모리 반도체주 급락 마무리…현 주가 재진입 기회"</a> <span class="p0-desc">최근 급락한 메모리 반도체주가 다시 투자자들의 관심을 받을 수 있다는 전망이 나왔다. 모건스탠리는 메모리 업황의 급격한 조정이 일단락된 것으로 판단하면서 현재 주가 수준을 매력적인 재진입 구간으로 평가했다.9일 투자은행(IB) 업계에 따르면 모건스탠리는 지난 6일 발간한 아시아 기술주</span></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/scott-galloway-warned-us-stock-142000770.html">Scott Galloway warned the US stock market could crash within 24 months thanks to AI. Protect your nest egg while you can</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,258.77 (-0.60%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 798.81 (-0.36%).
+- 2026-08-10 주식 시장에서 146건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,258.77(-0.60%), KOSDAQ 798.81(-0.36%), USD/KRW 1,407.45(-1.09%).
 - *[더페어] 최준규 기자 = 국내 증시가 이틀 연속 약세를 보인 가운데 유가증권시장과 코스닥 시장에서 주요*
 
 ## 테마별 주요 뉴스

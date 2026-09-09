@@ -18,6 +18,7 @@ permalink: "/crypto-news/2026/02/11/daily-crypto-news-digest/"
 ## 전체 뉴스 요약
 
 - 총 **70건** 수집
+- 오늘 총 70건의 암호화폐 관련 뉴스가 수집되었습니다. 주요 내용을 정리합니다.
 - 1. Files cast light on Jeffrey Epstein’s ties to cryptocurrency - The Guardian - 구글 뉴스 2. Prediction: This Cryptocurrency Could Soar 187% in 2026 - The Motley…
 
 

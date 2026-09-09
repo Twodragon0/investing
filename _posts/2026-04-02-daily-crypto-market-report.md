@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-02 | ADA +3.7% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Cardano</strong> (ADA): +3.68%</li><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -3.18%</li><li>🟢 <strong>Monero</strong> (XMR): +2.89%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

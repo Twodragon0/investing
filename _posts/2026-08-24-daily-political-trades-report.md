@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-24 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(4회), **의회**(2회), **공시**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-08-24 정치권 핵심 이슈: Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold - 24/7. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 13건 (미국 의회 거래 2건, 중앙은행…
 - 1. Trump Continues Trading Stocks at Warp Speed: Berkshire Bought, Meta Sold - 24/7 Wall St. 트럼프 대통령의 계정은 한 달에 1,000건 이상의 거래를 실행했습니다. 여기에는 주요 방산업체의 움직임이 의심스러울…
 
 ## 1. 미국 의회 거래 동향

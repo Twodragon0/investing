@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 대표 브리핑 이미지"
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Solana</strong> (SOL): +5.60%</li><li>🟢 <strong>Chainlink</strong> (LINK): +5.19%</li><li>🟢 <strong>Dogecoin</strong> (DOGE): +5.13%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **11건** 수집

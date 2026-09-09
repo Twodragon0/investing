@@ -25,30 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-09 - 시�
 - 주요 출처: WorldMonitor/CNBC (15건), WorldMonitor/Guardian World (5건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 낮음</strong><ul><li>지정학적 리스크가 비교적 안정적이나, 돌발 이벤트 가능성은 상존합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(11건), **금융시장**(4건), **지정학/안보**(3건) 중심으로 전개되고 있습니다.
-
-안보 이슈(3건)와 금융시장 뉴스(4건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-에너지 이슈 **1건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-**테마 집중도**: 상위 2개 테마가 전체의 75%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (3건)
-
-- 미군은 미국 전함 Centcom에 대한 공격을 시도한 후이란 유조선 5 척을 파괴했습니다.
-- '환자가 관세를 지불합니다': 스위스 제약회사 CEO은 트럼프의 제네릭 의약품 관세 위협에 대해 경고합니다.
-- 퀄컴은 AI 인프라 거래의 일환으로 아마존에 40억 달러 규모 칩 제조업체 주식을 인수하는 영장을 발행합니다.
-
-### 투자자 체크포인트
-
-- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/CNBC (15건), WorldMonitor/Guardian World (5건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div></div>
 

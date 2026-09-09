@@ -32,12 +32,13 @@ image_alt: "소셜 미디어 동향 - 2026-06-20 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.advisorperspectives.com">연준의 이자율 결정: 2026년 6월 17일 - 자문가 관점</a> <span class="p0-desc">연준의 이자율 결정: 2026년 6월 17일 자문가 관점</span></li><li><a href="https://www.investopedia.com">연준의 금리 결정이 귀하의 재정에 미치는 영향 - Investopedia</a> <span class="p0-desc">금융 교육은 모든 배경의 독자에게 서비스를 제공해야 합니다. 우리는 콘텐츠, 직원, 기여자 및 파트너 조직이 모든 인종, 성별, 세대, 성적 취향, 능력 및 사회 경제적 배경을 가.</span></li><li><a href="https://finance.yahoo.com">연준의 이자율 결정이 은행 계좌, 대출, 신용 카드 및 투자에 미치는 영향</a> <span class="p0-desc">Tin Can은 아이들이 연결 상태를 유지하고 친구들과 연락을 유지할 수 있는 새롭고 안전한 유선 전화입니다. 구식 디자인의 이 장치에는 자녀 보호 기능이 내장되어 있으며 오늘날의.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 27건 중 텔레그램 0건, 소셜 2건, 정치·경제 25건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 27건 중 텔레그램 0건, 소셜 2건, 정치·경제 25건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

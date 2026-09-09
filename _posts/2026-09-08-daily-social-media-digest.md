@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-08 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준의 '가족 싸움'은 주요 금리 결정을 앞두고 공개적으로 퍼졌습니다. - 29건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 금리 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 부동산, 정부 관련 13건</li><li>📈 <strong>가격/시장</strong>: 외국인, 코스피 관련 12건</li><li>🤖 <strong>AI/기술</strong>: 외국인, 코스피 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/newsletters/2026-09-07/fed-latest-warsh-s-speech-contrasts-with-new-york-fed-president-s-take">연준의 '가족 싸움'은 주요 금리 결정을 앞두고 공개적으로 퍼졌습니다.</a> <span class="p0-desc">연준의 '가족 싸움'은 주요 금리 결정 전에 공개 Bloomberg.com</span></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQLTBqcFZ3NHpqZjEzaVhrSElfaUdLOWJUcFVmVlJlQTh5M2VPYnRaWFJhRTJxdEpaczBGUjFVdXZBN1JnT2ZrMHdkX2J3cTYxMkEwMnpBUGxlWmNJb1JWbF9jQjVBamdZLWZnM1AxdVdjaTlIRzFDU0wzOE8tNzR5VkZxeVJNWDVlUUYyUFdDTDU?oc=5">이번 주 주목해야 할 5가지 시장 이벤트: 미국 인플레이션, ECB 금리, 이란 및 수익</a> <span class="p0-desc">Oracle(NYSE:ORCL) 및 Adobe(나스닥:ADBE)의 수익 보고서와 함께 미국 인플레이션 수치, 유럽중앙은행(ECB)의 금리 결정 및 이란 분쟁 상황 전개가 이번 주.</span></li><li><a href="https://news.google.com/rss/articles/CBMihAJBVV95cUxNa1lNUTVFcDdVbnR0WjlhQjRPR29MWGZFVGZRZEJ5TnBhVmdLa083U2RBWVd2NTJrZkRRWkJzaVg2aGJBeW9abXZaRXBmUmhmVlRTMFMxTWVqOHMwLXkzRl80X1RSaktYbGFFSURqcFBubHFXX2tvRmFFSG1WSjViTVJtZFBGSmktV0JJTTlIRy1aQ2t4aldUMjF1YVZhS1lKUGt6YmNLdkVJd2kzOVZpU08tbmJsN3ZhN09EamwteHJRZE1rZXBzYThpamdubzluX3NtcTJmNDhPNzFIRlFpWXNFY3p3S3ZIS3ZmdDluMkF4RGhlWmxiUDRHNjlDU2VYYnRKag?oc=5">이번 금요일이 9월 주식시장에 가장 중요한 날 중 하나가 될 수 있는 이유는 다음과 같습니다.</a> <span class="p0-desc">소비자 물가 지수로 측정한 인플레이션은 최근 연준의 2% 목표를 훨씬 초과했기 때문에 금리를 인상해야 할 수도 있습니다. 금요일에 발표되는 8월 CPI 수치는 다음 주 연준 이자율.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 29건 중 텔레그램 0건, 소셜 1건, 정치·경제 28건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 29건 중 텔레그램 0건, 소셜 1건, 정치·경제 28건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
