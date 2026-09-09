@@ -100,9 +100,28 @@ _SENTENCE_END_RE = re.compile(r"(?<=[.!?。])\s+|(?<=니다\.)\s*|(?<=습니다\
 
 # Card blurb: the anchor and its `<p class="news-desc">` sit in the same card
 # div, with the source tag and severity badge in between.
+#
+# Neither `title` nor `between` may cross into the next card. A card whose blurb
+# was never emitted has a title but no `<p class="news-desc">`, and unconstrained
+# `.*?` under `re.S` then walks past it and pairs that title -- and its URL --
+# with the *next* card's blurb. Measured on the corpus 2026-09-09, by asking
+# whether each match's anchor is the *nearest* one preceding its blurb: 109
+# cards carry a title with no blurb, 97 of 5,515 blurbs were paired with an
+# earlier card's title, and 25 of those were `_is_bad` flagged, i.e. inside this
+# tool's target set. For those, `refetch` would have fetched the wrong article
+# and written its summary over a blurb that belongs to a different headline --
+# the contamination PR #1290 found by hand during the `--limit 20` rollout.
+#
+# Both constraints are load-bearing. Guarding `between` alone does not work:
+# `title` is also `.*?` under `re.S`, so the engine backtracks and lets *it*
+# swallow `</a>`, the blurb-less card's tail and the next card's whole anchor,
+# reproducing the same wrong (url, desc) pair with the boundary now hidden
+# inside `title`. Searching only `between` for `class="news-title"` reports zero
+# violations in that state, which is why the guard test asserts the paired URL
+# and title rather than counting boundary crossings.
 _CARD_RE = re.compile(
-    r'<a href="(?P<url>[^"]+)"[^>]*class="news-title"[^>]*>(?P<title>.*?)</a>'
-    r'(?P<between>.*?)<p class="news-desc">(?P<desc>.*?)</p>',
+    r'<a href="(?P<url>[^"]+)"[^>]*class="news-title"[^>]*>(?P<title>(?:(?!</a>).)*?)</a>'
+    r'(?P<between>(?:(?!class="news-title").)*?)<p class="news-desc">(?P<desc>.*?)</p>',
     re.S,
 )
 
