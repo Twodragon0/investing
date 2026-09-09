@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-24 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZjF2aEQ0VmR0WTAzSHQyeFBCcVJzaTN6OUl1QjkzM1hpZXBoZ1F4Umd6NVFSTFVaM3Jhdmk5dTBGOEk4WWVjdVhFeF9IY25uWFk3aFFOckxUSTN0aDlSS3o3LUhUbXpmTjdMaUROSnFZMGFnRC1FdmFnSnM3SkNkSWNwMTYtQVcwVzdBeGFvM2NSdzBUVkRIcmRsdS1zUGFPS3JHbHRadnFGd0ZUa1dlNHdORXRwMnNEUFRF?oc=5">XRP Has Rallied 1,000% After Every 60% Crash. Is this the Fourth? - 24/7 Wall St.</a></li><li><a href="https://decrypt.co/376287/microsoft-perfect-10-exploit-hackers-run-code">마이크로소프트 해커가 원격으로 코드를 실행할 수 있는 'Perfect 10' 익스플로잇 수정</a> <span class="p0-desc">Entra ID 결함은 가장 높은 심각도 점수를 얻었지만 마이크로소프트은 CVE를 게시하기 전에 버그를 패치했으며 악용되었다는 증거를 찾지 못했다고 말합니다.</span></li><li><a href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit">Coldcard, 1억 3천만 달러 비트코인 악용 후 새로운 보안 조치 추가</a> <span class="p0-desc">Coinkite의 최신 펌웨어에서는 사용자가 지갑 시드를 생성할 때 임의성을 추가하도록 요구하고 3주 검토 중에 발견된 추가 보안 문제를 수정합니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **72건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-08-24 암호화폐 핵심 뉴스: Kalshi 거래자들은 비트코인 랠리이 현재 수준에 가깝게 올해를 끝낼 수 있다고 생각합니다.. 총 72건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

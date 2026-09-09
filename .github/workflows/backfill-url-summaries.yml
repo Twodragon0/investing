@@ -65,6 +65,20 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      # 시도 기록을 런 간 유지한다. 커밋하지 않는 이유: 아래 "Commit and push"
+      # 는 `git add _posts/` 만 하고 `_state/` 는 실행 부산물로 취급한다. 그
+      # 정책을 뒤집으면 pre-commit state-guard 와 푸시 경합 표면이 같이 커진다.
+      #
+      # 캐시 미스는 안전하다 — 빈 기록은 모든 blurb 를 미시도로 보이게 하고
+      # `least-recently-tried` 는 그때 `newest` 와 동일하게 동작한다.
+      - name: Restore attempt log
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: _state/url_summary_attempts.json
+          key: url-summary-attempts-${{ github.run_id }}
+          restore-keys: |
+            url-summary-attempts-
+
       - name: Run backfill
         id: backfill
         env:
@@ -78,7 +92,13 @@ jobs:
           # 인자는 배열로 조립한다. 플래그를 빈 문자열 변수로 넘기면 따옴표를
           # 붙였을 때 빈 인자가 실제로 전달되고, 떼면 워드 스플리팅에 의존하게
           # 된다(shellcheck SC2086).
-          args=(--apply --skip-synthetic --workers 6 --limit "$LIMIT")
+          #
+          # --order least-recently-tried: 기본 newest 는 영구 실패를 창 상단에
+          # 눌러앉힌다. 2026-09-09 실측에서 newest --limit 200 창이
+          # 2026-08-06~09-09 만 덮어 나머지 2,403건이 수율과 무관하게 도달
+          # 불가였고, 2026-09-07 런은 200 중 173건 실패했다. 미시도 우선으로
+          # 정렬하면 창이 단조 전진한다. 기록은 위 캐시로 런 간 유지된다.
+          args=(--apply --skip-synthetic --workers 6 --limit "$LIMIT" --order least-recently-tried)
           if [ "$TEXT_ONLY" = "true" ]; then
             args+=(--text-only)
           fi
@@ -134,6 +154,16 @@ jobs:
           done
           echo "::error::All $MAX_RETRIES push attempts failed"
           exit 1
+
+      # `if: always()` 가 핵심이다. "Commit and push" 는 수율 0 이면 건너뛰는데,
+      # 그날이야말로 기록이 필요한 날이다 — 200건 전부 실패했다는 사실을 남기지
+      # 못하면 다음 런이 같은 200건에 예산을 다시 쓴다.
+      - name: Save attempt log
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        if: always()
+        with:
+          path: _state/url_summary_attempts.json
+          key: url-summary-attempts-${{ github.run_id }}
 
   # 일 1회. 실패하면 요약 백필이 밀리고 커밋이 안 나온다.
   alert-consecutive-failures:
