@@ -118,6 +118,27 @@ else
   send_slack_alert "[Investing] 맥미니 LaunchAgent 비활성화 알림" "• 서비스: $LABEL\n• launchctl에 로드되어 있지 않습니다. 확인이 필요합니다." "error"
 fi
 
+# 5. Check for orphaned atomic-write temp files in _state
+# 원자적 쓰기(`mkstemp` → `os.replace`)의 temp 는 밀리초만 존재한다. 남아 있으면
+# rename 전에 프로세스가 죽은 것이다 — 2026-09-07 에 translator 캐시 저장이 ~900KB
+# 4개를 흘렸다(#1284 에서 finally 정리 추가). 원인은 닫혔지만, 다음 writer 가 정리
+# 없는 early-return 을 만들면 같은 방식으로 새고 아무도 보지 않는다.
+#
+# exit 1 은 "고아 발견" 이라 `set -e` 에 걸린다. 헬스체크는 발견을 보고하고 계속
+# 진행해야 하므로 종료 코드를 명시적으로 받는다. 도구는 삭제하지 않는다 — 페이로드가
+# 다른 프로세스가 아직 들고 있을 수 있는 상태 파일의 부분 사본이다.
+#
+# 종료 코드는 별도 문장으로 받는다. `cmd && a=0 || b=$?` 는 `$?` 가 실패한 대입의
+# 상태를 가리켜 값이 모호해진다.
+set +e
+ORPHAN_REPORT="$(run_py scripts/tools/check_state_orphans.py 2>/dev/null)"
+ORPHAN_RC=$?
+set -e
+echo "$ORPHAN_REPORT"
+if [[ "$ORPHAN_RC" -ne 0 ]]; then
+  send_slack_alert "[Investing] _state 고아 temp 파일 감지" "$ORPHAN_REPORT" "warning"
+fi
+
 echo "=================================================="
 echo " Health check completed successfully."
 echo "=================================================="
