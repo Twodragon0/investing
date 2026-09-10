@@ -22,16 +22,30 @@ repos:
   # ruff lint + format — CI(code-quality.yml)의 `ruff check`/`ruff format --check
   # scripts/ tests/`를 로컬 커밋 단계에서 미리 잡는다. 2026-06-10 R2 세션이 미포맷
   # 파일을 push해 Code Quality가 이틀간 silently red였던 회귀(ruff format 누락) 재발 방지.
-  # rev는 로컬/CI ruff 버전(0.16.4)에 맞춤 — CI ruff가 floating이므로 버전 갱신 시 함께 올릴 것.
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.6
+  #
+  # `repo: local` + `language: system` 인 이유: 원격 `astral-sh/ruff-pre-commit` 훅은
+  # `rev: vX` 를 요구하는데 그 rev 는 git ref 라 파일에서 파생할 수 없다. 그러면 ruff
+  # 버전이 두 곳(여기 + requirements-dev.txt)에 있게 되고, Dependabot 의 pip 스캔은
+  # 매니페스트만 보므로 매번 한쪽만 올라가 로컬 훅과 CI 가 다른 ruff 를 쓴다 — #1275 가
+  # 3일 정체한 이유의 나머지 절반이다. 설치된 ruff 를 쓰면 버전은
+  # requirements-dev.txt 한 곳뿐이다.
+  #
+  # 이 저장소의 pre-commit 은 이미 dev 환경을 요구한다(아래 basedpyright,
+  # relative-imports 훅이 `language: system`). 새로 생기는 전제 조건이 아니다.
+  # 가드: tests/test_ruff_version_pin_sync.py
+  - repo: local
     hooks:
       - id: ruff
         name: ruff lint (scripts/ tests/)
-        args: [--fix]
+        language: system
+        entry: python -m ruff check --fix
+        types: [python]
         files: ^(scripts/|tests/).*\.py$
       - id: ruff-format
         name: ruff format (scripts/ tests/)
+        language: system
+        entry: python -m ruff format
+        types: [python]
         files: ^(scripts/|tests/).*\.py$
 
   # Enforce relative imports inside scripts/common/ to prevent

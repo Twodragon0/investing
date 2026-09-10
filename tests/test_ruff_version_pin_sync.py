@@ -225,16 +225,52 @@ def test_pin_read_failure_is_loud() -> None:
         )
 
 
-# --- 4. pre-commit rev 는 아직 파생 불가하므로 동등성으로 지킨다 ---
+# --- 4. pre-commit 도 SSoT 의 ruff 를 쓴다 (두 번째 핀 제거) ---
 
 
-def test_precommit_rev_matches_the_ssot() -> None:
-    req = _ruff_in_requirements(_read(REQUIREMENTS_DEV))
-    pc = _ruff_precommit_rev(_read(PRE_COMMIT_CONFIG))
-    assert pc, ".pre-commit-config.yaml 의 astral-sh/ruff-pre-commit `rev: vX` 를 찾지 못했다."
-    assert pc == req, (
-        f"pre-commit ruff rev={pc} 가 {_SSOT_FILENAME} 의 ruff=={req} 와 다르다. "
-        "format 규칙은 ruff 버전마다 다르므로 로컬 훅과 CI 가 같은 버전을 써야 한다. "
-        "pre-commit `rev` 는 git ref 라 파일에서 파생할 수 없어, 이 한 곳만은 아직 "
-        "수동 동기화가 필요하다."
+def _precommit_ruff_hooks() -> list[tuple[str, dict, dict]]:
+    """(repo_url, repo_node, hook_node) — id 가 ruff / ruff-format 인 훅."""
+    doc = yaml.safe_load(_read(PRE_COMMIT_CONFIG)) or {}
+    out = []
+    for repo in doc.get("repos", []):
+        for hook in repo.get("hooks", []):
+            if hook.get("id") in {"ruff", "ruff-format"}:
+                out.append((str(repo.get("repo", "")), repo, hook))
+    return out
+
+
+def test_precommit_has_both_ruff_hooks() -> None:
+    """lint 와 format 둘 다 있어야 한다 — format 누락이 2026-06-10 회귀의 원인이었다."""
+    ids = {hook["id"] for _url, _repo, hook in _precommit_ruff_hooks()}
+    assert ids == {"ruff", "ruff-format"}, f"expected both ruff hooks in pre-commit, found {sorted(ids) or 'none'}"
+
+
+def test_precommit_ruff_has_no_second_version_pin() -> None:
+    """`rev:` 로 버전을 다시 적으면 SSoT 가 둘이 된다.
+
+    원격 `astral-sh/ruff-pre-commit` 훅은 `rev: vX` 를 요구하고, 그 `rev` 는 git ref
+    라 파일에서 파생할 수 없다. 그래서 Dependabot 이 `requirements-dev.txt` 만 올릴
+    때마다 로컬 훅이 다른 ruff 를 쓰게 된다 — #1275 가 막힌 이유의 나머지 절반이다.
+    """
+    assert _ruff_precommit_rev(_read(PRE_COMMIT_CONFIG)) is None, (
+        "`astral-sh/ruff-pre-commit` 원격 훅이 `rev: vX` 로 두 번째 ruff 핀을 만든다. "
+        f"버전은 {_SSOT_FILENAME} 한 곳에만 둔다 — 로컬 훅은 설치된 ruff 를 쓰도록 "
+        "`repo: local` + `language: system` 으로 둘 것."
     )
+
+
+def test_precommit_ruff_uses_the_installed_ruff() -> None:
+    """`rev` 를 지우기만 하면 훅이 사라진 것과 같다 — 배선을 단언한다."""
+    hooks = _precommit_ruff_hooks()
+    assert hooks, "no ruff hook found in .pre-commit-config.yaml"
+    for url, _repo, hook in hooks:
+        assert url == "local", f"hook {hook['id']!r} still comes from remote repo {url!r}; expected `repo: local`"
+        assert hook.get("language") == "system", (
+            f"hook {hook['id']!r} has language={hook.get('language')!r}; `system` is what makes it "
+            f"use the ruff installed from {_SSOT_FILENAME} instead of provisioning its own."
+        )
+        entry = str(hook.get("entry", ""))
+        assert "ruff" in entry, f"hook {hook['id']!r} entry={entry!r} does not invoke ruff"
+        assert not re.search(_SEMVER, entry), (
+            f"hook {hook['id']!r} entry={entry!r} contains a version literal — that is a second pin again."
+        )
