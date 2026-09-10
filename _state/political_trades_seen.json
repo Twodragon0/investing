@@ -1,30 +1,5 @@
 {
   "seen": {
-    "3d4b6e20b026cb196dbd4a48": "2026-08-10T23:07:23",
-    "e4d906117ac405d7b6bddc5b": "2026-08-10T23:07:23",
-    "c08df3be6dd7f5be34077d4a": "2026-08-10T23:07:23",
-    "c2159c9a7ffc2d365b8b10f0": "2026-08-10T23:07:23",
-    "2227f3a3b76cd9157379071d": "2026-08-10T23:07:23",
-    "501f3ae6ec2eb64a0251e895": "2026-08-10T23:07:23",
-    "a3f24aad09751b2dbc14d158": "2026-08-10T23:07:23",
-    "e630d222ed2710e72619d5ba": "2026-08-10T23:07:23",
-    "6be49a9006d32f8709360d98": "2026-08-10T23:07:23",
-    "01550e05f544eee5856e08a8": "2026-08-10T23:07:23",
-    "3dd174f6f3a9ef8e232cffb3": "2026-08-10T23:07:23",
-    "82162438e976a2be138e7f0a": "2026-08-10T23:07:23",
-    "16b5ecf5d61159059801fa43": "2026-08-10T23:07:23",
-    "d86467f4ceebed5c6cf626fa": "2026-08-10T23:07:23",
-    "7ceec5dbb1fd92c6e4285ac7": "2026-08-10T23:07:23",
-    "00fee2d3756fba1c3544b9af": "2026-08-10T23:07:23",
-    "c23429ea25587fb87a9a4568": "2026-08-10T23:07:23",
-    "128b95a8caf2b8c852438599": "2026-08-10T23:07:23",
-    "0bc28006274198a2eb96ea35": "2026-08-10T23:07:23",
-    "b033aa594e5cc92105b967f2": "2026-08-10T23:07:23",
-    "0afe5db43faa00e1c63ee7c3": "2026-08-10T23:07:23",
-    "ae92ac1befc089d3a9872ab7": "2026-08-10T23:07:23",
-    "b8798ff0c8ac223e08a219c1": "2026-08-10T23:07:23",
-    "cd33be69c48897562534f31f": "2026-08-10T23:07:23",
-    "f4806b03f364c3cabaac7b17": "2026-08-10T23:07:23",
     "332e194b15d03a7f8097eb59": "2026-08-11T23:13:18",
     "6524a5627a249a559a0477b7": "2026-08-11T23:13:18",
     "96b089e2bf4cdce49f1876f2": "2026-08-11T23:13:18",
@@ -676,7 +651,51 @@
     "bc968d803cbb17bee38d51fd": "2026-09-09T00:28:37",
     "7dfd016cd5cc8d7790d10bb4": "2026-09-09T00:28:37",
     "029ee7d8aa8a2a9a6435e754": "2026-09-09T00:28:37",
-    "61c97234f7d208d14e508cb9": "2026-09-09T00:28:37"
+    "61c97234f7d208d14e508cb9": "2026-09-09T00:28:37",
+    "5cf0b7089aa9d3c6a3e78ce8": "2026-09-10T00:27:55",
+    "c0f3eefa4ab35c6dfbb78289": "2026-09-10T00:27:55",
+    "e8c3dbf6dd47c8e6a4c414db": "2026-09-10T00:27:55",
+    "086babd3ec4ca0e41d95e51c": "2026-09-10T00:27:55",
+    "529adbaa3b0f6d6768af6bbc": "2026-09-10T00:27:55",
+    "c95362ff73e48b6ad2a45180": "2026-09-10T00:27:55",
+    "3d894bc50cbf475793d2dd84": "2026-09-10T00:27:55",
+    "7b52ca442b5891a2b4178ce2": "2026-09-10T00:27:55",
+    "b4ec3e69df0152870a7838cd": "2026-09-10T00:27:55",
+    "6a689abcc883591a40936cf1": "2026-09-10T00:27:55",
+    "824cf7b89be4ad555200e12f": "2026-09-10T00:27:55",
+    "495a8af0c40f84db8bcccccc": "2026-09-10T00:27:55",
+    "f553af610a241b6065f1a764": "2026-09-10T00:27:55",
+    "c2d7335da7a1413fbe09f6d4": "2026-09-10T00:27:55",
+    "d057a7a77cc9c7d35f5be438": "2026-09-10T00:27:55",
+    "1fae1c3340464f73caaaf5b1": "2026-09-10T00:27:55",
+    "4f2d40a7697b0a2434da5230": "2026-09-10T00:27:55",
+    "586ee9c8d9a56ce0aeb88e8a": "2026-09-10T00:27:55",
+    "8cb0bfff0185aa8c01d0aa34": "2026-09-10T00:27:55",
+    "1aed745326e032990d39dd93": "2026-09-10T00:27:55",
+    "123326f6d19c5a95de956f5a": "2026-09-10T00:27:55",
+    "0d6e4f55aabe2af6c576a628": "2026-09-10T00:27:55",
+    "d77d702691543b115d37e36e": "2026-09-10T00:27:55",
+    "e398f17e534c225ad3c6526b": "2026-09-10T00:27:55",
+    "afcfb63f7b4a88178c93e870": "2026-09-10T00:27:55",
+    "ac88da630794e1525b1034fd": "2026-09-10T00:27:55",
+    "b61db43ba649d874570fc047": "2026-09-10T00:27:55",
+    "5c5107f176aa88d5286279f3": "2026-09-10T00:27:55",
+    "80de52e6c3324d0574825593": "2026-09-10T00:27:55",
+    "c637764e285d23fc09433f59": "2026-09-10T00:27:55",
+    "de8d2b1c7f2a2b53b5bcc330": "2026-09-10T00:27:55",
+    "9d5d5cf28d8de00a086dd703": "2026-09-10T00:27:55",
+    "411b66e7390edefe87d76671": "2026-09-10T00:27:55",
+    "b347cf12877e3e4d3e3b6c2b": "2026-09-10T00:27:55",
+    "77ce57c50a170dec2b450045": "2026-09-10T00:27:55",
+    "7c66ba2eb5295cebb556c6f7": "2026-09-10T00:27:55",
+    "25a930438ee965c4873da437": "2026-09-10T00:27:55",
+    "7b173a8e38542dff76e19f83": "2026-09-10T00:27:55",
+    "04938207d7b81d8023060532": "2026-09-10T00:27:55",
+    "cbbf85e994d719446ede3b82": "2026-09-10T00:27:55",
+    "e5be8ab129368a2e6fe8ad4e": "2026-09-10T00:27:55",
+    "a66118277fefdbd7bd6d1941": "2026-09-10T00:27:55",
+    "c69d92d46518a7dc51713b83": "2026-09-10T00:27:55",
+    "533d1251b275797820b3736c": "2026-09-10T00:27:55"
   },
   "titles": [
     [
@@ -17414,6 +17433,182 @@
     [
       "정치인 거래정책 리포트 20260909",
       "2026-09-09"
+    ],
+    [
+      "ares capital stock arcc opinions on senators purchase disclosure quiver quantitative",
+      "2026-09-10"
+    ],
+    [
+      "nancy pelosi is up over 65 on this suspicious stock trade in less than 2 months finbold",
+      "2026-09-10"
+    ],
+    [
+      "republicans to tout congressional stocktrading ban at midterm convention as trump trades",
+      "2026-09-10"
+    ],
+    [
+      "mega millionswinning congressman violates the stock act",
+      "2026-09-10"
+    ],
+    [
+      "form 4 datadog inc insider trading activity",
+      "2026-09-10"
+    ],
+    [
+      "form 4 biorad laboratories inc insider trading activity",
+      "2026-09-10"
+    ],
+    [
+      "form 4 barinthus biotherapeutics plc insider trading activity",
+      "2026-09-10"
+    ],
+    [
+      "qorvo qrvo director linked to 56m shares adds new award",
+      "2026-09-10"
+    ],
+    [
+      "director at minerals technologies nyse mtx now holds 26959589 phantom stock units",
+      "2026-09-10"
+    ],
+    [
+      "directors phantom stock stake grows at minerals technologies mtx",
+      "2026-09-10"
+    ],
+    [
+      "director at minerals technologies nyse mtx granted cashsettled phantom stock units",
+      "2026-09-10"
+    ],
+    [
+      "director at axe compute agpu receives 2420share board grant",
+      "2026-09-10"
+    ],
+    [
+      "directors stocklinked pay at minerals technologies mtx now exceeds 28000 units",
+      "2026-09-10"
+    ],
+    [
+      "wrap technologies wrap clarifies who holds 275000 insider shares",
+      "2026-09-10"
+    ],
+    [
+      "axe compute agpu director gets 2420share stock grant",
+      "2026-09-10"
+    ],
+    [
+      "form 4 columbia financial incmd insider trading activity",
+      "2026-09-10"
+    ],
+    [
+      "phantom stock grant boosts minerals technologies nyse mtx directors deferred pay",
+      "2026-09-10"
+    ],
+    [
+      "director at five below nasdaq five sells 4250 shares without a trading plan",
+      "2026-09-10"
+    ],
+    [
+      "form 4 mccormick co inc insider trading activity",
+      "2026-09-10"
+    ],
+    [
+      "the latest trump signs executive orders ramping up trade war with ottawa yahoo finance canada",
+      "2026-09-10"
+    ],
+    [
+      "us to ban imports of some canadian alcohol dairy goods and motorbikes",
+      "2026-09-10"
+    ],
+    [
+      "us reveals import ban on slew of canadian goods as trade war escalates",
+      "2026-09-10"
+    ],
+    [
+      "trumps trade war with canada escalates as new tariffs launch",
+      "2026-09-10"
+    ],
+    [
+      "cattle ranchers have a beef with trump the american prospect",
+      "2026-09-10"
+    ],
+    [
+      "trump bans some canadian goods raises tariffs on others as trade war escalates south china morning post",
+      "2026-09-10"
+    ],
+    [
+      "the latest trump signs executive orders ramping up trade war with ottawa calgary journal",
+      "2026-09-10"
+    ],
+    [
+      "trump strikes back with executive orders banning canadian goods including alcohol and dairy national post",
+      "2026-09-10"
+    ],
+    [
+      "poilievre heads to us with pmos blessing as trump ramps up retaliation against canada live updates here cp24",
+      "2026-09-10"
+    ],
+    [
+      "us cheese honey and hundreds of items to be hit with retaliatory tariffs in escalating canada trade war business insider",
+      "2026-09-10"
+    ],
+    [
+      "이춘석 무소속 의원 보좌관 명의 차명 주식거래 혐의로 불구속 기소됐어요 newneekco",
+      "2026-09-10"
+    ],
+    [
+      "정점식 이재명 정치는 히틀러 경제는 차베스 임기는 푸틴 ohmynews",
+      "2026-09-10"
+    ],
+    [
+      "신현송 한은 총재 10월 금리 또 올릴까gdp물가가계부채가 민다 newstfcokr",
+      "2026-09-10"
+    ],
+    [
+      "an ecb rate hike is all but certain the reasoning less so",
+      "2026-09-10"
+    ],
+    [
+      "todays key economic and crypto events us august ppi due bloomingbit",
+      "2026-09-10"
+    ],
+    [
+      "euro zone bond yields remain elevated as energy prices rise ahead of ecb decision yahoo finance uk",
+      "2026-09-10"
+    ],
+    [
+      "fed to hold rates steady in rest of 2026 rising number of analysts see at least one hike reuters poll",
+      "2026-09-10"
+    ],
+    [
+      "trump pushes fed for lower rates but consumers may be better off with a hike experts say",
+      "2026-09-10"
+    ],
+    [
+      "rate hike coming in september prediction markets for next fed decision federal news network",
+      "2026-09-10"
+    ],
+    [
+      "should you wait until after the september fed meeting to invest in gold",
+      "2026-09-10"
+    ],
+    [
+      "fomc september 2026 odds for a rate hike surpass 50 financeyahoocom",
+      "2026-09-10"
+    ],
+    [
+      "will the fed hike interest rates next week these 3 economic reports could help decide its next move business insider",
+      "2026-09-10"
+    ],
+    [
+      "xrp holds at 144 as senate vote and fed meeting approach can it break 150 247 wall st",
+      "2026-09-10"
+    ],
+    [
+      "opposite what youre told monetary policy isnt conducted 8 days a year realclearmarkets",
+      "2026-09-10"
+    ],
+    [
+      "정치인 거래정책 리포트 20260910",
+      "2026-09-10"
     ]
   ],
   "seen_urls": {}
