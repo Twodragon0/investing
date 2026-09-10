@@ -3,7 +3,7 @@
 카드 본문의 per-URL blurb(`<p class="news-desc">`, `<span class="p0-desc">`)가 한국어로
 유지되도록 하는 층들과, 아직 남은 모집단을 근거 수치와 함께 정리한다.
 
-**측정 기준일: 2026-09-08.** 수치는 그날 실측이며, 재현 명령을 각 절에 적어 둔다.
+**측정 기준일: 2026-09-09.** 수치는 그날 실측이며, 재현 명령을 각 절에 적어 둔다.
 
 ---
 
@@ -22,15 +22,19 @@ blurb 260건 중 252건이 `"<영어 헤드라인>. <엔티티> — <한국어 �
 
 | 지표 | 값 | 재현 |
 |---|---|---|
-| 영어 blurb | **398 / 6,358 (6.26%)**, 영향 포스트 193 | `check_description_quality.count_blurb_language` |
-| `_is_bad` flagged | 2,639 (Google News 2,339 = 88.6%) | `fix_post_url_summaries.collect_targets` |
-| 삭제 적격 | 291 | `_is_droppable` |
-| 총 포스트 | 2,771 | — |
-| 유입률(#1283 이후 신규 14건) | **1 / 37 (2.70%)** | `scripts/tools/measure_blurb_inflow.py` |
+| 영어 blurb | **318 / 6,340 (5.02%)**, 영향 포스트 178 | `check_description_quality.count_blurb_language` |
+| `_is_bad` flagged | 2,603 (Google News 2,292 = 88.1%) | `fix_post_url_summaries.collect_targets` |
+| └ 제목-중복 / 크롬 / 영어 | 1,546 / 807 / 250 | 같음 |
+| 삭제 적격 | 234 | `_is_droppable` |
+| 총 포스트 | 2,784 | — |
+| 유입률(#1283 이후 신규 27건) | **1 / 74 (1.35%)** | `scripts/tools/measure_blurb_inflow.py` |
 
-유입률 2.70% 는 아직 **판정 불가**다. 수정 전 일별 범위가 0.0%~12.9%(2026-09-02~07,
-crypto/stock digest 기준)여서 하루치 값이 그 안에 들어간다. `n≥200`(약 2026-09-14)이면
-범위 밖 여부가 갈린다.
+`_is_bad` 의 구성비가 중요하다 — 제목-중복이 **59.4%** 로 최대 모집단이고, 삭제 술어는
+영어 누출에만 범위가 잡혀 있어(`_is_droppable` 의 첫 게이트가 `contains_english_clause`)
+그 1,546건은 재수집으로만 닿는다.
+
+유입률 1.35% 는 아직 **판정 불가**다. 수정 전 일별 범위가 0.0%~12.9%(2026-09-02~07,
+crypto/stock digest 기준)여서 값이 그 안에 들어간다. 게이트는 `n≥200` 이고 현재 74다.
 
 ---
 
@@ -128,12 +132,14 @@ after : … 주요 키워드: 포트폴리오, 싶으신가요, 고려해야.
 줄였다(`-된` 은 폐기가 아니라 정규화: `토큰화된` → `토큰화`, 21→0 / 8→29).
 
 그래도 `improve_existing_posts.py` 가 `주요 키워드:` 꼬리를 **결함으로 보고 제거**한다.
-라벨은 `KEYWORD_TAIL_LABEL` 상수로 통일했지만(생산 1곳 + 제거 3곳), **생산자를 없앨지
-제거 규칙을 없앨지는 미결정**이다. 그때까지 합성 폴백은 실질적으로 재활성화되지 않는다.
+라벨은 `KEYWORD_TAIL_LABEL` 상수로 통일했다(생산 1곳 + 제거 3곳). 2026-09-09 결론:
+**합성 폴백은 재활성화하지 않고 `--skip-synthetic` 을 유지한다** — 이유와 재활성화
+선행조건은 아래 「미해결 3」에 있다.
 
 ### R2. 일일 자동 백필 — `.github/workflows/backfill-url-summaries.yml`
 
-cron `10 17 * * *`, `--apply --skip-synthetic --workers 6 --limit 200`.
+cron `10 17 * * *`,
+`--apply --skip-synthetic --workers 6 --limit 200 --order least-recently-tried`.
 
 **리졸버 스로틀이 상한이다.** 2026-08-06 연속 실행에서 재수집 수율이 `523 → 71 → 0` 으로
 붕괴하고 3회차엔 모든 링크가 빈 값이었다. 같은 시점 직접 퍼블리셔 URL 은 정상이었으므로
@@ -147,9 +153,10 @@ URL 1,896건 **전부 실패**(신형 protobuf)이므로 `googlenewsdecoder` 가
 `config.GNEWS_DECODE_INTERVAL_SEC`(기본 0 = 비활성)가 조여올 때의 레버다 — 워크플로우의
 `--limit` 이 아니라 이 값을 올린다.
 
-워크플로우 불변식 5개는 `tests/test_backfill_url_summaries_workflow_guard.py` 가 고정한다
+워크플로우 불변식 7개는 `tests/test_backfill_url_summaries_workflow_guard.py` 가 고정한다
 (`--skip-synthetic` 고정, `--limit` 상한 400, 하루 1회, 수율 0 은 red 아님, `--direct-only`
-는 스케줄 기본값 아님). 가드는 `run:` 을 **셸 주석 제거 후** 매칭한다 — 주석이 플래그를
+는 스케줄 기본값 아님, `--order least-recently-tried` 고정, 시도 기록은 캐시로 왕복하고
+`save` 는 `if: always()`). 가드는 `run:` 을 **셸 주석 제거 후** 매칭한다 — 주석이 플래그를
 이름으로 언급하므로 원문 매칭은 인자 삭제 후에도 자기 문서에 걸려 green 이 된다.
 
 ### R3. 번역 재시도 — `scripts/tools/fix_untranslated_body.py`
@@ -237,13 +244,119 @@ python scripts/tools/measure_blurb_inflow.py [--since <ref>] [--json]
 
 1. **렌더러 폴백 경로** — L1 재검사가 거부하면 영어 원문이 렌더된다. 가드는 기각했고
    (위), 대신 R2/R3 복구에 의존한다.
-2. **잔여 398건의 차단 요인** — Google News 리다이렉트 88.6%(스로틀), 재수집 영구 실패,
-   앵커 모호. 삭제 적격 291건은 `--order droppable-first` 로 회차당 최대 60건씩 처리 가능.
-3. **합성 폴백 재활성화 여부** — `korean_keywords` 품질은 고쳤지만
-   `improve_existing_posts` 가 여전히 그 산출물을 제거한다. 생산자/제거 규칙 중 하나를
-   없애는 결정이 남았다.
-4. **미인식 사이트 크롬 2건** — Investorideas 태그라인, TradingView 블로그 유도.
-   `_BOILERPLATE_DESC_PHRASES` 에 정확 리터럴로 추가하는 것이 해법이며(패턴 추측은 삭제
-   권한을 줄 수 없다), 현재는 보수적으로 보존 중이다.
+2. **차단 요인은 스로틀이 아니라 선택 창이었다 — 원인 수정 완료(`#1298`), 소진은
+   진행 중** (2026-09-09 재진단). 종전 서술은
+   "Google News 리다이렉트 88.1%(스로틀), 재수집 영구 실패, 앵커 모호" 였는데 스로틀은
+   **수율**을 정하고 **모집단 도달**을 막는 건 다른 것이다.
+
+   수정 전 상태: 일일 job 은 `newest --limit 200` 이었고 그 창은 **2026-08-06 ~ 09-09**
+   만 덮었다 — 200번째보다 오래된 **2,403건은 수율과 무관하게 영구히 도달 불가**였다.
+   게다가 도구에 **시도 기록이 없었다**(`_state` 사용 0건). 영구 실패가 창 상단에 남아
+   매일 200 요청 예산을 다시 썼다. 신규 유입은 하루 ~6건뿐이라 창 구성은 sticky 실패가
+   지배했다 — 2026-09-07 런이 200 중 173건 실패했고, 그 시점 창 200건 중 150건이 8월
+   포스트였다.
+
+   **정렬로는 안 풀린다** (실측). 35건(2026-09-09에 `#1296` 으로 새로 보이게 된
+   제목-중복)의 순위:
+
+   | 정렬 | min / median / max | `--limit 200` 도달 |
+   |---|---|---:|
+   | `newest` (종전 일일 job 순서) | 100 / 1219 / 1875 | 5 / 36 |
+   | `droppable-first` | 333 / 1375 / 1986 | 0 |
+   | `title-dup-first` (가정) | 66 / 746 / 1134 | 7 / 36 |
+
+   제목-중복 모집단이 1,546건이므로 그 축으로 정렬해도 특정 35건은 그 안에서 66~1134위다.
+   `--limit` 을 1,875 이상으로 올리는 일회성 런은 리졸버를 붕괴시킨다(위 R2 절의 실측
+   523 → 71 → 0).
+
+   **해법은 시도 기록이고, `#1298` 에서 구현했다.** `_state/url_summary_attempts.json`
+   에 `(post, url)` 해시 → `{tried, outcome, post}` 를 남기고,
+   `--order least-recently-tried` 가 미시도 우선 → 오래된 시도 순으로 정렬한다. 일일
+   job 이 이 정렬을 쓴다. 회차 시뮬레이션(실코퍼스, 매 회차 200건 전부 실패 가정):
+
+   | 회차 | `newest` 창 / 누적 | `least-recently-tried` 창 / 누적 |
+   |---:|---|---|
+   | 1 | 08-06 ~ 09-09 · 197 | 08-06 ~ 09-09 · 197 |
+   | 2 | 08-06 ~ 09-09 · **197** | 07-20 ~ 08-06 · **384** |
+   | 4 | 08-06 ~ 09-09 · **197** | 06-27 ~ 07-09 · **773** |
+   | 6 | 08-06 ~ 09-09 · **197** | 06-02 ~ 06-14 · **1160** |
+
+   `newest` 는 1회차 이후 새로 보는 건이 **0** 이다. 새 정렬은 회차당 ~190건 전진하므로
+   2,603건 전수는 약 14회차(≈2주)다.
+
+   설계상 유의점 셋:
+   - **빈 기록은 `newest` 와 동일하게 동작한다.** CI 캐시 미스의 요구 동작이다.
+   - **`skipped` 는 기록하지 않는다.** `--direct-only` 는 요청조차 안 보내므로 이를
+     시도로 세면 리졸버가 본 적 없는 blurb 이 뒤로 밀린다 — `--drop-unresolvable` 이
+     쓰는 것과 같은 구분이다.
+   - **기록은 커밋하지 않는다.** 커밋 스텝은 `git add _posts/` 만 하므로
+     `actions/cache` 로 런 간 유지하며, `save` 는 `if: always()` 다(수율 0 인 날이
+     기록이 가장 필요한 날이다).
+
+   불변식은 `tests/test_backfill_url_summaries_workflow_guard.py` 가 6·7번 항목으로
+   고정한다.
+3. **합성 폴백 재활성화 여부 — 결론: 재활성화하지 않는다** (2026-09-09).
+   `--skip-synthetic` 을 유지한다. "생산자를 없앨지 제거 규칙을 없앨지" 는 잘못 놓인
+   질문이었다.
+
+   `generate_synthetic_description` 은
+   `if analysis and analysis != title and len(analysis) > 20: return analysis` 로
+   게이트하고, **`주요 키워드:` 꼬리가 바로 그 `analysis != title` 을 만족시키는
+   물건**이다. 꼬리만 빼면 게이트가 무너진다. 고유 카드 제목 4,704건 중 그 분기로
+   떨어지는 **1,032건(21.94%)** 을 대상으로 분기만 격리해 실측:
+
+   | 분기 제거 후 | 건수 |
+   |---|---:|
+   | 제목 그대로 반환 → 제목-중복 결함 | 617 (59.8%) |
+   | 래퍼 폴스루 → `<제목>.. 부문은, 연준으로 관련 보도.` | 415 (40.2%) |
+   | `_is_desc_duplicate_of_title` 판정 | 680 (65.9%) |
+
+   폴스루 쪽은 중복 마침표와 조사 붙은 토큰(`부문은`, `연준으로`)을 낸다 — 현행 꼬리보다
+   나쁘고, `..` 는 `normalize_blurb` 가 고치려고 존재하는 아티팩트다.
+
+   제거 규칙이 옳다는 건 확정이다. `kr_entities = korean_keywords(title)`
+   (`enrichment_synthetic.py:732`, 이 모듈의 유일한 호출처)이므로 꼬리는 제목 밖 정보를
+   담을 수 **구조적으로** 없다. 2026-09-07 의 junk-token 수정은 서술어 어미를 잡았고
+   부사·조사 조각·제목 관형어는 남아 있다 — `주요 키워드: 헐값, 거래, 어떻게` / `등에`.
+
+   **방치 비용이 0이다.** 코퍼스에 `주요 키워드:` 는 포스트 1개·2건만 남았고,
+   `--skip-synthetic` 은 워크플로우(`backfill-url-summaries.yml`)와
+   `tests/test_backfill_url_summaries_workflow_guard.py` 가 고정한다. 이 항목은
+   재활성화를 원할 때만 load-bearing 해진다.
+
+   **재활성화 선행조건**: 생산자 제거가 아니라 **폴스루 체인이 그 22% 에 대해 `""` 를
+   반환하게** 만드는 것. 꼬리 제거를 단독 커밋으로 내면 40.2% 가 악화된다.
+
+   재현 (저장소 루트에서, 위 네 수치를 모두 낸다):
+   ```python
+   python - <<'PY'
+   import html, pathlib, re, sys
+   sys.path.insert(0, "scripts")
+   import common.enrichment_synthetic as es
+   from common.enrichment_synthetic import KEYWORD_TAIL_LABEL as L
+   from common.enrichment_synthetic import generate_synthetic_description as gen
+
+   TITLE = re.compile(r'class="news-title"[^>]*>(.*?)</a>', re.S)
+   titles = sorted({
+       html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
+       for p in pathlib.Path("_posts").glob("*.md")
+       for m in TITLE.finditer(p.read_text(encoding="utf-8", errors="replace"))
+   } - {""})
+   tail = [t for t in titles if L in (gen(t, "", None) or "")]
+   print(f"고유 제목 {len(titles)} / keyword-tail 분기 {len(tail)}")
+
+   es.korean_keywords = lambda title, limit=3: []  # 호출처는 L732 한 곳뿐이라 격리된다
+   after = [gen(t, "", None) or "" for t in tail]
+   fell = sum(1 for o in after if "관련 보도" in o or ".." in o)
+   print(f"분기 제거 후: 제목만 {len(after) - fell} / 폴스루 {fell}")
+   PY
+   ```
+
+   `korean_keywords` 를 통째로 스텁하면 래퍼의 정당한 폴스루가 스텁 누출처럼 보인다 —
+   호출처가 `_analyze_korean_title` 한 곳뿐임을 먼저 확인하고 두 갈래를 분리해 세라.
+4. ~~**미인식 사이트 크롬 2건**~~ — **해결** (`#1294`, 2026-09-09 머지).
+   Investorideas 태그라인과 TradingView 블로그 유도를 `_BOILERPLATE_DESC_PHRASES` 에
+   정확 리터럴로 추가했다. 패턴 추측이 아니라 리터럴이어야 하는 이유는 그대로다 —
+   추측은 삭제 권한을 줄 수 없다. 새로 미인식 크롬이 나오면 같은 방식으로 처리한다.
 5. **유입률 판정** — n=37 로는 수정 전 범위와 구별되지 않는다. `n≥200`(약 2026-09-14)에
    측정 도구를 다시 돌린다.
