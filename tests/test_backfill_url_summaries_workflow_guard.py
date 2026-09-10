@@ -45,6 +45,17 @@ Two more were added 2026-09-09, after measuring *why* the backlog never moved:
    the commit step is skipped on a zero-yield day, which is precisely the day
    whose "all 200 failed" record matters most.
 
+An eighth came from a production failure, not from review:
+
+8. **The push retry loop must clean the tree before rebasing.** `git pull
+   --rebase` refuses on a dirty working tree, and the run leaves
+   `_state/translation_cache.json` (tracked) modified while the step stages
+   `_posts/` only. Without a clean step every retry is a silent no-op — the
+   2026-09-02 and 2026-09-09 scheduled runs each burned all five attempts on
+   `error: cannot pull with rebase: You have unstaged changes.` and discarded
+   the day's repairs with the runner. The loop *looks* like it is retrying,
+   which is why nobody noticed for a week.
+
 The assertions read the step's `run:` script with **shell comments stripped**.
 The header and inline commentary in this workflow name every flag asserted
 below, so matching raw text would make the guard pass on its own documentation
@@ -240,6 +251,42 @@ def test_attempt_log_is_not_committed() -> None:
         assert not any("_state" in path for path in staged), (
             f"push step {step.get('name')!r} stages {staged}, which includes _state. "
             "The attempt log is carried by actions/cache on purpose."
+        )
+
+
+def test_rebase_retry_cannot_be_blocked_by_a_dirty_tree() -> None:
+    """The tree must be cleaned before `git pull --rebase`, or every retry is a no-op.
+
+    `git pull --rebase` refuses on a dirty working tree. The run writes
+    `_state/translation_cache.json` (tracked) while the step stages `_posts/`
+    only, so without a clean step the recovery path never executes: measured on
+    the 2026-09-02 and 2026-09-09 scheduled runs, five attempts each produced
+    `error: cannot pull with rebase: You have unstaged changes.` and the day's
+    repairs were committed locally, then thrown away with the runner.
+
+    The failure is silent in the worst way — the loop *looks* like it is
+    retrying. Ordering is asserted, not mere presence: a clean that happens
+    after the rebase fixes nothing.
+    """
+    steps = _steps(_WORKFLOW)
+    pushes = [s for s in steps if "git push" in _strip_shell_comments(s.get("run", "") or "")]
+    assert pushes, "no push step found — the guard's anchor moved"
+    for step in pushes:
+        body = _strip_shell_comments(step.get("run", "") or "")
+        if "git pull --rebase" not in body:
+            continue
+        clean_at = min(
+            (body.index(token) for token in ("git checkout -- .", "git checkout -- _state") if token in body),
+            default=-1,
+        )
+        assert clean_at >= 0, (
+            f"push step {step.get('name')!r} rebases without discarding the run's "
+            "uncommitted tracked changes first. `git pull --rebase` refuses on a "
+            "dirty tree, so the retry loop silently does nothing five times."
+        )
+        assert clean_at < body.index("git pull --rebase"), (
+            f"push step {step.get('name')!r} cleans the tree *after* the rebase; "
+            "the rebase it needed to unblock has already failed."
         )
 
 
