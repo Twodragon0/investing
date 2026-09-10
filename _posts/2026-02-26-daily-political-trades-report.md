@@ -22,11 +22,9 @@ permalink: "/political-trades/2026/02/26/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **trump(트럼프)**(20회), **pelosi**(12회), **insider**(12회), **tariff(관세)**(8회), **congress**(4회)</div>
 
 
-
 ## 전체 뉴스 요약
 
 - 트럼프 관련 5건의 정책 뉴스가 포착되었습니다. 행정명령 및 관세 정책의 변화는 미국 내수 시장뿐 아니라 아시아·유럽 수출 기업과 원자재 가격에도 연쇄적으로 영향을 미칩니다. 특히 관세 관련 키워드가 부각될 경우 반도체·자동차 섹터의 변동성 확대에 유의해야 합니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. Opinion &#124; Banning stock trading for lawmakers is popular but unworkable - The Washington Post 의견: 국회의원 주식 거래 금지는 인기 있지만 실현 불가능 - The Washington Post
 
 ## 미국 의회 거래 동향

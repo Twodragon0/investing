@@ -28,7 +28,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-25 | HYPE +4.4% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +4.37%</li><li>🔴 <strong>XRP</strong> (XRP): -3.23%</li><li>🔴 <strong>Solana</strong> (SOL): -3.12%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집
