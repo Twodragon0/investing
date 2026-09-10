@@ -140,6 +140,24 @@ jobs:
           fi
 
           git commit -m "chore(posts): URL 요약 백필 $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          # 커밋하려던 것은 이미 커밋됐다. 남은 tracked 변경은 전부 실행 부산물이고,
+          # 그게 남아 있으면 아래 재시도 루프가 **통째로 무력화된다** —
+          # `git pull --rebase` 는 더러운 트리에서 거부한다.
+          #
+          # 실측: 2026-09-02 와 2026-09-09 스케줄 런이 각각 5회 재시도를 전부
+          # `error: cannot pull with rebase: You have unstaged changes.` 로 흘려보내고
+          # 그날 작업을 잃었다. 원인은 `_state/translation_cache.json`(tracked)을
+          # 백필이 쓰는데 위에서 `_posts/` 만 스테이징하기 때문이다.
+          #
+          # 경로를 특정하지 않고 tracked 전체를 버리는 이유: 도구가 앞으로 무엇을
+          # 더 건드리든 같은 방식으로 루프가 죽는다. 무엇을 버렸는지는 로그에 남긴다.
+          if ! git diff --quiet; then
+            echo "Discarding uncommitted tracked changes before rebase:"
+            git diff --name-only | sed 's/^/  /'
+            git checkout -- .
+          fi
+
           MAX_RETRIES=5
           for i in $(seq 1 $MAX_RETRIES); do
             echo "=== Push attempt $i/$MAX_RETRIES ==="
