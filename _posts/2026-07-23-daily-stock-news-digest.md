@@ -162,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWElvb2NRVkVZT1RIYlhmTDg4X0d2LThPSW5zSWZvZVdtbENkTzFlcUVmX21ZRTVDYzJ0YTdvbnRkbmdlcUNNY1EydkZ3dnlpbWVYX0Q1T2w2X1lMdjRwejJGNmxwaU4zczRYU1pWS19YMm5GNG5NZmtPaGJkSF8yN1VCOFZzb1JrdHA3NFQzb2Nmc1lnXzhUR1hIbm40Z05sYnRmSF9pc1liYXVZUkdsMXh0UzJIb2h1bWdrbjJXaGY?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 주식 시장: Dow, S&P 500, 나스닥 선물은 알파벳, 테슬라 수익과 함께 하락합니다.</a>
-<p class="news-desc">일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다.</p>
+<p class="news-desc">수요일 미국 증시는 거대 기술 기업 알파벳(GOOG)과 EV 제조업체 테슬라(TSLA)의 실적을 앞두고 혼조세를 보였습니다. 다우존스 산업평균지수(^DJI)는 평평한 선 바로 아래로 하락한 반면 S&amp;P 500(^GSPC)는 0.1% 하락했습니다. 기술주 중심의 나스닥 종합지수(^IXIC)는 0.5% 이상 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

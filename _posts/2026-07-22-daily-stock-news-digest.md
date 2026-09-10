@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT0t0NC1oZFVxY2t6bmFBaTJMcjJscFdqYWh5WC1iTURmemdubXg2QVlTbXNvODFES1cyMGdNU2UzZ25oUjhfQUxlTWlWUG0yT3V3TWtoTHdNaEF0cTZSRUFjTmhEbzVJdzFrelNNdTVNbkV6ajVJd3lrbGh1N1pXVW4zQ29uVzQyRUxKZVU4WUFCR2xyZ24ycEc5ekNaVmpYcHZpWlN6bVAzQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘 주식 시장: 나스닥이 Dow를 선도하고, S&P 500 선물은 칩 주식이 부활하면서 상승합니다.</a>
-<p class="news-desc">일시적인 문제가 발생했습니다. 이 페이지의 시장 데이터는 현재 지연되었습니다.</p>
+<p class="news-desc">메모리 및 스토리지 거대 기업인 마이크론 Technology(MU), SK 하이닉스(SKHY), 샌디스크(SNDK)의 주가가 모두 급등하는 등 반도체 주가 상승세를 이어가면서 화요일 주가가 반등했습니다. 나스닥 종합지수(^IXIC)는 1.3% 이상 상승한 반면, 다우존스 산업평균지수(^DJI)는 0.7% 상승했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBBT3QwSkV3TTBweUlIWG0wSjBZQzd0ZHczTTg0QlVEWTJwanRKdFhHTk1jcGp3alBnX2NHR2RXcWdWeFFTOFJBbzlnYUllQ0xjdEx6RQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">하이닉스 효과·한은 금리인상…환율 1470원대 초반까지 하락</a>
-<p class="news-desc">하이닉스 효과·한은 금리인상…환율 1470원대 초반까지 하락 JTBC</p>
+<p class="news-desc">SK하이닉스의 미국 나스닥 상장에 따른 달러 유입 기대 등으로 원·달러 환율이 1470원대 초반까지 떨어졌습니다. 오늘(21일) 서울 외환시장...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -226,7 +226,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/07/21/stocks-making-the-biggest-moves-midday-coin-mu-nbis-has-utz.html" class="news-title" target="_blank" rel="noopener noreferrer">정오에 가장 큰 변동을 보이는 주식: 코인베이스, 마이크론, Nebius, Hasbro, Utz Brands 등</a>
-<p class="news-desc">다음은 정오 거래에서 헤드라인을 장식하는 회사 중 일부입니다.</p>
+<p class="news-desc">정오에 가장 큰 변동을 보이는 주식: 코인베이스, 마이크론, Nebius, Hasbro, Utz Brands 등 2026년 7월 21일 화요일 게시12:51 PM EDT2026년 7월 21일 화요일 2:34 PM EDT 업데이트</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

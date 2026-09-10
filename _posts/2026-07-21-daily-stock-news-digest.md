@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNOFZ5a3RGR1JnOFVzR21zTXpkWDh2TkFxeDEzNnA4dDc2aE5PYlZyd3ZUU3M3N2dpN2QzMVBFSHV5dmtqMXpkOEFpS2FiOHJNaWxLdUxrZ0RNV2FWMUtQdlZqMXhsZEZvYkhpUjZ3YkMyVVdsR3ZNS1d6dnZsM0RkdFA2TlVjb0RUbWJRSkg1YVRwdzJZZnhIdlpBTTV0OTZDX0hz?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI 클라우드 주식 IREN(나스닥: IREN)은 신규 고객 계약 28억 달러 소식에 급등</a>
-<p class="news-desc">IREN (NASDAQ: IREN) shares soar as the company raises its ARR target to more than $4bn on $2.8bn in new AI Cloud contracts with Microsoft, NVIDIA, and Perplexity.</p>
+<p class="news-desc">IREN(나스닥: IREN) 주가는 회사가 마이크로소프트, 엔비디아 및 Perplexity와의 새로운 AI 클라우드 계약에서 28억 달러에 대한 ARR 목표를 40억 달러 이상으로 높이면서 급등했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>

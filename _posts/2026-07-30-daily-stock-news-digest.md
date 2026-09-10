@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNRGFDU3BQSFhZa21ISHY0Wm92OVIxTXZSTmRUVWJNdkdmTnVRdEd0dHpSMWRyTVFxOURFZDhfTTFYMkhOdERpYzVyZUFuMWdza2NPLUhWQlY2VXM4OEkycXR1MHdJWWlEZUxNNWFob2RsSkV6STFBRUhEWUpucEVfbkFKNTJzZ3RNdkVhZWhzVEwzRDBBdHh4UTNxbkw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식 시장 투자자들은 트럼프 대통령의 경제에 대한 나쁜 소식을 접했습니다. S&P 500 및 나스닥의 큰 움직임을 암시합니다.</a>
-<p class="news-desc">TheS&amp;P 500(SNPINDEX: ^GSPC) andNasdaq Composite(NASDAQINDEX: ^IXIC) are up 8% and 6%, respectively, year to date. But whether the stock market can maintain its momentum is questionable.</p>
+<p class="news-desc">S&amp;P 500(SNPINDEX: ^GSPC)과 Nasdaq Composite(NASDAQINDEX: ^IXIC)는 올해 들어 현재까지 각각 8%와 6% 상승했습니다. 그러나 주식시장이 모멘텀을 유지할 수 있을지는 의문이다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

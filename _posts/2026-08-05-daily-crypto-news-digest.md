@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxOUm5rQnJKNE5qYUVlNDdxTGlpVzNvVExBeTMzY3VvZEtaeVJwZE11SnBvSUdCNnoyc2g5dTkzYVZLMVZHUjNGZU0waS1qME5IeFJ1LVdoR0NMRzJ3WFRVUTlVaWxZVkJEMTdmYTE5dGI3b2VqRk1idm9HTmpzQmJPZHhONl82RFFSeTNuSFdySjBTd0VUXzEwTmtrei0zbzdsVTU0b0pJcWVaOV9xSWdYWkRYYzhQeWdYYkJYZ1dwNXg4NS1VYjdpSml5d3pGVm8zSUNvcmtTaTdUQXpSWmRQc2lDWm1idkI5V2JkYTdNSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">FBI agent accused in $1 million cryptocurrency theft: Report - WSBT</a>
-<p class="news-desc">WSBT CBS 22는 Mishawaka, Notre Dame, Granger, Osceola, Elkhart, Jimtown, Dunlap, New Carlisle, Goshen, Middlebury, Bristol, New Paris, Nappanee, Howe, Lagrange, Topeka, Bourbon, Milford, Syracuse, North Webster, Warsaw, Bremen, Plymouth, Walkerton, Argos, Tippecanoe, Culver, Grovertown, Delong,.</p>
+<p class="news-desc">FBI 요원이 해외 범죄 수사에서 용의자의 디지털 계좌에서 약 100만 달러의 암호화폐를 빼돌린 혐의로 기소됐다고 법원 문서가 밝혔다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

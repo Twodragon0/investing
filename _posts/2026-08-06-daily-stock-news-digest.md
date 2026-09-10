@@ -120,7 +120,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5tdEdtMFh0bDBJeG5ZcnFBZ1BQb3BvU1RKTFNlellvcXhCMHUzR0pMTGJrUHdIWEFFV1Nkd1p2ZXhSMmRJaWV0UExxZGVGRHdiRjRNVUo3ZkhxNXMyM1pYTzY0elk0dEJWRkhTUEwtZVptNjYx0gF0QVVfeXFMTm10R20wWHRsMEl4bllycUFnUFBvcG9TVEpMU2V6WW9xeEIwdTNHSkxMYmtQd0hYQUVXU2R3WnZleFIyZElpZXRQTHFkZUZEd2JGNE1VSjdmSHE1czIzWlhPNjR6WTR0QlZGSFNQTC1lWm02NjE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">의사록 "내외금리차 중요"…환율 설명 둘러싼 한은의 두 메시지</a>
-<p class="news-desc">의사록 "내외금리차 중요"…환율 설명 둘러싼 한은의 두 메시지 연합인포맥스</p>
+<p class="news-desc">(서울=연합인포맥스) 윤시윤 기자 = 한국은행이 지난달 금융통화위원회 의사록에서는 내외금리차를 달러-원 환율의 '중요 결정요인'으로 명시한 반면, 같은 날 열린 총재 기자간담회에서는 외국인 리밸런싱과 달러 강세 등 단기 변수에 무게를 둔 설명을 내놓으면서 환율을 둘러싼 설명 방식에 관심이 쏠린다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
