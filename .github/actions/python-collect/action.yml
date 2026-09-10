@@ -114,6 +114,34 @@ runs:
       shell: bash
       run: python "${{ inputs.script }}" 2>&1 | tee /tmp/collect-script-output.log; exit "${PIPESTATUS[0]}"
 
+    # `_state` 쓰기는 mkstemp → os.replace 라, 그 사이에 프로세스가 죽으면 temp 가
+    # 남는다(2026-09-07 백필 런이 ~900KB 짜리 4개). 탐지는 여태 서버 헬스체크에만
+    # 있었고, 러너에서 새면 러너가 폐기되며 증거까지 사라졌다.
+    #
+    # 임계값 0: 도구의 기본 60분은 서버용이다 — 로컬에서 방금 만든 temp 는 지금
+    # 쓰이는 중일 수 있으니까. 여기서는 그 전제가 성립하지 않는다. 위 step 에서
+    # 수집 프로세스가 이미 종료했으므로 동시 writer 가 없고, 러너는 애초에 60분을
+    # 살지 않는다. 기본값을 쓰면 이 검사는 영원히 0건을 보고한다.
+    #
+    # `always()`: temp 가 남는 건 대개 스크립트가 죽었을 때다. 조건이 없으면 정작
+    # 필요한 순간에만 건너뛴다.
+    #
+    # 종료 상태는 안에서 삼킨다 — 고아 하나 때문에 이미 수집된 포스트의 커밋을
+    # 막지 않는다. `continue-on-error` 대신 이렇게 하는 이유는, 그러면 step 자체가
+    # 크래시했을 때는 여전히 보이기 때문이다.
+    # 가드: tests/test_state_orphan_ci_detection_guard.py
+    - name: Report _state temp orphans
+      if: always()
+      shell: bash
+      run: |
+        report=$(python scripts/tools/check_state_orphans.py --min-age-minutes 0)
+        rc=$?
+        printf '%s\n' "$report"
+        if [ "$rc" -ne 0 ]; then
+          count=$(printf '%s' "$report" | head -1)
+          echo "::warning title=_state temp orphan::${count} — a writer died between mkstemp and os.replace; check its cleanup path"
+        fi
+
     - name: Notify Slack on entertainment filter metrics
       shell: bash
       env:
