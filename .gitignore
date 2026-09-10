@@ -83,3 +83,9 @@ _sass/_site/
 # migrate_images_to_r2.py 백업/임시 파일 (실제 --apply 시 _posts/에 생성, auto-commit 오염 방지)
 *.bak
 .migrate_tmp_*
+
+# _state 원자적 쓰기(mkstemp → os.replace)의 임시 파일. 정상 경로에서는 밀리초만
+# 존재하지만, 프로세스가 중간에 죽으면 남는다(2026-09-07 백필 런이 ~900KB 짜리 4개).
+# 수집 워크플로우가 `git add _state/` 를 하므로 무시하지 않으면 자동 커밋에 실린다.
+# 고아 탐지는 scripts/tools/check_state_orphans.py 가 계속 담당한다.
+_state/*.tmp

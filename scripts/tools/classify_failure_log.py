@@ -32,6 +32,16 @@ Every code failure in the pytest-running workflows therefore took this path:
 lines cannot carry failure signal — a passing test's name is not evidence of
 anything. `FAILED`/`ERROR` lines are kept: those *are* signal.
 
+**1b. Drop echoed `run:` source.** The runner prints every `run:` line back in
+cyan-bold before executing it. That echo is the workflow's own text, so it
+describes nothing about the run. Measured on run 34384107923 (→ issue #1299):
+`sudo apt-get install fonts-noto-cjk >/dev/null 2>&1` exited 100 with its stderr
+discarded, leaving no real failure line — so the issue's entire evidence block
+was the *SSL guard's own* `echo "::error::DISABLE_SSL_VERIFY ..."` source plus a
+bare exit code. The reverse direction is worse: a retry loop that echoes
+"connection refused" while successfully recovering would classify a genuine code
+failure as `network` and send it down the rerun path.
+
 **2. Anchor on shapes that only errors have.** Bare `timeout` is ambiguous — it
 appears in `test_wait_for_with_timeout`, `timeout_method`, `--timeout=300`. So
 the network patterns are either multi-word phrases (`timed out`, `connection
@@ -73,6 +83,13 @@ def _strip_prefix(line: str) -> str:
     return _LOG_PREFIX_RE.sub("", line).strip()
 
 
+# The runner echoes every `run:` line back in cyan-bold (`ESC[36;1m`) before
+# executing it. That echo is the workflow's *source*, not its output, so it can
+# neither classify a failure nor explain one. Anchored at the start of the
+# message so that a colour code appearing mid-line (real output) is untouched.
+_COMMAND_ECHO_RE = re.compile(r"^\x1b\[36;1m")
+
+
 def _is_noise(line: str) -> bool:
     """True when the line reports a *successful* test and so cannot be evidence."""
     return bool(_PASSING_OUTCOME_RE.search(line))
@@ -85,8 +102,9 @@ def _signal_lines(text: str) -> list[tuple[int, str]]:
         if _is_noise(raw):
             continue
         stripped = _strip_prefix(raw)
-        if stripped:
-            out.append((idx, stripped))
+        if not stripped or _COMMAND_ECHO_RE.match(stripped):
+            continue
+        out.append((idx, stripped))
     return out
 
 

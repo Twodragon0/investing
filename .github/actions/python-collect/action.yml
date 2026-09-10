@@ -87,12 +87,28 @@ runs:
         : > "$MANIFEST"
         echo "CREATED_POSTS_MANIFEST=$MANIFEST" >> "$GITHUB_ENV"
 
+    # 예전에는 apt 출력을 `/dev/null` 로 버렸다. 미러가 삐끗하면 apt 는 종료 코드
+    # 100 을 내는데, 사유가 stderr 로만 나오므로 리다이렉션이 그걸 지웠다. 남는 건
+    # `##[error]Process completed with exit code 100.` 한 줄뿐이라 분류기가 transient
+    # 근거를 못 찾고 `code` 로 판정한다 — 런 34384107923 이 그렇게 이슈 #1299 가 됐다.
+    # 이제 사유를 남기고, 그 전에 세 번 재시도한다.
+    # 가드: tests/test_apt_install_resilience_guard.py
     - name: Install CJK fonts
       shell: bash
       run: |
-        if ! fc-list :lang=ko | grep -q .; then
-          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1
+        if fc-list :lang=ko | grep -q .; then
+          exit 0
         fi
+        for attempt in 1 2 3; do
+          if sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk; then
+            exit 0
+          fi
+          if [ "$attempt" = 3 ]; then
+            echo "::error::fonts-noto-cjk install did not succeed after 3 attempts"
+            exit 1
+          fi
+          sleep $(( attempt * 10 ))
+        done
 
     - name: Run script
       shell: bash

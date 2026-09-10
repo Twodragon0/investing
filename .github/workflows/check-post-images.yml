@@ -80,12 +80,25 @@ jobs:
         if: steps.gate.outputs.needs_heal == 'true'
         run: pip install -r scripts/requirements.txt
 
+      # apt 실패 사유를 로그에 남기고 재시도한다. 근거:
+      # .github/actions/python-collect/action.yml 의 같은 스텝 주석,
+      # 가드: tests/test_apt_install_resilience_guard.py
       - name: Install CJK fonts
         if: steps.gate.outputs.needs_heal == 'true'
         run: |
-          if ! fc-list :lang=ko | grep -q .; then
-            sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1
+          if fc-list :lang=ko | grep -q .; then
+            exit 0
           fi
+          for attempt in 1 2 3; do
+            if sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk; then
+              exit 0
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo "::error::fonts-noto-cjk install did not succeed after 3 attempts"
+              exit 1
+            fi
+            sleep $(( attempt * 10 ))
+          done
 
       - name: Backfill missing post images
         if: steps.gate.outputs.needs_heal == 'true'

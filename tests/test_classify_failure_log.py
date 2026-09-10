@@ -96,6 +96,24 @@ GATEWAY_FAILURE_LOG = _log(
     "##[error]Process completed with exit code 22.",
 )
 
+# GitHub Actions echoes each `run:` line back into the log in cyan-bold before
+# executing it. The echo is *source text*, not output, so it can neither
+# classify a failure nor explain one.
+_ECHO = "\x1b[36;1m"
+_RESET = "\x1b[0m"
+
+# Verbatim shape of run 34384107923 -> issue #1299 ("Collect Market Indicators").
+# `sudo apt-get install fonts-noto-cjk >/dev/null 2>&1` exited 100 with its
+# stderr discarded, so the only failure-shaped lines left in the log were the
+# `Verify SSL is enabled` guard's own `echo "::error::..."` source and the
+# runner's exit-code line. The issue was filed with those two as its evidence.
+ECHOED_SOURCE_LOG = _log(
+    f'{_ECHO}if [ "${{DISABLE_SSL_VERIFY:-}}" = "true" ]; then{_RESET}',
+    f'{_ECHO}    echo "::error::DISABLE_SSL_VERIFY is set in CI while ssl-strict=true"{_RESET}',
+    f"{_ECHO}if ! fc-list :lang=ko | grep -q .; then{_RESET}",
+    "##[error]Process completed with exit code 100.",
+)
+
 
 class TestClassify:
     def test_pytest_test_names_are_not_network_evidence(self) -> None:
@@ -168,6 +186,46 @@ class TestClassify:
         ]
         log = _log(*node_ids, "##[error]Process completed with exit code 1.")
         assert classify(log) == "code"
+
+
+class TestEchoedRunSource:
+    """A `run:` line echoed by the runner is source, not output.
+
+    Both directions matter, so both are asserted:
+
+    * an echoed ``echo "::error::..."`` must not become an issue's evidence —
+      that is what shipped in #1299, where the two "Classifier evidence" lines
+      were the SSL guard's own source and a bare exit code;
+    * an echoed network phrase must not classify the run as ``network`` — a
+      retry loop that prints "connection refused" on the way to *recovering*
+      would otherwise send a genuine code failure down the rerun path.
+    """
+
+    def test_echoed_error_string_is_not_evidence(self) -> None:
+        evidence = extract_evidence(ECHOED_SOURCE_LOG, limit=12)
+        assert not any("DISABLE_SSL_VERIFY" in line for line in evidence), (
+            "the SSL guard's own `echo` source reached the issue body:\n" + "\n".join(evidence)
+        )
+        assert any("exit code 100" in line for line in evidence), (
+            "dropping echoes must not drop the runner's real exit line too:\n" + "\n".join(evidence)
+        )
+
+    def test_echoed_network_phrase_does_not_classify_as_network(self) -> None:
+        log = _log(
+            f'{_ECHO}  echo "attempt $i failed (connection refused), retrying"{_RESET}',
+            "FAILED tests/test_state_orphans.py::test_orphan_detected",
+            "##[error]Process completed with exit code 1.",
+        )
+        assert classify(log) == "code"
+
+    def test_real_output_is_still_read_when_echoes_are_present(self) -> None:
+        """The filter must key on the echo marker, not on phrase content."""
+        log = _log(
+            f"{_ECHO}python scripts/collect_market_indicators.py{_RESET}",
+            "requests.exceptions.ConnectionError: Connection refused",
+            "##[error]Process completed with exit code 1.",
+        )
+        assert classify(log) == "network"
 
 
 class TestExtractEvidence:
