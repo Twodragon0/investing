@@ -29,48 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-10 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Grand Forks Herald - 24건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 금리 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 연준, 가계 관련 6건</li><li>🤖 <strong>AI/기술</strong>: 코스피, 외국인 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT0NGU2wzOFZTZzA4dXc5aERia3BxQWJGZTRYcTBBYXFtYmFqN1ZrSDNYd2JZNFM2OURkOWZYb0dzZ3dCQlR6bGdNdmo4VkQ0YzBVMURJZldfck9vdG56ZExfbjRZT200emhRbkpaN09qcmdCNVAySUV3LTFlVGJmLUh3cjNXblZYMXBUdzZ2Z3FueENzNnZoSi1zTXdOdW8xQzFPdjY4Z01DT0k?oc=5">연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Grand Forks Herald</a> <span class="p0-desc">고용 보고서에 따르면 지난달 비농업 부문 고용은 162,000건 증가했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSzZTbEJhYThnX2VUSW1zbWxjNnl2eFYzaExLQmRRSU1lbzIyTVc1UHk3STg5X283UEtyX2ZaRDhEZnYwVE95dTVJUUV3VVQwTHZBVlQtbEJhSGNWMmdwUG9iM2NPRHYzZHAycllKWERWd1dNMndKR1FITWNBbl9KVnVMMTNDbW9WbF9Pd1o3NkNYYVNfcDJqZHRiaUNERUxlSTBacXBqM2w2MXlRWHZxaUNDTmd2YnJo?oc=5">일본은행은 연준이 금리 결정 쪽으로 기울면서 '기회'를 봅니다. - TheStreet Pro</a> <span class="p0-desc">노무라 증권의 수석 거시 전략가인 마츠자와 나카(Naka Matsuzawa)가 스스로에게 묻고 있는 것이 바로 이것이다. 그 의미가 중요합니다. 특히 통화의 경우 주식에 대한 연쇄.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Grand Forks Herald 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 24건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 24건 중 텔레그램 0건, 소셜 0건, 정치·경제 24건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (17건): 연준, 금리, 인플레이션 매크로 변수 (17건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (15건): 코스피, 외국인, 기관 가격 변동 (15건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (6건): 연준, 가계 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Grand Forks Herald
-- 일본은행은 연준이 금리 결정 쪽으로 기울면서 '기회'를 봅니다. - TheStreet Pro
-
-### 주요 이슈
-
-- FOMC 2026년 9월 금리 인상 확률이 50%를 초과합니다.
-
-### 투자자 체크포인트
-
-- 정치·경제 24건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:88%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:35%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:35%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:6%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

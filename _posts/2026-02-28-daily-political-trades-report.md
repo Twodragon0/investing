@@ -22,9 +22,12 @@ permalink: "/political-trades/2026/02/28/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **sec(미국증권거래위원회)**(4회), **fed(연방준비제도)**(4회), **insider**(4회), **trump(트럼프)**(2회), **pelosi**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 0건(0%), 매도 신호 1건(100%). 매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+- 1. Pelosi Slams Trump’s Brutal Insider Trading Jab - moneywise.com Pelosi Slams Trump’s Brutal Insider Trading Jab moneywise.com
 
 ## 미국 의회 거래 동향
 

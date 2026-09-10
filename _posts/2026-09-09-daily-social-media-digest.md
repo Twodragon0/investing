@@ -30,12 +30,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-09 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 중동 긴장으로 금리 결정을 앞두고 인플레이션 우려가 고조되면서 유가는 배럴당 100달러에 가까워졌습니다. - 33건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 인플레이션, 부동산 주목</li><li>🏛️ <strong>정치/정책</strong>: 정부, 부동산 주목</li><li>📈 <strong>가격/시장</strong>: 외국인, 코스피 관련 17건</li><li>🤖 <strong>AI/기술</strong>: 외국인, 코스피 관련 5건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTGg5MUxGNnpxS05KVUZRaU0yUG50MFEtelNWY0llLWtneERLZWtiVmhRc1d0OXk2Z2FYa0RKYTVxcUNreVZVR21VdU42dFlJRklfSTk1WEN6Y0liOVc0TTZQLWdFamp1UUZBVWVWWnpWcDEybUoyRWFsSUFTTUZFbktrNmQyNEY3M0huZ3dzMmFuNnJwbkh1U1hmWkxRTWRWdi1FR3AtQ2J6Unc?oc=5">중동 긴장으로 금리 결정을 앞두고 인플레이션 우려가 고조되면서 유가는 배럴당 100달러에 가까워졌습니다.</a> <span class="p0-desc">세계 최대 석유 수출국인 사우디 에너지부가 이란과 연계한 후티 반군의 공격으로 일부 시설의 운영이 중단됐다고 발표한 이후 가격이 상승했습니다.</span></li><li><a href="https://www.moomoo.com/news/post/75909676/silver-tests-consolidation-range-ahead-of-federal-reserve-interest-rate">은, 연준 금리 결정 앞두고 통합 범위 테스트 - Moomoo</a> <span class="p0-desc">은, 연준 금리 결정을 앞두고 통합 범위 테스트 Moomoo</span></li><li><a href="https://www.bloomberg.com/news/newsletters/2026-09-07/fed-latest-warsh-s-speech-contrasts-with-new-york-fed-president-s-take">연준의 '가족 싸움'은 주요 금리 결정을 앞두고 공개적으로 퍼졌습니다.</a> <span class="p0-desc">연준의 '가족 싸움'은 주요 금리 결정 전에 공개되었습니다. Bloomberg.com</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 33건 중 텔레그램 0건, 소셜 0건, 정치·경제 33건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 33건 중 텔레그램 0건, 소셜 0건, 정치·경제 33건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

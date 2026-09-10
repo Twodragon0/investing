@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-03 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://v.daum.net">‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요</a> <span class="p0-desc">‘36만 삼전·148만 하이닉스’ vs ‘65만·470만’…반도체 폭락 속 엇갈린 전망 [수민이가 궁금해요] v.daum.net</span></li><li><a href="https://www.sisajournal-e.com">7월 원화 강세로 환율 8.8% 급락···1달러에 1300원대 시대 올까 - 시사저널e</a></li><li><a href="https://www.wowtv.co.kr">환율 한 달 새 ＇125원＇ 급락…금융위기 후 가장 빠른 속도 - 한국경제TV</a> <span class="p0-desc">환율 한 달 새 ＇125원＇ 급락…금융위기 후 가장 빠른 속도 한국경제TV</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,595.45 (+17.91%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 719.76 (+11.63%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-03 주식 시장에서 138건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,595.45(+17.91%), KOSDAQ 719.76(+11.63%), USD/KRW 1,436.60(+1.09%).
 - *정치,경제,사회,문화,국제,연예,스포츠,환경,지역소식,인디포커스*
 
 ## 테마별 주요 뉴스

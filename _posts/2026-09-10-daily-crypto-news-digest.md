@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-10 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: ClickFix가 브라우저로 이동: 구글 호스팅 C2를 통한 암호화폐 도난 - Cisco Talos 블로그 - 85건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 동향 주시</li><li>📈 <strong>가격/시장</strong>: XRP, 달러 관련 15건</li><li>🟣 <strong>DeFi</strong>: 15건 수집</li><li>🏛️ <strong>정치/정책</strong>: 바이든 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE11SHZ6b3FJMzdqZ25iUkRtT2dEaEpWamk1R09FbGJTWGtsNnFHa2E5UXNWbUJnaFBEcXNreFVxcUU1cU95dENfeDFFcE5ETFhWRFphQkdDNUZJc3VYTjBrSUhlSXlVVnJpOUhTVkYtamhld0haR3c?oc=5">ClickFix가 브라우저로 이동: 구글 호스팅 C2를 통한 암호화폐 도난 - Cisco Talos 블로그</a> <span class="p0-desc">Cisco Talos는 명령 및 제어(C2)를 위해 구글 시각화 API을 악용하고, 공개적으로 게시된 구글 시트 문서에서 난독화된 JavaScript를 검색하여 피해자의 브라우저.</span></li><li><a href="https://news.google.com/rss/articles/CBMihANBVV95cUxQN0tSdzN4ZnBnbXZ6S0lueHdab1FCRWNHVFJISnl0ZnBzNGZwSWhLaEp1ajVuZDVyUE5CcDVUbzBrNXJmWmFLbXVycG9KQVZLd25VUW1lSUhkeURSdFRUY01PenlKZHY2Mlo2TjYzYUNISG5TWVJLT21WTjIxa3VYeXJvbnZPZks0LWxCbUNNeFRsYjJrUFVmQmh0anpHSnpYM1hYczZuZmZXZE5PZFlTd1FYcDctVEppUkR3cXQxNDREMmIyVXBQRW9SUklzUlZ3bmk5YVB1RVZBZkVLZFE2Mzk0ejd4OFJ2NXFFaVFBQzZvYUphS1JGZERLMFV0VV81Sk9Cejg2anJfUVN0V0g0UjdTWU9vblEzM25EWGpzcDNpb3F2T2Q1OEdsRjlSRlJhZUkxVXdFbUNvTlNJbzJLWmNkRnVWeVphVXFhZUp5YW1HTHJhQlNjeVJSbERwMXRTUkZQanJlVUZCWTA4bkFETEhGZmY0WFVSQVVJdi1TQjlGU0Ny?oc=5">사우스 플로리다 암호화폐의 두목, 2억 4500만 달러 규모의 절도 음모 혐의에 대해 유죄를 인정 - KOKH</a> <span class="p0-desc">2억 4,500만 달러 규모의 암호화폐 절도 계획의 중심에 있던 플로리다 남부 남성이 검찰이 이 사건이 사치스러운 삶을 살게 했다고 밝힌 후 유죄를 인정했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sR1V4T0NkWWRMeVlNcG8wNzlCWDZON1hQR1h3ak9IRW5fakJIU25LVmk0Wkp4d3BJa0JPd1JGdm1NS2tXMFZrTmw3RElyclpMaXcyV2NqMXBnUQ?oc=5">순식간에 4300억 증발…비트코인 블록체인 또 털려</a> <span class="p0-desc">순식간에 4300억 증발…비트코인 블록체인 또 털려, 리퀴드 네트워크 지갑에 보관된 비트코인 도난 디지털 자산 보안 인프라 취약성 드러나</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: ClickFix가 브라우저로 이동: 구글 호스팅 C2를 통한 암호화폐 도난 - Cisco Talos 블로그 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 85건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (33건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (15건): XRP, 달러, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🟣 DeFi** (15건): fasanara, launches, private DeFi 동향 (15건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- ClickFix가 브라우저로 이동: 구글 호스팅 C2를 통한 암호화폐 도난 - Cisco Talos 블로그
-- 사우스 플로리다 암호화폐의 두목, 2억 4500만 달러 규모의 절도 음모 혐의에 대해 유죄를 인정 - KOKH
-- 순식간에 4300억 증발…비트코인 블록체인 또 털려
-
-### 주요 이슈
-
-- 최신 미국 암호화폐 ETF는 트론의 TRX: Crypto Daily에 대한 수익을 높이는 스테이킹 기능을 자랑합니다.
-- 비트코인, Zcash ETF 유입에 7만9,500달러 반등…연준·유가 상승은 제한 - Investing.com 한국어
-- 비트코인 8월 25% 급등…암호화폐 상위 종목 83%도 줄줄이 올랐다 - Nate News
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Decrypt(15건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **85건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- 2026-09-10 암호화폐 핵심 뉴스: 싱가포르 남성, 미국에서 대규모 암호화폐 강도 사건에 대해 유죄를 인정. 총 85건 분석, 핵심 테마는 비트코인, 가격/시장, DeFi입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
