@@ -1,20 +1,55 @@
-"""CI 인바리언트 가드: ruff 버전 핀 3곳 동기화.
+"""CI 인바리언트 가드: ruff 버전 핀의 단일 출처(SSoT).
 
-배경(인시던트): code-quality.yml이 ruff를 unpinned(floating)로 설치해, 새 ruff 릴리스의
-format 규칙 변경으로 코드 변경 없이 Code Quality가 이틀간 silently red였음(2026-06-10~12).
-`ruff==0.15.8`로 핀하면서 핀이 3곳에 흩어짐 — 한 곳만 bump하고 나머지를 잊으면
-로컬(pre-commit)·CI·requirements가 서로 다른 ruff를 써서 format 규칙 불일치 → 같은 red 재발.
+## 배경 (인시던트)
 
-이 가드는 **세 곳의 ruff 버전이 동일한지**만 검사한다(특정 값 고정이 아님 → ratchet/bump는
-세 곳을 함께 올리면 통과). 한 곳만 어긋나면 실패하며, 메시지가 동기화 지점을 알려준다.
+`code-quality.yml` 이 ruff 를 unpinned 로 설치해, 새 ruff 릴리스의 format 규칙
+변경만으로 코드 변경 없이 Code Quality 가 이틀간 silently red 였다
+(2026-06-10~12). `ruff==X` 로 핀하면서 핀이 **3곳**에 흩어졌다.
 
-핀 3곳:
-  1. .github/workflows/code-quality.yml   — `pip install ... ruff==X`
-  2. requirements-dev.txt                 — `ruff==X`
-  3. .pre-commit-config.yaml              — `astral-sh/ruff-pre-commit` 의 `rev: vX`
+## 왜 "3곳 동기화" 에서 "단일 출처" 로 바꿨나
 
-방향: 동등성(==). 의도적 bump 시 세 곳을 함께 갱신하면 그대로 통과한다.
-stdlib-only(정규식 라인 스캔) — PyYAML 불필요, 측정 대상 소스를 import하지 않아 커버리지 무영향.
+이전 가드는 세 곳이 *같은지*만 봤다. 규율로 지키자는 설계였는데, 실측으로
+두 번 실패했다:
+
+* `code-quality.yml` 주석은 "여기에 버전 숫자를 다시 적지 말 것 — bump 마다
+  낡는다. 2026-08-24 에 0.16.1→0.16.4 bump 후 실제로 낡은 채 남았다" 라고
+  적어 놓고, 바로 아래 줄에 리터럴 핀을 두고 있었다.
+* `.pre-commit-config.yaml` 주석은 "rev 는 로컬/CI ruff 버전(0.16.4)에 맞춤"
+  이라고 적혀 있었지만 실제 rev 는 `v0.16.5` 였다.
+
+더 중요한 건 **누가 막히느냐**다. Dependabot 의 pip 스캔은 매니페스트 파일만
+본다 — `requirements-dev.txt` 하나만 올릴 수 있다. 그래서 이 가드는 모든 ruff
+Dependabot PR 을 구조적으로 red 로 만들었다 (#1275 가 3일 정체). 가드가 회귀를
+막은 게 아니라 정상 업데이트를 막고 있었다.
+
+그래서 `code-quality.yml` 이 버전을 **적지 않고 읽도록** 바꿨다.
+
+## 현재 상태: 핀 위치 2곳
+
+| 위치 | 역할 |
+|---|---|
+| `requirements-dev.txt` | **SSoT.** Dependabot 이 편집하는 유일한 파일 |
+| `.pre-commit-config.yaml` (`rev:`) | 파생 불가 — pre-commit `rev` 는 git ref 라 파일 참조가 안 된다 |
+
+`code-quality.yml` 은 더 이상 버전을 적지 않고 SSoT 에서 읽는다.
+
+pre-commit 은 아직 남아 있으므로 ruff bump 는 여전히 수동 개입 1회가 필요하다.
+그걸 없애려면 원격 훅을 `repo: local` + `language: system` 으로 바꿔야 하는데,
+그러면 pre-commit 이 ruff 를 자동 provisioning 하지 않게 되어 새 클론의 DX 가
+나빠진다. 별건으로 남긴다.
+
+## 이 파일이 지키는 것
+
+1. SSoT 가 존재하고 핀되어 있을 것 (없으면 floating 회귀)
+2. 워크플로우에 **리터럴 핀이 다시 생기지 않을 것** — 이게 뒤집힌 명제다.
+   그냥 리터럴만 지우면 floating 설치로 조용히 회귀할 수 있으므로, 3번과
+   짝이어야 의미가 있다
+3. 워크플로우가 실제로 SSoT 에서 읽도록 **배선**되어 있을 것
+4. pre-commit rev 가 SSoT 와 일치할 것
+
+2·3번은 파일 원문이 아니라 **파싱된 `run:` 값**만 읽는다. 원문을 읽으면 이
+설명이나 워크플로우 주석의 `ruff==` 가 스스로에게 매칭돼 항상 red 가 된다 —
+이 저장소에서 두 번 발생한 실패 양식이다.
 """
 
 from __future__ import annotations
@@ -22,81 +57,184 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import yaml
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
-CODE_QUALITY_YML = REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
+WORKFLOWS_DIR = REPO_ROOT / ".github" / "workflows"
+CODE_QUALITY_YML = WORKFLOWS_DIR / "code-quality.yml"
 REQUIREMENTS_DEV = REPO_ROOT / "requirements-dev.txt"
 PRE_COMMIT_CONFIG = REPO_ROOT / ".pre-commit-config.yaml"
 
-# 버전 토큰: 0.15.8 형태(major.minor.patch). pre-commit rev는 선행 v 허용.
 _SEMVER = r"(\d+\.\d+\.\d+)"
+
+# SSoT 파일명. 워크플로우가 여기서 핀을 읽어야 한다.
+_SSOT_FILENAME = "requirements-dev.txt"
 
 
 def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8") if path.is_file() else ""
 
 
-def _ruff_in_pip_install(text: str) -> str | None:
-    """code-quality.yml의 `pip install ... ruff==X ...`에서 X 추출."""
-    m = re.search(rf"\bruff=={_SEMVER}", text)
-    return m.group(1) if m else None
+def _strip_shell_comments(run: str) -> str:
+    """`run:` 안의 셸 주석을 제거한다.
+
+    "파일 원문이 아니라 `run:` 값을 읽어라" 를 한 단계 더 밀어야 한다. `run:` 값
+    **안**에도 주석이 있고, 그건 실행되지 않는 산문이다. 실측: 배선 검사가
+    `# ... requirements-dev.txt 의 ruff== 와 ...` 라는 설명 주석에 매칭돼, 워크플로우가
+    아직 리터럴 핀을 쓰고 있는데도 green 을 냈다.
+
+    `#` 이 따옴표 안에 있을 수 있으므로(URL 프래그먼트 등) 줄 전체가 주석인 경우와
+    공백 뒤 `#` 만 자른다 — 셸 파서를 흉내 내지는 않는다.
+    """
+    out = []
+    for line in run.splitlines():
+        stripped = line.lstrip()
+        if stripped.startswith("#"):
+            continue
+        out.append(re.sub(r"\s+#(?=\s).*$", "", line))
+    return "\n".join(out)
+
+
+def _iter_run_blocks(node: object):
+    """모든 중첩 깊이의 `run:` 문자열."""
+    if isinstance(node, dict):
+        run = node.get("run")
+        if isinstance(run, str):
+            name = node.get("name")
+            yield (name if isinstance(name, str) else "<unnamed step>", run)
+        for value in node.values():
+            yield from _iter_run_blocks(value)
+    elif isinstance(node, list):
+        for item in node:
+            yield from _iter_run_blocks(item)
+
+
+def _workflow_run_blocks() -> list[tuple[Path, str, str]]:
+    out: list[tuple[Path, str, str]] = []
+    for path in sorted(WORKFLOWS_DIR.glob("*.yml")):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        for step_name, run in _iter_run_blocks(doc):
+            out.append((path, step_name, _strip_shell_comments(run)))
+    return out
 
 
 def _ruff_in_requirements(text: str) -> str | None:
-    """requirements-dev.txt의 `ruff==X` 라인에서 X 추출."""
     m = re.search(rf"(?m)^\s*ruff=={_SEMVER}\s*$", text)
     return m.group(1) if m else None
 
 
 def _ruff_precommit_rev(text: str) -> str | None:
-    """.pre-commit-config.yaml의 astral-sh/ruff-pre-commit repo 바로 뒤 `rev: vX`에서 X 추출.
+    """`astral-sh/ruff-pre-commit` 바로 뒤의 첫 `rev: vX`.
 
-    비탐욕 `.*?`로 ruff-pre-commit 직후 첫 rev만 매칭 → 다른 repo(gitleaks 등) rev와 혼동 방지.
+    비탐욕 `.*?` 로 다른 repo(gitleaks 등) 의 rev 와 혼동하지 않는다.
     """
-    m = re.search(
-        rf"astral-sh/ruff-pre-commit\b.*?\brev:\s*v?{_SEMVER}",
-        text,
-        re.DOTALL,
-    )
+    m = re.search(rf"astral-sh/ruff-pre-commit\b.*?\brev:\s*v?{_SEMVER}", text, re.DOTALL)
     return m.group(1) if m else None
 
 
-# --- canary: 대상 파일이 옮겨지거나 사라지면 vacuous하게 통과하지 말고 실패 ---
+# --- canary: 대상이 사라지면 vacuous 하게 통과하지 말고 실패 ---
 
 
-def test_target_files_exist():
+def test_target_files_exist() -> None:
     assert CODE_QUALITY_YML.is_file(), f"{CODE_QUALITY_YML} not found"
     assert REQUIREMENTS_DEV.is_file(), f"{REQUIREMENTS_DEV} not found"
     assert PRE_COMMIT_CONFIG.is_file(), f"{PRE_COMMIT_CONFIG} not found"
 
 
-def test_each_location_pins_ruff():
-    """세 곳 모두 ruff 핀이 추출돼야 한다(누락 = floating 회귀 또는 가드 파손)."""
-    assert _ruff_in_pip_install(_read(CODE_QUALITY_YML)), (
-        "code-quality.yml에서 `ruff==X` 핀을 찾지 못함 — unpinned floating으로 회귀했거나 "
-        "설치 라인이 바뀜. 핀을 유지하거나 이 가드의 추출 패턴을 갱신할 것."
-    )
-    assert _ruff_in_requirements(_read(REQUIREMENTS_DEV)), "requirements-dev.txt에서 `ruff==X`를 찾지 못함."
-    assert _ruff_precommit_rev(_read(PRE_COMMIT_CONFIG)), (
-        ".pre-commit-config.yaml의 astral-sh/ruff-pre-commit `rev: vX`를 찾지 못함."
+def test_workflows_have_run_blocks() -> None:
+    """`run:` 이 0개면 아래 스캔 기반 검사들이 아무것도 증명하지 않는다."""
+    assert _workflow_run_blocks(), "no `run:` blocks parsed from .github/workflows/ — the scan is vacuous"
+
+
+# --- 1. SSoT 존재 ---
+
+
+def test_ssot_pins_ruff() -> None:
+    assert _ruff_in_requirements(_read(REQUIREMENTS_DEV)), (
+        f"{_SSOT_FILENAME} 에서 `ruff==X` 를 찾지 못했다. 이 파일이 ruff 핀의 단일 "
+        "출처다 — 핀이 사라지면 CI 가 floating ruff 를 설치해 2026-06-10 회귀가 "
+        "재발한다."
     )
 
 
-def test_ruff_versions_are_in_sync():
-    """세 곳의 ruff 버전이 동일해야 한다. 불일치 시 format 규칙 드리프트로 CI red 위험."""
-    ci = _ruff_in_pip_install(_read(CODE_QUALITY_YML))
+# --- 2. 리터럴 핀 재도입 금지 (뒤집힌 명제) ---
+
+
+def test_no_literal_ruff_pin_in_any_workflow() -> None:
+    offenders = [
+        (path, step_name, m.group(0))
+        for path, step_name, run in _workflow_run_blocks()
+        if (m := re.search(rf"\bruff=={_SEMVER}", run))
+    ]
+    assert not offenders, (
+        "워크플로우 `run:` 에 ruff 버전 리터럴이 다시 생겼다:\n"
+        + "\n".join(f"  {p.relative_to(REPO_ROOT)} :: {s!r} -> {v}" for p, s, v in offenders)
+        + f"\n버전은 {_SSOT_FILENAME} 한 곳에만 둔다. 워크플로우가 직접 적으면 "
+        "Dependabot 이 그 파일을 못 건드리므로 모든 ruff bump PR 이 막힌다 (#1275)."
+    )
+
+
+# --- 3. 배선: 리터럴만 지우면 floating 회귀 ---
+
+
+# `VAR="$( ... requirements-dev.txt ... )"` — SSoT 를 실제로 읽어 변수에 담는 형태.
+# 파일명 언급만으로는 부족하다: 배선을 `RUFF_PIN=ruff` 로 바꾸는 변이를 넣었을 때,
+# 아래 `echo "... requirements-dev.txt: $RUFF_PIN"` 한 줄 때문에 "파일명이 있으면
+# 통과" 버전의 검사가 green 을 냈다. floating 설치로 회귀했는데도.
+#
+# `[^)]*` 로 닫는 괄호까지 매칭하려던 첫 시도는 실패했다 — 읽기 명령 자체가
+# 정규식 캡처 그룹 `(...)` 을 담고 있어서 문자 클래스가 조기 종료했다. 괄호 균형을
+# 맞추려 들지 말고 한 줄 안으로 스코프를 좁힌다.
+_PIN_READ_RE = re.compile(rf"([A-Za-z_][A-Za-z0-9_]*)=\"?\$\([^\n]*{re.escape(_SSOT_FILENAME)}")
+
+
+def test_code_quality_derives_the_pin_from_the_ssot() -> None:
+    """2번과 짝. 리터럴 부재가 '핀 없음'을 뜻하지 않도록 읽기→사용을 끝단으로 단언한다."""
+    for path, step_name, run in _workflow_run_blocks():
+        if path != CODE_QUALITY_YML:
+            continue
+        match = _PIN_READ_RE.search(run)
+        if not match:
+            continue
+        var = match.group(1)
+        install_lines = [ln for ln in run.splitlines() if "pip install" in ln]
+        assert any(f"${var}" in ln or f"${{{var}}}" in ln for ln in install_lines), (
+            f"{step_name!r} reads the ruff pin from {_SSOT_FILENAME} into ${var}, but no "
+            f"`pip install` line uses it:\n  " + "\n  ".join(install_lines) + "\n"
+            "Reading the pin and not installing it is the same as not pinning."
+        )
+        return
+
+    raise AssertionError(
+        f"code-quality.yml 의 어떤 `run:` 도 {_SSOT_FILENAME} 을 명령 치환으로 읽지 "
+        "않는다. 리터럴을 지우기만 하면 ruff 가 unpinned 로 설치돼 2026-06-10 의 "
+        "silently-red 회귀가 그대로 돌아온다."
+    )
+
+
+def test_pin_read_failure_is_loud() -> None:
+    """SSoT 에서 핀을 못 읽었을 때 조용히 floating 설치로 넘어가면 안 된다."""
+    for _path, step_name, run in _workflow_run_blocks():
+        if not _PIN_READ_RE.search(run):
+            continue
+        assert "exit 1" in run, (
+            f"{step_name!r} reads the ruff pin from {_SSOT_FILENAME} but never fails "
+            "when the read comes back empty. An empty pin would make `pip install` "
+            "resolve ruff to latest — exactly the floating install this guard exists "
+            "to prevent, and it would be green."
+        )
+
+
+# --- 4. pre-commit rev 는 아직 파생 불가하므로 동등성으로 지킨다 ---
+
+
+def test_precommit_rev_matches_the_ssot() -> None:
     req = _ruff_in_requirements(_read(REQUIREMENTS_DEV))
     pc = _ruff_precommit_rev(_read(PRE_COMMIT_CONFIG))
-
-    versions = {
-        "code-quality.yml": ci,
-        "requirements-dev.txt": req,
-        "pre-commit ruff-pre-commit rev": pc,
-    }
-    distinct = {v for v in versions.values() if v}
-    assert len(distinct) == 1, (
-        "ruff 버전 핀이 3곳에서 불일치한다: "
-        + ", ".join(f"{k}={v}" for k, v in versions.items())
-        + ". format 규칙은 ruff 버전마다 다르므로 로컬(pre-commit)·CI·requirements가 같은 버전을 "
-        "써야 한다. 버전 bump 시 .github/workflows/code-quality.yml, requirements-dev.txt, "
-        ".pre-commit-config.yaml(ruff-pre-commit rev) 세 곳을 함께 갱신할 것."
+    assert pc, ".pre-commit-config.yaml 의 astral-sh/ruff-pre-commit `rev: vX` 를 찾지 못했다."
+    assert pc == req, (
+        f"pre-commit ruff rev={pc} 가 {_SSOT_FILENAME} 의 ruff=={req} 와 다르다. "
+        "format 규칙은 ruff 버전마다 다르므로 로컬 훅과 CI 가 같은 버전을 써야 한다. "
+        "pre-commit `rev` 는 git ref 라 파일에서 파생할 수 없어, 이 한 곳만은 아직 "
+        "수동 동기화가 필요하다."
     )

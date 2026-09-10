@@ -50,13 +50,23 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # ruff는 핀 고정: floating(unpinned) 시 새 릴리스의 format 규칙 변경으로
-          # 코드 변경 없이 main이 갑자기 red가 될 수 있음. 아래 핀은
-          # .pre-commit-config.yaml 의 ruff-pre-commit `rev` 및 requirements-dev.txt 의
-          # `ruff==` 와 반드시 같아야 하며, `tests/test_ruff_version_pin_sync.py` 가
-          # 세 곳의 일치를 강제한다. (여기에 버전 숫자를 다시 적지 말 것 — bump 마다
-          # 낡는다. 2026-08-24 에 0.16.1→0.16.4 bump 후 실제로 낡은 채 남았다.)
-          pip install -r scripts/requirements.txt ruff==0.16.6 yamllint basedpyright pytest pytest-cov pytest-timeout pytest-xdist pre-commit
+          # ruff 는 핀 고정: floating 이면 새 릴리스의 format 규칙 변경만으로 코드
+          # 변경 없이 main 이 red 가 된다 (2026-06-10~12 에 이틀간 실측).
+          #
+          # 버전 리터럴은 여기 적지 않고 requirements-dev.txt 에서 읽는다. 그게
+          # 단일 출처이고, Dependabot 의 pip 스캔이 편집할 수 있는 유일한 파일이다.
+          # 리터럴을 두면 Dependabot 이 그 파일만 올리고 여기는 못 건드려서, 모든
+          # ruff bump PR 이 동기화 가드에 막힌다 — #1275 가 그렇게 3일 정체했다.
+          #
+          # 빈 값이면 조용히 floating 설치로 넘어가지 않고 즉시 실패한다.
+          # 가드: tests/test_ruff_version_pin_sync.py
+          RUFF_PIN="$(sed -nE 's/^[[:space:]]*(ruff==[0-9]+\.[0-9]+\.[0-9]+)[[:space:]]*$/\1/p' requirements-dev.txt)"
+          if [ -z "$RUFF_PIN" ]; then
+            echo "::error::requirements-dev.txt 에서 ruff 핀을 읽지 못했다"
+            exit 1
+          fi
+          echo "ruff pin resolved from requirements-dev.txt: ${RUFF_PIN}"
+          pip install -r scripts/requirements.txt "$RUFF_PIN" yamllint basedpyright pytest pytest-cov pytest-timeout pytest-xdist pre-commit
           curl -sSL "https://github.com/rhysd/actionlint/releases/download/v1.7.7/actionlint_1.7.7_linux_amd64.tar.gz" -o /tmp/actionlint.tgz
           tar -xzf /tmp/actionlint.tgz -C /tmp
           install /tmp/actionlint /usr/local/bin/actionlint
