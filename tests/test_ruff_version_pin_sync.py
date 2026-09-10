@@ -24,19 +24,20 @@ Dependabot PR 을 구조적으로 red 로 만들었다 (#1275 가 3일 정체). 
 
 그래서 `code-quality.yml` 이 버전을 **적지 않고 읽도록** 바꿨다.
 
-## 현재 상태: 핀 위치 2곳
+## 현재 상태: 핀 위치 1곳
 
-| 위치 | 역할 |
+버전 리터럴은 `requirements-dev.txt` 에만 있다 — Dependabot 이 편집할 수 있는
+유일한 파일이다. 나머지 둘은 거기서 가져온다:
+
+| 위치 | 어떻게 |
 |---|---|
-| `requirements-dev.txt` | **SSoT.** Dependabot 이 편집하는 유일한 파일 |
-| `.pre-commit-config.yaml` (`rev:`) | 파생 불가 — pre-commit `rev` 는 git ref 라 파일 참조가 안 된다 |
+| `requirements-dev.txt` | **SSoT** |
+| `code-quality.yml` | `sed` 로 SSoT 에서 읽어 `pip install` 에 넘긴다 |
+| `.pre-commit-config.yaml` | `repo: local` + `language: system` — 설치된 ruff 를 쓴다 |
 
-`code-quality.yml` 은 더 이상 버전을 적지 않고 SSoT 에서 읽는다.
-
-pre-commit 은 아직 남아 있으므로 ruff bump 는 여전히 수동 개입 1회가 필요하다.
-그걸 없애려면 원격 훅을 `repo: local` + `language: system` 으로 바꿔야 하는데,
-그러면 pre-commit 이 ruff 를 자동 provisioning 하지 않게 되어 새 클론의 DX 가
-나빠진다. 별건으로 남긴다.
+pre-commit 이 원격 `astral-sh/ruff-pre-commit` 이던 시절에는 `rev: vX` 가
+두 번째 핀이었다. `rev` 는 git ref 라 파일에서 파생할 수 없으므로, 훅 자체를
+로컬로 바꾸는 것 말고는 방법이 없었다.
 
 ## 이 파일이 지키는 것
 
@@ -44,12 +45,16 @@ pre-commit 은 아직 남아 있으므로 ruff bump 는 여전히 수동 개입 
 2. 워크플로우에 **리터럴 핀이 다시 생기지 않을 것** — 이게 뒤집힌 명제다.
    그냥 리터럴만 지우면 floating 설치로 조용히 회귀할 수 있으므로, 3번과
    짝이어야 의미가 있다
-3. 워크플로우가 실제로 SSoT 에서 읽도록 **배선**되어 있을 것
-4. pre-commit rev 가 SSoT 와 일치할 것
+3. 워크플로우가 실제로 SSoT 를 읽어 **그 값을 설치에 쓸 것**
+4. 빈 핀일 때 소리 내어 실패할 것
+5. pre-commit 이 두 번째 핀(`rev`, entry 안의 버전)을 만들지 않고 설치된 ruff 를
+   쓸 것, 그리고 lint·format 훅이 **둘 다** 있을 것 (format 누락이 2026-06-10
+   회귀의 원인 자체였다)
 
-2·3번은 파일 원문이 아니라 **파싱된 `run:` 값**만 읽는다. 원문을 읽으면 이
-설명이나 워크플로우 주석의 `ruff==` 가 스스로에게 매칭돼 항상 red 가 된다 —
-이 저장소에서 두 번 발생한 실패 양식이다.
+2·3번은 파일 원문이 아니라 **파싱된 `run:` 값**만 읽고, 그 안의 셸 주석도
+걷어낸다. 원문을 읽으면 이 설명이나 워크플로우 주석의 `ruff==` 가 스스로에게
+매칭되고, 주석을 남겨 두면 배선 검사가 산문에 매칭돼 거짓 통과한다 — 둘 다 이
+저장소에서 실제로 발생한 실패 양식이다.
 """
 
 from __future__ import annotations
