@@ -71,9 +71,21 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # apt 실패 사유를 로그에 남기고 재시도한다. 근거:
+      # .github/actions/python-collect/action.yml 의 CJK 폰트 스텝 주석,
+      # 가드: tests/test_apt_install_resilience_guard.py
       - name: Validate RSS feeds (xmllint)
         run: |
-          sudo apt-get install -y -qq libxml2-utils >/dev/null 2>&1
+          for attempt in 1 2 3; do
+            if sudo apt-get install -y -qq libxml2-utils; then
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo "::error::libxml2-utils install did not succeed after 3 attempts"
+              exit 1
+            fi
+            sleep $(( attempt * 10 ))
+          done
           for feed in _site/reports-*-feed.xml; do
             echo "Validating $feed..."
             xmllint --noout "$feed" && echo "  OK" || echo "  WARN: $feed has XML issues"
