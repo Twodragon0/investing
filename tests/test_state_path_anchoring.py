@@ -235,6 +235,9 @@ _MODULE_LEVEL_WRITERS: list[tuple[str, str, list[str]]] = [
     ("common/signal_tracker.py", "_REPO_ROOT", ["_STATE_DIR"]),
     ("common/translator.py", "_REPO_ROOT", ["_CACHE_PATH"]),
     ("fix_post_url_summaries.py", "REPO_ROOT", ["_ATTEMPT_LOG_DEFAULT"]),
+    # Read-only, but the scan covers any module-level _state path: a
+    # cwd-relative default here would inspect the caller's directory instead.
+    ("tools/check_state_orphans.py", "REPO_ROOT", ["_DEFAULT_STATE_DIR"]),
     ("collect_defi_llama.py", "_REPO_ROOT", ["_TVL_HISTORY_PATH"]),
     ("backfill_signal_history_accuracy.py", "_REPO_ROOT", ["_HISTORY_FILE"]),
     ("backfill_signal_history_btc_price.py", "_REPO_ROOT", ["_HISTORY_FILE"]),
