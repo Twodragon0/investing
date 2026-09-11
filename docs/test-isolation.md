@@ -210,3 +210,16 @@ python scripts/tools/guard_falsifiability.py --check    # vacuous/미등록 시 
 - 워크플로우가 실행 후 `git status --porcelain`으로 **복원 실패를 별도 검증**한다
 
 새 격리 fixture를 추가하면 `CASES` 레지스트리에도 등록해야 한다. 미등록 시 `UNMAPPED`로 `--check`가 실패하고, `tests/test_guard_falsifiability_tool.py::test_registry_matches_real_conftest`가 주간 잡을 기다리지 않고 **PR 시점에** 잡는다.
+
+### 가드 파일 등록 레지스트리 (2026-09-11)
+
+같은 규약이 가드 **파일** 에도 적용된다. `tests/test_*guard*.py` 는 `STATIC_CASES` 에 등록되었거나 `UNREGISTERED_BY_DESIGN` 에 **사유와 함께** 올라 있어야 하고, 둘 다 아니면 `test_every_guard_file_is_registered_or_exempted` 가 red 가 된다.
+
+이 규약이 생긴 이유: 2026-09-11 감사에서 가드 파일 41개 중 falsify 되는 것은 11개뿐이었고 나머지 30개는 "통과한다"만 알려져 있었다. 문제는 그 30건 자체가 아니라 **유입 속도**다 — 상환하는 동안 새 가드가 증명 없이 계속 들어오면 등록률은 개선되지 않는다.
+
+- 면제 목록은 `_MAX_EXEMPTIONS` 로 래칫된다. 커지지 않고 줄기만 한다. 상한이 없으면 목록이 고무도장이 된다 — 등록(뮤테이션 설계)보다 면제(한 줄 추가)가 언제나 싸므로 균형점이 "전부 면제"가 된다.
+- 가드를 등록하거나 면제 사유를 없앴으면 `_MAX_EXEMPTIONS` 도 함께 내린다. 충분히 줄었는데 상한을 방치하면 `test_exemption_list_only_shrinks` 가 red 로 알려준다.
+- 면제 항목은 실재하는 파일이어야 하고, 등록과 면제를 동시에 가질 수 없다. 전자는 삭제된 가드의 잔존 항목이 래칫 여유를 부풀리는 것을, 후자는 등록해도 면제 수가 줄지 않아 래칫이 무의미해지는 것을 막는다.
+- **글롭은 전수가 아니다.** 이름에 `guard` 가 없는 가드 파일(`test_state_path_anchoring.py` 등)은 걸리지 않는다. 이 규약이 막는 것은 "가드라고 이름 붙여 놓고 falsifiability 증명 없이 들어오는" 경로다.
+
+면제 사유는 티어로 분류한다. **티어마다 올바른 처방이 다르다** — Tier 1(스캐너 붕괴 노출)은 하네스 등록이 아니라 로컬 규모 단언이 맞는 도구이고, Tier 3(셸 행동 가드)은 텍스트 단언인지 행동 단언인지 판정하기 전에 등록하면 텍스트 단언에 falsifiability 도장을 찍는 셈이 된다.
