@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MSU5wSGN4MHNjcHVWb1k2R1FmcTFOdm91UXRHRHZvOThMcTNFdHZSU0Q3ajZQZncteC10RmNWeW0wc2toaXpwXzNUVnN3MkQweUkw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'비트코인 2~3년 내 20만~25만달러'…리얼비전 전망</a>
-<p class="news-desc">'비트코인 2~3년 내 20만~25만달러'…리얼비전 전망 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : [사진: 셔터스톡[디지털투데이 AI리포터] 비트코인이 약세장 후반부에 접어들 수 있다는 진단이 나왔다. 11일(현지시간) 블록체인 매체 코인텔레그래프에 따르면 리얼비전 수석 암호화폐 애널리스트 제이미 쿠츠는 비트코인의 하락 모멘텀이 둔화하고 있으며 약</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1oYmZTY1QtQk9ROUJtS1pmODNSR2I3c0l5OVZNcW1NeGhSd2tzUXJBSXN5MGNFT0p6a2tvSlJfLUJ3eDdvRjFmOFR5VVYySjVidWR2ak51aExTWTZDSHd0SU9vZ29jTThBY0RvdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 암호화폐 동향] 비트코인 운용사 ‘엠페리 디지털’, BTC 절반 매도… AI 데이터 센터로 급선회 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 암호화폐 동향] 비트코인 운용사 ‘엠페리 디지털’, BTC 절반 매도… AI 데이터 센터로 급선회 데일리비즈온</p>
+<p class="news-desc">[미국=데일리비즈온] 가상자산(암호화폐) 재무 관리 전문 기업인 엠페리 디지털(Empery Digital, 나스닥 티커 EMPD)이 보유하고 있던 비트코인(BTC</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9sb2NEdktCWElOcmpjTTZfYkdpYks0a0tYNnNFX0QtYWxvcFpNQVhhQl82dFpJR3M0VHJMZ1JJdFk3Um56RVF0UlVHVVJiNWFObTladlYzQXFSU2hkNUFNa1FkTk9iS2I0aWhQZVJsNHTSAXNBVV95cUxNSkNGTzFQTjFfYXhEYXp3V2V6WWg4aDZnYjNNeXRmTl9jSHVSVEJlVVBLc2NBeWpLcjJIS3ZuRHVwbDZ1dVVNUlhZSWdYQjNISDV2aEt1LWtNYTZiVGoxM1YxajFSaHk4M28ydlY5VVNEalY0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 투심 회복.비트코인·알트코인 '장중 상승' - 초이스경제</a>
-<p class="news-desc">암호화폐 투심 회복.비트코인·알트코인 '장중 상승' 초이스경제</p>
+<p class="news-desc">[초이스경제 이영란 기자] 11일 국내외 가상자산거래소에서 비트코인과 알트코인(비트코인 이외의 가상화폐) 가격이 장중 상승하고 있다. 최근 미국증시 상승으로 위험자산 선호심리가 회복되는 가운데 가상자산 시장에도 온기가 돌고 있는 때문으로 풀이된다.가상자산 시황중계 사이트 코인마켓캡에 따르면 한국시간 오전 6시 27분 현재 비트코인은 24시간 전 대비 0.91% 상승한 6만3950.35달러에서 거래 중이다. 일주일 전 대비로는 2.19% 상승한 수치다.암호화폐 시가총액 2위인 이더리움은 24시간 전 대비 2.62% 뛰어오른 1791.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

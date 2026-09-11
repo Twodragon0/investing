@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE03U3FCRlZrOGhyRDZqSzk3aGgwUVZHOXVCanZKSFAzYTRDOVR2aUM2UUJfOExoMVNYUm8tdldiUXhOYUkyd2xEcnRtTkQ0WlE4eVp4a2d1M2pCM3NuSTl5S0dXb2ZpMmlN?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 vs 코스닥: 반도체 주식의 지각변동과 투자 집중의 비밀</a>
-<p class="news-desc">코스피 vs 코스닥: 반도체 주식의 지각변동과 투자 집중의 비밀 공감신문</p>
+<p class="news-desc">[공감신문] 정재은 기자=올해 들어 코스피와 코스닥 지수의 상반된 움직임이 더욱 두드러지고 있다. 전 세계적으로 인공지능과 반도체 기업들이 주도권을 잡으며 시장 전반에 반영되고 있는 가운데, 코스닥 상위 100개 종목의 반도체 주식 수가 큰 폭으로 증가했다.한국거래소의 데이터에 따르면</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE84MzJQNUZxY2kxM2oyM1J2Qm5LdjhsV21GeHhkcXBNVXhsaWo1MV9FZlpEcXFJOUh3UE82RWMydDlIanJLM0tOam9FV2lzelUxeU41YkYyM01iRkNhcG5LczJ2TEstUy15cWtTRnEzc2g?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이번주 환율] 금리 인상에 달러·원 1480원대로…중동 불안에도 원화 강세 이어져 - 오피니언뉴스</a>
-<p class="news-desc">[이번주 환율] 금리 인상에 달러·원 1480원대로…중동 불안에도 원화 강세 이어져 오피니언뉴스</p>
+<p class="news-desc">[오피니언뉴스=김솔아 기자] 한국은행의 기준금리 인상과 미국 물가 둔화에 따른 달러 강세 완화가 맞물리면서 달러·원 환율이 한 주 만에 1500원선을 하회했다. 주 초반에는 중동 지정학적 리스크와 안전자산 선호 심리로 1500원대에서 움직였지만, 미국 물가 지표 둔화와 한국은행의 금리 인상, 외국인 자금 유입 등이 이어지면서 주 후반에는 1480원대로 낮아졌다.서울외환시장에 따르면 달러·원 환율은 지난 13일 오후 3시 30분 기준 전 거래일보다 2.0원 오른 1503.4원을 나타냈다. 이날 환율은 오전 한때 1497.2원까지 내렸</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9BSmljMHRuU3NhMkRoOU90dFZaUHpoalVwZHc0SWhVdDZhLTZObG5wOGNJM3JEUWZqb1NEenc5TjFOYy0ycDFOQ2VjbjlEMGc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하닉 한 달 새 43% ‘추락’…“빅테크 실적까지 반도체로 버텨야”</a>
-<p class="news-desc">SK하닉 한 달 새 43% ‘추락’…“빅테크 실적까지 반도체로 버텨야” v.daum.net</p>
+<p class="news-desc">최근 급락한 국내외 반도체주가 반등할 수 있는 여건을 갖췄다는 분석이 나왔다. 메모리 가격 상승과 인공지능(AI) 투자 확대가 이어지는 가운데 이달 말 발표될 미국 빅테크 기업들의 실적이 주가 방향을 결정할 핵심 변수가 될 전망이다. 하나증권은 19일 발간한 ‘반도체가 돌아올 수 있을까: 반등 조건 점검’ 보고서에서 “시클리컬 반도체 기업의 높은 영업</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE13RzMzZXBEZTNNRnpJb3o2d1c2ajdfV3lnSkNOZlMxRnZqbkhNeXhtM0pIRlNKdUdSMy1uMWI1ajRUaFpxbHBOaF9FZU1rT2Vtd1Q3Y0I2aVRCOEdpS25ab3FYMzhhNGViUHM5RQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">다음주 환율전망] 미 금리 인상 우려 불식 기조로 하향 안정 지속 전망…다음주 원·달러, 1470원대 저점 가능성 - 굿모닝경제</a>
-<p class="news-desc">[다음주 환율전망] 미 금리 인상 우려 불식 기조로 하향 안정 지속 전망…다음주 원·달러, 1470원대 저점 가능성 굿모닝경제</p>
+<p class="news-desc">미국 물가 둔화에 따른 달러 약세와 한국은행의 기준금리 인상이 맞물리면서 원·달러 환율이 1480원대로 내려왔다. 다음 주에도 미국 금리 인상 우려 불식 기조를</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

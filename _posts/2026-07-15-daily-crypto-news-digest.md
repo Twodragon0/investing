@@ -85,7 +85,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDb3dYU2ZkOXlZZVpabFBycHZ1WUhTdlRTUTdmMXVOa0c3V2luM0hyYXlZUHpTck5WS3N2Tl9ZRUlHbHM1c3poRU9vcnRtd0U?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 정부, 압수 비트코인·이더리움 4000억원 상당 이동…매각 신호일까</a>
-<p class="news-desc">美 정부, 압수 비트코인·이더리움 4000억원 상당 이동…매각 신호일까 v.daum.net</p>
+<p class="news-desc">미국 정부가 압수한 비트코인(BTC)과 이더리움(ETH) 등 약 2억8800만달러(약 4000억원) 규모의 암호화폐를 코인베이스 프라임(Coinbase Prime)으로 이동시키면서 향후 처분 여부에 관심이 쏠리고 있다. 블록체인 분석업체 아캄(Arkham)에 따르면 미국 정부와 연계된 지갑은 14일(현지시간) 반나절 동안 압수 자산을 코인베이스 프라임 입</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -116,7 +116,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9KUUN0d0JNdHJ2OU5LWnJkS3VMOE1ubjNuWTc2UWc1aVVmemZrV2E2dzJlbWMyNFhaSnByeWJUb2xuZENOM3VrcVhlVlR1NUdqV1NKd3czOWR2QjQ5bUl5OWgtRzJITnF0S1pv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한국, 주식서 암호화폐로 자본 이동…업비트 거래량이 신호?</a>
-<p class="news-desc">한국, 주식서 암호화폐로 자본 이동…업비트 거래량이 신호? BeInCrypto</p>
+<p class="news-desc">업비트의 보고된 24시간 거래량이 1,437% 급등하여 42억4천만 달러를 기록했습니다. 이는 한국의 코스피와 아시아 주식시장이 매도세를 보인 가운데 나타난 현상입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -275,7 +275,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA5MlhJMjM0Q21jcWxkeXpCQzVrc1ctUE9lYUxkOU9HanRPVkxRVTc2Tm1rM01wUElSYXhFeXhnc3JnbEVMQTFTS0tsYnJkZjA1NjVZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐로 14억달러 벌었지만…트럼프도 결국 비트코인보다 주식? 자산 배분 보니</a>
-<p class="news-desc">암호화폐로 14억달러 벌었지만…트럼프도 결국 비트코인보다 주식? 자산 배분 보니 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 도널드 트럼프 미국 대통령과 비트코인 [사진: 셔터스톡][디지털투데이 홍진주 기자]도널드 트럼프 미국 대통령이 지난해 가족 연계 암호화폐 사업을 통해 14억달러가 넘는 수익을 거뒀지만, 개인 자산 증가는 비트코인 등 디지털 자산보다 주식과 채권 같은</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -287,7 +287,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9QWGdIMGduMkVyWG1EV1JOWTRkUlB4UTBsWWp3U2pEc1ZCM3dtbzRWR1A2QnVlSWRlQXZTVnZaci1FbGhiREFPTzdSdFh4WllQX3FSWHZuYWxQU20wTTVSVnVUVlFqRDBlVDhVckFSeXFLZ9IBdkFVX3lxTE9iS3FZRHlwM0RtcWJDdjh6RFAwazA3VkZseS1MVzBfUkNpM19QMDdod0VDZHpjN1A4dExaVHZCNkRacWltVTdLVDJ6U1kwclNoblZWWVVSalc5UGhLdnhwSmV2aVk5X2pqM2ZVSzVFc1VKeWhRUVE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이 약세장에 갇힌 3가지 이유 - 포춘코리아</a>
-<p class="news-desc">비트코인이 약세장에 갇힌 3가지 이유 포춘코리아</p>
+<p class="news-desc">비트코인은 더 좋은 시절을 보낸 적이 있다. 10월 세계 최대 암호화폐인 비트코인은 급락했고, 이후 회복하지 못했다. 현재는 사상 최고가인 12만 6000달러의 절반 수준에서 거래되고 있다. 짧게 상승 동력이 나타나기도 했지만, 비트코인은 깊은 약세장 속에서 제자리걸음을 이어가고 있다.비트코인이 이처럼 장기간 하락한 마지막 시기는 2022년이었다. 당시 암호화폐 거래소 FTX를 포함한 업계 주요 기업들이 붕괴하면서 디지털자산 시장 전체를 끌어내렸다. 이 기간 비트코인은 2021년 당시 사상 최고가에서 2022년 1만 6000달러까지</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -299,7 +299,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1wdl82TFMxYU90R2RNMnpZYmVWTzdlZmFfdGRtM2gwYjBwQ0hYQW1RM3RQT0tsamFEcGM3Tkw4TjlwT1g0UjZrd29zMWNST0lIblNxTVp2Mnl0OUlTUzZMedIBZkFVX3lxTE03NDN1cmxncGJQbTl2T1l0YVh1ZDFGa0tYazNQekNYdXdBVEREcDZJb2VaTDg4elpYZ1l3bVVXN25KZUxsbGh3NGUyYVJZOHRZbTd0a29vRm5YbUlQTzZHeWstak5Wdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 시장, 비트코인과 이더리움 중심으로 24시간 동안 5,523만 달러 레버리지 청산 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">지난 24시간 동안 주요 암호화폐 시장에서는 비트코인(BTC)과 이더리움(ETH)을 중심으로 대규모 레버리지 청산이 발생했다. 제공된 티커별 데이터를 합산하면 상위 종목 기준 총 24시간 청산 규모는 약 5,523만 달러로 집계됐으며, 이...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

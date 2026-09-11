@@ -116,7 +116,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9KUUN0d0JNdHJ2OU5LWnJkS3VMOE1ubjNuWTc2UWc1aVVmemZrV2E2dzJlbWMyNFhaSnByeWJUb2xuZENOM3VrcVhlVlR1NUdqV1NKd3czOWR2QjQ5bUl5OWgtRzJITnF0S1pv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한국, 주식서 암호화폐로 자본 이동…업비트 거래량이 신호?</a>
-<p class="news-desc">한국, 주식서 암호화폐로 자본 이동…업비트 거래량이 신호? BeInCrypto</p>
+<p class="news-desc">업비트의 보고된 24시간 거래량이 1,437% 급등하여 42억4천만 달러를 기록했습니다. 이는 한국의 코스피와 아시아 주식시장이 매도세를 보인 가운데 나타난 현상입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDb3dYU2ZkOXlZZVpabFBycHZ1WUhTdlRTUTdmMXVOa0c3V2luM0hyYXlZUHpTck5WS3N2Tl9ZRUlHbHM1c3poRU9vcnRtd0U?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 정부, 압수 비트코인·이더리움 4000억원 상당 이동…매각 신호일까</a>
-<p class="news-desc">美 정부, 압수 비트코인·이더리움 4000억원 상당 이동…매각 신호일까 v.daum.net</p>
+<p class="news-desc">미국 정부가 압수한 비트코인(BTC)과 이더리움(ETH) 등 약 2억8800만달러(약 4000억원) 규모의 암호화폐를 코인베이스 프라임(Coinbase Prime)으로 이동시키면서 향후 처분 여부에 관심이 쏠리고 있다. 블록체인 분석업체 아캄(Arkham)에 따르면 미국 정부와 연계된 지갑은 14일(현지시간) 반나절 동안 압수 자산을 코인베이스 프라임 입</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -293,7 +293,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1hX21IalItRkZKR0l0R3QwN3d0dzZUQmNxMExjZzN1YU9lVVc0NkE2eW51NGFKNi16NEt2MU1peHh2Vkw2NmtnYXNMTnE0SVZLWUlYY2MzanfSAV5BVV95cUxQN1VQMUhGSUJMSFlEeVBZWG0wN215WFZmY0NEZUJRU1RQdFk4U3FiQkJJMmZpNGQzbDd3aEEzWFE0OWxyRzBkeDFwSHBVRG96Wkxob0VUaVRnQ2R4S0NB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">자정 시세브리핑] 암호화폐 시장 상승세… 비트코인 65,290달러, 이더리움 1,930달러 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">암호화폐 시장이 전반적인 상승세를 보이고 있다. 토큰포스트마켓에 따르면 현재 기준 비트코인은 전날 대비 1.67% 상승한 65,290.41달러(약 97,430,281원)에 거래되고 있다. 이더리움은 전날 대비 2.82% 오른 1,929.99달러(약...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5nNlhsU0VrOE9zZUdwdWNGR21UNTFKZFVvWVZqS3hwZ2RDZk9aNHFMaW5sZWtyWWtEWnNzNUFucVNKcGFkOTVCcWlqa2piUjA5cGdsWU1OLWpXZEN5bmVNSllLQTlhT3d4MmlGRlZCbHVYZW8?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도"</a>
-<p class="news-desc">[10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도" 핀포인트뉴스</p>
+<p class="news-desc">삼성전자와 SK하이닉스는 각각 외국인 순매수 상위종목 1위와 순매도 상위종목 1위를 차지했다.외국인은 삼성전자를 1937억원 순매수하고, SK하이닉스를 1조7181억원 순매도했다.10일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE05RmNmNVNvWER5X1V2ZGtOblBfU2lXSkRiaUg4b1U2eG1YR1c2QjRlRmhCNGw5Si05WXNuaHBSVU5VUlU1S2JzbmNTTGMzTlRYdTBhUHlR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">30% 폭락 설마했는데…“빨리 팔아라” “이젠 끝물이다” 반도체 공포에 ‘3억’ 다 던졌더니</a>
-<p class="news-desc">30% 폭락 설마했는데…“빨리 팔아라” “이젠 끝물이다” 반도체 공포에 ‘3억’ 다 던졌더니 헤럴드경제</p>
+<p class="news-desc">[헤럴드경제=박영훈 기자] “250만에 산 SK하이닉스 손실 보고, 3억 다 팔았다” (직장인 투자자) “어제 삼성전자 정리했다” (투자자) 반도체 피크아웃(정점 통과)에 대</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -162,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9WRHNIVTQtNmw3TDZNZGxJQjFQSjVuZGtjYzRibHZwaXpZd21XVmVyX1pjX2xRaXlVWVBkVXFkdWRLR2RVMThYeVp4R0JGZ1JfMDBlMVJQbHRON2FN0gFiQVVfeXFMUE1kSXlWZWtDcm5fNTZGOFk5cURBWDlpMWRoWWV0SVRmaE9UbUpOTnAyQ05kV3FOc040enZXQmhiVnQwUDlSc2xnWTQ5WkVDQVY0VzZHYzVDeFFGaDg4cmhGbXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하이닉스, 미국 증시 초대형 상장…약 39조원 조달</a>
-<p class="news-desc">SK하이닉스, 미국 증시 초대형 상장…약 39조원 조달 BBC</p>
+<p class="news-desc">SK하이닉스 주식은 10일부터 나스닥에서 거래를 시작하며, 외국 기업 사상 최대 규모의 상장 사례로 남을 전망이다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE40NXJ1TjYwbldGb1B4QVQ4eUF2OHUxVVlDSUhwUHNMejc0QzlWQVNVY3F6aFB1M0Vxd0E1eW9nZ3A5SHFNVklobDdOTzFGRjAtTWV5MXRZNktKRHNkRWs4RVh6cjhnYUlZQWVVa29pZ3k?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금융/주식] SK하이닉스 미국 ADR 상장, 첫 거래일 12.8% 상승 - 굿모닝베트남미디어</a>
-<p class="news-desc">[금융/주식] SK하이닉스 미국 ADR 상장, 첫 거래일 12.8% 상승 굿모닝베트남미디어</p>
+<p class="news-desc">한국 메모리 칩 제조업체 SK하이닉스의 주가가 미국 시장 데뷔일에 12.8% 상승했다. 이는 인공지능(AI) 수요 증가와 맞물린 결과로 분석된다. ▶7월 10일 미국 뉴욕 나스닥 시장에서 열린 회사 기업공개(IPO) 당일 개장 기념식(로이터-연합) SK하이닉스는 삼성전자와 함께 한국 최대 기업 중 하나이며, 코스피 지수 구성 종목이다. 코스피 지수는 올해</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9qcUdaMlJ6ZjlYb1BCc2FnR1VWMWU4Nk5vdmNrVTZYd2ExY2ItOEE5WUx1VUhRU2hCVjJxZ3p3RjRQVDUyMkNIb1J4T0hzaDBaZ0YxampDYnBQblg1LXRaaUxNbDRuR09ndE5rMU9xTFY1UlBoaUw4SUpsZ2stdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">다음주 한국·미국 주요 일정, CPI·한국은행 금리 결정·ASML·TSMC 실적이 핵심입니다 - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">다음주 한국·미국 주요 일정, CPI·한국은행 금리 결정·ASML·TSMC 실적이 핵심입니다 네이버 프리미엄콘텐츠</p>
+<p class="news-desc">다음주는 매크로와 반도체 실적을 함께 봐야 하는 한 주입니다. 미국에서는 6월 소비자물가지수, 생산자물가지수, 소매판매가 차례로 발표됩니다. 지난주 고용보고서에서 고용 둔화 신호가 확인된 만큼, 시장의 관심은 다시 물가로 이동했습니다. 고용이 식고 있더라도 CPI와 P</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

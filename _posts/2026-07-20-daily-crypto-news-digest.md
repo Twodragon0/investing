@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9BUUt1LVVPTEE5ZWJuOXdmNVk2dUVVWUN6U2FMb3ZyUm5XRmVNeE9kTVNWYjNaX3dLYVpRX2R5TmdYTjZzMEhpMFZfZmFydDh0cnIwU1NR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 줍줍해도 되나? “곡소리 나야 진짜 바닥, 10월초 4만달러대까지 추락 가능”</a>
-<p class="news-desc">비트코인 줍줍해도 되나? “곡소리 나야 진짜 바닥, 10월초 4만달러대까지 추락 가능” 헤럴드경제</p>
+<p class="news-desc">[헤럴드경제=김보영 기자]비트코인이 10월 초 바닥을 찍고 2029년쯤 25만~30만달러까지 오를 것이라는 전망이 나왔다. 51년 경력의 유명 트레이더 피터 브랜트는 18일 코인텔레그래프와의 인터뷰에서“비트코인은 현재 수준에서 1만달러 정도 반등하는 움직임이 나올 수도 있지만 이후 5만달러 아래, 심지어 4만달러대까지 갈 수 있다”며 “10월 초쯤 바닥을 찍을 것”이라고 밝혔다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOHNFNEdWb0hzaENLdEQ2MjE4VldKaWdhbEJnQzRyVHJVWXU0U1NoOGRUZUdlczl1TXRqXzA2cllYbWpNaHQwQXcxbXcxS0xOeUxXRENjUWE2Ukdaejkyd3g1SmQxVngtZ05aQmJneDhsVm41bDhzZW9vaklRLXBGXzRwUVpNR01i?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 백악관, ‘전략적 비트코인 보유고’ 재추진… 가상자산 시장 판도 바꿀까</a>
-<p class="news-desc">美 백악관, ‘전략적 비트코인 보유고’ 재추진… 가상자산 시장 판도 바꿀까 글로벌이코노믹</p>
+<p class="news-desc">미국 정부가 대규모로 비트코인(BTC)을 비축할 것이라는 기대감에 베팅한 투자자라면 다소 씁쓸한 현실을 마주해야 할지도 모른다. 도널드 트럼프 미국 대통령이 ‘전략적 비트코인 준비금(Strategic Bitcoin Reserve)’ 설립을 지시하는 행정명령에 서명한 지 16개월이 지났지</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1DY1lPTnoweWZhdHZ1ZEJzZEZYOTZqVEFfWkVLcVl4WDRxUUxEYmFjMkU1QmRKZ0Z1cHFCREh0SWdGMjVTZTlHQ19Vd09oNkpvejBTMGswOUVIS0FCenZyci1McTIxcGF0NkozQ2pn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'비트코인' 9,500만 원대 등락…거래량 상위 알트코인 움직임은?</a>
-<p class="news-desc">'비트코인' 9,500만 원대 등락…거래량 상위 알트코인 움직임은? gukjenews.com</p>
+<p class="news-desc">오늘 가상자산 시장은 주요 종목들이 뚜렷한 방향성 없이 등락을 거듭하며 혼조세를 보이고 있다.19일 가상자산 거래소 업비트에 따르면, 이날 가장 많은 거래대금을 기록한 종목은 이캐시(XEC/KRW)로 약 596억 원이 거래되었다. 이캐시는 현재 0.0129원에 거래되며 전일 대비 0.78% 상승했다.시가총액 1위인 비트코인(BTC/KRW)은 9,532만 원에 거래되며 전일 대비 0.17% 하락했다. 거래대금은 약 376억 원을 기록했다. 이어 네오(NEO/KRW)는 3,052원으로 3.39% 하락하며 거래대금 361억 원을 나타냈다</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -170,7 +170,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE05ajJfcUhsaW1YMkJTTmduTmtVWE5ieHhYV0tVendoUS12cm1EMjkxYjVnMW45VkRFNkEybDRqZWpiQWdtbVNMV04zNjZQUll1MkVn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 6만4000달러 횡보…중동 긴장 속 ETF 자금은 순유입 전환</a>
-<p class="news-desc">비트코인 6만4000달러 횡보…중동 긴장 속 ETF 자금은 순유입 전환 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 비트코인 [사진: 셔터스톡][디지털투데이 김예슬 기자] 비트코인이 미국의 이란 공습과 워싱턴발 대중 갈등 여파로 6만3000달러~6만4000달러 구간에서 횡보하고 있다.17일(현지시간) 비트코인 매거진에 따르면,비트코인은 단기 흐름의 기준으로</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9sdmFJemc1ZEROblN3V0U4ZzYyMkZDa2x5UW1NLWRDTEdaT2F1c3B3eE9jTzhuakU4b2Fzb0lxRjNKb0JpWmI3WEF1Q0ZhLVBqQmxyV3hXVjg5cnBjUXBmUW80eU03ZGNDNHV1SHpqdEFvZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">거래유의 봉크 급등·비트코인 반등·리플XRP 보합 - 톱스타뉴스</a>
-<p class="news-desc">거래유의 봉크 급등·비트코인 반등·리플XRP 보합 톱스타뉴스</p>
+<p class="news-desc">거래유의종목 봉크에 단기 거래가 집중된 가운데 비트코인은 중국 AI 모델과 미국 암호화폐 법안 불확실성을 딛고 반등했고 리플XRP는 보합권을 유지했다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -225,7 +225,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9LNDc3ZzhlWHQzS3l6SUJjNEFfY0dJR19YTGNsUXh0M2xiZ3hUb0hKOU5wRGRBc0tGSHRMTmtCY0pXemFRYk5BNEo2c3hXZXBWOTNPVEhNSHbSAV5BVV95cUxOa0FucFcyWDVkMEhZOGZRZlpETC1jSlExbXQ0QTVRQnQxYmZ1NXFqQkNzNm9DMFduT2Vub2ZTYkhGTVA4cl9xOGpCeTVwTXdaODZyXzRtbkZCX0VHajZB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">찰스 슈와브, 미 암호화폐 명확성법 상원 통과 난항 경고 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">찰스 슈와브가 미국 상원의 비트코인·암호화폐 명확성법 처리와 관련해 60표 확보가 더 어려워지고 있다고 경고했다.출처에 따르면 상원 민주당은 트럼프 대통령의 이해충돌 문제를 이유로 법안 처리에 반대하고 있다. 민주당은 윤리...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

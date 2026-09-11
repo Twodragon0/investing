@@ -65,7 +65,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxON01mMTA4NkR4S1JzaHkwNXVFa0VmNC1CVTcwS05oRVlCUnpfaUw2Q05sOWU3NnRMdHZnTlZKMzE4Nk9lWGJoLXZ2cGxEMWxudzVobzBlVzROZU1OTFRIaDN6Ql9DaUxxNnkyWFpQam9rRUhsdVh4Q1BEMXpZSEROLTdXWQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 혹시 샀나요? ASML 7월 15일 실적발표와 주가 전망, 반도체 소부장주들도 필수 체크 필요! - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">삼성전자 혹시 샀나요? ASML 7월 15일 실적발표와 주가 전망, 반도체 소부장주들도 필수 체크 필요! 네이버 프리미엄콘텐츠</p>
+<p class="news-desc">안녕하세요 카이스트+연대 스타트업 프로택트 입니다. 드디어 ASML이 한국시간으로 7월 15일, 오후 2시에 실적발표를 합니다. ASML은 삼성전자, SK하이닉스, 인텔 등 반도체 제조사들에게 필수적인 반도체 장비를 공급하는데요. ASML의 실적발표를 기점으로 주요 빅</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -106,7 +106,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1MVkt2OWpHMU94ckNmM2lKNXJlWjlRSWM3Sm9FSWlRTWNweUM3YkoyQ0ZTd002djRBMWF5dGV2MjBmZFlZajllcmxaWWE1NE5RZEpaTmpBXzdxUWVLdVE5NThLaGtlUmRaYzB4MkM1ZEw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">외환-주간] 금통위 앞둔 환율…SK하이닉스·선물환 주목</a>
-<p class="news-desc">[외환-주간] 금통위 앞둔 환율…SK하이닉스·선물환 주목 연합인포맥스</p>
+<p class="news-desc">이번주(13∼17일) 서울외환시장은 한국은행 금융통화위원회와 SK하이닉스발 달러 공급, 중공업체들의 선물환 매도 등 수급 요인과 미국·이란 무력 충돌 재개에 따른 지정학적 리스크를 주시할 전망이다.지난주 달러-원 환율이 1개월 반 만에 1,500원 아래에서 마무리한 만큼 상단보다는 아래가 더 열려있다.시장에서는 기준금리 인상과 달러 공급 확대가 환율 하락 압력으로 작용할 수 있지만, 중동 불안, 외국인 주식 수급이 이를 상쇄할 가능성이 있는 만큼 이번 주는 수급과 대외 변수의 힘겨루기가 이어질 것으로 보고 있다.◇한은, 금리 인상</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -130,7 +130,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNblJoRUwzRkVHR0Jqc01fMV9tbjF5UW02cEExT3NodHZvTDJHQ2VwYXp5N2FWQ3ZvZmxkWE1ETnBkYW4zcGl0eHI3dFZscXFFelpyUjVWMUFjT3RvWFNlRmRDTW9PWUpuRHVReEloNG9IaTVNS2VMSjJrTWo0SnRncXRHM0pNd9IBmgFBVV95cUxQODg4NlRINEZ2c1FYN2Q4emNGMUEwdmVPbkhlTWY5cWs1SlpUcFpnVW12MXFtU3hudTRhVDJZWnNjZG90eTRkRnp3NFdvTVZLbHJFV09qOFQ1RFpoSWxWeTZSejV5Q3g3ZGpYWGZuajhrOFc5QmRRd0RyZGtYWnJXSURuNHFwNDlDdjVPZWRCY25zN0trbVd4Zmd3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금통위폴] 전문가 전원 “한은 만장일치로 금리인상 예상. 연말 3% 전망” - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">[금통위폴] 전문가 전원 “한은 만장일치로 금리인상 예상. 연말 3% 전망”</p>
+<p class="news-desc">금통위폴 전문가 전원 한은 만장일치로 금리인상 예상... 연말 3% 전망 전문가 10명 7월과 10월 두 번 금리 인상 물가·환율 오르는데, 경제 성장률은 견고</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -153,7 +153,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1nM2RZckZLOE5SRzk2eW5yZngxT2VfS2ZJcVJaUGpPbldwdjA5bkd1WC1pc0xGd0FVSzRETXQzLXZQUE1sOXRpX1VqTzlHNkF0ZndwSVhqT0V6UjRiZFBGNtIBeEFVX3lxTFA0MUhYNl80WUF3WjVScmxkeG9TbjdRUEd1WUpmTDQtRmFmN0R3TjVXYmJaZFNETHE1TFJ2c2NEYjE2VHBKTnZQMzZIdU15VWJlclMxSGxIZWY2SGRVdnRENk92X2pVNy1UX1Nmb0xkZDVaaEw5WTBVRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식병합에 합병·유증까지…'부실·동전주' 퇴출 피하려 안간힘[돈맥경화 코스닥③</a>
-<p class="news-desc">주식병합에 합병·유증까지…'부실·동전주' 퇴출 피하려 안간힘[돈맥경화 코스닥③] 뉴시스</p>
+<p class="news-desc">[서울=뉴시스]이지민 기자 = 개장 30주년을 맞은 코스닥에 구조조정 칼바람이 불고 있다. '개미지옥' 타이틀을 떼고 혁신 기업의 요람이라는 본질을 되찾기 위해 부실·한계 기업 퇴출에 속도를 내면서다. 기업들은 주식병합과 기업 합병, 유상증자 등 상장폐지를 피하기 위한 대응에 나서고 있다. 12일 금융감독원 전자공시시스템에 따르면 올해 주식병합을 결정한 코..</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -177,7 +177,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1hb0gzMmZDdEJLWENpdGhCbTkwZnNTMXc5dGUtcGRMckJxXzZxX2Mzc3lpMlQ1TUpzWVM2WVMwQVV6SlphdEdDN3NxUmgxVFdxaGV5Y2VnUGJzS2JMTHRpUVBvTERFRlVOVGo3MmhsOUxwdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 반등 조건…AI 투자·ADR 수급 주목 - TopStarNews</a>
-<p class="news-desc">삼성전자·SK하이닉스 반등 조건…AI 투자·ADR 수급 주목 TopStarNews</p>
+<p class="news-desc">삼성전자와 SK하이닉스 주가 반등의 조건으로 미국 빅테크의 AI 투자 지속, 외국인 수급, ADR 상장 효과와 파운드리 회복이 꼽혔다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -208,7 +208,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzWWd5bUZNU09CbVNtLXdMdTAwMEhqaWR4MGlXNzZhd1JQNGpjVTlPeGMyNEc4Ym05TjhTTXB5MnVIX1J3YnExV2JNalY3cVZvZjdrY0xVeGpvUdIBVEFVX3lxTFBWU2ZYSDJiS2xYOWx0X1lMcURhSm1NdHVpcXVWb3ZEaEU5Njg3THViUDFDZk1rZEpPdDB3ZXUtOFVWZW5GY1dULTcybkpfQmNfanpnSA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율·채권, 하이닉스 미국 상장發 달러유입 기대</a>
-<p class="news-desc">환율·채권, 하이닉스 미국 상장發 달러유입 기대 한국경제</p>
+<p class="news-desc">환율·채권, 하이닉스 미국 상장發 달러유입 기대, 김익환 기자, 증권</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -220,7 +220,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNU3RicWs3X19EYVkyVmJrRkhpU2RSZGg0SVdiZjVSN01rZHFPU3NSWVpsS3NORkpUVm5ia0FjLUVOeEYyWkxZQnFiU3dSaEk3dVl2ZUU1UUE4TWlyR1ZqcV9nVkY2blZMODJXS1JFU25EVWR5OWUwY0pBeVBIWll0LQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하닉 상장에 1400원대 진입한 환율…미국 CPI·금통위 주시[주간외환전망</a>
-<p class="news-desc">SK하닉 상장에 1400원대 진입한 환율…미국 CPI·금통위 주시[주간외환전망] 이데일리</p>
+<p class="news-desc">SK하이닉스가 성공적으로 미국 증시 상장을 마친 가운데 원·달러 환율은 1500원 내외에서 등락을 이어갈 것으로 예상된다. 주 중 미국 소비자물가지수(CPI)와 한국은행 금융통화위원회(금통위) 이벤트를 소화하며 1400원대 후반 안착을 시도할 전망이다. 사진=연합뉴...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

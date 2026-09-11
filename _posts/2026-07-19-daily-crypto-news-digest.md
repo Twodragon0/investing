@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBMZUdFWC1tVUR6ZVg3WDNPcHRRcEtNajRVWkNWbDJ3b1VsNHd1SlloNTdZRVZzS2ZtaXBWVHN1VldGZG9faVluMHhZeElQS1FMSzhVQ3FSU3RtYm1BaXVlR1YyVVpSV25nRkxYYg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 암호화폐 동향] 비트코인 데이터 제한 논란…BIP-110 대신 'DOG 모드' 대안 등장 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 암호화폐 동향] 비트코인 데이터 제한 논란…BIP-110 대신 'DOG 모드' 대안 등장 데일리비즈온</p>
+<p class="news-desc">[미국=데일리비즈온] 비트코인 네트워크 내 비금융 데이터 처리 제한을 두고 논쟁이 이어지는 가운데, 기존 합의 변경 제안인 BIP-110이 채굴자 지지를 거의 받</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9JdmxUWUg4WGN4dVlaWXp6TDFaWEJ3LU9abGFtVG9FaU9DalNBNllIQUdadlBGREV4V3lnWVNwbDRaN1d6ZHl0ajJB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 시장 반등, 클래러티법이 상승장 문 열까? - 코인리더스</a>
-<p class="news-desc">암호화폐 시장 반등, 클래러티법이 상승장 문 열까? 코인리더스</p>
+<p class="news-desc">비트코인,암호화폐 © 규제불확실성해소기대와현물ETF자금유입이맞물리면서암호화폐시장이반등했지만,상승세지속여부는미국의회의선택과비트코인</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdERUY1BXSXlvcVFLeVVKT21ubnNFN3Z4NnVtZklPc084eTJUYjJMVE5DODlYekI5NFJwY3p6VmtUaXU5Q0pob2JkZV9vTVpPd3Bzd21sSkdlcVVCMkNac1NvZGswbDM1Sjk4T1k1WjlaeFR4enZKcEVKbllnazhkUVhOeWp5WW5F?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">불법 암호화폐 광고 시 최대 2억 VND의 벌금이 부과될 수 있습니다. - Vietnam.vn</a>
-<p class="news-desc">Vietnam.vn - Nền tảng quảng bá Viet Nam,tin tức chính thức về Viet Nam, chính sách đối ngoại của đảng và Nhà nùớc với các nùớc trong khu 당신은 그것을 알고 있습니다. Cung cấp các thôngtin chính thức về các hoạt động sự kiên văn hóa, du lịch, thể thao, điểm đến hấp dẫn nhất của Viet Nam.</p>
+<p class="news-desc">법령 284/2026/ND-CP는 암호화폐 자산의 불법 거래 및 광고를 비롯한 여러 위반 행위에 대해 최대 2억 VND의 벌금을 부과할 수 있도록 규정하고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -239,7 +239,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9ldTVhdlZNM3JFSFZKRTZueVYxQjRvQk8tWUhXZnJwLU5HOTJ6MXk5OVRIa1g0T1o0dndtTlVBN1N5VGxSaTkyczIteWl4Z21RS1YyUEFQeTdQalZjS3YtQ25IQ3RHZDNRZ0pWVg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 암호화폐 동향] 반도체 매도세에 암호화폐 동반 하락…이더리움, 주요 토큰 중 유일 주간 상승세 유지 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 암호화폐 동향] 반도체 매도세에 암호화폐 동반 하락…이더리움, 주요 토큰 중 유일 주간 상승세 유지 데일리비즈온</p>
+<p class="news-desc">[미국=데일리비즈온] 아시아 반도체 주식의 급격한 매도세가 글로벌 위험자산 시장으로 확산되면서 암호화폐 시장도 동반 하락했다.이더리움(ETH)은 비트코인(BTC)</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

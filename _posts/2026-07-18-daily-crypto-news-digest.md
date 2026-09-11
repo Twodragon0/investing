@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9fUVhmbHBNcW16c1J6S0ZSRjFPbDQxd1ZqUU1raXhjNENZdmYtUzA3MHpHdmFzUFVsb21hRFJrXzZaNURGWFJnM0Z4VlU1U2x1WDA5a2Y1YmFVTVRP?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 6만3000달러 붕괴…반도체 쇼크·중동 리스크에 암호화폐 일제히 약세 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 6만3000달러 붕괴…반도체 쇼크·중동 리스크에 암호화폐 일제히 약세 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 비트코인이 17일 6만3000달러 아래로 밀리며 주요 암호화폐가 일제히 약세를 나타냈다.미국의 추가 대이란 공습으로 지정학적 긴장이 높아진 데다 아시아 반도체주 급락, 미·중 갈등 재점화 우려까지 겹치면서 위험자산 전</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -126,7 +126,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBweUl6Q0xucTg4ay1LWWdPcEU3M2x3X2NrQ2p2cDJxWGdfX2FLdVViNVdNRlhuU29Td0VSUE9GTWEzbkc0dUNja2VsVmxfaGJrT3liRVFkWk5xN2w5WmdFRi14Wm5CTFdKay1ra2tB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 9340만 원대 약보합세…이더리움·솔라나 동반 하락</a>
-<p class="news-desc">비트코인 9340만 원대 약보합세…이더리움·솔라나 동반 하락 gukjenews.com</p>
+<p class="news-desc">국내 가상자산 시장에서 비트코인과 이더리움을 비롯한 주요 암호화폐들이 일제히 약보합세를 나타내고 있다.17일 국내 가상자산 거래소 업비트 시황에 따르면 비트코인은 전일 대비 0.55% 하락한 9342만 8000원에 거래 중이다. 시가총액 2위인 이더리움 역시 전날보다 0.80% 내린 272만 원을 기록하며 동반 하락세를 보이고 있다.이날 거래대금 상위권에 포진한 주요 알트코인들도 대부분 조정 국면을 맞이했다. 리플은 전일과 동일한 1602원으로 보합세를 유지하고 있으나, 솔라나는 0.54% 하락한 11만 300원에 거래되고 있다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -138,7 +138,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1jWVhweGtCdU9xdV9IRkgxbWVDbVFWc0dpbUx5emNGc0E1QTgxN2l1OEFldjJUUldIb0ZCbVFhQVBIMGFKWmozZWIxWmZaX1l3MjdjN3B3Q1LSAV5BVV95cUxPb2p1RUNFcXhXS2JvNk1FOU5Kd2otNXBKVXFwdnJvOEx5VmE5Ql9MQlN6SUplVDZMbnFsVzlSTzR6V2xZMnV5UHZNLTFLN2tFd3F1akF6YUZ5am1Xa2dB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 기밀정보 공개 예고…비트코인 약세, 위험회피 짙어졌다 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">도널드 트럼프 대통령이 대국민 연설에서 경제 성과를 부각하는 동시에 선거 인프라와 관련된 기밀정보를 공개하겠다고 밝혀 파장이 커지고 있다. 연설 직후 비트코인(BTC)을 비롯한 암호화폐 시장은 약세를 보이며 위험회피 심리가 다시...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -191,7 +191,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE14TDR5LVFVdVc3YTNBWHJoZmhOUFdKRUVXV3N6WEd1VGowa1FjWlRZY3RIWm5DUW9VU0cyNEtYX2pWamc3eEhvSFBwOTBoMW5SRFB3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 비트코인] 클래리티법 통과 지연…6만3000달러대</a>
-<p class="news-desc">[오늘의 비트코인] 클래리티법 통과 지연…6만3000달러대 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : IT/과학 - 뉴스 : 미국과 이란 간 무력 충돌 우려가 커진 지난 9일 6만2000달러선까지 하락했던 비트코인이 낙폭을 일부 만회한 후 6만3000달러 안팎에 머물고 있다.미국 암호화폐 거래소 코인베이스에 따르면 10일 오전 8시50분 비트코인 1개당 가격은 24시간 전보</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE14ZXhpa1Zra0JPS2lMREFvMzk3cmFTWWU3ZVBmVVJaOVRDUm1zLWF6UEhTSHpETm1fVXFGWHFDVjhSaTluMVVObjNCZ0pRS0lO?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">에릭 트럼프 "이더리움 강하게 상승…가상자산이 미래" - 블루밍비트</a>
-<p class="news-desc">에릭 트럼프 "이더리움 강하게 상승…가상자산이 미래" 블루밍비트</p>
+<p class="news-desc">에릭 트럼프가 이더리움(ETH)의 비트코인 대비 강세를 언급하며 가상자산(암호화폐)에 대한 긍정적 입장을 밝혔다. 12일 에릭 트럼프는 엑스(X·옛 트위터)를 통해 "이더리움이 강하게 오르고 있다. 보기 좋다"고 말했다. 그는 이어 "가상자산은 미래"라고 덧붙였다. 에</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -243,7 +243,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5Pb3dvdUlBSDh2X2J6S0tCb214aXMtM3loeE9ESkJXdG5jTmttdU9TUk1aQmRfSHlhREx0TWVsZnhGZ25rNDdiczhxUlJkSFNRM3B5MFBlNlNoMFBBUEM4MjFLZC0yWTBJOEZsMVJ2X2g5SGc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'이더리움 2.0 시대' 온다…톰 리가 제시한 ETH 회복 시나리오</a>
-<p class="news-desc">'이더리움 2.0 시대' 온다…톰 리가 제시한 ETH 회복 시나리오 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 톰 리 비트마인 회장이 이더리움이 바닥권에 근접했으며 장기적으로는 'ETH 2.0' 국면에서 다시 성장할 수 있다고 밝혔다. 13일(현지시간) 블록체인 매체 코인포스트에 따르면 그는 웹엑스(WebX) 2026 특별 기조연설에서 최근 암호화폐 시장 약세의 배경, 이더리움 반등 시나리오, 비트마인의 ETH 확보 전략을 함께 제시했다.톰 리는 올해 암호화폐 시장을 짓눌렀던 요인으로 네 가지를 꼽았다. 미국 연방준비제도의 통화정책 변화로 연초의 금리 인하 기대가 약해졌고, 미국 '클래리티 법'의 입법 불확실성도</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

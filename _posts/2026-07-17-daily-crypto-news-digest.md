@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkOWQ4dG1FaFc1SzRrOV9zNlo5dEN2MS1PcTNWRlFKSXlvd3BtMWxIbkJVcFR6NldOUTNPZEgwRUI0TVUxaUxmenNaQzBLQVo1eUo4bW9CdW9RT1Rv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인, 美 물가 둔화에 6만4600달러 회복…ETF 자금도 순유입 전환 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인, 美 물가 둔화에 6만4600달러 회복…ETF 자금도 순유입 전환 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 미국의 6월 소비자물가가 예상보다 큰 폭으로 둔화하면서 비트코인이 최근 몇 주 사이 가장 강한 상승세를 나타냈다. 미국 현물 비트코인 상장지수펀드(ETF)도 하루 만에 대규모 자금 순유입으로 돌아섰다.다만 미국 의회에서는 암호화폐</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE92TTdUeTdQOUN6QzZDTy05c1Z1NU83RFVvNnhkRkRuTnEycXhLMmpNdUNVRlRQbmk5eERvUkFBemM0bWdGODRpcWc5c1lUOExQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">자체 체인 '흥행몰이' 로빈후드…美 최대 거래소 코인베이스와 정면승부 - 블루밍비트</a>
-<p class="news-desc">자체 체인 '흥행몰이' 로빈후드…美 최대 거래소 코인베이스와 정면승부 블루밍비트</p>
+<p class="news-desc">코인베이스와 로빈후드가 최근 미국 가상자산(암호화폐) 업계에서 치열한 경쟁 구도를 형성하고 있다. 두 회사 모두 암호화폐 거래를 지원하지만 출발점은 달랐다. 코인베이스는 비트코인(BTC), 이더리움(ETH) 등 암호화폐 거래를 주력으로 성장한 거래소다. 반면 로빈후드는</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -303,7 +303,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBMZkxFbWxvbFdoTGNaSkgycEVvMVY1a0tvSGpXb0d4VGx5SXNsVG4yQ0R1MS15eFJHRF81dXFfTE9XbGw3Y1RKNFB2ZVJ0SVVGNFhkdDhzZnhyUk1L?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 일시 6.5만달러 반등에도 매도 압력 여전…이더리움은 '나홀로 강세' - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 일시 6.5만달러 반등에도 매도 압력 여전…이더리움은 '나홀로 강세' 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 미국 물가 둔화와 금리 인상 우려 완화로 비트코인 가격이 일시 6만5000달러선까지 반등했지만 시장에서는 상승세가 이어질지에 대한 신중론이 커지고 있다.장기 보유자와 단기 보유자가 동시에 차익 실현에 나선 데다, 8년 동안 움직이</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

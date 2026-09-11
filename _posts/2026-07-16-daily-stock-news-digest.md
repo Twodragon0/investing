@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBvTU16Z2tBS1p0djBxVWZ4QW5hbldkUmVMY3VxUGRDalZkXzA2NjMtb2lxYWxZWEtNNlprbThXZzFJWk9vZ1dhVXZTZzYySWJfMVh6d1luYlBVXzd2X2NDWi1QQnpUUndTdm5v?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 15일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다 6.24% 오른 7284.41에 마감했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1FQnNLQ2VfYkZ0aHhPQ0xQUFV6cmo2MV9rSkJjR2dMRUQ0ZlNEeXczQXhsNnRJcGpLQlhqcFlFcldpZ3pFbENfY1ZHSmdEZnJlX09tVkhmaGI3dXpHZHduQW5YSzhwWmF3MGs2ZA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 물가 안도감에 코스피 상승 마감…삼전·하이닉스 강세 - 프리진경제</a>
-<p class="news-desc">美 물가 안도감에 코스피 상승 마감…삼전·하이닉스 강세 프리진경제</p>
+<p class="news-desc">15일, 코스피는 전 거래일 대비 427.58포인트 오른 7,284.41로 상승 마감했다. 코스닥 역시 45.45포인트 상승한 829.43으로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 외국인은 23,227억 원, 기관은 1,827억 원을 순매수하며 지수 상승을 주도했다. 반면</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9vbkdVM1RyVGZ6MFh6b0RGT3BmWG5nU1dQU19abE5LMVZTSUpSUFNTTzVNMGdJZHhTSjNCbHcweWhmOXBHVU1PMWdUUlJ2YUM4RU4ycE9aM2JPckU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 美 반도체 훈풍…삼성전자·SK하이닉스 강세 - 에너지경제신문</a>
-<p class="news-desc">[특징주] 美 반도체 훈풍…삼성전자·SK하이닉스 강세 에너지경제신문</p>
+<p class="news-desc">국내 반도체 대장주인 SK하이닉스와 삼성전자 주가가 15일 장초반 강세다. 간밤 뉴욕증시에서 메모리 업종 주가가 반등한 영향으로 풀이된다. 한국거래소에 따르면 이날 오전 9시10분..</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -273,7 +273,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9kc1dPaHh5djhXMXd4d1hRUHVNWkVxWEtRZjV5VkhkNC1QenJWV3RkLXp5UzRIa19JREgzWmxUdng0U1NuV0F1X0JsNzdXR29PcElkSFl5UVBjZWfSAWBBVV95cUxNRmhYcDdkZXRqeW9meU5PZ1FPOE1kRU5HUVI3bGlKR0dKckVUeVhNMUxkQXFuZGlCZnB1engwenl1UHJBMDNQU3ZHUl9zcUdRUERPTnk3X1B5ejR4V2hWUWg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">대통령도 콕 집은 레버리지 '딜레마'…변동성 낮출 묘안 나올까</a>
-<p class="news-desc">대통령도 콕 집은 레버리지 '딜레마'…변동성 낮출 묘안 나올까 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 고은지 기자 = 이재명 대통령이 15일 국내 증시 변동성 확대의 주요인으로 지목된 단일종목 레버리지를 직접 거론하며 보완대책을...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

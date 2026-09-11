@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFA4VUhRbjNKNXRESDdoVTZLNC00Wlc1Rmw3S1JhMWNlZjNKQUxFVVc3QTVsR3BJX19yMHRjYXZNTG01SU5ZODdCNkcyS0ZwdjBIblZibzBMX0ZOSkVjMU1Hb9IBYEFVX3lxTFA4VUhRbjNKNXRESDdoVTZLNC00Wlc1Rmw3S1JhMWNlZjNKQUxFVVc3QTVsR3BJX19yMHRjYXZNTG01SU5ZODdCNkcyS0ZwdjBIblZibzBMX0ZOSkVjMU1Hbw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美금리 인상 기대 꺾이고 한은은 올리고…환율 두 달 만에 최저</a>
-<p class="news-desc">美금리 인상 기대 꺾이고 한은은 올리고…환율 두 달 만에 최저 연합뉴스</p>
+<p class="news-desc">(세종=연합뉴스) 김수현 기자 = 한국은행의 기준금리 인상과 추가 인상 기대감에 원/달러 환율은 16일 장중 1,470원대로 내려앉았다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLWHJfWGY5SHBGYlcwSGVtejlTOWg4Y3ZiNVk4NU1SanBUVmZ3czBhX2xENi1seE1EQTZHd2xuek96bFJLa25pb21LWDlEb0ttQTVpeHpVMW53aDg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"반도체 조정폭 컸지만 사이클 끝나지 않았다"…삼전닉스 PBR 바닥수준 [주末머니</a>
-<p class="news-desc">"반도체 조정폭 컸지만 사이클 끝나지 않았다"…삼전닉스 PBR 바닥수준 [주末머니] v.daum.net</p>
+<p class="news-desc">삼성전자, SK하이닉스 등 반도체 업종의 주가 변동성이 커진 가운데 이것이 곧 반도체 사이클 종료를 뜻하는 것은 아니라는 여의도 증권가의 분석이 나왔다. 18일 이종욱 삼성증권 연구원은 최근 두 자릿수 주가 하락률을 보인 삼성전자, SK하이닉스 등 반도체 종목에 대해 "조정폭이 크다는 사실 하나만으로 사이클이 끝났다고 해석해서는 안 된다"며 "바닥이 미끄러</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
