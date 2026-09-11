@@ -1,41 +1,5 @@
 {
   "seen": {
-    "332e194b15d03a7f8097eb59": "2026-08-11T23:13:18",
-    "6524a5627a249a559a0477b7": "2026-08-11T23:13:18",
-    "96b089e2bf4cdce49f1876f2": "2026-08-11T23:13:18",
-    "500ad40a2b58b13ced6d8af5": "2026-08-11T23:13:18",
-    "aec70e7831ae56e5ead209c7": "2026-08-11T23:13:18",
-    "612ce9d41090555021d1b216": "2026-08-11T23:13:18",
-    "825d6c9154b2f1c7595e36bd": "2026-08-11T23:13:18",
-    "4e61eff385a36d6abad0be1b": "2026-08-11T23:13:18",
-    "c57627c7bd7758197679dc1a": "2026-08-11T23:13:18",
-    "ae02c92cff1460edd5f5c7d0": "2026-08-11T23:13:18",
-    "3fb10c128c4eb441618ab6ef": "2026-08-11T23:13:18",
-    "0bc277e2dbb3dbddd80317f1": "2026-08-11T23:13:18",
-    "56a1d56df9b4e95e71367332": "2026-08-11T23:13:18",
-    "30da03d4d479acd08b14c6cc": "2026-08-11T23:13:18",
-    "a3127cc9f48b52af42c6522b": "2026-08-11T23:13:18",
-    "f03d0f3a9ff11cb962a69f57": "2026-08-11T23:13:18",
-    "51585f64e700f8c9087c51a1": "2026-08-11T23:13:18",
-    "9c8765c0eb89464d4693992d": "2026-08-11T23:13:18",
-    "b73ad2a2db6df970d2fcf2a2": "2026-08-11T23:13:18",
-    "68084ceb7be473a9e0569f58": "2026-08-11T23:13:18",
-    "5a01c6f14bb35c3f8eeb093e": "2026-08-11T23:13:18",
-    "bd4bd7b7e40b55d8351cfbff": "2026-08-11T23:13:18",
-    "435cbeda82874e5974838de1": "2026-08-11T23:13:18",
-    "e0bf418d30bbffa9722ff85c": "2026-08-11T23:13:18",
-    "00b5dd90a9cdbf294f0d59ee": "2026-08-11T23:13:18",
-    "aaec7b276161b73732313857": "2026-08-11T23:13:18",
-    "3a15a94f9bc9e4999f7f69e2": "2026-08-11T23:13:18",
-    "6ad5e8ee9893c9ad4f9088e9": "2026-08-11T23:13:18",
-    "c2600cf60135f39b1f8e5155": "2026-08-11T23:13:18",
-    "c7e25af9dbcd47633c5bff55": "2026-08-11T23:13:18",
-    "a3ad71e1977c1013ee76c39b": "2026-08-11T23:13:18",
-    "285d2549846cd1c5ce543a6b": "2026-08-11T23:13:18",
-    "7e11727ba121fed5e86284ed": "2026-08-11T23:13:18",
-    "c2f7fb2ae7996bfc056de2ba": "2026-08-11T23:13:18",
-    "ccbf8d5e8e2de93a358fb8f7": "2026-08-11T23:13:18",
-    "549cb687368be6b94ed19df3": "2026-08-11T23:13:18",
     "7b15f027d95d530100b2c219": "2026-08-12T23:10:49",
     "32efc57449664a8f25f8e763": "2026-08-12T23:10:49",
     "dd41dc30bb67383e586dc828": "2026-08-12T23:10:49",
@@ -695,7 +659,55 @@
     "e5be8ab129368a2e6fe8ad4e": "2026-09-10T00:27:55",
     "a66118277fefdbd7bd6d1941": "2026-09-10T00:27:55",
     "c69d92d46518a7dc51713b83": "2026-09-10T00:27:55",
-    "533d1251b275797820b3736c": "2026-09-10T00:27:55"
+    "533d1251b275797820b3736c": "2026-09-10T00:27:55",
+    "79251832fa10a6643cafd6a9": "2026-09-11T00:23:05",
+    "867f93f1b71d3cd9a58af1ca": "2026-09-11T00:23:05",
+    "9b083e98f66b1798100f7572": "2026-09-11T00:23:05",
+    "62e9f65a9bfb9702d08bfbce": "2026-09-11T00:23:05",
+    "048790cfcf7bfa4553e26969": "2026-09-11T00:23:05",
+    "7c9017411cb213169f519555": "2026-09-11T00:23:05",
+    "8352d70a607f1254ecb0a544": "2026-09-11T00:23:05",
+    "4e528ed1b06afa295713c74a": "2026-09-11T00:23:05",
+    "229073f5c1de93bdc320287a": "2026-09-11T00:23:05",
+    "a1682c0b6fc6abf2b11f828a": "2026-09-11T00:23:05",
+    "14818bf11ef0e1994d5142e2": "2026-09-11T00:23:05",
+    "54c9ecd709ea4516f39cc591": "2026-09-11T00:23:05",
+    "e7b931167926bdc01743425e": "2026-09-11T00:23:05",
+    "2c3f4ad4f59f716a32f02887": "2026-09-11T00:23:05",
+    "987d3810b751881683cfed02": "2026-09-11T00:23:05",
+    "d77ef3b86d16bb41e152d8e1": "2026-09-11T00:23:05",
+    "1beabb78d6baa9922c8191f9": "2026-09-11T00:23:05",
+    "e08f643d70f12560616fd283": "2026-09-11T00:23:05",
+    "f7e23ef384a26431588192b3": "2026-09-11T00:23:05",
+    "f3472f9ebc2d15e09d8b620b": "2026-09-11T00:23:05",
+    "ff2a7ab928cf06a7b188cac9": "2026-09-11T00:23:05",
+    "a7e69ded58715040ff945f14": "2026-09-11T00:23:05",
+    "44f0041f7a2275fb50bd6f2f": "2026-09-11T00:23:05",
+    "4d6920dd668f1954b0a520df": "2026-09-11T00:23:05",
+    "c80f006b9195c58d22c1623c": "2026-09-11T00:23:05",
+    "2b1fc5af3820ef63c772e7e4": "2026-09-11T00:23:05",
+    "15ee9f8356674de7098c212e": "2026-09-11T00:23:05",
+    "c88411dd1706a3b1c06482aa": "2026-09-11T00:23:05",
+    "375148cb79202faa8d0fa286": "2026-09-11T00:23:05",
+    "e98bb57fd206f1a99428e506": "2026-09-11T00:23:05",
+    "8af98701bab3e032a635f4da": "2026-09-11T00:23:05",
+    "1c0c3172de9b292d33184df6": "2026-09-11T00:23:05",
+    "0111bdc78000c4d2e2105d6d": "2026-09-11T00:23:05",
+    "e30ad36a7102153756418b20": "2026-09-11T00:23:05",
+    "01d556788b5cb6259da427c4": "2026-09-11T00:23:05",
+    "7dbc36665b2db3a1b4ff0349": "2026-09-11T00:23:05",
+    "6baee485ac80bab959118eec": "2026-09-11T00:23:05",
+    "efd4f2542fe1eeb379b878fb": "2026-09-11T00:23:05",
+    "59192e141e9b944c6ff852d5": "2026-09-11T00:23:05",
+    "02f4cfa2b030a8d8bd22962c": "2026-09-11T00:23:05",
+    "48cd3bdfe3b22ace29854f12": "2026-09-11T00:23:05",
+    "f2317c393d74a97e0eb0b204": "2026-09-11T00:23:05",
+    "e41e08dd89f38ad2f8c37e84": "2026-09-11T00:23:05",
+    "2aab9e1829d94c8d98d6dd52": "2026-09-11T00:23:05",
+    "d42e43eb9befda46fa06b89d": "2026-09-11T00:23:05",
+    "2341b088a9577fbf34ca9ee0": "2026-09-11T00:23:05",
+    "5134edc3e718873875a23a56": "2026-09-11T00:23:05",
+    "313ff68b637658d91cfa293b": "2026-09-11T00:23:05"
   },
   "titles": [
     [
@@ -17609,6 +17621,198 @@
     [
       "정치인 거래정책 리포트 20260910",
       "2026-09-10"
+    ],
+    [
+      "congress trade representative maria elvira salazar just disclosed new stock trades quiver quantitative",
+      "2026-09-11"
+    ],
+    [
+      "paul pelosis bloom trade blossoms what a surprise new york post",
+      "2026-09-11"
+    ],
+    [
+      "block xyz directors 3day stock sale ran from 8218 to 7839 stock titan",
+      "2026-09-11"
+    ],
+    [
+      "form 4 stepstone group inc insider trading activity stock titan",
+      "2026-09-11"
+    ],
+    [
+      "analog devices nasdaq adi director sells 2832 shares under preset plan stock titan",
+      "2026-09-11"
+    ],
+    [
+      "silver lake reorganizes dell nyse dell stake in 85520share move stock titan",
+      "2026-09-11"
+    ],
+    [
+      "silver lake trims dell nyse dell stake keeps rights to 42552615 more shares stock titan",
+      "2026-09-11"
+    ],
+    [
+      "amalgamated financial corp amal banking chief sells 30735 shares under 10b51 plan stock titan",
+      "2026-09-11"
+    ],
+    [
+      "silver lake still holds 42416751 dell nyse dell shares after 1119 sold stock titan",
+      "2026-09-11"
+    ],
+    [
+      "illumina nasdaq ilmn clo grants may pay up to 250 of target shares stock titan",
+      "2026-09-11"
+    ],
+    [
+      "silver lake cuts dell nyse dell stake near 516 a share stock titan",
+      "2026-09-11"
+    ],
+    [
+      "silver lake sells dell technologies dell stock above 515 stock titan",
+      "2026-09-11"
+    ],
+    [
+      "automatic data processing adp grants 4900 stock units to strategy chief stock titan",
+      "2026-09-11"
+    ],
+    [
+      "reliance global group ezra directors 7168share grant vests early stock titan",
+      "2026-09-11"
+    ],
+    [
+      "acco brands acco directors pay adds 25389 stock units stock titan",
+      "2026-09-11"
+    ],
+    [
+      "acm research acmr insider sells shares after 1 option exercise stock titan",
+      "2026-09-11"
+    ],
+    [
+      "amalgamated financial corp amal legal chief sells stock under preset plan stock titan",
+      "2026-09-11"
+    ],
+    [
+      "트럼프 대통령 캐나다에 대한 보복 조치 행정명령 서명미국 불가피한 결과라고 일축 vietnamvn",
+      "2026-09-11"
+    ],
+    [
+      "the cpi report arrives tomorrow it could determine whether the fed hikes rates next week",
+      "2026-09-11"
+    ],
+    [
+      "small cpi surprise could trigger big fed rate decision",
+      "2026-09-11"
+    ],
+    [
+      "new fed chair kevin warsh sparked a credibility shock on wall street after his latest rate decision 3 reasons investors should care",
+      "2026-09-11"
+    ],
+    [
+      "fed rate hike odds rise to 61 after ppi comes in hotter than expected 247 wall st",
+      "2026-09-11"
+    ],
+    [
+      "the week ahe",
+      "2026-09-11"
+    ],
+    [
+      "investors price in hot august cpi reading big surprise could sway upcoming fomc decision",
+      "2026-09-11"
+    ],
+    [
+      "집값대출에 금융불균형여건 보며 기준금리 결정 연합뉴스tv",
+      "2026-09-11"
+    ],
+    [
+      "집값대출에 금융불균형여건 보며 기준금리 결정",
+      "2026-09-11"
+    ],
+    [
+      "한은 대내외 여건 따라 기준금리 인상 시기속도 결정 124",
+      "2026-09-11"
+    ],
+    [
+      "한은 대내외 여건 점검하며 기준금리 인상 속도 결정 mtn 머니투데이방송",
+      "2026-09-11"
+    ],
+    [
+      "한은 물가 상당기간 2 웃돌 전망추가 금리 인상 예고 주간한국",
+      "2026-09-11"
+    ],
+    [
+      "10월 금리 또 올릴까한은 대내외 여건 따라 인상 시기속도 결정 아주경제",
+      "2026-09-11"
+    ],
+    [
+      "韓銀 기준금리 동결 속 신중한 인하 기조 유지 경제타임스",
+      "2026-09-11"
+    ],
+    [
+      "한은 추가 금리인상 시기속도 조절중동물가집값이 변수 포커스온경제",
+      "2026-09-11"
+    ],
+    [
+      "한은 추가 금리 인상 시사시기속도 가를 물가집값 신아일보",
+      "2026-09-11"
+    ],
+    [
+      "환율이 유가 충격 상쇄하나4분기 한은 금리 결정은 kpinewskr",
+      "2026-09-11"
+    ],
+    [
+      "한은 추가 금리인상 시사물가경기금융안정 보며 시기속도 결정 글로벌경제신문",
+      "2026-09-11"
+    ],
+    [
+      "한은 금융불균형 10월 인상 직결 무리중동발 물가 경계문답",
+      "2026-09-11"
+    ],
+    [
+      "다음주 한국미국 주요 일정오늘의 cpi가 결정하고 다음 주 fomc가 답합니다 네이버 프리미엄콘텐츠",
+      "2026-09-11"
+    ],
+    [
+      "한은 대내외 여건 점검하며 기준금리 인상 시기속도 결정",
+      "2026-09-11"
+    ],
+    [
+      "monetary policy decisions european central bank",
+      "2026-09-11"
+    ],
+    [
+      "the ecb just raised interest rates heres what to know",
+      "2026-09-11"
+    ],
+    [
+      "ecb press conference lagarde comments on policy outlook after raising key rates by 25 bps fxstreet",
+      "2026-09-11"
+    ],
+    [
+      "european central bank raises interest rates the american conservative",
+      "2026-09-11"
+    ],
+    [
+      "european ecb interest rate decision 265 vs exp 265 prev 240 newsquawk",
+      "2026-09-11"
+    ],
+    [
+      "watch ecb interestrate decision lagarde says economy resilient despite energy shock",
+      "2026-09-11"
+    ],
+    [
+      "gold price down but weathering ecbs 25 basis point rate hike kitco",
+      "2026-09-11"
+    ],
+    [
+      "ecb rate decision europes central bank may say what feds warsh wont",
+      "2026-09-11"
+    ],
+    [
+      "european central bank rate decision focus on banking and real e gurufocus",
+      "2026-09-11"
+    ],
+    [
+      "정치인 거래정책 리포트 20260911",
+      "2026-09-11"
     ]
   ],
   "seen_urls": {}
