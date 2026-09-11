@@ -33,6 +33,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from tests import _workflow_scan as ws
+
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 _LINT_TOOL = _REPO_ROOT / "scripts" / "tools" / "check_workflow_permissions.py"
@@ -47,12 +49,15 @@ _SWALLOW_RE = re.compile(r"(\|\||;)\s*(true|:)(?=\s|$)")
 _WORKFLOWS_DIR_ARG_RE = re.compile(r"--workflows-dir[= ]+(\S+)")
 
 
-def _lint_steps() -> list[str]:
-    """The `code-quality.yml` step blocks that invoke the permission lint."""
-    text = _WORKFLOW.read_text(encoding="utf-8")
-    starts = [m.start() for m in _STEP_START_RE.finditer(text)]
-    steps = [text[s:e] for s, e in zip(starts, [*starts[1:], len(text)], strict=True)]
-    return [step for step in steps if _TOOL_NAME in step]
+def _lint_steps() -> list[dict]:
+    """The `code-quality.yml` steps that invoke the permission lint.
+
+    파싱된 step 매핑을 준다. 원문을 `- name:` 으로 잘라 훑던 방식은 스텝 안의
+    주석에 매칭됐다 — 2026-09-11 실측: 스텝마다
+    `# continue-on-error: true 는 여기서 쓰지 않는다` 를 넣으면 이 가드가 red 가
+    됐다. 금지를 적은 주석이 그 금지를 강제하는 가드를 넘어뜨린 것이다.
+    """
+    return [step for step in ws.steps(_WORKFLOW) if _TOOL_NAME in ws.step_text(step)]
 
 
 def test_gate_files_exist() -> None:
@@ -81,7 +86,7 @@ def test_permission_lint_scans_the_real_workflow_tree() -> None:
     Redirected at a fixture directory the step exits 0 forever while the live
     callers drift out of compliance.
     """
-    scopes = [scope for step in _lint_steps() for scope in _WORKFLOWS_DIR_ARG_RE.findall(step)]
+    scopes = [scope for step in _lint_steps() for scope in _WORKFLOWS_DIR_ARG_RE.findall(ws.step_text(step))]
     assert scopes, (
         f"`{_TOOL_NAME}` is invoked without an explicit `--workflows-dir`; the "
         f"scanned scope is implicit and can drift. Pass `--workflows-dir {_REQUIRED_SCOPE}`."
@@ -102,19 +107,23 @@ def test_permission_lint_step_is_blocking() -> None:
     """
     soft: list[str] = []
 
-    text = _WORKFLOW.read_text(encoding="utf-8")
-    job_header = text.split("steps:", 1)[0]
-    job_match = _CONTINUE_ON_ERROR_RE.search(job_header)
-    if job_match and job_match.group(1).lower() != "false":
-        soft.append(f"job-level -> continue-on-error: {job_match.group(1)}")
+    doc = ws.load(_WORKFLOW)
+    for job_id, job in (doc.get("jobs") or {}).items():
+        if not isinstance(job, dict):
+            continue
+        value = job.get("continue-on-error")
+        if value is not None and str(value).lower() != "false":
+            soft.append(f"job `{job_id}` -> continue-on-error: {value}")
 
     for step in _lint_steps():
-        match = _CONTINUE_ON_ERROR_RE.search(step)
-        if match and match.group(1).lower() != "false":
-            soft.append(f"{step.splitlines()[0].strip()} -> continue-on-error: {match.group(1)}")
-        for line in step.splitlines():
-            if _TOOL_NAME in line and _SWALLOW_RE.search(line):
-                soft.append(f"exit code swallowed by shell: {line.strip()}")
+        value = step.get("continue-on-error")
+        if value is not None and str(value).lower() != "false":
+            soft.append(f"{step.get('name', '<unnamed step>')} -> continue-on-error: {value}")
+        run = step.get("run")
+        if isinstance(run, str):
+            for line in ws.strip_shell_comments(run).splitlines():
+                if _TOOL_NAME in line and _SWALLOW_RE.search(line):
+                    soft.append(f"exit code swallowed by shell: {line.strip()}")
 
     assert not soft, "the permission lint is non-blocking (violations would not fail the job):\n" + "\n".join(
         f"  - {s}" for s in soft
