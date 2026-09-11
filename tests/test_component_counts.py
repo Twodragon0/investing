@@ -95,6 +95,71 @@ class TestMainPushWorkflows:
             "docs/devsecops/branch-protection.md 의 마이그레이션 비용 서술도 다시 볼 것."
         )
 
+    def test_a_comment_mentioning_a_push_marker_is_not_counted(self):
+        """탐지 근거가 **실행되는 내용**이어야 한다.
+
+        2026-09-10 실측: `action-pin-verify.yml` 이 카운트에 들어 있었다. 그 파일은
+        아무것도 푸시하지 않는다 — 12행 주석이 액션 핀 라벨 사례로
+        `git-auto-commit-action` 을 언급할 뿐이다. 탐지가 파일 원문을 substring
+        검색해서 **설명 산문에 매칭**된 것이다.
+
+        `docs/devsecops/branch-protection.md` 가 이 수치를 Phase 2 마이그레이션
+        비용("N개 푸시 지점 수정")으로 인용하므로, 오탐은 그대로 잘못된 견적이 된다.
+
+        기존 과다계수 가드(`test_every_match_targets_main`)는 `git push origin
+        <non-main-ref>` 만 잡는다. **아무것도 푸시하지 않는** 매칭은 통과시킨다.
+        """
+        comment_only = """\
+name: probe
+# 이 워크플로우는 git-auto-commit-action 을 설명만 한다. `git push` 도 문구로만 있다.
+on:
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      # git push 를 하지 않는다 — 검증만 한다.
+      - name: Verify
+        run: |
+          # git push origin main 은 여기서 하지 않는다
+          python scripts/tools/verify_action_pins.py
+"""
+        assert not component_counts.workflow_pushes(comment_only), (
+            "주석에만 push 토큰이 있는 워크플로우가 '직접 푸시' 로 계수됐다."
+        )
+
+    def test_real_push_forms_are_still_counted(self):
+        """반대 방향. 주석을 걷어내다 실제 푸시까지 놓치면 과소계수가 된다 —
+        그쪽이 더 위험하다(브랜치 보호를 켰을 때 예상 밖으로 멈추는 잡이 생긴다)."""
+        cases = {
+            "run 안의 git push": """\
+jobs:
+  j:
+    steps:
+      - run: |
+          git commit -m x
+          git push origin main
+""",
+            "uses 로 auto-commit 액션": """\
+jobs:
+  j:
+    steps:
+      - uses: stefanzweifel/git-auto-commit-action@4a55954  # v7.2.0
+        with:
+          commit_message: x
+""",
+            "공유 python-collect 액션": """\
+jobs:
+  j:
+    steps:
+      - uses: ./.github/actions/python-collect
+        with:
+          script: scripts/collect_x.py
+""",
+        }
+        for label, text in cases.items():
+            assert component_counts.workflow_pushes(text), f"{label}: 실제 푸시 경로를 놓쳤다"
+
     def test_shared_action_actually_pushes_to_main(self):
         """`PUSH_ACTION` 경유 계수의 근거가 실제로 성립하는지 확인한다.
 

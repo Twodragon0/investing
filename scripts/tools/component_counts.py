@@ -20,8 +20,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
+
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -50,30 +53,74 @@ PUSH_ACTION = "actions/python-collect"
 PUSH_MARKERS = ("git push", "git-auto-commit-action")
 
 
+def _iter_steps(node: object):
+    """모든 중첩 깊이의 step 매핑."""
+    if isinstance(node, dict):
+        if "uses" in node or "run" in node:
+            yield node
+        for value in node.values():
+            yield from _iter_steps(value)
+    elif isinstance(node, list):
+        for item in node:
+            yield from _iter_steps(item)
+
+
+def _strip_shell_comments(run: str) -> str:
+    """`run:` 안의 셸 주석 제거. 주석은 실행되지 않으므로 푸시 근거가 아니다."""
+    out = []
+    for line in run.splitlines():
+        if line.lstrip().startswith("#"):
+            continue
+        out.append(re.sub(r"\s+#(?=\s).*$", "", line))
+    return "\n".join(out)
+
+
+def workflow_pushes(text: str) -> bool:
+    """이 워크플로우가 실제로 푸시하는가.
+
+    **파싱된 `uses:` / `run:` 값만** 본다. 원문 substring 검색은 실행되지 않는
+    산문에 매칭된다 — 2026-09-10 실측으로 `action-pin-verify.yml` 이 그렇게
+    계수됐다. 그 파일은 아무것도 푸시하지 않고, 12행 주석이 액션 핀 라벨 사례로
+    `git-auto-commit-action` 을 언급할 뿐이다.
+
+    순수 함수로 분리한 이유: 저장소 파일 없이 합성 입력으로 양방향(주석 오탐 /
+    실제 푸시 누락)을 단언할 수 있어야 한다.
+    """
+    try:
+        doc = yaml.safe_load(text)
+    except yaml.YAMLError:
+        return False
+    for step in _iter_steps(doc):
+        uses = step.get("uses")
+        if isinstance(uses, str) and (PUSH_ACTION in uses or any(m in uses for m in PUSH_MARKERS)):
+            return True
+        run = step.get("run")
+        if isinstance(run, str) and any(m in _strip_shell_comments(run) for m in PUSH_MARKERS):
+            return True
+    return False
+
+
 def main_push_workflows() -> list[Path]:
     """main 에 직접 푸시할 수 있는 워크플로우 목록.
 
     두 경로의 합집합이다:
 
-    1. `PUSH_ACTION` 사용 — 그 공유 액션이 `git push origin main` 을 한다.
-       워크플로우 본문에는 push 문자열이 없으므로 액션 참조로만 탐지된다.
-    2. 워크플로우 본문에 `PUSH_MARKERS` 중 하나가 있음 — 자체 푸시.
+    1. `PUSH_ACTION` 을 `uses:` 로 참조 — 그 공유 액션이 `git push origin main` 을
+       한다. 워크플로우 본문에는 push 문자열이 없으므로 액션 참조로만 탐지된다.
+    2. `uses:` 또는 (주석을 걷어낸) `run:` 에 `PUSH_MARKERS` 중 하나가 있음.
 
     이 수치가 필요한 이유: 브랜치 보호에 required status check 를 걸면 직접 푸시가
-    거부되므로, 몇 개의 푸시 지점을 고쳐야 하는지가 그대로 마이그레이션 비용이 된다
+    거부되므로 — 2026-09-10 에 프로브 룰셋으로 실측했다(`GH013: Required status
+    check "quality" is in progress` 로 push 거부) — 몇 개의 푸시 지점을 고쳐야
+    하는지가 그대로 마이그레이션 비용이 된다
     (`docs/devsecops/branch-protection.md`).
 
     **휴리스틱이다.** main 이 아닌 ref 로 푸시하는 워크플로우가 생기면 과다 계수된다.
-    `tests/test_component_counts.py` 가 매칭된 전건이 main 대상임을 단언해서 그
-    가정이 조용히 깨지지 않게 한다.
+    `tests/test_component_counts.py` 가 매칭된 전건이 main 대상임을, 그리고 근거가
+    주석이 아님을 단언해서 그 가정이 조용히 깨지지 않게 한다.
     """
     workflows = REPO_ROOT / ".github" / "workflows"
-    hits: list[Path] = []
-    for path in sorted(workflows.glob("*.yml")):
-        text = path.read_text(encoding="utf-8")
-        if PUSH_ACTION in text or any(marker in text for marker in PUSH_MARKERS):
-            hits.append(path)
-    return hits
+    return [path for path in sorted(workflows.glob("*.yml")) if workflow_pushes(path.read_text(encoding="utf-8"))]
 
 
 def compute_counts() -> dict[str, int]:
