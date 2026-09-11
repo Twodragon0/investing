@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9BUUt1LVVPTEE5ZWJuOXdmNVk2dUVVWUN6U2FMb3ZyUm5XRmVNeE9kTVNWYjNaX3dLYVpRX2R5TmdYTjZzMEhpMFZfZmFydDh0cnIwU1NR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 줍줍해도 되나? “곡소리 나야 진짜 바닥, 10월초 4만달러대까지 추락 가능”</a>
-<p class="news-desc">[헤럴드경제=김보영 기자]비트코인이 10월 초 바닥을 찍고 2029년쯤 25만~30만달러까지 오를 것이라는 전망이 나왔다. 51년 경력의 유명 트레이더 피터 브랜트는 18일 코인텔레그래프와의 인터뷰에서“비트코인은 현재 수준에서 1만달러 정도 반등하는 움직임이 나올 수도 있지만 이후 5만달러 아래, 심지어 4만달러대까지 갈 수 있다”며 “10월 초쯤 바닥을 찍을 것”이라고 밝혔다.</p>
+<p class="news-desc">[헤럴드경제=김보영 기자] 비트코인이 10월 초 바닥을 찍고 2029년쯤 25만~30만달러까지 오를 것이라는 전망이 나왔다. 51년 경력의 유명 트레이더 피터 브랜트는 18일 코인텔레그래프와의 인터뷰에서“비트코인은 현재 수준에서 1만달러 정도 반등하는 움직임이 나올 수도 있지만 이후 5만달러 아래, 심지어 4만달러대까지 갈 수 있다”며 “10월 초쯤 바닥을 찍을 것”이라고 밝혔다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -159,7 +159,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9XOWFGTmZNb3BjcHFQVkFRZlowek5LbHJtMkZxdTdZX1Y3VlBnNmNOblduZUQ1MGMyYndTeEttdUpVTlR6Z0k2M2Y2MjVJQ3dGbE43eVVTYmljX0tpMHRTM2FKZ1Q2Rm9IUGdQaEFHd0PSAXRBVV95cUxPMW1tc1M1NXVYaDdZTm9ucDhBLUprVk1JQmJHd0hmX29mYm5kb1JIeVJrLWdtTVppWElfZ0dnODJlVmpzeEJvdTE0czdxNXBieHRxRHlyNGkzLXFsOXR0ck10SjUzTU05allFUy1qMTNpb0NLQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6%대 급등…반도체주 강세에 3거래일 만에 7,000선 회복 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 한승수 기자]코스피가 미국발 훈풍과 반도체주 강세에 힘입어 장 초반 6% 넘게 뛰며 3거래일 만에 7,000선을 되찾았다.최근 증시 급락에 따른 저가 매수세까지 유입되면서 코스피와 코스닥 시장에서는 나란히 매수 사이드카가 발동됐다.15일 오전 코스피는 전 거래일보다 4</p>
+<p class="news-desc">[산경투데이 = 한승수 기자] 코스피가 미국발 훈풍과 반도체주 강세에 힘입어 장 초반 6% 넘게 뛰며 3거래일 만에 7,000선을 되찾았다.최근 증시 급락에 따른 저가 매수세까지 유입되면서 코스피와 코스닥 시장에서는 나란히 매수 사이드카가 발동됐다.15일 오전 코스피는 전 거래일보다 4</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

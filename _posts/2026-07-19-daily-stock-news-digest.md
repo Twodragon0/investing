@@ -63,7 +63,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9TNUFzUEhOUmFYQkpWWWd1Z25VX0RpdGZscHlWMFhQajdLUWRIS1pINDZ6OTBnbTRLV1FqSThwWFdab0kwTnZUSllaMWRIZ0dodUNYZWU3Y3QzNGN6OGg0cWU0UkF3azRO?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">토요 월가브리핑] 美 반도체 ‘약세장’ 진입…월요일 삼전·하이닉스 가를 3가지 변수 - 녹색경제신문</a>
-<p class="news-desc">[녹색경제신문 = 한순구 기자]미국 반도체주가 7월 들어 급격한 조정을 받으면서 오는 20일 국내 증시의 변동성도 커질 전망이다. 국내 증시는 17일 제헌절을 맞아 휴장한 만큼 지난 이틀간 이어진 미국 반도체주 하락을 월요일 장에서 한꺼번에 반영하게 된다.17일 뉴욕증시에서 다우존스30산업평균지수는 전 거래일보다 0.77%, 스탠더드앤드푸어스(S&amp;P)500지수는 1.01%, 나스닥종합지수는 1.40% 하락했다. 필라델피아반도체지수는 1.6% 내리며 주간 기준 약 10% 떨어졌다. 지난달 22일 기록한 최고점과 비교하면 20.2% 하</p>
+<p class="news-desc">[녹색경제신문 = 한순구 기자] 미국 반도체주가 7월 들어 급격한 조정을 받으면서 오는 20일 국내 증시의 변동성도 커질 전망이다. 국내 증시는 17일 제헌절을 맞아 휴장한 만큼 지난 이틀간 이어진 미국 반도체주 하락을 월요일 장에서 한꺼번에 반영하게 된다.17일 뉴욕증시에서 다우존스30산업평균지수는 전 거래일보다 0.77%, 스탠더드앤드푸어스(S&amp;P)500지수는 1.01%, 나스닥종합지수는 1.40% 하락했다. 필라델피아반도체지수는 1.6% 내리며 주간 기준 약 10% 떨어졌다. 지난달 22일 기록한 최고점과 비교하면 20.2% 하</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -118,7 +118,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1HNUlqZ2o2VkFLbU53a1FENlZCVV82cWFweWg4MDdUeVhQbV9QX2oxUEtNczFJOWFjeXpXelA4ZThUUXg2QU8yRUhQb1QxcDNTM181NWctREFNVEFzdHhlN3BNb0g4Z3REanZRdUxMUzfSAXRBVV95cUxNdF9LQ0NoRXR6NTJ0WW1WT3JKbGZsbVhELUZFcUVfcHdLT3hqVVU0cFdPOUcxemdxX2FGeWozekdxWUh2Q3pXZmNEbV96SURCeW5lVnFXZnRYTmR3OUwtbU1faWl5OFBFS2RhN0MxVFFJVnpFNQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 급락에 중소형주 ‘선방’…테마·화장품·음식료주로 자금 이동 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 박태진 기자]국내 증시의 변동성이 크게 확대된 가운데 중소형주가 대형주보다 높은 수익률을 기록하며 상대적인 강세를 보였다.삼성전자와 SK하이닉스 등 시가총액 상위 반도체 종목이 급락하자 투자자금이 테마주와 화장품·음식료주 등으로 이동한 영향으로 풀이된다.18일 한국거래</p>
+<p class="news-desc">[산경투데이 = 박태진 기자] 국내 증시의 변동성이 크게 확대된 가운데 중소형주가 대형주보다 높은 수익률을 기록하며 상대적인 강세를 보였다.삼성전자와 SK하이닉스 등 시가총액 상위 반도체 종목이 급락하자 투자자금이 테마주와 화장품·음식료주 등으로 이동한 영향으로 풀이된다.18일 한국거래</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

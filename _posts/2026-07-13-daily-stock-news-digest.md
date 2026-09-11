@@ -153,7 +153,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1nM2RZckZLOE5SRzk2eW5yZngxT2VfS2ZJcVJaUGpPbldwdjA5bkd1WC1pc0xGd0FVSzRETXQzLXZQUE1sOXRpX1VqTzlHNkF0ZndwSVhqT0V6UjRiZFBGNtIBeEFVX3lxTFA0MUhYNl80WUF3WjVScmxkeG9TbjdRUEd1WUpmTDQtRmFmN0R3TjVXYmJaZFNETHE1TFJ2c2NEYjE2VHBKTnZQMzZIdU15VWJlclMxSGxIZWY2SGRVdnRENk92X2pVNy1UX1Nmb0xkZDVaaEw5WTBVRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식병합에 합병·유증까지…'부실·동전주' 퇴출 피하려 안간힘[돈맥경화 코스닥③</a>
-<p class="news-desc">[서울=뉴시스]이지민 기자 = 개장 30주년을 맞은 코스닥에 구조조정 칼바람이 불고 있다. '개미지옥' 타이틀을 떼고 혁신 기업의 요람이라는 본질을 되찾기 위해 부실·한계 기업 퇴출에 속도를 내면서다. 기업들은 주식병합과 기업 합병, 유상증자 등 상장폐지를 피하기 위한 대응에 나서고 있다. 12일 금융감독원 전자공시시스템에 따르면 올해 주식병합을 결정한 코..</p>
+<p class="news-desc">[서울=뉴시스] 이지민 기자 = 개장 30주년을 맞은 코스닥에 구조조정 칼바람이 불고 있다. '개미지옥' 타이틀을 떼고 혁신 기업의 요람이라는 본질을 되찾기 위해 부실·한계 기업 퇴출에 속도를 내면서다. 기업들은 주식병합과 기업 합병, 유상증자 등 상장폐지를 피하기 위한 대응에 나서고 있다. 12일 금융감독원 전자공시시스템에 따르면 올해 주식병합을 결정한 코..</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

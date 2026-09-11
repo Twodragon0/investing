@@ -275,7 +275,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA5MlhJMjM0Q21jcWxkeXpCQzVrc1ctUE9lYUxkOU9HanRPVkxRVTc2Tm1rM01wUElSYXhFeXhnc3JnbEVMQTFTS0tsYnJkZjA1NjVZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐로 14억달러 벌었지만…트럼프도 결국 비트코인보다 주식? 자산 배분 보니</a>
-<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 도널드 트럼프 미국 대통령과 비트코인 [사진: 셔터스톡][디지털투데이 홍진주 기자]도널드 트럼프 미국 대통령이 지난해 가족 연계 암호화폐 사업을 통해 14억달러가 넘는 수익을 거뒀지만, 개인 자산 증가는 비트코인 등 디지털 자산보다 주식과 채권 같은</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 도널드 트럼프 미국 대통령과 비트코인 [사진: 셔터스톡][디지털투데이 홍진주 기자] 도널드 트럼프 미국 대통령이 지난해 가족 연계 암호화폐 사업을 통해 14억달러가 넘는 수익을 거뒀지만, 개인 자산 증가는 비트코인 등 디지털 자산보다 주식과 채권 같은</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

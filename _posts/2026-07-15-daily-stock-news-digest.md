@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtMzczSk5Oc01PeE82NGJWSEFveTFPazltQ0s5LXNHa2hUVDV2UzkzMVdPdm1sVzJwZEJpbU9LVVBWNnJkckthbGhVaHc5djFJM1B0aGJxVjgyUFnSAWBBVV95cUxQd1UxUy03Vjl2SFpLVFpTSU5zdERRZzFiZkdqXzliMXluVGZTVGV6TFBCVGtRdDdWclFkck1LVlM3VHJoelc1SW5aakNDTUx1Vm9OX1JkUUxNbF9Ka2ZxZU8?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체주 '우두둑'…SK하이닉스 15.4%·삼성전자 10.7% 폭락(종합2보)</a>
-<p class="news-desc">(서울=연합뉴스) 황철환 기자 = SK하이닉스[000660]와 삼성전자[005930]가 13일 15%와 10%대의 낙폭을 기록한 채 정규장 거래...</p>
+<p class="news-desc">(서울=연합뉴스) 황철환 기자 = SK하이닉스[000660] 와 삼성전자[005930] 가 13일 15%와 10%대의 낙폭을 기록한 채 정규장 거래...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
