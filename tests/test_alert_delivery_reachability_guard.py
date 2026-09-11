@@ -234,24 +234,24 @@ def test_every_caller_alert_job_inherits_secrets() -> None:
 
 
 def test_every_caller_alert_job_needs_an_existing_job() -> None:
-    """`needs` 가 없거나 존재하지 않는 잡을 가리키면 알림이 실행되지 않는다."""
+    """`needs` 가 없거나 존재하지 않는 잡을 가리키면 알림이 실행되지 않는다.
+
+    호출자 수집은 반드시 `_callers()` 를 거친다. 2026-09-11 감사 전까지 이 테스트만
+    글롭 루프를 인라인으로 재구현해 `_callers()` 의 "호출자 0건" 트립와이어(:100)를
+    우회했다 — `ALERT_REF` 가 드리프트하거나 글롭이 붕괴하면 형제 두 테스트는
+    정당하게 red 가 되는데 **이 테스트만 조용히 green** 이 되는 상태였다.
+    """
     problems: list[str] = []
-    for path in sorted(WORKFLOWS_DIR.glob("*.yml")):
-        wf = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-        if not isinstance(wf, dict):
+    for filename, job_name, job in _callers():
+        jobs = _load(WORKFLOWS_DIR / filename).get("jobs") or {}
+        needs = job.get("needs")
+        names = [needs] if isinstance(needs, str) else list(needs or [])
+        if not names:
+            problems.append(f"{filename}:{job_name} — needs 없음")
             continue
-        jobs = wf.get("jobs") or {}
-        for job_name, job in jobs.items():
-            if not (isinstance(job, dict) and str(job.get("uses") or "") == ALERT_REF):
-                continue
-            needs = job.get("needs")
-            names = [needs] if isinstance(needs, str) else list(needs or [])
-            if not names:
-                problems.append(f"{path.name}:{job_name} — needs 없음")
-                continue
-            missing = [n for n in names if n not in jobs]
-            if missing:
-                problems.append(f"{path.name}:{job_name} — 없는 잡을 needs: {missing}")
+        missing = [n for n in names if n not in jobs]
+        if missing:
+            problems.append(f"{filename}:{job_name} — 없는 잡을 needs: {missing}")
     assert not problems, (
         f"알림 잡의 needs 가 잘못됐다: {problems}. 존재하지 않는 잡을 기다리면 알림이 "
         "영구 skip 되고, needs 가 없으면 감시 대상 잡의 실패와 무관하게 돈다."
