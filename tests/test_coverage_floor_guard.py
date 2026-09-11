@@ -92,6 +92,8 @@ import re
 import tomllib
 from pathlib import Path
 
+from tests import _workflow_scan as ws
+
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _PYPROJECT = _REPO_ROOT / "pyproject.toml"
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
@@ -230,21 +232,38 @@ def test_workflow_coverage_gate_steps_are_blocking() -> None:
 
     Checked at both step and job level: either one turns a red gate into an
     annotation. ``continue-on-error: false`` is explicit and allowed.
+
+    Reads **parsed** step values, not the workflow's raw text. Measured
+    2026-09-11: with a raw-text scan, adding this comment *inside* the gate step
+    flipped this guard from green to red —
+
+        # continue-on-error: true 는 여기서 절대 쓰지 않는다
+
+    i.e. writing down the prohibition tripped the guard enforcing it. The same
+    failure shape hit this repo twice on 2026-09-02. See ``tests/_workflow_scan.py``.
     """
-    gate_steps = [s for s in _workflow_steps() if "coverage report" in s and "--fail-under=" in s]
+    gate_steps = [
+        step
+        for step in ws.steps(_WORKFLOW)
+        if "coverage report" in ws.step_text(step) and "--fail-under=" in ws.step_text(step)
+    ]
     assert gate_steps, "no `coverage report --fail-under=N` step found in code-quality.yml — the gate is gone."
 
     soft: list[str] = []
     for step in gate_steps:
-        match = _CONTINUE_ON_ERROR_RE.search(step)
-        if match and match.group(1).lower() != "false":
-            soft.append(f"{step.splitlines()[0].strip()} -> continue-on-error: {match.group(1)}")
+        value = step.get("continue-on-error")
+        if value is not None and str(value).lower() != "false":
+            soft.append(f"{step.get('name', '<unnamed step>')} -> continue-on-error: {value}")
 
-    text = _WORKFLOW.read_text(encoding="utf-8")
-    job_header = text.split("steps:", 1)[0]
-    job_match = _CONTINUE_ON_ERROR_RE.search(job_header)
-    if job_match and job_match.group(1).lower() != "false":
-        soft.append(f"job-level -> continue-on-error: {job_match.group(1)}")
+    # 잡 수준도 같은 이유로 파싱해서 본다. `text.split("steps:")` 로 헤더를 잘라
+    # 정규식을 돌리던 방식은 헤더 안의 주석에 그대로 매칭됐다.
+    doc = ws.load(_WORKFLOW)
+    for job_id, job in (doc.get("jobs") or {}).items():
+        if not isinstance(job, dict):
+            continue
+        value = job.get("continue-on-error")
+        if value is not None and str(value).lower() != "false":
+            soft.append(f"job `{job_id}` -> continue-on-error: {value}")
 
     assert not soft, "coverage gate is non-blocking (failures would not fail the job):\n" + "\n".join(
         f"  - {s}" for s in soft

@@ -12,6 +12,8 @@ from pathlib import Path
 
 import pytest
 
+from tests import _workflow_scan as ws
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 _MODULE_PATH = REPO_ROOT / "scripts" / "tools" / "component_counts.py"
 
@@ -69,11 +71,15 @@ class TestMainPushWorkflows:
         """명시적 `git push origin <ref>` 는 전부 main 이어야 한다."""
         pattern = re.compile(r"git\s+push\s+(?:\S+\s+)*?origin\s+(?:HEAD:)?(?P<ref>[A-Za-z0-9._/${}-]+)")
         offenders = []
+        # 파싱된 `run:` 만 본다(셸 주석 제거). 원문을 훑던 방식은 2026-09-11 실측에서
+        # `# git push origin gh-pages 는 하지 않는다` 라는 주석만으로 red 가 됐다 —
+        # 과다계수를 막는 가드가 주석 때문에 false-red 를 내는, 같은 결함의 다른 면이다.
         for path in component_counts.main_push_workflows():
-            for match in pattern.finditer(path.read_text(encoding="utf-8")):
-                ref = match.group("ref")
-                if ref not in {"main", "HEAD"}:
-                    offenders.append(f"{path.name} -> {ref}")
+            for _name, run in ws.run_blocks(path):
+                for match in pattern.finditer(run):
+                    ref = match.group("ref")
+                    if ref not in {"main", "HEAD"}:
+                        offenders.append(f"{path.name} -> {ref}")
 
         assert not offenders, (
             f"main 이 아닌 ref 로 푸시하는 워크플로우가 카운트에 포함됐다: {offenders}. "

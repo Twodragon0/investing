@@ -37,6 +37,8 @@ import re
 import tomllib
 from pathlib import Path
 
+from tests import _workflow_scan as ws
+
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "security-scan.yml"
 _GITLEAKS_CONFIG = _REPO_ROOT / ".gitleaks.toml"
@@ -149,23 +151,28 @@ def test_gitleaks_gate_is_blocking() -> None:
     Checked at job level, at step level, and in the shell command itself:
     any one of the three turns the gate into an annotation.
     """
-    job = _gitleaks_job()
-
     soft: list[str] = []
 
-    job_header = job.split("steps:", 1)[0]
-    job_match = _CONTINUE_ON_ERROR_RE.search(job_header)
-    if job_match and job_match.group(1).lower() != "false":
-        soft.append(f"job-level -> continue-on-error: {job_match.group(1)}")
-
-    starts = [m.start() for m in _STEP_START_RE.finditer(job)]
-    steps = [job[s:e] for s, e in zip(starts, [*starts[1:], len(job)], strict=True)]
-    for step in steps:
-        if "gitleaks detect" not in step:
+    # 파싱된 값만 본다. 원문을 `- name:` 으로 잘라 훑던 방식은 스텝 안의 주석에
+    # 매칭됐다 — 2026-09-11 실측: 스텝마다
+    # `# continue-on-error: true 는 여기서 쓰지 않는다` 를 넣으면 이 가드가 red 가
+    # 됐다. 금지를 적은 주석이 그 금지를 강제하는 가드를 넘어뜨린 것이다.
+    doc = ws.load(_WORKFLOW)
+    for job_id, job_node in (doc.get("jobs") or {}).items():
+        if not isinstance(job_node, dict):
             continue
-        match = _CONTINUE_ON_ERROR_RE.search(step)
-        if match and match.group(1).lower() != "false":
-            soft.append(f"{step.splitlines()[0].strip()} -> continue-on-error: {match.group(1)}")
+        if "gitleaks" not in job_id and "gitleaks" not in str(job_node.get("name", "")).lower():
+            continue
+        value = job_node.get("continue-on-error")
+        if value is not None and str(value).lower() != "false":
+            soft.append(f"job `{job_id}` -> continue-on-error: {value}")
+
+    for step in ws.steps(_WORKFLOW):
+        if "gitleaks detect" not in ws.step_text(step):
+            continue
+        value = step.get("continue-on-error")
+        if value is not None and str(value).lower() != "false":
+            soft.append(f"{step.get('name', '<unnamed step>')} -> continue-on-error: {value}")
 
     for command in _detect_commands():
         if _SWALLOW_RE.search(command):
