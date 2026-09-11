@@ -634,16 +634,21 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     # 재귀 실행하게 된다(test_guard_falsifiability_tool.py 모듈 docstring).
     "tests/test_guard_falsifiability_shard.py": "하네스 메타 테스트 — 하네스가 자기 자신을 재귀 실행하게 된다",
     "tests/test_guard_falsifiability_tool.py": "하네스 메타 테스트 — 하네스가 자기 자신을 재귀 실행하게 된다",
-    # --- Tier 1: 스캐너 붕괴(결함 A) 노출. 처방은 하네스 등록이 아니라 규모 단언 ---
-    # glob 으로 산출물을 훑어 불변식을 거는데 스캔 규모 단언이 없다. 스캐너가
-    # 0건을 반환하면 단언 루프가 no-op 이 되어 green 이다. 이 계열은 로컬 규모
-    # 단언(테스트 1줄)이 올바른 도구이고, 하네스 등록은 과잉이다.
-    "tests/test_alert_delivery_reachability_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음. 알림 도달성 자체를 지키는 메타 위험",
-    "tests/test_findings_exit_zero_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음",
-    "tests/test_coverage_comment_activity_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음",
-    "tests/test_apt_install_resilience_guard.py": "Tier 1 — 워크플로우/액션 glob, 규모 단언 없음",
-    "tests/test_workflow_concurrency_scope_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음",
-    "tests/test_dependabot_pip_scope_guard.py": "Tier 1 — 설정 파일 glob, 규모 단언 없음",
+    # --- Tier 1: glob 스캐너 계열. 스캐너 붕괴(결함 A) 방어는 실측 결과 이미 있다 ---
+    #
+    # 2026-09-11 최초 분류는 이 여섯을 "규모 단언 없음"으로 적었다. **틀렸다.**
+    # 분류 정규식이 `len(...) >= N` 형태만 찾았는데 이 저장소는 관용형
+    # `assert <collection>, "..."` 을 쓴다 — 철자를 측정하고 존재를 측정했다고
+    # 착각한 것이다. 재측정 결과 여섯 모두 트립와이어를 갖고 있다(아래 행 번호).
+    #
+    # 그래서 이 계열에 규모 단언을 더 넣는 것은 중복 방어다. 남는 노출은 결함 B
+    # (단언 무력)뿐이고, 그건 하네스 등록 = Tier 2/3 의 문제다.
+    "tests/test_alert_delivery_reachability_guard.py": "Tier 1 — glob 스캐너. _callers() 에 호출자 0건 트립와이어 보유(:100)",
+    "tests/test_findings_exit_zero_guard.py": "Tier 1 — glob 아님(CONVERTED 리터럴 파라미터라이즈). script/title_lines/predicates 존재 단언 보유",
+    "tests/test_coverage_comment_activity_guard.py": "Tier 1 — glob 스캐너. steps/consumers/producers 트립와이어 + 사용처 집합 등식 보유",
+    "tests/test_apt_install_resilience_guard.py": "Tier 1 — glob 스캐너. test_repo_actually_has_apt_install_steps 가 명시 트립와이어",
+    "tests/test_workflow_concurrency_scope_guard.py": "Tier 1 — glob 스캐너. test_guard_covers_at_least_one_workflow 가 트립와이어",
+    "tests/test_dependabot_pip_scope_guard.py": "Tier 1 — 설정 스캐너. dirs/manifests 트립와이어 보유",
     # --- Tier 2: 폭발 반경 상위. 하네스 등록이 올바른 도구이나 authoring 미완 ---
     "tests/test_supply_chain_lock_gate_guard.py": "Tier 2 — required-check 토폴로지. aggregator 뮤테이션 3종 재사용 가능",
     "tests/test_requirements_lock_sync_workflow_guard.py": "Tier 2 — 공급망 락 동기화 배선",
