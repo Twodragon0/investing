@@ -614,6 +614,102 @@ STATIC_CASES: tuple[StaticCase, ...] = (
 )
 
 
+#: 하네스 등록에서 **의도적으로 제외한** 가드 파일과 그 사유.
+#:
+#: 2026-09-11 감사: `tests/test_*guard*.py` 41개 중 falsify 되는 것은 11개뿐이었고,
+#: 나머지 30개는 "통과한다"만 알려져 있었다 — vacuous 인지 아닌지는 측정된 적이
+#: 없었다. 이 저장소는 vacuous 가드를 이미 3회 실측으로 잡았으므로(2026-08-04
+#: `_isolate_image_rejection_state`, 2026-08-06 `actions-permissions` 잡과 Gitleaks
+#: 게이트) 그 30개는 가설이 아니라 미계측 위험이다.
+#:
+#: 이 목록의 목적은 면죄가 아니라 **상태를 바꾸는 것**이다 — "아직 등록 안 됨"(암묵)
+#: 을 "판단해서 뺐고 사유는 이것"(명시)으로 만든다. 새 가드는 `STATIC_CASES` 에
+#: 등록하거나 여기에 사유와 함께 올려야 하고, 둘 다 안 하면
+#: `test_every_guard_file_is_registered_or_exempted` 가 red 가 된다.
+#:
+#: 목록은 `_MAX_EXEMPTIONS` 로 래칫된다. 커지지 않고 줄기만 한다.
+UNREGISTERED_BY_DESIGN: dict[str, str] = {
+    # --- 영구 면제: 하네스 자신의 메타 테스트 ---
+    # 가드가 아니라 하네스의 단위 테스트다. 하네스로 falsify 하면 자기 자신을
+    # 재귀 실행하게 된다(test_guard_falsifiability_tool.py 모듈 docstring).
+    "tests/test_guard_falsifiability_shard.py": "하네스 메타 테스트 — 하네스가 자기 자신을 재귀 실행하게 된다",
+    "tests/test_guard_falsifiability_tool.py": "하네스 메타 테스트 — 하네스가 자기 자신을 재귀 실행하게 된다",
+    # --- Tier 1: 스캐너 붕괴(결함 A) 노출. 처방은 하네스 등록이 아니라 규모 단언 ---
+    # glob 으로 산출물을 훑어 불변식을 거는데 스캔 규모 단언이 없다. 스캐너가
+    # 0건을 반환하면 단언 루프가 no-op 이 되어 green 이다. 이 계열은 로컬 규모
+    # 단언(테스트 1줄)이 올바른 도구이고, 하네스 등록은 과잉이다.
+    "tests/test_alert_delivery_reachability_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음. 알림 도달성 자체를 지키는 메타 위험",
+    "tests/test_findings_exit_zero_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음",
+    "tests/test_coverage_comment_activity_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음",
+    "tests/test_apt_install_resilience_guard.py": "Tier 1 — 워크플로우/액션 glob, 규모 단언 없음",
+    "tests/test_workflow_concurrency_scope_guard.py": "Tier 1 — 워크플로우 glob, 규모 단언 없음",
+    "tests/test_dependabot_pip_scope_guard.py": "Tier 1 — 설정 파일 glob, 규모 단언 없음",
+    # --- Tier 2: 폭발 반경 상위. 하네스 등록이 올바른 도구이나 authoring 미완 ---
+    "tests/test_supply_chain_lock_gate_guard.py": "Tier 2 — required-check 토폴로지. aggregator 뮤테이션 3종 재사용 가능",
+    "tests/test_requirements_lock_sync_workflow_guard.py": "Tier 2 — 공급망 락 동기화 배선",
+    "tests/test_state_orphan_ci_detection_guard.py": "Tier 2 — _state 고아 탐지 CI 배선",
+    "tests/test_credential_logging_guard.py": "Tier 2 — 보안 축. 카나리 1건 보유로 부분 방어는 있음",
+    # --- Tier 3: 셸 스크립트 행동 가드. 등록 전에 판정이 선행되어야 한다 ---
+    # 텍스트 단언(안전 플래그 문자열 존재)인지 행동 단언(실행 결과)인지 먼저
+    # 판정한다. 텍스트 단언이면 처방은 등록이 아니라 가드 재작성이고, 그대로
+    # 등록하면 텍스트 단언에 falsifiability 도장을 찍는 셈이 된다.
+    "tests/test_dev_sync_state_safe_guard.py": "Tier 3 — 셸 행동 가드. 텍스트/행동 단언 판정 선행 필요",
+    "tests/test_component_counts_drift_hook_guard.py": "Tier 3 — 셸 훅 가드. 텍스트/행동 단언 판정 선행 필요",
+    "tests/test_state_guard_command_matching.py": "Tier 3 — 셸 훅 가드. 텍스트/행동 단언 판정 선행 필요",
+    # --- Tier 4: 자기검증 카나리 보유. 하네스 등록의 한계 효용이 낮다 ---
+    # 알려진 위반을 넣어 red 를 확인하는 테스트를 이미 갖고 있어 결함 B 에 대한
+    # 로컬 증거가 존재한다.
+    "tests/test_injection_guard.py": "Tier 4 — 카나리 보유(comment_only_reference_does_not_flag)",
+    "tests/test_encoding_guard.py": "Tier 4 — 카나리 3건 보유(detects_corrupted_run 등)",
+    "tests/test_close_stale_ci_failure_issues_guard.py": "Tier 4 — 카나리 보유(deferred_count_is_reported)",
+    "tests/test_workflow_alerting_coverage_guard.py": "Tier 4 — 카나리 보유(scanner_ignores_non_workflow_files)",
+    "tests/test_desc_headline_guard.py": "Tier 4 — 카나리 2건 보유(report_reuses_the_shared_detector 등)",
+    "tests/test_collector_noop_commit_whitelist_guard.py": "Tier 4 — 카나리 보유(dedup_detector_is_bidirectional)",
+    "tests/test_lock_guard_parity.py": "Tier 4 — 카나리 보유(parity_check_flags_divergence)",
+    "tests/test_vercel_config_guard.py": "Tier 4 — 카나리 보유(exclude_pathspec_detector_is_bidirectional)",
+    "tests/test_pytest_plugin_install_sync_guard.py": "Tier 4 — 카나리 보유(addopts_flags_have_their_plugins_installed)",
+    "tests/test_rss_source_url_guard.py": "Tier 4 — 카나리 보유(empty_and_malformed_are_rejected)",
+    "tests/test_workflow_scanner_convention_guard.py": "Tier 4 — 카나리 보유(behavioural_scanners_read_parsed_content)",
+    # --- Tier 4: 내용 품질 축. 규모 단언 보유 또는 범위 협소 ---
+    "tests/test_backfill_url_summaries_workflow_guard.py": "Tier 4 — 규모 단언 2건 보유",
+    "tests/test_python_version_declaration_guard.py": "Tier 4 — 규모 단언 1건 보유",
+    "tests/test_generated_image_guard.py": "Tier 4 — 단일 회귀 재현 테스트. 불변식 스캐너가 아니다",
+    "tests/test_state_temp_ignored_guard.py": "Tier 4 — .gitignore 단일 값 단언. 스캐너 붕괴 경로 없음",
+}
+
+#: 면제 목록 크기 상한. **커지지 않는다.**
+#:
+#: 커버리지 하한과 같은 래칫이다. 가드를 `STATIC_CASES` 에 등록하거나 Tier 1
+#: 처방(규모 단언)으로 면제 사유를 없앨 때마다 이 값을 함께 내린다. 상한이 없으면
+#: 목록이 고무도장이 된다 — 등록보다 면제가 항상 싸기 때문이다.
+_MAX_EXEMPTIONS = 30
+
+#: 가드 테스트 모듈로 간주하는 파일명 패턴.
+#:
+#: **이 글롭은 전수가 아니다.** 이름에 `guard` 가 없는 가드 파일은 걸리지 않는다
+#: (`test_state_path_anchoring.py` 가 그 예 — 가드지만 이름 규칙 밖이고, 이미
+#: STATIC_CASES 에 등록돼 있다). 여기서 막는 것은 "가드라고 이름 붙여 놓고
+#: falsifiability 증명 없이 들어오는" 경로다. 이름 규칙 밖 가드까지 잡으려면
+#: 정적 분류가 필요한데, 그건 이 단계의 범위가 아니다.
+GUARD_FILE_GLOB = "test_*guard*.py"
+
+
+def guard_files() -> list[str]:
+    """`tests/` 의 가드 테스트 모듈 (저장소-상대 경로)."""
+    return sorted(p.relative_to(REPO_ROOT).as_posix() for p in (REPO_ROOT / "tests").glob(GUARD_FILE_GLOB))
+
+
+def registered_guard_files() -> set[str]:
+    """하네스가 실제로 falsify 하는 가드 파일 집합.
+
+    `STATIC_CASES` 의 node id 가 가리키는 파일 + 격리 fixture 가드 파일
+    (`CASES` 의 노드는 전부 `GUARD_FILE` 안에서 돈다 — `_run_guard` 참조).
+    """
+    files = {case.node_id.split("::", 1)[0] for case in STATIC_CASES}
+    files.add(GUARD_FILE.relative_to(REPO_ROOT).as_posix())
+    return files
+
+
 def parse_shard(spec: str) -> tuple[int, int]:
     """``"2/5"`` -> ``(2, 5)``. Index is 1-based, as it appears in CI job names."""
     try:

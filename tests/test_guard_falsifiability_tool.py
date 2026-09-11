@@ -234,6 +234,68 @@ def test_apply_static_mutation_rejects_non_unique_anchor(source):
         gf.apply_static_mutation(source, case)
 
 
+# ---------------------------------------------------------------------------
+# 등록 레지스트리 (드리프트 정지)
+# ---------------------------------------------------------------------------
+
+
+def test_every_guard_file_is_registered_or_exempted():
+    """모든 가드 테스트 모듈은 등록되었거나, 사유와 함께 명시 면제되어야 한다.
+
+    `test_registry_matches_real_conftest` 가 autouse fixture 에 대해 하는 일을
+    가드 **파일** 에 대해 한다. 이것이 없으면 새 가드가 falsifiability 증명 없이
+    조용히 들어오고, 그 침묵은 "가드가 있다"와 구별되지 않는다 — 2026-09-11
+    감사에서 41개 중 30개가 그 상태였다.
+
+    네 가지를 함께 강제한다. 넷 다 면제 목록이 거짓말을 하는 서로 다른 경로다:
+
+    1. 등록도 면제도 아닌 파일이 없을 것 (새 가드의 조용한 유입)
+    2. 면제 사유가 비어있지 않을 것 (사유 없는 면제 = 암묵 면제와 동치)
+    3. 면제 항목이 실재하는 파일일 것 (삭제된 가드의 잔존 항목이 래칫 여유를
+       부풀린다)
+    4. 등록과 면제를 동시에 갖지 않을 것 (그러면 등록해도 면제 수가 안 줄어
+       래칫이 무의미해진다)
+    """
+    found = gf.guard_files()
+    registered = gf.registered_guard_files()
+    exempted = set(gf.UNREGISTERED_BY_DESIGN)
+
+    assert found, f"가드 파일을 하나도 찾지 못했다 — 글롭({gf.GUARD_FILE_GLOB})이 붕괴했다"
+
+    unaccounted = [f for f in found if f not in registered and f not in exempted]
+    assert not unaccounted, (
+        f"등록도 면제도 아닌 가드: {unaccounted}. "
+        "STATIC_CASES 에 등록하거나 UNREGISTERED_BY_DESIGN 에 사유와 함께 올릴 것."
+    )
+
+    reasonless = sorted(p for p, reason in gf.UNREGISTERED_BY_DESIGN.items() if not reason.strip())
+    assert not reasonless, f"사유가 빈 면제 항목: {reasonless}"
+
+    stale = sorted(p for p in exempted if not (gf.REPO_ROOT / p).is_file())
+    assert not stale, f"실재하지 않는 파일의 면제 항목: {stale}. 삭제된 가드의 항목은 함께 지울 것."
+
+    contradictory = sorted(exempted & registered)
+    assert not contradictory, f"등록과 면제를 동시에 가진 가드: {contradictory}. 등록했으면 면제 항목을 지울 것."
+
+
+def test_exemption_list_only_shrinks():
+    """면제 목록은 래칫이다 — 커지지 않는다.
+
+    상한이 없으면 목록이 고무도장이 된다. 등록(뮤테이션 설계)보다 면제(한 줄
+    추가)가 언제나 싸므로, 상한 없는 목록의 균형점은 "전부 면제"다.
+    """
+    count = len(gf.UNREGISTERED_BY_DESIGN)
+
+    assert count <= gf._MAX_EXEMPTIONS, (
+        f"면제 항목이 {count}개로 상한 {gf._MAX_EXEMPTIONS}개를 넘었다. "
+        "새 가드는 면제가 아니라 STATIC_CASES 등록이 기본값이다."
+    )
+    assert count >= gf._MAX_EXEMPTIONS - 5, (
+        f"면제 항목이 {count}개로 상한 {gf._MAX_EXEMPTIONS}개보다 충분히 줄었다. "
+        f"_MAX_EXEMPTIONS 를 {count} 로 내려 래칫을 조일 것."
+    )
+
+
 def test_mutated_files_covers_every_static_target():
     """안전 검사(_assert_safe_to_run)가 변형 대상 전부를 감시해야 한다."""
     watched = {p.resolve() for p in gf._mutated_files()}
