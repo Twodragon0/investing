@@ -341,15 +341,57 @@ enforcement: disabled                                   # 발효 안 함
 세 경로 모두 셋업 비용 또는 보안·소유구조 트레이드오프가 있고, Phase 1 이 이미
 되돌릴 수 없는 사고를 막고 있어 **지금 얻는 이득 대비 비용이 크다**고 판단했다.
 
-이 결정을 다시 열어야 하는 신호:
+이 결정을 다시 열어야 하는 신호. **관측 가능한 형태로 적는다** — "실익이 생긴다"
+같은 문장은 판정 시점에 사람마다 다르게 읽힌다(2026-09-11 구체화):
 
-- 협업자가 늘어 사람의 직접 푸시를 막을 실익이 생긴다
-- 저장소를 조직으로 옮길 다른 이유가 생긴다(그러면 경로 3이 공짜가 된다)
-- required check 를 우회한 회귀가 실제로 발생한다
+| 신호 | 판정 기준 | 확인 방법 | 2026-09-11 값 |
+|---|---|---|---|
+| 협업자 증가 | **푸시 권한**을 가진 협업자가 2명 이상 | `gh api "repos/{owner}/{repo}/collaborators?per_page=100" --jq '[.[] \| select(.permissions.push)] \| length'` | **1** |
+| 조직 이전 | 저장소 owner 의 type 이 `Organization` | `gh api repos/{owner}/{repo} --jq .owner.type` | `User` |
+| 우회 회귀 | required 후보 체크가 red 인데 main 에 들어간 커밋 1건 | 사후 관측 — 아래 주 참고 | 0 |
+
+> **커밋 이력으로 세지 말 것.** 처음엔 `git log --format='%ae' \| grep -v '\[bot\]'`
+> 로 적었는데, 실행해 보니 **오늘 이미 "충족"** 을 냈다. 같은 사람의 이메일이 3개
+> (`33538534+Twodragon0@…`, `namyongkim@…`, `twodragon114@…`)이고, `opencode-bot` 은
+> `[bot]` 접미어가 없어 필터를 통과한다. `contributors` API 도 안 된다 —
+> `opencode-bot` 의 `type` 이 `Bot` 이 아니라 `User` 다.
+>
+> 묻는 질문은 "누가 커밋했나" 가 아니라 **"누가 푸시할 수 있나"** 다. 후자가 곧
+> "사람의 직접 푸시를 막을 실익" 의 정의이고, `collaborators` API 가 그걸 직접
+> 답한다.
+
+세 번째는 지금 자동으로 관측되지 않는다. Phase 2 가 없으니 "우회" 라는 사건 자체가
+정의되지 않기 때문이다. 대신 대리 지표를 쓴다: `Classify Workflow Failures` 가 여는
+`ci-failure` 이슈 중 **main 푸시 커밋에서 난 code 분류**가 반복되면 그게 신호다.
+2026-09-11 기준 그런 반복은 없다.
+
+### 착수하면 실제로 고칠 지점은 7곳이다 (2026-09-11 실측)
+
+문서가 "푸시 지점 전건 수정" 이라고 적어 온 탓에 비용이 23으로 읽혔다. 실제로는
+**17건이 공유 액션 하나를 통과**하므로 편집 지점은 그것 하나로 묶인다:
+
+| 편집 지점 | 커버하는 워크플로우 |
+|---|---|
+| `.github/actions/python-collect/action.yml` | **17** |
+| `backfill-url-summaries.yml` | 1 |
+| `check-post-images.yml` | 1 |
+| `cleanup-old-images.yml` | 1 |
+| `generate-journal-og-images.yml` | 1 |
+| `generate-weekly-report.yml` | 1 |
+| `watchdog-zero-job-runs.yml` | 1 (git-auto-commit-action) |
+| **합계 7곳** | **23** |
+
+각 지점에서 할 일은 같다: `GITHUB_TOKEN` 대신
+`actions/create-github-app-token` 으로 받은 설치 토큰으로 푸시한다. 마지막 항목만
+형태가 다르다 — `git-auto-commit-action` 은 `token` 입력을 받는다.
+
+경로 1(자체 App)의 보안 특성을 다시 적어 둔다: 설치 토큰은 **1시간 만료·리포
+스코프 한정**이라 `GITHUB_TOKEN` 과 가깝다. 경로 2(deploy key)가 장기 자격증명이라
+후퇴인 것과 여기서 갈린다. 상시 비용은 키 로테이션과 소유자 이탈 시 복구다.
 
 준비 작업(조치 A·B·B-2, required check 후보 **11종**, 집계 잡)은 **이미 머지돼
-있으므로** 경로를 고르는 순간 룰셋 생성만 남는다. 2026-08-24 에 마지막 누락이었던
-`supply-chain-lock.yml` 까지 채웠다(조치 B-2).
+있으므로** 경로를 고르는 순간 남는 것은 위 7곳 수정 + 룰셋 생성이다. 2026-08-24 에
+마지막 누락이었던 `supply-chain-lock.yml` 까지 채웠다(조치 B-2).
 
 ### 어느 경로를 택하든 남는 트레이드오프
 
