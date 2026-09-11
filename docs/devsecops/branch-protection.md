@@ -24,6 +24,18 @@
 소유자가 User 계정이므로 classic branch protection 의 push allowlist(조직 전용)를
 쓸 수 없다. **ruleset** 으로 구성한다.
 
+> **2026-09-10 검증: 위 표가 맞고, 파생 카운터 쪽이 틀렸었다.** 파싱된
+> `uses:`/`run:` 기준으로 다시 세니 17 + 6 = 23 으로 표와 정확히 일치했고 6건의
+> 이름도 같았다. 반면 `component_counts.py` 는 **25** 를 내고 있었다 — 파일 원문을
+> substring 검색해서 실행되지 않는 주석 2건에 매칭됐다(`action-pin-verify.yml` 의
+> 액션 핀 라벨 사례, `reports-e2e.yml` 의 상호참조 주석). 후자는 같은 날 #1302 가
+> 넣은 주석이라, apt 재시도 수정이 이 수치를 24 → 25 로 부풀린 셈이다. 탐지를
+> 파싱 기반으로 고쳤다.
+>
+> 문서 상단이 "개수를 여기 적지 않는다" 고 한 이유는 손 유지보수 드리프트였는데,
+> 이번 건은 반대 방향이다 — **파생이 손으로 적은 표보다 틀렸다.** 파생이라는 사실
+> 자체는 정확성을 보장하지 않는다. 탐지 근거가 실행되는 내용인지가 보장한다.
+
 ## Phase 1 — force-push · 브랜치 삭제 차단 (적용됨)
 
 - 룰셋 **id 20539046** `main: block force-push and deletion (phase 1)`
@@ -186,6 +198,22 @@ gh run list --workflow=dependabot-auto-merge.yml --limit 14 \
 | `Falsifiability gate` | `guard-falsifiability.yml` | ✅ 조치 B 이후 |
 | `Supply-chain lock gate` | `supply-chain-lock.yml` | ✅ 조치 B-2 이후(2026-08-24) |
 
+**이름은 job id 가 아니라 job 의 `name:` 이다** (2026-09-10 실측). 위 표는 그렇게
+적혀 있지만, 실행 계획을 세울 때 `security-scan.yml` 의 job id(`bandit`,
+`gitleaks`, `actions-permissions`)를 그대로 옮겨 적는 실수가 실제로 나왔다. 틀린
+이름을 등록하면 그 체크는 생성되지 않으므로 **모든 PR 이 영구 대기**한다 — 위
+"샤드를 직접 required 로 걸지 않는다" 와 같은 실패 양식이다.
+
+등록 전 살아 있는 PR 에서 이름이 실제로 나타나는지 확인할 것:
+
+```bash
+sha=$(gh pr view <N> --json headRefOid --jq .headRefOid)
+gh api "repos/{owner}/{repo}/commits/$sha/check-runs?per_page=100" --jq '.check_runs[].name' | sort -u
+```
+
+PR #1306 기준으로 `quality`·`Python SAST (Bandit)`·`Secret Detection`·
+`Workflow Permissions Audit`·`Falsifiability gate` 5종이 모두 나타남을 확인했다.
+
 **등록하지 않을 것:**
 
 - `i18n-e2e` / `reports-e2e` — Playwright 기반이고 기능 한정. 두 워크플로우의 잡
@@ -217,11 +245,34 @@ gh run list --workflow=dependabot-auto-merge.yml --limit 14 \
 그때 다시 본다 — 워크플로우 신설의 근거는 "더 빠르다"가 아니라 "느려서 사고가
 났다"여야 한다.
 
-### 차단 사유 — `github-actions` 는 이 저장소에서 bypass actor 가 될 수 없다 (2026-08-07 실측)
+### 실측: `required_status_checks` 는 실제로 직접 푸시를 거부한다 (2026-09-10)
+
+바로 아래 절이 "직접 푸시를 막으므로" 를 전제로 삼는데, 그건 2026-08-07 시점에
+**서술**이었고 측정이 아니었다. 측정해 둔다.
+
+`refs/heads/ruleset-probe/*` 만 대상으로 하는 임시 룰셋(rules
+`required_status_checks`, context `quality`, `bypass_actors: []`)을 만들고 그
+패턴의 브랜치에 직접 푸시했다. main 은 범위에 넣지 않았다.
+
+```
+remote: error: GH013: Repository rule violations found for refs/heads/ruleset-probe/push-test
+remote: - Required status check "quality" is in progress.
+ ! [remote rejected]  (push declined due to repository rule violations)
+```
+
+rc=1. 룰셋과 로컬 브랜치는 즉시 삭제했고, 푸시가 거부됐으므로 원격에 프로브
+브랜치는 생기지 않았다.
+
+읽는 법: 거부 사유가 "check failed" 가 아니라 **"is in progress"** 다. 자동 푸시
+커밋은 체크가 돌기 전에 ref 를 갱신하려 하므로, 체크가 통과할 수 있느냐와 무관하게
+항상 이 지점에서 막힌다. 즉 `github-actions[bot]` bypass 는 "있으면 좋은 것" 이
+아니라 **Phase 2 의 전제 조건**이다.
+
+### 차단 사유 — `github-actions` 는 이 저장소에서 bypass actor 가 될 수 없다 (2026-08-07 실측, 2026-09-10 재확인)
 
 Phase 2 의 `pull_request`·`required_status_checks` 는 **직접 푸시를 막으므로 자동
-푸시 전건을 그대로 차단한다.** 따라서 `github-actions[bot]` 을 bypass actor 로
-넣는 것이 전제인데, GitHub 이 이를 **거부**한다:
+푸시 전건을 그대로 차단한다**(바로 위 절에서 실측). 따라서 `github-actions[bot]` 을
+bypass actor 로 넣는 것이 전제인데, GitHub 이 이를 **거부**한다:
 
 ```
 POST /repos/Twodragon0/investing/rulesets
@@ -248,6 +299,25 @@ third-party 앱은 허용된다.
 
 `RepositoryRole` 은 *사용자* 역할이라 `GITHUB_TOKEN`(= `github-actions[bot]`) 푸시를
 덮지 못한다 — 허용되더라도 해결책이 아니다.
+
+**2026-09-10 재확인.** 같은 요청이 같은 문자열로 여전히 422 다:
+
+```
+POST /repos/Twodragon0/investing/rulesets
+bypass_actors: [{actor_id: 15368, actor_type: "Integration", bypass_mode: "always"}]
+conditions: refs/heads/ruleset-probe-nonexistent/*     # main 아님
+enforcement: disabled                                   # 발효 안 함
+-> 422 "Actor GitHub Actions integration must be part of the ruleset source or owner organization"
+```
+
+`enforcement: disabled` + 존재하지 않는 ref 로도 거부되므로 **검증은 생성 시점**에
+일어난다. 즉 "일단 만들어 두고 나중에 켠다" 도 불가능하다. 룰셋은 생성되지
+않았다(422).
+
+> 같은 날 이 제약을 모르고 "bypass actor 를 먼저 등록하고 수집기 런을 관찰하자"
+> 는 계획이 제안됐다. 이 문서를 읽었다면 나오지 않았을 계획이다. Phase 2 를 다시
+> 검토하는 사람은 아래 "Phase 2 를 열려면" 의 세 경로에서 시작할 것 — bypass
+> actor 직접 등록은 경로가 아니다.
 
 ### Phase 2 를 열려면 (셋 중 하나를 골라야 한다)
 
