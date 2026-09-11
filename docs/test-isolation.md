@@ -192,10 +192,13 @@ python scripts/tools/guard_falsifiability.py --check    # vacuous/미등록 시 
 
 | 종류 | 개수 | mutation |
 |---|---|---|
-| 격리 fixture 가드 (`CASES`) | 8 | `autouse=True → False` (모듈 레벨은 import 를 비존재 모듈로) |
-| 정적/설정 가드 (`STATIC_CASES`) | 11 | 가드가 막으려는 **위반을 실제로 주입** |
+| 격리 fixture 가드 (`CASES`) | 12 | `autouse=True → False` (모듈 레벨은 import 를 비존재 모듈로) |
+| 정적/설정 가드 (`STATIC_CASES`) | 53 | 가드가 막으려는 **위반을 실제로 주입** |
 
-정적 케이스가 커버하는 가드: `test_state_path_anchoring`(cwd-상대 `_state` 주입, 탐지기 무력화, `__file__` 앵커 제거, 런타임 절대경로), `test_hermetic_test_writes_guard`(테스트의 프로덕션 `REPO_ROOT` import, `_BANNED_NAMES` 비움), `test_coverage_floor_guard`(하한 하향, 게이트 제거, 워크플로우 `--fail-under` 하향).
+> 두 수치는 손으로 유지된다 — 2026-09-11 에 각각 8/11 로 낡아 있던 것을 실측값으로 고쳤다. 최신 값은 문서가 아니라 코드에서 읽을 것:
+> `python3 -c "import importlib.util; s=importlib.util.spec_from_file_location('gf','scripts/tools/guard_falsifiability.py'); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); print(len(m.CASES), len(m.STATIC_CASES))"`
+
+정적 케이스가 커버하는 가드 파일은 `guard_falsifiability.registered_guard_files()` 가 돌려준다(현재 14개). 개별 케이스의 대상과 뮤테이션은 `STATIC_CASES` 정의에 `label` 로 붙어 있으므로, 여기서 목록을 중복 유지하지 않는다 — 이전 판본은 세 파일만 나열한 채 낡아 있었다.
 
 **앵커는 대상 파일에 정확히 1회만 나타나야 한다.** 여러 번 나타나면 `replace(..., 1)` 이 엉뚱한 줄을 바꾸고 가드가 정당하게 green 이 되어 VACUOUS 오탐이 난다 — 실제로 `fix_defi_tvl_history.py` 감사에서 `__file__` 앵커가 `sys.path.insert` 줄을 먼저 잡아 그렇게 됐다. 하네스는 이를 조용히 넘기지 않고 `AMBIGUOUS-ANCHOR` 로 실패시키며, `test_static_case_anchors_are_unique_in_their_targets` 가 PR 시점에 먼저 잡는다.
 
