@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-26 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE15ZHNLZ2dDWHpfY1ZYNmVNZTJJcEdDNmp1WlJ3cWVxbE9DS1pmVVpRU1k3LVVXOGZ5c0o4cVFRRl84NVNYTElhbTEtaHl6ZTZ6RGVkdWpnRDU2MXRxNEhxbWZXUHZyOHpM?oc=5">반도체 주식 약세 여파… 코스피·코스닥 동반 급락</a> <span class="p0-desc">[공감신문] 정재은 기자=25일 오전, 코스피 지수는 뉴욕 증시에서의 반도체 주식 약세 영향으로 장 초반부터 2% 이상의 하락세를 보였다. 이날 오전 9시 1분 기준으로, 코스피는 전날 대비 159.25포인트 하락한 6,537.71을 기록했다. 지수는 장 시작 전보다 161.03포인트</span></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQa3IwSWZob0FORjdIbTVHX3pIQVFuZXoyZS0zR3ZVMjF4bWlaZUE2N1oyVWJBajh3QXA3UHNhV3d2VVczTmJla0c5OGNzdzhUYUZLUzZMcUw3dWZOemRkZXJ2X2tBME51NnBpOHZSUnhWRVdtLXY0al9EUWlMMFA2OW5XZ3hyTDMwTHc?oc=5">코스피 3.12% 급락… 삼성전자 셀온 충격 속 코스닥은 이차전지·바이오 강세 (2026.08.24) - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">1. 국내 증시 요약 오늘 국내 증시는 코스피가 3.12% 급락한 반면, 코스닥은 1.42% 상승하는 등 양 시장이 극명하게 엇갈린 디커플링 장세를 연출했습니다. 코스피 지수: 전 거래일 대비 215.99포인트(-3.12%) 급락한 6,696.96에 거래를 마쳤습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1rWXlrZENoSXZhVEh5NkdjVnlSR1dTVExualRzalQ2RWNLQnRXNVhSX2U0SWR5MUdZTTBHY0cycjdfb21uNWhzT0hqWWhFUXB3RHJBZkNNZ0gwOGNjUm91TjMzSjh2NjBuRjYzNUZnYWjSAXRBVV95cUxPd3FWSTFuc0wtSEtMbTJoMGZYbW9TUk11WENhc2pQTC1hTFQtN01VX1M4UUVpdjlyYWZhc2dXeERab3pvZXhIalhhR2JleUpjSzdRbEdwaWpxM2QtRGw2SDlOM3FRSWV5MzFzZUdsTWM2bG04cQ?oc=5">반도체 투톱 동반 급락…코스피 3.12% 밀려 6700선 붕괴 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 삼성전자와 SK하이닉스가 주주환원 기대에 따른 단기 상승분을 반납하면서 코스피가 3% 넘게 떨어졌다.다만, 상승 종목 수가 하락 종목을 웃돌고 코스닥은 오름세를 보이면서 증시 전반의 동반 약세보다는 대형 반도체주 중심의 지수 조정이라는 분석이 나온다.24일</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,742.74 (+0.68%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 827.15 (+1.70%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-08-26 주식 시장에서 213건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,742.74(+0.68%), KOSDAQ 827.15(+1.70%), USD/KRW 1,383.18(+0.08%).
 - *25일 오전 키움증권 창구를 통한 장중 수급 집계 결과, 외국인은 신라젠을 순매수 상위권에 올렸고 기관은 팬오션과 한국전력 등을 중심으로 순매수에 나섰다.*
 
 ## 테마별 주요 뉴스

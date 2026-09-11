@@ -29,43 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-11 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 금리 결정 앞두고 도매 인플레이션 3개월 만에 최대치 상승 - New York Post - 24건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 인플레이션, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 인상, 상당기간 주목</li><li>📈 <strong>가격/시장</strong>: 인상, 시기 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 금리인상, 시기 관련 5건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNVHFCQ3R1XzRNanB5X1JQTU5EUTNGYXNtd0Mwd1FLZE1WSTExeTdBYVJIcWo3aTRIODExcnVmdThsd21hSHJVUkVRQmgwZFRxVm1jdmk3bmh3M0c4ZWNMNFNoVGRMMDhhUEpXbDBiU0hpODJpeDVDaHh4NHVJSVhjNm42M1dwb21tY3JqRVp0M0g4OEFSdFFjWTAxbEpFLWhI?oc=5">연준 금리 결정 앞두고 도매 인플레이션 3개월 만에 최대치 상승 - New York Post</a> <span class="p0-desc">이는 9월 16일 회의에서 연준의 결정에 영향을 미칠 수 있는 이번 주 두 가지 주요 인플레이션 보고서 중 첫 번째입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT0NGU2wzOFZTZzA4dXc5aERia3BxQWJGZTRYcTBBYXFtYmFqN1ZrSDNYd2JZNFM2OURkOWZYb0dzZ3dCQlR6bGdNdmo4VkQ0YzBVMURJZldfck9vdG56ZExfbjRZT200emhRbkpaN09qcmdCNVAySUV3LTFlVGJmLUh3cjNXblZYMXBUdzZ2Z3FueENzNnZoSi1zTXdOdW8xQzFPdjY4Z01DT0k?oc=5">연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Grand Forks Herald</a> <span class="p0-desc">고용 보고서에 따르면 지난달 비농업 부문 고용은 162,000건 증가했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준 금리 결정 앞두고 도매 인플레이션 3개월 만에 최대치 상승 - New York Post 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 24건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 24건 중 텔레그램 0건, 소셜 0건, 정치·경제 24건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (22건): 인플레이션, 연준, 금리 매크로 변수 (22건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (10건): 인상, 상당기간, 시기 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (17건): 인상, 시기, 결정 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준 금리 결정 앞두고 도매 인플레이션 3개월 만에 최대치 상승 - New York Post
-- 연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Grand Forks Herald
-
-### 투자자 체크포인트
-
-- 정치·경제 24건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:45%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:77%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:23%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-11.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

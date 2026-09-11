@@ -32,45 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-11 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">836.92</div><div class="stat-label">KOSDAQ +0.79%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 국채, 금리, 환율 부각 201건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 관련 19건</li><li>🏦 <strong>거래소</strong>: IPO, 조선비즈 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 201건의 뉴스에서 **매크로/금리**(37건)과 **가격/시장**(47건)이 동시에 부각되고 있습니다. 금리/경제 지표 변화가 시장 가격에 직접적인 영향을 미치는 국면입니다
-
-### 테마별 동향
-
-- **📊 매크로/금리** (37건): 국채, 금리, 환율 매크로 변수 (37건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (47건): 코스피, 삼성전자, 하이닉스 가격 변동 (47건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (19건): 반도체, 엔비디아 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- '9천피' 치솟았는데 알고 보니…한은 '삼전닉스' 콕 집어 경고 [분석+
-- 오늘의 주식 시장: 미국 유가가 10달러로 급등하면서 다우 지수, S&P 500 및 나스닥 하락
-- 이 시장 지표는 투자자에게 경고 신호를 보내고 있습니다. 다음은 역사입니다.
-- 외 25건
-
-### 투자자 체크포인트
-
-- 한국 기사 68건, 글로벌 기사 133건 수집
-- 한국 지수: KOSPI 7,033.92(-0.25%), KOSDAQ 836.92(+0.79%), USD/KRW 1,347.37(+0.59%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:79%"></div></div><span class="theme-count">37건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">47건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:40%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:11%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-11.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,033.92 (-0.25%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 836.92 (+0.79%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-11 주식 시장에서 201건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,033.92(-0.25%), KOSDAQ 836.92(+0.79%), USD/KRW 1,347.37(+0.59%).
+- *국내 증시 대장주인 삼성전자와 SK하이닉스가 10일 장중 등락을 거듭한 뒤 약보합으로 마감했다.*
 
 ## 테마별 주요 뉴스
 

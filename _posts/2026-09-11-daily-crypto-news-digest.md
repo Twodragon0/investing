@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-11 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: South Florida crypto kingpin pleads guilty in alleged $245M theft conspiracy - WPEC - 82건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 관련 36건</li><li>🏦 <strong>거래소</strong>: 암호화폐 관련 19건</li><li>🔵 <strong>규제/정책</strong>: 16건 수집</li><li>🟣 <strong>DeFi</strong>: 증권 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi-gJBVV95cUxPWUJmSDVHQUtfaHg2YW1pa1BqQmxUTzJXSno0bnpGRlB5Y1RXY3p0QmpJLUtZZzBxQXlGRnVEQXdQaTBURGN0dDdoUGlaWTQwYVJMcERWcElnZ0pSeDJaSkZncFJuQ3hjbmN1RjlDQS16d2NuZDlnRjExck5HQkN4MHhWTFRPaWRIZDVZUkJKb1hGZ0dHSHRvWlVid1g4TF9IeDVndGNlYk1QRFhyVDJUVDlZZnBmVE5PTFloNEo1YkhlekRRMVFYcE9YTW1BeDluRXVCZVNVeno5Wk9wZ3ZpenpKY0R1RC14T21Pdll6VUVpcnV6RllxdFRiTWh3NGdRSDBxUWw0SmFFcWVWNjZhZTR5dk03R3IwdnhBQ0doUjRuLUlBNm9hVy1zRGN3bmlEMjVjSnEzaXBuSklWNXZrUWw2dk5ZTE1LMzZjalo0NkRnaGhkelBoYkRCYkNTV19nQWUyazY0MVhiRTU0Q19xTzF6eThmOGpCbXc?oc=5">South Florida crypto kingpin pleads guilty in alleged $245M theft conspiracy - WPEC</a> <span class="p0-desc">2억 4,500만 달러 규모의 암호화폐 절도 계획의 중심에 있던 플로리다 남부 남성이 검찰이 이 사건이 사치스러운 삶을 살게 했다고 밝힌 후 유죄를 인정했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9oWFBmREZxVnUyUU1EbVlOSzlkV3AxSUlpY1dQSy1XRUR1cGRrT0wzajlURk9MazFnei00aTBkY2ZSUU01UDhGMFR5UmZPT2ZqZUx0dnNR?oc=5">클럽서 에르메스 가방 뿌린 20대, 알고보니 3000억 비트코인 도둑</a> <span class="p0-desc">나이트클럽에서 수천만원짜리 에르메스 가방을 주변에 뿌리는 등 돈 자랑을 일삼던 싱가포르 출신 20대 남성이 미국 법원에서 3000억원대에 달하는 비트코인을 훔쳤다고 인정했다. 이번.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9EekJBRHFtRHZXMkxzMmRlZjJsYmw3QW1vNW9PbXRPWW03Q242Vy1LNjNFTlFUY1UwaVB0VXdncUVOSF9yZUJKb3F4YnN1ckF6RjhpNENESk9OWXNPQTdoU3NGSWVpQmlEMkhzcHNoNGp5MDg?oc=5">사토시 정체? 실수로 버린 8000 BTC…역대급 암호화폐 미스터리 10선</a> <span class="p0-desc">[디지털투데이 홍진주 기자] 암호화폐 시장에는 블록체인에 거래 기록이 남아 있음에도 수년째 실체가 밝혀지지 않은 사건들이 적지 않다. 비트코인 창시자 사토시 나카모토의 정체부터 대.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: South Florida crypto kingpin pleads guilty in alleged $245M theft conspiracy - WPEC 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 82건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 암호화폐, 클럽서 관련 (36건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (19건): 암호화폐 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🔵 규제/정책** (16건): tokenized, valuation, invests 규제 움직임 (16건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 클럽서 에르메스 가방 뿌린 20대, 알고보니 3000억 비트코인 도둑
-- 사토시 정체? 실수로 버린 8000 BTC…역대급 암호화폐 미스터리 10선
-
-### 주요 이슈
-
-- 코인 시황] 비트코인 7만7000달러대로… 유가·국채금리 상승에 ETF 자금도 이탈 - 뉴스핌
-- 이란, 제재 막히자 코인 결제 허용…외환통제도 완화
-- OKX는 IPO 이전 거래가 성장함에 따라 유럽에 OpenAI 및 Anthropic 베팅을 제공합니다.
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News KR(15건), CoinDesk(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-11.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **82건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🔵 규제/정책
+- 2026-09-11 암호화폐 핵심 뉴스: 사우스 플로리다 암호화폐의 두목, 2억 4500만 달러 규모의 절도 음모 혐의에 대해 유죄를 인정 - WPEC. 총 82건 분석, 핵심 테마는 비트코인, 거래소, 규제/정책입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
