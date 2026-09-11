@@ -139,6 +139,17 @@ def _probe_steps(*refs: str) -> str:
 # 죽는다 — 2026-08-25 에 70 -> 73 상향에서 실제로 5개 앵커가 한꺼번에 깨졌다.
 # 가드는 "하한이 내려가는 것"을 막으라고 있는 것이지, 올라갈 때 손이 가라고 있는
 # 게 아니다.
+#
+# 세 번째 규약(2026-09-11): **앵커는 유일성이 허락하는 만큼 좁게.** 앵커에 든 줄은
+# 전부 결합면이다 — 변형과 무관한 인접 줄을 끌어안으면 그 줄을 고치는 순간
+# AMBIGUOUS-ANCHOR 로 죽는다. 가드가 틀린 게 아니라 하네스가 남의 편집에 결합된
+# 것이다(`_PROBE_ANCHOR` 주석의 액션 bump 사고와 같은 실패 모드). 그래서:
+#   * `old`/`new` 에서 **양쪽이 동일한 줄은 앵커에 넣지 않는다** — 치환에 기여하지
+#     않으면서 결합만 늘린다.
+#   * 인접 줄이 유일성 때문에 필요하면 남기되, 그 이유를 케이스에 적는다
+#     (아래 `pilot_starts[name]` 케이스가 유일한 잔존 사례).
+#   * 주석은 앵커에 넣지 않는다. 주석 문구는 코드 의미와 무관하게 바뀐다.
+# 유일성은 `test_static_case_anchors_are_unique_in_their_targets` 가 PR 시점에 강제한다.
 _COV_FLOOR_RE = re.compile(r"--cov-fail-under=(\d+)")
 
 
@@ -296,8 +307,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "커버리지 게이트 비차단화 (continue-on-error)",
         ".github/workflows/code-quality.yml",
-        "      - name: Generate coverage report\n        run: |",
-        "      - name: Generate coverage report\n        continue-on-error: true\n        run: |",
+        "      - name: Generate coverage report\n",
+        "      - name: Generate coverage report\n        continue-on-error: true\n",
         "tests/test_coverage_floor_guard.py::test_workflow_coverage_gate_steps_are_blocking",
     ),
     StaticCase(
@@ -310,8 +321,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "커버리지 설정에서 모듈 제외 ([tool.coverage.run] omit)",
         "pyproject.toml",
-        "[tool.coverage.run]\nrelative_files = true",
-        '[tool.coverage.run]\nrelative_files = true\nomit = ["*/collect_*.py"]',
+        "[tool.coverage.run]\n",
+        '[tool.coverage.run]\nomit = ["*/collect_*.py"]\n',
         "tests/test_coverage_floor_guard.py::test_pyproject_coverage_config_omits_nothing",
     ),
     # ---------------------------------------------------------------------
@@ -321,15 +332,15 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "트리-쓰기 탐지기 무력화 (모든 경로를 안전으로 분류)",
         "tests/_tree_write_guard.py",
-        "    if isinstance(target, int):  # file descriptor, not a path\n        return None",
-        "    return None\n    if isinstance(target, int):  # file descriptor, not a path\n        return None",
+        "    if isinstance(target, int):",
+        "    return None\n    if isinstance(target, int):",
         "tests/test_tree_write_guard.py::TestProtectedPathClassification::test_committed_tree_paths_are_protected[_state/dedup_seen.json]",
     ),
     StaticCase(
         "트리-쓰기 탐지기: io.open 패치 누락 (Path.write_text 우회)",
         "tests/_tree_write_guard.py",
-        '        for owner in (builtins, io):\n            self._patch(owner, "open", self._wrap_open)',
-        '        for owner in (builtins,):\n            self._patch(owner, "open", self._wrap_open)',
+        "        for owner in (builtins, io):",
+        "        for owner in (builtins,):",
         "tests/test_tree_write_guard.py::TestInterception::test_pathlib_write_text_is_caught",
     ),
     StaticCase(
@@ -342,17 +353,20 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     # 서브프로세스용 세션 스냅샷 층. 이 층은 세션 teardown 에서만 발현하므로
     # 배선을 끊어도 스위트 어디서도 red 가 나지 않는다 — 그 침묵을 막는 케이스들.
     StaticCase(
+        # `global` 만 지우면 `_SESSION_BASELINE = snapshot_tree()` 가 지역 변수
+        # 대입이 되어 모듈 전역은 None 으로 남는다 — 함수 본문 전체를 앵커로
+        # 잡지 않고도 "baseline 이 등록되지 않는다"를 그대로 재현한다.
         "세션 baseline 미등록 (tripwire 무력화)",
         "tests/_tree_write_guard.py",
-        "    global _SESSION_BASELINE\n    _SESSION_BASELINE = snapshot_tree()\n    return _SESSION_BASELINE",
-        "    return snapshot_tree()",
+        "    global _SESSION_BASELINE\n",
+        "",
         "tests/test_suite_isolation_guard.py::test_real_tree_writes_detected",
     ),
     StaticCase(
         "세션 스냅샷 비교 무력화 (변화를 무시)",
         "tests/_tree_write_guard.py",
-        "    changes = diff_tree(baseline, snapshot_tree())\n    if not changes:\n        return",
-        "    changes = diff_tree(baseline, snapshot_tree())\n    if changes or not changes:\n        return",
+        "    if not changes:",
+        "    if changes or not changes:",
         "tests/test_tree_write_guard.py::TestOutOfProcessNet::test_added_file_is_reported",
     ),
     StaticCase(
@@ -534,15 +548,15 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "집계 잡 if: always() 제거 (upstream skip 시 체크 미생성)",
         ".github/workflows/guard-falsifiability.yml",
-        "    name: Falsifiability gate\n    if: always()\n",
-        "    name: Falsifiability gate\n",
+        "    if: always()\n",
+        "",
         "tests/test_required_check_aggregator_guard.py::test_aggregator_runs_unconditionally[guard-falsifiability.yml]",
     ),
     StaticCase(
         "PR 트리거에 paths 필터 재도입 (required check 영구 대기)",
         ".github/workflows/guard-falsifiability.yml",
-        "  pull_request:\n    branches: [main]\n",
-        "  pull_request:\n    branches: [main]\n    paths:\n      - 'tests/conftest.py'\n",
+        "  pull_request:\n",
+        "  pull_request:\n    paths:\n      - 'tests/conftest.py'\n",
         "tests/test_required_check_aggregator_guard.py::test_aggregated_workflow_has_no_pull_request_path_filter[guard-falsifiability.yml]",
     ),
     StaticCase(
@@ -553,13 +567,14 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_required_check_aggregator_guard.py::test_job_id_scanner_rejects_nested_keys",
     ),
     StaticCase(
-        # 앵커는 튜플의 **여는 줄**이다. 항목을 나열하면 대조군을 넓힐 때마다 앵커가
-        # 낡는다 — 2026-08-12 에 2개에서 9개로 넓히면서 실제로 그렇게 깨졌다.
-        # 뒤에 남는 항목들은 `_FALSIFIABILITY_UNUSED` 로 흘러가 문법이 유지된다.
+        # 앵커는 튜플의 **여는 줄뿐**이다. 항목을 하나라도 끼우면 대조군을 넓힐
+        # 때마다 앵커가 낡는다 — 2026-08-12 에 2개에서 9개로 넓히면서 실제로 그렇게
+        # 깨졌다(당시 첫 항목까지 앵커에 들어 있었다). 뒤에 남는 항목들은 이어지는
+        # `_FALSIFIABILITY_UNUSED` 로 흘러가 문법이 유지된다.
         "대조군을 비워 대조군 비 지표를 소멸시킴",
         "scripts/tools/check_pilot_observation.py",
-        'CONTROL_COLLECTORS = (\n    "political",',
-        'CONTROL_COLLECTORS = ()\n_FALSIFIABILITY_UNUSED = (\n    "political",',
+        "CONTROL_COLLECTORS = (\n",
+        "CONTROL_COLLECTORS = ()\n_FALSIFIABILITY_UNUSED = (\n",
         "tests/test_check_pilot_observation_control_group_guard.py::test_control_group_is_not_empty",
     ),
     StaticCase(
@@ -570,6 +585,9 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_check_pilot_observation_control_group_guard.py::test_every_mapped_collector_is_either_pilot_or_control",
     ),
     StaticCase(
+        # 앵커가 2줄인 유일한 케이스다. `pilot_starts[name],` 한 줄은 이 파일에
+        # 2회 나타나 단독으로는 AMBIGUOUS-ANCHOR 가 된다 — 앞의 `runs,` 는 결합이
+        # 아니라 유일성을 만드는 최소 컨텍스트다.
         "묶음 집계가 층화 대신 단일 경계로 자름",
         "scripts/tools/check_pilot_observation.py",
         "            runs,\n            pilot_starts[name],",
