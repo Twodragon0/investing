@@ -34,12 +34,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-09 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 코스닥, 외국인 부각 192건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 48건</li><li>📊 <strong>매크로/금리</strong>: 환율, 조선비즈 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 대통령 이슈 부각</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,954.52 (-0.58%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 811.88 (-1.25%).
-- 2026-09-09 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,954.52(-0.58%), KOSDAQ 811.88(-1.25%), USD/KRW 1,340.75(-0.31%).
 - *마이크론 기술(나스닥:MU) 주식은 인공 지능 서버와 관련된 고대역폭 메모리 수요가 업계 전반에 걸쳐 공급을 초과함에 따라 랠리을 확장합니다.*
 
 ## 테마별 주요 뉴스
