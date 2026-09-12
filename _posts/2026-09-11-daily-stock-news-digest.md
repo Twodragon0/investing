@@ -33,10 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-11 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 국채, 금리, 환율 부각 201건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 관련 19건</li><li>🏦 <strong>거래소</strong>: IPO, 조선비즈 동향 주시</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 7,033.92 (-0.25%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 836.92 (+0.79%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-11 주식 시장에서 201건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,033.92(-0.25%), KOSDAQ 836.92(+0.79%), USD/KRW 1,347.37(+0.59%).
 - *국내 증시 대장주인 삼성전자와 SK하이닉스가 10일 장중 등락을 거듭한 뒤 약보합으로 마감했다.*
 
 ## 테마별 주요 뉴스

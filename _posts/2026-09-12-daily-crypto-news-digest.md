@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-12 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 美 PPI 급등에 금리 인상 공포…비트코인·이더리움·XRP 급락 - 81건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 연준 관련 17건</li><li>📈 <strong>가격/시장</strong>: 암호화폐, ETF 관련 28건</li><li>🏦 <strong>거래소</strong>: ETF, 달러 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZVhXbFFLWWUtSmlpWUJIdU5yQUZjU1llVDFjR05Gem1GRlRTVE8zV2Z4M3hHbHd5U08zU3FyYkhaMG96clpEbnIyc0xtWW9wSExtYVFGX2pGWVdQTmhzRHZxZ1lwM2ZoUUdaTzRZYktnZ2lXUldCUzFQeFJoaUM4dlVKZ2RhRG5I?oc=5">美 PPI 급등에 금리 인상 공포…비트코인·이더리움·XRP 급락</a> <span class="p0-desc">미국의 도매물가 지표가 예상치를 웃돌며 인플레이션 경계감을 자극한 가운데, 연방준비제도(Fed·연준)의 추가 금리 인상 가능성이 높아지면서 가상자산 시장이 일제히 약세로 돌아섰다.</span></li><li><a href="https://decrypt.co/377962/bitcoin-price-cpi-inflation-fed-rate-decision">Bitcoin Rises as Markets Digest Inflation Data Ahead of Fed Rate Decision</a></li><li><a href="https://decrypt.co/377959/blockstream-refuses-ransom-for-return-of-47m-in-bitcoin-from-liquid-hack-it-is-theft">Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 美 PPI 급등에 금리 인상 공포…비트코인·이더리움·XRP 급락 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 81건의 뉴스 중 P1 주요 이슈도 15건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (49건): 비트코인, 암호화폐, ETF 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📊 매크로/금리** (17건): 연준, CPI, 인플레이션 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (28건): 암호화폐, ETF, BTC 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 美 PPI 급등에 금리 인상 공포…비트코인·이더리움·XRP 급락
-- Bitcoin Rises as Markets Digest Inflation Data Ahead of Fed Rate Decision
-- Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'
-
-### 주요 이슈
-
-- Cryptocurrency exchange hit with $4 billion fine
-- 비트코인 ETF 울고 알트코인 ETF 웃고…엇갈린 자금 흐름 - 아시아투데이
-- 코인 시황] 비트코인 7만7000달러대로… 유가·국채금리 상승에 ETF 자금도 이탈 - 뉴스핌
-- 외 12건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News KR(15건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-12.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📊 매크로/금리, 📈 가격/시장
+- 2026-09-12 암호화폐 시장 81건 분석 — 핵심 테마: 비트코인, 매크로/금리, 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

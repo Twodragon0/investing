@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-12 - 보안 뉴스 요약 �
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Anthropic says Claude used for cyberattacks and s** / 보안 뉴스 헤드라인: 디파이 가격 조작은 32에서 32로 악용됩니다 [2026.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Liquid Network, 3억 2천만 달러 악용 후 블록 생산 재개 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 12건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): security, exploit, liquid 보안 이슈 (12건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (4건): exploit, manipulation, unbacked 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **📈 가격/시장** (2건): manipulation, beatxswap, exploits 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] Liquid Network, 3억 2천만 달러 악용 후 블록 생산 재개
-- [Security] ether.fi Liquid exploit: Arbitrary External Call
-- [Security] Dominion exploit: Private Key Compromised
-
-### 투자자 체크포인트
-
-- 보안 사건 11건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건
