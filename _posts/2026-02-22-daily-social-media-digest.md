@@ -25,7 +25,6 @@ permalink: "/social-media/2026/02/22/daily-social-media-digest/"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><br><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE40amcwWEF5RFZmaDVNRVZtZ2NsdXNfR0VidEJ0TkhzVmEtb293ODVvLWJmd0JJYmotNE5oQlRfcUZ2ZE91Y2ZXUVpQWWlEUzg?oc=5">[이번주 경제] 한은 기준금리 동결 유력…작년 합계출산율 주목</a></div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 57건 중 텔레그램 20건, 소셜 2건, 정치·경제 35건으로 정치/정책 및 매크로/금리 이슈가 주요 화제입니다.

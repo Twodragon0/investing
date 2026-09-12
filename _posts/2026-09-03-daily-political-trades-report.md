@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-03 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(9회), **연준**(5회), **트럼프**(4회), **SEC(미국증권거래위원회)**(2회), **관세**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-09-03 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 20건 — SEC 내부자 거래 16건, 트럼프 정책 1건, 중앙은행 3건
-- 1. Where Trump's tariffs hit Massachusetts the hardest - Axios 트럼프의 관세가 매사추세츠를 강타한 곳 Axios
 
 ## 1. 트럼프 행정명령/정책
 

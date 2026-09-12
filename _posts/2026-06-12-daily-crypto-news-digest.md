@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-12 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMTJuX2JaWWtucXdNanJXSVZqdHQwQWppUTBMV1VjbkZuREhSalBsWHpWNndvd3YyXy1OU1RsbDhtSEdDVnUxUFAzdkxXOWMtU1FuN05FLVBvb1Z0UnUydWNDV05ZMW1DX1V6SFppSU5pNzkyaThINzdXblNLVlU4aFhHMnlYRWZkQ0hGN3oyNHNvcHhaNk94OXlYSDhWUEFvV0RZZWdTaDFLTnFOWnRrbnB3YTVzSlJCSnJXRjgwcm9lQ0U?oc=5">미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다. - CoinDesk</a> <span class="p0-desc">미국 하원 법안은 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반을 구성할 예정입니다 CoinDesk</span></li><li><a href="https://www.digitaltoday.co.kr">일본은행 금리 결정 임박…비트코인 22% 조정 악몽 재현될까</a> <span class="p0-desc">일본은행 금리 결정 임박…비트코인 22% 조정 악몽 재현될까 디지털투데이</span></li><li><a href="https://www.coindesk.com/policy/2026/06/10/u-s-house-bill-would-erect-crypto-theft-task-force-across-law-enforcement-agencies">미국 하원 법안, 법 집행 기관 전반에 걸쳐 암호화폐 절도 전담반 설립</a> <span class="p0-desc">초당파 2인조의 새로운 법안은 암호화폐 도난 사건을 주도하기 위해 미국 법무장관 산하에 다기관 그룹을 구성하는 것입니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-06-12 암호화폐 핵심 뉴스: 양자 시계가 똑딱TheStreet고 있습니다. 이더리움의 문제가 아니라 비트코인의 문제입니다.. 총 99건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

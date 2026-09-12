@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-31 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYk9HbmcyV3dPa2RELVd5YlU5WTFPVWxIc1hBNXhWUk45Tmx5Wm9FYXM0dXk0RjhLUXgzcFM5WGMyUEVwakdmQ05qZ2ZVQmZNYm1CSFVBbkhzUlNnVEtfVmpyQXdhUmNWTTNfOUJDUFhhY3ZCeFlBeEtVajNVdERfY0J1aUpVczY3?oc=5">베테랑의 긴급 심층 분석] "中 창신메모리(CXMT) 급성장의 실체" 삼성전자 vs SK하이닉스 주가와 실적에 미칠 진짜 파급력 완벽 해부 - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">안녕하세요, 개발자 여러분! 함께하는 베테랑입니다. 최근 글로벌 반도체 시장의 최대 화두 중 하나는 중국 1위 D램 제조사 '창신메모리(CXMT)'의 생산능력 폭증과 양쯔메모리(YMTC)의 낸드플래시 점유율 확대 뉴스입니다. 미국의 강력한 대중국 반도체 수출 통제 속</span></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFA3c3V5Rm5lZ3ZGS0o3LVFDVlZjM29DQ0xzMl9LeEJhTTlwd3hTZjdnc0N1Y3duNUdMVWxsYmx3YjNRclZHaENrMWgzTDBpbm1IemhISE5GN0Jrd1BETXVVdmVSdUg0VHVrd2l2NjhZeGZpVkRBeFdrb3NOcEhjaEE?oc=5">I asked ChatGPT if the S&P 500 will crash 50% due to the AI bubble and it said… - Yahoo Finance UK</a></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNb2h0QjlLSTlBdjJIWVNYeVpsQVpWcWt5OG50VDNvYVpKSVdZVGJHX1BBVmtyTENVZWVGald6bGw2amJ4OEpXOUFpMVZmVExPRDliVmRwMmpUUDdERmMzNUdCRDlpWkg4RVMyREZPRjBpWkFVenRfOF8zU053VllFT21KaGtuS2VWN0x5eWZuLUN5NWVyVDZRbXNDSExYcE0?oc=5">Is a Stock Market Crash Imminent Under President Donald Trump? More Than 85 Years of Historical Precedent Offers an Answer.</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,788.88 (-1.79%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 838.41 (+0.09%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-08-31 주식 시장에서 144건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,788.88(-1.79%), KOSDAQ 838.41(+0.09%), USD/KRW 1,375.67(-0.39%).
 - *Warsh가 잭슨 홀 연설에서 인플레이션을 목표로 삼으면서 단기 국채 수익률 상승 WSJ*
 
 ## 테마별 주요 뉴스
