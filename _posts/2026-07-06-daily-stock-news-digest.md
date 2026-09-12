@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBZNW9ZV0xvQWQyOTdxR19ZZFBlZk92T08waGhZc3g0cEk3eWJzOUZ2LUktSVhIYXBwRXZoc3VRT3JtaFZQWFM3ZXVFTnFheTRBVk1JaXBDY2F5a2lRUE1KZHMtaE9zaUVGUW5CdTBOUkJIWEXSAXdBVV95cUxPT3B2QXlyUGFsSTFUQXJHTlFFVzRNckhhQUxkNlFzLTE5NlBLeVI3eWFrdnNLb3RSRDF1a0w2dEM5aElJRElvR2FXc2M5T0hhLVRpeWZXeWtPNFJXcG5qbjJIOTBKbHd2WUhVZnA1a2laQnNvWF9iVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주간 매매동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목.외국인 반도체 집중 매도</a>
-<p class="news-desc">[주간 매매동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목.외국인 반도체 집중 매도 핀포인트뉴스</p>
+<p class="news-desc">지난달 29일부터 이달 3일 까지 한주간 유가증권시장과 코스닥시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNZWVKYVU0ZWZqZ0N3TEsxN0J6OW1La0dIU3ktdGl5TjY2NTNQWkdKQURyQUdHdXJfRkRrTG1OTF9LdGtyLXBicHZGSDJfQ19heGtvel9vTmlxRGVlNmF6NUNQQkl0ZlZWdUlLWGxTa1pBOWtXUkxwY3NkMVRxUTRzRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전 잠정 실적, 하이닉스 나스닥行… ‘반도체 투톱’ 운명의 한 주</a>
-<p class="news-desc">삼전 잠정 실적, 하이닉스 나스닥行… ‘반도체 투톱’ 운명의 한 주 조선일보</p>
+<p class="news-desc">7일 삼성전자 2분기 잠정 실적 발표와 10일 SK하이닉스 나스닥 상장 예정 애플 등 빅테크 기업들의 메모리 구매처 다변화 및 가격 협상 주도권 갈등 SK하이닉스 나스닥 상장을 통한 투자자 접근성 개선 및 기업 가치 재평가 기대</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5aYnJLcGlPSWtEWHBhb1VfV1MxTlBCQ0lvV0tTTTdpbWtDZ2pGd0Z6cjBLdTIxSGJ0Qnp1S3lTT2hRcnM4UnZ2NVcwSE9yaVk4dUJoUFhYdFNyMjNVNU5pLTZRbk0wTkhx?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“7월 기준금리, 3년만에 0.25% 인상 될 듯” - 애플경제</a>
-<p class="news-desc">“7월 기준금리, 3년만에 0.25% 인상 될 듯” 애플경제</p>
+<p class="news-desc">[애플경제 이보영 기자] 한국은행은 7월 16일 금통위에서 기준금리를 25bp(2.50% → 2.75%) 인상할 것으로 전망된다. 이는 지난 5월 금통위의 매파적 시그널과, 고환율에 따른 물가 상방압력, 반도체 주도의 성장률 상향 조정, 가계부채와 금융 불균형 우려 등을 감안한 조치로 해석된다.지난 5월 28일 금통위에선 금통위원 2명이 인상 소수의견을 제시한 가운데, 통방문에서 ‘인하’ 관련 문구가 완전히 삭제되었다. 한은 총재 역시 “물가, 성장, 환율, 부동산을 보나 갈길이 비교적 명확하다”며 금리인상 기조로 전환할 것을 강하</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9rSHNkZjVRbXl6cE5KekkzZFlUSWRWS0ZiTlVvUndRMFFQdHlRUlc5b2xhNy1rVl9jUWpRMTJKdzBWYXZlSzh4b2pfRDUxalBlTUxJMW5fTmRJNWIzbFdmYzJsT29fR3RaNlHSAW5BVV95cUxPTTJ1eF9SY3hubVlyUTcydFlhdEZINC1YaUJmNml3R3UyR3R1QjJIdThzQUl0NXMtOXZ2dzFEV25FZ1JMTVJOQjhwWjhXbG9nVzBzZGRwc2J2SjBkMUdiV05SeTU4VEJ4aUk3bUdZQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 7월 금리 인상 예고 속 연준은 '동결'…한미 금리차에 환율 촉각 - 뉴시안</a>
-<p class="news-desc">한은 7월 금리 인상 예고 속 연준은 '동결'…한미 금리차에 환율 촉각 뉴시안</p>
+<p class="news-desc">［뉴시안= 송서영 기자］한국은행이 이달 기준금리를 0.25%포인트 인상할 것으로 전망되는 가운데 미국 연방준비제도(Fed·연준)는 기준금리를 동결할 것으로 예상된다. 한미 중앙은행의 통화정책 방향이 엇갈리면서 금리차 축소에 따른 원·달러 환율 향방에 관심이 쏠리고 있다.우리금융경영연구소는 5일 한은이 16일 열리는 금융통화위원회 통화정책방향 결정회의에서 기준금리를 연 2.50%에서 2.75%로 0.25%포인트(p) 인상할 것”이라고 예상했다. 금리 인상 배경으로는 고환율에 따른 물가 부담과 가계부채, 금융 불균형 우려가 꼽혔다.특히</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -162,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFA0ZllOcnhUa3BMd3F5WGpSd1hZN2ZEUndwWWFoZjVfWE1tY2tIUUg2SFY1RkcteEFoMDN6NF9QMFJMUGg2aERXSFdjNVgwRHNYMFdIb01mZFRQdEdSX2k0ZW00ZkRKX01LdzVV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">고용 식은 미국, 물가 뜨거운 한국…복잡해진 한은 셈법 - 비즈워치</a>
-<p class="news-desc">고용 식은 미국, 물가 뜨거운 한국…복잡해진 한은 셈법 비즈워치</p>
+<p class="news-desc">이달 16일 기준금리 결정을 앞둔 한은의 셈법이 복잡해졌다. 금리 인상 가능성이 거론됐던 미국은 예상보다 낮은 고용 성적표에 인상 기대감을 낮춘 반면, 한국은 경기 개선에 따른 수요 압력이 유가 하락 효과를 웃돌면서...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9fbEFPY2Fsa2x5ekt4X1FmcHV0d1BtQVFUdlJiNkwxNmk1SzhRci1WRlEwQzVBMVZobEJ0U1ZwRWdIRDVyX0R3Q2ZBNWlqSDRWMlhEdnRZbDFnWnlzcTAtbWtYZ2EtYWg3WHFHVXVQekpWYzEwUUJDLdIBeEFVX3lxTE9fbEFPY2Fsa2x5ekt4X1FmcHV0d1BtQVFUdlJiNkwxNmk1SzhRci1WRlEwQzVBMVZobEJ0U1ZwRWdIRDVyX0R3Q2ZBNWlqSDRWMlhEdnRZbDFnWnlzcTAtbWtYZ2EtYWg3WHFHVXVQekpWYzEwUUJDLQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">수출 늘어도 소용 없는 고환율…하반기는 내릴까[1600원 환율 오나③</a>
-<p class="news-desc">수출 늘어도 소용 없는 고환율…하반기는 내릴까[1600원 환율 오나③] 뉴시스</p>
+<p class="news-desc">경상흑자 규모 확대·양호한 성장 전망도 '무용'"외국인 매도세 지속시 1600원까지 열어둬야""미국 연준의 태도 변화 있으면 약달러 가능성" [서울=뉴시스] 박주성 기자 = 지난달 30일 오후 서울 중구 하나은행 딜링룸 전광판에 장중 원·달러 환율이 1550원을 넘어서고 있다. 2026.06.30. park7691@newsis.com [서울=뉴시스]김래현 기자 = 원·달러 환율이 결국 1997년 외환위기 수준에 도달했다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPWnItX1JEQ1Q3cmVVYVdYdXBjdG94cGV4aDBxZlVkMExlX3FtOFJZcGIzcDRibWVrNktwSEk3cVZwbVE0emE0Qlhla2hRTzd5eDlrdERvUG4tU2dUUC1IckNfZFBPWU4zRkU5aFlnM3l2eVFMNEZlS1BGTXI4Mlk5Wg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">2분기 실적·나스닥 상장… 반도체 투톱 ‘운명의 한주’</a>
-<p class="news-desc">2분기 실적·나스닥 상장… 반도체 투톱 ‘운명의 한주’ 조선일보</p>
+<p class="news-desc">삼성전자 2분기 매출 170조 및 영업이익 86조 역대급 실적 전망 빅테크 기업의 메모리 가격 인하 압박과 공급망 갈등 지속 양상 10일 SK하이닉스 나스닥 상장 통한 대규모 설비 투자 자금 확보</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qSXpwaGJKNHQtekJSUDNFNDdEY2RyaW8yMDRUMGlmQ0JIVE9YLXhjaHRLeTFFUV9vVTlFVVJNN1lzMzFINXZobV9WYnNJaWZxaFHSAVNBVV95cUxOdmFEUXpWbDhnZjFselBOZ0I3WGw3aEdBUUlQTUw4c2pYaXFEMk5VTExJVk80MkcyVTBQNVE1QVFsR3JQenc3NXFxR01zWjAwdWpENA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">증시만 키운 머니무브 정책…금리·환율·자금 밸런스 깨져 - 서울경제신문</a>
-<p class="news-desc">증시만 키운 머니무브 정책…금리·환율·자금 밸런스 깨져 서울경제신문</p>
+<p class="news-desc">한국의 지난해 경상수지 흑자는 1230억 5000만 달러로 사상 최대치를 찍었다. 올 4월에도 282억 9000만 달러 흑자를 기록했다. 경상수지 흑자는 달러 공급을 늘려 원화 강세를 불러오지만 지금은 반대다. 시장에서는 반도체 중심의 외끌이 증시가 환율과 금리, 금융</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9nZjZ4Q2I0SEtnN0tZRGt1dC1Gd1NzQU84WEF0YkJSNnJ5Y0lkOEZROGZ3TkFIZjRLUW0wb2pxWUc1cDhmTHE4eEhIQU1Eam9pSHZCcURoVk00clpZQU82d05FTEYzYVc1eHA1c1BqR1A?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'삼성전자', 역대급 영업익에도 차익매물에 주춤.美 ADR 상장 'SK하이닉스' 향방은? - 오피니언뉴스</a>
-<p class="news-desc">'삼성전자', 역대급 영업익에도 차익매물에 주춤.美 ADR 상장 'SK하이닉스' 향방은? 오피니언뉴스</p>
+<p class="news-desc">[오피니언뉴스=박정훈 기자] 삼성전자가 사상 최대 수준의 분기 영업이익을 기록했지만 주가는 오히려 큰 폭으로 하락했다. 역대급 실적이 곧 주가 상승으로 이어질 것이라는 기대와 달리 시장은 '이미 반영된 호재'로 받아들였기 때문이다. 투자자들의 관심은 자연스럽게 또 다른 반도체 대표주인 SK하이닉스로 향하고 있다.미국 나스닥 ADR(주식예탁증서) 상장을 추진 중인 SK하이닉스는 실적 발표와 해외 상장이라는 대형 이벤트를 앞두고 있다. 시장은 삼성전자와 같은 '실적 발표 이후 차익실현' 흐름이 반복될지, 아니면 해외 신규 자금 유입이라</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5PSVl6QlRheWtjb2oxWkpYYlJyT2QtNnNsODFSMUFNSTRxQ0FKZmZ6Q0QzZ3hGLW1HWllxSFdONWVBSnNkSWFlOVhISGI3blNET3FLbWlrcHVoekxrSzVCWVQ5bi1TMEdK?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 코스닥 동반 급락, 환율 1500원대 돌파하며 불안감 고조 - 2news.co.kr</a>
-<p class="news-desc">코스피 코스닥 동반 급락, 환율 1500원대 돌파하며 불안감 고조 2news.co.kr</p>
+<p class="news-desc">8일 오전 9시 5분 기준 코스피 지수는 전일 대비 177.29포인트(2.32%) 내린 7479.02를 기록하며 하락 출발했다. 코스닥 지수 역시 21.75포인트</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

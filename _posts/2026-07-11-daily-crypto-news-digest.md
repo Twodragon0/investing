@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-11 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFB5M1I3NHVsbDhJaW1GOE1XeDlLd192d2dtbVFiNU9qTDhGRm1fbTFwZ0lQNm5sa2ZWRDZsdC12ekRzRWVLbDd6Z2MwRUNyQVVicFNPaWVNLXRzYXU5NEFuSzFrb29PSlUwLUJBVXdiUDFXeGs?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">크립토핫이슈] 갈팡질팡 클래리티법…XRP·비트코인 동반 시험대</a>
-<p class="news-desc">[크립토핫이슈] 갈팡질팡 클래리티법…XRP·비트코인 동반 시험대 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 미국 암호화폐 시장 구조 법안인 클래리티법(CLARITY Act)의 8월 상원 휴회 전 통과 확률이 출렁이고 있다. 백악관이 목표로 삼았던 '7월4일 서명'이 무산된 데 이어, 트럼프 대통령 일가의 암호화폐 수익을 둘러싼 윤리 공방까지 겹치면서 여야 협상은 좀처럼 속도를 내지 못하고 있다. XRP는 결제량·거래량 지표에서 잇단 호재가 쏟아졌지만 정작 가격은 박스권에 머무는 '괴리' 현상이 뚜렷했고, 비트코인은 기관 매수세를 등에 업고 완만한 반등을 이어가면서도 전문가들 사이에서는 여전히 상반된 전망이 팽</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-11 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA3aHBlMEhKNERfcWJmUEVrWTBlQTg0bXRBLXZoMnVpYmpvMm5TZXdCa19iNTlTTGROdXJNSk5mQ3g2U3RqUnFBTUhTdEZPODN0WUV1clcxeDFMYVVtc3VyZVRReHZ4RnV5RTYtQ0Q3NVhpZEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 관련株, 비트코인 반등에 동반 강세.스트래티지 4%↑ - 마켓인</a>
-<p class="news-desc">비트코인 관련株, 비트코인 반등에 동반 강세.스트래티지 4%↑ 마켓인</p>
+<p class="news-desc">비트코인을 비롯한 암호화폐 시장이 강세를 보이면서 관련 종목들이 일제히 상승하고 있다.10일(현지시간) 비트코인 가격이 2% 오르자 대표적인 비트코인 보유 기업인 스트래티지(MSTR)는 4% 넘게 상승했다. 미국 최대 암호화폐 거래소 코인베이스(COIN) 주가도 2.3% 오르며 강세를 나타내고 있다.이날은 주요 알트코인 역시 상승 흐름에 동참했다. 코인데스...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-11 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1zQzR2ZXd3V3NZQm5JSm53cGcyT19zaE1wMDVYMTd6TF9GTF9xSHdZNXIyUFFhQlh6THFHVnkxM0tFNmdjSWEyMTZwNjlvTGZiamlTbzJhNG44UExmcE5rRkpuOGRyNG9WWTQ3YnRuM24yb28?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]암호화폐 시가총액 2조2169억 달러, 비트코인 6만1732달러·이더리움 1726달러 - 서울신문</a>
-<p class="news-desc">[서울데이터랩] 암호화폐 시가총액 2조2169억 달러, 비트코인 6만1732달러·이더리움 1726달러 서울신문</p>
+<p class="news-desc">글로벌 가상자산 시가총액이 2조2169억달러로 집계됐고, 비트코인과 이더리움이 각각 1%대 하락세를 보였다. 리플, 솔라나, 도지코인 등 주요 알트코인도 약세를 이어갔고, 공포탐욕지수 25로 투자심리는 공포 구간에 머물렀다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

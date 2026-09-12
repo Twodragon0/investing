@@ -293,7 +293,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ybEw4b2tmWlpQdW15UWlqbWhkNnNQcVJ2Nm1fNWozcHN5ck4zZ2d0ZjRMZjAyM2M2MmV0eXlLREQxUTkyZG1oZF96a0dCVWtlSUhBeGFqbF9IWUpfcnVv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 호황에 금리인상 ‘초읽기’…최종금리 3.50% 가능성도 고개 - 조세일보</a>
-<p class="news-desc">반도체 호황에 금리인상 ‘초읽기’…최종금리 3.50% 가능성도 고개 조세일보</p>
+<p class="news-desc">7월 금통위서 기준금리 2.50→2.75% 전망…10월 추가 인상 가능성도 열려반도체 수출 급증에 경기 부담 완화…물가 안정 명분이 통화정책 전면에소비자물가 3.2%, 근원물가 2.5%…기대인플레 확산 차단이 핵심고환율·수도권 집값·가계부채까지 압박…금융안정 명분 강화최종금리 3.25% 넘어 3.50% 가능성…단기물 중심 금리 상승 압력 ◆…신현송 한국은행 총재가 28일 오전 서울 중구 한국은행에서 열린 금융통화위원회 본회의에서 회의를 주재하고 있다. 사진=한국은행 제공 한국은행의 통화정책 시계가 다시 '긴축'으로 기울고 있다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Ua0FxVmY2RHJOampYSjZvOERRbTFtaGRHbWpYNFBTQy1uS1FKQ2lPbG1wV09udFo2V3JLTkNpM1JtNGRLSU5JOGhXc0hRUUU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 한마디에 비트코인 반등?…지금 주목해야 할 미국 관련주는</a>
-<p class="news-desc">트럼프 한마디에 비트코인 반등?…지금 주목해야 할 미국 관련주는 v.daum.net</p>
+<p class="news-desc">비트코인 등 주요 암호화폐 가격이 반등하면서 미국 증시에서는 암호화폐 관련 종목들이 다시 투자자들의 관심을 받고 있다. 시장에서는 비트코인 가격 상승과 함께 거래량이 회복될 경우 관련 기업들의 실적 기대감도 높아질 수 있다는 분석이 나온다. 해외 암호화폐 전문매체 코인게이프에 따르면 암호화폐 시장은 최근 24시간 동안 상승세를 보이며 투자심리가 개선됐다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1xeDBEMjY3b3NTYmNIUWpPcVdqUVdqMndWdi1GNkgyUVp5YkNGdTRBbXQ0NlljNVAwVDBoWEYyVEx6b0E2bUlnNnhDTmI5MkJQZU55M1JIZEd5WjdNNnJLU0QzdEo3d3RRemg2MTlNb1hGUjA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]7월 7일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]7월 7일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">7일 1시 기준 암호화폐 시총 상위권은 단기 혼조세다. 비트코인은 1위를 유지했고, 이더리움은 주간 11%대 상승으로 강세를 보였다. 테더와 유에스디코인은 달러 페그를 지켰고, 리플·솔라나·에이다도 주간 기준으로는 비교적 양호했다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -278,7 +278,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1weGVMZjl4dmozV3FjUXlXWFR5aHdhX3BxWHRwNmZzOHMtdTc4SWxVWFlrNXUyZGpDbG9LUm1ST3Q2RXVJQnpGMmZrUk1mM3FDWUEwWEVYT09Cdm5k?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 반도체 반등·비트코인 6만2000달러 사수…FOMC 의사록·CPI 앞두고 '눈치보기' - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 반도체 반등·비트코인 6만2000달러 사수…FOMC 의사록·CPI 앞두고 '눈치보기' 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 6일 미국 증시 개장 전 거래에서 메모리 반도체와 인공지능(AI) 관련 종목이 반등하는 가운데 비트코인은 6만2000달러선 부근에 거래되며 방향성을 탐색하고 있다. 시장은 지난주 예상보다 부진한 미국 고용지표에 안도했지만, 이번 주 공개되</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

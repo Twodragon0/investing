@@ -72,7 +72,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA3aHBlMEhKNERfcWJmUEVrWTBlQTg0bXRBLXZoMnVpYmpvMm5TZXdCa19iNTlTTGROdXJNSk5mQ3g2U3RqUnFBTUhTdEZPODN0WUV1clcxeDFMYVVtc3VyZVRReHZ4RnV5RTYtQ0Q3NVhpZEE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 관련株, 비트코인 반등에 동반 강세.스트래티지 4%↑ - 마켓인</a>
-<p class="news-desc">비트코인 관련株, 비트코인 반등에 동반 강세.스트래티지 4%↑ 마켓인</p>
+<p class="news-desc">비트코인을 비롯한 암호화폐 시장이 강세를 보이면서 관련 종목들이 일제히 상승하고 있다.10일(현지시간) 비트코인 가격이 2% 오르자 대표적인 비트코인 보유 기업인 스트래티지(MSTR)는 4% 넘게 상승했다. 미국 최대 암호화폐 거래소 코인베이스(COIN) 주가도 2.3% 오르며 강세를 나타내고 있다.이날은 주요 알트코인 역시 상승 흐름에 동참했다. 코인데스...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -84,7 +84,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBGQjRiSVVJem1QZktpel9ydHNjR1FXOEN3eFd0Z043ZmxEWkR4QUxkQ19KUWc4R3hxcTJVcU01VmFkVXZqNlVkVUZWLVpoU20tbjBV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">뉴햄프셔 행정위원회, 1억달러 규모 비트코인 담보 채권 부결</a>
-<p class="news-desc">뉴햄프셔 행정위원회, 1억달러 규모 비트코인 담보 채권 부결 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 비트코인 [사진: 셔터스톡][디지털투데이 황치규 기자]미국 뉴햄프셔주 행정위원회가 비트코인을 담보로 한 1억달러 규모 채권 발행안을 3대2로 부결했다. 10일(현지시간) 코인텔레그래프에 따르면 5명으로 구성된 위원회는 수요일 열린 청문회에서</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -168,7 +168,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1ENExqRW81S2Q5ekxMZTdrM3ZsV1BJM2JWTXAwczVDa2g5U2VTLWZaeTBhWVdocW1xWEdQXzZjMVdPMlZfaF9MbUJwNmczdXMxVGpJMTlIaHhPbFFhek1wUEtBdEFMaV8wbUF6YS1SXy1TSmM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]7월 10일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]7월 10일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">7월 10일 암호화폐 시총 상위종목은 대체로 상승했다. 비트코인은 24시간 3%대, 이더리움은 2%대 오르며 시장을 이끌었고, 테더와 유에스디코인 등 스테이블코인 거래도 크게 늘었다. 지캐시와 스텔라루멘은 강한 상승세를 보였다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -180,7 +180,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5WOUhWOExsMVBHMTZ4NFc5aFhVZmxGMlZua0NzcDZPWi14bzgyT05aTUYxbHNfbW8xeU9ybnFqeTdNc1VEMmJ2bTE3NkM1eFBkaUI3UGdIWU1YTzZpbENkM0VKT0dDbkxQRzlNcS0tTWI0ZTA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스탠다드차타드, 2026년 말 비트코인 10만달러 전망 유지</a>
-<p class="news-desc">스탠다드차타드, 2026년 말 비트코인 10만달러 전망 유지 디지털투데이</p>
+<p class="news-desc">[디지털투데이 AI리포터] 스탠다드차타드가 2026년 말 비트코인 가격 전망치 10만달러를 유지했다. 11일(현지시간) 블록체인 매체 코인포스트에 따르면 스탠다드차타드는 스트래티지의 비트코인 매도가 단기 전망을 흐릴 수는 있지만, 중장기 방향성을 바꾸는 신호가 아니라 노이즈라고 평가했다.제프리 켄드릭 스탠다드차타드 디지털 자산 조사 글로벌 책임자는 현재 6만4000달러 수준의 비트코인을 절호의 매수 기회로 봤다.스트래티지는 6월 29일부터 7월 5일까지 비트코인 3588BTC를 약 2억1600만달러에 매도했다. 이는 회사 기준 최대</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

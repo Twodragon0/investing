@@ -84,7 +84,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNamVjSjBRaXlob05yUTZXSVdRLTNFUUFIeXZtTmphS1RadWpxQjVYUjhWZ3V1Z2ZaMG1ZNlVFZ0l1eFNVeWRtUkt2cmpza0xRV2JTdGpiQ1BweTBUTUhiZ09MWUtmNjNxRGU3clpkUXVVdTJKQmtpbDdsMng2S3RTV1d0a01zZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 채굴업체들, AI 데이터센터로 변신한다는데</a>
-<p class="news-desc">암호화폐 채굴업체들, AI 데이터센터로 변신한다는데 조선일보</p>
+<p class="news-desc">빅테크 AI 데이터센터 전력 확보난 해결 위해 암호화폐 채굴장 시설 활용 아이렌과 라이엇플랫폼즈 등 주요 채굴 기업들 데이터센터 사업 비중 확대 채굴 수익성 악화와 전력 인프라 강점을 바탕으로 AI 인프라 기업으로 전환</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBlcDBPWUdyVXlzLVFGdF9tNXg4N2ZkRnVQa29SOXRNMjNWa2xJWVZvU2xQWjNzV04ySVRTYmlvaHNYU3ZmRkpjOWpKdFNFQkszUkJF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 약세론자 피터 시프 "비트코인 바닥가, 0달러"</a>
-<p class="news-desc">비트코인 약세론자 피터 시프 "비트코인 바닥가, 0달러" 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 비트코인 [사진: 셔터스톡][디지털투데이 김예슬 기자] 비트코인 저점 논쟁이 커지는 가운데 대표적 비트코인 비판론자인 피터 시프가 바닥 가격을 0달러로 제시했다.4일(이하 현지시간) 블록체인 매체 유투데이에 따르면 시프는 최근 엑스(트위터)에</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBzTUxTODl1czBDSXg3SV83Y2o0NzRscHFvY3VNUjV5eGNiWEFqcHlaOWphTlI0bGtsbklHbnl4LTljZ3RzSUNrMDJETzkwa2poYmtoSmtEZG_SAV5BVV95cUxNR3JaeWZRRm1RMkRMNEFMR0I3bURQN0JTZ1F6Mm5BREQtbC1mSnhpNVRqeDV6ZHA4ZUVnMnNaTGRkc1Njank3akFuS1ZuZzdicmhLR2g2UXRKMW4yeVBn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">자정 시세브리핑] 암호화폐 시장 혼조세… 비트코인 62,750달러, 이더리움 1,770달러 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">암호화폐 시장이 혼조세를 보이고 있다. 토큰포스트마켓에 따르면 2026년 7월 6일 오전 12시 7분(KST) 기준 비트코인은 전날 대비 0.15% 상승한 62,749.64달러(약 96,089,727원)에 거래되고 있다. 이더리움은 전날 대비 0.08% 하락한...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -234,7 +234,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBtemgwazE5TU1MeWhOTXNXOUV3enpnZWN1a2JyeDdGd0tDM09Ibm9CX2NzdndYZUhEUmlCTHhJR3JxOFJLeWxjTTBmYy0tYUItTmZpZ2dB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">러시아·이란·북한, 제재 회피 위한 암호화폐 사용 급증…지난해만 153조원 규모</a>
-<p class="news-desc">러시아·이란·북한, 제재 회피 위한 암호화폐 사용 급증…지난해만 153조원 규모 중앙일보</p>
+<p class="news-desc">러시아·이란·북한 등 미국의 제재 대상국들이 금융 제재를 우회하기 위한 수단으로 암호화폐를 적극 활용하고 있는 것으로 나타났다. 글로벌 블록체인 분석 업체 체이널리시스에 따르면 이들 국가와 연계된 암호화폐 계좌의 거래 규모는 지난해 약 1000억 달러(약 153조원)에 달한 것으로 추정된다. 미 재무부는 "2025년 이란으로 유입된 디지털 자산의 절반 이상이 노비텍스를 통해 처리됐다"며 "이 거래소는 이란 정부의 제재 회피와 IRGC 연계 거래를 지원해 왔다"고 밝혔다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

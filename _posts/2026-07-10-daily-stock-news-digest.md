@@ -216,7 +216,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtMlR1TU9PT1NTaTZ1Z2hZaW5IcHZsVmwzM0dPWkJxNTV1WE11WW53LWl3cnF1SkNxM0JKcG1rWXhlcUlyUXh5d0VOcnpvTUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“430만닉스 간다”…SK하닉, 미국 ADR 상장 이후 투자법</a>
-<p class="news-desc">“430만닉스 간다”…SK하닉, 미국 ADR 상장 이후 투자법 v.daum.net</p>
+<p class="news-desc">■ 반도체 수퍼위크, 당신의 선택은 「 반도체 ‘수퍼 위크’입니다. 7일 삼성전자 실적발표에 이어 10일(현지시간)엔 SK하이닉스가 미국증시예탁증서(ADR) 상장을 통해 미국 증시에 데뷔합니다. 호재만발의 한 주가 될 거란 기대와는 달리 삼성전자 실적이 발표된 7일 ‘셀온(재료 소진으로 인한 주가 하락)’ 현상으로 국내 반도체 빅2 기업의 주가는 6%대로</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1KZU11UXlaUl9vcUNld29Sb280dVNBTk1BYzB3Z2dSeDEzSE1ZanpweGRNTF9TRjVmVHZMZ3Y3bmtzMi1tNXhKSnBDNG53a2M?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">시장 따라잡기] 오는 10일 SK하이닉스 ADR 상장 이후 주가는?</a>
-<p class="news-desc">[시장 따라잡기] 오는 10일 SK하이닉스 ADR 상장 이후 주가는? v.daum.net</p>
+<p class="news-desc">■ 용감한 토크쇼 직설 '시장 따라잡기' - 손석우 앵커 경제평론가 및 건국대 겸임교수, 김태성 아이에셋 본부장 Q. 코스피, 7월에도 호실적을 타고 상승 흐름을 이어갈 것이란 전망이 많았는데요. 어제는 삼성전자 호실적에도 7600선까지 크게 흔들렸고요. 오늘(8일)은, 미국과 이란 간 긴장 재고조로 또 증시가 흔들리는 모습이네요? Q. 최근 시장 흐름을</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

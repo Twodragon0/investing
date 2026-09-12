@@ -180,7 +180,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1weGVMZjl4dmozV3FjUXlXWFR5aHdhX3BxWHRwNmZzOHMtdTc4SWxVWFlrNXUyZGpDbG9LUm1ST3Q2RXVJQnpGMmZrUk1mM3FDWUEwWEVYT09Cdm5k?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 반도체 반등·비트코인 6만2000달러 사수…FOMC 의사록·CPI 앞두고 '눈치보기' - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 반도체 반등·비트코인 6만2000달러 사수…FOMC 의사록·CPI 앞두고 '눈치보기' 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 6일 미국 증시 개장 전 거래에서 메모리 반도체와 인공지능(AI) 관련 종목이 반등하는 가운데 비트코인은 6만2000달러선 부근에 거래되며 방향성을 탐색하고 있다. 시장은 지난주 예상보다 부진한 미국 고용지표에 안도했지만, 이번 주 공개되</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -192,7 +192,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE4tcGlzRnZ0a1RnY1hLTDhMT2RGcE50V01qc0RDUmpFTE92dXJteFR0ajBnSHRHSEtpb3VJTC1XelBUekVRcFVUOEFNa3RTWThSWUhnUGxoTHlSV2tIa2tmRTZIY1B5eF9GcElaWlRTclVlalk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]비트코인 거래대금 30조원 돌파…이더리움·솔라나도 강세 - 서울신문</a>
-<p class="news-desc">[서울데이터랩] 비트코인 거래대금 30조원 돌파…이더리움·솔라나도 강세 서울신문</p>
+<p class="news-desc">암호화폐 시장은 비트코인 거래대금이 30조원을 넘기며 강보합 흐름을 나타냈다. 이더리움과 솔라나, 비앤비 등 주요 알트코인도 상승했고, 주간 기준으로는 에이다와 비트코인 캐시 등 일부 종목의 강세가 두드러졌다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

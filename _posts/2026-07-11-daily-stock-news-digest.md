@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBKaUdSWkNrOWNJN3lUNkYtSDdRSTk4UXZjT3V4NjloaTVldTkydlJrX3NDRkY2eDh1cnJtdi1XVG01dG4xMWlfa1VSZkhWYnFtV0tuVzRKb1JGQ1VxQUlWUUFzTXB1R1owUVQtSDliTG55Vlg5Smh3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도" &#124;</a>
-<p class="news-desc">[10일 매매 동향] 외국인, 순매도 1위는 SK하이닉스."ADR 상장 앞두고 1조7100억 순매도"</p>
+<p class="news-desc">삼성전자와 SK하이닉스는 각각 외국인 순매수 상위종목 1위와 순매도 상위종목 1위를 차지했다. 10일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBKZjlOTEFqMjZlTUZic1ZCSGh0alFTYXZpQzc4VS1WbllCY3huNXBIdXloM1B1T0tVTDJGU0VldUJCbnNXdzYwQkF4S0lIX3c1b2djRnExVEVlR09PbkxMdGFkVXAyUEowSE92VEQyMFrSAXRBVV95cUxQd1VreENuZzlFWHNneTlfUlJpQ3JhQVFMN2w4WUVBZi1CYXRBcVUtSklDc1lsdmVFUkRDb0ZqSTBvVHo4Sm1xcWlJbkhTbFRYWXAtZWprZDRIcWNnbHZyb2Q5N3g3d1Zja0NHeEpON19yUjh4Rw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">클로즈업] 코스피·코스닥 시장의 기관·외국인 투자자의 순매수·순매도 상위 톱10 종목</a>
-<p class="news-desc">[클로즈업] 코스피·코스닥 시장의 기관·외국인 투자자의 순매수·순매도 상위 톱10 종목 thefairnews.co.kr</p>
+<p class="news-desc">[더페어] 최준규 기자 = 극심한 롤러코스터 장세를 보인 9일 장 마감 결과 시장의 변동성을 방어한 외국인과 기관 투자자들은 최근 낙폭이 과도했던 반도체 대장주와 핵심 주도주를 집중적으로 쓸어 담은 것으로 나타났다. 개인이 지수 반등을 틈타 1조 5,000억 원에 달하는 매도 폭탄을</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>

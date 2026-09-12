@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1LYWdWb1RDaFVVYzE4Zk1wRzhiZy1TYzE5VjJzWnZCSlVITWhiaTdyOXIzMWVnTElKY25FS2xVSThSaGJRN0tBVmxIamxkN1hyOEU0T2VycTdQM0czQ096T2YtQmppRl9ReFow?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 7일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 395.02포인트 내린 7656.31에 마감했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE12SFVEUThqbWZwSmtDMlRES2dITGo5b2pjZ3Z2Y1RFUEo1VEs4bnk3R0c3Q0JiVFJudldhUEdnUVQzZmNKZ2ZuWV8tMy1MZE5VNTh4NWtfYnAxY29xeEg5UXdVQzNwYUFuYzAyeQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 특화 AI분석 나온다 LG-코스콤 결합… 엑사원 BI 활용 - 중소기업신문</a>
-<p class="news-desc">코스피·코스닥 특화 AI분석 나온다 LG-코스콤 결합… 엑사원 BI 활용 중소기업신문</p>
+<p class="news-desc">LG AI연구원과 코스콤(KOSCOM)이 손잡고 한국 주식시장에 특화된 AI 예측·분석 서비스를 선보인다.양사는 7일 서울 여의도 코스콤 본사에서 ‘AI 기반 한국 금융 데이터 분석 서비스 제공을 위한 전략적 업무협약’ 체결식을 진행했다. 양사는 LG AI연구원의 AI 예측 기술을 적용한 금융 AI 에이전트 ‘엑사원 BI(EXAONE Business Intelligence)’에 코스콤의 금융 데이터를 결합해 한국 주식시장에 특화된 AI 예측·분석 서비스를 구축하기로 했다.LG AI연구원이 개발한 엑사원 BI는 다수의 AI 에이전트가</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBIZnlMd0JfRVVzci1sb2dHY1pBWU1wLXR6SE1LVm9oby0yUC1EdHNfc19fZ3U1WWozS3R1MF96V3ZYN0NRMWhLYzNDdnhKZEdFUXRlY3paTDJfUTNrSjZUT3F0YVJmVWcwTWJZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">24시간 문 연 외환시장…1500원 환율 잡을까 - 비즈워치</a>
-<p class="news-desc">24시간 문 연 외환시장…1500원 환율 잡을까 비즈워치</p>
+<p class="news-desc">6일부터 외환시장 거래 시간이 사실상 24시간으로 늘어나면서 원/달러 환율을 둘러싼 전망도 엇갈리고 있다. 거래시간이 사실상 24시간으로 바뀌면서 외국인 외환시장 접근성이 개선되고 자금 유입도 확대돼 환율 변동성이 ...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wLTZRTFBVaHRZMUZ6UmphNUZDY0RLODZpRmRLN1NMOTJsRUloRjBIWGJ5dmM3TlNGTE9DODNTb0ZBQ3A2TDlTMEQ3aElEU2NOWDln?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">증시만 키운 머니무브 정책…금리·환율·자금 밸런스 깨져</a>
-<p class="news-desc">증시만 키운 머니무브 정책…금리·환율·자금 밸런스 깨져 네이트</p>
+<p class="news-desc">한국의 지난해 경상수지 흑자는 1230억 5000만 달러로 사상 최대치를 찍었다. 올 4월에도 282억 9000만 달러 흑자를 기록했다. 경상수지 흑자는 달러 공급을 늘려 원화 강세를 불러오지만 지금은 반대다. 시장에서는 반도체 중심의 외끌이 증시가 환율과 금리, 금융사들의 자금 사정에 연쇄적으로 영향을 주고 있다고 보고 있다. 환율만 해도 반도체 주가가 급등하자 외국인들이 차익 실현 물량을 쏟아내면서 원화 가치 하락을 부추기고 있다. 올 들어서 외국인은 유가증권시장에서만 상반기에 149조 464억 원을 순매도했다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1rLTh5WjgteV9zelVIbmIwNGR6RDJEdi1hcGMyV1dRUnZaM2lNeHZBX21iSkRFdkFTN2dJdEc2U3lfc2NQREVfWHp3QzJzOENGWVc2a3p2X3I2MXlJZXFlZlU4SGNTVnlVR3lF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 출발.코스닥 내림세 개장 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 출발.코스닥 내림세 개장 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 6일 코스피와 코스닥지수가 각각 오름세와 내림세로 출발했다.이날 코스피는 전 거래일보다 98.48포인트 오른 8186.82에 시작했으며</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNZWVKYVU0ZWZqZ0N3TEsxN0J6OW1La0dIU3ktdGl5TjY2NTNQWkdKQURyQUdHdXJfRkRrTG1OTF9LdGtyLXBicHZGSDJfQ19heGtvel9vTmlxRGVlNmF6NUNQQkl0ZlZWdUlLWGxTa1pBOWtXUkxwY3NkMVRxUTRzRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전 잠정 실적, 하이닉스 나스닥行… ‘반도체 투톱’ 운명의 한 주</a>
-<p class="news-desc">삼전 잠정 실적, 하이닉스 나스닥行… ‘반도체 투톱’ 운명의 한 주 조선일보</p>
+<p class="news-desc">7일 삼성전자 2분기 잠정 실적 발표와 10일 SK하이닉스 나스닥 상장 예정 애플 등 빅테크 기업들의 메모리 구매처 다변화 및 가격 협상 주도권 갈등 SK하이닉스 나스닥 상장을 통한 투자자 접근성 개선 및 기업 가치 재평가 기대</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBIZnlMd0JfRVVzci1sb2dHY1pBWU1wLXR6SE1LVm9oby0yUC1EdHNfc19fZ3U1WWozS3R1MF96V3ZYN0NRMWhLYzNDdnhKZEdFUXRlY3paTDJfUTNrSjZUT3F0YVJmVWcwTWJZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">24시간 문 연 외환시장…1500원 환율 잡을까 - 비즈워치</a>
-<p class="news-desc">24시간 문 연 외환시장…1500원 환율 잡을까 비즈워치</p>
+<p class="news-desc">6일부터 외환시장 거래 시간이 사실상 24시간으로 늘어나면서 원/달러 환율을 둘러싼 전망도 엇갈리고 있다. 거래시간이 사실상 24시간으로 바뀌면서 외국인 외환시장 접근성이 개선되고 자금 유입도 확대돼 환율 변동성이 ...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9rSHNkZjVRbXl6cE5KekkzZFlUSWRWS0ZiTlVvUndRMFFQdHlRUlc5b2xhNy1rVl9jUWpRMTJKdzBWYXZlSzh4b2pfRDUxalBlTUxJMW5fTmRJNWIzbFdmYzJsT29fR3RaNlHSAW5BVV95cUxPTTJ1eF9SY3hubVlyUTcydFlhdEZINC1YaUJmNml3R3UyR3R1QjJIdThzQUl0NXMtOXZ2dzFEV25FZ1JMTVJOQjhwWjhXbG9nVzBzZGRwc2J2SjBkMUdiV05SeTU4VEJ4aUk3bUdZQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 7월 금리 인상 예고 속 연준은 '동결'…한미 금리차에 환율 촉각 - 뉴시안</a>
-<p class="news-desc">한은 7월 금리 인상 예고 속 연준은 '동결'…한미 금리차에 환율 촉각 뉴시안</p>
+<p class="news-desc">［뉴시안= 송서영 기자］한국은행이 이달 기준금리를 0.25%포인트 인상할 것으로 전망되는 가운데 미국 연방준비제도(Fed·연준)는 기준금리를 동결할 것으로 예상된다. 한미 중앙은행의 통화정책 방향이 엇갈리면서 금리차 축소에 따른 원·달러 환율 향방에 관심이 쏠리고 있다.우리금융경영연구소는 5일 한은이 16일 열리는 금융통화위원회 통화정책방향 결정회의에서 기준금리를 연 2.50%에서 2.75%로 0.25%포인트(p) 인상할 것”이라고 예상했다. 금리 인상 배경으로는 고환율에 따른 물가 부담과 가계부채, 금융 불균형 우려가 꼽혔다.특히</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

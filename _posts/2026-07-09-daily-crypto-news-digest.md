@@ -62,7 +62,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE01bHZEVDFycEJLTFFKLVFfbXliRHpDckVfLVZObWZsUjRmZmNTaU5Oa0d6RVdOXzA2cTlPNUh4akFEOTNoOHdYQ0VyejNZQjBGcHZkY1RlNW1PUW1oRHVKNm55SWV6c3hkUTJGZzlZVXo?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이미선의 크립토ON] 비트코인 4년주기, 끝나지 않았다</a>
-<p class="news-desc">[이미선의 크립토ON] 비트코인 4년주기, 끝나지 않았다 연합인포맥스</p>
+<p class="news-desc">ETF 시대에도 반복되는 반감기 사이클 ◇9개월째 이어진 비트코인 부진…고점 대비 50% 하락 비트코인 가격은 2025년 10월 6일 12만6천달러로 전고점을 기록한 이후 50% 이상 떨어져 9개월째 지지부진한 흐름이 이어지고 있다. 4월 중 8만달러대로 일부 회복되는 모습도 보였지만 6월 들어 글로벌 주식시장이 조정을 겪자 다시 5만7천달러까지 동반 하락했고, 주식시장 대비로도 부진한 성과를 이어갔다.◇ETF 시대에 제기된 '반감기 무용론'2025년 10월 비트코인 가격이 급락했던 당시 시장에서는 과거 반감기 사이클에 따라 비트코</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ucGk1OVd4X0R6Snc1OTNEUkxyZWFRN0xMNG5pVGQ1Y2wwSVJxZUl5aWNPSl9PVnF1OGZ4WWJNS2VCbWF3LXZ1TzBNOTA3WndlMGt6clJmLTkwZjA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트럼프 한마디에 비트코인 반등?…지금 주목해야 할 미국 관련주는</a>
-<p class="news-desc">트럼프 한마디에 비트코인 반등?…지금 주목해야 할 미국 관련주는 v.daum.net</p>
+<p class="news-desc">비트코인 등 주요 암호화폐 가격이 반등하면서 미국 증시에서는 암호화폐 관련 종목들이 다시 투자자들의 관심을 받고 있다. 시장에서는 비트코인 가격 상승과 함께 거래량이 회복될 경우 관련 기업들의 실적 기대감도 높아질 수 있다는 분석이 나온다. 해외 암호화폐 전문매체 코인게이프에 따르면 암호화폐 시장은 최근 24시간 동안 상승세를 보이며 투자심리가 개선됐다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9RbjdPT2pxVGltQnBDYUMzTHpYZWNHcVRKenBDdWlPVWZCcVJQbWxoclg3MVRnSVp1SGxJbWx2Vk1jN1JRNUw4UTlzRWstLXVBendV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]암호화폐 시가총액 2조2512억 달러, 비트코인 62934달러·이더리움 1756달러</a>
-<p class="news-desc">[서울데이터랩] 암호화폐 시가총액 2조2512억 달러, 비트코인 62934달러·이더리움 1756달러 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : [서울신문]글로벌 가상자산 시황 중계 사이트 코인게코(CoinGecko)에 따르면 8일 오후 12시 01분 기준, 암호화폐 전체 시가총액은 2조 2512억 달러, 24시간 전체 거래량은 758억 달러로 집계됐다. 비트코인 도미넌스는 56.05%, 이더</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnVXVVIxVmJPdE1oYkhTOGtjd1A3SWRkVm41X1R6ZG0wdUZfX2RDc2FDRDVBZlZ4YTBCa3lweHZzaFpaN184RGFiM1RsdTdVUTJuS1lwYW1iNWdvX1o1cklBR1BRaE52YkRVS0dSdUljVGdib2t4dGZjWWx1NnZfYzlPeVNyMXhv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'스트래티지' 비트코인 매도로 83억 달러 손실… 암호화폐 투심 '얼음’</a>
-<p class="news-desc">'스트래티지' 비트코인 매도로 83억 달러 손실… 암호화폐 투심 '얼음’ 글로벌이코노믹</p>
+<p class="news-desc">비트코인 최다 보유 기업으로 알려진 전략적 투자사 '스트래티지(Strategy)'가 보유 중이던 비트코인을 대량 매도해 83억 달러(약 11조 5,000억 원) 규모의 막대한 손실을 기록한 것으로 확인됐다. 암호화폐 시장이 거시경제적 불확실성으로 인해 변동성을 키우는 가운데, 대표적인</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xOV92Nkk5SGt2U19nWjUwX3pqQTVjaUJvSlZKTUhKd0VNVVg3ZnVEVGp2T2NORTgxOWdBNWVGQnpMeDJQNFozcVMwMVlLZ01keGdqXzBxUmprUdIBVEFVX3lxTE9mcTEyNUhVSlpQSzJlMXJkZ004LUFEa21PZWpWallzZDJta3laekUyZXZxcmlBQVhPTHZiSHNPLVU1WjlLTUdCUmc2NXQ1aXctNURSWA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 금융제재 국가들 코인 거래 8배 급증</a>
-<p class="news-desc">美 금융제재 국가들 코인 거래 8배 급증 한국경제</p>
+<p class="news-desc">美 금융제재 국가들 코인 거래 8배 급증, 러·北 등 작년 1000억弗 매매</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -224,7 +224,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9kSWdpeGZfTU9qRExwLXdjNEZRM1VPV19kbkpjZ04xZmpwZmVoSXRaSE9OV1NNXzRGN19RdFljMExLTE1kaEppRjIxSlp0Y1ZaUVZ3bFlvTlfSAV5BVV95cUxORFVDRGpaVWVpb1dBM05ONzdZNXROcHByUXpuSjR4Y0dMZHloRWo3RmJTVHVJakl3UEc4V2RfMEZKZDQ0LTJNdHhycng4NzlnZC1UMmtXSU85dTN6ZVdR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">저녁 뉴스브리핑] SEC, 이달 암호화폐 규칙 제안 가능성 外 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">SEC, 이달 암호화폐 규칙 제안 가능성미국 증권거래위원회(SEC)가 이르면 이달 암호화폐 관련 새 규칙을 제안할 가능성이 있다고 PANews가 전했다. 개발사의 자금 조달 절차를 간소화하고, 토큰화 증권의 수탁·거래 기준을 명확히 하는...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -236,7 +236,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1menhPZGM0OVpiVUNiWjRNOHJsNndLdHBRUlZBQktPYmdzY3hyc2h2MDJsaURSaXpUS2xsVzhEMEFsRG1HRFMtYmRsQlZyVnREZTgwUHlHRTVRN0cxN0lUYTZtUEhBQkhUbzRGQWxB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">중동 긴장에 암호화폐 시장 흔들-비트코인·이더리움·XRP 일제히 약세 - 미디어파인</a>
-<p class="news-desc">중동 긴장에 암호화폐 시장 흔들-비트코인·이더리움·XRP 일제히 약세 미디어파인</p>
+<p class="news-desc">중동 지역의 지정학적 긴장이 다시 고조되면서 비트코인(BTC), 이더리움(ETH), 엑스알피(XRP)가 나란히 하락 압력을 받고 있다. 미국과</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

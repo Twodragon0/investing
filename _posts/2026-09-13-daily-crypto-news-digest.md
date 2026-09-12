@@ -166,7 +166,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE5fUkM0UnpWVzUxRVBfTkk2alBobE5kcW1KWHZFejIxUlpPM2Rma0JFNFJUamZEWnZob0Fkck9qRWtaakpIbFZiWDFR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인·金 상관관계 사상 최고 수준…‘디지털 금’ 기대에도 경계론 - 코인리더스</a>
-<p class="news-desc">비트코인·金 상관관계 사상 최고 수준…‘디지털 금’ 기대에도 경계론 코인리더스</p>
+<p class="news-desc">금,비트코인(BTC),ETF/챗GPT생성이미지 © 비트코인(BTC)과금의상관관계가사상최고수준에근접하면서‘금의대안’이라는기대가다시부상했지만,이를근거</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

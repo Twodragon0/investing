@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1wMVdFX0FYZ1E1TjdBdFAwRnJ6QmdseVNLYndyUWJFbjNPb1NlSFdLaHBBN3A2eXpJdEpKYjNwN2k1UnpTV2VLakh2cjFJb25LUm9wNnU5aUFsNE84MThMV0gwQl9objZC?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 장 초반 반등, 코스닥은 하락세 지속 - 2news.co.kr</a>
-<p class="news-desc">코스피 장 초반 반등, 코스닥은 하락세 지속 2news.co.kr</p>
+<p class="news-desc">국내 증시가 전일 급락 이후 혼조세를 보이며 등락을 거듭하고 있다.뉴스1에 따르면 3일 오전 9시 5분 기준 코스피 지수는 전일 대비 0.35% 상승한 7674.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xUEQ1VGRZbk5OY2k4RVRtN0s4SjdVN2x1XzhHU3F0ejVzeEx3X0FKNmdWRXU1enluM3NERzVnQUhuTEtHblcxTUxnVVNoUk5ReFlKWm5TLVJMbWpZVEdTSUVfWGRRd0RLU3kwM1h5RmZNM0xG0gF0QVVfeXFMTnFQRDVUZFluTk5jaThFVG03SzhKN1U3bHVfOEdTcXR6NXN4THdfQUo2Z1ZFdTV6eW4zc0RHNWdBSG5MS0duVzFNTGdVU2hSTlF4WUpablMtUkxtallUR1NJRV9YZFF3REtTeTAzWHlGZk0zTEY?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"현 상황 2010~2011년과 유사…한은 금리 인상시 금리·환율 안정"</a>
-<p class="news-desc">"현 상황 2010~2011년과 유사…한은 금리 인상시 금리·환율 안정" 연합인포맥스</p>
+<p class="news-desc">(서울=연합인포맥스) 고유권 선임기자 = 올해 하반기 이후 한국은행의 금리 인상 국면에서 장기채 금리와 달러-원 환율이 2010~2011년과 유사하게 안정화될 가능성이 있으며, 국내 주식과 채권 가격이 동반 상승하면서 양(+)의 상관관계가 나타날 것이란 전망이 나왔다. 연구소는 중동 전쟁 종전 양해각서(MOU) 체결 이후 국제유가가 하락하고, 정부도 적극적인 물가 대책을 시행하고 있어 소비자물가 상승률은 7~8월을 고점으로 점차 하향 안정될 것으로 봤다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE8tdTA2T3VfSjh5cFJaX1NyQklqdDF2T281QVZaZGtxQ0EyRHo4cUdRclVEMkpkY3BGalVPal84NTQtMERwdExNUloxNkx4dGtzdmQydkpnMUhnU0lycnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'환율 광풍'? 원달러 환율이 오르는 근본적 이유 - YTN</a>
-<p class="news-desc">'환율 광풍'? 원달러 환율이 오르는 근본적 이유 YTN</p>
+<p class="news-desc">- 2021년 1,000원대였던 환율, 5년째 지속적으로 올라 1,500원 넘겨 - 장기적 환율 상승, 구조적 문제 때문 "결국 금리 때문" - 美 2022년부터 금리인상기 돌입, 2023년쯤 美에 역전 발생 - 3년이상 미금리가 더 높은 '역전'..'역사상 가장 긴 기간' - 국제 금융시장에서 더 안전한 투자하려면, 韓금리가 美금리보다 더 높아야하는 구조 - 경제전문가들 "한국은행 금리인상 빨리 해라!</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -156,7 +156,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBZNW9ZV0xvQWQyOTdxR19ZZFBlZk92T08waGhZc3g0cEk3eWJzOUZ2LUktSVhIYXBwRXZoc3VRT3JtaFZQWFM3ZXVFTnFheTRBVk1JaXBDY2F5a2lRUE1KZHMtaE9zaUVGUW5CdTBOUkJIWEXSAXdBVV95cUxPT3B2QXlyUGFsSTFUQXJHTlFFVzRNckhhQUxkNlFzLTE5NlBLeVI3eWFrdnNLb3RSRDF1a0w2dEM5aElJRElvR2FXc2M5T0hhLVRpeWZXeWtPNFJXcG5qbjJIOTBKbHd2WUhVZnA1a2laQnNvWF9iVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주간 매매동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목.외국인 반도체 집중 매도</a>
-<p class="news-desc">[주간 매매동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목.외국인 반도체 집중 매도 핀포인트뉴스</p>
+<p class="news-desc">지난달 29일부터 이달 3일 까지 한주간 유가증권시장과 코스닥시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -168,7 +168,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hb0paMjI5cWZuOEcxbzd1U1l5SF8zOXA5VnY1QUNwUkRiZjFXWl9CVTVkTzFWNWl1VmItMWdqSFFoeXBNcHQ3Z3ZVUHhVUkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘반도체 피크아웃’ 우려에도…67만전자·420만닉스 전망, “아직도 싸다”</a>
-<p class="news-desc">‘반도체 피크아웃’ 우려에도…67만전자·420만닉스 전망, “아직도 싸다” v.daum.net</p>
+<p class="news-desc">미국 빅테크 기업 메타의 과잉 투자 논란과 반도체 수요 피크아웃 우려가 제기되면서 한국과 미국의 반도체주가 출렁이고 있다. 하지만 국내외 증권사에서는 여전히 삼성전자와 SK하이닉스의 주가가 저평가됐다며 목표주가를 높이고 있다. 5일 금융권에 따르면 신한투자증권은 지난달 30일 삼성전자와 SK하이닉스에 대해 “예상을 상회하는 (반도체) 가격 상승 흐름이</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -180,7 +180,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE0zWHBfeEhnRUFIZWxtc25BZVZvUEhUeEJDVE5ManhRd3ZjZjM5dkNOLXljTk5sQjdDSEVjQU9hQmk1bzI0bDRWRVprYzJmd1BkSlo4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ET특징주] 美 반도체 삭풍에도… 삼성전자·SK하이닉스 주가 반등</a>
-<p class="news-desc">[ET특징주] 美 반도체 삭풍에도… 삼성전자·SK하이닉스 주가 반등 전자신문</p>
+<p class="news-desc">전날 큰 폭으로 내려앉았던 삼성전자와 SK하이닉스 주가가 3일 반등하고 있다. 이날 1시 11분 기준 삼성전자(005930) 주가는 전 거래일 대비 7.87% 상승한 30만 8500원에 거래되고 있다. 전날 9.06% 하락한 28만 6000원으로 마감했으나, 이날 반등해 30만원선을 회복하는 모습이다. 같은 시각 SK하이닉스(000660)는 6.22% 상승한 232만 3000원에 거래되고 있다. SK하이닉스 역시 전날 14.57% 급락해 218</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
