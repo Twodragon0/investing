@@ -1,31 +1,5 @@
 {
   "seen": {
-    "7b15f027d95d530100b2c219": "2026-08-12T23:10:49",
-    "32efc57449664a8f25f8e763": "2026-08-12T23:10:49",
-    "dd41dc30bb67383e586dc828": "2026-08-12T23:10:49",
-    "66c3af68e53120d05b62c4b4": "2026-08-12T23:10:49",
-    "1b6ea03bb0fb43e7af510304": "2026-08-12T23:10:49",
-    "e979a5ab286f68c086da797a": "2026-08-12T23:10:49",
-    "f2aa360e1b901196b80409d9": "2026-08-12T23:10:49",
-    "ac041a71236cda6420581901": "2026-08-12T23:10:49",
-    "56136ebc6a774c7a631c7bda": "2026-08-12T23:10:49",
-    "cc6d81272c6eb7dcbdd83040": "2026-08-12T23:10:49",
-    "3ee403cc5ec356d01c333264": "2026-08-12T23:10:49",
-    "0092ab33f0c59a6dcec67052": "2026-08-12T23:10:49",
-    "0824b4c26e4b03314a61ea00": "2026-08-12T23:10:49",
-    "4b06e96169aaf0beac25afe0": "2026-08-12T23:10:49",
-    "3af372663f2a79a3353d809d": "2026-08-12T23:10:49",
-    "1f0f5024782a9f8376143e43": "2026-08-12T23:10:49",
-    "cbd3ef7ccedfe6ec1fad56b2": "2026-08-12T23:10:49",
-    "6e01ed2c5a32307668176af4": "2026-08-12T23:10:49",
-    "2fce7381db015ef24de45a12": "2026-08-12T23:10:49",
-    "31b5576f6951f1ae3910e8c1": "2026-08-12T23:10:49",
-    "716cd683e50cdcaae05a3d15": "2026-08-12T23:10:49",
-    "9c8d89d1129dd0aafc28f667": "2026-08-12T23:10:49",
-    "521fe9d20fa748d60b47c6b6": "2026-08-12T23:10:49",
-    "de8b868a042cefed362e57b2": "2026-08-12T23:10:49",
-    "55656ca57badadd543baf594": "2026-08-12T23:10:49",
-    "07de1227a68dcc14a2dccc72": "2026-08-12T23:10:49",
     "cdfd6fb328e0c7c9a0496465": "2026-08-13T23:12:50",
     "551d2d7321b1e3d644fecc82": "2026-08-13T23:12:50",
     "36816b6f22daa63109e41568": "2026-08-13T23:12:50",
@@ -707,7 +681,37 @@
     "d42e43eb9befda46fa06b89d": "2026-09-11T00:23:05",
     "2341b088a9577fbf34ca9ee0": "2026-09-11T00:23:05",
     "5134edc3e718873875a23a56": "2026-09-11T00:23:05",
-    "313ff68b637658d91cfa293b": "2026-09-11T00:23:05"
+    "313ff68b637658d91cfa293b": "2026-09-11T00:23:05",
+    "fe4758d38a91cdbc4217db01": "2026-09-12T00:29:45",
+    "dd3e5a832eb2d5fe05f25adb": "2026-09-12T00:29:45",
+    "9a60433057369fb404312437": "2026-09-12T00:29:45",
+    "2e83ea8b88a59a1791a59515": "2026-09-12T00:29:45",
+    "c113d0fd13b363a51ee8a497": "2026-09-12T00:29:45",
+    "a4d49acbda87f9ab54d645ed": "2026-09-12T00:29:45",
+    "7cd93ed1eef438135d8ff7bb": "2026-09-12T00:29:45",
+    "0f151fee441b7106ee004ef5": "2026-09-12T00:29:45",
+    "b2a3eadf0e747b6f0e60cba5": "2026-09-12T00:29:45",
+    "0c71a14a03889c493e1c181d": "2026-09-12T00:29:45",
+    "15b5ffb5302018a148c558d6": "2026-09-12T00:29:45",
+    "60f48bb422a750fd9c637b13": "2026-09-12T00:29:45",
+    "c73fa2e8d22e2353b9deb729": "2026-09-12T00:29:45",
+    "a0a1a00505c90f713506d13f": "2026-09-12T00:29:45",
+    "c57bae81f705e75ea6eea774": "2026-09-12T00:29:45",
+    "76170027b90ebd52effdc4d0": "2026-09-12T00:29:45",
+    "4753010709ddaa9070452deb": "2026-09-12T00:29:45",
+    "1371f048a00c0d4a8d86effa": "2026-09-12T00:29:45",
+    "4c2525f324e72a457412af5d": "2026-09-12T00:29:45",
+    "9ec7097c7b5600eb16d9863f": "2026-09-12T00:29:45",
+    "36226323741ebe3c2a7d4ec5": "2026-09-12T00:29:45",
+    "7115bfa63a1267ad4f61f1c2": "2026-09-12T00:29:45",
+    "7bce39685b01bb220c5e3378": "2026-09-12T00:29:45",
+    "0ec1a01492e7d975f81d0e6c": "2026-09-12T00:29:45",
+    "0158e928a6c846182902fec2": "2026-09-12T00:29:45",
+    "9ae0aab0500fd5fe1ffe59f9": "2026-09-12T00:29:45",
+    "81c9a240ce321293e807df3c": "2026-09-12T00:29:45",
+    "68a5422108e715d5f68194ca": "2026-09-12T00:29:45",
+    "7b24f78eee7fe67e55633b73": "2026-09-12T00:29:45",
+    "e27624f759dbf135c89cf2f0": "2026-09-12T00:29:45"
   },
   "titles": [
     [
@@ -17813,6 +17817,126 @@
     [
       "정치인 거래정책 리포트 20260911",
       "2026-09-11"
+    ],
+    [
+      "congress trade representative maria elvira salazar just disclosed new stock trades",
+      "2026-09-12"
+    ],
+    [
+      "century communities nyse ccs cfo granted new dividendlinked share rights stock titan",
+      "2026-09-12"
+    ],
+    [
+      "39share grant lifts norwood financial nwfl directors holdings stock titan",
+      "2026-09-12"
+    ],
+    [
+      "five point holdings fph compensates director with 42406share stock grant stock titan",
+      "2026-09-12"
+    ],
+    [
+      "five point holdings nyse fph grants director 15779 restricted shares vesting in 2027 stock titan",
+      "2026-09-12"
+    ],
+    [
+      "norwood financial nasdaq nwfl director boosts stake to 15972 shares stock titan",
+      "2026-09-12"
+    ],
+    [
+      "union affiliates sell amalgamated nasdaq amal shares but still hold millions stock titan",
+      "2026-09-12"
+    ],
+    [
+      "director at five point fph gets 15779 restricted shares vesting in 2027 stock titan",
+      "2026-09-12"
+    ],
+    [
+      "director at five point holdings nyse fph gets 15779 restricted shares as 2026 compensation stock titan",
+      "2026-09-12"
+    ],
+    [
+      "silver lake sells dell nyse dell shares above 530 each stock titan",
+      "2026-09-12"
+    ],
+    [
+      "five point holdings nyse fph grants director 15779 restricted shares stock titan",
+      "2026-09-12"
+    ],
+    [
+      "directors new quicklogic quik stock award vests in one year stock titan",
+      "2026-09-12"
+    ],
+    [
+      "century communities nyse ccs insider adds more dividendshare rights stock titan",
+      "2026-09-12"
+    ],
+    [
+      "gen digital gen director granted new stock units stock titan",
+      "2026-09-12"
+    ],
+    [
+      "form 4 provectus biopharmaceuticals inc insider trading activity stock titan",
+      "2026-09-12"
+    ],
+    [
+      "gen digital gen director gets 9072 rsus and reports rights that may pay 23 per share stock titan",
+      "2026-09-12"
+    ],
+    [
+      "the latest on the escalating trade war between canada and the united states yahoo finance canada",
+      "2026-09-12"
+    ],
+    [
+      "한은 대내외 여건 따라 기준금리 인상 시기속도 결정",
+      "2026-09-12"
+    ],
+    [
+      "한은 대내외 여건 따라 기준금리 인상 속도 결정",
+      "2026-09-12"
+    ],
+    [
+      "한은 대내외 여건 검토해 기준금리 인상 시기 결정 ytn",
+      "2026-09-12"
+    ],
+    [
+      "한은 대내외 여건 점검하며 기준금리 인상 속도 결정 newsmtncokr",
+      "2026-09-12"
+    ],
+    [
+      "experts predict no fed rate cut next week what it means newsweek",
+      "2026-09-12"
+    ],
+    [
+      "week ahead for fx bonds all eyes on fed rate decision",
+      "2026-09-12"
+    ],
+    [
+      "fed rate hike in september is all but guaranteed after cpi report economists say",
+      "2026-09-12"
+    ],
+    [
+      "fed rate hike odds surge to 90 on monthly jump in core prices",
+      "2026-09-12"
+    ],
+    [
+      "the fed is poised for a rate hike it rarely stops at one",
+      "2026-09-12"
+    ],
+    [
+      "fomc preview fed set to hike 25bp in recalibration move ing think",
+      "2026-09-12"
+    ],
+    [
+      "the fed can hike but it wont derail golds longterm bull market analysts kitco",
+      "2026-09-12"
+    ],
+    [
+      "european central bank again raises interest rates amid iran war the american conservative",
+      "2026-09-12"
+    ],
+    [
+      "정치인 거래정책 리포트 20260912",
+      "2026-09-12"
     ]
   ],
   "seen_urls": {}
