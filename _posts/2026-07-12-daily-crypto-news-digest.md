@@ -84,7 +84,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBGQjRiSVVJem1QZktpel9ydHNjR1FXOEN3eFd0Z043ZmxEWkR4QUxkQ19KUWc4R3hxcTJVcU01VmFkVXZqNlVkVUZWLVpoU20tbjBV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">뉴햄프셔 행정위원회, 1억달러 규모 비트코인 담보 채권 부결</a>
-<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 비트코인 [사진: 셔터스톡][디지털투데이 황치규 기자]미국 뉴햄프셔주 행정위원회가 비트코인을 담보로 한 1억달러 규모 채권 발행안을 3대2로 부결했다. 10일(현지시간) 코인텔레그래프에 따르면 5명으로 구성된 위원회는 수요일 열린 청문회에서</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 비트코인 [사진: 셔터스톡][디지털투데이 황치규 기자] 미국 뉴햄프셔주 행정위원회가 비트코인을 담보로 한 1억달러 규모 채권 발행안을 3대2로 부결했다. 10일(현지시간) 코인텔레그래프에 따르면 5명으로 구성된 위원회는 수요일 열린 청문회에서</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

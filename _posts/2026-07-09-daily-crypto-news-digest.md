@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9RbjdPT2pxVGltQnBDYUMzTHpYZWNHcVRKenBDdWlPVWZCcVJQbWxoclg3MVRnSVp1SGxJbWx2Vk1jN1JRNUw4UTlzRWstLXVBendV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]암호화폐 시가총액 2조2512억 달러, 비트코인 62934달러·이더리움 1756달러</a>
-<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : [서울신문]글로벌 가상자산 시황 중계 사이트 코인게코(CoinGecko)에 따르면 8일 오후 12시 01분 기준, 암호화폐 전체 시가총액은 2조 2512억 달러, 24시간 전체 거래량은 758억 달러로 집계됐다. 비트코인 도미넌스는 56.05%, 이더</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : [서울신문] 글로벌 가상자산 시황 중계 사이트 코인게코(CoinGecko)에 따르면 8일 오후 12시 01분 기준, 암호화폐 전체 시가총액은 2조 2512억 달러, 24시간 전체 거래량은 758억 달러로 집계됐다. 비트코인 도미넌스는 56.05%, 이더</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

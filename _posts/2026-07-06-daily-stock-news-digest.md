@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9fbEFPY2Fsa2x5ekt4X1FmcHV0d1BtQVFUdlJiNkwxNmk1SzhRci1WRlEwQzVBMVZobEJ0U1ZwRWdIRDVyX0R3Q2ZBNWlqSDRWMlhEdnRZbDFnWnlzcTAtbWtYZ2EtYWg3WHFHVXVQekpWYzEwUUJDLdIBeEFVX3lxTE9fbEFPY2Fsa2x5ekt4X1FmcHV0d1BtQVFUdlJiNkwxNmk1SzhRci1WRlEwQzVBMVZobEJ0U1ZwRWdIRDVyX0R3Q2ZBNWlqSDRWMlhEdnRZbDFnWnlzcTAtbWtYZ2EtYWg3WHFHVXVQekpWYzEwUUJDLQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">수출 늘어도 소용 없는 고환율…하반기는 내릴까[1600원 환율 오나③</a>
-<p class="news-desc">경상흑자 규모 확대·양호한 성장 전망도 '무용'"외국인 매도세 지속시 1600원까지 열어둬야""미국 연준의 태도 변화 있으면 약달러 가능성" [서울=뉴시스] 박주성 기자 = 지난달 30일 오후 서울 중구 하나은행 딜링룸 전광판에 장중 원·달러 환율이 1550원을 넘어서고 있다. 2026.06.30. park7691@newsis.com [서울=뉴시스]김래현 기자 = 원·달러 환율이 결국 1997년 외환위기 수준에 도달했다.</p>
+<p class="news-desc">경상흑자 규모 확대·양호한 성장 전망도 '무용'"외국인 매도세 지속시 1600원까지 열어둬야""미국 연준의 태도 변화 있으면 약달러 가능성" [서울=뉴시스] 박주성 기자 = 지난달 30일 오후 서울 중구 하나은행 딜링룸 전광판에 장중 원·달러 환율이 1550원을 넘어서고 있다. 2026.06.30. park7691@newsis.com [서울=뉴시스] 김래현 기자 = 원·달러 환율이 결국 1997년 외환위기 수준에 도달했다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
