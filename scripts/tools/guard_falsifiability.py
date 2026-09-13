@@ -656,6 +656,61 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "          if false; then",
         "tests/test_supply_chain_lock_gate_guard.py::TestFailClosed::test_changes_failure_blocks",
     ),
+    # ---------------------------------------------------------------------
+    # Part 9 (2026-09-13): Tier 2 잔여 3축 — 락 동기화 워크플로우, `_state` 고아
+    # 탐지 배선, 자격증명 로깅. 계획서 Step 3 을 여기서 마친다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        # `pip-compile` 은 sdist 를 빌드하며 임의 코드를 실행한다. write 토큰과
+        # 결합하면 권한 상승이다 — 이 워크플로우에서 가장 비싼 실수.
+        "락 동기화에 pull_request_target 도입 (권한 상승)",
+        ".github/workflows/requirements-lock-sync.yml",
+        "  pull_request:\n",
+        "  pull_request_target:\n  pull_request:\n",
+        "tests/test_requirements_lock_sync_workflow_guard.py::test_does_not_use_pull_request_target",
+    ),
+    StaticCase(
+        "락 생성 파이썬 버전 변경 (무관 패키지까지 drift)",
+        ".github/workflows/requirements-lock-sync.yml",
+        "python-version: '3.11'",
+        "python-version: '3.12'",
+        "tests/test_requirements_lock_sync_workflow_guard.py::test_python_is_pinned_to_the_lock_generation_version",
+    ),
+    StaticCase(
+        # in-place 앵커가 깨지면 봇 PR 하나가 전 의존성을 끌어올린다.
+        "락 재생성에 --upgrade 추가 (in-place 앵커 파괴)",
+        ".github/workflows/requirements-lock-sync.yml",
+        "        run: bash scripts/refresh_requirements_lock.sh\n",
+        "        run: bash scripts/refresh_requirements_lock.sh --upgrade\n",
+        "tests/test_requirements_lock_sync_workflow_guard.py::test_regeneration_stays_in_place",
+    ),
+    StaticCase(
+        # 수집기가 죽었을 때야말로 고아 temp 가 남는다. always() 가 빠지면 정확히
+        # 그 경우에만 검사가 돌지 않는다.
+        "고아 탐지 if: always() 제거 (수집기 크래시 시 미실행)",
+        ".github/actions/python-collect/action.yml",
+        "      if: always()\n",
+        "",
+        "tests/test_state_orphan_ci_detection_guard.py::test_check_runs_even_when_the_collector_crashed",
+    ),
+    StaticCase(
+        "고아 탐지 임계값 상향 (영원히 발화하지 않음)",
+        ".github/actions/python-collect/action.yml",
+        "check_state_orphans.py --min-age-minutes 0",
+        "check_state_orphans.py --min-age-minutes 60",
+        "tests/test_state_orphan_ci_detection_guard.py::test_threshold_is_low_enough_to_ever_fire",
+    ),
+    StaticCase(
+        # 주입은 대상 모듈에서 실행 가능해야 한다(2번 규약). `crypto_api.py` 는
+        # 이미 `requests` 를 import 하므로 이름이 해석된다.
+        "자격증명 파라미터를 redact 없이 requests 로 보냄",
+        "scripts/common/crypto_api.py",
+        None,
+        "\n\ndef _falsifiability_probe(key: str) -> None:\n"
+        '    params = {"api_key": key}\n'
+        '    requests.get("https://example.invalid/probe", params=params, timeout=1)\n',
+        "tests/test_credential_logging_guard.py::test_credential_bearing_requests_are_redacted",
+    ),
 )
 
 
@@ -694,17 +749,21 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     "tests/test_apt_install_resilience_guard.py": "Tier 1 — glob 스캐너. test_repo_actually_has_apt_install_steps 가 명시 트립와이어",
     "tests/test_workflow_concurrency_scope_guard.py": "Tier 1 — glob 스캐너. test_guard_covers_at_least_one_workflow 가 트립와이어",
     "tests/test_dependabot_pip_scope_guard.py": "Tier 1 — 설정 스캐너. dirs/manifests 트립와이어 보유",
-    # --- Tier 2: 폭발 반경 상위. 하네스 등록이 올바른 도구이나 authoring 미완 ---
-    "tests/test_requirements_lock_sync_workflow_guard.py": "Tier 2 — 공급망 락 동기화 배선",
-    "tests/test_state_orphan_ci_detection_guard.py": "Tier 2 — _state 고아 탐지 CI 배선",
-    "tests/test_credential_logging_guard.py": "Tier 2 — 보안 축. 카나리 1건 보유로 부분 방어는 있음",
-    # --- Tier 3: 셸 스크립트 행동 가드. 등록 전에 판정이 선행되어야 한다 ---
-    # 텍스트 단언(안전 플래그 문자열 존재)인지 행동 단언(실행 결과)인지 먼저
-    # 판정한다. 텍스트 단언이면 처방은 등록이 아니라 가드 재작성이고, 그대로
-    # 등록하면 텍스트 단언에 falsifiability 도장을 찍는 셈이 된다.
-    "tests/test_dev_sync_state_safe_guard.py": "Tier 3 — 셸 행동 가드. 텍스트/행동 단언 판정 선행 필요",
-    "tests/test_component_counts_drift_hook_guard.py": "Tier 3 — 셸 훅 가드. 텍스트/행동 단언 판정 선행 필요",
-    "tests/test_state_guard_command_matching.py": "Tier 3 — 셸 훅 가드. 텍스트/행동 단언 판정 선행 필요",
+    # --- Tier 2: 전원 등록 완료 (2026-09-11 supply_chain_lock_gate, 2026-09-13 잔여 3축) ---
+    # --- Tier 3: 셸 스크립트 가드. 2026-09-13 판정 결과 셋이 갈렸다 ---
+    # 계획서는 셋을 "셸 행동 가드"로 묶었으나 실측하니 하나는 텍스트 단언이다.
+    #
+    # `dev_sync_state_safe` 는 전 테스트가 `_code_only(_SCRIPT.read_text())` 결과에
+    # substring/regex 를 건다(`"set -euo pipefail" in code` 등). `subprocess` import 는
+    # 로컬 bash 버전 확인용 skip 조건일 뿐 스크립트를 실행하지 않는다. 이건 결함 B 가
+    # 아니라 **검증이 프로덕션 경로를 관측하지 않는** 더 나쁜 상태다 — 문자열을 지우는
+    # 뮤테이션에는 red 가 되므로 등록하면 falsifiable 해 **보이지만**, 문자열을 남긴 채
+    # 행동만 바꾸는 회귀에는 여전히 눈이 멀어 있다. 처방은 등록이 아니라 재작성이다.
+    "tests/test_dev_sync_state_safe_guard.py": "Tier 3 — **텍스트 단언**(2026-09-13 판정). 등록 금지 — 행동 관측으로 재작성이 선행되어야 한다",
+    # 나머지 둘은 임시 git 저장소에서 훅을 실제 실행하고 returncode·JSON 결정
+    # 페이로드를 단언한다. 진짜 행동 관측이므로 등록 가능하다.
+    "tests/test_component_counts_drift_hook_guard.py": "Tier 3 — 행동 단언 확인됨(2026-09-13). 등록 가능, authoring 미착수",
+    "tests/test_state_guard_command_matching.py": "Tier 3 — 행동 단언 확인됨(2026-09-13). 등록 가능, authoring 미착수",
     # --- Tier 4: 자기검증 카나리 보유. 하네스 등록의 한계 효용이 낮다 ---
     # 알려진 위반을 넣어 red 를 확인하는 테스트를 이미 갖고 있어 결함 B 에 대한
     # 로컬 증거가 존재한다.
@@ -731,7 +790,7 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
 #: 커버리지 하한과 같은 래칫이다. 가드를 `STATIC_CASES` 에 등록하거나 Tier 1
 #: 처방(규모 단언)으로 면제 사유를 없앨 때마다 이 값을 함께 내린다. 상한이 없으면
 #: 목록이 고무도장이 된다 — 등록보다 면제가 항상 싸기 때문이다.
-_MAX_EXEMPTIONS = 29
+_MAX_EXEMPTIONS = 26
 
 #: 가드 테스트 모듈로 간주하는 파일명 패턴.
 #:
