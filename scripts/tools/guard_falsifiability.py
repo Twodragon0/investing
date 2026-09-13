@@ -711,6 +711,26 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         '    requests.get("https://example.invalid/probe", params=params, timeout=1)\n',
         "tests/test_credential_logging_guard.py::test_credential_bearing_requests_are_redacted",
     ),
+    # ---------------------------------------------------------------------
+    # Part 10 (2026-09-13): `dev_sync_state_safe.sh`. 이 가드는 등록 **전에**
+    # 재작성이 필요했다 — 안전 단언 5건이 전부 소스 텍스트를 읽고 있어서,
+    # 등록하면 "문자열을 지우는" 뮤테이션에 red 가 되어 falsifiable 해 보이지만
+    # "문자열을 남긴 채 행동만 바꾸는" 회귀에는 여전히 눈이 멀어 있었다.
+    #
+    # 아래 뮤테이션이 정확히 그 맹점이고, 판별력을 실측했다: 재작성 **전** 텍스트
+    # 테스트는 11 passed(놓침), 재작성 **후** 행동 테스트는 2 failed(잡음).
+    # ---------------------------------------------------------------------
+    StaticCase(
+        # `_state` 밖 파일을 INSIDE 로 분류 = 되돌리기 대상에 포함. 텍스트 마커는
+        # 전부 그대로다 — `_state/*` 리터럴, `${#OUTSIDE[@]}` 블록,
+        # `git checkout -- "${INSIDE[@]}"`, MAX_STATE_DIFF_LINES, FORCE,
+        # restore_skip_worktree, trap ERR. 소스를 읽는 가드는 이걸 볼 수 없다.
+        "동기화 스크립트가 _state 밖 변경까지 되돌림 (사용자 작업물 삭제)",
+        "scripts/dev_sync_state_safe.sh",
+        '  else\n    OUTSIDE+=("${f}")\n  fi',
+        '  else\n    INSIDE+=("${f}")\n  fi',
+        "tests/test_dev_sync_state_safe_guard.py::test_aborts_when_non_state_files_are_dirty",
+    ),
 )
 
 
@@ -759,7 +779,6 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     # 아니라 **검증이 프로덕션 경로를 관측하지 않는** 더 나쁜 상태다 — 문자열을 지우는
     # 뮤테이션에는 red 가 되므로 등록하면 falsifiable 해 **보이지만**, 문자열을 남긴 채
     # 행동만 바꾸는 회귀에는 여전히 눈이 멀어 있다. 처방은 등록이 아니라 재작성이다.
-    "tests/test_dev_sync_state_safe_guard.py": "Tier 3 — **텍스트 단언**(2026-09-13 판정). 등록 금지 — 행동 관측으로 재작성이 선행되어야 한다",
     # 나머지 둘은 임시 git 저장소에서 훅을 실제 실행하고 returncode·JSON 결정
     # 페이로드를 단언한다. 진짜 행동 관측이므로 등록 가능하다.
     "tests/test_component_counts_drift_hook_guard.py": "Tier 3 — 행동 단언 확인됨(2026-09-13). 등록 가능, authoring 미착수",
@@ -790,7 +809,7 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
 #: 커버리지 하한과 같은 래칫이다. 가드를 `STATIC_CASES` 에 등록하거나 Tier 1
 #: 처방(규모 단언)으로 면제 사유를 없앨 때마다 이 값을 함께 내린다. 상한이 없으면
 #: 목록이 고무도장이 된다 — 등록보다 면제가 항상 싸기 때문이다.
-_MAX_EXEMPTIONS = 26
+_MAX_EXEMPTIONS = 25
 
 #: 가드 테스트 모듈로 간주하는 파일명 패턴.
 #:

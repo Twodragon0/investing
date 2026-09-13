@@ -80,61 +80,166 @@ def test_uses_strict_mode(code: str) -> None:
     )
 
 
-def test_aborts_when_non_state_files_are_dirty(code: str) -> None:
-    """가장 중요한 단언 — 이게 없으면 `git checkout --` 이 무엇이든 되돌린다."""
-    assert "_state/*" in code, (
-        "`_state/*` 경로 판정이 사라졌다. dirty 파일을 _state 안/밖으로 분류하는 것이 "
-        "되돌리기 범위를 한정하는 유일한 근거다."
-    )
-    assert re.search(r"OUTSIDE\[@\]\}?\s*-gt\s*0", code) or "${#OUTSIDE[@]}" in code, (
-        "_state 밖 dirty 파일이 있을 때 중단하는 분기가 없다. 그 분기가 없으면 이 "
-        "스크립트는 사용자의 미커밋 작업을 조용히 지운다."
-    )
+# ---------------------------------------------------------------------------
+# 행동 관측 — 실제 git 저장소에서 스크립트를 돌린다
+#
+# 2026-09-13 이전에는 아래 다섯 가지를 전부 소스 텍스트로 단언했다
+# (`"_state/*" in code`, `"MAX_STATE_DIFF_LINES" in code` 등). 그 형태는 문자열을
+# 지우는 회귀에는 red 가 되지만 **문자열을 남긴 채 행동만 바꾸는 회귀**에는 눈이
+# 멀어 있다 — 예컨대 `INSIDE` 분류는 그대로 두고 `git checkout -- .` 을 추가하면
+# 모든 텍스트 단언이 통과한다. 이 스크립트는 파일을 되돌리므로 그 맹점의 대가가
+# 사용자 작업물이다. 그래서 행동을 본다.
+# ---------------------------------------------------------------------------
 
 
-def test_restores_only_state_files(code: str) -> None:
-    """`git checkout --` 의 인자가 분류된 _state 목록이어야 한다."""
-    checkouts = re.findall(r"git checkout -- (\S+)", code)
-    assert checkouts, "되돌리기(`git checkout --`) 호출이 없다 — 스크립트가 목적을 잃었다"
-    assert all("INSIDE" in c for c in checkouts), (
-        f"되돌리기 대상이 분류된 _state 목록이 아니다: {checkouts}. "
-        "`git checkout -- .` 이나 `-- _state/` 같은 광범위 인자는 금지 — 분류를 우회한다."
-    )
+def _git(repo: Path, *args: str) -> str:
+    return subprocess.run(["git", *args], cwd=repo, capture_output=True, text=True, check=True, timeout=60).stdout
 
 
-def test_large_state_diff_requires_force(code: str) -> None:
-    assert "MAX_STATE_DIFF_LINES" in code, (
-        "diff 크기 상한이 사라졌다. 상한이 없으면 타임스탬프 bump 와 실제 내용 변경을 구분하지 않고 전부 버린다."
-    )
-    assert "FORCE" in code, "--force 우회 경로가 없다 — 상한이 있으면 우회 수단도 있어야 한다"
+def _run_script(repo: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    """레포에서 스크립트를 실행한다.
 
-
-def test_restores_skip_worktree_on_failure(code: str) -> None:
-    assert "restore_skip_worktree" in code, "실패 복구 함수가 없다"
-    assert re.search(r"trap\s+'?restore_skip_worktree'?\s+ERR", code), (
-        "ERR trap 이 없다. 중간 실패 시 skip-worktree 가 복구되지 않으면 사용자 트리가 "
-        "실행 전보다 나쁜 상태(플래그 없음)로 남는다."
-    )
-
-
-def test_dry_run_unskips_so_it_can_actually_see_changes(code: str) -> None:
-    """dry-run 이 un-skip 을 건너뛰면 변경을 못 보고 '버릴 것 없음' 으로 거짓 보고한다.
-
-    개발 중 실제로 그렇게 만들었다가 발견한 결함이다. un-skip 은 인덱스 플래그만
-    바꾸고 파일 내용은 건드리지 않으므로 dry-run 에서도 안전하다.
+    PATH 의 bash 를 쓴다 — macOS 기본 `/bin/bash` 는 3.2 라 `mapfile` 이 없다.
     """
-    lines = [ln for ln in code.splitlines() if "update-index --no-skip-worktree" in ln]
-    assert lines, (
-        "un-skip 호출을 찾지 못했다. 이 스크립트는 skip-worktree 를 해제해야 로컬 변경을 "
-        "볼 수 있다 — 해제가 없으면 판정 자체가 불가능하다."
+    bash = shutil.which("bash")
+    assert bash, "PATH 에 bash 가 없다"
+    return subprocess.run([bash, str(_SCRIPT), *args], cwd=repo, capture_output=True, text=True, timeout=120)
+
+
+@pytest.fixture
+def repo(tmp_path: Path) -> Path:
+    """`_state/*.json` 에 skip-worktree 가 걸린, 원격이 있는 저장소.
+
+    원격이 필요한 이유: 되돌리기에 성공한 경로는 `git pull --ff-only` 로 이어진다.
+    원격이 없으면 pull 이 실패해 "되돌렸는가"를 관측할 수 없다.
+    """
+    if (_bash_major(shutil.which("bash") or "") or 0) < 4:
+        pytest.skip("PATH 의 bash 가 4 미만이다 — 스크립트가 버전 가드에서 멈춘다")
+
+    remote = tmp_path / "remote.git"
+    work = tmp_path / "work"
+    subprocess.run(["git", "init", "-q", "--bare", str(remote)], check=True, timeout=60)
+    work.mkdir()
+    _git(work, "init", "-q", "-b", "main")
+    _git(work, "config", "user.email", "t@example.invalid")
+    _git(work, "config", "user.name", "t")
+
+    (work / "_state").mkdir()
+    (work / "_state" / "a.json").write_text('{"n": 0}\n', encoding="utf-8")
+    (work / "_state" / "b.json").write_text('{"n": 0}\n', encoding="utf-8")
+    (work / "other.txt").write_text("사용자 작업물\n", encoding="utf-8")
+    # 성공 경로 끝에서 스크립트가 이걸 호출한다.
+    (work / "scripts").mkdir()
+    shutil.copy(_SCRIPT.parent / "dev_ignore_state.sh", work / "scripts" / "dev_ignore_state.sh")
+
+    _git(work, "add", "-A")
+    _git(work, "commit", "-qm", "init")
+    _git(work, "remote", "add", "origin", str(remote))
+    _git(work, "push", "-q", "-u", "origin", "main")
+    _git(work, "update-index", "--skip-worktree", "_state/a.json", "_state/b.json")
+    return work
+
+
+def _skipped(repo: Path) -> set[str]:
+    return {ln[2:] for ln in _git(repo, "ls-files", "-v").splitlines() if ln.startswith("S ")}
+
+
+def test_aborts_when_non_state_files_are_dirty(repo: Path) -> None:
+    """가장 중요한 행동 — `_state` 밖 변경이 있으면 아무것도 되돌리지 않고 멈춘다.
+
+    이게 없으면 되돌리기가 사용자의 미커밋 작업을 조용히 지운다. 그 사고는
+    git 에도 남지 않으므로 사후 복구가 불가능하다.
+    """
+    (repo / "other.txt").write_text("고치는 중\n", encoding="utf-8")
+    (repo / "_state" / "a.json").write_text('{"n": 1}\n', encoding="utf-8")
+
+    proc = _run_script(repo)
+
+    assert proc.returncode == 1, f"중단하지 않았다 (rc={proc.returncode})\n{proc.stdout}\n{proc.stderr}"
+    assert (repo / "other.txt").read_text(encoding="utf-8") == "고치는 중\n", (
+        "_state 밖 파일이 되돌려졌다 — 사용자 작업물이 지워졌다"
     )
-    # 복구 함수(restore) 쪽이 아니라 본문의 해제 호출을 본다.
-    main_unskip = [ln for ln in lines if "SKIPPED[@]" in ln]
-    assert main_unskip, f"본문의 un-skip 호출을 특정할 수 없다: {lines}"
-    assert all("DRY_RUN" not in ln for ln in main_unskip), (
-        "un-skip 이 DRY_RUN 조건에 걸려 있다. 그러면 dry-run 에서 skip-worktree 가 변경을 "
-        "가려 `git diff` 가 비어 보이고, '버릴 것 없음' 이라고 거짓 보고한다."
+    assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == '{"n": 1}\n', (
+        "중단했는데도 _state 를 되돌렸다. 중단은 전부 아니면 전무여야 한다"
     )
+    assert "other.txt" in proc.stderr, f"무엇이 막았는지 알리지 않는다: {proc.stderr}"
+
+
+def test_restores_skip_worktree_after_abort(repo: Path) -> None:
+    """중단해도 skip-worktree 는 복구되어야 한다.
+
+    복구하지 않으면 트리가 실행 전보다 **나쁜** 상태로 남는다 — 플래그가 없으니
+    `git status` 가 `_state` 로 오염되고, 그게 이 스크립트가 존재하는 이유다.
+    """
+    before = _skipped(repo)
+    assert before, "fixture 가 skip-worktree 를 걸지 못했다 — 이 테스트는 의미가 없다"
+    (repo / "other.txt").write_text("고치는 중\n", encoding="utf-8")
+
+    proc = _run_script(repo)
+
+    assert proc.returncode == 1
+    assert _skipped(repo) == before, (
+        f"중단 후 skip-worktree 가 복구되지 않았다. 이전={sorted(before)} 이후={sorted(_skipped(repo))}"
+    )
+
+
+def test_restores_only_state_files(repo: Path) -> None:
+    """되돌리기 범위가 `_state` 로 한정되는지 — 추적되지 않는 파일까지 관측한다."""
+    (repo / "_state" / "a.json").write_text('{"n": 1}\n', encoding="utf-8")
+    (repo / "untracked.txt").write_text("추적 안 됨\n", encoding="utf-8")
+
+    proc = _run_script(repo)
+
+    assert proc.returncode == 0, f"되돌리기가 실패했다\n{proc.stdout}\n{proc.stderr}"
+    assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == '{"n": 0}\n', (
+        "_state 변경이 되돌려지지 않았다 — 스크립트가 목적을 잃었다"
+    )
+    assert (repo / "untracked.txt").is_file(), "추적되지 않는 파일이 사라졌다"
+    assert (repo / "other.txt").read_text(encoding="utf-8") == "사용자 작업물\n"
+
+
+def test_large_state_diff_requires_force(repo: Path) -> None:
+    """큰 diff 는 타임스탬프 bump 가 아니라 실제 내용일 수 있다 — 되돌리지 않는다."""
+    big = "\n".join(f'{{"line": {i}}}' for i in range(60)) + "\n"
+    (repo / "_state" / "a.json").write_text(big, encoding="utf-8")
+
+    proc = _run_script(repo)
+
+    assert proc.returncode == 1, f"큰 diff 를 --force 없이 되돌렸다 (rc={proc.returncode})"
+    assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == big, "되돌려졌다"
+    assert "--force" in proc.stderr, f"우회 방법을 알리지 않는다: {proc.stderr}"
+
+
+def test_force_allows_large_state_diff(repo: Path) -> None:
+    """반대 방향 — 상한이 항상 걸리면 스크립트가 쓸모없어진다.
+
+    "큰 diff 는 막힌다" 단언만으로는 상한이 0 으로 내려가 모든 것을 막는 회귀를
+    잡지 못한다.
+    """
+    (repo / "_state" / "a.json").write_text("\n".join(f'{{"line": {i}}}' for i in range(60)) + "\n", encoding="utf-8")
+
+    proc = _run_script(repo, "--force")
+
+    assert proc.returncode == 0, f"--force 인데 막혔다\n{proc.stdout}\n{proc.stderr}"
+    assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == '{"n": 0}\n'
+
+
+def test_dry_run_sees_changes_that_skip_worktree_would_hide(repo: Path) -> None:
+    """dry-run 이 un-skip 을 건너뛰면 `git diff` 가 비어 보여 '버릴 것 없음' 으로 거짓 보고한다.
+
+    개발 중 실제로 그렇게 만들었다가 발견한 결함이다. 관측 방법이 중요하다 —
+    "un-skip 호출이 소스에 있다" 가 아니라 **변경을 실제로 보고하는가**를 본다.
+    """
+    (repo / "_state" / "a.json").write_text('{"n": 1}\n', encoding="utf-8")
+
+    proc = _run_script(repo, "--dry-run")
+
+    assert proc.returncode == 0, f"{proc.stdout}\n{proc.stderr}"
+    assert "_state/a.json" in proc.stdout, (
+        f"dry-run 이 변경을 보지 못했다 — skip-worktree 가 가린 채로 판정했다.\n{proc.stdout}"
+    )
+    assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == '{"n": 1}\n', "dry-run 이 트리를 변경했다"
+    assert _skipped(repo), "dry-run 후 skip-worktree 가 복구되지 않았다"
 
 
 class TestBashVersionGuard:
