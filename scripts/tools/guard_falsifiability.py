@@ -731,6 +731,48 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         '  else\n    INSIDE+=("${f}")\n  fi',
         "tests/test_dev_sync_state_safe_guard.py::test_aborts_when_non_state_files_are_dirty",
     ),
+    # ---------------------------------------------------------------------
+    # Part 11 (2026-09-13): `.claude/hooks/` 의 차단 훅 2종. Tier 3 를 여기서
+    # 마친다. 이 둘은 재작성이 필요 없었다 — 2026-09-13 판정에서 이미 임시 git
+    # 저장소에 훅을 실제로 돌리고 rc·JSON 결정 페이로드를 단언하고 있었다.
+    #
+    # 겨냥하는 것은 **fail-open** 이다. 두 훅 다 `exit 2` 로 도구 호출을
+    # 차단하는데, 차단을 놓치면 훅은 조용히 `exit 0` 으로 끝나고 아무 흔적도
+    # 남지 않는다. 파라미터라이즈 노드는 id 이스케이프가 취약하므로
+    # (`_DELIM_CLASS` 케이스 주석 참조) 비-파라미터라이즈 테스트만 겨냥한다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "component-counts 훅 fail-open (드리프트인데 통과)",
+        ".claude/hooks/component-counts-drift-guard.sh",
+        "if [[ $RC -ne 0 ]]; then",
+        "if false; then",
+        "tests/test_component_counts_drift_hook_guard.py::test_hook_denies_push_on_drift",
+    ),
+    StaticCase(
+        # deny 결정을 내면서 종료 코드만 0 으로 바꾸면, 훅 프로토콜상 차단이
+        # 일어나지 않는다 — 이유 문자열은 그대로라 로그만 보면 막힌 것처럼 보인다.
+        "component-counts 훅이 deny 하면서 exit 0 (차단 미발생)",
+        ".claude/hooks/component-counts-drift-guard.sh",
+        "  exit 2",
+        "  exit 0",
+        "tests/test_component_counts_drift_hook_guard.py::test_hook_denies_push_on_drift",
+    ),
+    StaticCase(
+        "_state 커밋 가드 fail-open (조건 반전)",
+        ".claude/hooks/pre-commit-state-guard.sh",
+        'if [[ -n "$STAGED" ]]; then',
+        'if [[ -z "$STAGED" ]]; then',
+        "tests/test_state_guard_command_matching.py::test_blocks_when_state_mixed_with_other_files",
+    ),
+    StaticCase(
+        # 차단은 하되 이유에 첫 파일만 싣는다. rc 만 보는 테스트는 통과하므로,
+        # "무엇을 되돌려야 하는가"를 단언하는 테스트가 있어야 잡힌다.
+        "_state 커밋 가드 이유 절단 (staged 목록 일부만 보고)",
+        ".claude/hooks/pre-commit-state-guard.sh",
+        'grep "^_state/"',
+        'grep "^_state/" | head -1',
+        "tests/test_state_guard_command_matching.py::test_reason_lists_staged_files_and_remedy",
+    ),
 )
 
 
@@ -781,8 +823,6 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     # 행동만 바꾸는 회귀에는 여전히 눈이 멀어 있다. 처방은 등록이 아니라 재작성이다.
     # 나머지 둘은 임시 git 저장소에서 훅을 실제 실행하고 returncode·JSON 결정
     # 페이로드를 단언한다. 진짜 행동 관측이므로 등록 가능하다.
-    "tests/test_component_counts_drift_hook_guard.py": "Tier 3 — 행동 단언 확인됨(2026-09-13). 등록 가능, authoring 미착수",
-    "tests/test_state_guard_command_matching.py": "Tier 3 — 행동 단언 확인됨(2026-09-13). 등록 가능, authoring 미착수",
     # --- Tier 4: 자기검증 카나리 보유. 하네스 등록의 한계 효용이 낮다 ---
     # 알려진 위반을 넣어 red 를 확인하는 테스트를 이미 갖고 있어 결함 B 에 대한
     # 로컬 증거가 존재한다.
@@ -809,7 +849,7 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
 #: 커버리지 하한과 같은 래칫이다. 가드를 `STATIC_CASES` 에 등록하거나 Tier 1
 #: 처방(규모 단언)으로 면제 사유를 없앨 때마다 이 값을 함께 내린다. 상한이 없으면
 #: 목록이 고무도장이 된다 — 등록보다 면제가 항상 싸기 때문이다.
-_MAX_EXEMPTIONS = 25
+_MAX_EXEMPTIONS = 23
 
 #: 가드 테스트 모듈로 간주하는 파일명 패턴.
 #:
