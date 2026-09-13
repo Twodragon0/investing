@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-05 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-06-03/a-180-crypto-rally-shows-new-investing-era-as-bitcoin-stumbles">180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다.</a> <span class="p0-desc">180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다. (180% 갱신) 급락 관련 회사입니다.</span></li><li><a href="https://kr.investing.com">비트코인 4개월 최저치 하락에 암호화폐 관련주 급락 - Investing.com 한국어</a> <span class="p0-desc">비트코인 4개월 최저치 하락에 암호화폐 관련주 급락 Investing.com 한국어</span></li><li><a href="https://www.newspim.com">코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 뉴스핌</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-05 암호화폐 핵심 뉴스: 비트코인의 높은 확신 보유자는 암호화폐 가격이 새로운 최저점에 도달함에 따라 판매자로 변하고 있습니다.. 총 103건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

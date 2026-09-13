@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 9건 수집. SEC 내부자 4건, �
 image_alt: "정치인 거래·정책 리포트 - 2026-09-13 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-13.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-13** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **9건** — SEC 내부자 거래 4건, 트럼프 정책 1건, 중앙은행 4건
@@ -25,15 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-13 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(4회), **내부자**(3회), **트럼프**(2회), **SEC(미국증권거래위원회)**(1회), **행정명령**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **9건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 4건, 트럼프 정책 1건, 중앙은행 4건입니다.
-
-**트럼프 정책** 관련으로는 Trump may launch US Bitcoin Reserve minutes after taking office, some experts claim. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 이형일 후보자 청문회 통과시 첫 주재할 듯가계부채 실무자 소집·장기고정금리 논의 착수…금감원은 상황점검회의 (서울=연합뉴스) 서대연 기자 = 30일 서울 중구 은행회관에서 열린 확대거시경제금융회의에서 참석자들이 기념사진을 찍고 있다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-09-13 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 9건 — SEC 내부자 거래 4건, 트럼프 정책 1건, 중앙은행 4건
+- 1. 트럼프의 첫 번째 수는? 전문가들은 Day-One Crypto 행정 명령에 대해 추측합니다. 트럼프는 취임 후 미국 비트코인 예비분을 시작할 수 있다고 일부 전문가들은 주장합니다.
 
 ## 1. 트럼프 행정명령/정책
 

@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-13 - 보안 뉴스 요약 �
 
 블록체인 보안 13건 분석. 주목 사건: **[Security] Anthropic says Claude used for cyberattacks and s** / 보안 뉴스 헤드라인: IoTeX Bridge Hacked In Private Key Exploit - Attacker Bridge.
 
-## 전체 뉴스 요약
-
-**긴급**: [보안] Liquid Network, 3억 2천만 달러 악용 후 블록 생산 재개 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 13건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (13건): security, exploit, private 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (4건): exploit, unbacked, cross 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🟠 비트코인** (2건): blockstream, thorchain, attacker 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [보안] Liquid Network, 3억 2천만 달러 악용 후 블록 생산 재개
-- [Security] ether.fi Liquid exploit: Arbitrary External Call
-- [Security] Dominion exploit: Private Key Compromised
-
-### 투자자 체크포인트
-
-- 보안 사건 11건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 13건

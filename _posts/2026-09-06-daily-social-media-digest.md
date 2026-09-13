@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-06 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-04/fed-rate-decision-still-hangs-on-inflation-after-jobs-report">연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨</a> <span class="p0-desc">연준 일자리 보고서 이후 인플레이션으로 인해 금리 결정이 여전히 중단됨 Bloomberg.com</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1abG8xdkdEVkpzMHV6b0R6TjlFS0xCZHN5bTFBNHZPc2lqczlzbUJJX3M4QTFkOUJwejFyLW1naHpPb3JBZ2hKalhXR1docGxKR3k1UUxPd29WX1U?oc=5">8월 일자리 보고서는 연준 요율 결정에 영향을 미칠 수 있습니다.</a> <span class="p0-desc">Heritage Foundation 수석 경제학자 EJ Antoni가 'Making Money'에 참여하여 8월 일자리 보고서와 연준 금리 결정에 미치는 잠재적 영향에 대해 논의합.</span></li><li><a href="https://www.crainscleveland.com/news/ccl-fed-rate-decision-upcoming-20260904/">연준 금리 결정은 고용 보고서 이후에도 여전히 인플레이션에 달려 있습니다 - Crain's Cleveland</a> <span class="p0-desc">연준 금리 결정은 Crain's Cleveland의 일자리 보고 이후에도 여전히 인플레이션에 달려 있습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
