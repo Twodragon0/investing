@@ -278,7 +278,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOdl9TS0MzMnpqbVFlLXZhZkZ3T0t0bU8zQldkbDBBQ1V3WHczN2xtU1A5TWNSWC1HYzJ0UkFQQ3JfR29WcEtrWlB0T0NEMkVmaDVYSWUtaEdxTzVFNlFxNFBGMm1OckJrcUg5akpkYzBTa2paWkRVTzYzYkNfS28yVXpua3RQVW52cmtYQg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">랩드 비트코인(WBTC) 완벽 해부, 비트코인의 가치를 이더리움 DeFi로 옮기는 단 하나의 다리 - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">랩드 비트코인(WBTC) 완벽 해부, 비트코인의 가치를 이더리움 DeFi로 옮기는 단 하나의 다리 네이버 프리미엄콘텐츠</p>
+<p class="news-desc">랩드 비트코인(WBTC) 완벽 해부, 비트코인의 가치를 이더리움 DeFi로 옮기는 단 하나의 다리 https://t.me/+bQV8JJyruZA3Y2Jl 오늘은 암호화폐 시장에서 가장 자주 언급되지만, 막상 그 정체를 정확히 아는 분은 의외로 적은 자산, 바로 '랩드</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1STHdOaHV3eXNpX1FDV2JLR0J3ZVlzdmJ5b2N5bnBkOHYzVy1rMG5zSE8yZGFQVG1yVHIwbHdrN1YtSUh2Q25zZFRtS2xVeGJTeEZLTE9wQmFnQdIBVEFVX3lxTFB5SVM0R0ZHNTNlbGRfMWt1Rlk3RE5fcVdub2YyMGtkY2hxYkw0czN3Y2kzNlM0X0FIb0dNUjBBR0s2ZHNXbVBvdFpMa1Y4Zk81QzlvRg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">9000만원 뚫린 비트코인…AI 자금 쏠림에 투자 찬바람</a>
-<p class="news-desc">9000만원 뚫린 비트코인…AI 자금 쏠림에 투자 찬바람 한국경제</p>
+<p class="news-desc">9000만원 뚫린 비트코인…AI 자금 쏠림에 투자 찬바람, 美 금리인상 신호에 투자심리 위축 장기투자 수익성 전망은 엇갈려</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5JWjlKa3BpQ1I1V2hZZHRDMzRLOTE4SVMzYTJERTAyTmxxc0MwR2J5OS01Yl9UN1o0dDd3QWpqclVhemNfM284S3dNbUpWU0FtU2wycXlqWVJRYk5SNmZXMtIBZkFVX3lxTE8tUkxRM21ON3ktdE9lYXRqLXgzU245ZW55M0tJQ215QW9TZ0piYUdENHpCeDJvRDB0N240R1FPZDl3MjNGMHA5UzJiVHdnN2JVSlFtS2VfNFFzMW1xbjdzYW84bDYtQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 6만 달러 재차 밀려…위험선호 살아도 반등 제한 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">비트코인(BTC)이 ‘6만 달러’ 탈환에 재차 실패하며 박스권 흐름을 이어가고 있다. 미·이란 긴장 완화 기대 속 위험자산 선호는 살아났지만, 정작 크립토 시장은 제한된 반등에 그쳤다.‘6만 달러’ 공방…비트코인, 방향성 못 잡아최근 24시간...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPSGxUUUoxME1qYVphLTBCanh0WEVZYzRWRTFIVVFkc0M4WUs2aHN2LU5jcFZMUC1vM2tuMXAyVUJRNDdGY0ZDNzNGdlFiTFhCS2hJNjUzVmFSNGJ2eTNvU2pSekluRGxiOF9sTVVQREs0MTlIX2pqeVRZM1N4QVVjZDVkMURWRG1WYmY1Mw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">20억 달러 대출업체 Ledn은 왜 '비트코인 전용'이 됐을까 - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">안녕하세요. 와글와글 빌리지입니다. 🌿 유치원·어린이집 선생님들의 소중한 시간을 아껴드리는 교육 콘텐츠를 만들고 있습니다. 계절·행사 활동지, 환경판, 가정통신문, 놀이자료, 역할놀이 도안, 종이인형, PPT 자료 등 교실에서 바로 사용할 수 있는 실용적인 콘텐츠를 꾸준히 제공합니다. 직접 현장에서 활용하기 좋은 구성과 귀여운 자체 캐릭터, 통일감 있는 디자인으로 준비하여 수업 준비의 부담은 줄이고 아이들과 보내는 시간을 더 늘릴 수 있도록 돕겠습니다.</p>
+<p class="news-desc">20억 달러 대출업체 Ledn은 왜 '비트코인 전용'이 됐을까 https://t.me/+bQV8JJyruZA3Y2Jl 안녕하세요. 오늘은 글로벌 암호화폐 대출 시장에서 가장 뜨거운 화제를 불러일으킨 회사, 바로 'Ledn(레든)'의 전략 전환을 깊이 있게 짚어보겠습니다</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

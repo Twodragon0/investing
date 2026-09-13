@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9Fa1BRVDJzTU1lamdBQ2V6YUN3QkxwSGF2UmU1YWhnN2tLeXpIMndCNTlBbjhVdXJCXzMtd3N0VlVHMU50RlhNcHV1Rms5dlJEU2xaMlNod3VLVjNxRzAwRDN5aHRBZ2dscDNZTHJnU2thSWvSAXNBVV95cUxPRWtQUVQyc01NZWpnQUNlemFDd0JMcEhhdlJlNWFoZzdrS3l6SDJ3QjU5QW44VXVyQl8zLXdzdFZVRzFOdEZYTXB1dUZrOXZSRFNsWjJTaHd1S1YzcUcwMEQzeWh0QWdnbHAzWUxyZ1NrYUlr?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 반도체 훈풍 탄 코스피…코스닥 반등은 소부장·바이오에 달렸다 - 뉴스퀘스트</a>
-<p class="news-desc">[박정식의 국내 주식시황] 반도체 훈풍 탄 코스피…코스닥 반등은 소부장·바이오에 달렸다 뉴스퀘스트</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표】 26일 국내증시는 반도체 대형주를 중심으로 한 강세 흐름이 이어질 가능성이 크다. 마이크론 테크놀로지의 어닝 서프라이즈</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

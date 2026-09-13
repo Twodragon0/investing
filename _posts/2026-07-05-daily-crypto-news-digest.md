@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAxTkh0a2xtNVg0eDMwR212NFJlb1otMzJXQ2lMbnBQSzYycmxjUktYQ3pHSUU0YzlRaTNvUk1aNW9DMmxIdWtkLVM1ZVotODQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반등 성공.7만달러 가려면 'ETF·FOMC'가 관건</a>
-<p class="news-desc">비트코인 반등 성공.7만달러 가려면 'ETF·FOMC'가 관건 v.daum.net</p>
+<p class="news-desc">최근 긴축 우려로 숨죽여 있던 디지털자산 시장이 미국의 부진한 고용 지표 발표 이후 일제히 반등했다. 3일(현지시간) 디지털자산 전문매체 비인크립토에 따르면 미 연방준비제도(Fed·연준)의 추가 금리 인상 압박이 완화될 것이라는 기대감이 확산되자 6만달러 아래에서 맴돌던 비트코인 가격은 단숨에 6만1000달러선을 회복했다. 글로벌 가상화폐 시황 사이</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9DbkxDZEVORGEzZ2NQbnpXUDlsRkFzTlpSWDdnMk91cTBUS0VfajkxQ0htaWVNQ0ZkSjNTYlBQQl9qaXF3VHNPY0RZdDllTzRLcGpISzhPUzRFbW5Rbks0RGdHa01NSjRtUUw5b3pDMUZwX2M?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스트래티지, 비트코인 6만1000달러선 탈환·가상자산 랠리에 주가 상승 - 마켓인</a>
-<p class="news-desc">스트래티지, 비트코인 6만1000달러선 탈환·가상자산 랠리에 주가 상승 마켓인</p>
+<p class="news-desc">비트코인 연계 기업 스트래티지는 암호화폐 대장주 비트코인의 가격 반등 소식을 발표하며 주가가 상승하고있다. 2일(현지시간) 오후1시18분 스트래티지 주가는 전일대비 7.32% 오른 100.23달러에 거래중이다. 같은시각 암호화폐 거래소 코인베이스(COIN)는 3.32% 상승하며 164.53달러를 기록하고 있다. 장 초반 코인 시세 상승과 연동해 급등세를 ...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBVdmdzUmZVQmVjV2Z2NGtEbzNicmFYY2lHcHUyRUMyOEpVbC02cUx6SU83RGlkc2JpeUNBekZmZGRHV0xmVmtIOUVaa3VhRFNXSGdJclZqNEN4cVll?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 숏 스퀴즈에 ETF 자금 복귀…비트코인 바닥 기대감 확산 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 숏 스퀴즈에 ETF 자금 복귀…비트코인 바닥 기대감 확산 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 비트코인이 약세장 막바지에 접어들었다는 신호가 잇따라 나타나고 있다. 손실 상태의 비트코인 보유 물량이 이번 사이클 들어 처음으로 수익 상태 물량을 넘어섰고, 미국 현물 비트코인 상장지수펀드(ETF)는 약 10거래일 만에 대규모</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

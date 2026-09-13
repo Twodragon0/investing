@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5jaUNZREVDT2h2M3hhVzlJR1NSLS0tRm56ODdXdFNhZkNITFV1UG5aT05lN3I5cXZHNjgyYnduZlhmRXZMUFM1MmtNT2JfYUliWXoySmcwSDhwalVZeWU0U0hfZUhGdHViVUFndkdmMUNuM1NSNmhn0gF3QVVfeXFMTmNpQ1lERUNPaHYzeGFXOUlHU1ItLS1Gbno4N1d0U2FmQ0hMVXVQblpPTmU3cjlxdkc2ODJid25mWGZFdkxQUzUya01PYl9hSWJZejJKZzBIOHBqVVl5ZTRTSF9lSEZ0dWJVQWd2R2YxQ24zU1I2aGc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">7월 1일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[7월 1일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">1일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE04QVM5c0FBYXJQWFZjbWY1cHFDUU04M0FkbDd0cncwVll4MXBuVzVacWxPd21rZC1lakduSDhqU2dheWFtN3VjaVRLeVQtY2Jjb3dZZ21OMnUwR3VxRG9VQnIwMm5Ec2lTVDNtdtIBcEFVX3lxTE1kMEp5TDQ0RmhxV29vbTFkaGg5d0dMMzZIMnJBRmstNWNaeVg0ck9TUC03YmNhQjJTNXpQWjBmVW44MXJ0Q1RLVDZnTHdPaWFCZEJ5TDhCNFNxOV9QQTBUVDFJUWZGaVZManlVVksxS1Y?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 외국인·기관 순매도에 8300선 하락 마감 - 소년한국일보</a>
-<p class="news-desc">코스피, 외국인·기관 순매도에 8300선 하락 마감 소년한국일보</p>
+<p class="news-desc">한국금융경제신문=양지훈 기자 | 코스피가 외국인과 기관의 매도에 8300선으로 하락했다.한국거래소에 따르면 1일 코스피는 전 거래일 대비 173.07p(2.04%) 내린 8303.41에 장을 마감했다.투자자별로는 외국인과 기관이 각각 1조7030억원, 702억원 매도 우위를 보이며 지수 하락을 주도했다. 개인은 1조7393억원을 순매수했다.시가총액 상위 종목 중에서는 삼성전자(-5.84%)와 SK하이닉스(-3.40%), 삼성전자우(-3.54%), 현대차(-1.52%), LG에너지솔루션(-3.87%), 삼성생명(-3.49%), 삼성물</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -105,7 +105,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5qZkpaWkZLbmJGZ3RtM3pMUEduaWlIYnFfUWF4TFVWWFJyWjhMSUpLZnJWVTZ2N0ZtQW9pWW1WRVg1Mm8tSjdNdUZpWkRKb0l5bTBhV2xOTDdJeHUx?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마감시황] 반도체 반등에 코스피 0.97% 상승 마감 - 뉴스핌</a>
-<p class="news-desc">[마감시황] 반도체 반등에 코스피 0.97% 상승 마감 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 30일 코스피가 반도체주 반등에 힘입어 강보합 마감했다. 반면 전날 급등했던 2차전지와 바이오주를 중심으로 차익실현 매물이 나오며 코스닥은 하루 만에 하락 전환했다.한국거래소에 따르면 이날 코스피 지수는 전 거래일 대비</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9yN0d4b1RkLTJnOUNyS3dHTXpCRXdyODVfcGhpTnJPaTcxTm5QaHdDdnh5aXpuTVB3V1hUTnVCcFV4aWdhODAxeXJjSHBmMEU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">시장 따라잡기] 올 상반기 삼성전자 180%·SK하이닉스 4배 상승 하반기 증시 주도주는?…반도체 VS 비반도체</a>
-<p class="news-desc">[시장 따라잡기] 올 상반기 삼성전자 180%·SK하이닉스 4배 상승 하반기 증시 주도주는?…반도체 VS 비반도체 v.daum.net</p>
+<p class="news-desc">■ 용감한 토크쇼 직설 '시장 따라잡기' - 손석우 앵커 경제평론가 및 건국대 겸임교수, 김장열 유니스토리 자산운용 리서치센터장 Q. 멀미나던 롤러코스터 장세 끝에 6월 코스피는 8470선에 마감했는데요. 이제 7월이 시작됐습니다? 장 초반 분위기는 좋아 보이는데, 센터장님은 어떻게 좀 보시는지요? Q. 7월 시작이니만큼, 증시 방향성과 또 이를 좌우할</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -160,7 +160,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FREJNSFV1NmxEZE9FOVRhM3B1ckxFa3c4OTlPeThDaXQ4YVY3TGpmaUZvLUtvUkRhQnNabUpRVmJTTTdlblhtSGU3TWdrekV0TVBvc3hyTUxCd9IBVEFVX3lxTE9CT1IwaE9hSTJJV2djVG9HanZZMHNzMzRoU0hxV2NuUUdiNnJUTFZxTFpoalptUGtHbldDS0FfZFF5LXI5WnIzaXhobnhVWHEwVTV3bw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 1500원 경고③] 금리만으론 못 잡는다…수급·시장개방·거시건전성 '3중 처방'</a>
-<p class="news-desc">[환율 1500원 경고③] 금리만으론 못 잡는다…수급·시장개방·거시건전성 '3중 처방' 더팩트</p>
+<p class="news-desc">국민연금 스왑으로 수급 완화…24시간 외환시장·역외결제 추진가계부채 등에선 건전성 정책도 병행원·달러 환율이 1500원대로 고착되고 있는 가운데, 고환율을 잡으려면 기준금..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

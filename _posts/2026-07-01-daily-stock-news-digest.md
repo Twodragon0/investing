@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9NZWdwc183anFIdF9KUElLQVdHanJaSURyVzgwQ2VDX2ZldzR2b2xhUVNnb1lEdkctZnM0Si1uYUdLazh0UzhzZGtOUkkwWjBQNnRPdUVrbk5PU0tFaVI3VGtsTFozWFFsNGZFQ0V3eEs5a1nSAXdBVV95cUxPcmhhMGhZQkFrRjhOYmtnTTYwWDYxWEQtejcydUdtUFpNc0J3VGx3bWEtR2RveDdPdUV4a1BQUTlPZW1MX0Jnc3owbmRlYXp6X01qTTJGLVhIc24zWExyMllPWTkybzBBQ21sV2VxWGJodjFkNnF3cw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">29일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[29일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">29일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9XYVVLNDZUcnpSZVI1akJab0ZhUTlneGlLc2J2UE9kdGJ3WFVzZERoOXZuREYweTR6WGZSTzRrV0N1cTZnZ3J3T0duWTBMMTdLV013a0VVeFdSeUdWZDVxN2hDWlIxVzg3VldVbFVFdUVabmVyVXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">0629마감체크] 코스닥 지수, 외국인·기관 동반 순매수 속 8.13% 급등 마감</a>
-<p class="news-desc">[0629마감체크] 코스닥 지수, 외국인·기관 동반 순매수 속 8.13% 급등 마감 인포스탁데일리</p>
+<p class="news-desc">[인포스탁데일리=윤서연 기자]▶마감체크■ 코스피 지수지난 주말 뉴욕증시가 오픈AI IPO 내년 연기 검토설에 따른 반도체주 투매, 기술주 고점 부담 및 차익실현 매물 출회 등에 하락했고, 유럽 주요국 증시도 글로벌 기술주 약세 속 일제히 하락했다.이날 코스피지수는 美 반도체주 폭락 여파 속 반도체 대표주 부진 등에 0.20% 하락한 8394.65에 장을 마감했다.수급별로는 외국인이 7조7557억 순매도, 개인과 기관은 각각 4조5975억, 2조9328억 순매수했다. 선물시장에서는 기관이 991계약 순매도, 개인과 외국인은 각각 72</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1Lc0h6R3VGZW1fQzdQN1dpUHBBR3dfRDhBMHZKS2phM0ozLW1YbGp4UVRlSTRjTFpERG8xYnpDVDRhSkxIZGoyYkk0cFJ0Wjd5eDRBVE9USjd5YUVaZlFuYmRzUUJsenlPM2hZZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 쏠림에 코스피 '상승'·코스닥 '하락'…원·달러 환율 장중 1,550원 돌파 - 프리진경제</a>
-<p class="news-desc">반도체 쏠림에 코스피 '상승'·코스닥 '하락'…원·달러 환율 장중 1,550원 돌파 프리진경제</p>
+<p class="news-desc">30일, 코스피는 전 거래일 대비 81.83포인트 오른 8,476.48로 상승 마감했다. 반면 코스닥은 4.39포인트 하락한 916.18로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 외국인은 3조 7,993억 원을 순매도하며 차익 실현 기조를 이어갔다. 반면 개인은 8,403억</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE90NHFrMWthSmZqZG1XTXVLWHhCWG5EbEtGcHpkOXJ6UXl2NUlMQ18wdGJGTmdIc2tpN3VtMzRha09GUXNibkpIVDY3bjRmT3NrUlV1c3dXZXFQdXptX2NuNElkVEtNYVd0STg3b2JmOTM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"한은 최종금리 3.5% 아닌 3.25%에 그칠 가능성…달러 조달여건도 양호"</a>
-<p class="news-desc">"한은 최종금리 3.5% 아닌 3.25%에 그칠 가능성…달러 조달여건도 양호" 연합인포맥스</p>
+<p class="news-desc">한국은행의 기준금리 인상 사이클이 시장 예상보다 이른 시점에 마무리될 수 있다는 전망이 나왔다.29일 김지나 유진투자증권 이코노미스트는 보고서를 통해 "최종 금리(terminal rate)는 내년 최대 두 차례 인상을 포함한 3.50%까지 가능하다고 봤지만 종전 이후 국제유가 하락 속도와 실질 기준금리 여건 등을 고려하면 내년 한 차례 인상에 그쳐 최종 3.25%에서 마무리될 가능성이 높아지고 있다"고 진단했다.김 이코노미스트는 다만 평균 달러-원 환율이 1,500원 중반 이상에서 장기간 머물지 않고 국내 소비자물가 상승률이 3분</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -162,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5fTjc4d0ZvRGljZGRncFg0XzZqTTZjckNSU3J3bDZZOTBOTFR5M2VaaEg4N19VMWZkVG85U19jWUNLMnBkc0ItcUR0LVlRbHAwc2ttZVdpRFc1OVdmdmlQVUx1WGc0Ml9NTjkySg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 반도체 위축 속 소폭 하락…코스닥은 8.13% 급등 - 프리진경제</a>
-<p class="news-desc">코스피, 반도체 위축 속 소폭 하락…코스닥은 8.13% 급등 프리진경제</p>
+<p class="news-desc">29일 국내 주시시장은 코스피와 코스닥 시장이 뚜렷한 디커플링(탈동조화) 현상을 보이며 엇갈린 방향으로 마감했다. 코스피는 기관과 외국인의 매도세 속에 소폭 하락한 반면, 코스닥 지수는 하루 만에 8% 이상 폭등했다.이날 코스피 지수는 전 거래일 대비 16.56포인트(0.20%) 내린</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9sYU1SYnlsNGZwMnNXYmxubHVXS1AyR3BEc3p5LV9uM3FMVGNNVktyajZhUTNVdkFjWDN5VkdiREdsXy1zWUkzcHR0Z3ZTRi0wcTFRZmVOdE5ZV1plZEZ5YVBKOGxzOWtMSW9iUFBqVXjSAXRBVV95cUxPN2E1TExDYmdkR3JjRHl0TDlDT0h1ZjhhNDdPWHFPaTR6azdBSDZmLWVxczY0OVVscEFTUXN2eng0WnAwaC1VZ1JpZW1yLTI1MXRqVTVKTVR3bWp3dnFsRmc1OFdyaVdleEFEaWJMZ3VIN1BTdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 덮친 반도체 변동성…코스닥은 바이오·2차전지 급반등 - 산경투데이</a>
-<p class="news-desc">코스피 덮친 반도체 변동성…코스닥은 바이오·2차전지 급반등 산경투데이</p>
+<p class="news-desc">[산경투데이 = 한승수 기자]국내 증시가 대형 반도체주 중심의 급격한 변동성에 휘말린 가운데 코스닥 시장이 바이오와 2차전지 업종을 앞세워 강한 반등세를 보이고 있다.코스피는 삼성전자와 SK하이닉스 등 시가총액 상위 종목의 약세로 2거래일 연속 하락했지만, 코스닥은 정책 기대감과 순환</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeEZQRVRSSk5UaWpVbzlPT0RfOFpqLXdSUlQtU3Qwa3pNMmlxa1R5UnpjZ09LWVJZZXZoVENSaXpFR1g1Mk5NZ3Fxa1pxZjB2djlZemVlRjQxMEotSW9SWU9rSU1VSFNUdnZ0QTBCTjFEWDU1WHlnNWVSUjQtdFNmY0VIaGFaWHBW?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 삼성전자·SK하이닉스, AI·반도체 4755조 투자에 '강세'</a>
-<p class="news-desc">[특징주] 삼성전자·SK하이닉스, AI·반도체 4755조 투자에 '강세' 글로벌이코노믹</p>
+<p class="news-desc">삼성전자와 SK하이닉스가 상승세로 돌아왔다. 삼성전자·SK하이닉스가 정부와 손잡고 ‘대한민국 대도약 3대 메가프로젝트 국민보고회’에서 각각 그룹 차원에서 2655조원, 2100조원을 투자하는 내용의 AI·반도체 대규모 장기 투자 계획을 공동 발표한데다 미국 뉴욕증시의 주요지수가 일제히</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -269,7 +269,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQcXBzLVJFSjV4TWptUDhrUi1IbUtXTndjZjgtM25GTHgtRngtemFtYURmY1hwck9ITUlGdEQzWWYyZ2lkREN3OTJCd2JQcE9ERzJSMHVtVFo1RE0xbmV5VEU4WURORHBKNi1fU3NMUkg0cnVLV2Vkc3lUaVdRYWc5Sg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금리 인상·하이닉스 美 상장…하반기 환율 향방 가를 핵심 변수</a>
-<p class="news-desc">금리 인상·하이닉스 美 상장…하반기 환율 향방 가를 핵심 변수 이데일리</p>
+<p class="news-desc">[이데일리 이정윤 기자] 분기 평균 환율이 28년 만에 1500원대로 올라서며 고환율이 예상보다 장기화할 수 있다는 우려가 커지고 있다. 중동 전쟁 등 대외 리스크가 해소된 이후에도 환율이 좀처럼 내려오지 않자, 달러 강세와 외국인 매도세 등 원화 약세 요인이 구조적으로 이어질 수 있다는 분석이다. 전문가들은 2분기 환율을 끌어 올린 외국인 자금 흐름과 기업들의 달러 수요 변화, 한국은행의 기준금리 인상 속도 등을 향후 환율의 향방을 결정할 핵심 변수로 꼽고 있다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

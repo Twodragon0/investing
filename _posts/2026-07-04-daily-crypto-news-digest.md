@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFAxTkh0a2xtNVg0eDMwR212NFJlb1otMzJXQ2lMbnBQSzYycmxjUktYQ3pHSUU0YzlRaTNvUk1aNW9DMmxIdWtkLVM1ZVotODQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 반등 성공.7만달러 가려면 'ETF·FOMC'가 관건</a>
-<p class="news-desc">비트코인 반등 성공.7만달러 가려면 'ETF·FOMC'가 관건 v.daum.net</p>
+<p class="news-desc">최근 긴축 우려로 숨죽여 있던 디지털자산 시장이 미국의 부진한 고용 지표 발표 이후 일제히 반등했다. 3일(현지시간) 디지털자산 전문매체 비인크립토에 따르면 미 연방준비제도(Fed·연준)의 추가 금리 인상 압박이 완화될 것이라는 기대감이 확산되자 6만달러 아래에서 맴돌던 비트코인 가격은 단숨에 6만1000달러선을 회복했다. 글로벌 가상화폐 시황 사이</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9DbkxDZEVORGEzZ2NQbnpXUDlsRkFzTlpSWDdnMk91cTBUS0VfajkxQ0htaWVNQ0ZkSjNTYlBQQl9qaXF3VHNPY0RZdDllTzRLcGpISzhPUzRFbW5Rbks0RGdHa01NSjRtUUw5b3pDMUZwX2M?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스트래티지, 비트코인 6만1000달러선 탈환·가상자산 랠리에 주가 상승 - 마켓인</a>
-<p class="news-desc">스트래티지, 비트코인 6만1000달러선 탈환·가상자산 랠리에 주가 상승 마켓인</p>
+<p class="news-desc">비트코인 연계 기업 스트래티지는 암호화폐 대장주 비트코인의 가격 반등 소식을 발표하며 주가가 상승하고있다. 2일(현지시간) 오후1시18분 스트래티지 주가는 전일대비 7.32% 오른 100.23달러에 거래중이다. 같은시각 암호화폐 거래소 코인베이스(COIN)는 3.32% 상승하며 164.53달러를 기록하고 있다. 장 초반 코인 시세 상승과 연동해 급등세를 ...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -184,7 +184,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE9NeEJtNUszUjMxRHlFbEl1b3diQUx2UVdfcmpUcGF0VmdxaUtHc045bERGRF9BeTlYN20tSUkyd3AxcnBUOUFCQ3hiNmRrUTdYczVJcg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이더리움 4.7% 뛰었다…비트코인 등 코인 시세는?</a>
-<p class="news-desc">이더리움 4.7% 뛰었다…비트코인 등 코인 시세는? 이투데이</p>
+<p class="news-desc">(출처=코인베이스)3일(한국시간) 오전 비트코인과 이더리움을 비롯한 주요 암호화폐가 대체로 반등했다.글로벌 코인 거래소 코인베이스에 따르면 이날</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -196,7 +196,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9IcE1zMmppY1o2MDdhTGF2WXkzUFJva2xWRjdFb3hqRUpTdEZ1b2xNbWhmenFWMXZBTG93eHI4VDBIR0ctZUdoWHRESTI3ZkFsbVJ2RjFPS3FMTUpNcW9ZNS1hLVY5SElKcUIyT1d0XzA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 워시 의장 인플레 발언에 한때 6만달러 회복</a>
-<p class="news-desc">비트코인, 워시 의장 인플레 발언에 한때 6만달러 회복 연합인포맥스</p>
+<p class="news-desc">암호화폐 비트코인은 연방준비제도(Fed·연준) 의장의 인플레이션 위험이 작아졌다는 발언 영향으로 가격이 한때 6만달러 위로 올라섰다.2일 모틀리풀은 1일(현지 시각) 나온 케빈 워시 연준 의장의 발언이 기준금리 인상 가능성을 낮췄다며 구석으로 몰렸던 비트코인과 다른 암호화폐의 가격 회복을 돕는데 충분했다고 설명했다.다만 이날 아시아장에서 비트코인은 5만9천700달러 선에서 거래 중이다.워시 의장은 1일 포르투갈 신트라에서 열린 유럽중앙은행(ECB) 포럼에서 "지난 4주 동안 기대 인플레이션은 낮아졌고, 인플레이션 위험도 낮아졌다(</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

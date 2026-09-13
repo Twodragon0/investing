@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5mVkVCa3JNYUNhbHpLWHNXTVhteExMWjFPZ3dXQTgzaXBaaURSeGJ6azk0R3JueEVYUktQY2lid0lDV2t1RkNEcGNzTTUwX3NJdWRMR1FkQmlCbDk1VldvdWxlWC1ZbFl1eEJ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 26일 코스피와 코스닥지수가 모두 내림세로 장을 열었다.이날 코스피는 전 거래일보다 117.12포인트 내린 8813.18에 시작했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9Fa1BRVDJzTU1lamdBQ2V6YUN3QkxwSGF2UmU1YWhnN2tLeXpIMndCNTlBbjhVdXJCXzMtd3N0VlVHMU50RlhNcHV1Rms5dlJEU2xaMlNod3VLVjNxRzAwRDN5aHRBZ2dscDNZTHJnU2thSWvSAXNBVV95cUxPRWtQUVQyc01NZWpnQUNlemFDd0JMcEhhdlJlNWFoZzdrS3l6SDJ3QjU5QW44VXVyQl8zLXdzdFZVRzFOdEZYTXB1dUZrOXZSRFNsWjJTaHd1S1YzcUcwMEQzeWh0QWdnbHAzWUxyZ1NrYUlr?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 반도체 훈풍 탄 코스피…코스닥 반등은 소부장·바이오에 달렸다 - 뉴스퀘스트</a>
-<p class="news-desc">[박정식의 국내 주식시황] 반도체 훈풍 탄 코스피…코스닥 반등은 소부장·바이오에 달렸다 뉴스퀘스트</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표】 26일 국내증시는 반도체 대형주를 중심으로 한 강세 흐름이 이어질 가능성이 크다. 마이크론 테크놀로지의 어닝 서프라이즈</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9lTGtXSzVWdDEzNHVlU1NmcXJIajJQZjJZekNYamhVTlZuRlpTVWtNaXAwbGNiRU5BME5RZDdEZ2JXMjhlSGR4LUNFOEpwTzJYU3pUREZUMHhJUlB0enkzU2trbGdscXBUMHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 50만원, 하이닉스 360만원 갈까…연말까지 반도체 투톱 운명 가를 5가지 변수 - 도민연합뉴스</a>
-<p class="news-desc">삼성전자 50만원, 하이닉스 360만원 갈까…연말까지 반도체 투톱 운명 가를 5가지 변수 도민연합뉴스</p>
+<p class="news-desc">[도민연합뉴스 = 김진명 기자 ]삼성전자와 SK하이닉스를 바라보는 투자자들의 시선이 다시 뜨거워지고 있다. 올해 들어 인공지능(AI) 데이터센터 투자 확대와 고대역폭메모리(HBM) 공급 부족이 맞물리면서 국내 반도체 대장주들의 주가가 급등락을 반복하고 있기 때문이다.투자자들이 가장 궁</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE8xOXVnbG90X0FGUGxMMHdNOFhsY3RnX0RqLTNKeHN5X1hKNFl0MTZsRGQzLWp5TFdNM1E4b1NCckt6a2RYQXdTWjRTeDdqOXZwYzJ1aTBseDV1cFhva2hBaG5FN2pYMlh4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“반도체주 조정 또 올 수 있어… 삼성전자·SK하이닉스 주가는 지속 상승 전망” - 주간동아</a>
-<p class="news-desc">“반도체주 조정 또 올 수 있어… 삼성전자·SK하이닉스 주가는 지속 상승 전망” 주간동아</p>
+<p class="news-desc">“구글 등 하이퍼스케일러나 엔비디아가 돈이 없어 인공지능(AI) 투자를 줄일 상황은 아니다. AI 인프라 투자와 메모리 수요는 계속 확대될 테고, 올 연말까지 삼성전자와 SK하이닉스 주가는 상승 추세를 이어갈 것이다. 하지만 현재 코스피가 굉장히 높은 수준까지 올라와 있는 데다, 6월에는 펀드들의 리밸런싱이 많이 일어나 향후 급격한 주가 하락이 또 발생할 수 있다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -222,7 +222,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE41azJLeHpkdmhoZlJHbmNKNElGaHJHcU13Q01mRjF2dGdVQ3hKVVRzMnB5UWJrekpiYnczeXpvOXpkN25xWXlUcHFmRThfbkhmeXRPX1I0TTBpdk9pTlp2V1lNVy1xQkVDZW0zTHZQQkQybVFLR0U1NWtSVHR0UQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">원·달러 환율 1500원대인 이유, 수출 호황에도 원화가 약한 진짜 배경 - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">원·달러 환율 1500원대인 이유, 수출 호황에도 원화가 약한 진짜 배경 네이버 프리미엄콘텐츠</p>
+<p class="news-desc">한국 경제 지표만 보면 원화가 강해져야 할 것 같습니다. 수출은 좋습니다. 반도체 수출은 사상급으로 늘고 있습니다. 코스피도 AI 반도체 랠리를 타고 강하게 올랐습니다. 그런데 원·달러 환율은 여전히 1500원대에서 쉽게 내려오지 못하고 있습니다. 보통 한국 수출이 좋</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

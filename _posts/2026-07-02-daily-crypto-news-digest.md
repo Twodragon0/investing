@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5majVlMUxzeTNBSGNDT0E5dkJnNnpmQjFaNlpTVkR4cHMzR3pxWTlnLU9MRUQ4UEFUUWtWeW9jbmNYTzFQdk5TYzNYSmh2TE9tbm9RNGxn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 6만 달러 붕괴 '4년새 최악'…'4만 달러' 경고까지 - 지디넷코리아</a>
-<p class="news-desc">비트코인, 6만 달러 붕괴 '4년새 최악'…'4만 달러' 경고까지 지디넷코리아</p>
+<p class="news-desc">비트코인 가격이 6만 달러 아래로 떨어지면서 2022년 6월 이후 최악의 월간 하락율을 기록할 전망이라고 야후 파이낸스가 30일(현지시간) 보도했다.세계 최대 암호화폐인 비트코인은 올해 상반기 부진한 흐름을 보이며 연초 대비 33% 하락했다. 이는 S&amp;P 500 지수가 9%...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE91NmZISXc3MEVMOVBjXzFDN2tlMjRBaHJ1NTluNWx5bHNxQ1JRdUp4NHB1MGdnZkhFaXByUXBMRWNSSlV0cFlfb1owX0FFN2s?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 흔들리자 돈 몰리는 곳…2026년 암호화폐 IPO 3곳은</a>
-<p class="news-desc">비트코인 흔들리자 돈 몰리는 곳…2026년 암호화폐 IPO 3곳은 v.daum.net</p>
+<p class="news-desc">비트코인 가격이 6월 한 달 동안 약 7만2000달러에서 5만8000달러까지 하락하며 약세를 이어가자 투자자들의 관심이 암호화폐 기업공개(IPO) 시장으로 이동하고 있다. 시장에서는 2026년 상장을 추진 중인 크라켄(Kraken), 컨센시스(ConsenSys), 아이오닉 디지털(Ionic Digital)이 대표적인 수혜 후보로 거론된다. 해외 블록체인</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9fV3lfeXR2Qnh4UC1peDAzd0l0czRFMjBubnpfbGgxV3NSdXdVN1lWU0IzZ0FzYTZweTYxdlZ0b3l0RWFUSDJ6TVlJdGR6dTZXYmpaelJtRHRMM2FkYnNXeG9jcU9hQVhyMzFvbkVCWGJBNGc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]7월 1일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]7월 1일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">1일 암호화폐 시총 상위권은 비트코인과 이더리움의 주간 약세가 이어진 가운데, 테더·유에스디코인 등 스테이블코인의 존재감이 두드러졌다. 솔라나와 스텔라루멘은 상승세를 보이며 종목별 온도차를 키웠다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

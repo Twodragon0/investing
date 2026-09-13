@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50ZmpUVEZQSHBMRzVFQ0ZqY2hRaTJjLUpsWWFPemxSQ2NGMmlOb1IwSTFtbGdjNnZHQjJ4YzQzVmVBZkVDd1U0TmNlSkpOUTVGMjJfeUNuMEZmV042dEhKbjlMY1YyNGl6TTlPbWU3eF9GdkXSAXdBVV95cUxON3NWbWVuX2tzbFFfUzlRaF9BMVdiRjgwOWRMUDJRVVAyY3hHZ0FGY3NsUU95QzIzdUk1TEd6Q0J1aWRPYnl1WlRORHYzbUF1RTY4UlZIZmtvN05TUU5vQVl2WnBMSzczRGZUZXdOMXFPc1BRSFhKRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주간 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[주간 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">지난 22~26일 까지 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1UOW4ySzF5WHd0YS1DX0NEQXNSM2s2VDRIcG1OdVNMVHZTVVMtVTRRTnlYZ0R6X01wSGF6WFBZMklDZk9vWWhENFpwdXhKLTR4d2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘삼전닉스’ 질주에 웃었다…반년 만에 뒤집힌 시총 톱10 - 매일경제 마켓</a>
-<p class="news-desc">‘삼전닉스’ 질주에 웃었다…반년 만에 뒤집힌 시총 톱10 매일경제 마켓</p>
+<p class="news-desc">코스피가 사상 처음 9000선을 돌파하는 등 ‘반도체 랠리’가 코스피 시가총액 지형까지 뒤흔들었다. 반도체주 질주에 힘입어 삼성 계열사들이 시총 상위권으로 대거 올라섰고, 증시를 이끌던 방산·원전·조선주는 순위가 밀려나는 등 불과 반년 만에 상위 10개 종목의 판도가 크게 달라졌다. 28일 한국거래소에 따르면 지난 26일 기준 삼성전자우를 제외한 코스피 시가총액 상위 10개 종목 가운데 연초와 같은 순위를 유지한 종목은 삼성전자(1위), SK하이닉스(2위), 현대차(5위)뿐이었다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOS1BJLWptX2xCWGdfdU1DOXpDU3NDWTVtaF9zQ05YZTVURlVVaVV6Q05rSmRMSXFKeTZUcDV1YkdfSGxMNFhHc2RjMW5BcHZrVVE2RFdMTXF1Y05sYUk0V2F3RzNwck9URU5oZ3hQTzg4SXhNaFN4NDB2NjhkenpzUg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 급락의 나비 효과. 뉴욕·도쿄 주가도 흔들렸다</a>
-<p class="news-desc">코스피 급락의 나비 효과. 뉴욕·도쿄 주가도 흔들렸다 조선일보</p>
+<p class="news-desc">삼성전자와 SK하이닉스 등 대형 반도체주 변동성이 글로벌 AI 투자 심리를 좌우함 미국 주요 언론이 한국 반도체 기업 주가 움직임을 메모리 시장 핵심 변수로 지목 일본 증권가에선 코스피 흐름을 주시하며 투자 전략을 세우는 신조어까지 등장함</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1VOXdRQzRmRVRMSV8za3JYdXN1ODdpLVUtZTZjQ2l1QzB6TjFGazZNWENubWJyaDQxR0kzZ0hnd2F6dUhFcmVxdkY3azNWTlpTa0wwamxFTG9aeWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“환전할 때마다 놀란다”.1500원 환율 굳히는 외국인 ‘엑소더스’ - 에너지경제신문</a>
-<p class="news-desc">“환전할 때마다 놀란다”.1500원 환율 굳히는 외국인 ‘엑소더스’ 에너지경제신문</p>
+<p class="news-desc">국내 외환시장에서 원·달러 환율 1500원대가 일시적 현상이 아니라 새로운 기준선으로 굳어지는 분위기다. 외국인 자금 이탈이 이어지는 데다 달러 강세까지 겹치면서 당분간 원화 가치..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5pbTBMUkE2RUF5M1RYb093cjFpY3ZqVEV1UU1BdHFZSmFVeHVaTjBTampXSjNJcldlbkpvZ3QyRnZ1MHJEU2dab2puWWd4SFgwWUJkYzFhclh5bWpwUTNyMmxkYW9teFJSTktZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">고환율에 진땀 뺀 한국은행…달러 얼마나 팔았을까 - 비즈워치</a>
-<p class="news-desc">고환율에 진땀 뺀 한국은행…달러 얼마나 팔았을까 비즈워치</p>
+<p class="news-desc">한국은행이 지난 1분기 동안 시장안정화를 위해 외화를 얼마나 사고 팔았는지 내주 공개된다. 중동전쟁의 영향으로 원/달러 환율이 1530원대를 넘어섰기에 전분기 대비 달러 매도가 급증했던 지난해 4분기와 유사하거나 늘...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1GUlQ1T1JoMU5UZFJzRk83OXlLWVNFRmxMNFNILWdkRXhqdmdqcjNyVVNfTUVfRjZ1SHRGR1EzaGtTX1ViLVhPZ1lKYTVGSkMxRGdzeTdoX1U5YjBGSjdkdNIBeEFVX3lxTE5SRGN4aGwtZVFvR2dMamxMdnRjRWZ1Z2txU3dHZk5MS2dEZ3hIeXJ2WVJqMVdiMzd6Xy1Ya0pxRHlpOVRtV2VkMGEyS0dGSmVZUDdvQWZOTmZydl8zalZkSndWd2QyMFlMWWhVOU1kSlR6bjRWbE95Tw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식 내다파는 外人에 환율 안정 '무소용'…외환위기 수준 치솟은 원·달러</a>
-<p class="news-desc">주식 내다파는 外人에 환율 안정 '무소용'…외환위기 수준 치솟은 원·달러 뉴시스</p>
+<p class="news-desc">[서울=뉴시스]김래현 기자 = 원·달러 환율이 고공행진을 이어가며 1997년 외환위기 수준으로 흔들리고 있다. 환율을 안정시키기 위한 정부의 노력은 외국인 투자자들의 매도세에 밀려 반짝 효과를 내는 데 그치고 있다.28일 한국은행 경제통계시스템에 따르면 지난 26일 기준 이달 원·달러 환율은 1525.9원이다. 월별로 봤을 때 글로벌 금융위기 시기를 훌쩍 ..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE9qVXlnZ09iVUpFM0xpNnZrY0tJLXM1TGFMRzFEMXNucWN5U3dMcllTQWpJQ0puSk1PY29IaS16MkRhSHdRTmUwRmNtRXpvbkhBU1BQbjdRckotaGs5ZUI3NWNn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">`암호화폐 종말론` 꺼낸 억만장자 투자자…"비트코인, 조용히 사라질 것" [코인 레이더</a>
-<p class="news-desc">`암호화폐 종말론` 꺼낸 억만장자 투자자…"비트코인, 조용히 사라질 것" [코인 레이더] 디지털데일리</p>
+<p class="news-desc">[ⓒ 디지털데일리][디지털데일리 조윤정기자] 세계적인 자산운용사 GMO의 공동 창립자이자 '버블 예연가'로 알려진 억만장자 투자자 제레미 그랜섬이 암호화폐 시장의 미래에 대해 강한...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kTjYzTHNIQkxxOHRBWnNvRzVPUXhySU1KUDRXdnpONU1qcTVXYjl5QmN4Mkx4dDlhdWpPc3JWNmlNWkRkc0pyMXZabFVWcTBkOTc4YXM1ajJYUdIBVEFVX3lxTE5XTUZoOFhodVI1ZkwzQXAtMFNYYjRZQVp2Q2FOcUxVbGlwem00dHR1V0pLZEhtekdJTjNjU1puVmRXT1pwYjFYOHFid3ZsRTVwMmlvOQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"6만달러 깨진 비트코인, 4만달러가 다음 지지선"</a>
-<p class="news-desc">"6만달러 깨진 비트코인, 4만달러가 다음 지지선" 한국경제</p>
+<p class="news-desc">"6만달러 깨진 비트코인, 4만달러가 다음 지지선", "비트코인과 나스닥 시장 디커플링 강화" 비트코인 현물투자ETF서 개인 및 기관자금 지속 유출</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

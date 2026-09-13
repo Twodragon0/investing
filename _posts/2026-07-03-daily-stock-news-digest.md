@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE44RHpSZEhXd0JCRXVzTGJPT2tvM01XOVFERVY5X0dvT0RrYmRNeGhTZ0xtcHJNZklXQl93azhib2dVWVFyLUdhRkc5VHRLbjAyd0p4Sk1GU2trV3FhazVBem83anNxT3dITzFVOWxMLTZqUm_SAXdBVV95cUxNcDYyNW53aHBpQjhRazdkQkpiZnhSdmVGZHFEaFEtdmJPZXF6SWZrazBFZEFZejI4LUpQR1FSOW9qWnNZM1dhZ09zVHRKalc1aXZyT3NRQXhBaVJHTGNXcmx0dWFtclUtTV9GUU5SaWlTOG95bjhnbw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">7월 2일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[7월 2일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">2일 유가증권시장과 코스닥시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQTjNrSktadkdxU3lnRDdrb0ViZkJhbmJJQTBSWW9Od1ZkbnptVVQ4Y0VNN1hHSk1TZ081al9MWUxwazRKdmJlSXQ0NmNLTkFXNXRfaHBzbUNUMWVBRENaZWJyQmZIWDN0bWZYUTFDZGU2SWNJems5SEdjSlQ3QmpXcw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">치솟는 환율, 금리 올리면 진정?…이번엔 글쎄</a>
-<p class="news-desc">치솟는 환율, 금리 올리면 진정?…이번엔 글쎄 이데일리</p>
+<p class="news-desc">원·달러 환율이 1600원을 넘보면서 시장의 시선은 ‘기준금리 인상’ 카드로 향하고 있다. 이달 한국은행이 미국 연방준비제도(Fed·연준)보다 먼저 금리를 올릴 경우 환율 상승(원화 약세)에 제동을 걸 수 있다는 기대가 커지고 있다. 다만 엔화 약세와 외국인 주식...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -129,7 +129,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FREJNSFV1NmxEZE9FOVRhM3B1ckxFa3c4OTlPeThDaXQ4YVY3TGpmaUZvLUtvUkRhQnNabUpRVmJTTTdlblhtSGU3TWdrekV0TVBvc3hyTUxCd9IBVEFVX3lxTE9CT1IwaE9hSTJJV2djVG9HanZZMHNzMzRoU0hxV2NuUUdiNnJUTFZxTFpoalptUGtHbldDS0FfZFF5LXI5WnIzaXhobnhVWHEwVTV3bw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 1500원 경고③] 금리만으론 못 잡는다…수급·시장개방·거시건전성 '3중 처방'</a>
-<p class="news-desc">[환율 1500원 경고③] 금리만으론 못 잡는다…수급·시장개방·거시건전성 '3중 처방' 더팩트</p>
+<p class="news-desc">국민연금 스왑으로 수급 완화…24시간 외환시장·역외결제 추진가계부채 등에선 건전성 정책도 병행원·달러 환율이 1500원대로 고착되고 있는 가운데, 고환율을 잡으려면 기준금..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE93ZDFrWlppOUY2bU5HN1lZNmpETWVqT0Y1cWR2VzlGcEc3RDlOODh5LXdOQ3J3MzZ3ZDktVWluU1p0b1dpZHpfSDBaZkJITTNXY0E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마이크론 급락에 반도체株 ‘출렁’…다음주 삼성전자 실적에 쏠린 눈</a>
-<p class="news-desc">마이크론 급락에 반도체株 ‘출렁’…다음주 삼성전자 실적에 쏠린 눈 매일경제</p>
+<p class="news-desc">간밤 메모리 반도체 업체 마이크론 테크놀로지 주가가 10% 급락하면서 국내 반도체주에도 긴장감이 커지고 있다. 인공지능(AI) 반도체 랠리를 이끌었던 삼성전자와 SK하이닉스가 출렁이고 있는 가운데 시장의 시선은 다음주 예정된 삼성전자의 2분기 잠정실적으로 빠르게 이동하는 분위기다. 2일 오전 11시 50분 현재 삼성전자와 SK하이닉스는 전일 대비 5~6%대</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -267,7 +267,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5sLXc1WXVxdEFxUThvVGdXOXo5Q3FVNXJmRFE3TkFsbUl5cmEwR3VENkE0NlRXcl85Nkt3YWFRckt5NUUtWGJHMDE5SU4tRU1NaEVIX0pPTUtvX0FHTkN3cFI5VG8tLUxUdmhJY0hONUw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">초강 달러·슈퍼 엔저·셀 코리아·24시 환시장의 ‘4중 파고’, 통화정책 만전을 - 산경일보</a>
-<p class="news-desc">초강 달러·슈퍼 엔저·셀 코리아·24시 환시장의 ‘4중 파고’, 통화정책 만전을 산경일보</p>
+<p class="news-desc">미국과 이란이 지난 6월 17일 ‘종전 합의(MOU)’를 어렵게 체결했으나, ‘호르무즈해협(Strait of Hormuz)’과 관련한 이견(異見)이 좁혀지지 않고 있는 점 등이 시장에 불확실성(Uncertainty)을 심으며 위험회피 심리를 자극하고 있는 데에다 미국 연방준비제도(Fed │ 연준)가 긴축 긴장감을 높이고 있는 가운데 외국인의 국내 증시 이탈로 달러 수요를 키우면서 지난 7월 1일 서울 외환시장에서 미국 달러화 대비 원화 환율은 전 거래일보다 5원 50전 오른 1,554원 90전에 주간 거래를 마쳤다. 무려 32거래일</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

@@ -85,7 +85,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5majVlMUxzeTNBSGNDT0E5dkJnNnpmQjFaNlpTVkR4cHMzR3pxWTlnLU9MRUQ4UEFUUWtWeW9jbmNYTzFQdk5TYzNYSmh2TE9tbm9RNGxn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 6만 달러 붕괴 '4년새 최악'…'4만 달러' 경고까지 - 지디넷코리아</a>
-<p class="news-desc">비트코인, 6만 달러 붕괴 '4년새 최악'…'4만 달러' 경고까지 지디넷코리아</p>
+<p class="news-desc">비트코인 가격이 6만 달러 아래로 떨어지면서 2022년 6월 이후 최악의 월간 하락율을 기록할 전망이라고 야후 파이낸스가 30일(현지시간) 보도했다.세계 최대 암호화폐인 비트코인은 올해 상반기 부진한 흐름을 보이며 연초 대비 33% 하락했다. 이는 S&amp;P 500 지수가 9%...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE91NmZISXc3MEVMOVBjXzFDN2tlMjRBaHJ1NTluNWx5bHNxQ1JRdUp4NHB1MGdnZkhFaXByUXBMRWNSSlV0cFlfb1owX0FFN2s?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 흔들리자 돈 몰리는 곳…2026년 암호화폐 IPO 3곳은</a>
-<p class="news-desc">비트코인 흔들리자 돈 몰리는 곳…2026년 암호화폐 IPO 3곳은 v.daum.net</p>
+<p class="news-desc">비트코인 가격이 6월 한 달 동안 약 7만2000달러에서 5만8000달러까지 하락하며 약세를 이어가자 투자자들의 관심이 암호화폐 기업공개(IPO) 시장으로 이동하고 있다. 시장에서는 2026년 상장을 추진 중인 크라켄(Kraken), 컨센시스(ConsenSys), 아이오닉 디지털(Ionic Digital)이 대표적인 수혜 후보로 거론된다. 해외 블록체인</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -171,7 +171,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBnN2w1S2gwT0lmVXdPOWRmd3ZrTGtxZzc0WjdLTFk0cUtSOGY5YXk3X0tWT2drYjhzaHhHV1EyTFNKUGNyQ01lVk42WndweURjbVJJeVJOdEptLVhmQjZKRWRPekVHZWJOY2tDWV8yX3BkQ1k?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스트래티지 등 암호화폐주, 비트코인 가격 회복에 상승 - 마켓인</a>
-<p class="news-desc">스트래티지 등 암호화폐주, 비트코인 가격 회복에 상승 마켓인</p>
+<p class="news-desc">스트래티지(MSTR), 코인베이스글로벌(COIN) 등 암호화폐 관련주가 비트코인 가격 회복에 상승 중이다.2일(현지시간) 오전 9시48분 현재 스트래티지는 전 거래일 대비 7.51%(7.02달러) 상승한 100.41달러를 기록하고 있다. 코인베이스 역시 4.70%(7.48달러) 오른 166.73달러에 거래되고 있다.비트코인은 전날부터 이틀 연속 상승세를 ...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBUDZJSmMxU2pieWhsSzJJaVZiYlY3emRnMmpkUGpfRnlQNE80LWNtcXZxOUd0MWk1dEdnUUdqYUktZ3d0am1KS3FzU1VjTHFwcHlJQU1qNVpIMURVNmdTRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ETF 시대에도 고점서 반토막 난 비트코인…"추가 하락 여지"</a>
-<p class="news-desc">ETF 시대에도 고점서 반토막 난 비트코인…"추가 하락 여지" 뉴시스</p>
+<p class="news-desc">[서울=뉴시스]박영환 기자 = 비트코인이 현물 상장지수펀드(ETF) 출시와 암호화폐에 우호적인 미국 행정부라는 호재에도 올해 들어 33% 하락해 2022년 이후 최악의 상반기 성적을 기록할 가능성이 커졌다.미국 마켓워치는 30일(현지시간) 세계 최대 암호화폐인 비트코인이 지난해 10월 12만6273달러 부근까지 올랐지만, 최근에는 그 절반에도 못 미치는 수..</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

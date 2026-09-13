@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE4xV21jNEFONWJFUUxxejAwcHdpN1AyZDRXWUk5YVRmUUtndW5tVk96N1BiMk1RRDdDYzh5RGZ4NWt6VndscDNyOUZuNHB5RzRQR191SkY2T3F3NFlkcWhrTEx5T1RvMG1RR0FueDg1d2FaY1gxUlVj0gF3QVVfeXFMTjFXbWM0QU41YkVRTHF6MDBwd2k3UDJkNFdZSTlhVGZRS2d1bm1WT3o3UGIyTVFEN0NjOHlEZng1a3pWd2xwM3I5Rm40cHlHNFBHX3VKRjZPcXc0WWRxaGtMTHlPVG8wbVFHQW54ODV3YVpjWDFSVWM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">3일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목.외국인 매수 1위는 삼성전기</a>
-<p class="news-desc">[3일 매매 동향] 시장별, 외국인 및 기관 순매수·순매도 상위종목.외국인 매수 1위는 삼성전기 핀포인트뉴스</p>
+<p class="news-desc">3일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9CbmtBTjg5UEphVmx1dHZGYW5HMWN0LWtPODNzU0VYUXp4UUQ2WlUwM3Y0a2QwaUpQcHFRTmRHSy05QjI0cEszMkxrc2NaYVBWdjRRU3JFdmVYT1RfbFNCQ1FfN1R4d0ItVFE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인 '다보링크·후성', 기관 '삼성전자·금융주' 러브콜 - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인 '다보링크·후성', 기관 '삼성전자·금융주' 러브콜 뉴스티앤티</p>
+<p class="news-desc">3일 오전 키움증권 창구를 통한 외국인과 기관 투자자의 매매 동향 집계를 분석한 결과, 외국인은 장 초반 전선, 디스플레이, 조명 관련 종목을 중심으로 매수와 매</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -109,7 +109,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5xUEQ1VGRZbk5OY2k4RVRtN0s4SjdVN2x1XzhHU3F0ejVzeEx3X0FKNmdWRXU1enluM3NERzVnQUhuTEtHblcxTUxnVVNoUk5ReFlKWm5TLVJMbWpZVEdTSUVfWGRRd0RLU3kwM1h5RmZNM0xG0gF0QVVfeXFMTnFQRDVUZFluTk5jaThFVG03SzhKN1U3bHVfOEdTcXR6NXN4THdfQUo2Z1ZFdTV6eW4zc0RHNWdBSG5MS0duVzFNTGdVU2hSTlF4WUpablMtUkxtallUR1NJRV9YZFF3REtTeTAzWHlGZk0zTEY?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"현 상황 2010~2011년과 유사…한은 금리 인상시 금리·환율 안정"</a>
-<p class="news-desc">"현 상황 2010~2011년과 유사…한은 금리 인상시 금리·환율 안정" 연합인포맥스</p>
+<p class="news-desc">(서울=연합인포맥스) 고유권 선임기자 = 올해 하반기 이후 한국은행의 금리 인상 국면에서 장기채 금리와 달러-원 환율이 2010~2011년과 유사하게 안정화될 가능성이 있으며, 국내 주식과 채권 가격이 동반 상승하면서 양(+)의 상관관계가 나타날 것이란 전망이 나왔다. 연구소는 중동 전쟁 종전 양해각서(MOU) 체결 이후 국제유가가 하락하고, 정부도 적극적인 물가 대책을 시행하고 있어 소비자물가 상승률은 7~8월을 고점으로 점차 하향 안정될 것으로 봤다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE8tdTA2T3VfSjh5cFJaX1NyQklqdDF2T281QVZaZGtxQ0EyRHo4cUdRclVEMkpkY3BGalVPal84NTQtMERwdExNUloxNkx4dGtzdmQydkpnMUhnU0lycnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'환율 광풍'? 원달러 환율이 오르는 근본적 이유 - YTN</a>
-<p class="news-desc">'환율 광풍'? 원달러 환율이 오르는 근본적 이유 YTN</p>
+<p class="news-desc">- 2021년 1,000원대였던 환율, 5년째 지속적으로 올라 1,500원 넘겨 - 장기적 환율 상승, 구조적 문제 때문 "결국 금리 때문" - 美 2022년부터 금리인상기 돌입, 2023년쯤 美에 역전 발생 - 3년이상 미금리가 더 높은 '역전'..'역사상 가장 긴 기간' - 국제 금융시장에서 더 안전한 투자하려면, 韓금리가 美금리보다 더 높아야하는 구조 - 경제전문가들 "한국은행 금리인상 빨리 해라!</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE0zQ1c0NkVUd1p3dm1jcEY4dVJfZkhQMjktM0VKcnhqUTN3bWh4UXZ3SDFSZDRNOFQxbC1PbGF6bXlNTmFPeGswY3dFc1FCZnFWQUVaVDV1cmw4NklmUFRrNDdkaUM4NzNuQnluSUxQS1pzWG9x?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 금리 올리면 환율 잡힐까…대외변수 ‘여전’ - 대한경제</a>
-<p class="news-desc">한은 금리 올리면 환율 잡힐까…대외변수 ‘여전’ 대한경제</p>
+<p class="news-desc">[대한경제=김봉정 기자] 7월 한국은행의 기준금리 인상이 유력한 가운데 고공행진 중인 원·달러 환율을 안정시킬 수 있을지 관심이 쏠린다. 전문가들은 금리 인상이 한미 금리차를 축소해 원화 약세 완화에 도움이 될 것으로 보면서도 외국인 자금 흐름과 달러 강세 등 대외 변수가 여전히 큰 만큼 환율 하락 폭은 제한적일 것으로 전망했다.2일 금융권에 따르면 최근 원·달러 환율은 1550원 안팎에서 등락을 거듭하며 글로벌 금융위기 이후 가장 높은 수준을 이어가고 있다.시장에서는 현재 고환율의 주요 원인 가운데 하나로 한미 금리차를 꼽는다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -223,7 +223,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE0zWHBfeEhnRUFIZWxtc25BZVZvUEhUeEJDVE5ManhRd3ZjZjM5dkNOLXljTk5sQjdDSEVjQU9hQmk1bzI0bDRWRVprYzJmd1BkSlo4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ET특징주] 美 반도체 삭풍에도… 삼성전자·SK하이닉스 주가 반등</a>
-<p class="news-desc">[ET특징주] 美 반도체 삭풍에도… 삼성전자·SK하이닉스 주가 반등 전자신문</p>
+<p class="news-desc">전날 큰 폭으로 내려앉았던 삼성전자와 SK하이닉스 주가가 3일 반등하고 있다. 이날 1시 11분 기준 삼성전자(005930) 주가는 전 거래일 대비 7.87% 상승한 30만 8500원에 거래되고 있다. 전날 9.06% 하락한 28만 6000원으로 마감했으나, 이날 반등해 30만원선을 회복하는 모습이다. 같은 시각 SK하이닉스(000660)는 6.22% 상승한 232만 3000원에 거래되고 있다. SK하이닉스 역시 전날 14.57% 급락해 218</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nWS16YnJxS3NCVkdRWllqMGJKU3FSaHJjWkxhaTBqenRWVnVRa2hlMWMxaE51bWJhX3FwandUU2RhekZHSXVTdXV0U1ljeEVwTFBKZUxGYUw5NDByQXpCVTJ2azBKT0E2QVFCaExMeW9Yc3QwTTJxcVJR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">메타가 쏜 '과잉 투자' 우려‥반도체주 폭락 - MBC 뉴스</a>
-<p class="news-desc">메타가 쏜 '과잉 투자' 우려‥반도체주 폭락 MBC 뉴스</p>
+<p class="news-desc">우리 코스피가 8% 가까이 급락하면서 8천 선이 무너졌습니다. 미국 빅테크 기업 메타가 클라우드 사업을 추진하겠다고 밝히면서 AI 과잉투자 우려가 다시 번졌고, SK하...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -259,7 +259,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5sLXc1WXVxdEFxUThvVGdXOXo5Q3FVNXJmRFE3TkFsbUl5cmEwR3VENkE0NlRXcl85Nkt3YWFRckt5NUUtWGJHMDE5SU4tRU1NaEVIX0pPTUtvX0FHTkN3cFI5VG8tLUxUdmhJY0hONUw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">초강 달러·슈퍼 엔저·셀 코리아·24시 환시장의 ‘4중 파고’, 통화정책 만전을 - 산경일보</a>
-<p class="news-desc">초강 달러·슈퍼 엔저·셀 코리아·24시 환시장의 ‘4중 파고’, 통화정책 만전을 산경일보</p>
+<p class="news-desc">미국과 이란이 지난 6월 17일 ‘종전 합의(MOU)’를 어렵게 체결했으나, ‘호르무즈해협(Strait of Hormuz)’과 관련한 이견(異見)이 좁혀지지 않고 있는 점 등이 시장에 불확실성(Uncertainty)을 심으며 위험회피 심리를 자극하고 있는 데에다 미국 연방준비제도(Fed │ 연준)가 긴축 긴장감을 높이고 있는 가운데 외국인의 국내 증시 이탈로 달러 수요를 키우면서 지난 7월 1일 서울 외환시장에서 미국 달러화 대비 원화 환율은 전 거래일보다 5원 50전 오른 1,554원 90전에 주간 거래를 마쳤다. 무려 32거래일</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
