@@ -611,6 +611,51 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         'deployed_shas = frozenset(r.sha for r in filter_kind(records, args.kind) if r.env == "production" and r.sha)',
         "tests/test_check_vercel_quota.py::test_main_rejection_count_is_independent_of_kind",
     ),
+    # ---------------------------------------------------------------------
+    # Part 8 (2026-09-11): `supply-chain-lock.yml` 게이트. 계획서 Step 3 의 첫
+    # 등록 대상이다 — required-check 토폴로지라는 점에서 Part 7(aggregator)과
+    # 같은 결함 계열이라 뮤테이션 3종(paths 재도입 / always() 제거 / needs 축소)을
+    # 그대로 옮길 수 있었고, 여기에 이 게이트 고유의 두 축을 더했다:
+    # `--require-hashes` 무결성과 스크립트의 fail-closed 기본값.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        "공급망 게이트 PR 트리거에 paths 필터 재도입 (required check 영구 대기)",
+        ".github/workflows/supply-chain-lock.yml",
+        "  pull_request:\n",
+        "  pull_request:\n    paths:\n      - 'scripts/requirements.lock'\n",
+        "tests/test_supply_chain_lock_gate_guard.py::TestAlwaysReports::test_pull_request_has_no_paths_filter",
+    ),
+    StaticCase(
+        "공급망 게이트 if: always() 제거 (upstream skip 시 체크 미생성)",
+        ".github/workflows/supply-chain-lock.yml",
+        "    if: always()\n",
+        "",
+        "tests/test_supply_chain_lock_gate_guard.py::TestAlwaysReports::test_gate_runs_unconditionally",
+    ),
+    StaticCase(
+        "공급망 게이트 needs 축소 (verify 가 게이트 밖으로)",
+        ".github/workflows/supply-chain-lock.yml",
+        "    needs: [changes, verify]",
+        "    needs: [changes]",
+        "tests/test_supply_chain_lock_gate_guard.py::TestAlwaysReports::test_gate_needs_both_upstream_jobs",
+    ),
+    StaticCase(
+        # 2026-06-22~08-26 동안 실제로 non-blocking 이었던 스텝이다. 되돌림이
+        # 조용하다는 것이 이 케이스가 있는 이유다.
+        "락 무결성에서 --require-hashes 제거 (해시 검증 없이 통과)",
+        ".github/workflows/supply-chain-lock.yml",
+        "pip install --require-hashes --dry-run -r scripts/requirements.lock",
+        "pip install --dry-run -r scripts/requirements.lock",
+        "tests/test_supply_chain_lock_gate_guard.py::TestLockIntegrityStaysBlocking::test_step_still_runs_require_hashes",
+    ),
+    StaticCase(
+        # 판정 잡이 죽었는데 게이트가 통과하면, 장애가 "검증 면제"로 위장한다.
+        "게이트 fail-open (판정 잡 실패를 무시)",
+        ".github/workflows/supply-chain-lock.yml",
+        '          if [ "${CHANGES_RESULT}" != "success" ]; then',
+        "          if false; then",
+        "tests/test_supply_chain_lock_gate_guard.py::TestFailClosed::test_changes_failure_blocks",
+    ),
 )
 
 
@@ -650,7 +695,6 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     "tests/test_workflow_concurrency_scope_guard.py": "Tier 1 — glob 스캐너. test_guard_covers_at_least_one_workflow 가 트립와이어",
     "tests/test_dependabot_pip_scope_guard.py": "Tier 1 — 설정 스캐너. dirs/manifests 트립와이어 보유",
     # --- Tier 2: 폭발 반경 상위. 하네스 등록이 올바른 도구이나 authoring 미완 ---
-    "tests/test_supply_chain_lock_gate_guard.py": "Tier 2 — required-check 토폴로지. aggregator 뮤테이션 3종 재사용 가능",
     "tests/test_requirements_lock_sync_workflow_guard.py": "Tier 2 — 공급망 락 동기화 배선",
     "tests/test_state_orphan_ci_detection_guard.py": "Tier 2 — _state 고아 탐지 CI 배선",
     "tests/test_credential_logging_guard.py": "Tier 2 — 보안 축. 카나리 1건 보유로 부분 방어는 있음",
@@ -687,7 +731,7 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
 #: 커버리지 하한과 같은 래칫이다. 가드를 `STATIC_CASES` 에 등록하거나 Tier 1
 #: 처방(규모 단언)으로 면제 사유를 없앨 때마다 이 값을 함께 내린다. 상한이 없으면
 #: 목록이 고무도장이 된다 — 등록보다 면제가 항상 싸기 때문이다.
-_MAX_EXEMPTIONS = 30
+_MAX_EXEMPTIONS = 29
 
 #: 가드 테스트 모듈로 간주하는 파일명 패턴.
 #:
