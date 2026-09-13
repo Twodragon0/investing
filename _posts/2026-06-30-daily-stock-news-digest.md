@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9sYU1SYnlsNGZwMnNXYmxubHVXS1AyR3BEc3p5LV9uM3FMVGNNVktyajZhUTNVdkFjWDN5VkdiREdsXy1zWUkzcHR0Z3ZTRi0wcTFRZmVOdE5ZV1plZEZ5YVBKOGxzOWtMSW9iUFBqVXjSAXRBVV95cUxPN2E1TExDYmdkR3JjRHl0TDlDT0h1ZjhhNDdPWHFPaTR6azdBSDZmLWVxczY0OVVscEFTUXN2eng0WnAwaC1VZ1JpZW1yLTI1MXRqVTVKTVR3bWp3dnFsRmc1OFdyaVdleEFEaWJMZ3VIN1BTdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 덮친 반도체 변동성…코스닥은 바이오·2차전지 급반등 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 한승수 기자]국내 증시가 대형 반도체주 중심의 급격한 변동성에 휘말린 가운데 코스닥 시장이 바이오와 2차전지 업종을 앞세워 강한 반등세를 보이고 있다.코스피는 삼성전자와 SK하이닉스 등 시가총액 상위 종목의 약세로 2거래일 연속 하락했지만, 코스닥은 정책 기대감과 순환</p>
+<p class="news-desc">[산경투데이 = 한승수 기자] 국내 증시가 대형 반도체주 중심의 급격한 변동성에 휘말린 가운데 코스닥 시장이 바이오와 2차전지 업종을 앞세워 강한 반등세를 보이고 있다.코스피는 삼성전자와 SK하이닉스 등 시가총액 상위 종목의 약세로 2거래일 연속 하락했지만, 코스닥은 정책 기대감과 순환</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

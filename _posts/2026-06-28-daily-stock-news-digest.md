@@ -121,7 +121,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9lTGtXSzVWdDEzNHVlU1NmcXJIajJQZjJZekNYamhVTlZuRlpTVWtNaXAwbGNiRU5BME5RZDdEZ2JXMjhlSGR4LUNFOEpwTzJYU3pUREZUMHhJUlB0enkzU2trbGdscXBUMHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 50만원, 하이닉스 360만원 갈까…연말까지 반도체 투톱 운명 가를 5가지 변수 - 도민연합뉴스</a>
-<p class="news-desc">[도민연합뉴스 = 김진명 기자 ]삼성전자와 SK하이닉스를 바라보는 투자자들의 시선이 다시 뜨거워지고 있다. 올해 들어 인공지능(AI) 데이터센터 투자 확대와 고대역폭메모리(HBM) 공급 부족이 맞물리면서 국내 반도체 대장주들의 주가가 급등락을 반복하고 있기 때문이다.투자자들이 가장 궁</p>
+<p class="news-desc">[도민연합뉴스 = 김진명 기자 ] 삼성전자와 SK하이닉스를 바라보는 투자자들의 시선이 다시 뜨거워지고 있다. 올해 들어 인공지능(AI) 데이터센터 투자 확대와 고대역폭메모리(HBM) 공급 부족이 맞물리면서 국내 반도체 대장주들의 주가가 급등락을 반복하고 있기 때문이다.투자자들이 가장 궁</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

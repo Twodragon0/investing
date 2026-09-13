@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1GUlQ1T1JoMU5UZFJzRk83OXlLWVNFRmxMNFNILWdkRXhqdmdqcjNyVVNfTUVfRjZ1SHRGR1EzaGtTX1ViLVhPZ1lKYTVGSkMxRGdzeTdoX1U5YjBGSjdkdNIBeEFVX3lxTE5SRGN4aGwtZVFvR2dMamxMdnRjRWZ1Z2txU3dHZk5MS2dEZ3hIeXJ2WVJqMVdiMzd6Xy1Ya0pxRHlpOVRtV2VkMGEyS0dGSmVZUDdvQWZOTmZydl8zalZkSndWd2QyMFlMWWhVOU1kSlR6bjRWbE95Tw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식 내다파는 外人에 환율 안정 '무소용'…외환위기 수준 치솟은 원·달러</a>
-<p class="news-desc">[서울=뉴시스]김래현 기자 = 원·달러 환율이 고공행진을 이어가며 1997년 외환위기 수준으로 흔들리고 있다. 환율을 안정시키기 위한 정부의 노력은 외국인 투자자들의 매도세에 밀려 반짝 효과를 내는 데 그치고 있다.28일 한국은행 경제통계시스템에 따르면 지난 26일 기준 이달 원·달러 환율은 1525.9원이다. 월별로 봤을 때 글로벌 금융위기 시기를 훌쩍 ..</p>
+<p class="news-desc">[서울=뉴시스] 김래현 기자 = 원·달러 환율이 고공행진을 이어가며 1997년 외환위기 수준으로 흔들리고 있다. 환율을 안정시키기 위한 정부의 노력은 외국인 투자자들의 매도세에 밀려 반짝 효과를 내는 데 그치고 있다.28일 한국은행 경제통계시스템에 따르면 지난 26일 기준 이달 원·달러 환율은 1525.9원이다. 월별로 봤을 때 글로벌 금융위기 시기를 훌쩍 ..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

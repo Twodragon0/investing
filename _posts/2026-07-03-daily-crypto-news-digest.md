@@ -183,7 +183,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBUDZJSmMxU2pieWhsSzJJaVZiYlY3emRnMmpkUGpfRnlQNE80LWNtcXZxOUd0MWk1dEdnUUdqYUktZ3d0am1KS3FzU1VjTHFwcHlJQU1qNVpIMURVNmdTRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ETF 시대에도 고점서 반토막 난 비트코인…"추가 하락 여지"</a>
-<p class="news-desc">[서울=뉴시스]박영환 기자 = 비트코인이 현물 상장지수펀드(ETF) 출시와 암호화폐에 우호적인 미국 행정부라는 호재에도 올해 들어 33% 하락해 2022년 이후 최악의 상반기 성적을 기록할 가능성이 커졌다.미국 마켓워치는 30일(현지시간) 세계 최대 암호화폐인 비트코인이 지난해 10월 12만6273달러 부근까지 올랐지만, 최근에는 그 절반에도 못 미치는 수..</p>
+<p class="news-desc">[서울=뉴시스] 박영환 기자 = 비트코인이 현물 상장지수펀드(ETF) 출시와 암호화폐에 우호적인 미국 행정부라는 호재에도 올해 들어 33% 하락해 2022년 이후 최악의 상반기 성적을 기록할 가능성이 커졌다.미국 마켓워치는 30일(현지시간) 세계 최대 암호화폐인 비트코인이 지난해 10월 12만6273달러 부근까지 올랐지만, 최근에는 그 절반에도 못 미치는 수..</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
