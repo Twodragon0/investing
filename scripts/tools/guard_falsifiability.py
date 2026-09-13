@@ -826,17 +826,17 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     # --- Tier 4: 자기검증 카나리 보유. 하네스 등록의 한계 효용이 낮다 ---
     # 알려진 위반을 넣어 red 를 확인하는 테스트를 이미 갖고 있어 결함 B 에 대한
     # 로컬 증거가 존재한다.
-    "tests/test_injection_guard.py": "Tier 4 — 카나리 보유(comment_only_reference_does_not_flag)",
-    "tests/test_encoding_guard.py": "Tier 4 — 카나리 3건 보유(detects_corrupted_run 등)",
-    "tests/test_close_stale_ci_failure_issues_guard.py": "Tier 4 — 카나리 보유(deferred_count_is_reported)",
-    "tests/test_workflow_alerting_coverage_guard.py": "Tier 4 — 카나리 보유(scanner_ignores_non_workflow_files)",
-    "tests/test_desc_headline_guard.py": "Tier 4 — 카나리 2건 보유(report_reuses_the_shared_detector 등)",
-    "tests/test_collector_noop_commit_whitelist_guard.py": "Tier 4 — 카나리 보유(dedup_detector_is_bidirectional)",
-    "tests/test_lock_guard_parity.py": "Tier 4 — 카나리 보유(parity_check_flags_divergence)",
-    "tests/test_vercel_config_guard.py": "Tier 4 — 카나리 보유(exclude_pathspec_detector_is_bidirectional)",
-    "tests/test_pytest_plugin_install_sync_guard.py": "Tier 4 — 카나리 보유(addopts_flags_have_their_plugins_installed)",
-    "tests/test_rss_source_url_guard.py": "Tier 4 — 카나리 보유(empty_and_malformed_are_rejected)",
-    "tests/test_workflow_scanner_convention_guard.py": "Tier 4 — 카나리 보유(behavioural_scanners_read_parsed_content)",
+    "tests/test_injection_guard.py": "Tier 4 — **한 방향만**(2026-09-13). 거짓양성은 막지만 탐지 능력 자체는 미검증. 26개 테스트의 폭이 실질 방어선",
+    "tests/test_encoding_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). detects_corrupted_run + french_accent_not_flagged 가 짝을 이룬다",
+    "tests/test_close_stale_ci_failure_issues_guard.py": "Tier 4 — **카나리 아님**(2026-09-13). JS 소스 substring 단언이다. 등록 후보로 재검토할 것",
+    "tests/test_workflow_alerting_coverage_guard.py": "Tier 4 — 카나리 절반 유효(2026-09-13). 첫 단언은 항진명제(glob 결과에 suffix 단언), 둘째만 오염을 잡고 그것도 .github/workflows/AGENTS.md 존재에 의존",
+    "tests/test_desc_headline_guard.py": "Tier 4 — **카나리 아님**(2026-09-13). 함수 객체 동일성(is) 단언 — 드리프트는 막지만 탐지 능력은 미검증",
+    "tests/test_collector_noop_commit_whitelist_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). 위반 탐지 + 정상 미탐지 둘 다 단언",
+    "tests/test_lock_guard_parity.py": "Tier 4 — **한 방향만**(2026-09-13). 합성 발산 입력 1건, 대조군 없음",
+    "tests/test_vercel_config_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). 위반 탐지 + 정상 미탐지 둘 다 단언",
+    "tests/test_pytest_plugin_install_sync_guard.py": "Tier 4 — **카나리 아님**(2026-09-13). 일반 불변식 테스트다. 다만 addopts/설치본 대조라 스캐너 붕괴 경로가 없다",
+    "tests/test_rss_source_url_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). 다만 두 단언 모두 _is_article_url 만 보고 is_safe_url 전제에 의존",
+    "tests/test_workflow_scanner_convention_guard.py": "Tier 4 — **메타 규약 검사**(2026-09-13). 카나리가 아니라 다른 가드들의 스캔 방식을 강제한다",
     # --- Tier 4: 내용 품질 축. 규모 단언 보유 또는 범위 협소 ---
     "tests/test_backfill_url_summaries_workflow_guard.py": "Tier 4 — 규모 단언 2건 보유",
     "tests/test_python_version_declaration_guard.py": "Tier 4 — 규모 단언 1건 보유",
