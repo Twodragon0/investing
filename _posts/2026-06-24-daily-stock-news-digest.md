@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBOcGZXMVplSVBDZFpjOWtkWEwwV2lrT1Q4bFlkX0NNZ0NEZlVsa1J6Ym9hQzBoeTFieFVHaXZUOVhhdzVNUmxwUFVXY2Y0UjFKSzRfZ2tJcEtHSjhqSG9xTDFrcjRiSkhjS2Jr?oc=5">주식] 코스피·코스닥 폭락 속 바이오주 '희비'…아미코젠 17%↑ - 히트뉴스</a> <span class="p0-desc">[주식] 코스피·코스닥 폭락 속 바이오주 '희비'…아미코젠 17%↑ 히트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9DQkg2cXB1aU9tOUh5YXpzenVzeUZkc09kbzZxODltcGh4cEYyRFFId1d6UFB3azJKT2dfQ0RBT1dXTlZaSHN1Vms3SDhRVDdaODVuX3Zad3drNW9iVmhuZktBbVlMU0NwSnZ3WHdueko?oc=5">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓"</a> <span class="p0-desc">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓" 연합인포맥스</span></li><li><a href="https://www.hani.co.kr">코스피·코스닥 5%대 급락…동반 매도 사이드카</a> <span class="p0-desc">코스피·코스닥 5%대 급락…동반 매도 사이드카 한겨레</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 8,203.84 (-9.99%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 891.52 (-7.94%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-06-24 주식 시장에서 209건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,203.84(-9.99%), KOSDAQ 891.52(-7.94%), USD/KRW 1,533.10(-0.20%).
 - *박찬하 대표님, 축하 드리고 업계의 진솔한 목소리를 담은 기사 잘 보고 있습니다.*
 
 ## 테마별 주요 뉴스
