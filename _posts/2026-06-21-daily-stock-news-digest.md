@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5sNnZKRXkyVFNPTEI5OFJBRDEzN2RZRmlXVFNhWHd2eVVQT0x0LXJtM2hqWUFpMmcyaVdCRXdSSEkxNzNiNWdRSXBwYjk2SkNJVGtJQ09LcGZiWTFWM1BTZWk4TGN0LXlRdllYbFR3UDDSAXRBVV95cUxQdnB6dlJyYXlLVXhaNDFLT2JWcHZDWndNUXZBRzU5MXVNMTFGR0RlVUN5aU82Z084bHNXeUNONVJfaVYzcmZScTkyVjJFOFNSd3ZDX21qd1dQLVhzWGNTM3duSm9xaWlTdDVPZk5JX2ZLN2tpdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘9천피’ 코스피, 최고치 경신 뒤 급반락…7거래일 만에 약세 마감 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 이하나 기자]코스피가 장중 사상 최고치를 다시 썼지만 오후 들어 급격히 밀리며 7거래일 만에 하락 마감했다. 단기 급등에 따른 차익실현 압력이 커진 가운데 미국과 이란 간 종전 합의 이행을 둘러싼 불확실성이 부각되면서 투자심리가 빠르게 위축됐다.19일 코스피는 전 거래</p>
+<p class="news-desc">[산경투데이 = 이하나 기자] 코스피가 장중 사상 최고치를 다시 썼지만 오후 들어 급격히 밀리며 7거래일 만에 하락 마감했다. 단기 급등에 따른 차익실현 압력이 커진 가운데 미국과 이란 간 종전 합의 이행을 둘러싼 불확실성이 부각되면서 투자심리가 빠르게 위축됐다.19일 코스피는 전 거래</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9rdzFBSDdGckhIX0NMQmcxNERPcHRuVEZtY0E0WG9Oa3pEOUhjcmQwcm0wQ1MySzBpa2ViakFWRXRpTkk3Vml4US03TTkwWTY1QXFfdEh0NVhHc281U0tNaFV5VEU4QmhPaERHdkxqN1LSAXRBVV95cUxPeHQxMkc1N0pONlhOQ2xfLWVNUGcxbFpZcl90eUV0THlNM25DS0NnWmtfSE5YVjJYR2NFYUZrTWZwWkM1MUJaUlJkMGlnTURZZHJkOTZzYkFySUJpZktHY3ktLXpOT093RTI0MmRrSGhZN0lqNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 투톱이 이끈 ‘9300피’…SK하이닉스, 시총 2000조 돌파 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 이하나 기자]코스피가 사상 처음으로 9300선을 넘어선 가운데 국내 증시의 무게중심이 반도체 대형주로 빠르게 이동하고 있다.삼성전자와 SK하이닉스가 인공지능(AI) 반도체 수요 확대를 등에 업고 연일 신고가 경쟁을 벌이면서 국내 증시 시가총액 구조도 새롭게 재편되는 모</p>
+<p class="news-desc">[산경투데이 = 이하나 기자] 코스피가 사상 처음으로 9300선을 넘어선 가운데 국내 증시의 무게중심이 반도체 대형주로 빠르게 이동하고 있다.삼성전자와 SK하이닉스가 인공지능(AI) 반도체 수요 확대를 등에 업고 연일 신고가 경쟁을 벌이면서 국내 증시 시가총액 구조도 새롭게 재편되는 모</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -240,7 +240,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpX3ozN3ltdGtkeE1aTk9xUVZSVGdiNlJIbGNtdXNWNVg5UHppdmZwQlEtMVlDdG9sLVpjSVQ0eXROUThsb21EcFo5V0JlOWRlX2cyWdIBWEFVX3lxTE51akY0NlJQUi1yTTJfLWVYZV9HTXVKd1BUa082ay13Q1NrZGlQMk42dkRqTERSZ0ttTjVqZk1sc3BaUGxld0ZTZU1vc2dXZGxlQXc0OVZUNEc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하이닉스 시총, 삼성전자 추격…‘반도체 투톱’이 코스피 9300선 이끌었다 - 미디어펜</a>
-<p class="news-desc">[미디어펜=조우현 기자]삼성전자와 SK하이닉스가 나란히 사상 최고가를 경신하며 코스피 지수를 사상 첫 9300선 고지로 끌어올렸다. 특히 SK하이닉스는 장중 한때 시가총액 2000</p>
+<p class="news-desc">[미디어펜=조우현 기자] 삼성전자와 SK하이닉스가 나란히 사상 최고가를 경신하며 코스피 지수를 사상 첫 9300선 고지로 끌어올렸다. 특히 SK하이닉스는 장중 한때 시가총액 2000</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
