@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-22 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.munhwa.com">코스피·코스닥 매도 사이드카… 7월 10조 사들인 개미 ‘비명’ - 문화일보</a> <span class="p0-desc">코스피·코스닥 매도 사이드카… 7월 10조 사들인 개미 ‘비명’ 문화일보</span></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE95RHJtRnJTbnctLURNa3RDN1o4cTFULTNmU0NhNEp0a0Nnd1llNUNxd1VGV3pWV2JhRzBITHBYUVFiaTFXb2NjaFFxaGJwM0ItOTNOcFNFUkpoWFUwSW9XSjBxMWlMWXRHM28yRDRsZmJwUHZ5WEE?oc=5">0720마감체크] 반도체 피크아웃 우려·중동 악재에 코스피·코스닥 급락</a> <span class="p0-desc">[인포스탁데일리=윤서연 기자]▶마감체크■ 코스피지수코스피지수는 4.46% 하락한 6516.27에 마감했다.지난 주말 뉴욕증시가 중국 AI 모델 추격 우려 속 반도체 등 기술주 부진, 중동 지정학적 리스크 지속 등에 하락했고, 유럽 주요국 증시도 대부분 하락했다.이날 코스피지수는 6643.58으로 급락 출발했다. 장초반 낙폭을 키워 6510선으로 밀려나기도 했지만 빠르게 낙폭을 만회하며 6814.86에서 장중 고점을 형성했다. 이후 재차 낙폭을 확대했고, 오후 장중 6472.80까지 밀려나며 저점을 형성했다. 이후 일부 낙폭을 만회해</span></li><li><a href="https://www.jnilbo.com">"패닉셀에 양대 시장 마비"…코스피·코스닥 매도 사이드카 동시 발동 - 진일보</a> <span class="p0-desc">진일보, 전남일보 광주, 전라남도 지역신문, 경제, 사회 등 분야별 기사, 칼럼, 독자투고 수록</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,747.95 (+3.56%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 753.34 (+0.49%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-07-22 주식 시장에서 196건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,747.95(+3.56%), KOSDAQ 753.34(+0.49%), USD/KRW 1,480.56(+0.33%).
 - *한강타임즈 김광호 기자 = 20일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스

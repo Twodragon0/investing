@@ -33,51 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-14 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 경기침체, 내부자 - 136건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: IPO 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 환율 동향 주시</li><li>📈 <strong>가격/시장</strong>: 삼전닉스, 외국인 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNc1NNNE5KRzJyTWxFU2wwYkZiMGZIWUF6SFpuMlhwbThHajI0SVFmSUU5bTNsU09XQURRYVdRaTlkRVp5UjZ4eXZoNU9TblhNUWllMW5MTF9XODg0dEFrWnVJN2pvallaY25XQUtzYnQ4aXpGOU9mdlUwTDF6MjMxRDZISGFzaV9LT3FEUERya0RZZzQ0OXYwU2dtSi0?oc=5">A veteran economist tells us why he sees a recession and a stock crash by the end of 2027 - Business Insider</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5KWVdnellyWm1PZ05OZHRTdGhRb3dXd0NCMERseGRZSnhvcS1jZjh6NG1XTzBQck9wajE3NUlGYjdBNXJQd2FoUUNSTDVXWnloeFNSWUhnbXQ0alV4aDF1TG5lZ0p5Nl9rdkxLYl9yb0hqdk0?oc=5">Morgan Stanley Gives Huge Stock Market Crash Warning in 30 Days</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: A veteran economist tells us why he sees a recession and a stock crash by the end of 2027 - Busin. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 136건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **🤖 AI/기술** (21건): IPO 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (11건): 연준, 환율, 인플레이션 매크로 변수 (11건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (24건): 삼전닉스, 외국인, 환율 가격 변동 (24건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- A veteran economist tells us why he sees a recession and a stock crash by the end of 2027 - Business
-- Morgan Stanley Gives Huge Stock Market Crash Warning in 30 Days
-
-### 주요 이슈
-
-- Korn Ferry (KFY) Expands Global Standing With AMS Acquisition
-- ‘I still don’t have my MRI’: My health insurer canceled my plan without warning.
-- Corporate profit forecasts are topping expectations to an unusual degree. AI is
-- 외 17건
-
-### 투자자 체크포인트
-
-- 한국 기사 46건, 글로벌 기사 90건 수집
-- 한국 지수: KOSPI 6,909.91(-1.76%), KOSDAQ 820.64(-1.95%), USD/KRW 1,341.05(-0.61%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:88%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:46%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:50%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:33%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-14.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,909.91 (-1.76%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 820.64 (-1.95%).
+- 2026-09-14 주식 시장에서 136건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,909.91(-1.76%), KOSDAQ 820.64(-1.95%), USD/KRW 1,341.05(-0.61%).
+- *오늘의 주식 시장: 다우존스 지수와 나스닥 복합 랠리은 투자자들이 CPI 인플레이션에서 놀라운 성과를 거두는 금요일입니다.*
 
 ## 테마별 주요 뉴스
 

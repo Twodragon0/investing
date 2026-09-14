@@ -16,29 +16,6 @@ description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고
 
 블록체인 보안 11건 분석. 주목 사건: **[Security] Revolut says customer data exposed through fake g** / 보안 뉴스 헤드라인: Biggest Crypto Exploits Of 2025–2026: What Really Went Wrong.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] ether.fi Liquid exploit: Arbitrary External Call 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 11건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (11건): security, exploit, private 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (4건): exploit, unbacked, cross DeFi 동향 (4건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (3건): exploit, arbitrary, symbiosis 생태계 동향 (3건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] ether.fi Liquid exploit: Arbitrary External Call
-- [Security] Dominion exploit: Private Key Compromised
-- [Security] Symbiosis exploit: Unbacked Cross-Chain Mint
-
-### 투자자 체크포인트
-
-- 보안 사건 9건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 11건
