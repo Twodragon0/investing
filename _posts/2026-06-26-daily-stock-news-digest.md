@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQXzUxT3QzQUxaN3FQM205SS1OZC0wQVBkV0tXRkZEQkpwbk9OZHBPZFRlOHhId1A1QmdNLWR1N3RjQmRvMVAxVXdvQjhBWXpaZnZjRHFWcFFXczB3QWk3RnRKWHI4TDB4WE1zbXhUWngzUGt0SnNuWDV3eHE5M0JvNjU2Yw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마이크론 영업이익률 80%… ‘AI 반도체 거품론’ 잠재웠다</a>
-<p class="news-desc">마이크론 영업이익률 80%… ‘AI 반도체 거품론’ 잠재웠다 조선일보</p>
+<p class="news-desc">마이크론 분기 매출 414억 달러 및 영업이익률 80.4% 기록 달성 고대역폭 메모리 수요 폭발에 따른 반도체 제조사 가격 결정권 확보 최저 가격 보장 조항 포함한 장기 공급 계약으로 수익성 구조 안정</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xUjEyOHpBTjNScTdNcWRfTjc5Z1I0aHd4MjVIbGlzTFluYkdSZVRVc2hDVXdnVXJPUFNjaHFKbHdpekVtX3JRMG5fWWd5TmM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"430만닉스"에 13조 베팅…개미도 증권가도 '반도체 올인'</a>
-<p class="news-desc">"430만닉스"에 13조 베팅…개미도 증권가도 '반도체 올인' v.daum.net</p>
+<p class="news-desc">25일 서울 중구 하나은행 딜링룸 현황판에 코스피 등이 표시되고 있다. 연합뉴스 제공 [파이낸셜뉴스] 국내외 증권사들이 삼성전자와 SK하이닉스의 목표주가를 잇달아 높여 잡으면서 기대감이 한층 커지고 있다. 상장지수펀드(ETF) 시장에서도 개인 투자자 자금의 반도체 쏠림이 두드러지고 있다. 25일 금융투자업계에 따르면 이달 들어 삼성전자</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2SUhDb2I4ZVozWVZ4bzFvSHpsNEw5Y0dDQ2kyckp3YWNnZDhKdmFNcGNydnJCTHg2a3U2bjY2U2pjWlRBUXZVRHZ6VzVjMXZHdXpEOVZFUjFaUdIBX0FVX3lxTFBEYW0zeWhGeGpRQXlXUlc2YndTa3FnY0FHeWNoVDVKNURkSUJ0VVJTSTRqaWFlSlp2eTk2NTh0Sld4XzA1NEtDQ0dDNU0wLXZTaVBOWXlfQTV3VGRMdnd3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마이크론 호실적·하이닉스 ADR 상장…겹호재에 삼전·닉스 주가 ‘수직 상승’</a>
-<p class="news-desc">마이크론 호실적·하이닉스 ADR 상장…겹호재에 삼전·닉스 주가 ‘수직 상승’ 경향신문</p>
+<p class="news-desc">삼성전자와 SK하이닉스의 주가가 25일 또 급등했다. 미국 최대 반도체기업 마이크론 테크놀로지의 ‘어닝 서프라이즈’와 SK하이닉스의 미국주식예탁증서(ADR) 상장 소식 영향이다. 삼성전자는 이날 전장 대비 5.29% 오른 35만8500원에, SK하이닉스는 13.06% 오른 291만7000원에 거래를 마쳤다. 코스피 시가총액의 절반을 차지하는 두 종목의...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE91YXV5RFNYMVUyVXRuOHNqNUp0V3FyWDhGVWNWdHdFTFFuWUhMUjdsaDhCcWRTRmlNcVlpaG5DZkFwcERoWC1MenBPVmdUZVVOS2QtdU1B?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"45조원 실탄 확보"…SK하이닉스, 나스닥 상장 발표에 주가 11% 급등 - 지디넷코리아</a>
-<p class="news-desc">"45조원 실탄 확보"…SK하이닉스, 나스닥 상장 발표에 주가 11% 급등 지디넷코리아</p>
+<p class="news-desc">SK하이닉스가 미국 나스닥 상장을 통해 대규모 자금을 조달하겠다는 계획을 발표한 뒤 주가가 급등했다고 CNBC 등 외신이 보도했다.25일 오후 12시 22분 현재 SK하이닉스 주가는 전 거래일 대비 11.4% 오른 287만 4000원에 거래되고 있다.SK하이닉스는 전날 공시를 통해 미국 나...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LcjBxOXpQNll6ZnFKT1NMZHNWQzAtOUs3c18wZ2g3di1sQm53NGhPUHFpaHlWam40d3dhQzdZeW50Z3Z0R1NGcjJ4Q2tnRVZLdkpuNmVSS2N6QQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"개미는 주식 대신 ETF 샀다"…거래대금 비중 30% 돌파</a>
-<p class="news-desc">"개미는 주식 대신 ETF 샀다"…거래대금 비중 30% 돌파 파이낸셜뉴스</p>
+<p class="news-desc">개인 투자자들의 ETF 거래대금 비중이 처음으로 30%를 넘어서는 등 국내 증시의 투자 지형이 빠르게 바뀌고 있다.21일 금융정보업체 에프앤가이드와 한국거래소에 따르면 올해 개인 투자자는 지난 19일 기준 국내 코스피, 코스닥 상장주식을 64조3000억원, ETF를 55조30..</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1WUk1icFVkMFhaU1hUTEpPbktibWNSRy02R2UwSmw0WTBDZDlCSDcwX2trcm1ic1phQzJtcTRBLWpFUFMwaWJVNGVNX2NKOFpXbUJJVHZWTXUzdGdQbWg3cnlIV0hnYk9PVkdkT25ETnk0a2_SAXdBVV95cUxQbDBSV2ZiNkFUaUpBTVNQLXNSNmpsRktUOUtTdnhhY01ERnM3OVRxYjl0V2dVdzQwOTRTMTE1Nzg5NlpqZGJUM0UxSWRpX0R5NGFmejA5RU5KbGh0My1HYURyWERWWkVwQWQ2TEhVTWRPQ1g1bzRRbw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주간 매매 동향] 시장별 외국인 ·기관 순매수도 상위종목</a>
-<p class="news-desc">[주간 매매 동향] 시장별 외국인 ·기관 순매수도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">지난 15~19일 까지 한주간 코스닥시장과 유가증권시장에서 외국인·기관이 가장 많이 순매수 및 순매도한 종목은 다음과 같다.코스닥 외국인 순매수도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFBPZHdGZGlPNnFrWHdZQVJaRU9PS3BkcHR1NncyRnNkM0hjeFdkOFRneUo1MVlaekRhdWhZTGlJZW1mWmNFc2drN1ZUX24?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박근종 칼럼] 미국 ‘연내 금리 인상’ 시사, 환율·물가·성장 차질 없도록 인플레 철통 방어를 - 시사일보</a>
-<p class="news-desc">[박근종 칼럼] 미국 ‘연내 금리 인상’ 시사, 환율·물가·성장 차질 없도록 인플레 철통 방어를 시사일보</p>
+<p class="news-desc">박근종 작가·칼럼니스트현, 성북구도시관리공단 이사장 전, 서울특별시자치구공단이사장협의회 회장전, 소방준감 © 미국 중앙은행인 연방준비제</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -265,7 +265,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9ZeEFvRnZfYVQ3MnhKS3BONVh3em16dE9sSW0tQU1NV2lVZXlHWEcwbFpEVHY4X2cxNW5tWEQyQ2l5VFU0WWlBbWlVdkNsUHh6Q1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI·반도체 ETF 강제 리밸런싱 … 삼성전기 덜고 SK스퀘어 담고 - 매일경제 마켓</a>
-<p class="news-desc">AI·반도체 ETF 강제 리밸런싱 … 삼성전기 덜고 SK스퀘어 담고 매일경제 마켓</p>
+<p class="news-desc">국내 주요 인공지능(AI)·반도체 테마 상장지수펀드(ETF)들이 종목 비중 조정(리밸런싱)을 단행하며 포트폴리오의 새판을 짜고 있다. 조정은 그간 주가 급등으로 비중이 비정상적으로 높아졌던 '삼성전기'를 덜어내고, 그 자리를 'SK스퀘어'와 'LG이노텍'으로 대체한 것이다. 21일 한국거래소에 따르면 삼성자산운용의 'KODEX AI반도체TOP2플러스'는 지난 12일 삼성전기 비중을 약 20%포인트 낮추는 대신 SK스퀘어를 신규 편입했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE50QnVSWnpHTGhMSXkxc2pVRFpxV0o2YmRwNmJ2YXMtaDE4RXc0WXM1djMxN2hURlZnTS1OY1lGYXFxWTBvQjlnUi04TWJUY1Bna2o2aUtCSE1Wa2djVVRzblpvVW9lRjFRUXllOGZsYjV2anfSAXdBVV95cUxNemMyNWJOd2xpZ0V2aVVyXzBUU0owN1g5Y3hFNGFoNXp4VEotRUJvczlRdVdZT3dQMFM4SlZRNWVYWW9WNFZjZnhWRFFNazdRck1EOEM0ZGJDRnJLRFJJNUFUamc2Nmd3NjdpVXJ4bE5rSUVJN05GTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">24일 매매 동향] 시장별 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[24일 매매 동향] 시장별 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">24일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.거래소(유가증권시장) 외국인 순매수·순매도 상위종목(단위:억원, 만주) 순매수 순매도 종목명 순매수대금 순매수량 종목명 순매도대금 순매도량</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBqczJMMi15VG8xM1FYMHZINW5HU3FDb1FlUDgwem4yaFpheXNGVHlSRXNGd05sV01ycUUtcVByZ1ZONHRxdHRfdWl1ZUdwWXZBUXREcnZkdjl0Zkdwb2lVdkdPWmlDZ0Q2SGc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인 '시지메드텍·두산에너빌'…기관 'BNK금융·삼성중공업' - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인 '시지메드텍·두산에너빌'…기관 'BNK금융·삼성중공업' 뉴스티앤티</p>
+<p class="news-desc">23일 오전 키움증권 창구를 통한 외국인과 기관 투자자의 매매 동향 집계를 분석한 결과, 외국인은 시간대별로 순매수 및 순매도 종목의 순위를 조정하며 변동성을 보</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5SaUttRldTNUJfUHNpd0ZrdVlpakFkc3VuZGpQejdsbkRqVnRuZ1g4a2NKc1B6RUxSckcyYkJXd25vNTZzenQzWWxRRTJQWkJMaXpVZU9TRVZyZlVCN0pUZnM0dzY1NGk2eDZJelZEaC1Bc0w4NzdN0gF3QVVfeXFMTlJpS21GV1M1Ql9Qc2l3Rmt1WWlqQWRzdW5kalB6N2xuRGpWdG5nWDhrY0pzUHpFTFJyRzJiQld3bm81NnN6dDNZbFFFMlBaQkxpelVlT1NFVnJmVUI3SlRmczR3NjU0aTZ4Nkl6VkRoLUFzTDg3N00?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">23일 매매 동향] 시장별 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[23일 매매 동향] 시장별 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">23일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -164,7 +164,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBDc2FXU3JZazNxeS1Ea1ZIWFdETHZuaHJENTVwSlozS2hOMnVpWGx3Q25lY0dsQ0p1enUzb1lHVHhNZlBySTFNWVRYMnhCRVRZN09jbmFYbk5vZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 진짜 끝인가…증권가 "조정은 적극 매수 기회"</a>
-<p class="news-desc">반도체 진짜 끝인가…증권가 "조정은 적극 매수 기회" 파이낸셜뉴스</p>
+<p class="news-desc">[파이낸셜뉴스] 대형 반도체주가 큰 폭으로 조정을 받자 투자자들 사이에서 고점 경계감이 확산되고 있지만, 증권가에선 목표주가를 올리는 등 오히려 눈높이를 높이고 있다. 최근의 조정은 심리적인 요인이 더 크며, 주가 상승 요인인 메모리 수요 증가가 현상이 지속될 것이란 이유에서다. 24일 금융정보업체 에프앤가이드에 따르면 전날부터 이날까지 SK하이닉스와 삼성전자의 리포트를 낸 증권사는 각각 3곳, 1곳이다. 구체적으로 SK하이닉스는 다올투자증권, KB증권, 현대차증권이 작성했다. 삼성전자는 다올투자증권에서 리포트가 발행됐다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9DQkg2cXB1aU9tOUh5YXpzenVzeUZkc09kbzZxODltcGh4cEYyRFFId1d6UFB3azJKT2dfQ0RBT1dXTlZaSHN1Vms3SDhRVDdaODVuX3Zad3drNW9iVmhuZktBbVlMU0NwSnZ3WHdueko?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓"</a>
-<p class="news-desc">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓" 연합인포맥스</p>
+<p class="news-desc">소폭 하락 출발한 국내 증시가 장중 급락세를 보이고 있다. 간밤 뚜렷한 글로벌 거시경제(매크로) 악재가 부재한 상황에서 빚어진 이례적인 폭락장으로, 최근 시장을 주도했던 '반도체 쏠림 현상'의 후폭풍이라는 분석이 나온다.23일 연합인포맥스 신주식종합(화면번호 3536)에 따르면 오전 11시 10분 기준 코스피 지수는 전 거래일 대비 412.32포인트(4.52%) 폭락한 8,702.23을 가리키고 있다. 코스닥 지수 역시 49.67포인트(5.13%) 급락한 918.73으로 고전 중이다.특히 시가총액 상단에 포진한 주도주들의 낙폭이</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

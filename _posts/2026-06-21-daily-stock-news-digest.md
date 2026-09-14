@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9BRFJWRW9BdEx3XzBzdmJDd3ZJMnNGOTZsMzllZXVkN0J6QlVMbTREbl9Mcnh2bXNtakY1Mm1zb0RjUUlibW5xUFFtVjYzdVE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">9300선 뚫고 미끄러진 코스피…“삼전닉스 ‘밈 주식’ 됐다” 경고</a>
-<p class="news-desc">9300선 뚫고 미끄러진 코스피…“삼전닉스 ‘밈 주식’ 됐다” 경고 v.daum.net</p>
+<p class="news-desc">코스피가 19일 장 초반 9300선을 돌파하며 사상 최고치를 새로 썼지만 결국 하락하며 거래를 마쳤다. 반도체 쏠림에 따른 차익실현 수요와 미국과 이란 간 종전 협상 불확실성이 겹치면서다. 이날 코스피는 개장 직후 9385.59까지 치솟으며 장중 사상 최고치를 경신했다. 간밤 미국 증시에서 필라델피아 반도체지수가 6% 넘게 급등하는 등 반도체 랠리의 영</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5sNnZKRXkyVFNPTEI5OFJBRDEzN2RZRmlXVFNhWHd2eVVQT0x0LXJtM2hqWUFpMmcyaVdCRXdSSEkxNzNiNWdRSXBwYjk2SkNJVGtJQ09LcGZiWTFWM1BTZWk4TGN0LXlRdllYbFR3UDDSAXRBVV95cUxQdnB6dlJyYXlLVXhaNDFLT2JWcHZDWndNUXZBRzU5MXVNMTFGR0RlVUN5aU82Z084bHNXeUNONVJfaVYzcmZScTkyVjJFOFNSd3ZDX21qd1dQLVhzWGNTM3duSm9xaWlTdDVPZk5JX2ZLN2tpdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘9천피’ 코스피, 최고치 경신 뒤 급반락…7거래일 만에 약세 마감 - 산경투데이</a>
-<p class="news-desc">‘9천피’ 코스피, 최고치 경신 뒤 급반락…7거래일 만에 약세 마감 산경투데이</p>
+<p class="news-desc">[산경투데이 = 이하나 기자]코스피가 장중 사상 최고치를 다시 썼지만 오후 들어 급격히 밀리며 7거래일 만에 하락 마감했다. 단기 급등에 따른 차익실현 압력이 커진 가운데 미국과 이란 간 종전 합의 이행을 둘러싼 불확실성이 부각되면서 투자심리가 빠르게 위축됐다.19일 코스피는 전 거래</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9ZVm1lVlpKZTZlaXNqMVpCbDZlV3kydF9NRDRocGJWZko1R1R3ZUczUXhqOEh3dURsdEFoYVdwZklqVEczU0FibkJZelEzQjg5a2RkNW5CU3RKdzdCLXNHc3JQR2p6eVBuVWV3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 19일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 11.42포인트 내린 9052.42에 마감했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -216,7 +216,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9nTHRZSHFkUkZQZ0dfNWFUU0U1X1A4VUpxSUszLWxVQU5FTmVxOUpkVmtKWmZzSzZaeFZrNW1WUVZZSU5uMTBiSTVDUXBHSUtCMWd3WkJERjg4WVBVdkNjNXo4N2Y0YmwwU1hyRG96aw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 슈퍼사이클 언제까지…"2029년까지 충분" vs "이미 후반전" 팽팽 - 뉴스웍스</a>
-<p class="news-desc">반도체 슈퍼사이클 언제까지…"2029년까지 충분" vs "이미 후반전" 팽팽 뉴스웍스</p>
+<p class="news-desc">[뉴스웍스=채윤정 기자] 반도체 업체의 초호황이 장기간 지속될 것이라는 전망이 잇따르면서 SK하이닉스 주가가 사상 최고가를 경신했다.20일 관련업계에 따르면 글로벌 투자은행 및 전문가들은 반도체 초호황기가 최소 2029년까지 지속될 것이라는 보고서를 잇달아 내놓고 있다. SK하이닉스 주가는 이날 280만원을 오르내리며 사상 최고가를 경신했다. 미국 주식예탁증서(ADR) 상장에 따른 단기 모멘텀 기대감도 크게 작용했다.업계 한 고위 관계자는 "예전에는 수요·공급 때문에 반도체 수요가 사이클에 따라 오르내렸지만, 지금은 상황이 다르다"</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9rdzFBSDdGckhIX0NMQmcxNERPcHRuVEZtY0E0WG9Oa3pEOUhjcmQwcm0wQ1MySzBpa2ViakFWRXRpTkk3Vml4US03TTkwWTY1QXFfdEh0NVhHc281U0tNaFV5VEU4QmhPaERHdkxqN1LSAXRBVV95cUxPeHQxMkc1N0pONlhOQ2xfLWVNUGcxbFpZcl90eUV0THlNM25DS0NnWmtfSE5YVjJYR2NFYUZrTWZwWkM1MUJaUlJkMGlnTURZZHJkOTZzYkFySUJpZktHY3ktLXpOT093RTI0MmRrSGhZN0lqNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 투톱이 이끈 ‘9300피’…SK하이닉스, 시총 2000조 돌파 - 산경투데이</a>
-<p class="news-desc">반도체 투톱이 이끈 ‘9300피’…SK하이닉스, 시총 2000조 돌파 산경투데이</p>
+<p class="news-desc">[산경투데이 = 이하나 기자]코스피가 사상 처음으로 9300선을 넘어선 가운데 국내 증시의 무게중심이 반도체 대형주로 빠르게 이동하고 있다.삼성전자와 SK하이닉스가 인공지능(AI) 반도체 수요 확대를 등에 업고 연일 신고가 경쟁을 벌이면서 국내 증시 시가총액 구조도 새롭게 재편되는 모</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -240,7 +240,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpX3ozN3ltdGtkeE1aTk9xUVZSVGdiNlJIbGNtdXNWNVg5UHppdmZwQlEtMVlDdG9sLVpjSVQ0eXROUThsb21EcFo5V0JlOWRlX2cyWdIBWEFVX3lxTE51akY0NlJQUi1yTTJfLWVYZV9HTXVKd1BUa082ay13Q1NrZGlQMk42dkRqTERSZ0ttTjVqZk1sc3BaUGxld0ZTZU1vc2dXZGxlQXc0OVZUNEc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하이닉스 시총, 삼성전자 추격…‘반도체 투톱’이 코스피 9300선 이끌었다 - 미디어펜</a>
-<p class="news-desc">SK하이닉스 시총, 삼성전자 추격…‘반도체 투톱’이 코스피 9300선 이끌었다 미디어펜</p>
+<p class="news-desc">[미디어펜=조우현 기자]삼성전자와 SK하이닉스가 나란히 사상 최고가를 경신하며 코스피 지수를 사상 첫 9300선 고지로 끌어올렸다. 특히 SK하이닉스는 장중 한때 시가총액 2000</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

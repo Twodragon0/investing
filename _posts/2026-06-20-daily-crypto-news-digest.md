@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE96NmVsbERBSnFsZ05EUXJuVHVnY2ttNU1BdzEzanpNQmItSnR5bUdVWnlKQ1NJLURMX0hqM1ZmSTdpTlhRdkhkcnVNaTdWZm0wN0lmODRoQzQ2NEJuS1dPYmttcGZDNWM1?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">업비트 상장 발표…9개 알트코인 변동</a>
-<p class="news-desc">업비트 상장 발표…9개 알트코인 변동 BeInCrypto</p>
+<p class="news-desc">업비트는 6월 19일 비트코인(BTC) 및 테더(USDT) 마켓에 리도 다오(LDO), PAX 골드(PAXG), 모르포(MORPHO)를 포함한 9개의 디지털 자산을 순차적으로 4시간에 걸쳐 상장합니다. 상장 순서는 오후 3시에 PEAQ와 LIT으로 시작합니다. 카미노 파이낸스(KMNO)와 모르포(MORPHO)는 오후 4시에 거래를 시작합니다. 최근 톤코인에서 브랜드를 변경한 그램(GRAM)은 오후 5시에 상장됩니다. LDO와PAXG는 오후 6시에 거래를 시작합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

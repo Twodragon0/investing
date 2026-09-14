@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">891.52</div><div class="stat-label">KOSDAQ -7.94%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 주식] 코스피·코스닥 폭락 속 바이오주 '희비'…아미코젠 17%↑ - 히트뉴스 - 209건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 연준, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 주목</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBOcGZXMVplSVBDZFpjOWtkWEwwV2lrT1Q4bFlkX0NNZ0NEZlVsa1J6Ym9hQzBoeTFieFVHaXZUOVhhdzVNUmxwUFVXY2Y0UjFKSzRfZ2tJcEtHSjhqSG9xTDFrcjRiSkhjS2Jr?oc=5">주식] 코스피·코스닥 폭락 속 바이오주 '희비'…아미코젠 17%↑ - 히트뉴스</a> <span class="p0-desc">[주식] 코스피·코스닥 폭락 속 바이오주 '희비'…아미코젠 17%↑ 히트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9DQkg2cXB1aU9tOUh5YXpzenVzeUZkc09kbzZxODltcGh4cEYyRFFId1d6UFB3azJKT2dfQ0RBT1dXTlZaSHN1Vms3SDhRVDdaODVuX3Zad3drNW9iVmhuZktBbVlMU0NwSnZ3WHdueko?oc=5">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓"</a> <span class="p0-desc">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓" 연합인포맥스</span></li><li><a href="https://www.hani.co.kr">코스피·코스닥 5%대 급락…동반 매도 사이드카</a> <span class="p0-desc">코스피·코스닥 5%대 급락…동반 매도 사이드카 한겨레</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBOcGZXMVplSVBDZFpjOWtkWEwwV2lrT1Q4bFlkX0NNZ0NEZlVsa1J6Ym9hQzBoeTFieFVHaXZUOVhhdzVNUmxwUFVXY2Y0UjFKSzRfZ2tJcEtHSjhqSG9xTDFrcjRiSkhjS2Jr?oc=5">주식] 코스피·코스닥 폭락 속 바이오주 '희비'…아미코젠 17%↑ - 히트뉴스</a> <span class="p0-desc">오늘의 증시시장 지수KOSPI: 8,203.84 (▼9.99%)KOSDAQ: 891.52 (▼7.94%)상승 종목아미코젠(+17.37%), JW신약(+13.74%), 큐리오시스(+10.32%), 큐로셀(+6.43%), 리가켐바이오(+3.06%)하락 종목큐리옥스바이오시스템즈(-14.23%), 현대약품(-13.02%), 큐라클(-12.82%), 제이에스링크(-12.34%), 지구홀딩스(-12.14%) 오늘의 이슈아미코젠(+17.37%): 아미코젠, 100억 규모 제3자배정 유상증자…최대주주 변경디앤디파마텍(-10.60%): 디앤디파마텍</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9DQkg2cXB1aU9tOUh5YXpzenVzeUZkc09kbzZxODltcGh4cEYyRFFId1d6UFB3azJKT2dfQ0RBT1dXTlZaSHN1Vms3SDhRVDdaODVuX3Zad3drNW9iVmhuZktBbVlMU0NwSnZ3WHdueko?oc=5">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓"</a> <span class="p0-desc">코스피 4%·코스닥 5%대 장중 급락…"매크로 악재 아닌 반도체 차익실현 탓" 연합인포맥스</span></li><li><a href="https://www.hani.co.kr">코스피·코스닥 5%대 급락…동반 매도 사이드카</a> <span class="p0-desc">코스피·코스닥 5%대 급락…동반 매도 사이드카 한겨레</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE5SaUttRldTNUJfUHNpd0ZrdVlpakFkc3VuZGpQejdsbkRqVnRuZ1g4a2NKc1B6RUxSckcyYkJXd25vNTZzenQzWWxRRTJQWkJMaXpVZU9TRVZyZlVCN0pUZnM0dzY1NGk2eDZJelZEaC1Bc0w4NzdN0gF3QVVfeXFMTlJpS21GV1M1Ql9Qc2l3Rmt1WWlqQWRzdW5kalB6N2xuRGpWdG5nWDhrY0pzUHpFTFJyRzJiQld3bm81NnN6dDNZbFFFMlBaQkxpelVlT1NFVnJmVUI3SlRmczR3NjU0aTZ4Nkl6VkRoLUFzTDg3N00?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">23일 매매 동향] 시장별 외국인 및 기관 순매수·순매도 상위종목</a>
-<p class="news-desc">[23일 매매 동향] 시장별 외국인 및 기관 순매수·순매도 상위종목 핀포인트뉴스</p>
+<p class="news-desc">23일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE96Tm1zOHYzUlRlRGRmbFk0blJCbDZIV01GZFBBRTZ2NHVKS1EtNTV6MFlvRDUyZzlBWEYtOWplTG0wcU1HOS1yNG9hSjFoc1hDb3R5WnN2LU9STjZwVmdndjAxWFUwSmp2T0prMmtCZlJyYnlnendF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">22일 매매 동향] 외국인 및 기관, 순매수·순매도 상위종목 &#124;</a>
-<p class="news-desc">[22일 매매 동향] 외국인 및 기관, 순매수·순매도 상위종목</p>
+<p class="news-desc">22일 코스닥시장과 유가증권시장에서 외국인과 기관이 가장 많이 순매수·순매도한 종목은 다음과 같다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE82Ym50ZFNYZ3I2bS01bnFtOUtuY2VIUFJoTTYxbHBvalJSZU4xWkZiaWNtcjhYSDZWTjFuT2JOUzIwME5MWG5QaF9FT1VtRmV2dEg0dk5LcGF4V1FmTHZ30gFfQVVfeXFMTzZibnRkU1hncjZtLTVucW05S25jZUhQUmhNNjFscG9qUlJlTjFaRmJpY21yOFhINlZOMW5PYk5TMjAwTkxYblBoX0VPVW1GZXZ0SDR2TktwYXhXUWZMdnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">종전 합의에도 오르는 원·달러 환율…오늘 1540원 턱밑 마감</a>
-<p class="news-desc">종전 합의에도 오르는 원·달러 환율…오늘 1540원 턱밑 마감 경향신문</p>
+<p class="news-desc">미국과 이란의 종전 합의에도 불구하고 원·달러 환율이 1500원대에서 고공행진을 거듭하며 좀처럼 내려오지 않고 있다. 미국 연방준비제도(연준)의 금리 인상 기조, 외국인의 국내 주식 매도 등이 원인으로 꼽힌다. 금융권에서는 반도체 호황으로 올 하반기에는 환율이 1400원대로 내려올 것이란 낙관론과 유가가 불안해 지켜봐야 한다는 신중론이 교차한다. 23...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5pejJ4MjRxUWhCY3hpTnhSRlRuYm1kak9ZMVNZT2NxUzVPd2I1QWFwZDMxX2tzdWVMRmIxRjJZakFfLWJPVGRpTlA3bHFlU1lqZkxIQ3k3TVRhM3Znd0JscEU3bzVmS1pWb09wWGVnNA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 동반 12%↓…반도체 투매 공포 - 리드경제</a>
-<p class="news-desc">삼성전자·SK하이닉스 동반 12%↓…반도체 투매 공포 리드경제</p>
+<p class="news-desc">한국 증시를 대표하는 삼성전자와 SK하이닉스 주가가 12% 동반 급락했다.23일 한국 및 아시아 증시를 덮친 기술주 매도세 영향으로 삼성전자와 SK하이닉스 주가는</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

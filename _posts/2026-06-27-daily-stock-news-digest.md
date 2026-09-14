@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9LRzFtRlQ1alRROW9lWUdlTlo5YjFyT3JJTTVhUVZMeWc4dVlNbWJHTG5LbElZSEYycTlDamh6NWdPUDdKVXAyendEeXpRNG1obmNLVGcwN3RqckZSbXBPaklZUDZmU1pLQTFBUmlsSdIBc0FVX3lxTE9Sdlh3YlVWYklkSmpvNmlVR2hqQ0pMME9NY0lfdEppRlN3YTBVQTlTN1J2Zm9LN1lXcVlpMEs0WW9SYVhGeVFqREZsMHE1ZnJDUld0MDI3aEVxV3AtTmY3Wm9JaTBmZEFodnp6NjlCN2pCaXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">원·달러 환율 1540원 돌파…'일시적 불안' 아닌 '구조적 고환율' 굳어지나 - 뉴스웍스</a>
-<p class="news-desc">원·달러 환율 1540원 돌파…'일시적 불안' 아닌 '구조적 고환율' 굳어지나 뉴스웍스</p>
+<p class="news-desc">[뉴스웍스=차진형 기자] 원·달러 환율이 다시 1540원선을 넘어섰다. 외환위기식 유동성 문제로 보기는 어렵지만, 일시적 수급 불안으로만 설명하기도 어려워졌다.중동 리스크, 달러 강세, 외국인 자금 흐름, 거주자의 해외투자 수요가 겹치며 원화 약세 압력이 구조화되고 있다는 진단이 나온다.25일 서울외국환중개에 따르면 원·달러 환율은 5월 15일 1500원대에 진입한 이후 한 달 넘게 높은 수준을 유지하고 있다. 하루 전 서울 외환시장에서 원·달러 환율은 오후 3시 30분 종가 기준 전 거래일보다 2.7원 오른 1541.8원에 거래를</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9ISGJaU2FoVzVBWERvLVplSGdxQkRZOGwxNmg1SVNPVW5Zb0hGV2dpWmtuYUIxVEREZjROeHdOd3AyVEw0VWp0a0k0MzlmdjRC?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하닉 '45조' 美 상장 노리는데…삼성전자 전망에 '깜짝' [강경주의 테크X] - 블루밍비트</a>
-<p class="news-desc">SK하닉 '45조' 美 상장 노리는데…삼성전자 전망에 '깜짝' [강경주의 테크X] 블루밍비트</p>
+<p class="news-desc">&lt;테크X102&gt; 메모리 '쩐의 전쟁'…하닉·키옥시아 美 증시가는데 삼전은? 45조 조달 나선 SK하이닉스 800% 급등한 키옥시아도 ADR 발행 한·일 메모리, 美 자본시장 공략 본격화 한국과 일본 메모리 반도체 기업들이 잇따라 미국 자본시장 공략에 나섰다. SK하이닉</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
