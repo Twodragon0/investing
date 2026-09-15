@@ -32,12 +32,13 @@ image_alt: "소셜 미디어 동향 - 2026-07-28 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.usnews.com">연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | US 뉴스 - US 뉴스 & 월드 리포트</a> <span class="p0-desc">연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간</span></li><li><a href="https://www.reuters.com">미국-이란 공격이 중단되면서 석유 가격이 하락함에 따라 금은 상승합니다. 연준 요율 결정에 초점</a> <span class="p0-desc">미국-이란 공격이 중단되면서 석유 가격이 하락함에 따라 금은 상승합니다. 연준 금리 결정에 초점 Reuters</span></li><li><a href="https://www.cbsnews.com">연준에 금리 결정이 내려짐에 따라 글로벌 유가는 배럴당 약 90달러를 맴돌고 있습니다.</a> <span class="p0-desc">연준에 금리 결정이 내려지면서 전 세계 유가는 배럴당 약 90달러를 맴돌고 있습니다. CBS News</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 20건 중 텔레그램 0건, 소셜 1건, 정치·경제 19건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 20건 중 텔레그램 0건, 소셜 1건, 정치·경제 19건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

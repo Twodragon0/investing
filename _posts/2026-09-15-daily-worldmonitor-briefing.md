@@ -25,30 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-15 - 시�
 - 주요 출처: WorldMonitor/Al Jazeera (13건), WorldMonitor/MarketWatch (7건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 보통</strong><ul><li>안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.</li></ul></div>
-
-핵심 테마는 **지정학/안보**(8건), **사회/기타**(6건), **금융시장**(3건) 중심으로 전개되고 있습니다.
-
-안보 이슈(8건)와 금융시장 뉴스(3건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-에너지 이슈 **1건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-### 고중요도 이슈 (8건)
-
-- US blocks Iran nuclear chief from attending key Vienna conference
-- Israel probing Naza film on Gaza for treason, inciting anti-Semitism
-- Inside the Houthis’ expanding war economy in Yemen
-- Austria denies entry to Iranian official after UN ruling
-
-### 투자자 체크포인트
-
-- **안전자산**: 금·달러·미국채로의 자금 이동 가속 여부 확인
-- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/Al Jazeera (13건), WorldMonitor/MarketWatch (7건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">8</div><div class="stat-label">안보 이슈</div></div></div>
 

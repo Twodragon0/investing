@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-28 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMisgJBVV95cUxOMmhRcWdhR0VCYl9qOG5RV2pmSTktOUZWSFM1ZXc4cF9jZWF6aVhFaVVCN21IUTAtUDdGYzZ1VG12d3hqNTRFWHBvS3pQZHhMeDA1aUJfMENITnVpcERfQUdLTjhVbkZuUnJDaE9jeHA4MXpVLVNKM0t6TjRWTVA1VUE5LTU5M2pDMlBaSERwel9DbUY4aHVneXZMZ2phbU85TnZ3ZUhIRG5iSzIzNmxsa3dGSWEtU3dzek5fYm9DQ19IdGxSMnctbHd6a2NvTDBIS3RZY0N0NHN4RHd4YldMcXJSQ1U3dC1KUlVJa3VzRk0wQ05XVFRfRXlacWdQNVpNYllpR01XakZmbmtTT3dqcU0yVlR6eFNzMjd0RUVJZEFrRXRSRXpidGlEU2hZWjVBX0E?oc=5">비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’</a> <span class="p0-desc">비트코인·이더리움·XRP 급락, 도지코인 보합세···암호화폐 시장에 ‘극단적 공포’. 급락 관련 보도.</span></li><li><a href="https://www.newsway.co.kr">골든크로스 직전 흔들리는 비트코인?···상승이냐 폭락이냐 - 뉴스웨이</a> <span class="p0-desc">골든크로스 직전 흔들리는 비트코인?···상승이냐 폭락이냐. 급락 관련 보도.</span></li><li><a href="https://cointelegraph.com/news/stakedao-vsdcrv-attacker-liquidity-91k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">StakeDAO 익스플로잇으로 5조 4천억 개의 vsdCRV가 생성되었지만 순익은 91,000달러에 불과했습니다.</a> <span class="p0-desc">PeckShield는 공격자가 수조 개의 vsdCRV를 발행한 후 43.7 ETH을 이더리움에 연결했다고 밝혔고 EmberCN은 나머지 토큰의 대부분이 판매하기에 유동성이 부족하다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **108건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-05-28 암호화폐 핵심 뉴스: 억만장자 Mark Cuban이 작별 인사를 합니다 비트코인: 그가 암호화폐에 '실망'한 이유. 총 108건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

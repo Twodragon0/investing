@@ -14,7 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-15 - 정치인 거래 �
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-15.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-15** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **30건** — SEC 내부자 거래 16건, 중앙은행 14건
@@ -25,13 +24,11 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(20회), **SEC(미국증권거래위원회)**(4회), **내부자**(4회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **30건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 16건, 중앙은행 14건입니다.
-
-**중앙은행 정책**에서는 지난 3년간 국내 14개 은행의 대출 기준금리는 낮아졌으나, 실질 가산금리 상승으로 실제 대출금리 인하 효과가 미미함. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-09-15 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 30건 — SEC 내부자 거래 16건, 중앙은행 14건
+- 1. Smurfit Westrock (NYSE: SW) insider granted new stock awards Insider Mayer Saverio receives 403 dividend-equivalent RSUs and 119 shares at $0, lifting…
 
 ## 1. SEC 내부자 거래 (Form 4)
 

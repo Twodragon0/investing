@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-15 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피, AI 속도 조절론·중동 불안에 3% 가까이 급락…반도체주 약세 - 산경투데이 - 187건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 42건</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 삼성전자 관련 36건</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 동향 주시</li><li>🟣 <strong>DeFi</strong>: 수익률, 국채 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBlSGZweElSWkYzVFd3Rl9wVllBOWpadWtfbTdoNS0zQkI5YzE1XzY2NFpZMlZNTl9ZQWdWeXZnbDMxV2Vxclpydngtd1BtXzhCdDlxNGpaX0ZBbl94Qjl3TEQzRGdCbkRvRnd2dU5qRkPSAXRBVV95cUxOaUtyWEJPeXlKUE1UNElueEFHWmJWbXBKV2xvOFlHSzMyNHBsTVc5OVU0ZllNZnRKQ0k1Tm5xYVF5d0VSYnVtakZjSTJLZ1JVZmRiOUhZV1FVSlRVaXc5QUFPNFpZMnZrdm0yWnRkQ2tuVlZiMQ?oc=5">코스피, AI 속도 조절론·중동 불안에 3% 가까이 급락…반도체주 약세 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 한승수 기자] 코스피가 14일 장 초반 3% 가까이 하락하며 6,700선 안팎으로 밀려났다.인공지능(AI) 개발 속도 조절론이 반도체 투자심리를 압박한 가운데 중동 지역의 긴장도 이어지면서 외국인과 기관의 매도세가 집중됐다.이날 오전 코스피는 전 거래일보다 202.78포</span></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPU29aRl84bG1Nbkx1N2h0Rk9lS2ozcHB5R3hNNEFBT3JhTk8zLWEtT0ZHM3B6ZlE4YUszbXA3dE5UaTJfVTY0R2JiZnFoQ2pHaWZ1d1RhZjZnZWhKODh2LUVsbzBUdTVvVTc2OUFGa3pJWDZNbTdLeUJUM05HVW9IZXZ0NS0yUHZtVXJqN2I1eWtLY2JfM1dYV0NTckFscHN4ZFJ6WUtZWnVLeUE?oc=5">Stocks are in a late-stage bubble and poised to crash 21% next year, analyst says - Fortune</a></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1zWEVib0Z2REFtLWtKU1N0djZXRjB3QXloUmV2V3Fsanp5MmMzMWhNZ19CMDVGSndmaUdLWWtXWXBCZzFjNjV1U2thVm9GQ1FiWXlJX1Q5dUc4V3h3NmpMY2MxOHk1bVBUaDM3OVJpZHXSAXRBVV95cUxPZk53NUY2QWxqb09BemhGMzBzQTV3ZTFHQ2J3V2hoQjZHa1RuSUE2cmsxZ0R2NVppNnQyRzZXVU9GT2FxbFVINjR3WU92OGl2WHNBeHFGM0dZRmxFUjFiRUV3OU1hSkxkR1YzVGlOZ0EwZklfZw?oc=5">삼성전자 4%·SK하이닉스 6% 급락 마감…외국인·기관 3.8조 매도 - 산경투데이</a> <span class="p0-desc">삼성전자 4%·SK하이닉스 6% 급락 마감…외국인·기관 3.8조 매도 산경투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, AI 속도 조절론·중동 불안에 3% 가까이 급락…반도체주 약세 - 산경투데이 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 187건의 뉴스 중 P1 주요 이슈도 25건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (42건): 코스피, 코스닥 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (36건): 엔비디아, 삼성전자, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (25건): 환율, 국채, 수익률 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피, AI 속도 조절론·중동 불안에 3% 가까이 급락…반도체주 약세 - 산경투데이
-- Stocks are in a late-stage bubble and poised to crash 21% next year, analyst says - Fortune
-- 삼성전자 4%·SK하이닉스 6% 급락 마감…외국인·기관 3.8조 매도 - 산경투데이
-
-### 주요 이슈
-
-- Stock market today: Dow, S&P 500, Nasdaq fall as Anthropic's AI warning spooks t
-- Trump says no need for more AI regulation, slams Anthropic CEO Dario Amodei
-- What Amodei's AI slowdown could mean for Anthropic's imminent IPO
-- 외 22건
-
-### 투자자 체크포인트
-
-- 한국 기사 64건, 글로벌 기사 123건 수집
-- 한국 지수: KOSPI 6,684.37(-3.26%), KOSDAQ 806.79(-1.69%), USD/KRW 1,344.89(+0.29%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">42건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:86%"></div></div><span class="theme-count">36건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:60%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:40%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:29%"></div></div><span class="theme-count">12건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-15.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,684.37 (-3.26%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 806.79 (-1.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-15 주식 시장에서 187건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,684.37(-3.26%), KOSDAQ 806.79(-1.69%), USD/KRW 1,344.89(+0.29%).
+- *9월14일 주식 시황 코스피 코스닥 거래대금 회전율 상위 10 오늘 시장 큰 그림부터 먼저 지수부터 보면 오늘은 반도체 투톱이 무너진 날입니다.*
 
 ## 테마별 주요 뉴스
 

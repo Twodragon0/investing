@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-15 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week - 68건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 동향 주시</li><li>📈 <strong>가격/시장</strong>: 암호화폐 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li><li>📊 <strong>매크로/금리</strong>: 연준 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/markets/clarity-act-vote-meets-fed-rate-hike-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week</a></li><li><a href="https://cointelegraph.com/news/symbiosis-recovered-15-btc-bridge-hack-20-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Symbiosis says recovered 15 BTC from bridge hack, offers 20% bounty</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 68건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (28건): 비트코인, 암호화폐, 가능성 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (16건): 암호화폐, 의회 가격 변동 (16건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (12건): 트럼프 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week
-- Symbiosis says recovered 15 BTC from bridge hack, offers 20% bounty
-
-### 주요 이슈
-
-- 한주간 주요 경제·암호화폐 일정] 美 FOMC 금리결정 外 - 블루밍비트
-- Strategy Buys Back $139 Million of STRC, Bitcoin Stack Frozen for Second Week
-- Morning Minute: Clarity Act Odds Soar as Trump Agrees to Ethics Provisions
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI
-- **주요 출처**: CoinDesk(15건), Cointelegraph(15건), Google News KR(13건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-15.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- 2026-09-15 암호화폐 시장 68건 분석 — 핵심 테마: 비트코인, 가격/시장, 정치/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
