@@ -115,7 +115,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBFYTlCbVhCTkRDd2RmMmpTU0trUUlMQzFHdGdBOW04TV93YUdtNUpBSkY3YjNodnlVV3QwMUE0WFQzeUFWYkptazZmY0tlVHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금리 인상 경고음 3번 울린 한국은행…7월 ‘빅스텝’ 가능성 제기</a>
-<p class="news-desc">금리 인상 경고음 3번 울린 한국은행…7월 ‘빅스텝’ 가능성 제기 v.daum.net</p>
+<p class="news-desc">한국은행이 기준금리 인상 가능성을 잇따라 시사하면서 다음달 금융통화위원회에서 실제 인상에 나설지 시장의 관심이 쏠리고 있다. 원·달러 환율이 1500원대에 머무르는 가운데 주요국 중앙은행들도 다시 긴축 기조로 돌아서면서 한은의 통화정책 전환에 한층 힘이 실리고 있다는 분석이 나온다. 일각에서는 한은이 기준금리를 한 번에 0.50%포인트 올리는 ‘빅스텝’에</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

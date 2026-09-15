@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBxUGhYQ0Vnc0tRZWRTSWk0Y1MzVU95ajZwZFVhNjhTcGp3cHFSSTdzalZ4MjNUSFY0c1hVY2YxRmtiLWttUV84TTBBdVRxV2RuN2pWZE03eG5jcWN2ZFJRdjdyN0JZazZRanlPZg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 주식 동향] 6월 18일 코스피·코스닥, FOMC 충격 딛고 반등… 외국인·기관 매수세 주도 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 주식 동향] 6월 18일 코스피·코스닥, FOMC 충격 딛고 반등… 외국인·기관 매수세 주도 데일리비즈온</p>
+<p class="news-desc">[데일리비즈온 박노충 기자] KB국민은행 여의도 딜링룸 기준, 2026년 6월 18일 국내 증시는 미국 연준의 매파적 동결 여파 속에서도 외국인과 기관의 적극적인</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Ub2ZxYWR2VHp5MFhkcncxdmw0QUNpeW9ZeFByai1UdXJXVHJZZ2pGZDBveFZsV0htVkRqaWFtTFJ1SFRYZnFqV3BhQlVwdG1HZGfSAVNBVV95cUxPLThjdF9zVGV4TEptUFdzWmJvby1ZalR6SFh5TFJMQTd4aEl0MnE1MFRacFRvNXR0VXZDdlhnZ3A3TG9SVV9pTmxIb1BEdjVzeXBnSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“기승전 반도체” 코스피 9000 축포 속, 코스닥 900선 회귀 [이런국장 저런주식</a>
-<p class="news-desc">“기승전 반도체” 코스피 9000 축포 속, 코스닥 900선 회귀 [이런국장 저런주식] 서울경제</p>
+<p class="news-desc">코스피 지수가 사상 처음으로 9000선을 돌파하며 축포를 쏘고 있는 반면, 코스닥 지수는 1000선 아래로 주저앉으며 극심한 온도 차를 보이고 있다. 글로벌 자금이 코스피 대형 반도체주로만 빨려 들어가며 코스닥을 지탱하던 2차전지와 바이오 등 기존 주도주들이 연일 맥을</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

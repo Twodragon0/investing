@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBxYnhzZnNlRVhoNVRNUWVKcHYzSjBKOEVkMVF3RzY1aVVrUjN4Q0M0VzV0aXFVZnU4cF9XZUE4U1NDNGRjcW9LQ3ZuZGhpVU5zcDBF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스페이스X 상장…비트코인 악재인가 호재인가</a>
-<p class="news-desc">스페이스X 상장…비트코인 악재인가 호재인가 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 스페이스X 상장에 대한 시장 안팍의 기대와 우려가 엇갈린다 [사진: Reve AI][디지털투데이 추현우 기자] 스페이스X의 기업공개가 암호화폐 시장 유동성을 가늠할 변수로 떠올랐다. 12일(현지시간) 블록체인 매체 디크립트에 따르면 이번 상장은 암호화</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -65,7 +65,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5hbjN5LWtjOXdXUk41UVc3UmZoWUlrTGpQSkE2cF9vLVpvQTdFR3pwbDV6UmpzTlR3VUNBTGJTTnp5NHg4dnJQcUZvQ0wxUExuVnZ4TUN6NmZPQ0NBa0NJaHdkVkh4UVVXTTR6Q0ZtOWfSAXRBVV95cUxOZUNCN09ISnZPVXFnRTJOV0o5QzRZTVRjSjZlUWxOMERBckhtQkViRGpCVFNxSmVWNUxuSWdFb3ROdXRnaUtNaXM2RGk2ZVZINjF2S0FWaUVTZFFZNDBTRUNRbEluVkEydEhuVWhZLWZYckpYTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 종전 기대에도 상승폭 축소…코스닥은 하락 전환 - 산경투데이</a>
-<p class="news-desc">코스피, 종전 기대에도 상승폭 축소…코스닥은 하락 전환 산경투데이</p>
+<p class="news-desc">[산경투데이 = 박명준 기자]코스피가 미국과 이란의 종전 합의 기대감에 4거래일 연속 상승 흐름을 이어가고 있다. 다만, 전날 급등에 따른 차익실현 매물이 나오면서 장중 상승폭은 제한되는 모습이다.16일 오전 코스피는 전 거래일보다 102.54포인트(1.20%) 오른 8,648.52를</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5aeFQ1ZVYyWG5iLTNXTGZLbXI2OFVybnRNSVNldDBqU0JQY2xRMEQ1dm5NYWNuX21LYkdxVDNYemoyZHhDN0NqVVc1R0ltaTJqN2JlUG8yOFlvdm5MMGRrb2lLTnVsTk9YRTc2cmd4RDDSAXRBVV95cUxOMmNoVTlJMmZPYWtkRkFmd3NWcGNtOUQxR0F2b1ZBTlF1Q2JabGVlUGFCVFRibHdRR1g4NWN4ZWgtVmJKOWZJcWxadERQbFotOWtUdW90dTJYdmkzckJJVHFQWlA5YTNRcFpBUXRGUXhBU01kaA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 대형주 장초반 반등…삼성전자·SK하이닉스 동반 강세 - 산경투데이</a>
-<p class="news-desc">반도체 대형주 장초반 반등…삼성전자·SK하이닉스 동반 강세 산경투데이</p>
+<p class="news-desc">[산경투데이 = 박명준 기자]삼성전자와 SK하이닉스가 16일 장 초반 나란히 강세를 나타내며 국내 증시 반등 흐름을 이끌고 있다.미국과 이란 간 종전 합의 소식으로 위험자산 선호 심리가 되살아난 가운데, 간밤 미국 반도체주 급등이 국내 대형 반도체주 투자심리를 자극한 것으로 풀이된다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

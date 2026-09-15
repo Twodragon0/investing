@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBGV3hKa3JNN0tXcE1ESnFpYlpBRTI5dkJMRDlxeENMTGtvZlY3eGZZOGJ5TEdSekhQTzJJSzlNUV9pOVFnbHJkMTdiNW8yUmRlRHVvN21hbXVfSXJNZll2RVVqaUJGMmpwY0NkMEg4dw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미 이란 종전 합의 훈풍에 코스피 코스닥 동반 상승 마감 - 진일보</a>
-<p class="news-desc">미 이란 종전 합의 훈풍에 코스피 코스닥 동반 상승 마감 진일보</p>
+<p class="news-desc">15일 코스피와 코스닥이 미국과 이란간 종전 합의에 나란히 상승 마감했다.이날 코스피는 전장보다 422.36포인트(5.20%) 오른 8545.98에 장을 마쳤다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBXejFSSW9UNnRWakRiOGk2Ykd6UFlYcGdZeDY3NFI3TU55SWFGM1lBNUhLYmpqa3NuXzR4SVNkU19ncjc1NGYwX1RKTGxqTGVWdFdjQlhuajQ1a3dsc1BuMTFMcEZQV0xU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미국과 이란 종전 합의… 코스피·코스닥 상승세로 투자 심리 개선</a>
-<p class="news-desc">미국과 이란 종전 합의… 코스피·코스닥 상승세로 투자 심리 개선 공감신문</p>
+<p class="news-desc">[공감신문] 정재은 기자=15일 주식시장에서 코스피와 코스닥 지수가 일제히 상승세를 보였다. 미국과 이란이 종전 합의에 서명하면서 투자 심리가 개선된 영향으로 풀이된다. 코스피 지수는 전날 대비 422.36포인트(5.20%) 상승한 8,545.98로 거래를 마감했다. 당일 코스피는 4</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZOGh0dFF6SUsxS21RZW9JOTdwNzR0UDNyTXJQU2VpSnFoZmZLZUFPTkdESTc0ZURmODJhUmdDLTBDMGdEUXpfZlhYamhVZ2NfVXlPSjVqbTVCelkzNFN3d3JpYWg4NDdQbXNR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 15일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다 422.36포인트 오른 8545.98에 마감했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE43ODZVMXgxNnVqM2NDYkw1ZzJhTVQ3VEdBZGVYUWpaYzRwMmNXX2VrSEtqaGMzQ3JtWUd1YzNSdVpUUEtSQURtTmRSclhDT2U0M0dqbVAzSUt1bUZHT1Yzb1hHdWZJbDM4WlHSAWxBVV95cUxQS3pjT3JNM1hMU1NvcW05UFQzWmJVektLMi1qVzJkSEQ3ck4tQk5nd2dMS3o0QllSWXIyejhNamJIMWwwaVpBU0xmU1NPNDBjY2thWV9LQS1vbVBTX0JvdmpUYkdMVDl1NW5YUmk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“환율 1500원대 굳어지나”…고환율에 금리 인상 변수까지 - 중소기업투데이</a>
-<p class="news-desc">“환율 1500원대 굳어지나”…고환율에 금리 인상 변수까지 중소기업투데이</p>
+<p class="news-desc">[중소기업투데이 황복희 기자] 원·달러 환율이 1500원대에서 좀처럼 내려오지 않는 가운데, 한국은행이 사실상 기준금리 인상 신호를 재차 내놓으면서 기업들의 긴장감이 커지고 있다. 경상수지가 사상 최대 수준의 흑자를 기록하고 있음에도 원화 가치가 회복되지 않는 상황에서, 물가와 환율,</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBFYTlCbVhCTkRDd2RmMmpTU0trUUlMQzFHdGdBOW04TV93YUdtNUpBSkY3YjNodnlVV3QwMUE0WFQzeUFWYkptazZmY0tlVHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금리 인상 경고음 3번 울린 한국은행…7월 ‘빅스텝’ 가능성 제기</a>
-<p class="news-desc">금리 인상 경고음 3번 울린 한국은행…7월 ‘빅스텝’ 가능성 제기 v.daum.net</p>
+<p class="news-desc">한국은행이 기준금리 인상 가능성을 잇따라 시사하면서 다음달 금융통화위원회에서 실제 인상에 나설지 시장의 관심이 쏠리고 있다. 원·달러 환율이 1500원대에 머무르는 가운데 주요국 중앙은행들도 다시 긴축 기조로 돌아서면서 한은의 통화정책 전환에 한층 힘이 실리고 있다는 분석이 나온다. 일각에서는 한은이 기준금리를 한 번에 0.50%포인트 올리는 ‘빅스텝’에</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wSGFwU0Jha1RQMXVheHpGTndHMnBTMWRYdTJZVkYtUm1oTDhqRWE4a1AwMWk3cWI5c0Vob28wSGhTUkk4RGVsQ09vWWJ2Vk5iaURfN2RZTHd0YW9pS2xrQ25R?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"의심할 여지 없다"…주춤하던 반도체株, 다시 날아올랐다 - 매일신문</a>
-<p class="news-desc">"의심할 여지 없다"…주춤하던 반도체株, 다시 날아올랐다 매일신문</p>
+<p class="news-desc">최근 조정 국면을 거쳤던 국내 반도체주가 다시 강한 반등세를 나타내고 있다. 반도체 장비·소부장(소재·부품·장비) 종목들이 일제히 급등하면서 관련 ETF(상장지수펀드)도 수익률 상위권을 휩쓸었다. 시장에서는 AI(인공지능) 투자 사이클이 여전히 유효한 만큼 업황 개선 기대도 이어질 것으로 전망하면서도 랠리의 지속 여부가 기술이 아닌 자본 조달 환경에 달려 있다며 경계감을 유지해야 한다는 목소리도 나온다. 15일 한국거래소에 따르면 'KRX 반도체' 지수는 지난 한 주(8~12일)간 7.90% 상승했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

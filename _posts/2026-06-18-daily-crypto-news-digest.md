@@ -190,7 +190,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9YV2E0MlRqZXFwVVIxMjBJWm44Tm9vcWIxN3NoUjZzSTU1SnJkalZSb2szaER6cllObEhkVkhwdUxzZTZKOUs0cEJKWHNDd2sy?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 벤치마크 "코인베이스, 단순 거래소 넘어섰다"…목표가 270弗 유지 - 블루밍비트</a>
-<p class="news-desc">美 벤치마크 "코인베이스, 단순 거래소 넘어섰다"…목표가 270弗 유지 블루밍비트</p>
+<p class="news-desc">미국 투자은행(IB) 벤치마크가 암호화폐 거래소 코인베이스의 목표가를 기존 270달러로 유지했다. 17일(현지시간) 더블록에 따르면 벤치마크는 이날 고객 메모를 통해 "코인베이스는 암호화폐 중개업체에서 온체인 경제와 전통금융(TradFi)을 연결하는 인프라 플랫폼으로</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

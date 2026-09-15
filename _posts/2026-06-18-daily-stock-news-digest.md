@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1mLTdBZFFhUExkOEhhNVNGcWpGcjl3ZENWZFNmVi00RktmWmhkeVZWZy00YVB0T2owN3E4Mm9ILVhHdjhFN1dsVEdhbkp2cnBEMXMtTzJfU25BeHF4VU1NV25jRGlKYUdq?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, FOMC 경계감에 8600선 후퇴…외국인·기관 동반 매도 - 녹색경제신문</a>
-<p class="news-desc">코스피, FOMC 경계감에 8600선 후퇴…외국인·기관 동반 매도 녹색경제신문</p>
+<p class="news-desc">[녹색경제신문 = 정수진 기자] 코스피가 17일 미국 연방공개시장위원회(FOMC) 결과 발표를 앞두고 외국인과 기관의 동반 순매도가 이어지면서 하락세를 보이고 있다.한국거래소에 따르면 이날 오전 9시 12분 기준 코스피 지수는 전 거래일(8726.60) 대비 0.88%(76.96포인트) 내린 8649.64를 기록 중이다.시장은 한국시간 기준 18일 새벽 발표될 FOMC 결과를 주목하고 있다. 최근 국제유가 상승과 물가 우려가 이어진 가운데 시장에서는 연방준비제도(Fed)가 예상보다 매파적인 메시지를 내놓을 수 있다는 전망이 확산되고</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE45N2d3eTRzeTJVZlZfd3hxX3hvTUI2N3RRcHpLMHRZTF9OWV8xOUYyd3ExbEpxMG1fbDBWSno0Qm9QbGhSdVhTRjk2OHl2WXRqaE5n?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'롯데쇼핑' 52주 신고가 경신, 외국인, 기관 각각 6일 연속 순매수, 4일 연속 순매도</a>
-<p class="news-desc">'롯데쇼핑' 52주 신고가 경신, 외국인, 기관 각각 6일 연속 순매수, 4일 연속 순매도 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : ◆ 주체별 매매동향- 외국인, 기관 각각 6일 연속 순매수, 4일 연속 순매도지난 한달을 기준으로 보면 외국인이 49.7만주를 순매수한 반면, 기관은 20.3만주를 순매도했고, 개인들도 29.6만주를 순매도한 것으로 집계됐다. 같은 기간 이 종목의 거</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -218,7 +218,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE12MzFhNkIxekJaU1BTczRLTVpVLVE2RVZKMmdLWGRTMFJpQWxUTk1SWHFyR2VMbDlROEJMRFZtZ2xTb1BNTDNlOHJZOGt6VEx5MkFKdlVXc1JBY3hrSVNId2JFaThuMHYyQkMyM2xqannSAXRBVV95cUxQSWJLMnRVNTExNG5VMktVbF91QVB6WDVtOGZnQ1ZiM0dNUVVhcTA2ejAyWGwwUWI4LS01Y2FfTEV1bU5oWmJpekt2eEtDX29CNjF5bW9UdlZmV3lrRHJPUmt1VG8tX3RSNThweGEzZWhNVTJNcQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 반도체 강세에 8,800선 회복…종가 기준 사상 최고 - 산경투데이</a>
-<p class="news-desc">코스피, 반도체 강세에 8,800선 회복…종가 기준 사상 최고 산경투데이</p>
+<p class="news-desc">[산경투데이 = 한승수 기자]17일 코스피가 장 초반 약세를 딛고 상승 전환하며 8,800선을 회복했다.반도체 대형주를 중심으로 매수세가 유입되면서 지수는 종가 기준 사상 최고치를 새로 썼다.이날 코스피는 전 거래일보다 137.64포인트(1.58%) 오른 8,864.24에 거래를 마쳤</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -242,7 +242,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOUTRJUkxHdTViT3gxbzNBNkk3dW5Sb2haOU9KOEpTdkZjYTVqTWZleUxtd3FkTUZWNi1vRFZXdElDS2xjaGV3WHQzUHNhSVpEQ3ZVaVNmbE16czk4Wjlvd2N3M3M3ZW5mLTk2alJMV24tbVRrU3ZzNkJaWUc3MmxjTw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전보다 삼성생명, 하닉 대신 SK스퀘어…수혜주로 퍼지는 반도체 랠리</a>
-<p class="news-desc">삼전보다 삼성생명, 하닉 대신 SK스퀘어…수혜주로 퍼지는 반도체 랠리 조선일보</p>
+<p class="news-desc">SK스퀘어 지분가치 재평가 및 배당 확대 기대감으로 매수세 집중됨 삼성생명 삼성전자 지분 보유로 인한 대리 투자 수단으로 주목 기관 투자자의 단일 종목 편입 한도 제약에 따른 대안 투자 확대</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
