@@ -732,6 +732,30 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_dev_sync_state_safe_guard.py::test_aborts_when_non_state_files_are_dirty",
     ),
     # ---------------------------------------------------------------------
+    # Part 12 (2026-09-15): `close-stale-ci-failure-issues.yml` 의 github-script
+    # 본문. 이 가드도 등록 **전에** 층이 하나 더 필요했다 — 판정 로직 전부가
+    # 워크플로우 YAML 안의 JS 인데 가드는 그 소스 텍스트만 읽고 있었다.
+    #
+    # 양방향으로 판별력을 실측했고, 두 층이 **서로 다른 것**을 잡는다:
+    #   continue 제거  -> 텍스트 층 15 passed(눈멂) / 행동 층 1 failed(잡음)
+    #   per_page 제거  -> 텍스트 층  1 failed(잡음) / 행동 층 9 passed(눈멂)
+    # 그래서 텍스트 단언을 지우지 않고 행동 층을 덧붙였다.
+    # ---------------------------------------------------------------------
+    StaticCase(
+        # 앵커가 2줄인 두 번째 케이스다. `continue;` 는 이 파일에 3회 나타나
+        # 단독으로는 AMBIGUOUS-ANCHOR 가 된다 — 앞의 `kept.push` 줄은 결합이
+        # 아니라 유일성을 만드는 최소 컨텍스트다(`pilot_starts` 케이스와 동일).
+        #
+        # 이 변형은 `(issue.comments || 0) > 0` 문자열을 건드리지 않는다. 그래서
+        # 소스를 읽는 단언은 전부 통과하고, 사람이 트리아지한 이슈가 요약에
+        # "kept" 로 기록되면서 **동시에 닫힌다** — 감사 기록이 거짓말을 한다.
+        "스윕이 사람 트리아지 이슈까지 닫음 (코멘트 게이트 fall-through)",
+        ".github/workflows/close-stale-ci-failure-issues.yml",
+        "                kept.push({ number: issue.number, why: `코멘트 ${issue.comments}건 (사람 트리아지)` });\n                continue;\n",
+        "                kept.push({ number: issue.number, why: `코멘트 ${issue.comments}건 (사람 트리아지)` });\n",
+        "tests/test_close_stale_ci_failure_issues_guard.py::TestBehaviour::test_commented_issue_is_never_closed",
+    ),
+    # ---------------------------------------------------------------------
     # Part 11 (2026-09-13): `.claude/hooks/` 의 차단 훅 2종. Tier 3 를 여기서
     # 마친다. 이 둘은 재작성이 필요 없었다 — 2026-09-13 판정에서 이미 임시 git
     # 저장소에 훅을 실제로 돌리고 rc·JSON 결정 페이로드를 단언하고 있었다.
@@ -828,7 +852,6 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     # 로컬 증거가 존재한다.
     "tests/test_injection_guard.py": "Tier 4 — **한 방향만**(2026-09-13). 거짓양성은 막지만 탐지 능력 자체는 미검증. 26개 테스트의 폭이 실질 방어선",
     "tests/test_encoding_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). detects_corrupted_run + french_accent_not_flagged 가 짝을 이룬다",
-    "tests/test_close_stale_ci_failure_issues_guard.py": "Tier 4 — **카나리 아님**(2026-09-13). JS 소스 substring 단언이다. 등록 후보로 재검토할 것",
     "tests/test_workflow_alerting_coverage_guard.py": "Tier 4 — 카나리 절반 유효(2026-09-13). 첫 단언은 항진명제(glob 결과에 suffix 단언), 둘째만 오염을 잡고 그것도 .github/workflows/AGENTS.md 존재에 의존",
     "tests/test_desc_headline_guard.py": "Tier 4 — **카나리 아님**(2026-09-13). 함수 객체 동일성(is) 단언 — 드리프트는 막지만 탐지 능력은 미검증",
     "tests/test_collector_noop_commit_whitelist_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). 위반 탐지 + 정상 미탐지 둘 다 단언",
@@ -849,7 +872,7 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
 #: 커버리지 하한과 같은 래칫이다. 가드를 `STATIC_CASES` 에 등록하거나 Tier 1
 #: 처방(규모 단언)으로 면제 사유를 없앨 때마다 이 값을 함께 내린다. 상한이 없으면
 #: 목록이 고무도장이 된다 — 등록보다 면제가 항상 싸기 때문이다.
-_MAX_EXEMPTIONS = 23
+_MAX_EXEMPTIONS = 22
 
 #: 가드 테스트 모듈로 간주하는 파일명 패턴.
 #:
