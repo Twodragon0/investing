@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-23 | BTC $78,853 (+5.
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +5.22%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +5.22%</li><li>🟢 <strong>Bitcoin Cash</strong> (BCH): +5.08%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **12건** 수집

@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-31 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQcnZyVGlJdlF1MHBnelhmVG9GcThpVjhOSFRYTG1uTDlRajlHSGQ2eFBYbkFEU3BsMGpaeHpmMEVHY1B3c0hvT3FfRFBRemxFTzVQYnZ3SzlKZzhXQ1FGem04RFVqMTlQVUd2RDRLWFo0NmZNeXdkVnZ1YnpEZHlKcWJfcw?oc=5">증권가와 테크 업계, "반도체 주가 급락? 공급 부족 본질은 여전히 유효"</a> <span class="p0-desc">증권가와 테크 업계, "반도체 주가 급락? 공급 부족 본질은 여전히 유효" 조선일보</span></li><li><a href="https://m.joseilbo.com">SK하이닉스, 장 초반 4%대 급락…삼성전자는 ‘역대급 실적’에 반등</a> <span class="p0-desc">SK하이닉스, 장 초반 4%대 급락…삼성전자는 ‘역대급 실적’에 반등 joseilbo.com</span></li><li><a href="https://www.2news.co.kr">SK하이닉스 주가 급락, 시총 1000조 원 붕괴 - 2news.co.kr</a> <span class="p0-desc">SK하이닉스 주가 급락, 시총 1000조 원 붕괴 2news.co.kr</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,593.56 (-1.23%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 644.78 (-2.70%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-07-31 주식 시장에서 218건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,593.56(-1.23%), KOSDAQ 644.78(-2.70%), USD/KRW 1,420.90(-1.60%).
 - *나스닥 AI에 대한 우려로 정정을 위한 100개의 헤드 Rattle Investors Bloomberg.com*
 
 ## 테마별 주요 뉴스

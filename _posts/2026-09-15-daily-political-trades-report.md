@@ -14,8 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-15 - 정치인 거래 �
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-
-
 **2026-09-15** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **30건** — SEC 내부자 거래 16건, 중앙은행 14건
 
 ## 한눈에 보기
@@ -27,8 +25,6 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 
 ## 전체 뉴스 요약
 
-- 2026-09-15 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 30건 — SEC 내부자 거래 16건, 중앙은행 14건
-- 1. Smurfit Westrock (NYSE: SW) insider granted new stock awards Insider Mayer Saverio receives 403 dividend-equivalent RSUs and 119 shares at $0, lifting…
 
 ## 1. SEC 내부자 거래 (Form 4)
 
