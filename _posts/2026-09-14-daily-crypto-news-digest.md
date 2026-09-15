@@ -41,40 +41,14 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-14 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 톰 리, 암호화폐 12개월 강세 전망 - 59건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 주목</li><li>🤖 <strong>AI/기술</strong>: IPO 관련 9건</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 암호화폐 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9UcHlMYWE2d0pDZkdGMmJoODEtejlVS3o2dFdFeDh3T3RDeUVhRVFIM2JvaTFKWkYwelM0ZG9qYTZNUzJOeURNTmh6NTVNams2cG9DYUlDLVZWMFRuSlVnN3hCMU9Rc2gtdW4yT0tVVHlidw?oc=5">톰 리, 암호화폐 12개월 강세 전망</a> <span class="p0-desc">톰 리는 앞으로 12개월 동안 암호화폐 시장이 “정말 강세”를 보일 것이라고 말합니다. 이 월스트리트 전략가는 자신이 옳기를 바랄 이유가 있습니다. 그가 이끄는 회사의 손실 규모가.</span></li><li><a href="https://bitcoinmagazine.com/news/blockstream-tells-demands-bitcoin">Blockstream Tells Hackers To Return Remaining Bitcoin Stolen in Liquid Theft</a></li></ul></div>
+
+
 ## 전체 뉴스 요약
 
-**긴급**: 톰 리, 암호화폐 12개월 강세 전망 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 59건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (22건): 비트코인, 암호화폐, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (16건): 암호화폐, 달러, 코인리더스 가격 변동 (16건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (9건): IPO 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 톰 리, 암호화폐 12개월 강세 전망
-- Blockstream Tells Hackers To Return Remaining Bitcoin Stolen in Liquid Theft
-
-### 주요 이슈
-
-- 중간선거 앞두고 왜 비트코인만 사나…백악관·월가가 동시에 미는 이유 - 코인리더스
-- 연준 9월 금리 인상 확률 86%로 급등…비트코인·이더리움·XRP 랠리 시험대
-- 한주간 주요 경제·암호화폐 일정] 美 FOMC 금리결정 外 - 블루밍비트
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI
-- **주요 출처**: Google News EN(14건), CoinDesk(14건), Google News KR(11건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-14.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **59건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🤖 AI/기술
+- 2026-09-14 암호화폐 핵심 뉴스: 전 리플 CTO "XRP가 비트코인 시총 추월 가능".역전 시나리오는?. 총 59건 분석, 핵심 테마는 비트코인, 가격/시장, AI/기술입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

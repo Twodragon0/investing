@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-20 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMixgFBVV95cUxNS0dBOHlqLW93XzJDSFlnNHlpVWxoWjE3bGFBUm9feGpLWWs4a1hPMDMyTEFhUjRBeTZKVHM0dnFXUWgySFB4ZmduUzJ6WFlMdHFBZXdiYVFJU1NhZGppVXVRVDh1S1RJMkJNYU96Z2hteU1hR0NkLVEtRjJVbEpsU2VtMmVZMHQweHYybHU3VVZ2V0JocUVmSFdBSm13R1JCN0dQb1BHNC1VU1NZaExtZjdyeVBHeklWdHdhX3B0VXkyeWRfWHc?hl=en-US&gl=US&ceid=US%3Aen">Crypto Clipper는 지속성과 제어를 위해 Tor 및 웜과 같은 전파를 사용합니다.</a> <span class="p0-desc">마이크로소프트 Threat Intelligence는 클립보드 도난, 지갑 교체, Tor 기반 통신 및 웜과 같은 전파를 결합한 암호화폐 클리퍼 캠페인을 분석했습니다. 이 악성코드는.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **102건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- 2026-06-20 암호화폐 핵심 뉴스: 실시간 업데이트: 비트코인은 5개월 동안 채굴 비용 이하로 거래되어 채굴자들을 압박했습니다.. 총 102건 분석, 핵심 테마는 비트코인, 가격/시장, 매크로/금리입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
@@ -248,7 +250,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE96NmVsbERBSnFsZ05EUXJuVHVnY2ttNU1BdzEzanpNQmItSnR5bUdVWnlKQ1NJLURMX0hqM1ZmSTdpTlhRdkhkcnVNaTdWZm0wN0lmODRoQzQ2NEJuS1dPYmttcGZDNWM1?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">업비트 상장 발표…9개 알트코인 변동</a>
-<p class="news-desc">업비트 상장 발표…9개 알트코인 변동 BeInCrypto</p>
+<p class="news-desc">업비트는 6월 19일 비트코인(BTC) 및 테더(USDT) 마켓에 리도 다오(LDO), PAX 골드(PAXG), 모르포(MORPHO)를 포함한 9개의 디지털 자산을 순차적으로 4시간에 걸쳐 상장합니다. 상장 순서는 오후 3시에 PEAQ와 LIT으로 시작합니다. 카미노 파이낸스(KMNO)와 모르포(MORPHO)는 오후 4시에 거래를 시작합니다. 최근 톤코인에서 브랜드를 변경한 그램(GRAM)은 오후 5시에 상장됩니다. LDO와PAXG는 오후 6시에 거래를 시작합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

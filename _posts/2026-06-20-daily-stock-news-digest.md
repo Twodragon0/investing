@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-20 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.advisorperspectives.com">Fed’s Interest Rate Decision: June 17, 2026 - Advisor Perspectives</a></li><li><a href="https://www.cnbc.com/2026/06/19/netjets-first-fatal-crash-kills-influential-texas-vc-founder.html">NetJets' first fatal crash kills influential Texas VC founder</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 9,052.42 (-0.13%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 966.59 (-3.43%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-06-20 주식 시장에서 196건의 뉴스를 분석했습니다. 한국 시장: KOSPI 9,052.42(-0.13%), KOSDAQ 966.59(-3.43%), USD/KRW 1,532.90(-0.23%).
 - *우리의 분석가에는 전문 투자자와 개인 투자자가 포함됩니다.*
 
 ## 테마별 주요 뉴스
@@ -66,7 +68,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9ZVm1lVlpKZTZlaXNqMVpCbDZlV3kydF9NRDRocGJWZko1R1R3ZUczUXhqOEh3dURsdEFoYVdwZklqVEczU0FibkJZelEzQjg5a2RkNW5CU3RKdzdCLXNHc3JQR2p6eVBuVWV3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 19일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 11.42포인트 내린 9052.42에 마감했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -176,7 +178,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Ub2ZxYWR2VHp5MFhkcncxdmw0QUNpeW9ZeFByai1UdXJXVHJZZ2pGZDBveFZsV0htVkRqaWFtTFJ1SFRYZnFqV3BhQlVwdG1HZGfSAVNBVV95cUxPLThjdF9zVGV4TEptUFdzWmJvby1ZalR6SFh5TFJMQTd4aEl0MnE1MFRacFRvNXR0VXZDdlhnZ3A3TG9SVV9pTmxIb1BEdjVzeXBnSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“기승전 반도체” 코스피 9000 축포 속, 코스닥 900선 회귀 [이런국장 저런주식</a>
-<p class="news-desc">“기승전 반도체” 코스피 9000 축포 속, 코스닥 900선 회귀 [이런국장 저런주식] 서울경제</p>
+<p class="news-desc">코스피 지수가 사상 처음으로 9000선을 돌파하며 축포를 쏘고 있는 반면, 코스닥 지수는 1000선 아래로 주저앉으며 극심한 온도 차를 보이고 있다. 글로벌 자금이 코스피 대형 반도체주로만 빨려 들어가며 코스닥을 지탱하던 2차전지와 바이오 등 기존 주도주들이 연일 맥을</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -188,7 +190,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1LXdNVzBhelpSY2VDb2ZQMFVoY1JDTkwzR3E4TE16SndJYjhSalRqY3pCLU5td296a1pzTVRwWTljN1VMT3JNOWJkZVpqdHdYUXVRb20wQjcyX29jajVnQjFhZHVjT21I?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식마감] 코스피 하락·코스닥 1000선 붕괴… 제이앤티씨·씨피시스템·한울반도체 등 상한가 - 금강일보</a>
-<p class="news-desc">[주식마감] 코스피 하락·코스닥 1000선 붕괴… 제이앤티씨·씨피시스템·한울반도체 등 상한가 금강일보</p>
+<p class="news-desc">19일 다스코, 보해양조, 제이앤티씨, 시지메드텍, 강동씨앤엘, 한울반도체, 씨피시스템, 삼익제약, 형지I&amp;C가 상한가에 이름을 올리고 장을 마감하면서 투자자들의 관심이 집중되고 있다.이날 코스피 시장에선 다스코, 보해양조가 상한가에 이름을 올렸다.다스코는 전 거래일 대비 29.96%(800원) 오른 3470원에 장을 마감했다.이날 다스코의 주가 급등을 이끌 만한 뚜렷한 공시나 특별한 호재는 확인되지 않았다.다스코는 도로안전시설물 전문기업으로 1996년 설립돼 2004년 유가증권시장에 상장했으며, 현재 15개의 종속회사를 보유하고</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

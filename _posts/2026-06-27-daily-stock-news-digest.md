@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ilyo.co.kr">코스피 급락 마감…코스닥도 하락 - 일요신문</a> <span class="p0-desc">[일요신문] 지금 생각해보니 젊은 날 읽었던 ‘카라마조프가의 형제들’은 읽은 게 아니었다. 여자를 놓고 아버지와 다투는 아들, 집안을 챙기기는커녕 자식들을 이리저리 버려두고 자기 욕망에만 끌려 다니는 욕심덩어리 아버지, 지참금에만 관심이 있는 남자를 남편으로 맞아 속을 끓이다가 애도도 받지 못한 채 죽어간 아내들, 젊은 날 카라마조프가는 이상하고도 이상했다...</span></li><li><a href="https://www.gokorea.kr">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐?</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락… 반도체 시장 위기 조짐? 공감신문</span></li><li><a href="https://www.specialtimes.co.kr">삼성전자와 SK하이닉스 주가 급락… 반도체 시장 위기감 확산 - 스페셜타임스</a> <span class="p0-desc">스페셜타임스, 인터넷뉴스, 뉴스, 미디어, 인터넷신문, 신문, 언론</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,411.21 (-5.81%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 851.37 (-4.10%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-06-27 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,411.21(-5.81%), KOSDAQ 851.37(-4.10%), USD/KRW 1,534.73(-0.61%).
 - *제약바이오 등 헬스케어산업 경제 전문지, 병원/약국, 의약품, 건강정보*
 
 ## 테마별 주요 뉴스
@@ -176,7 +178,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9LRzFtRlQ1alRROW9lWUdlTlo5YjFyT3JJTTVhUVZMeWc4dVlNbWJHTG5LbElZSEYycTlDamh6NWdPUDdKVXAyendEeXpRNG1obmNLVGcwN3RqckZSbXBPaklZUDZmU1pLQTFBUmlsSdIBc0FVX3lxTE9Sdlh3YlVWYklkSmpvNmlVR2hqQ0pMME9NY0lfdEppRlN3YTBVQTlTN1J2Zm9LN1lXcVlpMEs0WW9SYVhGeVFqREZsMHE1ZnJDUld0MDI3aEVxV3AtTmY3Wm9JaTBmZEFodnp6NjlCN2pCaXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">원·달러 환율 1540원 돌파…'일시적 불안' 아닌 '구조적 고환율' 굳어지나 - 뉴스웍스</a>
-<p class="news-desc">원·달러 환율 1540원 돌파…'일시적 불안' 아닌 '구조적 고환율' 굳어지나 뉴스웍스</p>
+<p class="news-desc">[뉴스웍스=차진형 기자] 원·달러 환율이 다시 1540원선을 넘어섰다. 외환위기식 유동성 문제로 보기는 어렵지만, 일시적 수급 불안으로만 설명하기도 어려워졌다.중동 리스크, 달러 강세, 외국인 자금 흐름, 거주자의 해외투자 수요가 겹치며 원화 약세 압력이 구조화되고 있다는 진단이 나온다.25일 서울외국환중개에 따르면 원·달러 환율은 5월 15일 1500원대에 진입한 이후 한 달 넘게 높은 수준을 유지하고 있다. 하루 전 서울 외환시장에서 원·달러 환율은 오후 3시 30분 종가 기준 전 거래일보다 2.7원 오른 1541.8원에 거래를</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -219,7 +221,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9ISGJaU2FoVzVBWERvLVplSGdxQkRZOGwxNmg1SVNPVW5Zb0hGV2dpWmtuYUIxVEREZjROeHdOd3AyVEw0VWp0a0k0MzlmdjRC?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SK하닉 '45조' 美 상장 노리는데…삼성전자 전망에 '깜짝' [강경주의 테크X] - 블루밍비트</a>
-<p class="news-desc">SK하닉 '45조' 美 상장 노리는데…삼성전자 전망에 '깜짝' [강경주의 테크X] 블루밍비트</p>
+<p class="news-desc">&lt;테크X102&gt; 메모리 '쩐의 전쟁'…하닉·키옥시아 美 증시가는데 삼전은? 45조 조달 나선 SK하이닉스 800% 급등한 키옥시아도 ADR 발행 한·일 메모리, 美 자본시장 공략 본격화 한국과 일본 메모리 반도체 기업들이 잇따라 미국 자본시장 공략에 나섰다. SK하이닉</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

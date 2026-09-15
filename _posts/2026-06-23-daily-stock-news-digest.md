@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com">Will the Stock Market Crash in 2026? History Shows This Is the Smartest Way to Prepare.</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 9,114.55 (+0.69%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 968.40 (+0.19%).
+- 2026-06-23 주식 시장에서 160건의 뉴스를 분석했습니다. 한국 시장: KOSPI 9,114.55(+0.69%), KOSDAQ 968.40(+0.19%), USD/KRW 1,536.43(+0.43%).
 - *한강타임즈 윤종철 기자 = 올해도 수도권 일대 여름철 불청객 붉은등우단털파리(러브버그)가 전년보다*
 
 ## 테마별 주요 뉴스
@@ -66,7 +68,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBGaENWbHhFZEJrV3g5dzd2WVJzMHVQcFRrYmFKbFlHNEJTc1EzTUdlcVZuOWZ4LTdjR0ZPSHRQQTlxSTdvblZYYjVHcXFReUdXQjJEQzZ2TnBjUGJQNjdmeFJ3VnhadkJxX1ZVcDdtUEFCb2fSAXdBVV95cUxNemhPRF83VWcyY09JUzZxempLejdZSVlncVFZZENKdnFMQkVodDljN29JT1Nhb0x6UVYwRkl0bE56OGU1cFNwS1J5eEhxekFzTXIyazFpMHgxenBsZ2hRM19LczBRcnMyWFhOYzZxejB1cUFTMmFDQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(19일) 주요공시는. 비비안, 50억원 제3자배정 유상증자</a>
-<p class="news-desc">코스피·코스닥 전 거래일(19일) 주요공시는. 비비안, 50억원 제3자배정 유상증자 핀포인트뉴스</p>
+<p class="news-desc">▲ HEM파마[376270] "나이스헬스디바이스코퍼레이션 주식 19억원에 취득"▲ 비비안[002070], 50억원 제3자배정 유상증자▲ 제테마[216080], 70억원 유증…미래에셋증권 등에 제3자배정▲ 비트맥스[377030], 25억원 제3자배정 유상증자▲ 프로텍[053610] "종속회사 피엠티 주식 211억원에 추가취득"</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +80,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LcjBxOXpQNll6ZnFKT1NMZHNWQzAtOUs3c18wZ2g3di1sQm53NGhPUHFpaHlWam40d3dhQzdZeW50Z3Z0R1NGcjJ4Q2tnRVZLdkpuNmVSS2N6QQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"개미는 주식 대신 ETF 샀다"…거래대금 비중 30% 돌파</a>
-<p class="news-desc">"개미는 주식 대신 ETF 샀다"…거래대금 비중 30% 돌파 파이낸셜뉴스</p>
+<p class="news-desc">개인 투자자들의 ETF 거래대금 비중이 처음으로 30%를 넘어서는 등 국내 증시의 투자 지형이 빠르게 바뀌고 있다.21일 금융정보업체 에프앤가이드와 한국거래소에 따르면 올해 개인 투자자는 지난 19일 기준 국내 코스피, 코스닥 상장주식을 64조3000억원, ETF를 55조30..</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -133,7 +135,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTFBPZHdGZGlPNnFrWHdZQVJaRU9PS3BkcHR1NncyRnNkM0hjeFdkOFRneUo1MVlaekRhdWhZTGlJZW1mWmNFc2drN1ZUX24?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박근종 칼럼] 미국 ‘연내 금리 인상’ 시사, 환율·물가·성장 차질 없도록 인플레 철통 방어를 - 시사일보</a>
-<p class="news-desc">[박근종 칼럼] 미국 ‘연내 금리 인상’ 시사, 환율·물가·성장 차질 없도록 인플레 철통 방어를 시사일보</p>
+<p class="news-desc">박근종 작가·칼럼니스트현, 성북구도시관리공단 이사장 전, 서울특별시자치구공단이사장협의회 회장전, 소방준감 © 미국 중앙은행인 연방준비제</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
