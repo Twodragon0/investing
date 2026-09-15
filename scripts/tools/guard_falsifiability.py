@@ -861,6 +861,24 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_break_requires_a_stable_check_set",
     ),
     StaticCase(
+        # 머지 API 가 403 으로 죽는다. red 이긴 하나 이 워크플로우의 red 는 머지를
+        # 막지 않으므로 다음 Dependabot PR 까지 아무도 모른다.
+        "머지 권한 다운그레이드 (contents: write -> read)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "permissions:\n  contents: write",
+        "permissions:\n  contents: read",
+        "tests/test_dependabot_auto_merge_guard.py::TestRuntimeConfiguration::test_permissions_allow_the_merge_call",
+    ),
+    StaticCase(
+        # 전역 상수 그룹 + cancel-in-progress = 다른 PR 의 런까지 교차 취소.
+        # supply-chain-lock.yml 에서 런 58%가 그렇게 취소된 실측이 있다(#1199).
+        "concurrency 그룹을 전역 상수로 (교차-PR 취소)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "  group: dependabot-auto-merge-${{ github.event.pull_request.number || github.ref }}",
+        "  group: dependabot-auto-merge",
+        "tests/test_dependabot_auto_merge_guard.py::TestRuntimeConfiguration::test_concurrency_is_scoped_to_the_pull_request",
+    ),
+    StaticCase(
         # 마지막 폴링 이후 rebase 되면 검증하지 않은 커밋이 머지된다(TOCTOU).
         "머지 대상 head 고정 제거 (--match-head-commit)",
         ".github/workflows/dependabot-auto-merge.yml",
