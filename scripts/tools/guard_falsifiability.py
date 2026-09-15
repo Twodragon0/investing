@@ -797,6 +797,77 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         'grep "^_state/" | head -1',
         "tests/test_state_guard_command_matching.py::test_reason_lists_staged_files_and_remedy",
     ),
+    # Part 8 (2026-09-15): dependabot auto-merge. 이 워크플로우의 실패는 **머지를
+    # 막지 않는다**(required check 가 아니다) — PR 이 조용히 쌓일 뿐이라 red 를
+    # 아무도 안 본다. 그래서 정적 가드가 유일한 조기 경보다.
+    #
+    # 뮤테이션은 **가드가 주장하는 위험과 같은 방향**이어야 한다. 초판의
+    # `"| not)"` → `"| tostring)"` 은 red 를 내긴 했지만 jq 에서 문자열이 truthy 라
+    # 모든 체크를 실패로 분류하는 fail-**closed** 변형이었다 — 막겠다던 fail-open 을
+    # 재현하지 않았다(2026-09-15 리뷰 지적). 화이트리스트 오염으로 교체했다.
+    StaticCase(
+        "성공할 수 없는 승인 호출 재도입 (--approve)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "          set -euo pipefail\n",
+        '          set -euo pipefail\n          gh pr review "$PR_URL" --approve\n',
+        "tests/test_dependabot_auto_merge_guard.py::TestNoCallsThatCannotSucceed::test_does_not_approve_the_pull_request",
+    ),
+    StaticCase(
+        "GitHub auto-merge 재도입 (--auto)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'gh pr merge "$PR_URL" --squash',
+        'gh pr merge "$PR_URL" --auto --squash',
+        "tests/test_dependabot_auto_merge_guard.py::TestNoCallsThatCannotSucceed::test_does_not_use_github_auto_merge",
+    ),
+    StaticCase(
+        # 잡 이름과 제외 키가 어긋나면 자기 자신을 기다리다 타임아웃한다.
+        "대기 루프 자기 제외 키 드리프트 (SELF_CHECK)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "SELF_CHECK: auto-merge",
+        "SELF_CHECK: automerge",
+        "tests/test_dependabot_auto_merge_guard.py::TestSelfExclusionCannotDeadlock::test_self_check_name_matches_the_job_name",
+    ),
+    StaticCase(
+        # `gh pr checks` 는 대기 중이면 exit 8 이다. 종료코드로 판정하면 출력을
+        # 통째로 버려 **전부 통과한 PR 도 머지되지 않는다**(2026-09-15 스텁 실측).
+        '체크 조회 출력을 종료코드로 폐기 (|| raw="")',
+        ".github/workflows/dependabot-auto-merge.yml",
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file" || true)"',
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file")" || raw=""',
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_check_query_does_not_discard_output_on_nonzero_exit",
+    ),
+    StaticCase(
+        # 실패 state 를 통과 화이트리스트에 넣는다 = 실패한 체크를 안고 머지.
+        "체크 state 분류 fail-open (화이트리스트에 실패 state 추가)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'IN("SUCCESS","SKIPPED","NEUTRAL","PENDING"',
+        'IN("SUCCESS","SKIPPED","NEUTRAL","FAILURE","TIMED_OUT","PENDING"',
+        "tests/test_dependabot_auto_merge_guard.py::TestStateClassificationIsFailClosed::test_pass_whitelist_excludes_every_failure_state",
+    ),
+    StaticCase(
+        # non-self 체크가 0건인 순간(자기 자신만 올라온 시점)에 즉시 머지된다.
+        "탈출 조건에서 체크 개수 검사 제거",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'if [ "$total" -gt 0 ] && [ "$waiting" -eq 0 ]; then',
+        'if [ "$waiting" -eq 0 ]; then',
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_break_requires_at_least_one_non_self_check",
+    ),
+    StaticCase(
+        # GitHub App commit status 는 잡 시작 +96초에 처음 나타난 실측이 있다.
+        "안정화 창 제거 (늦게 생성되는 체크를 건너뜀)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'if [ "$current" = "$previous" ]; then',
+        "if true; then",
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_break_requires_a_stable_check_set",
+    ),
+    StaticCase(
+        # 마지막 폴링 이후 rebase 되면 검증하지 않은 커밋이 머지된다(TOCTOU).
+        "머지 대상 head 고정 제거 (--match-head-commit)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        ' --match-head-commit "$head"',
+        "",
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_merge_is_pinned_to_the_observed_head",
+    ),
 )
 
 

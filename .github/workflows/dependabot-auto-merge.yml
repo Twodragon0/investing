@@ -1,17 +1,42 @@
 name: Dependabot Auto-Merge
 
+# 이 워크플로우는 2026-09-14 까지 **모든 patch PR 에서 red 였다**. 원인이 두 개 겹쳐
+# 있었고, 하나만 고쳐도 여전히 red 다 (2026-09-15 실측):
+#
+#   1. `gh pr review --approve` →
+#      "GitHub Actions is not permitted to approve pull requests. (addPullRequestReview)"
+#      저장소 설정 `can_approve_pull_request_reviews: false`. 그런데 main 룰셋
+#      (20539046)에는 required review 가 **없다** — 승인은 애초에 머지 조건이
+#      아니었다. 없어도 되는 스텝이 워크플로우 전체를 죽이고 있었다.
+#      (`shell: bash -e` 라서 이 스텝이 죽으면 머지 스텝은 실행조차 안 된다.)
+#   2. `gh pr merge --auto` → 저장소 설정 `allow_auto_merge: false`.
+#
+# 2 를 켜는 것(저장소 설정 변경)은 택하지 않았다. required status check 가 하나도
+# 없는 상태에서 GitHub auto-merge 를 켜면 **체크 결과와 무관하게** 머지된다 —
+# docs/devsecops/branch-protection.md §5.3 이 경고하는 바로 그 구멍이고, stale 락이
+# 사람 리뷰 없이 들어간 #1321 같은 상황을 자동화하는 꼴이 된다.
+#
+# 그래서 대기를 이 워크플로우가 직접 한다: 자기 자신을 제외한 모든 체크가 끝날 때까지
+# 폴링하고, 하나라도 실패하면 머지하지 않고 red 를 낸다. required check 가 도입되면
+# (Phase 2) 이 루프를 지우고 `--auto` 로 되돌릴 수 있다.
+#
+# 가드: tests/test_dependabot_auto_merge_guard.py
+
 on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
   auto-merge:
+    name: auto-merge
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    # 폴링 상한(DEADLINE_SECONDS)보다 커야 한다. 가드가 그 관계를 강제한다.
+    # 현재 PR 전체 체크는 ~13분 (2026-09-15 #1324 실측, quality 가 최장).
+    timeout-minutes: 30
     steps:
       - name: Fetch Dependabot metadata
         id: metadata
@@ -19,16 +44,94 @@ jobs:
         with:
           github-token: ${{ github.token }}
 
-      - name: Auto-approve dependabot PR (patch only)
+      - name: Wait for checks, then merge (patch only)
         if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
-        run: gh pr review "$PR_URL" --approve
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ github.token }}
+          # 이 잡 자신의 체크. 제외하지 않으면 자기가 끝나기를 기다리며 교착한다.
+          # 이름만으로 제외하면 다른 워크플로우에 같은 이름의 잡이 생겼을 때 진짜
+          # 체크가 조용히 빠지므로 워크플로우 이름까지 함께 맞춘다. 두 값은 이 파일의
+          # `name:` 들과 일치해야 하고, 가드가 그 일치를 강제한다.
+          SELF_CHECK: auto-merge
+          SELF_WORKFLOW: Dependabot Auto-Merge
+          DEADLINE_SECONDS: "1500"
+          POLL_SECONDS: "30"
+        run: |
+          set -euo pipefail
 
-      - name: Enable auto-merge (patch only)
-        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
-        run: gh pr merge "$PR_URL" --auto --merge
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ github.token }}
+          deadline=$((SECONDS + DEADLINE_SECONDS))
+          err_file="$(mktemp)"
+          previous=""
+          head=""
+
+          while true; do
+            # 상한 검사는 **루프 맨 앞**에 둔다. 아래 재시도 경로에 두지 않으면
+            # 조회가 계속 실패할 때 deadline 을 영영 통과하지 못한다(잡 타임아웃까지
+            # 30분 공회전). 스텁 하네스로 실측한 실제 결함이다.
+            if [ "$SECONDS" -ge "$deadline" ]; then
+              echo "::error::${DEADLINE_SECONDS}s 안에 체크가 끝나지 않았다"
+              exit 1
+            fi
+
+            # 머지 대상 SHA 를 체크 조회와 같은 시점에 고정한다. 마지막 폴링 이후
+            # dependabot rebase 로 head 가 바뀌면 `--match-head-commit` 이 머지를
+            # 거부한다 — 검증하지 않은 커밋이 들어가는 TOCTOU 를 닫는다.
+            head="$(gh pr view "$PR_URL" --json headRefOid --jq .headRefOid 2>/dev/null || true)"
+
+            # `gh pr checks` 는 **대기 중이면 exit 8, 실패가 있으면 exit 1** 로 끝난다.
+            # 즉 정상 경로에서도 non-zero 다. 종료코드로 판정하면 출력을 통째로 버려
+            # 루프가 영원히 재시도만 한다 — 실측된 결함이므로 종료코드만 삼키고
+            # 판정은 내용으로 한다.
+            raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file" || true)"
+
+            if [ -z "$raw" ] || [ -z "$head" ]; then
+              # stderr 를 통째로 버리면 인증 만료·레이트리밋·URL 오류가 전부 같은
+              # 한 줄로 보인다. 마지막 줄만 실어 진단을 남긴다.
+              echo "체크 목록을 읽지 못했다 — 재시도 ($(tail -n 1 "$err_file" 2>/dev/null || true))"
+              sleep "$POLL_SECONDS"
+              continue
+            fi
+
+            others="$(echo "$raw" | jq -c --arg self "$SELF_CHECK" --arg wf "$SELF_WORKFLOW" '
+              [ .[] | select((.name == $self and .workflow == $wf) | not) ]')"
+
+            # 모르는 state 는 대기도 성공도 아닌 **실패**로 분류한다. 안전한 쪽으로
+            # 틀리게 하려는 것이다 — 새 state 가 생겨도 조용히 머지되지 않는다.
+            failed="$(echo "$others" | jq -r '
+              [ .[]
+                | select(.state | IN("SUCCESS","SKIPPED","NEUTRAL","PENDING","QUEUED","IN_PROGRESS","EXPECTED","REQUESTED","WAITING") | not)
+                | .name
+              ] | join(", ")')"
+            if [ -n "$failed" ]; then
+              echo "::error::통과하지 못한 체크가 있어 머지하지 않는다: ${failed}"
+              exit 1
+            fi
+
+            waiting="$(echo "$others" | jq -r '
+              [ .[] | select(.state | IN("PENDING","QUEUED","IN_PROGRESS","EXPECTED","REQUESTED","WAITING")) ] | length')"
+            total="$(echo "$others" | jq -r 'length')"
+
+            # `waiting == 0` 만 보면 "전부 통과" 와 "볼 체크가 아직 하나도 없다" 가
+            # 구별되지 않는다. 또 Vercel·GitGuardian 등 GitHub App 이 올리는 commit
+            # status 는 잡 시작 뒤 최대 ~96초 지나 **처음 목록에 나타난다**(2026-09-14
+            # #1320 실측) — 없는 체크는 대기 대상이 아니므로 그 사이에 break 하면
+            # 건너뛴다. 그래서 (a) 체크가 1건 이상이고 (b) 직전 폴링과 목록이 동일할
+            # 때만 빠져나간다.
+            if [ "$total" -gt 0 ] && [ "$waiting" -eq 0 ]; then
+              current="$(echo "$others" | jq -r '[ .[].name ] | sort | join(",")')"
+              if [ "$current" = "$previous" ]; then
+                break
+              fi
+              previous="$current"
+              echo "체크 ${total}건 전부 통과 — 늦게 생성되는 체크 확인을 위해 ${POLL_SECONDS}s 뒤 재확인"
+              sleep "$POLL_SECONDS"
+              continue
+            fi
+
+            echo "대기 중인 체크 ${waiting}건 / 전체 ${total}건 — ${POLL_SECONDS}s 후 재확인"
+            sleep "$POLL_SECONDS"
+          done
+
+          echo "모든 체크 통과 — squash 머지 (head=${head})"
+          gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"

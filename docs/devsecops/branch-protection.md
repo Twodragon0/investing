@@ -167,23 +167,55 @@ changes (항상 실행, 변경 파일 판정)
 통과했을 것**이다. 집계 배선과 스텝의 차단성은 별개 축이고, 둘 다 없으면 게이트가
 조용히 비어 있다.
 
-#### 실측: §5.3 의 위험은 아직 잠재 상태다 (2026-08-24, 2026-08-26 재확인)
+#### 실측: §5.3 의 위험은 아직 잠재 상태다 (2026-08-24 → 2026-09-15 갱신)
 
-`dependabot-auto-merge.yml` 의 `Enable auto-merge` 스텝이 **한 번도 실행된 적
-없다** — 최근 12개 런 전부 `skipped`(`update-type` 이 `version-update:semver-patch`
-가 아니었다. 범위 제약 bump 는 `fetch-metadata` 가 patch 로 분류하지 않는다).
+결론은 그대로다 — **관측된 발생은 0건**이고 룰셋은 그대로 둔다. 다만 근거가 바뀌었다.
 
-**2026-08-26 재측정: 최근 14개 런도 전부 잡 레벨 `skipped`.** 스텝은 여전히 실행된
-적이 없다. 재측정 명령:
+**낡은 서술 (2026-08-24, 2026-08-26):** "최근 12/14개 런 전부 `skipped` — `update-type`
+이 `version-update:semver-patch` 가 아니었다."
+
+**2026-09-15 재측정에서 두 가지가 틀린 것으로 드러났다.**
+
+첫째, 표본이 `dependabot-auto-merge.yml` 의 **모든** 런이었는데 그 대부분은 dependabot
+PR 이 아니다. 잡 레벨 `skipped` 의 주된 이유는 `update-type` 이 아니라
+`github.actor == 'dependabot[bot]'` 게이트다 — 사람이 브랜치를 푸시하면 그 게이트에
+걸린다(실측: `skipped` 3건 모두 `actor=Twodragon0`). 즉 그 숫자는 §5.3 과 무관했다.
+
+둘째, dependabot 브랜치로 좁히면 **승인 스텝은 실행되고 있었고 전부 실패했다.**
+최근 100개 런 중 dependabot 브랜치 25건: `failure` 7 · `success` 5 · `skipped` 13.
+
+| 결과 | 무슨 일이 일어났나 |
+|---|---|
+| `failure` (7) | `update-type` 이 `semver-patch` → 승인 스텝 **실행** → `GitHub Actions is not permitted to approve pull requests. (addPullRequestReview)`. `shell: bash -e` 라 머지 스텝은 실행조차 안 됐다. 최초 관측 2026-08-31 (`ruff-0.16.5`, run 33346874517) — 위 재측정 5일 뒤다 |
+| `success` (5) | `update-type` 이 patch 가 아니라 **두 스텝 모두 skip**. 범위 제약 bump(`boto3>=1.43.92,<2` → `semver-major` 분류)가 여기 해당한다. 잡은 green 이지만 아무것도 하지 않았다 |
+| `skipped` (13) | 사람이 dependabot 브랜치에 푸시 → actor 게이트 |
+
+따라서 `Enable auto-merge` 스텝이 한 번도 실행된 적 없다는 결론 **자체는 맞지만**,
+이유가 달랐다. patch 가 아닐 때는 skip 돼서, patch 일 때는 **앞 스텝이 죽어서**다.
+그리고 후자는 워크플로우가 red 라는 뜻인데, 이 워크플로우는 required check 가 아니라
+머지를 막지 않는다 — PR 이 red 인 채 조용히 쌓였다(#1319 · #1320).
+
+재측정 명령(액터 게이트 노이즈를 걷어낸 형태):
 
 ```bash
-gh run list --workflow=dependabot-auto-merge.yml --limit 14 \
-  --json createdAt,conclusion --jq '.[]|"\(.createdAt[:16]) \(.conclusion)"'
+gh run list --workflow=dependabot-auto-merge.yml --limit 100 \
+  --json createdAt,conclusion,headBranch \
+  --jq '.[]|select(.headBranch|startswith("dependabot/"))|"\(.createdAt[:16]) \(.conclusion)\t\(.headBranch)"'
 ```
 
-즉 구멍은 구조적으로 실재하지만 **관측된 발생은 0건**이다. 위 "결정을 다시 열어야
-하는 신호" 중 "required check 를 우회한 회귀가 실제로 발생한다" 는 아직 충족되지
-않았다. 준비 작업만 완비해 두고 룰셋은 그대로 둔다.
+**2026-09-15 변경 (#1324):** 승인 스텝을 삭제하고 `gh pr merge --auto` 를 자체 폴링
+루프로 바꿨다. 저장소 설정 두 개가 모두 막고 있었기 때문이다 —
+`can_approve_pull_request_reviews: false`, `allow_auto_merge: false`.
+
+`allow_auto_merge` 를 켜는 쪽은 택하지 않았다. 켜면 동작은 하지만 required check 가
+0개라 GitHub auto-merge 는 **체크 결과와 무관하게** 머지한다 — §5.3 이 경고하는
+구멍을 자동화하는 셈이다. 대신 워크플로우가 자기 자신을 제외한 모든 체크의 완료를
+직접 기다리고, 하나라도 통과하지 못하면 머지하지 않는다. Phase 2 로 required check 가
+도입되면 이 루프를 지우고 `--auto` 로 되돌릴 수 있다.
+
+즉 §5.3 의 구멍은 **auto-merge 경로에 한해** 이 대기 루프가 대신 막고 있다. 룰셋
+차원의 보호는 여전히 없으므로(직접 푸시·수동 머지는 그대로) 아래 Phase 2 준비는
+유효하다. 가드: `tests/test_dependabot_auto_merge_guard.py`.
 
 ### required check 후보 (Phase 2 적용 시)
 
