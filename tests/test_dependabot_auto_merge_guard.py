@@ -58,7 +58,10 @@ _PENDING_STATES = frozenset({"PENDING", "QUEUED", "IN_PROGRESS"})
 #: 끝난 체크. 대기 집합에 들어가면 영원히 기다린다(교착).
 _TERMINAL_OK_STATES = frozenset({"SUCCESS", "SKIPPED", "NEUTRAL"})
 
-_IN_SET_RE = re.compile(r'IN\(\s*((?:"[A-Z_]+"\s*,?\s*)+)\)')
+#: `IN(...)` 의 인자 영역만 떼어 낸다. 안쪽 반복(`(?:"[A-Z_]+"\s*,?\s*)+`)으로 쓰면
+#: 중첩 수량자가 되어 지수 백트래킹이 가능하다 — CodeQL `py/redos` 가 이 PR 에서
+#: 실제로 잡았다. 괄호 안을 통째로 잡고 state 추출은 아래 정규식에 맡긴다.
+_IN_SET_RE = re.compile(r"IN\(([^)]*)\)")
 _STATE_RE = re.compile(r'"([A-Z_]+)"')
 
 
