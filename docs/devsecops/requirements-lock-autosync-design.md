@@ -37,8 +37,17 @@ drift 시 잡을 실패시키는 데까지만 한다. 토큰 없이 커밋백 �
 
 main 룰셋(`20539046`)에는 **required status check 가 하나도 없다** — `deletion` 과
 `non_fast_forward` 뿐이다. 즉 `test_requirements_lock_version_sync` 가 red 여도 머지를
-물리적으로 막지 못하고, `dependabot-auto-merge.yml` 은 semver-patch 를 자동 승인·자동
-머지한다. stale 락이 사람 리뷰 없이 들어갈 수 있는 구조가 그대로 남아 있다.
+물리적으로 막지 못한다.
+
+> **2026-09-15 갱신 — auto-merge 경로에 한해 좁혀졌다.** 이 문단은 원래
+> "`dependabot-auto-merge.yml` 은 semver-patch 를 자동 승인·자동 머지한다" 고 적었으나
+> 두 서술 모두 더는 맞지 않는다. 승인 스텝은 삭제됐고(저장소 설정
+> `can_approve_pull_request_reviews: false` 에서 성공할 수 없었다), `--auto` 대신
+> 워크플로우가 **모든 체크의 통과를 직접 기다린다**(#1324). 따라서 `Supply-chain lock
+> gate` 가 red 인 PR 은 auto-merge 로 들어오지 못한다 — #1321 이 실제로 그렇게 막혔다.
+> 룰셋 차원의 보호는 여전히 없으므로 직접 푸시·수동 머지 경로는 그대로 열려 있고,
+> 아래 Phase 2 논의는 유효하다. 자세한 실측은
+> [`branch-protection.md`](branch-protection.md) 의 "§5.3 의 위험" 절 참조.
 
 `supply-chain-lock.yml` 은 `paths:` 필터가 있어 그대로 required 로 지정하면 무관 PR 이
 영구 대기한다(룰셋 Phase 2 가 막힌 것과 같은 이유). aggregator 잡 선행이 필요하며 이
@@ -64,8 +73,9 @@ main 룰셋(`20539046`)에는 **required status check 가 하나도 없다** —
 
 ### 1.2 위험 증폭 요인
 
-- `dependabot-auto-merge.yml` 은 patch bump 를 **자동 승인·자동 머지**한다.
-  stale 락이 사람 리뷰 없이 main 에 들어갈 수 있다.
+- `dependabot-auto-merge.yml` 은 patch bump 를 **자동 머지**한다. ~~자동 승인~~ —
+  승인 스텝은 2026-09-15 에 삭제됐고(#1324), 머지 전에 모든 체크의 통과를 기다린다.
+  즉 락 게이트가 red 면 이 경로로는 들어오지 못한다. 수동 머지·직접 푸시는 그대로다.
 - **2026-07-06 차단 승격 예정**(`supply-chain-lock.yml` 상단 주석): 승격 후에는
   `--require-hashes` 가 차단 게이트가 되므로, 봇 bump 후 락 미갱신 상태에서 누군가
   락을 부분 수정하면 무결성 실패로 CI 가 red 가 된다. 자동 동기화가 없으면 봇 PR마다
