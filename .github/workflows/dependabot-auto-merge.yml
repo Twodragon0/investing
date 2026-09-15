@@ -34,7 +34,8 @@ jobs:
     name: auto-merge
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    # 폴링 상한(25분)보다 커야 한다. 현재 PR 전체 체크는 ~8분 (2026-09-14 #1321 실측).
+    # 폴링 상한(DEADLINE_SECONDS)보다 커야 한다. 가드가 그 관계를 강제한다.
+    # 현재 PR 전체 체크는 ~13분 (2026-09-15 #1324 실측, quality 가 최장).
     timeout-minutes: 30
     steps:
       - name: Fetch Dependabot metadata
@@ -48,15 +49,21 @@ jobs:
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ github.token }}
-          # 이 잡 자신의 체크 이름. 제외하지 않으면 자기가 끝나기를 기다리며 교착한다.
-          # 값이 위 `name:` 과 같아야 하며, 가드가 그 일치를 강제한다.
+          # 이 잡 자신의 체크. 제외하지 않으면 자기가 끝나기를 기다리며 교착한다.
+          # 이름만으로 제외하면 다른 워크플로우에 같은 이름의 잡이 생겼을 때 진짜
+          # 체크가 조용히 빠지므로 워크플로우 이름까지 함께 맞춘다. 두 값은 이 파일의
+          # `name:` 들과 일치해야 하고, 가드가 그 일치를 강제한다.
           SELF_CHECK: auto-merge
+          SELF_WORKFLOW: Dependabot Auto-Merge
           DEADLINE_SECONDS: "1500"
           POLL_SECONDS: "30"
         run: |
           set -euo pipefail
 
           deadline=$((SECONDS + DEADLINE_SECONDS))
+          err_file="$(mktemp)"
+          previous=""
+          head=""
 
           while true; do
             # 상한 검사는 **루프 맨 앞**에 둔다. 아래 재시도 경로에 두지 않으면
@@ -67,23 +74,32 @@ jobs:
               exit 1
             fi
 
-            # `gh pr checks` 는 **대기 중이면 exit 8, 실패가 있으면 exit 1** 로 끝난다.
-            # 즉 정상 경로에서도 non-zero 다. 종료코드로 판정하면(`|| raw=""`) 출력을
-            # 통째로 버려 루프가 영원히 재시도만 한다 — 실측된 결함이므로 `|| true` 로
-            # 종료코드만 삼키고 판정은 내용으로 한다.
-            raw="$(gh pr checks "$PR_URL" --json name,state 2>/dev/null || true)"
+            # 머지 대상 SHA 를 체크 조회와 같은 시점에 고정한다. 마지막 폴링 이후
+            # dependabot rebase 로 head 가 바뀌면 `--match-head-commit` 이 머지를
+            # 거부한다 — 검증하지 않은 커밋이 들어가는 TOCTOU 를 닫는다.
+            head="$(gh pr view "$PR_URL" --json headRefOid --jq .headRefOid 2>/dev/null || true)"
 
-            if [ -z "$raw" ]; then
-              echo "체크 목록을 읽지 못했다 — 재시도"
+            # `gh pr checks` 는 **대기 중이면 exit 8, 실패가 있으면 exit 1** 로 끝난다.
+            # 즉 정상 경로에서도 non-zero 다. 종료코드로 판정하면 출력을 통째로 버려
+            # 루프가 영원히 재시도만 한다 — 실측된 결함이므로 종료코드만 삼키고
+            # 판정은 내용으로 한다.
+            raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file" || true)"
+
+            if [ -z "$raw" ] || [ -z "$head" ]; then
+              # stderr 를 통째로 버리면 인증 만료·레이트리밋·URL 오류가 전부 같은
+              # 한 줄로 보인다. 마지막 줄만 실어 진단을 남긴다.
+              echo "체크 목록을 읽지 못했다 — 재시도 ($(tail -n 1 "$err_file" 2>/dev/null || true))"
               sleep "$POLL_SECONDS"
               continue
             fi
 
+            others="$(echo "$raw" | jq -c --arg self "$SELF_CHECK" --arg wf "$SELF_WORKFLOW" '
+              [ .[] | select((.name == $self and .workflow == $wf) | not) ]')"
+
             # 모르는 state 는 대기도 성공도 아닌 **실패**로 분류한다. 안전한 쪽으로
             # 틀리게 하려는 것이다 — 새 state 가 생겨도 조용히 머지되지 않는다.
-            failed="$(echo "$raw" | jq -r --arg self "$SELF_CHECK" '
+            failed="$(echo "$others" | jq -r '
               [ .[]
-                | select(.name != $self)
                 | select(.state | IN("SUCCESS","SKIPPED","NEUTRAL","PENDING","QUEUED","IN_PROGRESS","EXPECTED","REQUESTED","WAITING") | not)
                 | .name
               ] | join(", ")')"
@@ -92,18 +108,30 @@ jobs:
               exit 1
             fi
 
-            waiting="$(echo "$raw" | jq -r --arg self "$SELF_CHECK" '
-              [ .[]
-                | select(.name != $self)
-                | select(.state | IN("PENDING","QUEUED","IN_PROGRESS","EXPECTED","REQUESTED","WAITING"))
-              ] | length')"
-            if [ "$waiting" -eq 0 ]; then
-              break
+            waiting="$(echo "$others" | jq -r '
+              [ .[] | select(.state | IN("PENDING","QUEUED","IN_PROGRESS","EXPECTED","REQUESTED","WAITING")) ] | length')"
+            total="$(echo "$others" | jq -r 'length')"
+
+            # `waiting == 0` 만 보면 "전부 통과" 와 "볼 체크가 아직 하나도 없다" 가
+            # 구별되지 않는다. 또 Vercel·GitGuardian 등 GitHub App 이 올리는 commit
+            # status 는 잡 시작 뒤 최대 ~96초 지나 **처음 목록에 나타난다**(2026-09-14
+            # #1320 실측) — 없는 체크는 대기 대상이 아니므로 그 사이에 break 하면
+            # 건너뛴다. 그래서 (a) 체크가 1건 이상이고 (b) 직전 폴링과 목록이 동일할
+            # 때만 빠져나간다.
+            if [ "$total" -gt 0 ] && [ "$waiting" -eq 0 ]; then
+              current="$(echo "$others" | jq -r '[ .[].name ] | sort | join(",")')"
+              if [ "$current" = "$previous" ]; then
+                break
+              fi
+              previous="$current"
+              echo "체크 ${total}건 전부 통과 — 늦게 생성되는 체크 확인을 위해 ${POLL_SECONDS}s 뒤 재확인"
+              sleep "$POLL_SECONDS"
+              continue
             fi
 
-            echo "대기 중인 체크 ${waiting}건 — ${POLL_SECONDS}s 후 재확인"
+            echo "대기 중인 체크 ${waiting}건 / 전체 ${total}건 — ${POLL_SECONDS}s 후 재확인"
             sleep "$POLL_SECONDS"
           done
 
-          echo "모든 체크 통과 — squash 머지"
-          gh pr merge "$PR_URL" --squash --delete-branch
+          echo "모든 체크 통과 — squash 머지 (head=${head})"
+          gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"
