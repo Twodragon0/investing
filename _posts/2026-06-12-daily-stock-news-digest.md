@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5VZnJ0MlF6dnpVblpJdUZGR1NMdUJ5VWVoV21wbGViUlBQUmk2U0N4QzFNVlpSWUdOakhHWlFiY1VXNFNvWFhMUzgyUHdVSTJycnlmM0hiaUtCbWdUb2RmNkdNNTRLNWxxamlsbm16SGvSAXRBVV95cUxQbjRrR0pfYmVSWGo1SnRJdG9SSWN4SGdvNTQxTHVJNTlOOUdJb0lha2w5eDVKdE1qX2tJUUVDM1cxck5KZnZfMk5qRG5ndk44UjZ1Ry1LUGpPa3JsN2Nzak13UEpBNzFTemdFc0R1VWRNcVFlVA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 롤러코스터 장세 끝에 강보합 마감…코스닥 4.7% 급등 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 한승수 기자]국내 증시가 11일 극심한 변동성 속에 엇갈린 흐름을 보였다.코스피는 장중 7,400선이 무너졌다가 7,800선을 회복하는 등 방향성을 찾지 못한 끝에 소폭 상승 마감했고, 코스닥은 기관 매수세에 힘입어 4% 넘게 급등했다.이날 코스피는 전 거래일보다 33</p>
+<p class="news-desc">[산경투데이 = 한승수 기자] 국내 증시가 11일 극심한 변동성 속에 엇갈린 흐름을 보였다.코스피는 장중 7,400선이 무너졌다가 7,800선을 회복하는 등 방향성을 찾지 못한 끝에 소폭 상승 마감했고, 코스닥은 기관 매수세에 힘입어 4% 넘게 급등했다.이날 코스피는 전 거래일보다 33</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

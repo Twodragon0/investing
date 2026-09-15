@@ -239,7 +239,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aaEhYSHZPMk5zWENOZU9EX3NwcFRUNGkzNWVtS1duZU4wM3RONHYwTEJKVmhIVDFib2tzTnBHemI4alpCMGhuSVBMQmhfUmdtYlRVbXhuNVNEZGozZzdVcw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">(특징주)삼성전자 11%·SK하이닉스 8% 급등…미 반도체 랠리 훈풍 - 뉴스토마토</a>
-<p class="news-desc">[뉴스토마토 김주하 기자]삼성전자(005930)와SK하이닉스(000660)가 장 초반 나란히 급등하고 있습니다. 간밤 미국 반도체주가 일제히 강세를 보인 데다 중동 긴장 완화 기대감까지 더해지면서 투자심리가 개선된 영향으로 풀이됩니다. 12일 한국거래소에 따르면 오전 9시15분 기준 삼성전자는 전 거래일보다 3만3000원(11.04%) 오른 33만2000원에 거래되고 있습니다. 장중에는 33만4000원까지 오르며 강세를 이어가고 있습니다.</p>
+<p class="news-desc">[뉴스토마토 김주하 기자] 삼성전자(005930)와SK하이닉스(000660)가 장 초반 나란히 급등하고 있습니다. 간밤 미국 반도체주가 일제히 강세를 보인 데다 중동 긴장 완화 기대감까지 더해지면서 투자심리가 개선된 영향으로 풀이됩니다. 12일 한국거래소에 따르면 오전 9시15분 기준 삼성전자는 전 거래일보다 3만3000원(11.04%) 오른 33만2000원에 거래되고 있습니다. 장중에는 33만4000원까지 오르며 강세를 이어가고 있습니다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
