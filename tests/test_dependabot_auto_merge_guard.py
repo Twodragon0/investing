@@ -279,6 +279,47 @@ class TestSelfExclusionCannotDeadlock:
         )
 
 
+class TestRuntimeConfiguration:
+    """워크플로우 바깥 껍데기(권한·동시성). 둘 다 회귀가 조용하다."""
+
+    def test_permissions_allow_the_merge_call(self, parsed: dict) -> None:
+        """다운그레이드하면 머지가 403 으로 죽는다.
+
+        red 이긴 하지만 이 워크플로우의 red 는 머지를 막지 않으므로, 알아채기까지
+        다음 Dependabot PR 을 기다려야 한다. 저장소 기본값이 read 라
+        (`default_workflow_permissions: read`, 2026-09-15 실측) 명시가 필수다.
+        """
+        perms = parsed.get("permissions")
+        assert isinstance(perms, dict), (
+            f"최상위 permissions 가 매핑이 아니다: {perms!r}. `write-all` 이나 누락은 "
+            "security-scan.yml 의 Workflow Permissions Audit 대상이기도 하다."
+        )
+        assert perms.get("contents") == "write", (
+            f"contents={perms.get('contents')!r} — `gh pr merge` 가 403 으로 죽는다."
+        )
+        assert perms.get("pull-requests") == "write", (
+            f"pull-requests={perms.get('pull-requests')!r} — PR 조회·머지에 필요하다."
+        )
+
+    def test_concurrency_is_scoped_to_the_pull_request(self, parsed: dict) -> None:
+        """폴링 런이 최대 25분 살아 있으므로 중복 런이 실제로 겹친다.
+
+        그룹이 전역 상수면 `cancel-in-progress` 가 **다른 PR** 의 런까지 죽인다 —
+        `supply-chain-lock.yml` 에서 런 58%가 그렇게 취소된 실측이 있다(#1199).
+        저장소 전역 가드는 `tests/test_workflow_concurrency_scope_guard.py` 이고,
+        여기서는 블록의 **존재**까지 요구한다(전역 가드는 없으면 통과시킨다).
+        """
+        concurrency = parsed.get("concurrency")
+        assert isinstance(concurrency, dict), (
+            "concurrency 블록이 없다. `synchronize` 마다 새 런이 뜨고 이전 폴링 런이 "
+            "남아 둘이 동시에 `gh pr merge` 를 호출한다."
+        )
+        group = str(concurrency.get("group", ""))
+        assert "github.event.pull_request.number" in group, (
+            f"concurrency.group={group!r} 이 PR 로 스코프돼 있지 않다. 전역 상수 그룹은 다른 PR 의 런을 교차 취소한다."
+        )
+
+
 class TestStillScopedToDependabotPatches:
     def test_job_is_gated_on_dependabot_actor(self, job: dict) -> None:
         assert "dependabot[bot]" in str(job.get("if", "")), (
