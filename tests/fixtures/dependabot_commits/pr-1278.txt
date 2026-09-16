@@ -1,0 +1,15 @@
+chore(deps): Bump actions/deploy-pages from 5.0.0 to 5.0.1
+
+Bumps [actions/deploy-pages](https://github.com/actions/deploy-pages) from 5.0.0 to 5.0.1.
+- [Release notes](https://github.com/actions/deploy-pages/releases)
+- [Commits](https://github.com/actions/deploy-pages/compare/cd2ce8fcbc39b97be8ca5fce6e763baed58fa128...368f82528645a54fb793d4d04e342629a3f51346)
+
+---
+updated-dependencies:
+- dependency-name: actions/deploy-pages
+  dependency-version: 5.0.1
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>

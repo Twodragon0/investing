@@ -12,21 +12,50 @@
       "branch": "dependabot/pip/matplotlib-approx-eq-3.11.2",
       "expected": "version-update:semver-patch",
       "observed_in_run": "35051659591",
-      "note": "직접 핀 bump. from/to 가 깨끗하게 잡힌다."
+      "note": "직접 핀 bump. from/to 가 깨끗하게 잡힌다.",
+      "path": "regex-fallback",
+      "provenance": "action-run"
     },
     {
       "pr": 1321,
       "branch": "dependabot/pip/boto3-gte-1.43.92-and-lt-2",
       "expected": "version-update:semver-major",
       "observed_in_run": "34795061519 계열(2026-09-14 auto-merge 런)",
-      "note": "범위 제약. from 캡처가 이전 상한 '<2,' 에서 '2,>=' 를 삼켜 major 가 된다 — 파싱 아티팩트."
+      "note": "범위 제약. from 캡처가 이전 상한 '<2,' 에서 '2,>=' 를 삼켜 major 가 된다 — 파싱 아티팩트.",
+      "path": "regex-fallback",
+      "provenance": "action-run"
     },
     {
       "pr": 1329,
       "branch": "dependabot/pip/boto3-gte-1.43.93-and-lt-2",
       "expected": "version-update:semver-major",
       "observed_in_run": "35051687306",
-      "note": "#1321 과 같은 아티팩트."
+      "note": "#1321 과 같은 아티팩트.",
+      "path": "regex-fallback",
+      "provenance": "action-run"
+    },
+    {
+      "pr": 1319,
+      "branch": "dependabot/pip/ruff-0.16.7",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "34795019097",
+      "path": "yaml-explicit",
+      "provenance": "action-run",
+      "note": "`Bumps … from A to B.` 형 + YAML 에 update-type 이 **있다** → 정규식 결과는 쓰이지 않는다."
+    },
+    {
+      "pr": 1278,
+      "branch": "dependabot/github_actions/actions/deploy-pages-5.0.1",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "",
+      "path": "yaml-explicit",
+      "provenance": "commit-yaml-explicit",
+      "note": "github-actions 생태계. auto-merge 런이 보존 기간을 넘겨 사라져 골든을 런에서 못 얻었다 — 커밋 YAML 의 명시적 `update-type` 필드에서 직접 읽었다(구현에서 유도한 값이 아니다)."
     }
-  ]
+  ],
+  "path_coverage": {
+    "yaml-explicit": "YAML 의 update-type 을 그대로 쓴다 (upstream `dep['update-type'] ||` 좌항)",
+    "regex-fallback": "YAML 에 update-type 이 없어 커밋 첫 줄 정규식 + calculate_update_type 으로 간다",
+    "bumps-regex": "`^Bumps … $` 정규식으로 from/to 를 얻는 경로. **이 저장소 실제 PR 로는 도달 불가** — Bumps 형 7건 전수(#1190 #1191 #1248 #1250 #1251 #1275 #1276)가 YAML update-type 을 갖는다. 합성 단위 테스트로만 덮는다"
+  }
 }

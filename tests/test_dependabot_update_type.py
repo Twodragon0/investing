@@ -74,6 +74,49 @@ def test_range_constraint_artifact_is_reproduced() -> None:
         assert parse_update_type(message, case["branch"]) == "version-update:semver-major"
 
 
+def test_fixtures_cover_both_reachable_code_paths() -> None:
+    """경로 커버리지를 **단언**한다 — 한쪽만 덮으면 나머지 분기가 무방비다.
+
+    upstream 로직은 `yaml['update-type'] || regex(...)` 다. 2026-09-16 리뷰에서
+    초판 fixture 3건이 전부 오른쪽(regex-fallback) 한 경로였음이 드러났다.
+    """
+    paths = {c["path"] for c in _cases()}
+    missing = {"yaml-explicit", "regex-fallback"} - paths
+    assert not missing, f"fixture 가 덮지 않는 경로: {sorted(missing)}"
+
+
+def test_bumps_regex_path_is_only_reachable_synthetically() -> None:
+    """`^Bumps … $` 로 from/to 를 얻는 분기는 **실제 PR 로 도달하지 않는다.**
+
+    2026-09-16 전수 확인: 이 저장소의 `Bumps` 형 PR 7건(#1190 #1191 #1248 #1250
+    #1251 #1275 #1276)이 **모두** YAML `update-type` 을 갖는다. 따라서 그 정규식의
+    추출 결과는 쓰이지 않는다.
+
+    그래도 분기를 덮는 이유: upstream 은 이 정규식을 `re.M` 으로 **메시지 전체**에
+    건다(`Bumps` 줄은 실제로 3번째 줄이다). "첫 줄만 본다" 로 잘못 포팅하면 조용히
+    빈 값이 되는데, 실제 PR 이 이 경로를 타지 않으므로 **영원히 드러나지 않는다.**
+
+    이 입력은 합성이다 — 실제 dependabot 출력이 아니라는 점을 분명히 해 둔다.
+    """
+    synthetic = (
+        "chore(deps): bump foo from 1.0.0 to 2.0.0\n"
+        "\n"
+        "Bumps [foo](https://example.invalid/foo) from 1.0.0 to 2.0.0.\n"
+        "- [Commits](https://example.invalid/foo/compare/1.0.0...2.0.0)\n"
+        "\n"
+        "---\n"
+        "updated-dependencies:\n"
+        "- dependency-name: foo\n"
+        "  dependency-type: direct:production\n"
+        "...\n"
+        "\n"
+        "Signed-off-by: dependabot[bot] <support@github.com>\n"
+    )
+    assert parse_update_type(synthetic, "dependabot/pip/foo-2.0.0") == "version-update:semver-major", (
+        "`Bumps` 줄을 메시지 전체에서 찾지 못했다 — 첫 줄만 보도록 포팅됐을 수 있다."
+    )
+
+
 class TestCalculateUpdateType:
     """upstream `update_metadata.ts:159-176` 축자 이식의 경계."""
 

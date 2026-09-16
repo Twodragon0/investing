@@ -1,0 +1,16 @@
+chore(deps): bump ruff from 0.16.6 to 0.16.7
+
+Bumps [ruff](https://github.com/astral-sh/ruff) from 0.16.6 to 0.16.7.
+- [Release notes](https://github.com/astral-sh/ruff/releases)
+- [Changelog](https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/astral-sh/ruff/compare/0.16.6...0.16.7)
+
+---
+updated-dependencies:
+- dependency-name: ruff
+  dependency-version: 0.16.7
+  dependency-type: direct:development
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
