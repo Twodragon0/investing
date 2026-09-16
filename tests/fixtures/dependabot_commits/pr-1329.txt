@@ -1,0 +1,14 @@
+chore(deps): update boto3 requirement from <2,>=1.43.92 to >=1.43.93,<2
+
+Updates the requirements on [boto3](https://github.com/boto/boto3) to permit the latest version.
+- [Release notes](https://github.com/boto/boto3/releases)
+- [Commits](https://github.com/boto/boto3/compare/1.43.92...1.43.93)
+
+---
+updated-dependencies:
+- dependency-name: boto3
+  dependency-version: 1.43.93
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
