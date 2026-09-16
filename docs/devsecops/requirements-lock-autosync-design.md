@@ -317,6 +317,16 @@ App 권한은 최소로: 대상 저장소에 `contents: write` 만. PR 쓰기·�
 그것을 그대로 푸시하면 특권 경계를 우회하는 통로가 된다 — GitHub 문서도
 `workflow_run` 에서 신뢰할 수 없는 코드를 다루는 위험을 경고한다.
 
+> **실측 (2026-09-16, PR #1333 · 런 35062599443).** "PR 이 워크플로우 자체를 수정할 수
+> 있다" 는 이 절의 전제는 그동안 GitHub 문서 인용뿐이었다. 기본 브랜치에 **존재하지
+> 않는** 워크플로우 파일을 PR 브랜치에만 두고 확인했다 — 체크가 생성되고 실행됐으며
+> (`ref=refs/pull/1333/merge`) 마커가 로그에 찍혔다. 즉 `on: pull_request` 런은 PR 쪽
+> 정의를 읽는다. 프로브 PR 은 머지하지 않고 닫았다.
+>
+> 따라서 9.4 의 6개 검사는 **선택이 아니다.** 그리고 같은 이유로, PR 컨텍스트 안에 둔
+> 어떤 검사도 그 PR 이 지울 수 있다 — `dependabot-auto-merge.yml` 의 actor 게이트를
+> PR 작성자 기준으로 완화하지 않기로 한 결정(#1332)이 이 실측에 기대고 있다.
+
 그래서 소비자는 push 전에 다음을 **모두** 만족하는지 확인하고, 하나라도 어긋나면
 중단한다:
 
@@ -400,6 +410,41 @@ stale 을 확정적으로 red 로 만들고, `requirements-lock-sync.yml` 의 ar
 summary 가 사람의 재생성 비용을 낮추는 현 구조가 그대로 최선이다. 이 문서를 남기는
 목적은, 나중에 누가 옵션 A 를 구현하려 할 때 **9.1 에서 반드시 막힌다는 사실**을
 먼저 읽게 하는 것이다.
+
+> **정체 비용 재측정 (2026-09-16).** 위 "최대 2주" 는 낡았다. 최근 dependabot PR 30건
+> 기준 `scripts/requirements.txt` 를 건드린 PR 의 수명은 대부분 **0~3일**, 최장 7일
+> (#1164)이다. 주당 3~6건이 락 대상이고, 헬퍼 1회 실행으로 여러 건을 한꺼번에 해소할
+> 수 있다. 측정:
+>
+> ```bash
+> gh pr list --author app/dependabot --state closed --limit 30 \
+>   --json number,createdAt,closedAt,mergedAt,files --jq '
+>     .[] | select([.files[].path] | any(. == "scripts/requirements.txt"))
+>     | "\(.number) \(.createdAt[0:10])→\((.mergedAt // .closedAt)[0:10])"'
+> ```
+
+### 9.8.1 `schedule` 스위퍼 — 장기 대안, semver 판정이 관건
+
+옵션 C 와 별개로, 열린 dependabot PR 을 주기적으로 순회해 "전 체크 green + patch" 면
+머지하는 `schedule` 잡이 구조적으로 우월하다. 이유 둘: **schedule 런은 기본 브랜치
+파일로 실행**되므로 §9.4 의 head-ref 변조에 면역이고, PR 당 최대 25분 도는 폴링 잡이
+통째로 사라진다.
+
+걸림돌은 semver 판정이다 — **`dependabot/fetch-metadata` 는 쓸 수 없다** (2026-09-16
+upstream 소스 확인):
+
+- `src/dependabot/verified_commits.ts:20` 이 이벤트 페이로드의 `pull_request` 키를
+  요구하고, 없으면 *"Make sure you're triggering this action on the `pull_request` or
+  `pull_request_target` events"* 로 실패한다.
+- `action.yml` 의 inputs 5개(`alert-lookup`, `compat-lookup`, `github-token`,
+  `skip-commit-verification`, `skip-verification`) 중 **PR 번호를 넘기는 것이 없다.**
+
+다만 대체 경로가 있다. `fetch-metadata` 자신이 읽는 원본은 **dependabot 커밋 메시지**다
+(`src/dependabot/update_metadata.ts:69-81` — `---` / `...` 사이의 YAML 조각과 첫 줄
+정규식). 그 데이터는 `gh api repos/{o}/{r}/pulls/{n}/commits` 로 같은 형태로 얻을 수
+있다(실측 #1328 커밋 메시지에 `updated-dependencies:` 블록 확인). 즉 PR 제목 파싱 같은
+취약한 방법을 쓰지 않고도 **같은 출처**에서 판정할 수 있다 — 단 버전 비교 로직은 직접
+구현해야 한다.
 
 ### 9.9 출처
 

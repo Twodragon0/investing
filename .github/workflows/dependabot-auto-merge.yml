@@ -33,10 +33,15 @@ on:
   #
   # 게이트를 PR 작성자 기준으로 **완화**하는 안도 검토했으나 철회했다. 현행 actor
   # 게이트는 잡 자체가 뜨지 않으므로 **워크플로우 수정으로 우회할 수 없는** 유일한
-  # 통제인데(`on: pull_request` 런은 PR 의 merge-ref 파일을 실행한다 —
-  # docs/devsecops/requirements-lock-autosync-design.md §9.4 와 같은 전제), 완화 뒤
-  # 커밋 작성자 검사로 되막으려던 안은 그 검사 자체가 같은 푸시로 지워질 수 있어
-  # 통제가 되지 못했다. 게다가 그 검사가 사람 커밋을 막으므로 순효과가 0 이었다.
+  # 통제다. 완화 뒤 커밋 작성자 검사로 되막으려던 안은 그 검사 자체가 같은 푸시로
+  # 지워질 수 있어 통제가 되지 못했고, 게다가 그 검사가 사람 커밋을 막으므로
+  # 순효과가 0 이었다.
+  #
+  # 그 근거("PR 안의 검사는 같은 푸시로 지울 수 있다")는 2026-09-16 에 **이 저장소에서
+  # 실측**했다 — PR #1333, 런 35062599443. 기본 브랜치에 없는 워크플로우 파일을 PR
+  # 브랜치에만 두었는데 체크가 생성되고 실행됐다(`ref=refs/pull/1333/merge`).
+  # 즉 `on: pull_request` 런은 PR 쪽 정의를 읽는다. 종전에는 GitHub 문서와
+  # docs/devsecops/requirements-lock-autosync-design.md §9.4 의 서술만 있었다.
   workflow_dispatch:
     inputs:
       pr:
@@ -80,8 +85,13 @@ jobs:
     # 현재 PR 전체 체크는 ~13분 (2026-09-15 #1324 실측, quality 가 최장).
     timeout-minutes: 30
     steps:
-      # 이 액션은 dependabot 이 트리거한 PR 컨텍스트를 전제한다. `workflow_dispatch`
-      # 에서 동작하는지 확인된 바 없으므로 자동 경로에서만 돌린다.
+      # 이 액션은 `pull_request` / `pull_request_target` **전용**이다. 이벤트
+      # 페이로드의 `pull_request` 키를 읽고, 없으면 다음 메시지로 실패한다
+      # (upstream `src/dependabot/verified_commits.ts:20`, 2026-09-16 확인):
+      #   "Event payload missing `pull_request` key. Make sure you're triggering
+      #    this action on the `pull_request` or `pull_request_target` events."
+      # PR 번호를 넘기는 입력도 없다(`action.yml` 의 inputs 5개 전부 무관).
+      # 따라서 `workflow_dispatch` 에서는 쓸 수 없고, 자동 경로에만 건다.
       - name: Fetch Dependabot metadata
         id: metadata
         if: github.event_name == 'pull_request'
