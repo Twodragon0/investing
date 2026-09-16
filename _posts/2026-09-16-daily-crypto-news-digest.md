@@ -41,39 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-16 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address - 104건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>🏦 <strong>거래소</strong>: 증권 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 상원, 규제 동향 주시</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러선 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/mev-bot-intercepts-77m-in-rseth-from-ethereum-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address 
-총 104건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 암호화폐, 달러선 관련 (36건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (29건): 증권 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **🔵 규제/정책** (31건): 상원, 규제, 트럼프 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address
-
-### 주요 이슈
-
-- 코인베이스 CEO "클래리티 통과 확신.비트코인 이미 바닥 찍어"
-- EU, 암호화폐 지갑 규제 본격화."24시간 내 취약점 신고 못 하면 과징금" - 코인리더스
-- Senate blocks cryptocurrency regulation as Democrats push back on Trump investme
-- 외 7건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 규제, AI
-- **주요 출처**: Binance(35건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **104건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🔵 규제/정책
+- 2026-09-16 암호화폐 핵심 뉴스: 비트코인 혁명은 실패했나…국가에 흡수된 암호화폐 - 지디넷코리아. 총 104건 분석, 핵심 테마는 비트코인, 거래소, 규제/정책입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

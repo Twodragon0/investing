@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-16 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 삼성전자·SK하이닉스, 전날 급락 딛고 보합권…저가매수 유입 - 블루밍비트 - 208건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 수익률 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>🟣 <strong>DeFi</strong>: 수익률, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, IPO 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1OOEJyUTN5NnlEczNuYkVxazNmUTZHN2VyNjBwWEhBZFE3b3A5OVB2S3RaNnZNSS10dDh3ZnlRT1ZTaUU0RTFPLWFuanBfVGUy?oc=5">삼성전자·SK하이닉스, 전날 급락 딛고 보합권…저가매수 유입 - 블루밍비트</a> <span class="p0-desc">삼성전자와 SK하이닉스가 인공지능(AI) 개발 속도조절론과 미국 국채금리 상승 부담에도 전날 급락에 따른 저가매수세가 유입되며 장 초반 보합권에서 움직이고 있다. 15일 오전 9시10분 기준 삼성전자는 전 거래일보다 0.2% 하락한 24만8500원에 거래되고 있다. S</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5pYkhEUDFvbGc4M19tZWRVNS1vRUdsUlB5a0d2V0R6TWdEbmFnSFktOXBCT2ZCdmNJaVdOZkJNRTI5YzU3VnNzVV9lNmplRHRQaFVWWWRzSmN1WUZIcXZaYzZxYVNCcmFi?oc=5">美반도체 장중 5% 급락…외국인 '삼전·하닉' 2.9조 매도 이어질까 - 녹색경제신문</a> <span class="p0-desc">[녹색경제신문 = 한순구 기자] 미국 반도체주가 14일(현지시간) 장중 큰 폭으로 하락하면서 전날 3% 넘게 급락한 국내 증시에 추가 부담으로 작용할 가능성이 커졌다.엔비디아와 마이크론을 비롯한 AI·메모리 반도체주가 동반 하락하고 필라델피아반도체지수(SOX)가 장중 약 5% 밀렸다. 인공지능(AI) 업계에서 개발 속도를 늦춰야 한다는 주장이 잇따른 가운데 국제유가 상승과 미국 국채금리 부담까지 겹쳤다.국내에서는 전날 외국인이 SK하이닉스와 삼성전자 두 종목에서만 약 2조9000억원을 순매도한 상태다. 15일 국내 증시에서는 미국 반</span></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPU29aRl84bG1Nbkx1N2h0Rk9lS2ozcHB5R3hNNEFBT3JhTk8zLWEtT0ZHM3B6ZlE4YUszbXA3dE5UaTJfVTY0R2JiZnFoQ2pHaWZ1d1RhZjZnZWhKODh2LUVsbzBUdTVvVTc2OUFGa3pJWDZNbTdLeUJUM05HVW9IZXZ0NS0yUHZtVXJqN2I1eWtLY2JfM1dYV0NTckFscHN4ZFJ6WUtZWnVLeUE?oc=5">Stocks are in a late-stage bubble and poised to crash 21% next year, analyst says</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 삼성전자·SK하이닉스, 전날 급락 딛고 보합권…저가매수 유입 - 블루밍비트 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 208건의 뉴스 중 P1 주요 이슈도 24건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (44건): 국채, 수익률, 연준 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (51건): 코스피, 코스닥, 한강타임즈 가격 변동 (51건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🟣 DeFi** (26건): 수익률, 국채, 채권 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 삼성전자·SK하이닉스, 전날 급락 딛고 보합권…저가매수 유입 - 블루밍비트
-- 美반도체 장중 5% 급락…외국인 '삼전·하닉' 2.9조 매도 이어질까 - 녹색경제신문
-- Stocks are in a late-stage bubble and poised to crash 21% next year, analyst says
-
-### 주요 이슈
-
-- "삼전닉스, 과거 주가 회복 쉽지 않다" 고점론 띄웠던 증권사, 또다시 경고
-- Stocks slide to begin week as 10-year yield briefly touches 5%, oil rises: Live
-- Should ProShares S&P 500 Ex-Technology ETF (SPXT) Be on Your Investing Radar?
-- 외 21건
-
-### 투자자 체크포인트
-
-- 한국 기사 70건, 글로벌 기사 138건 수집
-- 한국 지수: KOSPI 6,627.26(-0.85%), KOSDAQ 812.41(+0.70%), USD/KRW 1,360.05(+1.04%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:86%"></div></div><span class="theme-count">44건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">51건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:51%"></div></div><span class="theme-count">26건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:22%"></div></div><span class="theme-count">11건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-16.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,627.26 (-0.85%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 812.41 (+0.70%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-16 주식 시장에서 208건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,627.26(-0.85%), KOSDAQ 812.41(+0.70%), USD/KRW 1,360.05(+1.04%).
+- *삼성전자와 SK하이닉스가 약세다.*
 
 ## 테마별 주요 뉴스
 

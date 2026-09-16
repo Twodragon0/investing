@@ -30,50 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-16 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 외국인·기관 ‘팔자’에 코스피 급락…장중 6600선 추락 - 스페셜경제 - 40건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 금리 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 동향 주시</li><li>📈 <strong>가격/시장</strong>: 인상, 연준 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE85dmJNTUU5VVFqT2ZsRnJFczhrbkpBN0VoTEh6b2I1cTQ4bnhKWWc5Wnl3N2RpWGtlOTR0UWx0TkNzUVprMTJ6RGNsVDhLZ1lVSHVUNmFtdW5vaVd5SmFxWnNISTktY1JYNUVnSQ?oc=5">외국인·기관 ‘팔자’에 코스피 급락…장중 6600선 추락 - 스페셜경제</a> <span class="p0-desc">스페셜경제=최진형 기자 | 코스피가 장 초반 3% 넘게 급락하며 장중 6600선까지 밀렸다. 외국인과 기관이 대규모 매도에 나선 가운데 개인이 2조원 넘게 순매수</span></li><li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOZEEwWWxtWXQwUTd6ZVNQT0lhZzlBUC05VzNYSDhkT0Z5MGxuWVFuV0NncG9jQWlZSEhJRDROQXJZUFdjd3NZVUxKN0FoYU9TckVEXzdudW9ncW92Q3JuNi1xdzNIUjN6X1A1Zy0xNmJuRjJ0RUFyNzF1cUZBNzAxNFVtUWZKeHA3NHlTVzlLZlBUREVuRUNXV01qcGNkR2RVa2V2QkF4cEk5eFZOLW9XanBUb3Y?oc=5">Fed's Kevin Warsh should just 'stick to the data' for rate decision - Yahoo Finance UK</a></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQRk9nQklhemJVaDNwbDJrZkRYYXREYkFjbGVKVEFhbWxadWZNMDNXV215eTc5TExzUEJWRlhpWEt5aHpUT09DTExBbEhDVDl2UklEcnY1bGpYRTQ0RzFSdkFBbUxJWUE2ZlMwM01nZE9wejMza2I2RWJLcUNtNGg1SklZOC0?oc=5">Morning Business Report: Trump pushes back on calls to slow AI as Fed rate decision approaches - 41NBC News</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 외국인·기관 ‘팔자’에 코스피 급락…장중 6600선 추락 - 스페셜경제 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 40건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 40건 중 텔레그램 0건, 소셜 1건, 정치·경제 39건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (24건): 연준, 금리, 인상 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (22건): 트럼프 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (19건): 인상, 연준, 기준금리 가격 변동 (19건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 외국인·기관 ‘팔자’에 코스피 급락…장중 6600선 추락 - 스페셜경제
-- Fed's Kevin Warsh should just 'stick to the data' for rate decision - Yahoo Finance UK
-- Morning Business Report: Trump pushes back on calls to slow AI as Fed rate decision approaches - 41N
-
-### 주요 이슈
-
-- Trump agrees to ethics concessions ahead of key Senate crypto Clarity Act vote:
-- 투자의 창] 금리 변곡점의 투자 전략
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 39건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:92%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:79%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

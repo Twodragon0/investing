@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-23 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/376270/coldcard-new-security-after-bitcoin-exploit">Coldcard, 1억 3천만 달러 비트코인 악용 후 새로운 보안 조치 추가</a> <span class="p0-desc">Coinkite의 최신 펌웨어에서는 사용자가 지갑 시드를 생성할 때 임의성을 추가하도록 요구하고 3주 검토 중에 발견된 추가 보안 문제를 수정합니다.</span></li><li><a href="https://bitcoinmagazine.com/news/iran-hackers-hit-with-criminal-charges">이란 해킹 조직, 600만 달러 비트코인 몸값 포함 대규모 절도 사건 혐의로 기소</a> <span class="p0-desc">비트코인 잡지 이란 해킹 조직, 대규모 절도 사건으로 기소 — 600만 달러 포함 비트코인 몸값 포함 연방정부는 피고인에 대한 정보 제공에 대해 1,000만 달러의 보상금을 제공하.</span></li><li><a href="https://www.coindesk.com/web3/2026/08/22/web3-gaming-network-sandbox-stops-base-and-bnb-chain-bridging-after-exploit">Web3 게임 네트워크 Sandbox는 악용 후 Base 및 BNB 체인 브리징을 중지합니다.</a> <span class="p0-desc">샌드박스는 토큰을 격리하기 위해 영향을 받는 네트워크의 브리징을 비활성화하고 사용자에게 공급량의 0.01% 미만에 미치는 영향을 언급하면서 기본 및 BNB에서 SAND를 거래하지.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-08-23 암호화폐 핵심 뉴스: 비트코인은 투자자 낙관론이 다시 넘쳐나면서 이번 주 동안 22% 급등했습니다.. 총 99건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

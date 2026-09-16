@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-18 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/inveniam-acquire-mantra-om-token-collapse?utm_source=rss&utm_medium=rss&utm_campaign=rss">Inveniam은 OM 폭락으로 표시된 격동의 해 이후 Mantra를 인수합니다.</a> <span class="p0-desc">Inveniam은 지난 1년 동안 OM 토큰의 붕괴와 장기간의 시장 압력에서 회복하는 데 시간을 보낸 블록체인 프로젝트인 Mantra를 인수할 계획을 발표했습니다.</span></li><li><a href="https://www.coindesk.com/markets/2026/06/17/uni-token-surges-while-rest-of-crypto-market-looks-to-fed-s-warsh-for-guidance">UNI 토큰은 급등하고 나머지 암호화폐 시장은 연준의 Warsh를 지침으로 삼고 있습니다.</a> <span class="p0-desc">연방공개시장위원회(Federal Open Markets Committee)는 연준 의장 Kevin Warsh의 첫 번째 금리 결정을 발표할 예정이며, WHO은 언론인의 질문에 직면.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-18 암호화폐 핵심 뉴스: 독점: 바이낸스는 EU에서의 운영 허가를 잃을 예정이라고 소식통은 말합니다.. 총 99건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

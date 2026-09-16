@@ -16,29 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 14건 분석. 주목 사건: **[Security] ETH wallet exploit backfires as MEV bot captures ** / 보안 뉴스 헤드라인: Record 207 Crypto Hacks Expose Weak Spot In Digital Asset Se.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 14건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (14건): security, exploit, compromised 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (5건): exploit, symbiosis, unbacked 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (3건): exploit, backfires, arbitrary 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address
-- [Security] Balancer eyes wind-down after restructuring fails to revive revenue
-- [Security] Symbiosis says recovered 15 BTC from bridge hack, offers 20% bounty
-
-### 투자자 체크포인트
-
-- 보안 사건 12건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 14건
