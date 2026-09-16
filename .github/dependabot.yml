@@ -24,6 +24,21 @@ updates:
   # 의존성 bump 에도 붙어서(#1189) 이미 신뢰할 수 없는 신호였다.
   #
   # limit 은 두 항목분(5+5)을 합쳐 8 로 둔다. 중복이 사라지므로 10 은 불필요하다.
+  #
+  # **핀 표기가 auto-merge 대상 여부를 가른다** (2026-09-15 실측).
+  # `dependabot/fetch-metadata` 의 `update-type` 은 매니페스트의 표기 방식에 따라
+  # 다르게 나온다. `dependabot-auto-merge.yml` 은 `version-update:semver-patch`
+  # 에만 걸리므로, 같은 크기의 bump 라도 표기에 따라 자동 머지 여부가 갈린다:
+  #
+  #   ruff==0.16.6    → 0.16.7   ⇒ semver-patch   (#1319, 스텝 실행됨)
+  #   numpy~=2.4.4    → ~=2.4.6  ⇒ semver-patch   (#1320, 스텝 실행됨)
+  #   boto3>=1.43.88  → >=1.43.92 ⇒ semver-**major** (#1321)
+  #
+  # 마지막 줄이 요점이다. 범위 제약(`>=X,<Y`)의 하한을 올리는 bump 는 패치 크기여도
+  # major 로 분류돼 자동 머지 경로를 **아예 타지 않는다**. #1321 이 그래서 사람 손으로
+  # 락까지 재생성해야 했다. 표기를 바꿀 계획은 없다 — boto3 는 graceful degradation
+  # 대상이라 상한만 막아두면 충분하고, 자동 머지는 부수적이다. 다만 "왜 저 PR 만
+  # 자동으로 안 닫히지" 를 다시 조사하지 않도록 여기 남긴다.
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
