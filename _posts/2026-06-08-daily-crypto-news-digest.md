@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9rdHoyc2hWWTFSX0JJUGcxWFZjT01zbE1SbVlCZWxXVVpUSmoybjZ6SDA1YlVaSUhtSms0Y29DanYzbjgyMzNHMDh3c1BreHRyT19Sb3NNT0xWNVBaY19Ockt3WEF1aTRRM05WSA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 암호화폐] 비트코인·이더리움, FTX 붕괴 후 최대 주간 하락…시총 3900억달러 증발 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 암호화폐] 비트코인·이더리움, FTX 붕괴 후 최대 주간 하락…시총 3900억달러 증발 데일리비즈온</p>
+<p class="news-desc">[미국=데일리비즈온] 비트코인과 이더리움이 2022년 FTX 붕괴 이후 가장 큰 주간 하락률을 기록하며 시장이 혹독한 한 주를 보였다. 디지털 자산 전체 시가총액</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQSVNIU2tDMU1RTE13Zkl1bV9Mc3R0T2VhMWpnS1VudzkzUExXRm1rTXZFNGloTjFFUVJDci1sY3JtYThoQ3ktbnlONVpURHR0YTQ4VUZwa3B0bXJqNzBkMEVwNW5RWk4xM0RDb2cxZjc3WEV4WEIzSUhvWXEyYXU2U0t1WVBzMm5uVlBqczJvNWdyejJmeUZoaW82T0c2NmEtWkFUZkdlWE9wU21VMGxTekUwZWhVeFNSeTQ0eWU3VXRfS1dtWGtGNXdvSmw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐의 혹독한 한 주: 비트코인(BTC), 이더(ETH) FTX 붕괴 이후 최악의 주간 하락 기록 - CoinDesk</a>
-<p class="news-desc">암호화폐의 혹독한 한 주: 비트코인(BTC), 이더(ETH) FTX 붕괴 이후 최악의 주간 하락 기록 CoinDesk</p>
+<p class="news-desc">암호화폐 투자자들은 매도 세력이 수백억 달러 규모의 디지털 자산 시장 가치를 소멸시키면서 수년 만에 가장 어려운 한 주를 견뎌냈다. 비트코인은 이번 주 17.3% 하락했으며, 이더는 22% 하락해 두 자산 모두 2022년 11월 샘 뱅크먼-프리드의 FTX 거래소 붕괴로 인한 전면적인 시장 공황 이후 최대 주간 하락세를 기록할 전망입니다. 지난 토요일 소폭의 안정세에도 불구하고, 두 자산 모두 저점 근처를 유지했으며, BTC는 $60,000 바로 위에서 거래되었고 ETH는 약 $1,550에 거래되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

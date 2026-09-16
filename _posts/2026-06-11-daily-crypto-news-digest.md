@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-11 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wUWRZLXN0WHRJUDAxVGZiZkxpVmhKUmN3OUNJdXZPUWpXbGlyejhlU0VsbDdRaUpwYUptSXNTOU1PbFkzOFJhMGt5QXIzRTl2QldZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 800만개 손실 구간…이더리움·XRP까지 번진 암호화폐 투매</a>
-<p class="news-desc">비트코인 800만개 손실 구간…이더리움·XRP까지 번진 암호화폐 투매 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 비트코인 [사진: Reve AI][디지털투데이 김예슬 기자] 비트코인 손실 구간 물량이 800만 BTC를 넘어서고 이더리움과 XRP의 수익성 지표도 악화하면서 암호화폐 시장 전반의 하락세가 짙어지고 있다는 소식이다.10일(현지시간) 블록체인 매체 디크</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

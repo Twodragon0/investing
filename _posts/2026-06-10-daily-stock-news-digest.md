@@ -169,7 +169,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE95bERIM2JIQWRwTFpiR0E5bHlqQ2Zva2E3RDE2ZWtvLVAwM0ZkdnVNbl9VTlR6YjcwVjhyTkI2OWhiR05rVlZNekt6VHgwWkl4bXlNUVJwRmdybWtlM1pJbG8xZ3lZZ3piRWpwb3BlWXfSAXRBVV95cUxPSzFtT29OX0JlcGJ5OVhhVEl6aENOMTM0VWRyVjBXc0dLS1E1bEZtUm80cWd0UHVKamVhMXc2VWZPNzZ3eDhUZjVNbVJCNzBhZzBUNUlRTVdtNTlLcE1tempoSy1DQ3RZZk1hT2V5U3IzOUM4Vg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체주 훈풍에 증시 급반등…코스피·코스닥 매수 사이드카 - 산경투데이</a>
-<p class="news-desc">반도체주 훈풍에 증시 급반등…코스피·코스닥 매수 사이드카 산경투데이</p>
+<p class="news-desc">[산경투데이 = 박태진 기자]글로벌 반도체주 반등에 힘입어 국내 증시가 9일 장 초반 급등세를 보이면서 유가증권시장과 코스닥 시장에서 나란히 매수 사이드카가 발동됐다.전날 급락 충격으로 서킷브레이커와 매도 사이드카가 작동한 지 하루 만에 시장 흐름이 급반전된 것이다.한국거래소에 따르면</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -275,7 +275,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE4xU3A1eVBnLXN1alBVYms5bXk1M0wzVkVnbVAzMnhYUVJwc1NySFJLUFR6VTZWYkw0RHBVVUlma0pOTGxDNWlwRjhPZ3hzM3hPc3NUWm5HM3lFamtRanB5WtIBYEFVX3lxTE4xU3A1eVBnLXN1alBVYms5bXk1M0wzVkVnbVAzMnhYUVJwc1NySFJLUFR6VTZWYkw0RHBVVUlma0pOTGxDNWlwRjhPZ3hzM3hPc3NUWm5HM3lFamtRanB5Wg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한투증권 "한은, 고환율에 빅스텝보다 외환 정책으로 접근할 듯"</a>
-<p class="news-desc">한투증권 "한은, 고환율에 빅스텝보다 외환 정책으로 접근할 듯" 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 임은진 기자 = 한국투자증권은 9일 한국은행이 고환율에 대한 대응으로 '빅 스텝'보다는 다른 외환 정책으로 접근할 가능성이 크...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

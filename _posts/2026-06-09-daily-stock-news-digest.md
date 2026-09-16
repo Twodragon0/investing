@@ -185,7 +185,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Vb1BmcGQ3cGhsS083R2pRVmpYakxaSFRrMjJRUC1ZVkpQTEVZMWtIMGRkNEhuOFlyY0VHMzZDZFRkbHpCTERVaDRNbFlydU0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전닉스 급락, 반도체 피크아웃?…전문가 "저가매수 기회"</a>
-<p class="news-desc">삼전닉스 급락, 반도체 피크아웃?…전문가 "저가매수 기회" v.daum.net</p>
+<p class="news-desc">(서울=연합뉴스) 이민영 기자 = 반도체주가 급락, 국내 증시가 출렁하면서 반도체주 피크아웃(정점 후 하락)에 대한 우려가 번지고 있다. 다만 증권가에서는 최근 하락세는 단기 과열 해소 과정에 불과하다며 오히려 저가 매수 기회로 삼아야 한다고 의견도 적지 않다. 8일 한국거래소에 따르면 이날 삼성전자는 전장 대비 10.18% 내린 29만5천500원에 거래</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

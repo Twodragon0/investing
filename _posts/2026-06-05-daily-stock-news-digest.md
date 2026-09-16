@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9kT09XR0dkT2JWeEwxbU1lQUJqWEl1REtZeXY5bzYxUGlBVnI0TG9HZGszRHBFRlJQcGRvdlRXVTFkcmd1V2FpM0kxZkN3d2F0dzJSRi01RWtPbEJabEVmcnhPeUt5SnpRYURV?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 내림세 장 종료.코스닥 상승 마감 - 한강타임즈</a>
-<p class="news-desc">코스피, 내림세 장 종료.코스닥 상승 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 4일 코스피와 코스닥지수가 각각 내림세와 오름세로 장을 마무리했다.이날 코스피는 전 거래일보다 162.08포인트 내린 8639.41에</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOQk5wLXNCYjNKdVpWdkhKUjNtakVCdUU2ZGxFMkxYaHEwTkVPT1dVOVVDajI0ZjY5UEpQcHQyeW1JOVBtaWIzY0phZmVFalAxU2JNYXdXeWtHQ3Y1dGlKeXRjX3BTVDBEMGhENzZvQU9LVnpibUJpSVNrNi1YV19lZA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">거꾸로 가는 코스닥, 1000선 방어 안간힘…코스피 디커플링 '왜'</a>
-<p class="news-desc">거꾸로 가는 코스닥, 1000선 방어 안간힘…코스피 디커플링 '왜' 이데일리</p>
+<p class="news-desc">코스피와 코스닥이 엇박자를 내면서 양 시장간 극단적인 탈동조화(디커플링) 현상이 두드러지고 있다. 코스피-코스닥 간 수익률 괴리가 시장 개설 이후 역대 최대 수준으로 벌어지면서 극단적인 증시 양극화의 한 단면을 보여주고 있다는 분석이다.4일 엠피닥터에 따르면 코스닥 ...</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

@@ -237,7 +237,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1OQXBRLWhMLXdSN0loYXVLTENES3Ywak93bFpxa2NOeWFrOTh3U1BvNlJkSGEtUVJxWDQ4ZVFaN2lzVFZWRXlnNW5jVzJyVVdfZGc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이익은 TSMC 압도하는데…“삼전닉스 주가 여전히 4배 저평가”</a>
-<p class="news-desc">이익은 TSMC 압도하는데…“삼전닉스 주가 여전히 4배 저평가” 매일경제</p>
+<p class="news-desc">신한證, “TSMC PER 24배 vs 삼전닉스 6.7배”지주사 더블카운팅 감안해도 PER 7.2배 그쳐TSMC 프리미엄 배경엔 ADR·국부펀드·ETF시클리컬株 평가 여전…HBM·장기계약이 재평가 열쇠</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -265,7 +265,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBHbWpYdTFfMnZkbjBJeVZpeUppMFpWd29Ya3h0MC1yN1ZLZ3RKbmZuQjZ4dUx4a3ROUzZMSkpScDM1VUhPTUh3RXFSb1dVdFJrN25vLTBGWTRXbG5m?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">모닝 리포트] "금리 인상으로 환율 잡는다?"… 한국은행 통화정책의 딜레마 - 뉴스핌</a>
-<p class="news-desc">[모닝 리포트] "금리 인상으로 환율 잡는다?"… 한국은행 통화정책의 딜레마 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 채송무 기자 = 중동발 유가 급등과 1500원을 돌파한 원화 약세가 맞물리면서 한국은행의 기준금리 인상 필요성이 대두되고 있다.일각에서는 물가 대응을 넘어 환율 안정을 위한 금리 인상 가속화 논란까지 불거지는 상황이다. 이같은 상황에서 상상인증</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -277,7 +277,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE4xU3A1eVBnLXN1alBVYms5bXk1M0wzVkVnbVAzMnhYUVJwc1NySFJLUFR6VTZWYkw0RHBVVUlma0pOTGxDNWlwRjhPZ3hzM3hPc3NUWm5HM3lFamtRanB5WtIBYEFVX3lxTE4xU3A1eVBnLXN1alBVYms5bXk1M0wzVkVnbVAzMnhYUVJwc1NySFJLUFR6VTZWYkw0RHBVVUlma0pOTGxDNWlwRjhPZ3hzM3hPc3NUWm5HM3lFamtRanB5Wg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한투증권 "한은, 고환율에 빅스텝보다 외환 정책으로 접근할 듯"</a>
-<p class="news-desc">한투증권 "한은, 고환율에 빅스텝보다 외환 정책으로 접근할 듯" 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 임은진 기자 = 한국투자증권은 9일 한국은행이 고환율에 대한 대응으로 '빅 스텝'보다는 다른 외환 정책으로 접근할 가능성이 크...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

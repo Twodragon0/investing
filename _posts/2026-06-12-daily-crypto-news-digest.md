@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBsTVlVSFJMQjFOSkg1VUhLd0FMSVg2eG04T1RiMGN0X3FoeTdWM3BqajVzVU8yeDVzYnc2Rmd6U2FPWXpsS2xwQlBtbjJUeERlcXNwajAzLTZxbFVRV3lXVmRoVTFiRWdmVFE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'사상 최대 규모' 스페이스X IPO, 비트코인 자금이동 촉발할까 - 뉴스웨이</a>
-<p class="news-desc">'사상 최대 규모' 스페이스X IPO, 비트코인 자금이동 촉발할까 뉴스웨이</p>
+<p class="news-desc">사상 최대 규모로 평가받는 스페이스X IPO가 가시화되며 암호화폐 시장에 유동성 변화를 촉진하고 있다. 전문가들은 개인 투자자 중심의 공모와 AI, 기술주와의 위험자산 경쟁으로 인해 비트코인 등 디지털 자산에서 주식시장으로 단기 자금 유출이 확대될 수 있다고 분석했다. ETF 순유출 및 기관 투자자 이탈 현상도 시장의 불안 요인으로 작용하고 있다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -303,7 +303,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9Sd1RDR1NpSnZWRGVEdl8yUXRoWWxnUHhxdWtaT3FOaFZxN0NSMUVGTXRKMHh4eDI2aXR4azRPWTdqRmtEdnFCMFMtN3J2a0NWMnkw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">日 하원, 암호화폐 금융상품 재분류 법안 통과…세율 20%로 낮춘다</a>
-<p class="news-desc">日 하원, 암호화폐 금융상품 재분류 법안 통과…세율 20%로 낮춘다 네이트</p>
+<p class="news-desc">[디지털투데이 AI리포터] 일본 하원이 암호화폐를 금융상품으로 재분류하는 법안을 통과시켰다. 11 일(현지시간) 블록체인 매체 크립토폴리탄에 따르면 법안이 참의원까지 통과하면 2027년 시행되며, 비트코인과 이더리움 등을 포함한 암호화폐 양도차익 세율은 2028년부터 20%로 낮아진다. 이번 개편으로 암호화폐 규제 근거는 자금결제법에서 금융상품거래법으로 옮겨간다. 일본은 그동안 암호화폐를 주로 결제 수단으로 봤지만, 앞으로는 주식과 채권처럼 금융상품 규제 틀 안에서 관리하게 된다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

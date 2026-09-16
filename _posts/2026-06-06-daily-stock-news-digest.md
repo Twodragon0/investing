@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9vNXdtM2tFRU90cDVDSUVmVGY1RUJjbUNUaUV5R0tMN0NKX1AzQnpEdGk1eF9kMHZFV3owQ2J1TnNKQ0JGeWkzZzh2WncyeUlJejNkaFBndXZIQ1R3dUNldnlkaTVQRjJ5R095OFpXN2ZqQndN?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 급락에도 개인은 순매수…외국인은 순매도</a>
-<p class="news-desc">코스피 급락에도 개인은 순매수…외국인은 순매도 부산일보</p>
+<p class="news-desc">5일 서울 중구 하나은행 딜링룸 현황판에 코스피 등이 표시되고 있다. 연합뉴스 5일 코스피가 5% 이상 하락하며 8,000선을 위협...</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1uWGVNS3lQNGM0SUl6aVdoM0xka0dKN3FhVXpaLVlRaDNZbHhUUTFwcWVkNmZpQWRtd1NiNWRlWUdYLUFXUFYyVHJGdDhVNGM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">영상] “AI 반도체 수요 증가 끝이 안 보여… 삼성전자·SK하이닉스, 실적 대비 여전히 저평가”</a>
-<p class="news-desc">[영상] “AI 반도체 수요 증가 끝이 안 보여… 삼성전자·SK하이닉스, 실적 대비 여전히 저평가” v.daum.net</p>
+<p class="news-desc">"내년 삼성전자와 SK하이닉스 영업이익이 총 900조 원에 이를 것으로 전망된다. 여기에 나머지 기업들의 영업익 예상치 300조 원을 합하면 코스피 상장사들의 전체 영업익 규모는 1200조 원이 된다. 이를 바탕으로 12개월 선행 주가수익비율(PER) 8배를 대입하면 코스피 시가총액은 1경 원, 지수로 환산하면 1만2000이라는 계산이 나온다. 갑자기 세계</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

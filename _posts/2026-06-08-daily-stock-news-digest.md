@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9WaW5fak1RbkJzS2tCX1FoUS12QTNlTkhLd3N2UGpka0FzLUFnNXB6Tk1rd2c4WjZSc292Y0Vxa0taVGQ3VzhfNlFxclc3aWgzZUx2MGNJNVBEUmg0bVNNNmxjSjhYbEMwY0VFZWlxdFU5cFU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">3高(물가·환율·금리)에 부담 커지는데…그래도 식지 않는 '빚투' - 마켓인</a>
-<p class="news-desc">3高(물가·환율·금리)에 부담 커지는데…그래도 식지 않는 '빚투' 마켓인</p>
+<p class="news-desc">고환율, 고물가 상황에 한국은행이 7월 기준금리 인상을 강력하게 시사한 가운데 시장금리가 기준금리 인상 기대를 선반영하며 빠르게 상승하고 있다. 이 영향으로 주택담보대출(주담대) 상단이 7%를 넘어서고 신용대출도 5% 중반을 돌파하며 차주들의 이자 부담도 커질 것으로 보인다. 그렇지만 ‘빚투’(빚내서 투자)는 계속돼 신용대출 잔액이 3영업일간 1조원 가량...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5RWjBsMzRHQ2FIbnpYRUxuV1hWU3BtOWRpMlROb0pPdkkxb0wxSC1tOGtOWXJPMVZhRnU3dHBpOGdHTm9VMURSMjg2VXQwS3pTY2dnWnI1RW5TVkkyZGZ5VTkyYzhyYUpiV0w4VGM3R2E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이번주 관심주] 삼성전자·하이닉스, 하락은 곧 저가매수 기회? - 오피니언뉴스</a>
-<p class="news-desc">[이번주 관심주] 삼성전자·하이닉스, 하락은 곧 저가매수 기회? 오피니언뉴스</p>
+<p class="news-desc">[오피니언뉴스=박준호 기자] 삼성전자·하이닉스가 최근 2거래일 연속 하락 마감했다. 그간 상승세가 너무 가팔랐던 터라 미국 브로드컴의 급락을 명분으로 대규모 차익실현이 나타난 모습이다.증권가는 AI 인프라 투자사이클은 훼손되지 않았다고 판단한다. 알파벳을 비롯한 하이퍼 스케일러(거대클라우드기업)들이 앞으로도 AI 투자를 늘릴 것이라는 분석이다. 삼성전자와 하이닉스의 이번 하락은 오히려 저가 매수 기회로 삼아야 한다는 조언이다.한국거래소에 따르면 지난 5일 삼성전자는 6.4% 내린 32만9000원으로 마감했다. 전날 -2.5%에 이은</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -184,7 +184,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1SY0hGVEtiRjUxVHBURXBSWkxJdUl4bFFCOHVacE9zdjJKTDlMTU9RcWN4UVVFaFQxcUQxQjU1bHNsS0Z3d3hUYmwtVlJCZFRO?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘주가 8000에도 찜찜한 이유?’…갈수록 심해지는 삼전닉스 의존, 코스피↑때 하락종목 더 많아 - 문화일보</a>
-<p class="news-desc">‘주가 8000에도 찜찜한 이유?’…갈수록 심해지는 삼전닉스 의존, 코스피↑때 하락종목 더 많아 문화일보</p>
+<p class="news-desc">국내 증시가 폭발적으로 상승하고 있지만, 삼성전자와 SK하이닉스 등 반도체 주식 쏠림현상이 갈수록 심해지고 있는 것으로 나타났다. 7일 한국거래소에 따르면 지난달 26일부터 이달 5일까지 2주간 상승한 종목은 평균 210개, 하락한 종목은 596개, 나머지는 보합을 기</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
