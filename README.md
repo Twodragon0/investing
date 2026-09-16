@@ -121,6 +121,7 @@
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
 | scripts/tools/classify\_failure\_log.py           |       73 |       18 |     75% |215, 244-270, 274 |
 | scripts/tools/component\_counts.py                |      120 |        3 |     98% |91-92, 247 |
+| scripts/tools/dependabot\_update\_type.py         |       62 |       21 |     66% |114, 130, 140, 144-168 |
 | scripts/tools/fix\_untranslated\_body.py          |       87 |       40 |     54% |35, 107-108, 119-165, 169 |
 | scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |        5 |     98% |253-257, 416, 421, 561 |
@@ -136,7 +137,7 @@
 | scripts/verify\_post\_quality.py                  |       78 |        1 |     99% |       130 |
 | scripts/verify\_rendered\_fixtures.py             |       50 |        3 |     94% |110-111, 136 |
 | scripts/verify\_rendered\_posts.py                |       72 |       51 |     29% |39, 42, 45-46, 56-57, 61-83, 87-117, 121 |
-| **TOTAL**                                         | **25306** | **3094** | **88%** |           |
+| **TOTAL**                                         | **25368** | **3115** | **88%** |           |
 
 
 ## Setup coverage badge
