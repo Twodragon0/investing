@@ -124,7 +124,7 @@
 | scripts/tools/fix\_untranslated\_body.py          |       87 |       40 |     54% |35, 107-108, 119-165, 169 |
 | scripts/tools/gsc\_api.py                         |      116 |        6 |     95% |67, 74, 89-94, 234 |
 | scripts/tools/gsc\_index\_audit.py                |      234 |        5 |     98% |253-257, 416, 421, 561 |
-| scripts/tools/guard\_falsifiability.py            |      199 |       81 |     59% |161, 1069-1073, 1083-1085, 1114-1123, 1128, 1142-1151, 1183-1187, 1192-1226, 1236-1284, 1302-1328, 1332 |
+| scripts/tools/guard\_falsifiability.py            |      199 |       81 |     59% |161, 1097-1101, 1111-1113, 1142-1151, 1156, 1170-1179, 1211-1215, 1220-1254, 1264-1312, 1330-1356, 1360 |
 | scripts/tools/indexnow\_submit.py                 |      174 |       28 |     84% |89-132, 222-229, 347-348, 358 |
 | scripts/tools/measure\_blurb\_inflow.py           |       75 |       19 |     75% |69-71, 99, 111, 133-136, 150-184, 188 |
 | scripts/tools/postbuild\_fix\_feed\_enclosures.py |       65 |        3 |     95% |118-119, 134 |
