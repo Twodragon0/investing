@@ -817,8 +817,10 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     StaticCase(
         "성공할 수 없는 승인 호출 재도입 (--approve)",
         ".github/workflows/dependabot-auto-merge.yml",
-        "          set -euo pipefail\n",
-        '          set -euo pipefail\n          gh pr review "$PR_URL" --approve\n',
+        # `set -euo pipefail` 은 수동 경로 스텝이 생기며 2회가 됐다(2026-09-16).
+        # 머지 스텝에만 있는 줄을 앵커로 쓴다 — 앵커 유일성은 메타 가드가 강제한다.
+        "          deadline=$((SECONDS + DEADLINE_SECONDS))",
+        '          gh pr review "$PR_URL" --approve\n          deadline=$((SECONDS + DEADLINE_SECONDS))',
         "tests/test_dependabot_auto_merge_guard.py::TestNoCallsThatCannotSucceed::test_does_not_approve_the_pull_request",
     ),
     StaticCase(
@@ -870,6 +872,32 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_break_requires_a_stable_check_set",
     ),
     StaticCase(
+        # 푸시 주체 기준 게이트는 잡 자체가 뜨지 않아 self-modification 에 면역이다.
+        # 작성자 기준으로 바꾸면 그 성질을 잃는다(2026-09-16 검토에서 철회된 변경).
+        "auto-merge 게이트를 PR 작성자 기준으로 완화",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "if: github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'",
+        "if: github.event.pull_request.user.login == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'",
+        "tests/test_dependabot_auto_merge_guard.py::TestManualDispatchPath::test_automatic_path_still_keys_on_the_pusher",
+    ),
+    StaticCase(
+        # 수동 경로에 metadata 가 없으므로 이 조회가 유일한 대상 확인이다.
+        "수동 경로의 PR 작성자 조회 제거 (아무 PR 이나 머지 가능)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'author="$(gh pr view "$PR_URL" --json author --jq \'.author.login\')"',
+        "true",
+        "tests/test_dependabot_auto_merge_guard.py::TestManualDispatchPath::test_dispatch_target_is_verified_as_dependabot_pr",
+    ),
+    StaticCase(
+        # dispatch 런에는 pull_request.number 가 없어 github.ref 로 폴백한다 —
+        # 서로 다른 PR 의 수동 런이 같은 그룹에 묶여 교차 취소된다.
+        "concurrency 에서 dispatch 입력 제거 (수동 런 교차 취소)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        " || inputs.pr || github.ref }}",
+        " || github.ref }}",
+        "tests/test_dependabot_auto_merge_guard.py::TestManualDispatchPath::test_concurrency_group_covers_the_dispatch_path",
+    ),
+    StaticCase(
         # 머지 API 가 403 으로 죽는다. red 이긴 하나 이 워크플로우의 red 는 머지를
         # 막지 않으므로 다음 Dependabot PR 까지 아무도 모른다.
         "머지 권한 다운그레이드 (contents: write -> read)",
@@ -883,7 +911,7 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         # supply-chain-lock.yml 에서 런 58%가 그렇게 취소된 실측이 있다(#1199).
         "concurrency 그룹을 전역 상수로 (교차-PR 취소)",
         ".github/workflows/dependabot-auto-merge.yml",
-        "  group: dependabot-auto-merge-${{ github.event.pull_request.number || github.ref }}",
+        "  group: dependabot-auto-merge-${{ github.event.pull_request.number || inputs.pr || github.ref }}",
         "  group: dependabot-auto-merge",
         "tests/test_dependabot_auto_merge_guard.py::TestRuntimeConfiguration::test_concurrency_is_scoped_to_the_pull_request",
     ),

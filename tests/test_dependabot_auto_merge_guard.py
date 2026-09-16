@@ -320,6 +320,84 @@ class TestRuntimeConfiguration:
         )
 
 
+class TestManualDispatchPath:
+    """수동 경로(`workflow_dispatch`)는 자동 경로의 게이트를 **더한 것**이지 완화가 아니다.
+
+    2026-09-16 검토에서 "게이트를 PR 작성자 기준으로 완화하고 커밋 작성자 검사로
+    되막는" 안이 철회됐다. 이유 둘:
+
+    * `on: pull_request` 런은 PR 의 merge-ref 파일을 실행하므로, 브랜치에 푸시할 수
+      있는 주체가 그 검사를 **같은 푸시로 지울 수 있다**. 반면 현행 actor 게이트는
+      잡 자체가 뜨지 않아 self-modification 에 면역이다.
+    * 그 커밋 검사가 사람 커밋을 막으므로, 완화의 유일한 편익(사람이 락을 고친 뒤
+      자동 머지가 도는 것)을 그대로 상쇄해 순효과가 0 이었다.
+
+    그래서 아래 가드는 **완화 회귀**를 잡는 데 초점을 둔다.
+    """
+
+    def test_automatic_path_still_keys_on_the_pusher(self, job: dict) -> None:
+        """`github.actor` 가 사라지면 완화 회귀다.
+
+        `"dependabot[bot]" in if` 만 보면 `github.event.pull_request.user.login ==
+        'dependabot[bot]'` 로 바꿔도 통과한다 — 문자열이 그대로 남기 때문이다.
+        판별하려면 **어느 필드를 보는지**를 단언해야 한다.
+        """
+        gate = str(job.get("if", ""))
+        assert "github.actor" in gate, (
+            f"잡 게이트가 `github.actor` 를 보지 않는다: {gate!r}. 푸시 주체 기준 게이트는 "
+            "워크플로우 수정으로 우회할 수 없는 유일한 통제다 — 작성자 기준으로 바꾸면 "
+            "그 성질을 잃는다."
+        )
+        assert "pull_request.user" not in gate, (
+            f"잡 게이트가 PR 작성자 기준으로 완화됐다: {gate!r}. 2026-09-16 검토에서 철회된 변경이다."
+        )
+
+    def test_dispatch_target_is_verified_as_dependabot_pr(self, job: dict) -> None:
+        """수동 경로에는 metadata 가 없다 — 대상 확인이 없으면 아무 PR 이나 머지된다."""
+        steps = [s for s in job["steps"] if "workflow_dispatch" in str(s.get("if", ""))]
+        checks = [
+            s
+            for s in steps
+            # 조회를 **실제로 하는지** 본다. `author` 문자열 존재만 보면 조회 라인을
+            # 지워도 `case "$author"` 같은 잔해에 매칭돼 통과한다 — 2026-09-16
+            # 뮤테이션 D2 로 실측된 vacuous 케이스다.
+            if isinstance(s.get("run"), str) and "gh pr view" in s["run"] and "author" in s["run"]
+        ]
+        assert checks, (
+            "`workflow_dispatch` 경로에 PR 작성자를 **조회**하는 스텝이 없다. 번호만 "
+            "넣으면 아무 PR 이나 이 경로로 머지할 수 있다."
+        )
+        run = ws.strip_shell_comments(checks[0]["run"])
+        assert "exit 1" in run, (
+            "작성자 확인 스텝이 중단 경로를 갖지 않는다. 조회만 하고 통과시키면 확인하지 않은 것과 같다."
+        )
+        for spelling in ("app/dependabot", "dependabot[bot]"):
+            assert spelling in run, (
+                f"작성자 확인이 {spelling!r} 표기를 받지 않는다. `gh` 는 봇을 "
+                "`app/dependabot` 으로, 이벤트 페이로드는 `dependabot[bot]` 으로 준다 "
+                "(2026-09-16 실측). 한쪽만 받으면 게이트가 조용히 항상-false 가 된다."
+            )
+
+    def test_metadata_step_is_scoped_to_the_automatic_path(self, job: dict) -> None:
+        """`fetch-metadata` 는 dependabot PR 컨텍스트를 전제한다 — dispatch 에서 돌리지 않는다."""
+        meta = [s for s in job["steps"] if "fetch-metadata" in str(s.get("uses", ""))]
+        assert len(meta) == 1, f"fetch-metadata 스텝이 정확히 1개여야 한다(현재 {len(meta)}개)"
+        assert "github.event_name == 'pull_request'" in str(meta[0].get("if", "")), (
+            "fetch-metadata 가 자동 경로로 한정돼 있지 않다. dispatch 런에서 실패하면 수동 경로 전체가 죽는다."
+        )
+
+    def test_concurrency_group_covers_the_dispatch_path(self, parsed: dict) -> None:
+        """dispatch 런에는 `pull_request.number` 가 없어 `github.ref` 로 폴백한다.
+
+        그러면 서로 다른 PR 의 수동 런이 같은 그룹에 묶이고, `cancel-in-progress` 가
+        한쪽을 죽인다.
+        """
+        group = str(parsed["concurrency"]["group"])
+        assert "inputs.pr" in group, (
+            f"concurrency.group={group!r} 이 dispatch 입력을 반영하지 않는다. 서로 다른 PR 의 수동 런이 교차 취소된다."
+        )
+
+
 class TestStillScopedToDependabotPatches:
     def test_job_is_gated_on_dependabot_actor(self, job: dict) -> None:
         assert "dependabot[bot]" in str(job.get("if", "")), (
@@ -332,7 +410,14 @@ class TestStillScopedToDependabotPatches:
         ]
         assert merge_steps, "`gh pr merge` 스텝을 찾지 못했다"
         for step in merge_steps:
-            assert "version-update:semver-patch" in str(step.get("if", "")), (
+            gate = str(step.get("if", ""))
+            assert "version-update:semver-patch" in gate, (
                 f"머지 스텝({step.get('name')!r})에 patch 게이트가 없다. minor/major 까지 "
                 "자동 머지되면 사람 검토 없이 동작 변경이 들어온다."
+            )
+            # patch 게이트가 **자동 경로에 묶여** 있어야 한다. 떼어내면 수동 경로용
+            # `||` 분기가 patch 조건을 통째로 우회시킨다.
+            assert "github.event_name == 'pull_request'" in gate, (
+                f"patch 게이트가 자동 경로(`pull_request`)에 묶여 있지 않다: {gate!r}. "
+                "수동 경로 분기와 OR 로만 이어지면 자동 경로에서도 patch 제한이 풀린다."
             )

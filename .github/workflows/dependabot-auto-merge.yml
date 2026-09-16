@@ -24,6 +24,25 @@ name: Dependabot Auto-Merge
 
 on:
   pull_request:
+  # 수동 경로. **자동 경로의 게이트를 완화하는 대신 더한 것**이다.
+  #
+  # 왜 필요한가: `github.actor` 는 그 런을 **누가 밀었는지**다. 사람이 dependabot
+  # 브랜치에 커밋하면(락 재생성 등) actor 가 사람이 되어 아래 게이트에서 잡이 skip
+  # 된다 — 실측 런 34938642606 · 34465007806 · 34442783407 전부 `skipped`,
+  # `actor=Twodragon0`. 즉 락을 고치는 순간 그 PR 의 자동 머지는 영영 돌지 않는다.
+  #
+  # 게이트를 PR 작성자 기준으로 **완화**하는 안도 검토했으나 철회했다. 현행 actor
+  # 게이트는 잡 자체가 뜨지 않으므로 **워크플로우 수정으로 우회할 수 없는** 유일한
+  # 통제인데(`on: pull_request` 런은 PR 의 merge-ref 파일을 실행한다 —
+  # docs/devsecops/requirements-lock-autosync-design.md §9.4 와 같은 전제), 완화 뒤
+  # 커밋 작성자 검사로 되막으려던 안은 그 검사 자체가 같은 푸시로 지워질 수 있어
+  # 통제가 되지 못했다. 게다가 그 검사가 사람 커밋을 막으므로 순효과가 0 이었다.
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "머지할 dependabot PR 번호 (사람이 락을 고친 뒤 쓰는 경로)"
+        required: true
+        type: string
 
 # 이 잡은 최대 25분을 폴링으로 보낸다. `synchronize`(dependabot rebase, 락 커밋백)
 # 마다 새 런이 뜨는데 이전 런을 두면 둘이 동시에 `gh pr merge` 를 호출해 한쪽이
@@ -33,8 +52,13 @@ on:
 # 그룹에 PR 번호를 넣는 이유: 전역 상수 그룹 + `cancel-in-progress` 는 서로 다른
 # PR 의 런을 교차 취소한다. `supply-chain-lock.yml` 에서 런 58%가 그렇게 취소된
 # 실측이 있다(#1199). `tests/test_workflow_concurrency_scope_guard.py` 가 강제한다.
+#
+# `inputs.pr` 이 체인에 있어야 하는 이유: `workflow_dispatch` 런에는
+# `github.event.pull_request` 가 없어 `github.ref` 로 폴백하는데, dispatch 의 ref 는
+# 보통 기본 브랜치라 **서로 다른 PR 의 수동 런이 같은 그룹에 묶인다**.
+# `cancel-in-progress: true` 와 합쳐지면 한쪽이 다른 쪽을 죽인다.
 concurrency:
-  group: dependabot-auto-merge-${{ github.event.pull_request.number || github.ref }}
+  group: dependabot-auto-merge-${{ github.event.pull_request.number || inputs.pr || github.ref }}
   cancel-in-progress: true
 
 # `contents: write` 는 머지 API 호출에, `pull-requests: write` 는 PR 조회·머지에
@@ -48,22 +72,58 @@ permissions:
 jobs:
   auto-merge:
     name: auto-merge
-    if: github.actor == 'dependabot[bot]'
+    # 자동 경로는 **dependabot 이 민 것**만. 이 조건을 PR 작성자 기준으로 바꾸지 말 것
+    # (위 `workflow_dispatch` 주석 참조). 수동 경로는 별도 조건으로 더한다.
+    if: github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     # 폴링 상한(DEADLINE_SECONDS)보다 커야 한다. 가드가 그 관계를 강제한다.
     # 현재 PR 전체 체크는 ~13분 (2026-09-15 #1324 실측, quality 가 최장).
     timeout-minutes: 30
     steps:
+      # 이 액션은 dependabot 이 트리거한 PR 컨텍스트를 전제한다. `workflow_dispatch`
+      # 에서 동작하는지 확인된 바 없으므로 자동 경로에서만 돌린다.
       - name: Fetch Dependabot metadata
         id: metadata
+        if: github.event_name == 'pull_request'
         uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98  # v3.1.0
         with:
           github-token: ${{ github.token }}
 
-      - name: Wait for checks, then merge (patch only)
-        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+      # 수동 경로에는 metadata 가 없으므로 대상이 정말 dependabot PR 인지 여기서 본다.
+      # 이 검사가 없으면 아무 PR 이나 번호만 넣어 이 경로로 머지할 수 있다.
+      - name: Verify dispatch target is a Dependabot PR
+        if: github.event_name == 'workflow_dispatch'
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: https://github.com/${{ github.repository }}/pull/${{ inputs.pr }}
+        run: |
+          set -euo pipefail
+          author="$(gh pr view "$PR_URL" --json author --jq '.author.login')"
+          # 표기가 두 가지다. `gh` 는 봇을 `app/dependabot` 으로 주고, 이벤트
+          # 페이로드는 `dependabot[bot]` 이다(2026-09-16 실측). 한쪽만 받으면 게이트가
+          # 조용히 항상-false 가 되는데, 그 방향은 red 를 내지 않아 드러나지 않는다.
+          case "$author" in
+            'app/dependabot' | 'dependabot[bot]') ;;
+            *)
+              echo "::error::dependabot PR 이 아니다 (author=${author}). 이 경로는 dependabot PR 전용이다."
+              exit 1
+              ;;
+          esac
+          echo "대상 확인: ${PR_URL} (author=${author})"
+
+      # 자동 경로는 patch 로 한정한다 — 사람 검토 없이 동작 변경이 들어오면 안 된다.
+      # 수동 경로에는 그 제한을 두지 않는다. 실행한 사람이 대상을 직접 골랐고, 그는
+      # 어차피 `gh pr merge` 를 직접 칠 수 있으므로 새로 얻는 권한이 없다. 이 경로가
+      # 대신 해 주는 일은 "모든 체크가 끝날 때까지 기다렸다가 머지" 뿐이다.
+      # (범위 제약 bump 는 semver-major 로 분류돼 자동 경로를 아예 타지 못한다 —
+      #  실측 #1321 · #1329. 수동 경로까지 patch 로 묶으면 정작 막히는 PR 을 못 푼다.)
+      - name: Wait for checks, then merge (patch only)
+        if: >-
+          (github.event_name == 'pull_request'
+            && steps.metadata.outputs.update-type == 'version-update:semver-patch')
+          || github.event_name == 'workflow_dispatch'
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url || format('https://github.com/{0}/pull/{1}', github.repository, inputs.pr) }}
           GH_TOKEN: ${{ github.token }}
           # 이 잡 자신의 체크. 제외하지 않으면 자기가 끝나기를 기다리며 교착한다.
           # 이름만으로 제외하면 다른 워크플로우에 같은 이름의 잡이 생겼을 때 진짜
