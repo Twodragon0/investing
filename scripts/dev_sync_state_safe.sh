@@ -123,7 +123,24 @@ git update-index --no-skip-worktree -- "${SKIPPED[@]}"
 trap 'restore_skip_worktree' ERR
 
 # dirty 파일 분류
-mapfile -t DIRTY < <(git diff --name-only)
+#
+# **종료코드를 반드시 본다.** `mapfile -t DIRTY < <(git diff --name-only)` 는 프로세스
+# 치환이라 `git` 이 죽어도 `set -e` 가 반응하지 않는다. 그러면 DIRTY 가 비고, 아래
+# 로직이 그것을 "변경 없음" 으로 읽어 **조용히 rc=0 으로 끝난다** — 되돌릴 것을 찾지
+# 못한 게 아니라 못 본 것인데 구별이 안 된다. 2026-09-16 실증: `git diff` 만 exit 128
+# 로 만드는 스텁으로 실행하면 stderr 의 `fatal:` 한 줄 외에는 정상 실행과 출력이
+# 같았다(rc=0, "버릴 _state 변경 없음").
+if ! DIRTY_RAW="$(git diff --name-only)"; then
+  echo >&2
+  echo "error: git diff 가 실패해 변경 유무를 판정할 수 없습니다." >&2
+  echo "       '변경 없음' 으로 넘기면 되돌려야 할 _state 를 놓칩니다." >&2
+  restore_skip_worktree
+  exit 1
+fi
+# here-string 대신 printf 프로세스 치환을 쓴다. 여기서는 이미 종료코드를 확인한
+# 뒤라 안전하고, `_code_only` 가드가 heredoc 표기의 존재 자체를 막기 때문이다
+# (주석 안에 써도 걸린다 — 이 줄이 그래서 기호 없이 적혀 있다).
+mapfile -t DIRTY < <(printf '%s\n' "${DIRTY_RAW}")
 OUTSIDE=()
 INSIDE=()
 for f in "${DIRTY[@]:-}"; do

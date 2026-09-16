@@ -25,6 +25,7 @@
 
 from __future__ import annotations
 
+import os
 import re
 import shutil
 import subprocess
@@ -236,10 +237,63 @@ def test_dry_run_sees_changes_that_skip_worktree_would_hide(repo: Path) -> None:
 
     assert proc.returncode == 0, f"{proc.stdout}\n{proc.stderr}"
     assert "_state/a.json" in proc.stdout, (
-        f"dry-run 이 변경을 보지 못했다 — skip-worktree 가 가린 채로 판정했다.\n{proc.stdout}"
+        # stderr 를 함께 싣는 이유: 2026-09-16 CI 에서 이 단언이 한 번 터졌는데
+        # 메시지에 stdout 만 있어 `git diff` 가 죽었는지 변경을 못 본 것인지
+        # 구별할 수 없었다. 두 원인은 stdout 이 동일하고 stderr 만 다르다.
+        f"dry-run 이 변경을 보지 못했다 — skip-worktree 가 가린 채로 판정했다.\n"
+        f"--- stdout ---\n{proc.stdout}\n--- stderr ---\n{proc.stderr}"
     )
     assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == '{"n": 1}\n', "dry-run 이 트리를 변경했다"
     assert _skipped(repo), "dry-run 후 skip-worktree 가 복구되지 않았다"
+
+
+def test_aborts_when_git_diff_fails(repo: Path, tmp_path: Path) -> None:
+    """`git diff` 실패를 "변경 없음" 으로 읽으면 되돌릴 것을 놓치고 조용히 성공한다.
+
+    원래 코드는 `mapfile -t DIRTY < <(git diff --name-only)` 였다. 프로세스 치환이라
+    `git` 이 죽어도 `set -e` 가 반응하지 않고, 빈 DIRTY 가 "변경 없음" 으로 읽혔다.
+    2026-09-16 실증: `git diff` 만 exit 128 로 만드는 스텁에서 rc=0 에 출력도 정상
+    실행과 같았다(차이는 stderr 의 `fatal:` 한 줄뿐).
+
+    **실패 방향이 조용한 쪽**이라는 게 요점이다. 되돌리기를 건너뛴 채 성공으로
+    끝나므로 사용자는 `_state` 가 정리된 줄 안다.
+    """
+    real_git = shutil.which("git")
+    assert real_git, "PATH 에 git 이 없다"
+    stub_dir = tmp_path / "stubbin"
+    stub_dir.mkdir()
+    stub = stub_dir / "git"
+    stub.write_text(
+        "#!/usr/bin/env bash\n"
+        'if [ "$1" = "diff" ] && [ "$2" = "--name-only" ]; then\n'
+        '  echo "fatal: unable to read index" >&2\n'
+        "  exit 128\n"
+        "fi\n"
+        f'exec {real_git} "$@"\n',
+        encoding="utf-8",
+    )
+    stub.chmod(0o755)
+
+    (repo / "_state" / "a.json").write_text('{"n": 1}\n', encoding="utf-8")
+    bash = shutil.which("bash")
+    assert bash, "PATH 에 bash 가 없다"
+    proc = subprocess.run(
+        [bash, str(_SCRIPT), "--dry-run"],
+        cwd=repo,
+        capture_output=True,
+        text=True,
+        timeout=120,
+        env={**os.environ, "PATH": f"{stub_dir}{os.pathsep}{os.environ['PATH']}"},
+    )
+
+    assert proc.returncode != 0, (
+        f"git diff 가 죽었는데 성공으로 끝났다 (rc={proc.returncode}).\n{proc.stdout}\n{proc.stderr}"
+    )
+    assert "버릴 _state 변경 없음" not in proc.stdout, (
+        f"조회 실패를 '변경 없음' 으로 보고했다 — 두 상태가 구별되지 않는다.\n{proc.stdout}"
+    )
+    assert "git diff" in proc.stderr, f"무엇이 실패했는지 알리지 않는다: {proc.stderr}"
+    assert _skipped(repo), "중단 후 skip-worktree 가 복구되지 않았다"
 
 
 class TestBashVersionGuard:

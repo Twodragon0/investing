@@ -782,6 +782,15 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_component_counts_drift_hook_guard.py::test_hook_denies_push_on_drift",
     ),
     StaticCase(
+        # 프로세스 치환은 `set -e` 를 타지 않아, git 이 죽어도 빈 DIRTY 가 "변경 없음"
+        # 으로 읽힌다. 되돌리기를 건너뛴 채 rc=0 으로 끝나 사용자는 정리된 줄 안다.
+        "동기화 스크립트가 git diff 실패를 '변경 없음' 으로 읽음 (fail-open)",
+        "scripts/dev_sync_state_safe.sh",
+        'if ! DIRTY_RAW="$(git diff --name-only)"; then',
+        'DIRTY_RAW="$(git diff --name-only || true)"; if false; then',
+        "tests/test_dev_sync_state_safe_guard.py::test_aborts_when_git_diff_fails",
+    ),
+    StaticCase(
         "_state 커밋 가드 fail-open (조건 반전)",
         ".claude/hooks/pre-commit-state-guard.sh",
         'if [[ -n "$STAGED" ]]; then',
