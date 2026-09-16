@@ -1,0 +1,247 @@
+"""`scripts/tools/dependabot_update_type.py` 가 **머지 대상 집합을 바꾸지 않는지** 고정한다.
+
+## 지켜야 할 불변식
+
+이 모듈의 계약은 "정확히 분류한다" 가 아니다. `dependabot/fetch-metadata` 를 대체할
+때 **어떤 PR 이 patch 로 분류되는가**가 달라지면, 자동 머지 대상 집합이 조용히 바뀐다.
+그래서 검증은 손으로 고른 몇 케이스가 아니라 **실제 PR 코퍼스 전수 대조**다.
+
+코퍼스: 최근 dependabot PR 30건 중 auto-merge 런이 **아직 보존된 14건**
+(major 4 · minor 2 · patch 8, 두 코드 경로 7:7). 나머지 16건은 런이 만료돼
+`outputs.update-type` 을 읽을 수 없다 — 구현으로 기대값을 만들어 낼 수는 있지만
+**그건 골든이 아니다.** 그래서 코퍼스에 넣지 않았다.
+
+기대값은 전부 `manifest.json` 의 `observed_in_run` 이 가리키는 **실제 액션 런 로그**
+에서 왔다. 골든을 구현으로부터 만들면 구현의 버그가 그대로 골든이 된다.
+
+## 아티팩트를 일부러 고정한다
+
+boto3 계열 4건(#1249 #1274 #1321 #1329)은 패치 크기인데 `semver-major` 로 분류된다.
+`from` 캡처가 이전 제약의 상한 `<2,` 에서 `2,>=` 를 삼키기 때문이다.
+
+코퍼스에 **대조군**이 있다 — #1277 cachetools 는 같은 범위 제약(`>=7.1.7` →
+`>=7.1.8`)인데 patch 로 분류된다. 이전 제약에 상한이 없어 삼킬 것이 없기 때문이다.
+즉 아티팩트의 필요조건은 "범위 제약" 이 아니라 **"이전 제약에 `<X,` 가 있을 것"** 이다.
+그 구분은 `manifest.json` 의 `artifact` 필드가 명시한다 — 산문(`note`)을 substring
+검색하면 대조군까지 잡힌다(2026-09-16 실제로 그렇게 틀렸다).
+
+버그로 보이지만 그대로 재현하는 것이 이 모듈의 목적이므로 기대값을 못 박는다. 나중에
+정규식을 "고치면" 이 테스트가 red 가 되어, 그 변경이 **머지 대상 집합을 넓히는 결정**
+임을 알린다. 그때는 이 테스트를 갱신하는 것이 정상 경로다.
+"""
+
+from __future__ import annotations
+
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+
+from tools.dependabot_update_type import (  # noqa: E402
+    calculate_update_type,
+    parse_update_type,
+)
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_FIXTURES = _REPO_ROOT / "tests" / "fixtures" / "dependabot_commits"
+_SCRIPT = _REPO_ROOT / "scripts" / "tools" / "dependabot_update_type.py"
+
+
+def _manifest() -> dict:
+    return json.loads((_FIXTURES / "manifest.json").read_text(encoding="utf-8"))
+
+
+def _cases() -> list[dict]:
+    cases = _manifest()["cases"]
+    assert cases, "코퍼스 manifest 가 비었다 — 이 테스트가 아무것도 지키지 않는다"
+    return cases
+
+
+def _message(case: dict) -> str:
+    return (_FIXTURES / f"pr-{case['pr']}.txt").read_text(encoding="utf-8")
+
+
+@pytest.mark.parametrize("case", _cases(), ids=lambda c: f"pr{c['pr']}")
+def test_matches_the_update_type_the_action_produced(case: dict) -> None:
+    """각 fixture 에서 실제 액션 런이 낸 값과 동일해야 한다."""
+    message = (_FIXTURES / f"pr-{case['pr']}.txt").read_text(encoding="utf-8")
+    got = parse_update_type(message, case["branch"])
+    assert got == case["expected"], (
+        f"PR #{case['pr']}: 기대 {case['expected']!r} (런 {case['observed_in_run']} 관측), 실제 {got!r}.\n"
+        f"{case['note']}"
+    )
+
+
+def test_range_constraint_artifact_is_reproduced() -> None:
+    """아티팩트를 **의도적으로** 고정한다. red 가 되면 머지 집합을 넓히는 변경이다.
+
+    케이스 선별은 `artifact` **필드**로 한다. 산문(`note`)을 substring 검색하면
+    대조군(#1277, "아티팩트를 타지 않는다")까지 잡혀 patch 케이스에 major 를 요구하게
+    된다 — 2026-09-16 에 실제로 그렇게 틀렸다.
+    """
+    artifact_cases = [c for c in _cases() if c.get("artifact")]
+    assert artifact_cases, "아티팩트 케이스가 코퍼스에서 사라졌다 — 회귀 감시 대상이 없어졌다"
+    for case in artifact_cases:
+        message = (_FIXTURES / f"pr-{case['pr']}.txt").read_text(encoding="utf-8")
+        assert parse_update_type(message, case["branch"]) == "version-update:semver-major", (
+            f"PR #{case['pr']}: {case['note']}"
+        )
+
+
+def test_artifact_needs_an_upper_bound_in_the_old_constraint() -> None:
+    """아티팩트의 필요조건을 대조군으로 못 박는다.
+
+    "범위 제약이면 major" 가 아니라 **"이전 제약에 `<X,` 가 있어야 major"** 다.
+    대조군이 없으면 다음 사람이 전자로 읽고 `>=` 형 전부를 major 로 취급한다.
+    """
+    controls = [c for c in _cases() if not c.get("artifact") and "requirement from >=" in _message(c)]
+    assert controls, (
+        "상한 없는 범위 제약(`from >=…`) 대조군이 코퍼스에서 사라졌다 — 아티팩트의 필요조건을 보여줄 케이스가 없다."
+    )
+    for case in controls:
+        assert parse_update_type(_message(case), case["branch"]) == case["expected"]
+
+
+def test_corpus_distribution_matches_the_cases() -> None:
+    """manifest 에 적힌 분포가 실제 케이스와 어긋나면 코퍼스 서술을 믿을 수 없다.
+
+    초판은 이 숫자를 손으로 적어 major 를 3 으로 틀렸다(실제 4).
+    """
+    from collections import Counter
+
+    recorded = _manifest()["corpus"]["distribution"]
+    actual = dict(Counter(c["expected"].split(":")[-1].replace("semver-", "") for c in _cases()))
+    assert recorded == actual, f"manifest 분포 {recorded} ≠ 실제 {actual}"
+    assert _manifest()["corpus"]["count"] == len(_cases())
+
+
+def test_fixtures_cover_both_reachable_code_paths() -> None:
+    """경로 커버리지를 **단언**한다 — 한쪽만 덮으면 나머지 분기가 무방비다.
+
+    upstream 로직은 `yaml['update-type'] || regex(...)` 다. 2026-09-16 리뷰에서
+    초판 fixture 3건이 전부 오른쪽(regex-fallback) 한 경로였음이 드러났다.
+    """
+    paths = {c["path"] for c in _cases()}
+    missing = {"yaml-explicit", "regex-fallback"} - paths
+    assert not missing, f"fixture 가 덮지 않는 경로: {sorted(missing)}"
+
+
+def test_bumps_regex_path_is_only_reachable_synthetically() -> None:
+    """`^Bumps … $` 로 from/to 를 얻는 분기는 **실제 PR 로 도달하지 않는다.**
+
+    2026-09-16 전수 확인: 이 저장소의 `Bumps` 형 PR 7건(#1190 #1191 #1248 #1250
+    #1251 #1275 #1276)이 **모두** YAML `update-type` 을 갖는다. 따라서 그 정규식의
+    추출 결과는 쓰이지 않는다.
+
+    그래도 분기를 덮는 이유: upstream 은 이 정규식을 `re.M` 으로 **메시지 전체**에
+    건다(`Bumps` 줄은 실제로 3번째 줄이다). "첫 줄만 본다" 로 잘못 포팅하면 조용히
+    빈 값이 되는데, 실제 PR 이 이 경로를 타지 않으므로 **영원히 드러나지 않는다.**
+
+    이 입력은 합성이다 — 실제 dependabot 출력이 아니라는 점을 분명히 해 둔다.
+    """
+    synthetic = (
+        "chore(deps): bump foo from 1.0.0 to 2.0.0\n"
+        "\n"
+        "Bumps [foo](https://example.invalid/foo) from 1.0.0 to 2.0.0.\n"
+        "- [Commits](https://example.invalid/foo/compare/1.0.0...2.0.0)\n"
+        "\n"
+        "---\n"
+        "updated-dependencies:\n"
+        "- dependency-name: foo\n"
+        "  dependency-type: direct:production\n"
+        "...\n"
+        "\n"
+        "Signed-off-by: dependabot[bot] <support@github.com>\n"
+    )
+    assert parse_update_type(synthetic, "dependabot/pip/foo-2.0.0") == "version-update:semver-major", (
+        "`Bumps` 줄을 메시지 전체에서 찾지 못했다 — 첫 줄만 보도록 포팅됐을 수 있다."
+    )
+
+
+class TestCalculateUpdateType:
+    """upstream `update_metadata.ts:159-176` 축자 이식의 경계."""
+
+    @pytest.mark.parametrize(
+        ("last", "nxt", "expected"),
+        [
+            ("1.2.3", "1.2.4", "version-update:semver-patch"),
+            ("1.2.3", "1.3.0", "version-update:semver-minor"),
+            ("1.2.3", "2.0.0", "version-update:semver-major"),
+            ("v1.2.3", "v1.2.4", "version-update:semver-patch"),
+            # 한쪽에 마이너가 없으면 minor 로 본다(upstream 의 length < 2 분기).
+            ("1", "1", ""),
+            ("1.2", "1.2", ""),
+            ("2", "3", "version-update:semver-major"),
+            ("1.2.3", "1.2.3", ""),
+            ("", "1.2.3", ""),
+            ("1.2.3", "", ""),
+            # 아티팩트의 핵심 — 숫자가 아닌 찌꺼기가 섞이면 문자열 비교가 갈린다.
+            ("2,>=1.43.92", "1.43.93,<2", "version-update:semver-major"),
+        ],
+    )
+    def test_boundaries(self, last: str, nxt: str, expected: str) -> None:
+        assert calculate_update_type(last, nxt) == expected
+
+    def test_does_not_use_a_semver_parser(self) -> None:
+        """semver 파서를 쓰면 아티팩트가 사라져 액션과 어긋난다.
+
+        `"2,>=1.43.92"` 는 어떤 semver 파서로도 파싱되지 않는다. 그런데도 upstream 은
+        답을 내므로(문자열 split), 이 입력이 예외 없이 major 를 내는지로 구현 방식을
+        판별한다.
+        """
+        assert calculate_update_type("2,>=1.43.92", "1.43.93,<2") == "version-update:semver-major"
+
+
+class TestRejectsWhatTheActionRejects:
+    def test_non_dependabot_branch_yields_nothing(self) -> None:
+        """upstream `update_metadata.ts:80` 이 브랜치 접두사를 요구한다."""
+        message = (_FIXTURES / "pr-1328.txt").read_text(encoding="utf-8")
+        assert parse_update_type(message, "feature/my-branch") == ""
+
+    def test_missing_yaml_fragment_yields_nothing(self) -> None:
+        assert parse_update_type("chore: 평범한 커밋\n\n본문\n", "dependabot/pip/x") == ""
+
+    def test_malformed_yaml_yields_nothing_instead_of_raising(self) -> None:
+        broken = "chore(deps): update x requirement from 1.0.0 to 1.0.1\n\n---\n: : :\n...\n"
+        assert parse_update_type(broken, "dependabot/pip/x") == ""
+
+
+class TestCli:
+    def test_prints_update_type_and_exits_zero(self) -> None:
+        case = _cases()[0]
+        proc = subprocess.run(
+            [sys.executable, str(_SCRIPT), str(_FIXTURES / f"pr-{case['pr']}.txt"), "--branch", case["branch"]],
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        assert proc.returncode == 0, proc.stderr
+        assert proc.stdout.strip() == case["expected"]
+
+    def test_exits_nonzero_when_undecidable(self) -> None:
+        """판정 실패를 0 으로 끝내면 호출부가 빈 문자열을 '판정됨' 으로 읽는다."""
+        proc = subprocess.run(
+            [sys.executable, str(_SCRIPT), "--branch", "feature/not-dependabot"],
+            input="chore: 아무 커밋\n",
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        assert proc.returncode == 1
+        assert proc.stdout.strip() == ""
+        assert proc.stderr.strip()
+
+
+def test_fixture_manifest_records_upstream_pin() -> None:
+    """upstream 을 올릴 때 기대값을 재확인하도록 핀을 기록해 둔다."""
+    upstream = _manifest()["upstream"]
+    assert upstream["sha"], "upstream SHA 가 비었다"
+    workflow = (_REPO_ROOT / ".github" / "workflows" / "dependabot-auto-merge.yml").read_text(encoding="utf-8")
+    assert upstream["sha"] in workflow, (
+        f"manifest 의 upstream SHA {upstream['sha']} 가 워크플로우의 액션 핀과 다르다. "
+        "액션을 올렸다면 fixture 기대값을 실제 런으로 다시 확인할 것."
+    )

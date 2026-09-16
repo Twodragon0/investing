@@ -1,0 +1,14 @@
+chore(deps): Update cachetools requirement from >=7.1.7 to >=7.1.8
+
+Updates the requirements on [cachetools](https://github.com/tkem/cachetools) to permit the latest version.
+- [Changelog](https://github.com/tkem/cachetools/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/tkem/cachetools/compare/v7.1.7...v7.1.8)
+
+---
+updated-dependencies:
+- dependency-name: cachetools
+  dependency-version: 7.1.8
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
