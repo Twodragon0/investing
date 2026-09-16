@@ -113,10 +113,16 @@ def parse_update_type(commit_message: str, branch_name: str) -> str:
     if not isinstance(data, dict) or not data.get("updated-dependencies"):
         return ""
 
-    bump = _BUMP_RE.search(commit_message)
-    update = _UPDATE_RE.search(commit_message.split("\n")[0])
-    prev = (bump or update).group("from") if (bump or update) else ""
-    nxt = (bump or update).group("to") if (bump or update) else ""
+    # upstream `update_metadata.ts:71-72`: `Bumps …` 는 메시지 **전체**에서(그 줄은
+    # 보통 3번째다), `Update … requirement` 는 **첫 줄**에서만 찾는다. 순서도 같다 —
+    # bump 가 우선이다.
+    #
+    # 한 변수에 담아 두는 이유: `(bump or update).group(...) if (bump or update)` 로
+    # 쓰면 두 번 평가라 타입 narrowing 이 되지 않는다(basedpyright
+    # `reportOptionalMemberAccess`, 2026-09-16 CI 에서 실제로 걸렸다).
+    version_match = _BUMP_RE.search(commit_message) or _UPDATE_RE.search(commit_message.split("\n")[0])
+    prev = version_match.group("from") if version_match else ""
+    nxt = version_match.group("to") if version_match else ""
 
     levels: set[str] = set()
     for index, dependency in enumerate(data["updated-dependencies"]):
