@@ -25,6 +25,22 @@ name: Dependabot Auto-Merge
 on:
   pull_request:
 
+# 이 잡은 최대 25분을 폴링으로 보낸다. `synchronize`(dependabot rebase, 락 커밋백)
+# 마다 새 런이 뜨는데 이전 런을 두면 둘이 동시에 `gh pr merge` 를 호출해 한쪽이
+# "이미 머지됨" 으로 red 가 된다. 옛 런은 어차피 낡은 head 를 보고 있어
+# `--match-head-commit` 에 걸리므로 취소가 맞다.
+#
+# 그룹에 PR 번호를 넣는 이유: 전역 상수 그룹 + `cancel-in-progress` 는 서로 다른
+# PR 의 런을 교차 취소한다. `supply-chain-lock.yml` 에서 런 58%가 그렇게 취소된
+# 실측이 있다(#1199). `tests/test_workflow_concurrency_scope_guard.py` 가 강제한다.
+concurrency:
+  group: dependabot-auto-merge-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+# `contents: write` 는 머지 API 호출에, `pull-requests: write` 는 PR 조회·머지에
+# 필요하다. 저장소 기본값은 read 라 여기서 명시적으로 올린다. 가드가 이 값을
+# 지킨다 — 다운그레이드하면 머지가 403 으로 죽는데, 그건 red 라 알아채기까지
+# 다음 Dependabot PR 을 기다려야 한다.
 permissions:
   contents: write
   pull-requests: write
