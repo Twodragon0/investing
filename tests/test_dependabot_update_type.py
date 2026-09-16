@@ -1,22 +1,33 @@
-"""`scripts/tools/dependabot_update_type.py` 가 upstream 액션과 **같은 답**을 내는지 고정한다.
+"""`scripts/tools/dependabot_update_type.py` 가 **머지 대상 집합을 바꾸지 않는지** 고정한다.
 
-## 왜 있나
+## 지켜야 할 불변식
 
-이 모듈의 계약은 "정확히 분류한다" 가 아니라 **"`dependabot/fetch-metadata` 와 같게
-분류한다"** 이다. 스위퍼가 액션보다 넓게(또는 좁게) 머지하면 자동 머지 대상 집합이
-조용히 바뀌기 때문이다.
+이 모듈의 계약은 "정확히 분류한다" 가 아니다. `dependabot/fetch-metadata` 를 대체할
+때 **어떤 PR 이 patch 로 분류되는가**가 달라지면, 자동 머지 대상 집합이 조용히 바뀐다.
+그래서 검증은 손으로 고른 몇 케이스가 아니라 **실제 PR 코퍼스 전수 대조**다.
 
-그래서 fixture 의 기대값은 이 모듈의 출력이 아니라 **실제 액션 런이 낸 값**이다
-(`manifest.json` 의 `observed_in_run`). 골든을 구현으로부터 만들면 구현의 버그가
-그대로 골든이 된다.
+코퍼스: 최근 dependabot PR 30건 중 auto-merge 런이 **아직 보존된 14건**
+(major 4 · minor 2 · patch 8, 두 코드 경로 7:7). 나머지 16건은 런이 만료돼
+`outputs.update-type` 을 읽을 수 없다 — 구현으로 기대값을 만들어 낼 수는 있지만
+**그건 골든이 아니다.** 그래서 코퍼스에 넣지 않았다.
+
+기대값은 전부 `manifest.json` 의 `observed_in_run` 이 가리키는 **실제 액션 런 로그**
+에서 왔다. 골든을 구현으로부터 만들면 구현의 버그가 그대로 골든이 된다.
 
 ## 아티팩트를 일부러 고정한다
 
-#1321 · #1329(boto3 범위 제약 bump)는 패치 크기인데 `semver-major` 로 분류된다.
-`from` 캡처가 이전 제약의 상한에서 `2,>=` 를 삼키기 때문이다. **버그로 보이지만 그대로
-재현하는 것이 이 모듈의 목적**이므로, 그 기대값을 테스트로 못 박는다. 나중에 누가
-"버그니까 고치자" 며 정규식을 손보면 이 테스트가 red 가 되어, 그 변경이 **액션과의
-일치를 깨는 결정**임을 알린다.
+boto3 계열 4건(#1249 #1274 #1321 #1329)은 패치 크기인데 `semver-major` 로 분류된다.
+`from` 캡처가 이전 제약의 상한 `<2,` 에서 `2,>=` 를 삼키기 때문이다.
+
+코퍼스에 **대조군**이 있다 — #1277 cachetools 는 같은 범위 제약(`>=7.1.7` →
+`>=7.1.8`)인데 patch 로 분류된다. 이전 제약에 상한이 없어 삼킬 것이 없기 때문이다.
+즉 아티팩트의 필요조건은 "범위 제약" 이 아니라 **"이전 제약에 `<X,` 가 있을 것"** 이다.
+그 구분은 `manifest.json` 의 `artifact` 필드가 명시한다 — 산문(`note`)을 substring
+검색하면 대조군까지 잡힌다(2026-09-16 실제로 그렇게 틀렸다).
+
+버그로 보이지만 그대로 재현하는 것이 이 모듈의 목적이므로 기대값을 못 박는다. 나중에
+정규식을 "고치면" 이 테스트가 red 가 되어, 그 변경이 **머지 대상 집합을 넓히는 결정**
+임을 알린다. 그때는 이 테스트를 갱신하는 것이 정상 경로다.
 """
 
 from __future__ import annotations
@@ -46,8 +57,12 @@ def _manifest() -> dict:
 
 def _cases() -> list[dict]:
     cases = _manifest()["cases"]
-    assert cases, "fixture manifest 가 비었다 — 이 테스트가 아무것도 지키지 않는다"
+    assert cases, "코퍼스 manifest 가 비었다 — 이 테스트가 아무것도 지키지 않는다"
     return cases
+
+
+def _message(case: dict) -> str:
+    return (_FIXTURES / f"pr-{case['pr']}.txt").read_text(encoding="utf-8")
 
 
 @pytest.mark.parametrize("case", _cases(), ids=lambda c: f"pr{c['pr']}")
@@ -62,16 +77,46 @@ def test_matches_the_update_type_the_action_produced(case: dict) -> None:
 
 
 def test_range_constraint_artifact_is_reproduced() -> None:
-    """범위 제약 bump 가 major 로 떨어지는 아티팩트를 **의도적으로** 고정한다.
+    """아티팩트를 **의도적으로** 고정한다. red 가 되면 머지 집합을 넓히는 변경이다.
 
-    이 단언이 red 가 되면 정규식을 "고친" 것이다. 그건 버그 수정이 아니라
-    **액션과의 일치를 깨는 결정**이므로, 호출부 정책과 함께 논의해야 한다.
+    케이스 선별은 `artifact` **필드**로 한다. 산문(`note`)을 substring 검색하면
+    대조군(#1277, "아티팩트를 타지 않는다")까지 잡혀 patch 케이스에 major 를 요구하게
+    된다 — 2026-09-16 에 실제로 그렇게 틀렸다.
     """
-    artifact_cases = [c for c in _cases() if "아티팩트" in c["note"]]
-    assert artifact_cases, "아티팩트 케이스가 fixture 에서 사라졌다 — 회귀 감시 대상이 없어졌다"
+    artifact_cases = [c for c in _cases() if c.get("artifact")]
+    assert artifact_cases, "아티팩트 케이스가 코퍼스에서 사라졌다 — 회귀 감시 대상이 없어졌다"
     for case in artifact_cases:
         message = (_FIXTURES / f"pr-{case['pr']}.txt").read_text(encoding="utf-8")
-        assert parse_update_type(message, case["branch"]) == "version-update:semver-major"
+        assert parse_update_type(message, case["branch"]) == "version-update:semver-major", (
+            f"PR #{case['pr']}: {case['note']}"
+        )
+
+
+def test_artifact_needs_an_upper_bound_in_the_old_constraint() -> None:
+    """아티팩트의 필요조건을 대조군으로 못 박는다.
+
+    "범위 제약이면 major" 가 아니라 **"이전 제약에 `<X,` 가 있어야 major"** 다.
+    대조군이 없으면 다음 사람이 전자로 읽고 `>=` 형 전부를 major 로 취급한다.
+    """
+    controls = [c for c in _cases() if not c.get("artifact") and "requirement from >=" in _message(c)]
+    assert controls, (
+        "상한 없는 범위 제약(`from >=…`) 대조군이 코퍼스에서 사라졌다 — 아티팩트의 필요조건을 보여줄 케이스가 없다."
+    )
+    for case in controls:
+        assert parse_update_type(_message(case), case["branch"]) == case["expected"]
+
+
+def test_corpus_distribution_matches_the_cases() -> None:
+    """manifest 에 적힌 분포가 실제 케이스와 어긋나면 코퍼스 서술을 믿을 수 없다.
+
+    초판은 이 숫자를 손으로 적어 major 를 3 으로 틀렸다(실제 4).
+    """
+    from collections import Counter
+
+    recorded = _manifest()["corpus"]["distribution"]
+    actual = dict(Counter(c["expected"].split(":")[-1].replace("semver-", "") for c in _cases()))
+    assert recorded == actual, f"manifest 분포 {recorded} ≠ 실제 {actual}"
+    assert _manifest()["corpus"]["count"] == len(_cases())
 
 
 def test_fixtures_cover_both_reachable_code_paths() -> None:

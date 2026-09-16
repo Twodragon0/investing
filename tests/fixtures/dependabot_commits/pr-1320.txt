@@ -1,0 +1,15 @@
+chore(deps): update numpy requirement from ~=2.4.4 to ~=2.4.6
+
+Updates the requirements on [numpy](https://github.com/numpy/numpy) to permit the latest version.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/RELEASE_WALKTHROUGH.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v2.4.4...v2.4.6)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-version: 2.4.6
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>

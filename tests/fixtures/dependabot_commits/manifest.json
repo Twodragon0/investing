@@ -6,56 +6,161 @@
     "logic": "src/dependabot/update_metadata.ts:69-176, src/dependabot/output.ts:10-14,79-86"
   },
   "captured": "2026-09-16",
+  "corpus": {
+    "scope": "최근 dependabot PR 30건 중 auto-merge 런이 **아직 보존된** 14건",
+    "why_not_all": "Actions 런 보존 기간이 지나면 `outputs.update-type` 을 읽을 수 없다. 나머지 16건은 골든이 존재하지 않는다 — 구현으로 만들어 낼 수는 있지만 그건 골든이 아니다.",
+    "distribution": {
+      "major": 4,
+      "minor": 2,
+      "patch": 8
+    },
+    "count": 14
+  },
+  "path_coverage": {
+    "yaml-explicit": "YAML 의 update-type 을 그대로 쓴다 (upstream `dep['update-type'] ||` 좌항)",
+    "regex-fallback": "YAML 에 update-type 이 없어 커밋 첫 줄 정규식 + calculate_update_type 으로 간다",
+    "bumps-regex": "`^Bumps … $` 로 from/to 를 얻는 경로. **실제 PR 로는 도달 불가** — 코퍼스의 Bumps 형은 전부 YAML update-type 을 갖는다. 합성 단위 테스트로만 덮는다"
+  },
   "cases": [
-    {
-      "pr": 1328,
-      "branch": "dependabot/pip/matplotlib-approx-eq-3.11.2",
-      "expected": "version-update:semver-patch",
-      "observed_in_run": "35051659591",
-      "note": "직접 핀 bump. from/to 가 깨끗하게 잡힌다.",
-      "path": "regex-fallback",
-      "provenance": "action-run"
-    },
-    {
-      "pr": 1321,
-      "branch": "dependabot/pip/boto3-gte-1.43.92-and-lt-2",
-      "expected": "version-update:semver-major",
-      "observed_in_run": "34795061519 계열(2026-09-14 auto-merge 런)",
-      "note": "범위 제약. from 캡처가 이전 상한 '<2,' 에서 '2,>=' 를 삼켜 major 가 된다 — 파싱 아티팩트.",
-      "path": "regex-fallback",
-      "provenance": "action-run"
-    },
     {
       "pr": 1329,
       "branch": "dependabot/pip/boto3-gte-1.43.93-and-lt-2",
       "expected": "version-update:semver-major",
       "observed_in_run": "35051687306",
-      "note": "#1321 과 같은 아티팩트.",
+      "provenance": "action-run",
       "path": "regex-fallback",
-      "provenance": "action-run"
+      "note": "범위 제약 bump. `from` 캡처가 이전 제약의 상한 `<2,` 에서 `2,>=` 를 삼켜 패치 크기인데 major 로 떨어진다 — 파싱 아티팩트.",
+      "artifact": true
+    },
+    {
+      "pr": 1328,
+      "branch": "dependabot/pip/matplotlib-approx-eq-3.11.2",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "35051659591",
+      "provenance": "action-run",
+      "path": "regex-fallback",
+      "note": "",
+      "artifact": false
+    },
+    {
+      "pr": 1321,
+      "branch": "dependabot/pip/boto3-gte-1.43.92-and-lt-2",
+      "expected": "version-update:semver-major",
+      "observed_in_run": "34795061291",
+      "provenance": "action-run",
+      "path": "regex-fallback",
+      "note": "범위 제약 bump. `from` 캡처가 이전 제약의 상한 `<2,` 에서 `2,>=` 를 삼켜 패치 크기인데 major 로 떨어진다 — 파싱 아티팩트.",
+      "artifact": true
+    },
+    {
+      "pr": 1320,
+      "branch": "dependabot/pip/numpy-approx-eq-2.4.6",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "34795033396",
+      "provenance": "action-run",
+      "path": "regex-fallback",
+      "note": "",
+      "artifact": false
     },
     {
       "pr": 1319,
       "branch": "dependabot/pip/ruff-0.16.7",
       "expected": "version-update:semver-patch",
       "observed_in_run": "34795019097",
-      "path": "yaml-explicit",
       "provenance": "action-run",
-      "note": "`Bumps … from A to B.` 형 + YAML 에 update-type 이 **있다** → 정규식 결과는 쓰이지 않는다."
+      "path": "yaml-explicit",
+      "note": "",
+      "artifact": false
     },
     {
       "pr": 1278,
       "branch": "dependabot/github_actions/actions/deploy-pages-5.0.1",
       "expected": "version-update:semver-patch",
-      "observed_in_run": "",
+      "observed_in_run": "34072406720",
+      "provenance": "action-run",
       "path": "yaml-explicit",
-      "provenance": "commit-yaml-explicit",
-      "note": "github-actions 생태계. auto-merge 런이 보존 기간을 넘겨 사라져 골든을 런에서 못 얻었다 — 커밋 YAML 의 명시적 `update-type` 필드에서 직접 읽었다(구현에서 유도한 값이 아니다)."
+      "note": "",
+      "artifact": false
+    },
+    {
+      "pr": 1277,
+      "branch": "dependabot/pip/cachetools-gte-7.1.8",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "34072311034",
+      "provenance": "action-run",
+      "path": "regex-fallback",
+      "note": "범위 제약인데 **아티팩트를 타지 않는다** — 이전 제약에 상한(`<X,`)이 없어 삼킬 것이 없다. 아티팩트의 필요조건을 보여주는 대조군.",
+      "artifact": false
+    },
+    {
+      "pr": 1276,
+      "branch": "dependabot/pip/lxml-6.1.3",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "34072306199",
+      "provenance": "action-run",
+      "path": "yaml-explicit",
+      "note": "",
+      "artifact": false
+    },
+    {
+      "pr": 1275,
+      "branch": "dependabot/pip/ruff-0.16.6",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "34072298214",
+      "provenance": "action-run",
+      "path": "yaml-explicit",
+      "note": "",
+      "artifact": false
+    },
+    {
+      "pr": 1274,
+      "branch": "dependabot/pip/boto3-gte-1.43.88-and-lt-2",
+      "expected": "version-update:semver-major",
+      "observed_in_run": "34072286721",
+      "provenance": "action-run",
+      "path": "regex-fallback",
+      "note": "범위 제약 bump. `from` 캡처가 이전 제약의 상한 `<2,` 에서 `2,>=` 를 삼켜 패치 크기인데 major 로 떨어진다 — 파싱 아티팩트.",
+      "artifact": true
+    },
+    {
+      "pr": 1251,
+      "branch": "dependabot/pip/readability-lxml-0.9",
+      "expected": "version-update:semver-minor",
+      "observed_in_run": "33346878146",
+      "provenance": "action-run",
+      "path": "yaml-explicit",
+      "note": "",
+      "artifact": false
+    },
+    {
+      "pr": 1250,
+      "branch": "dependabot/pip/ruff-0.16.5",
+      "expected": "version-update:semver-patch",
+      "observed_in_run": "33346874517",
+      "provenance": "action-run",
+      "path": "yaml-explicit",
+      "note": "",
+      "artifact": false
+    },
+    {
+      "pr": 1249,
+      "branch": "dependabot/pip/boto3-gte-1.43.82-and-lt-2",
+      "expected": "version-update:semver-major",
+      "observed_in_run": "33346866191",
+      "provenance": "action-run",
+      "path": "regex-fallback",
+      "note": "범위 제약 bump. `from` 캡처가 이전 제약의 상한 `<2,` 에서 `2,>=` 를 삼켜 패치 크기인데 major 로 떨어진다 — 파싱 아티팩트.",
+      "artifact": true
+    },
+    {
+      "pr": 1248,
+      "branch": "dependabot/pip/yfinance-1.7.0",
+      "expected": "version-update:semver-minor",
+      "observed_in_run": "33346839324",
+      "provenance": "action-run",
+      "path": "yaml-explicit",
+      "note": "",
+      "artifact": false
     }
-  ],
-  "path_coverage": {
-    "yaml-explicit": "YAML 의 update-type 을 그대로 쓴다 (upstream `dep['update-type'] ||` 좌항)",
-    "regex-fallback": "YAML 에 update-type 이 없어 커밋 첫 줄 정규식 + calculate_update_type 으로 간다",
-    "bumps-regex": "`^Bumps … $` 정규식으로 from/to 를 얻는 경로. **이 저장소 실제 PR 로는 도달 불가** — Bumps 형 7건 전수(#1190 #1191 #1248 #1250 #1251 #1275 #1276)가 YAML update-type 을 갖는다. 합성 단위 테스트로만 덮는다"
-  }
+  ]
 }
