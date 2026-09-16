@@ -1,0 +1,41 @@
+name: Probe head-ref execution
+
+# **일회성 실측 프로브. 머지하지 않고 PR 을 닫으면 사라진다.**
+#
+# 검증 명제: `on: pull_request` 런은 **PR 쪽 워크플로우 정의**로 실행된다
+# (기본 브랜치의 정의가 아니다).
+#
+# 왜 필요한가: 이 명제 위에 저장소의 보안 판단 두 개가 서 있는데 in-repo 근거가 없었다.
+#   - `docs/devsecops/requirements-lock-autosync-design.md` §9.4 — "악의적 PR 은 그
+#     스크립트나 워크플로우 자체를 수정해 임의 내용을 artifact 에 담을 수 있다"
+#   - `.github/workflows/dependabot-auto-merge.yml` — actor 게이트를 PR 작성자 기준으로
+#     완화하지 않기로 한 결정. 근거가 "PR 안의 검사는 같은 푸시로 지워질 수 있다" 이다.
+# 2026-09-16 시점에 두 곳 모두 GitHub 문서를 인용할 뿐 이 저장소에서 재현한 적이 없었다.
+# (Actions 런 보존 한계로 과거 런에서 확인하려던 시도는 실패했다.)
+#
+# 관측 방법: 이 파일은 **기본 브랜치에 존재하지 않는다.** 그런데도 이 PR 에서 체크가
+# 생성되고 아래 마커가 로그에 찍히면, 런이 PR 쪽 정의를 읽었다는 뜻이다. 반대로
+# 아무 체크도 생기지 않으면 명제가 틀린 것이다. 두 결과가 명확히 갈린다.
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: probe-head-ref-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    name: probe-head-ref
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Print marker
+        run: |
+          set -euo pipefail
+          echo "HEAD_REF_PROBE_MARKER_2026_09_16"
+          echo "event=${{ github.event_name }} ref=${{ github.ref }} sha=${{ github.sha }}"
+          echo "이 워크플로우 파일은 기본 브랜치에 없다. 이 줄이 보이면 런이 PR 쪽 정의를 읽은 것이다."

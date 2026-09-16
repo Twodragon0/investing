@@ -11,7 +11,7 @@
 | 수집기 (scripts/collect_*.py) | 13 |
 | 생성기 (scripts/generate_*.py) | 6 |
 | 공통 모듈 (scripts/common/**/*.py, __init__ 제외) | 64 |
-| GitHub Actions 워크플로우 (.github/workflows/*.yml) | 54 |
+| GitHub Actions 워크플로우 (.github/workflows/*.yml) | 55 |
 | main 직접 푸시 워크플로우 (python-collect 경유 + 자체 push) | 23 |
 | 카테고리 페이지 (pages/*.md) | 15 |
 | 테스트 파일 (tests/test_*.py) | 203 |
