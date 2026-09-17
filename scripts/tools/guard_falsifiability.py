@@ -782,6 +782,15 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_component_counts_drift_hook_guard.py::test_hook_denies_push_on_drift",
     ),
     StaticCase(
+        # PR 브랜치 실패까지 이슈로 열면 트래커의 88%가 노이즈가 되고(2026-09-17 실측),
+        # 진짜 main 회귀가 그 속에 묻힌다. 무력화가 조용하다 — 이슈는 계속 열린다.
+        "CI-failure 이슈를 기본 브랜치로 한정하는 필터 제거",
+        ".github/workflows/classify-workflow-failures.yml",
+        "          && github.event.workflow_run.head_branch == github.event.repository.default_branch",
+        "",
+        "tests/test_ci_failure_issue_scope_guard.py::test_issue_creation_is_scoped_to_the_default_branch",
+    ),
+    StaticCase(
         # skip-worktree 파일은 구조적으로 stat 캐시가 낡을 수 있다. `git diff` 로
         # 판정하면 내용이 다른데도 "변경 없음" 이 된다(2026-09-17 재현).
         "동기화 스크립트가 _state 변경을 stat 캐시로 판정 (낡으면 놓침)",
