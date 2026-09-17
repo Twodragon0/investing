@@ -1,29 +1,5 @@
 {
   "seen": {
-    "65e84457278c273b69ec8aa8": "2026-08-17T22:51:19",
-    "9a29d3dc270b2580b2ff94a4": "2026-08-17T22:51:19",
-    "8c1a297151241661097c4686": "2026-08-17T22:51:19",
-    "70769138fdcb13dc809b042f": "2026-08-17T22:51:19",
-    "319772c633dd5d1d81a44dff": "2026-08-17T22:51:19",
-    "59d94a7168e47393f7b43eaa": "2026-08-17T22:51:19",
-    "7f3893346fb53882e06c3ca6": "2026-08-17T22:51:19",
-    "221cfd081202d27262cfc333": "2026-08-17T22:51:19",
-    "2c3ea09bb1ef38f2ed43afc8": "2026-08-17T22:51:19",
-    "2756f2979a9e0e6f80ae6176": "2026-08-17T22:51:19",
-    "6a2a1bd0868015899511d576": "2026-08-17T22:51:19",
-    "bdc042f769d8a4a478a73a15": "2026-08-17T22:51:19",
-    "a001f09f496659185071215a": "2026-08-17T22:51:19",
-    "10ab8d4c30861c71b3072c2b": "2026-08-17T22:51:19",
-    "8ef02b1be8df7e14dcc1ddbf": "2026-08-17T22:51:19",
-    "dc85a6463cbc2a4f80c2573b": "2026-08-17T22:51:19",
-    "5f7935a213804add8c22febd": "2026-08-17T22:51:19",
-    "882247ed6c3d8591bc9cbfd3": "2026-08-17T22:51:19",
-    "3ac8b1eac7402c6ef50d2689": "2026-08-17T22:51:19",
-    "a5125ab100fe86307639cbf8": "2026-08-17T22:51:19",
-    "7ed98f723245c0c3eecd5383": "2026-08-17T22:51:19",
-    "48e41e79bc1ee3feb405b9f0": "2026-08-17T22:51:19",
-    "cf2e15b151f8da3521f6054f": "2026-08-17T22:51:19",
-    "2c61c88746a3655e01cb944b": "2026-08-17T22:51:19",
     "4d4aa2c0a54f73f52cfaf1e8": "2026-08-18T22:52:04",
     "9eb98b7e2d4fdbe0fe3fda80": "2026-08-18T22:52:04",
     "fa97481340b085d6f3430b08": "2026-08-18T22:52:04",
@@ -741,7 +717,46 @@
     "c904e3a384ed888204e6290d": "2026-09-16T00:39:55",
     "21c6dbfdfc550205eaf4ba72": "2026-09-16T00:39:55",
     "cb0630fca0b289ddc8a4ee52": "2026-09-16T00:39:55",
-    "59f7050ce3a88f868430c1f2": "2026-09-16T00:39:55"
+    "59f7050ce3a88f868430c1f2": "2026-09-16T00:39:55",
+    "68b303e5c7bc9aaf877dbb45": "2026-09-17T00:47:19",
+    "0636291402044ac41aa56ce4": "2026-09-17T00:47:19",
+    "f0efd78b7a9f6a30472be602": "2026-09-17T00:47:19",
+    "e034252d04cb8055a881f41e": "2026-09-17T00:47:19",
+    "fd67b21ef0c46c3d0670c4f3": "2026-09-17T00:47:19",
+    "b003a0bb19d63d74b962807c": "2026-09-17T00:47:19",
+    "fde9a4e28856a234d2347a15": "2026-09-17T00:47:19",
+    "8b0608d08ab939bb9e124742": "2026-09-17T00:47:19",
+    "6d7cf89d890c292329ae44e2": "2026-09-17T00:47:19",
+    "dbb7721fc9d48c431bbbb79c": "2026-09-17T00:47:19",
+    "bd74270c17bc71794ea23bba": "2026-09-17T00:47:19",
+    "cd1bfb83f8e05f672eee2465": "2026-09-17T00:47:19",
+    "47e5fe6e970639f74a3c6bec": "2026-09-17T00:47:19",
+    "0e7a3b84193c1b213dd7ccaf": "2026-09-17T00:47:19",
+    "897d32b2b3bf9dadf6096aac": "2026-09-17T00:47:19",
+    "4f5e37dd09707d3bf92b3da7": "2026-09-17T00:47:19",
+    "1b06479be9bcc6725a83fe12": "2026-09-17T00:47:19",
+    "4bd415731481971847f50f24": "2026-09-17T00:47:19",
+    "a75f69eb2b8543343d527c3a": "2026-09-17T00:47:19",
+    "2ee02a2e2b6927746f4899d1": "2026-09-17T00:47:19",
+    "84fee6c148075def64786ecc": "2026-09-17T00:47:19",
+    "6b62816f9cce2c8872eb5863": "2026-09-17T00:47:19",
+    "09fbb442106a52f701c2c4b5": "2026-09-17T00:47:19",
+    "bf99d67d2c087e22d0f1d073": "2026-09-17T00:47:19",
+    "e728641e85de63e8026de98b": "2026-09-17T00:47:19",
+    "0e0cc9e97ff4d3c95a119131": "2026-09-17T00:47:19",
+    "944449f807b564bba9287cd8": "2026-09-17T00:47:19",
+    "e6c17d2bef495385f985838b": "2026-09-17T00:47:19",
+    "0c90ee28d171dafcd6888e2b": "2026-09-17T00:47:19",
+    "fc3e1859912dab4af7ffec40": "2026-09-17T00:47:19",
+    "0380d5b34896e79d3443d92b": "2026-09-17T00:47:19",
+    "cb9dd99d3136e9b4bf99b0f0": "2026-09-17T00:47:19",
+    "9138335255f1078923e97b0d": "2026-09-17T00:47:19",
+    "f2b761ea31d842548506dc72": "2026-09-17T00:47:19",
+    "e8e7c7daffe6379393676d93": "2026-09-17T00:47:19",
+    "8ac0567c28e5b4e8d26e3749": "2026-09-17T00:47:19",
+    "36673b395cf6cd0aa31a83ab": "2026-09-17T00:47:19",
+    "27bb3d2dca100cb0e1565659": "2026-09-17T00:47:19",
+    "5b3000ff9bb0407207f67941": "2026-09-17T00:47:19"
   },
   "titles": [
     [
@@ -18323,6 +18338,162 @@
     [
       "정치인 거래정책 리포트 20260916",
       "2026-09-16"
+    ],
+    [
+      "트럼프의 내로남불 17개월간 주식거래 2만8700건 미 의회 전체보다 많아",
+      "2026-09-17"
+    ],
+    [
+      "trump made more stock trades than congress combined while pushing a trading ban",
+      "2026-09-17"
+    ],
+    [
+      "trump made 29000 securities trades more than all of congress",
+      "2026-09-17"
+    ],
+    [
+      "form 4 new fortress energy inc insider trading activity stock titan",
+      "2026-09-17"
+    ],
+    [
+      "frontview reit fvr gives director 705 stock units at no cost stock titan",
+      "2026-09-17"
+    ],
+    [
+      "azenta azta awards 15272 stock units to multiomics head stock titan",
+      "2026-09-17"
+    ],
+    [
+      "director at frontview reit fvr receives 846unit equity award stock titan",
+      "2026-09-17"
+    ],
+    [
+      "azenta inc azta awards 15272 stock units to its top lawyer stock titan",
+      "2026-09-17"
+    ],
+    [
+      "coo stock sale at eplus plus follows preset plan stock titan",
+      "2026-09-17"
+    ],
+    [
+      "lowes low evp now holds 9927 shares after grant stock titan",
+      "2026-09-17"
+    ],
+    [
+      "nelnet nyse nni director now holds 65491 phantom stock units stock titan",
+      "2026-09-17"
+    ],
+    [
+      "curiositystream curi sets 4year vesting on cfos 150000 rsus stock titan",
+      "2026-09-17"
+    ],
+    [
+      "tevogen tvgn ties cfo stock grant to 1b revenue goal stock titan",
+      "2026-09-17"
+    ],
+    [
+      "new rsu grant lifts arm holdings arm ccos stake to 65270 units stock titan",
+      "2026-09-17"
+    ],
+    [
+      "qorvo qrvo svp sells 4810 shares in planned trade stock titan",
+      "2026-09-17"
+    ],
+    [
+      "coreweave crwv directors rsus deliver 1200 new shares stock titan",
+      "2026-09-17"
+    ],
+    [
+      "board grants je cleantech nasdaq jcse cfo 30000 shares stock titan",
+      "2026-09-17"
+    ],
+    [
+      "azenta azta gives cfo 30544 timevested stock units stock titan",
+      "2026-09-17"
+    ],
+    [
+      "미 기준금리 3년 만에 인상한은 내달 금리 올릴까 뉴스up ytn",
+      "2026-09-17"
+    ],
+    [
+      "美 금리 올렸지만두 차례 먼저 올린 한은 추가 인상 고심",
+      "2026-09-17"
+    ],
+    [
+      "美 연준 3년 만에 긴축 전환한은 연내 추가 금리인상 압박",
+      "2026-09-17"
+    ],
+    [
+      "美 연준 3년 만에 금리인상한미 금리역전 1p로 확대 더스쿠프",
+      "2026-09-17"
+    ],
+    [
+      "美 금리 3년 만에 다시 올렸다트럼프는 1 압박 한은도 추가 인상 무게",
+      "2026-09-17"
+    ],
+    [
+      "美연준 3년2개월 만에 금리 025 obc 뉴스",
+      "2026-09-17"
+    ],
+    [
+      "심층 연준 2년 만에 금리 인상 단행 24시간 외환시장 첫 비상 매일신문",
+      "2026-09-17"
+    ],
+    [
+      "美 연준 3년만에 금리 025p 인상연내 추가 인상 가능성도 엠투데이",
+      "2026-09-17"
+    ],
+    [
+      "3년만의 美금리 인상한국인 지갑에 미칠 영향은",
+      "2026-09-17"
+    ],
+    [
+      "美 또 금리 인상두 번 올린 한은 10월 동결 선택지 좁아지나",
+      "2026-09-17"
+    ],
+    [
+      "한은 금리 인상 이면 명백한 반대 소수 의견의 심층 분석 데일리연합",
+      "2026-09-17"
+    ],
+    [
+      "fed approves interest rate hike signals one more to come this year",
+      "2026-09-17"
+    ],
+    [
+      "what the fed rate hike likely means for you pbs",
+      "2026-09-17"
+    ],
+    [
+      "warsh under pressure as fed considers rate hike the hill",
+      "2026-09-17"
+    ],
+    [
+      "trumps latest threats loom over feds interest rate decision",
+      "2026-09-17"
+    ],
+    [
+      "fed rates spike as donald trump issues new demand",
+      "2026-09-17"
+    ],
+    [
+      "fed under warsh hands down unanimous september rate decision",
+      "2026-09-17"
+    ],
+    [
+      "us fed rate decision when where to watch kevin warshs speech september fomc meeting time what to expect ndtv profit",
+      "2026-09-17"
+    ],
+    [
+      "trump and the federal reserve are on a collision course over interest rates",
+      "2026-09-17"
+    ],
+    [
+      "what a fed rate hike means for your bank accounts loans credit cards and investments financeyahoocom",
+      "2026-09-17"
+    ],
+    [
+      "정치인 거래정책 리포트 20260917",
+      "2026-09-17"
     ]
   ],
   "seen_urls": {}
