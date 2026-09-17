@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPYlVZQXRnWWR2RnVGaVlJMXpnUC00Q0NCY0dZdjIyS0o3MlV2VXFLWExqRENiUUNCWHRrUm1kaHl3WklUZ2hwYzE5RlpobGdLWkxXQmpSbU9ZT29EV2RGZWo1NlJ5Y3lnRDVHTDhfdmo0anAxQ2JfRGE0TGpPTFZZdUJUWFVTQQ?oc=5">데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">[데일리 자료] 증시 긴급 진단(feat. 코스피, 코스닥 급락) 네이버 프리미엄콘텐츠</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 8,185.29 (-0.53%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 1,104.36 (-2.54%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-05-29 주식 시장에서 209건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,185.29(-0.53%), KOSDAQ 1,104.36(-2.54%), USD/KRW 1,493.67(-0.44%).
 - *거래자들이 미국-이란 거래를 희망함에 따라 국채 수익률은 거의 변하지 않았으며 인라인 인플레이션 보고서에 무게를 두었습니다.*
 
 ## 테마별 주요 뉴스
