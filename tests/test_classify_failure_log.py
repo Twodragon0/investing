@@ -154,10 +154,35 @@ class TestClassify:
             "urllib3.exceptions.NewConnectionError: Temporary failure in name resolution",
             "HTTP 429 Too Many Requests",
             "net/http: TLS handshake timeout",
+            # apt/미러 일시 장애. 2026-09-09 런 34384107923(이슈 #1299)에서 실측된
+            # 형태 그대로다. 그때는 `code` 로 분류돼 자동 재실행되지 않았고, 재실행
+            # 한 번이면 끝날 일이 이슈가 됐다. 이 저장소의 4개 워크플로우가 CJK 폰트
+            # 설치로 apt 를 쓰므로 재발 경로가 살아 있다.
+            "E: Failed to fetch https://dl.google.com/linux/x/Packages.gz  Hash Sum mismatch",
+            "E: Some index files failed to download. They have been ignored, or old ones used instead.",
+            "E: Temporary failure resolving 'archive.ubuntu.com'",
         ],
     )
     def test_real_transient_phrases_are_network(self, phrase: str) -> None:
         assert classify(_log(phrase)) == "network"
+
+    @pytest.mark.parametrize(
+        "line",
+        [
+            # 수집기의 일반 로그. apt 형태가 아니므로 network 로 새면 안 된다.
+            'logger.error("Failed to fetch sitemap %s: %s", src, exc)',
+            "Failed to fetch metadata from https://example.invalid",
+        ],
+    )
+    def test_generic_fetch_failures_stay_code(self, line: str) -> None:
+        """apt 패턴을 `E: ` 접두사로 좁힌 이유 — 접두사가 없으면 여기까지 걸린다.
+
+        `scripts/tools/indexnow_submit.py:228` 과 `scripts/common/enrichment_network.py:742`
+        가 실제로 이 문구를 낸다(2026-09-17 실측). 둘 다 네트워크 성격이긴 하지만,
+        분류기를 넓히는 대신 관측된 apt 형태만 좁게 받는다 — 넓히면 되돌릴 근거가
+        사라진다.
+        """
+        assert classify(_log(line, "##[error]Process completed with exit code 1.")) == "code"
 
     def test_passing_parametrized_test_ids_are_not_network(self) -> None:
         """The one false positive word-boundary anchoring *cannot* catch.

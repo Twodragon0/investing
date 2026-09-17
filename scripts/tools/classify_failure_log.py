@@ -140,6 +140,19 @@ _NETWORK_PHRASES = (
     r"429 too many requests",
     r"server misbehaving",
     r"operation timed out",
+    # apt/미러 일시 장애. 2026-09-09 런 34384107923(이슈 #1299)에서 실측:
+    #   E: Failed to fetch https://dl.google.com/.../Packages.gz  Hash Sum mismatch
+    #   E: Some index files failed to download. ...
+    # `code` 로 분류돼 자동 재실행되지 않았고, 재실행 한 번이면 끝날 일이 이슈가 됐다.
+    # 이 저장소의 4개 워크플로우가 CJK 폰트 설치로 apt 를 쓴다.
+    # `E: ` 접두사는 apt 의 오류 표기다. 접두사 없이 "failed to fetch" 만 넣으면
+    # 수집기의 일반 로그(`Failed to fetch sitemap …`, `Failed to fetch metadata …`
+    # 2건 실측)까지 걸린다. 그 둘도 네트워크 성격이긴 하나, 분류기를 넓히는 대신
+    # 실제로 관측된 apt 형태만 좁게 받는다.
+    r"e: failed to fetch",
+    r"e: some index files failed to download",
+    r"hash sum mismatch",
+    r"temporary failure resolving",
 )
 
 # CamelCase exception classes only. `ReadTimeout`, `ConnectTimeoutError`,
