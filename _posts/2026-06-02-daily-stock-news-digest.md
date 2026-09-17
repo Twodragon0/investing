@@ -65,7 +65,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE56Vm1fbkY0R2xjZTVMczl4X1F6TUV6TXMzNzdEZFNTeUI0Q2FRMGlNbkx0Wl9wbzZFdVFESzVCdW94YXlxQnQ0ZzNEQmlwU2RSbmV0OGp0NnVFWXJOTTNwSERGTzN3VWFyaktFUg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">젠슨 황 훈풍에 코스피 신고가 랠리.코스닥 5거래일 연속 하락세 - 프리진경제</a>
-<p class="news-desc">젠슨 황 훈풍에 코스피 신고가 랠리.코스닥 5거래일 연속 하락세 프리진경제</p>
+<p class="news-desc">1일, 코스피는 전 거래일 대비 312.23포인트 상승한 8,778.38로 마감하며 연일 신고가 경신과 함께 9,000포인트 선을 눈앞에 뒀다. 반면 코스닥은 24.77포인트 하락한 1,050.03으로 장을 마치며 5거래일 연속 하락세를 이어가 양 시장이 극명한 디커플링(탈동조화)을</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -229,7 +229,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE16LS1nWEg5ZkV2aWYyRWVXaU1nbV9DVGdMZmZoUm9aa25tX2FXSmVRS1hyN0s5elFKeFkxUm5Md3AxMDZHRnZiQVZBUmZnRjRVVGE0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">국고채 금리 일제히 상승…원·달러 환율 장중 18원 급등락 [김혜란의 FX</a>
-<p class="news-desc">국고채 금리 일제히 상승…원·달러 환율 장중 18원 급등락 [김혜란의 FX] 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 1일 서울 중구 한국은행 별관에서 열린 ‘2026 BOK 국제 콘퍼런스’에서 신현송 한국은행 총재가 이자벨 슈나벨 유럽중앙은행(ECB) 집행이사와 정책 대담을 하고 있다. 연합뉴스한국은행 총재의 매파적 발언과 물가 경계감이 겹치며 국고채 금리가 일제히</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

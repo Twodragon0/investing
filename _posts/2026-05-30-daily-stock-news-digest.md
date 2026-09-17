@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE11MmtScmhKaFV0UGhsVkt4YXdmODdiQVBFUWk4SF9VQXpqcEtibmdqZllDUU84bXRCaklTVVF6QzZYZ2ZOUlZYRzc1d3BaVmJrWm82SldUTXdKQjREQkE0cmRudF90em9hOWV3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 29일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 199.02포인트 오른 8384.31에 시작했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9mYjJYWjFfdHZneUxpclFRUnBBdTg2am95TW5OQlNnRDRhd3BLM2pPSjJGOE1kZ1NhMDZvQWNhdkU1N29nOU5NczM0OElrWjhxaHlOUWdIdWxYY1p4Y0JjX3dvSEJEVk1sR3RUSkNn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">적절한 시기에 인상… 새 총재가 알린 ‘완화적 통화정책’의 종언 - 더스쿠프</a>
-<p class="news-desc">적절한 시기에 인상… 새 총재가 알린 ‘완화적 통화정책’의 종언 더스쿠프</p>
+<p class="news-desc">한국은행이 기준금리를 동결했다. 지난해 5월 기준금리를 2.5%로 인하한 이후 12개월째 동결이다. 문제는 앞으로다. 신현송 신임 한국은행 총재는 자신이 주재한 첫번째 금융통화위원회에서 ‘기준금리 인상’을 언급했다. 한은이 완화적 통화정책 기조의 종언을 고한 셈이다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

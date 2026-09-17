@@ -163,7 +163,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1OSmVGZnp5V3NyaGxpaWRVaGZPVnM1bGRzUlBYZTdkSXpFZ1ZEWm9HYzlfeG5iSXluRkVkWi1BTXdFbVFvY0w0M2UtVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">1500원 환율에 멈춘 금리인하 시계…한은 다음 카드는 '인상'?</a>
-<p class="news-desc">1500원 환율에 멈춘 금리인하 시계…한은 다음 카드는 '인상'? v.daum.net</p>
+<p class="news-desc">원·달러 환율 1530.0원 상승 출발…장중 1520원대 등락 5월 외환보유액 4269억9000만달러…점도표 21개 중 19개 '인상' 전망 [더팩트ㅣ이선영 기자] 원·달러 환율이 1500원대에서 좀처럼 내려오지 않으면서 한국은행의 기준금리 셈법이 달라지고 있다. 경기 둔화에 대응한 금리 인하 기대는 사실상 후퇴했고 고환율과 물가 불안을 막기 위한 금</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -175,7 +175,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOTnFTeGo4Ym9uanZIWjAydXl4Y3VTNmdCVDlQNF9OcE9WWlJmSm5DTlFOZGhCeGt2MHBVQml1blBMNVhDTmRyZkhZT0RjSGNnaU1FT3A1N3o2dUQyS1pWa21hZHZhV2IzYndJbXoxR3dqeDkwbHNRMGNPSGh0Q05sM2hWMDhxaTRFSUxfSHhR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">원달러 환율 13.3원 오른 1529.7원 마감. 튀르키예 리라보다 더 약세</a>
-<p class="news-desc">원달러 환율 13.3원 오른 1529.7원 마감. 튀르키예 리라보다 더 약세 조선일보</p>
+<p class="news-desc">외환당국 시장상황점검회의를 통한 구두개입 실시 원화 가치 하락률 세계 4위로 튀르키예 리라 상회 외국인 19거래일 연속 순매도 및 수출업체 달러 보유</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE90a2hDaUhRNy1oVVB0SFN3V0Q0a09FTEtyMVhoaTBRSzBWNlRxampkeWhTUVBXMDk5ZTFmZkxvV3hHN1A0eVMweXFTTS1CQW9EaWtXc1lrNkx5T25tNU5pSS1iQVZkVXUzZEZSeUJVQmlTdTRDdGfSAWZBVV95cUxOZ2o2cGtWS1d4eTQ0c0tKcDVnNFZaNloxQ0RvV0lwNGxBN05MRW5zeHgyaXROWU5kN2ZVUTNLT1VHc0d1a3VONHpIX0dBZUlCcDA4SXhpT0Jra3pVamJOVVUzN0Eyd3c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 개장부터 1530원 넘어…2009년 금융위기 이후 처음 - 동아일보</a>
-<p class="news-desc">환율 개장부터 1530원 넘어…2009년 금융위기 이후 처음 동아일보</p>
+<p class="news-desc">원-달러 환율이 4일 글로벌 금융위기 때인 2009년 3월 이후 17년 3개월 만에 처음으로 1540원을 넘었다. 이날 코스피에서 외국인이 6조9880억 원 순매도한 데다, 미국의 추가 관세 부과 발표, 이란의 쿠웨이트 공격 소식 등이 악재로 작용했다.외환 당국이 구…</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -240,7 +240,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5ickgxX0o2dUtYbnJNbmt1S0VoNjdPLTFjekdXdTBSNGNPRkhhdkVKZm5ncmdYYVRSN0Fia0piYlF6ZzlSR3RwN0x6QkI0dkN0UGluSHo4bVhyY04yRXBtYzhOUndzNXdlS1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI 반도체 랠리, 변수는 '쏠림 이후' - 비즈월드</a>
-<p class="news-desc">AI 반도체 랠리, 변수는 '쏠림 이후' 비즈월드</p>
+<p class="news-desc">[비즈월드] 국내 증시를 끌어올린 인공지능(AI) 반도체 랠리가 하반기에도 이어질 것이란 전망이 나왔다.고대역폭메모리(HBM) 장기공급계약(LTA) 확대와 2027년 HBM 가격 인상 가능성이 맞물린 덕이다.다만 지수 상승 폭이 소수 반도체 대형주에 집중된 만큼, 단순 주도주 추격보다 업종 분산 전략이 필요하다는 지적도 함께 제기된다.4일 업계에 따르면 SK증권은 최근 발간한 반도체 업종 보고서에서 삼성전자와 SK하이닉스 목표주가를 각각 61만원과 400만원으로 올렸다.상향 근거로는 장기공급계약을 통한 수요 가시성 확보, 2027년</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -77,7 +77,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Ecmd4Rk53aEotLXNhME0xUzl6QWRyTm41UWJlWHljWVpkcXU1dTh0RC1DSkc0QlpHWnhqVzBrT3ZTQXBNTjMtSXM3S3IwNTJCeTBrNGE3Q0tGWVVvU242a9IBeEFVX3lxTE5KS3NiV2toNmhMWmdzdUZqeGhvRHlFRnBEVjRfempYYUxCYVhsUWJjTHgwd01BUmR0RWRLblpGbm4yQUVZX0YzMVRyUGpicU15VWNDZUc0NTF5WTBUZEdZT25UekZhcE8xbHdzdWdaNUVNd1RzdGEzag?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">외인 삼전·하닉 매도 폭탄에도 개미들 30조 '줍줍'</a>
-<p class="news-desc">외인 삼전·하닉 매도 폭탄에도 개미들 30조 '줍줍' 뉴시스</p>
+<p class="news-desc">'시총 1조 달러' 돌파…개미 'AI 대세론' 믿음 삼전·하닉 합산 시총, 코스피 절반 넘겨</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

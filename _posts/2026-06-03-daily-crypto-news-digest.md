@@ -293,7 +293,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1vSlF1RjYzX1RnZWw2Q1k5ZzVxcDVYVXdmQ2MtaTRfTG4xYUVpMFJoMTJpYWw5WWlablZKbGxkN1pXczdvNnlhZTFfSVp0MVFlUWlrc1Q0dUhabXk1amFNbWp3SGdSdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 두 달 만에 7만 달러 아래로 급락했다</a>
-<p class="news-desc">비트코인, 두 달 만에 7만 달러 아래로 급락했다 eyesmag.com</p>
+<p class="news-desc">가상화페 비트코인이 약 두 달 만에 7만 달러 아래로 급락했다. &lt;블룸버그 통신&gt;에 따르면 비트코인은 유럽 장 초반 거래에서 한때 6만 9,660달러까지 하락했으며, 7만 달러 아래로 떨어진 것은 지난 4월 8일 이후 처음이다. 비트코인 외에도 이더리움과 솔라나 등 여러 주요 가상화폐 또한 하락세를 이어가며 디지털 자산 시장 전반이 약세인 모습.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

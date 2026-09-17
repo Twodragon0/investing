@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hS2Y0RlZDTzNLeTJnTlJkRXhJUGh1eFZnSkY4S1REUHlPSnlYdlg4RE1xRWxuZ2ZqUXB3d2VLemFuamlSbGp4SUhCT1FLTldMaHR5d2xSLWN4d9IBVEFVX3lxTE1YOGRubzlPN2VpWVNrTlV1enBvazBQVklqb2MzN3Fhb2ZTcTIwRzFDek8xTDRESXNSQWVBdm1lNC1LdTJuVmdtcFZnaWdBZUc3alZBTg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">개미들 '코스피'에 쏠린 사이…외인은 코스닥 담았다 [분석+</a>
-<p class="news-desc">개미들 '코스피'에 쏠린 사이…외인은 코스닥 담았다 [분석+] 한국경제</p>
+<p class="news-desc">개미들 '코스피'에 쏠린 사이…외인은 코스닥 담았다 [분석+], 외인, 최근 한 달 코스닥 주식 3조7800억어치 사들여 코스피선 6조2500억원 순매도 "코스피 리밸런싱 후 코스닥 AI·반도체 성장주로"</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -162,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOV0xnaDY2VUItR1N6OVV3d2pBc0phNDAyQ3pJR1hLYThzdng4OFdSLUZHT3hlVWxTdTh4LVhFYnk5NkNlTXM4TUphN1d0VGZjVWRXaG0yeEMyS1FCVmY2OVA2XzNQQ1EyQjZHempiY21fQjNaODByWlMwVEtFc0F3QldZNl80dDVQVTNBS293?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 12거래일 연속 1500원대, 금융위기 기록 넘어서. 수출·증시·금리도 못 막은 고환율</a>
-<p class="news-desc">환율 12거래일 연속 1500원대, 금융위기 기록 넘어서. 수출·증시·금리도 못 막은 고환율 조선일보</p>
+<p class="news-desc">달러 대비 원화 환율 12거래일 연속 1500원대 유지로 금융위기 기록 경신 수출 호조와 증시 상승 및 금리 인상 예고에도 고환율 현상 장기화 중동 전쟁 발발에 따른 안전 자산 달러 선호와 원화 투자 매력 하락</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Td3IyZzZaTkVHNWpEU2xFX0R4RDIxeG9qRXJES05ROGNfcVg5UVltM3YwZGh2WkRvc1FKUWlWX3lkY2d0c0tEcnRHYkR6R0NCS09GbnM4cGNaaXRWMzhCcA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 1500원대 '뉴노멀'…수출·증시 호황에도 원화는 약세 - 메트로신문</a>
-<p class="news-desc">환율 1500원대 '뉴노멀'…수출·증시 호황에도 원화는 약세 메트로신문</p>
+<p class="news-desc">원·달러 환율이 12거래일 연속 달러당 1500원을 넘기며 1500원대의 고환율이 '뉴노멀'이 됐다. 수출액이 3개월 연속 800억 달러를 넘기고 증시도 '9000포인트'를 눈앞에 두는 등 국내 경제지표가 뚜렷한 호조인데도 원화는 약세를 지속하는 모습이다. 원화값의 약</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFAxX09KYjJ1NUw2WU9TSDJYMF9ZUmYyZWZyV3hRQWt5aU5yQl9SZzA1NGJtWDRBaTVTVjliOHhMOUNaTXd0cXpNOUF6SVMwS1NvWlJuYlF1MjJBRmwxcVplOUJtX0M?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 1500원대 장기화…금융권 환헤지 부담 가중 - 서울경제TV</a>
-<p class="news-desc">환율 1500원대 장기화…금융권 환헤지 부담 가중 서울경제TV</p>
+<p class="news-desc">원·달러 환율이 11거래일째 1500원대에 머물고 있습니다. 수출 호조와 증시 강세, 금리 인상 가능성에도 원화 약세가 이어지면서 금융권의 환헤지</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

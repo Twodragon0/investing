@@ -184,7 +184,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTFBjZk5VTmJwb1RyUkxqdDcxa1lUVGh6MFlIQ216RUgzTWFNZlRmU0kxeE1yb2hCbXJYVERIcU1Ja1Jka0swdHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마이클 세일러도 결국?…스트래티지, 비트코인 2년 만에 거래소 이체</a>
-<p class="news-desc">마이클 세일러도 결국?…스트래티지, 비트코인 2년 만에 거래소 이체 v.daum.net</p>
+<p class="news-desc">비트코인 대량 보유 기업으로 알려진 스트래티지가 약 2년 만에 처음으로 비트코인을 암호화폐 거래소로 이체한 사실이 확인되면서 시장의 관심이 집중되고 있다. 최근 비트코인 가격 약세와 회사 주가 급락이 겹친 상황에서 투자자들은 향후 실제 매도 가능성 여부를 주목하고 있다. 온체인 분석업체 룩온체인(Lookonchain)은 5월 29일 스트래티지가 약 303</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

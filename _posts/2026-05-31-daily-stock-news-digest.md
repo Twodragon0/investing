@@ -65,7 +65,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE11MmtScmhKaFV0UGhsVkt4YXdmODdiQVBFUWk4SF9VQXpqcEtibmdqZllDUU84bXRCaklTVVF6QzZYZ2ZOUlZYRzc1d3BaVmJrWm82SldUTXdKQjREQkE0cmRudF90em9hOWV3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 29일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 199.02포인트 오른 8384.31에 시작했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE4xRFUwNDZlRnZzY0E1Qko4ZExTYkJHX0h6cHpLMFNkYWhnZkJWSkZMazFIWndwQXAxaENWSkttNlZjazV4eEo1dXlfUHRWZC1mbUN5UDJjOFdBZ29uS1VsZjJTdExJOG1QYTRISw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI 투자 열풍에 반도체 ETF 뭉칫돈…개인들 삼성전자·SK하이닉스에 베팅 - 나눔경제뉴스</a>
-<p class="news-desc">AI 투자 열풍에 반도체 ETF 뭉칫돈…개인들 삼성전자·SK하이닉스에 베팅 나눔경제뉴스</p>
+<p class="news-desc">"지금이라도 삼성전자, SK하이닉스를 담아야 하나?" 종목별 쏠림이 심화되며 반도체 대형주를 보유하지 않은 개인 투자자들의 상대적 박탈감과 포모(FOMO·소외 공</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1uUDZ4b3BxSzk3SHI3TDR2R2RXWEV1VGptNU9OSjJhU3FJSjVIanFwSmpodEhtd1JtTHh0a3hXZ2JVeWw3NmtzSUxKM2ZoeGJvR3JkVHZ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 투톱에 9조 폭주…5월 기관이 가장 많이 쓸어 담은 종목들은? - 위키트리</a>
-<p class="news-desc">소셜 뉴스 미디어 위키트리 - 경제, 사회, 정치, 엔터테인먼트, 스포츠 등 최신 뉴스를 빠르고 정확하게 전달합니다.</p>
+<p class="news-desc">AI 시대 메모리 반도체, 기관투자자 9조 원대 자금 몰려,SK하이닉스·삼성전자 독점, HBM3E 시장 지배력이 핵심</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9rREcwV2hCRTQzWElzN1d1ajY3SmhwUFBLSGt1M202bjR2WlJEcTRyOWFlT05JWnhRYlBsajVudXJvc250UkhuMkh3bEZUVkpUa0Y0LWtuMXQ5MEVkeHRFbA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 전망] 달러는 약세장, 수급은 난장판 - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">미국 경제지표 둔화, 미·이란 잠정 합의 소식에 달러 약세 등 달러/원 환율 전망 및 글로벌 시장 동향에 대해 알아봐요.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

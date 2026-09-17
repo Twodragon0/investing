@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBienpraE5hVFB5dEVYT0pWdk5nbGszaXp5ZzB3ZWxSTUZ1UXBlb0NpUGd0cGlXbE8yUzhfcWVud2ZCTUpTaDZpYTVldHF3S1dINmc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">생생한 주식쇼 생쇼] 코스피 조정 속 코스닥 빈집 털이와 피지컬 AI 전략 - 매일경제 마켓</a>
-<p class="news-desc">[생생한 주식쇼 생쇼] 코스피 조정 속 코스닥 빈집 털이와 피지컬 AI 전략 매일경제 마켓</p>
+<p class="news-desc">주식·채권시장 동반 불안에NPS에 대체투자 전략 문의국민연금 측 "향후 교류 확대"일본 공적연금을 운용하는 연금적립금관리운용독립행정법인(GPIF)이 최근 한국 국민연금(NPS) 측에 대체투자 노하우를 비공개 문의한 것으로 파악됐다.운용 자산이 2800조원에 달하는 GPIF는 국민연금보다 체급이 큰 공룡이지만, 올해 상반기 운용수익률은 국민연금의 3분의 1 ...</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -106,7 +106,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9Kakd0dkhnemVSMWZlSi01cGhpa3diOGhPRWFySHh0ZVpFS1dNV3p2MThMTE02eUg1Q1NlTlBvN25XcFdiSEdzbXJYUXR1dE0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 ABC 뉴스룸] "도대체 한계가 어디입니까?" 삼성전자 61만 원·SK하이닉스 400만 원 목표주가 등장. 2027년 HBM 폭발이 불러온 역대급 초강세장</a>
-<p class="news-desc">[오늘의 ABC 뉴스룸] "도대체 한계가 어디입니까?" 삼성전자 61만 원·SK하이닉스 400만 원 목표주가 등장. 2027년 HBM 폭발이 불러온 역대급 초강세장 v.daum.net</p>
+<p class="news-desc">트럼프 "1주 내 호르무즈 개방·휴전 합의"미국과 이란의 종전 협상이 마침내 파국 위기를 넘겨 종착역을 향해 가고 있습니다. 도널드 트럼프 미국 대통령은 미 ABC 방송과의 전화 인터뷰를 통해 "향후 일주일 안에 이란과의 종전 양해각서인 MOU에 합의할 수 있을 것"이라고 직접 밝혔습니다. 현재 양측이 논의 중인 문서에는 양국 간의 임시 휴전을 60일 동안</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOV0xnaDY2VUItR1N6OVV3d2pBc0phNDAyQ3pJR1hLYThzdng4OFdSLUZHT3hlVWxTdTh4LVhFYnk5NkNlTXM4TUphN1d0VGZjVWRXaG0yeEMyS1FCVmY2OVA2XzNQQ1EyQjZHempiY21fQjNaODByWlMwVEtFc0F3QldZNl80dDVQVTNBS293?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 12거래일 연속 1500원대, 금융위기 기록 넘어서. 수출·증시·금리도 못 막은 고환율</a>
-<p class="news-desc">환율 12거래일 연속 1500원대, 금융위기 기록 넘어서. 수출·증시·금리도 못 막은 고환율 조선일보</p>
+<p class="news-desc">달러 대비 원화 환율 12거래일 연속 1500원대 유지로 금융위기 기록 경신 수출 호조와 증시 상승 및 금리 인상 예고에도 고환율 현상 장기화 중동 전쟁 발발에 따른 안전 자산 달러 선호와 원화 투자 매력 하락</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
