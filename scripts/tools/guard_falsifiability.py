@@ -782,6 +782,33 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_component_counts_drift_hook_guard.py::test_hook_denies_push_on_drift",
     ),
     StaticCase(
+        # PR 브랜치 실패까지 이슈로 열면 트래커의 88%가 노이즈가 되고(2026-09-17 실측),
+        # 진짜 main 회귀가 그 속에 묻힌다. 무력화가 조용하다 — 이슈는 계속 열린다.
+        "CI-failure 이슈를 기본 브랜치로 한정하는 필터 제거",
+        ".github/workflows/classify-workflow-failures.yml",
+        "          && github.event.workflow_run.head_branch == github.event.repository.default_branch",
+        "",
+        "tests/test_ci_failure_issue_scope_guard.py::test_issue_creation_is_scoped_to_the_default_branch",
+    ),
+    StaticCase(
+        # skip-worktree 파일은 구조적으로 stat 캐시가 낡을 수 있다. `git diff` 로
+        # 판정하면 내용이 다른데도 "변경 없음" 이 된다(이슈 #1335 에서 관측).
+        "동기화 스크립트가 _state 변경을 stat 캐시로 판정 (낡으면 놓침)",
+        "scripts/dev_sync_state_safe.sh",
+        'for f in "${SKIPPED[@]}"; do\n  rc=0\n  state_content_differs "${f}" || rc=$?',
+        'for f in; do\n  rc=1\n  state_content_differs "${f}" || rc=$?',
+        "tests/test_dev_sync_state_safe_guard.py::test_detects_state_change_that_git_diff_cannot_see",
+    ),
+    StaticCase(
+        # 탐지만 고치고 줄 수를 남겨 두면 큰 변경이 0줄로 보고돼 --force 게이트가
+        # 조용히 열린다 — 탐지 실패보다 나쁘다.
+        "큰-diff 게이트의 줄 수를 stat 캐시에 의존시킴",
+        "scripts/dev_sync_state_safe.sh",
+        'lines="$(git diff --no-index --numstat',
+        'lines="$(git diff --numstat -- "${f}" | awk \'{print $1 + $2}\' || true)" # (',
+        "tests/test_dev_sync_state_safe_guard.py::test_large_diff_gate_still_fires_when_git_diff_is_blind",
+    ),
+    StaticCase(
         # 프로세스 치환은 `set -e` 를 타지 않아, git 이 죽어도 빈 DIRTY 가 "변경 없음"
         # 으로 읽힌다. 되돌리기를 건너뛴 채 rc=0 으로 끝나 사용자는 정리된 줄 안다.
         "동기화 스크립트가 git diff 실패를 '변경 없음' 으로 읽음 (fail-open)",
