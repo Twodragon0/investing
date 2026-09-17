@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-01 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202607017845i">美대법원,"미국서 태어나면 미국시민"인정…트럼프 행정명령 기각</a></li><li><a href="https://biz.chosun.com">에코프로비엠, 1조2000억원 유상증자 결정…애프터마켓서 19% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">에코프로비엠, 1조2000억원 유상증자 결정…애프터마켓서 19% 급락</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,476.48 (+0.97%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 916.18 (-0.48%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-07-01 주식 시장에서 176건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,476.48(+0.97%), KOSDAQ 916.18(-0.48%), USD/KRW 1,551.00(+0.58%).
 - *일시적인 문제가 발생했습니다.*
 
 ## 테마별 주요 뉴스

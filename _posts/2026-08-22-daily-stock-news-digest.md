@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-22 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1HXzBxT3l2bkV2MEkwc3dsRC1QUVV4SXhvM1BIMDVGbE1TRjBlSTk2bHlvRmZxcV9iWTVYLVdFcUJnZzJKUjNTLUZnWERFZkgyZm5XY2NvUERNQTVUUk5HRWRDTGlFeUNZai0wMlZYMHjSAXRBVV95cUxPcXk5c0R0MjdVQURWUThBT3A5RXRSR0tYTWlaSmhRMlBZUjZERHZreGhlVjJUektLdUU2NnZXbFpsdjd2ZDNKU1lhbnAzSnZ1bG9TSGdLZ2FfYUYzXzFfNkRoWnNDemZrUE1QYWJxYUMyT182TQ?oc=5">삼성전자·SK하이닉스가 끌어올린 코스피…코스닥은 4%대 급락 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이준영 기자] 미국 국채 금리 상승과 글로벌 소비 둔화 우려, 중동발 유가 불안이 겹친 가운데 국내 증시가 반도체 대형주를 중심으로 극명하게 엇갈렸다.삼성전자와 SK하이닉스가 주주환원 기대를 등에 업고 강세를 이어가면서 코스피는 6,900선을 되찾았지만, 성장주 비중이</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5oQUpmWkFCaWxIRFJZV1pKcWZia0ZiQ3RlNE1WRHg1Vl9zdHgwQWl4dHFSOTJOWmlwanZyOEV6VGxadmR2UWV0Zzg4Z2VQZHVZbWd4VTRDQ2l1SURzV0ZEd3V0YVpwWWoySkRESg?oc=5">엇갈린 증시…코스피 0.78% 상승 vs 코스닥 5.09% 급락 - 프리진경제</a> <span class="p0-desc">21일 오전 11시 32분 기준 국내 증시가 코스피와 코스닥 간 극명한 온도 차를 보이며 혼조세를 나타내고 있다. 이날 코스피 지수는 외국인의 매수세에 힘입어 전 거래일 대비 0.78% 상승한 반면, 코스닥 지수는 기관과 외국인의 매도 물량이 쏟아지며 5% 이상 급락했다.코스피 지수는</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE8zSlE1cnZiYmpaNGNOT3NlaHhiN05EZXdLcThJYXJTcTJqSVVVUjhzRi0wcktJc0xZdHBkSU1ZeGVmdWltNEtlcFprUnRyalYwVHl0ZHB4QThxMmY4YWVMM1pyWS1qRGFkblRUcXhNRknSAXRBVV95cUxQTHktaUR1N3VNR3ZScktGRkFRUjRUaU11MG1HRmNMemlPSHJ5UGlMX0p0MktYakc5cjg5cjRnU2NBbjdMMktVcFUyTHZCa05fdW1Yc19oNVQ3SmJhdUk3NEFMNW5UX0FYdE43OFZnSnk3Z1AzTg?oc=5">美 장기금리 다시 뛰자 코스피 1%대 하락…코스닥은 3%대 급락 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 미국 장기 국채 금리가 다시 오름세로 돌아서면서 국내 증시가 21일 장 초반 약세를 보이고 있다.전날 급등했던 코스피에서는 외국인과 기관의 차익 실현성 매물이 출회됐고, 코스닥은 성장주를 중심으로 낙폭이 3%대까지 확대됐다.한국거래소에 따르면 이날 오전 코</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,912.95 (+0.88%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 801.94 (-4.63%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-22 주식 시장에서 225건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,912.95(+0.88%), KOSDAQ 801.94(-4.63%), USD/KRW 1,385.16(-0.65%).
 - *마이크론 기술 (나스닥:MU) 주가 4% 상승 - 일어난 일은 다음과 같습니다.*
 
 ## 테마별 주요 뉴스

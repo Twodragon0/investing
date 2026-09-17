@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-17 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Treasury yields hold above 5% ahead of Fed rate decision - 210건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 국채 주목</li><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 반등 주목</li><li>🟣 <strong>DeFi</strong>: 수익률, 국채 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1YMWhNN1cyLUZGQzZIUFZEZ1NuSXpJc1RuUlJBclJ4TXUtRE9Majg0blowdF9tM1JlNUhhdHJJNWhibENyWjItNUJjSU1uczFNbGljNFVOMjRFbkwwQ0dCcGdQQlNuS3NLQmVfRGxCVFU2NTBweG1uZDZn?oc=5">Treasury yields hold above 5% ahead of Fed rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxObFFVaTE3MEZveW9FelZMSjVuVWk5a1BVQWxZVWUwa1lSZXJ5Nk85bncwbFJzc2RZSkg5ZjdqM042X21oZGNmVGYxOEloZTdOb1NpRk1CM2g4b3FESkkyNWE3a1dVTldNMkpVdWtPR3V5TGE4TE5rNHI4dS1IR2lIQ0RCUGZRUm0xbzRLYzJKTjdsZHdsNkhLMVdIaW1RRlBDREhxYmthWlJMaFc1TmFtT3VzNEVaS1dyaE9PMVl3UmZOckpaYkZHNGZJV19IanM?oc=5">Stock market today: Dow, S&P 500, Nasdaq rise ahead of crucial Fed interest rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOd0MyTUgwOFdkTXlFQzdjSExIQUhzWWVENFMwRWF6TFNpTEl3VFR3eXpmQVoyV0Zna1ZNQzRJeU12Wk1BRU9iOWhoYXVEREJsS2RGa200ckJxQ1pwVWsyN2Q1U1RwUEl3dGpsNVdLNmVyLThYTHl4Q3AzMHRDZWM3c2pjRzJ4bHhkZTE0V2thbnUtSWlqckZOUzhlS1I4RXpnbGRWdVp3dnNDNWEzeDdJaFNoR2lRNlV0ZFRwLVhzdU9ycGNlbUt3R1lJUkw0RHpt?oc=5">Stock Market Today: Dow trims decline, S&P 500 and Nasdaq higher ahead of Fed rate decision; oil prices and yields retreat</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Treasury yields hold above 5% ahead of Fed rate decision 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 210건의 뉴스 중 P1 주요 이슈도 24건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (55건): 연준, 국채, 수익률 매크로 변수 (55건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (71건): 코스피, 코스닥, 주요공시 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (15건): 반도체, 반등, 삼성전자 기술 이슈 (15건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Treasury yields hold above 5% ahead of Fed rate decision
-- Stock market today: Dow, S&P 500, Nasdaq rise ahead of crucial Fed interest rate decision
-- Stock Market Today: Dow trims decline, S&P 500 and Nasdaq higher ahead of Fed rate decision; oil pri
-
-### 주요 이슈
-
-- Stock Market Today: S&P 500, Dow, Nasdaq 100 Futures Gain Ahead of FOMC's Antici
-- New ETF Coverage: KCHP
-- The Federal Reserve is expected to hike rates for the first time in three years:
-- 외 21건
-
-### 투자자 체크포인트
-
-- 한국 기사 75건, 글로벌 기사 135건 수집
-- 한국 지수: KOSPI 6,717.97(+1.37%), KOSDAQ 815.98(+0.44%), USD/KRW 1,367.19(+0.31%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:77%"></div></div><span class="theme-count">55건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">71건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:34%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-17.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,717.97 (+1.37%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 815.98 (+0.44%).
+- 2026-09-17 주식 시장에서 210건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,717.97(+1.37%), KOSDAQ 815.98(+0.44%), USD/KRW 1,367.19(+0.31%).
+- *[0915마감체크] 코스피, 고금리·고유가에 4거래일 연속 하락.*
 
 ## 테마별 주요 뉴스
 

@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-17 - 보안 뉴스 요약 �
 
 블록체인 보안 11건 분석. 주목 사건: **[Security] AI has been a ‘net negative’ for crypto: Phemex C**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 11건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (11건): security, exploit, unbacked 보안 이슈 (11건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (4건): exploit, unbacked, cross DeFi 동향 (4건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (4건): exploit, backfires, arbitrary 생태계 동향 (4건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] ETH wallet exploit backfires as MEV bot captures $7.7M, Kelp freezes address
-- [Security] Balancer eyes wind-down after restructuring fails to revive revenue
-- [Security] Startale exploit: Improper Access Control
-
-### 투자자 체크포인트
-
-- 보안 사건 11건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 11건

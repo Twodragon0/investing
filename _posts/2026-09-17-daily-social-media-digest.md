@@ -29,52 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-17 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: US Fed to deliver rate decision with markets betting on hike - 40건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 연준 관련 30건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 연준 관련 18건</li><li>📈 <strong>가격/시장</strong>: 인상, 하락 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 3건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBpUVgwbnd0X05XenhFY3VNS2hOWDdMUUpsWVE0ZFNEeV92SFZ4dDRScFVPdW5SQ2lWZnVwUlVuaGluOE9qX0s1dDVIT2NtVE5mMnlsdGMwRklZOFhsZUt4aERVS0FfN2x5RFJRQTNkRTluQVR6NHd2SXhIYS0?oc=5">US Fed to deliver rate decision with markets betting on hike</a></li><li><a href="https://www.nytimes.com/2026/09/16/business/economy/federal-reserve-interest-rates-warsh.html">Fed Readies for Momentous Rate Decision</a></li><li><a href="https://www.nytimes.com/2026/09/16/business/economy/trump-fed-interest-rates.html">Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: US Fed to deliver rate decision with markets betting on hike 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 40건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
+오늘 수집된 총 40건 중 텔레그램 0건, 소셜 0건, 정치·경제 40건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (30건): 금리, 연준, 인플레이션 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (18건): 트럼프, 연준, 금리 정치 이슈 (18건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📈 가격/시장** (24건): 인상, 하락, 금리 가격 변동 (24건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- US Fed to deliver rate decision with markets betting on hike
-- Fed Readies for Momentous Rate Decision
-- Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision
-
-### 주요 이슈
-
-- Fed Meeting Today: Warsh, FOMC Raised Interest Rates by 0.25 Percentage Point —
-- 美 또 금리 인상?…두 번 올린 한은 '10월 동결' 선택지 좁아지나
-- 美기준금리 0.25%p 인상, 3년만에 긴축…연내 추가인상 시사
-- 외 2건
-
-### 투자자 체크포인트
-
-- 정치·경제 40건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:60%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:80%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:10%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:3%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
