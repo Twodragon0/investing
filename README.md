@@ -119,7 +119,7 @@
 | scripts/tools/check\_untranslated\_body.py        |       77 |       25 |     68% |33, 55, 124-162, 166 |
 | scripts/tools/check\_vercel\_quota.py             |      313 |       60 |     81% |130-144, 208, 384, 427-428, 438-454, 479, 481, 504-506, 539-542, 555, 562-564, 597-598, 604-606, 610, 614-621, 630-631, 634-635, 658-659, 668 |
 | scripts/tools/check\_workflow\_permissions.py     |       96 |       24 |     75% |51, 53, 61, 70, 107, 112, 115, 139-163, 167 |
-| scripts/tools/classify\_failure\_log.py           |       73 |       18 |     75% |215, 244-270, 274 |
+| scripts/tools/classify\_failure\_log.py           |       73 |       18 |     75% |228, 257-283, 287 |
 | scripts/tools/component\_counts.py                |      120 |        3 |     98% |91-92, 247 |
 | scripts/tools/dependabot\_update\_type.py         |       62 |       21 |     66% |114, 130, 140, 144-168 |
 | scripts/tools/fix\_untranslated\_body.py          |       87 |       40 |     54% |35, 107-108, 119-165, 169 |
