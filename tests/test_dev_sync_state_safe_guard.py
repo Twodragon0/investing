@@ -296,6 +296,90 @@ def test_aborts_when_git_diff_fails(repo: Path, tmp_path: Path) -> None:
     assert _skipped(repo), "중단 후 skip-worktree 가 복구되지 않았다"
 
 
+def _make_stat_cache_stale(repo: Path, content: str) -> None:
+    """`git diff` 가 변경을 **놓치는** 상태를 만든다.
+
+    skip-worktree 파일의 내용만 바꾸고 mtime 을 나노초까지 되돌린다. `core.trustctime`
+    이 꺼져 있으면 git 은 stat 캐시만 보고 "깨끗함" 으로 판정한다.
+
+    실제 CI 에서 어떤 경로로 캐시가 낡았는지는 **미확정**이다(#1335 의 런에서는 stderr
+    이 비어 있어 `git diff` 가 죽지 않았음만 확인됐다). 여기서는 그 조건을 결정적으로
+    재현해, 스크립트가 캐시에 의존하지 않는지를 본다.
+    """
+    _git(repo, "config", "core.trustctime", "false")
+    target = repo / "_state" / "a.json"
+    stat = target.stat()
+    target.write_text(content, encoding="utf-8")
+    os.utime(target, ns=(stat.st_atime_ns, stat.st_mtime_ns))
+
+
+def _git_diff_is_blind(repo: Path) -> bool:
+    """전제 확인 — `git diff` 가 정말 못 보는 상태인가.
+
+    이걸 확인하지 않으면 아래 테스트들이 "캐시가 멀쩡한데 통과" 하는 공허한 검사가 된다.
+    """
+    _git(repo, "update-index", "--no-skip-worktree", "_state/a.json")
+    blind = _git(repo, "diff", "--name-only").strip() == ""
+    _git(repo, "update-index", "--skip-worktree", "_state/a.json")
+    return blind
+
+
+def test_detects_state_change_that_git_diff_cannot_see(repo: Path) -> None:
+    """stat 캐시가 낡아 `git diff` 가 못 보는 변경도 탐지해야 한다.
+
+    skip-worktree 는 정의상 "이 파일의 워크트리 상태를 보지 말라" 이므로, 이 스크립트가
+    다루는 파일들은 **구조적으로** stat 캐시가 낡을 수 있다. 놓치면 "버릴 _state 변경
+    없음" 으로 보고하고, 뒤이은 `git pull --ff-only` 가 바로 그 파일 때문에 실패한다 —
+    이 스크립트가 없애려는 그 오류다.
+    """
+    _make_stat_cache_stale(repo, '{"n": 1}\n')
+    assert _git_diff_is_blind(repo), (
+        "전제가 성립하지 않는다 — `git diff` 가 변경을 보고 있어서 이 테스트는 "
+        "아무것도 검증하지 못한다(플랫폼이 ctime/mtime 을 다르게 다룰 수 있다)."
+    )
+
+    proc = _run_script(repo, "--dry-run")
+
+    assert proc.returncode == 0, f"{proc.stdout}\n{proc.stderr}"
+    assert "_state/a.json" in proc.stdout, (
+        f"stat 캐시가 낡았을 때 변경을 놓쳤다 — `git diff` 대신 내용으로 판정해야 한다.\n"
+        f"--- stdout ---\n{proc.stdout}\n--- stderr ---\n{proc.stderr}"
+    )
+    assert "버릴 _state 변경 없음" not in proc.stdout
+
+
+def test_large_diff_gate_still_fires_when_git_diff_is_blind(repo: Path) -> None:
+    """줄 수 계산도 stat 캐시를 타면 안 된다.
+
+    탐지만 내용 기반으로 고치고 `git diff --numstat` 을 남겨 두면, 큰 변경이 **0줄**로
+    보고돼 `--force` 게이트가 조용히 열린다. 그러면 확인 없이 되돌려진다 — 탐지 실패
+    보다 나쁜 결과다(2026-09-17 실측으로 그 중간 상태를 만들어 확인했다).
+    """
+    # stat 캐시는 **크기**도 본다. 그래서 "줄 수가 많으면서 크기는 같은" 변경이어야
+    # 캐시가 속는다 — 커밋된 원본부터 크게 만들고, 같은 길이의 다른 내용으로 바꾼다.
+    baseline = "\n".join(f'{{"line": {i:03d}}}' for i in range(60)) + "\n"
+    big = "\n".join(f'{{"LINE": {i:03d}}}' for i in range(60)) + "\n"
+    assert len(baseline) == len(big), "전제 조건: 두 내용의 바이트 길이가 같아야 한다"
+
+    _git(repo, "update-index", "--no-skip-worktree", "_state/a.json")
+    (repo / "_state" / "a.json").write_text(baseline, encoding="utf-8")
+    _git(repo, "add", "_state/a.json")
+    _git(repo, "commit", "-qm", "baseline")
+    _git(repo, "update-index", "--skip-worktree", "_state/a.json")
+
+    _make_stat_cache_stale(repo, big)
+    assert _git_diff_is_blind(repo), "전제 불성립 — git diff 가 변경을 보고 있다"
+
+    proc = _run_script(repo)
+
+    assert proc.returncode == 1, (
+        f"큰 변경을 --force 없이 통과시켰다 (rc={proc.returncode}). 줄 수가 0 으로 "
+        f"보고됐을 수 있다.\n{proc.stdout}\n{proc.stderr}"
+    )
+    assert (repo / "_state" / "a.json").read_text(encoding="utf-8") == big, "되돌려졌다"
+    assert "--force" in proc.stderr
+
+
 class TestBashVersionGuard:
     """bash 4+ 요구를 시작 시점에 검사하는지 고정한다.
 

@@ -141,11 +141,61 @@ fi
 # 뒤라 안전하고, `_code_only` 가드가 heredoc 표기의 존재 자체를 막기 때문이다
 # (주석 안에 써도 걸린다 — 이 줄이 그래서 기호 없이 적혀 있다).
 mapfile -t DIRTY < <(printf '%s\n' "${DIRTY_RAW}")
+
+# **skip-worktree 였던 파일은 `git diff` 로 판정하지 않는다 — 내용으로 판정한다.**
+#
+# `git diff` 는 인덱스의 stat 캐시(크기·mtime·ctime)가 워크트리와 같으면 내용을
+# 비교하지 않고 "깨끗함" 으로 넘긴다. 그런데 skip-worktree 는 정의상 "이 파일의
+# 워크트리 상태를 보지 말라" 는 표시라, 그 사이 git 은 stat 을 갱신하지 않는다.
+# 즉 이 스크립트가 다루는 파일들은 **구조적으로 stat 캐시가 낡아 있을 수 있다.**
+#
+# 2026-09-17 재현(`core.trustctime=false` 로 ctime 경로를 배제):
+# 내용이 다른데도 `git diff --name-only` 가 빈 결과를 냈다. 그러면 아래 로직이
+# "버릴 _state 변경 없음" 으로 읽고, 뒤이은 `git pull --ff-only` 가 바로 그
+# 파일 때문에 실패한다 — 이 스크립트가 존재하는 이유인 그 오류다.
+#
+# CI 증거: 이슈 #1335(런 35063122625)에서 이 실패가 관측됐고 **stderr 이 비어
+# 있었다.** 즉 `git diff` 는 죽지 않았다 — 2026-09-16 에 닫은 fail-open(종료코드
+# 무시)과는 **다른 경로**다. 그 수정은 유효하지만 이 건의 원인이 아니었다.
+#
+# `git update-index --really-refresh` 는 답이 아니다. 실측 결과 stale 항목의 stat 을
+# 현재 값으로 덮어써 오히려 "깨끗함" 으로 세탁했다.
+#
+# 가드: tests/test_dev_sync_state_safe_guard.py
+state_content_differs() {
+  local path="$1" head_hash work_hash
+  # 추적되지 않거나 HEAD 에 없으면 비교 대상이 아니다.
+  head_hash="$(git rev-parse "HEAD:${path}" 2>/dev/null || true)"
+  [[ -z "${head_hash}" ]] && return 1
+  [[ -f "${path}" ]] || return 1
+  if ! work_hash="$(git hash-object -- "${path}")"; then
+    echo >&2 "error: ${path} 의 내용 해시를 계산하지 못했습니다."
+    return 2
+  fi
+  [[ "${head_hash}" != "${work_hash}" ]]
+}
+
 OUTSIDE=()
 INSIDE=()
+for f in "${SKIPPED[@]}"; do
+  rc=0
+  state_content_differs "${f}" || rc=$?
+  case "${rc}" in
+    0) INSIDE+=("${f}") ;;
+    1) ;;  # 내용 동일 — 버릴 것 없음
+    *)
+      echo >&2 "error: 내용 비교에 실패해 변경 유무를 판정할 수 없습니다: ${f}"
+      restore_skip_worktree
+      exit 1
+      ;;
+  esac
+done
+
 for f in "${DIRTY[@]:-}"; do
   [[ -z "${f}" ]] && continue
   if [[ "${f}" == _state/* ]]; then
+    # 위 루프가 이미 내용으로 판정했다. 중복 등록을 막는다.
+    printf '%s\n' "${SKIPPED[@]}" | grep -qxF "${f}" && continue
     INSIDE+=("${f}")
   else
     OUTSIDE+=("${f}")
@@ -169,7 +219,18 @@ else
   echo "== 버릴 _state 변경 (${#INSIDE[@]}개) =="
   BIG=()
   for f in "${INSIDE[@]}"; do
-    lines="$(git diff --numstat -- "${f}" | awk '{print $1 + $2}')"
+    # `git diff --numstat` 도 stat 캐시를 탄다 — 위 탐지와 같은 이유로 믿을 수 없다.
+    # 캐시가 낡으면 1000줄 변경이 **0줄**로 보고되고, 그러면 아래 `--force` 게이트가
+    # 조용히 열려 실제 내용이 확인 없이 되돌려진다. 2026-09-17 실측으로 그 조합을
+    # 확인했다(탐지는 내용으로 고쳤는데 줄 수만 0 으로 남았다).
+    #
+    # `--no-index` 는 인덱스를 전혀 보지 않고 두 파일을 직접 비교한다.
+    #
+    # `|| true` 가 필요하다: `--no-index` 는 **차이가 있으면 exit 1** 이고(정상 동작),
+    # `set -euo pipefail` 아래서는 그 1 이 파이프라인 종료코드가 되어 대입문이
+    # 스크립트를 죽인다. 즉 "변경을 찾았을 때만" 죽는 형태라 눈에 잘 띄지 않는다.
+    lines="$(git diff --no-index --numstat -- <(git show "HEAD:${f}" 2>/dev/null || true) "${f}" 2>/dev/null |
+      awk '{print $1 + $2}' || true)"
     lines="${lines:-0}"
     printf '  %-52s %s줄\n' "${f}" "${lines}"
     if [[ "${lines}" -gt "${MAX_STATE_DIFF_LINES}" ]]; then
