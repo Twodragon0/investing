@@ -792,7 +792,7 @@ STATIC_CASES: tuple[StaticCase, ...] = (
     ),
     StaticCase(
         # skip-worktree 파일은 구조적으로 stat 캐시가 낡을 수 있다. `git diff` 로
-        # 판정하면 내용이 다른데도 "변경 없음" 이 된다(2026-09-17 재현).
+        # 판정하면 내용이 다른데도 "변경 없음" 이 된다(이슈 #1335 에서 관측).
         "동기화 스크립트가 _state 변경을 stat 캐시로 판정 (낡으면 놓침)",
         "scripts/dev_sync_state_safe.sh",
         'for f in "${SKIPPED[@]}"; do\n  rc=0\n  state_content_differs "${f}" || rc=$?',

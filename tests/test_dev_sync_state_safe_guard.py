@@ -296,81 +296,89 @@ def test_aborts_when_git_diff_fails(repo: Path, tmp_path: Path) -> None:
     assert _skipped(repo), "중단 후 skip-worktree 가 복구되지 않았다"
 
 
-def _make_stat_cache_stale(repo: Path, content: str) -> None:
-    """`git diff` 가 변경을 **놓치는** 상태를 만든다.
+def _blind_diff_git(tmp_path: Path) -> Path:
+    """`git diff --name-only` 만 **빈 결과 + exit 0** 으로 만드는 스텁 git 의 디렉토리.
 
-    skip-worktree 파일의 내용만 바꾸고 mtime 을 나노초까지 되돌린다. `core.trustctime`
-    이 꺼져 있으면 git 은 stat 캐시만 보고 "깨끗함" 으로 판정한다.
+    왜 스텁인가 — 관측된 조건을 그대로 encode 하기 위해서다. 이슈 #1335(런
+    35063122625)의 실패에서 `stderr=''` 였다: `git diff` 는 죽지 않았고 빈 결과를 냈다.
+    **왜** 그랬는지는 미확정이다. 그래서 원인을 흉내 내는 대신 결과를 고정한다.
 
-    실제 CI 에서 어떤 경로로 캐시가 낡았는지는 **미확정**이다(#1335 의 런에서는 stderr
-    이 비어 있어 `git diff` 가 죽지 않았음만 확인됐다). 여기서는 그 조건을 결정적으로
-    재현해, 스크립트가 캐시에 의존하지 않는지를 본다.
+    2026-09-17 에 원인을 재현해 보려 했으나(`core.trustctime=false` + mtime 을 나노초까지
+    원복) **macOS 에서만 재현됐고 Linux CI 에서는 git 이 변경을 정상 탐지했다.** 즉 그
+    기법은 플랫폼 의존이라 가드의 토대가 될 수 없다 — 실제로 첫 판에서 CI 만 red 가 됐다.
+
+    가로채는 것은 **인덱스를 보는 diff** 둘 뿐이다 — `--name-only`(탐지)와
+    `--numstat`(줄 수). 둘 다 같은 stat 캐시를 타므로 한쪽만 막으면 가드가 공허해진다:
+    실제로 `--name-only` 만 막았을 때 줄 수 가드가 뮤테이션을 통과시켰다(2026-09-17).
+
+    `rev-parse` · `hash-object` · `diff --no-index` 는 통과시킨다 — 수정된 경로가
+    실제로 동작하는지 그것으로 검증되기 때문이다.
     """
-    _git(repo, "config", "core.trustctime", "false")
-    target = repo / "_state" / "a.json"
-    stat = target.stat()
-    target.write_text(content, encoding="utf-8")
-    os.utime(target, ns=(stat.st_atime_ns, stat.st_mtime_ns))
+    real_git = shutil.which("git")
+    assert real_git, "PATH 에 git 이 없다"
+    stub_dir = tmp_path / "blindgit"
+    stub_dir.mkdir()
+    stub = stub_dir / "git"
+    stub.write_text(
+        "#!/usr/bin/env bash\n"
+        'if [ "$1" = "diff" ]; then\n'
+        '  case "$2" in\n'
+        "    --name-only | --numstat) exit 0 ;;\n"
+        "  esac\n"
+        "fi\n"
+        f'exec {real_git} "$@"\n',
+        encoding="utf-8",
+    )
+    stub.chmod(0o755)
+    return stub_dir
 
 
-def _git_diff_is_blind(repo: Path) -> bool:
-    """전제 확인 — `git diff` 가 정말 못 보는 상태인가.
-
-    이걸 확인하지 않으면 아래 테스트들이 "캐시가 멀쩡한데 통과" 하는 공허한 검사가 된다.
-    """
-    _git(repo, "update-index", "--no-skip-worktree", "_state/a.json")
-    blind = _git(repo, "diff", "--name-only").strip() == ""
-    _git(repo, "update-index", "--skip-worktree", "_state/a.json")
-    return blind
-
-
-def test_detects_state_change_that_git_diff_cannot_see(repo: Path) -> None:
-    """stat 캐시가 낡아 `git diff` 가 못 보는 변경도 탐지해야 한다.
-
-    skip-worktree 는 정의상 "이 파일의 워크트리 상태를 보지 말라" 이므로, 이 스크립트가
-    다루는 파일들은 **구조적으로** stat 캐시가 낡을 수 있다. 놓치면 "버릴 _state 변경
-    없음" 으로 보고하고, 뒤이은 `git pull --ff-only` 가 바로 그 파일 때문에 실패한다 —
-    이 스크립트가 없애려는 그 오류다.
-    """
-    _make_stat_cache_stale(repo, '{"n": 1}\n')
-    assert _git_diff_is_blind(repo), (
-        "전제가 성립하지 않는다 — `git diff` 가 변경을 보고 있어서 이 테스트는 "
-        "아무것도 검증하지 못한다(플랫폼이 ctime/mtime 을 다르게 다룰 수 있다)."
+def _run_with_blind_diff(repo: Path, stub_dir: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    bash = shutil.which("bash")
+    assert bash, "PATH 에 bash 가 없다"
+    return subprocess.run(
+        [bash, str(_SCRIPT), *args],
+        cwd=repo,
+        capture_output=True,
+        text=True,
+        timeout=120,
+        env={**os.environ, "PATH": f"{stub_dir}{os.pathsep}{os.environ['PATH']}"},
     )
 
-    proc = _run_script(repo, "--dry-run")
+
+def test_detects_state_change_that_git_diff_cannot_see(repo: Path, tmp_path: Path) -> None:
+    """`git diff` 가 빈 결과를 내도 `_state` 변경을 탐지해야 한다.
+
+    skip-worktree 는 정의상 "이 파일의 워크트리 상태를 보지 말라" 는 표시라, git 은 그
+    사이 stat 을 갱신하지 않는다. 즉 이 스크립트가 다루는 파일들은 **구조적으로** stat
+    캐시가 낡을 수 있고, 그러면 `git diff` 가 내용이 다른데도 빈 결과를 낸다.
+
+    놓치면 "버릴 _state 변경 없음" 으로 보고하고, 뒤이은 `git pull --ff-only` 가 바로 그
+    파일 때문에 실패한다 — 이 스크립트가 없애려는 그 오류다.
+    """
+    (repo / "_state" / "a.json").write_text('{"n": 1}\n', encoding="utf-8")
+
+    proc = _run_with_blind_diff(repo, _blind_diff_git(tmp_path), "--dry-run")
 
     assert proc.returncode == 0, f"{proc.stdout}\n{proc.stderr}"
     assert "_state/a.json" in proc.stdout, (
-        f"stat 캐시가 낡았을 때 변경을 놓쳤다 — `git diff` 대신 내용으로 판정해야 한다.\n"
+        "`git diff` 가 빈 결과를 낼 때 변경을 놓쳤다 — 내용으로 판정해야 한다.\n"
         f"--- stdout ---\n{proc.stdout}\n--- stderr ---\n{proc.stderr}"
     )
     assert "버릴 _state 변경 없음" not in proc.stdout
 
 
-def test_large_diff_gate_still_fires_when_git_diff_is_blind(repo: Path) -> None:
-    """줄 수 계산도 stat 캐시를 타면 안 된다.
+def test_large_diff_gate_still_fires_when_git_diff_is_blind(repo: Path, tmp_path: Path) -> None:
+    """줄 수 계산도 `git diff` 의 stat 캐시를 타면 안 된다.
 
     탐지만 내용 기반으로 고치고 `git diff --numstat` 을 남겨 두면, 큰 변경이 **0줄**로
-    보고돼 `--force` 게이트가 조용히 열린다. 그러면 확인 없이 되돌려진다 — 탐지 실패
-    보다 나쁜 결과다(2026-09-17 실측으로 그 중간 상태를 만들어 확인했다).
+    보고돼 `--force` 게이트가 조용히 열린다. 그러면 확인 없이 되돌려진다 — 탐지 실패보다
+    나쁜 결과다(2026-09-17 실측으로 그 중간 상태를 만들어 확인했다).
     """
-    # stat 캐시는 **크기**도 본다. 그래서 "줄 수가 많으면서 크기는 같은" 변경이어야
-    # 캐시가 속는다 — 커밋된 원본부터 크게 만들고, 같은 길이의 다른 내용으로 바꾼다.
-    baseline = "\n".join(f'{{"line": {i:03d}}}' for i in range(60)) + "\n"
-    big = "\n".join(f'{{"LINE": {i:03d}}}' for i in range(60)) + "\n"
-    assert len(baseline) == len(big), "전제 조건: 두 내용의 바이트 길이가 같아야 한다"
+    big = "\n".join(f'{{"line": {i}}}' for i in range(60)) + "\n"
+    (repo / "_state" / "a.json").write_text(big, encoding="utf-8")
 
-    _git(repo, "update-index", "--no-skip-worktree", "_state/a.json")
-    (repo / "_state" / "a.json").write_text(baseline, encoding="utf-8")
-    _git(repo, "add", "_state/a.json")
-    _git(repo, "commit", "-qm", "baseline")
-    _git(repo, "update-index", "--skip-worktree", "_state/a.json")
-
-    _make_stat_cache_stale(repo, big)
-    assert _git_diff_is_blind(repo), "전제 불성립 — git diff 가 변경을 보고 있다"
-
-    proc = _run_script(repo)
+    proc = _run_with_blind_diff(repo, _blind_diff_git(tmp_path))
 
     assert proc.returncode == 1, (
         f"큰 변경을 --force 없이 통과시켰다 (rc={proc.returncode}). 줄 수가 0 으로 "
