@@ -784,6 +784,33 @@ class TestMergeGateTruthTable:
         )
 
 
+def _assert_enough_polls_to_discriminate(job: dict, calls: list[str], output: str) -> None:
+    """상한까지 도는 시나리오가 **판별에 충분한 만큼** 폴링했는지 확인한다.
+
+    이 부류(정상 코드가 영영 머지하지 않는 시나리오)는 상한이 곧 루프의 끝이다.
+    그래서 폴링이 느려지면 **뮤테이션이 머지에 도달하기 전에** 상한이 먼저 와서,
+    정상본과 변형이 같은 결과를 내고 가드가 조용히 vacuous 해진다.
+
+    실제로 그렇게 됐다 — #1345 가 폴링마다 jq 검증을 하나 더 붙이자
+    `test_head_change_restarts_the_window` 가 VACUOUS 로 떨어졌고, 하네스가 아니었으면
+    green 인 채 남았을 것이다.
+
+    그래서 "충분히 돌았는가" 를 단언한다. 부족하면 조용히 통과하는 대신 **시끄럽게**
+    실패한다 — 판별하지 못한 것과 판별해서 통과한 것은 구별되어야 한다.
+
+    기준은 `STABLE_POLLS + 1` 이다. 창 검사를 없앤 변형이 머지에 닿는 데 필요한
+    최소 폴링 수이기 때문이다.
+    """
+    needed = int(str(_merge_step_env(job)["STABLE_POLLS"])) + 1
+    polls = len([c for c in calls if c.startswith("pr checks")])
+    assert polls >= needed, (
+        f"폴링 {polls}회 — 판별에 필요한 {needed}회에 못 미친다. 이 시나리오는 상한이 "
+        "루프의 끝이므로, 폴링이 느려지면 변형이 머지에 닿기 전에 상한이 와서 가드가 "
+        "vacuous 해진다. DEADLINE 을 늘리거나 폴링 비용을 줄일 것.\n"
+        f"--- 출력 ---\n{output}"
+    )
+
+
 class TestMergeStepBehaviourRegressions:
     """리뷰(2026-09-18)가 뚫은 나머지 뮤테이션을 실행으로 고정한다.
 
@@ -807,8 +834,7 @@ class TestMergeStepBehaviourRegressions:
         # 짧게 잡으면 개수 검사를 없앤 변형도 머지에 도달하기 전에 상한에 걸려
         # 이 시나리오가 아무것도 판별하지 못한다(2026-09-18 하네스가 VACUOUS 로 잡음).
         rc, output, calls = _execute_merge_step(job, tmp_path, [only_self], deadline="25")
-        polls_done = len([c for c in calls if c.startswith("pr checks")])
-        assert polls_done >= 1, "폴링이 한 번도 일어나기 전에 끝났다 — 이 시나리오가 아무것도 검증하지 못한다."
+        _assert_enough_polls_to_discriminate(job, calls, output)
         merges = [c for c in calls if c.startswith("pr merge")]
         assert not merges, (
             f"non-self 체크가 0건인데 머지했다: {merges}. 목록이 자기 자신뿐인 순간은 "
@@ -973,9 +999,7 @@ class TestStabilizationWindowBehaviour:
             f"않으면 새 head 를 1회만 보고 머지한다.\n--- 출력 ---\n{output}"
         )
         assert rc != 0, f"창이 차지 않았는데 성공으로 끝났다(rc={rc}).\n--- 출력 ---\n{output}"
-        assert len([c for c in calls if c.startswith("pr checks")]) >= 3, (
-            "폴링이 3회 미만이면 이 시나리오가 창 초기화를 관측하지 못한다."
-        )
+        _assert_enough_polls_to_discriminate(job, calls, output)
 
 
 class TestDiagnosticsAndResilience:
