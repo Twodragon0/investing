@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-18 - 주식 뉴스 요약 이�
 
 - KOSPI 6,715.41 (-0.04%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 822.18 (+0.76%).
-- 2026-09-18 주식 시장에서 193건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,715.41(-0.04%), KOSDAQ 822.18(+0.76%), USD/KRW 1,380.88(+0.27%).
 - *Davidson College Economics Professor Vikram Kumar analyzes the unique combination of factors behind the recent surge.*
 
 ## 테마별 주요 뉴스
