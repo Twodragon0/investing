@@ -901,7 +901,11 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         ".github/workflows/dependabot-auto-merge.yml",
         'if [ "$stable" -ge "$STABLE_POLLS" ]; then\n                  break\n                fi',
         ': \'"$stable" -ge "$STABLE_POLLS"\'\n                break',
-        "tests/test_dependabot_auto_merge_guard.py::TestMergeStepBehaviourRegressions::test_waits_for_a_check_that_appears_late",
+        # 대상은 **3폴링** 시나리오다. 이 변형의 무조건 `break` 는 "집합이 직전과
+        # 동일" 분기 **안에** 있어 1회차에는 발동하지 않는다. 그래서 2회차에 체크가
+        # 등장하는 시나리오(`test_waits_for_a_check_that_appears_late`)로는 판별되지
+        # 않는다 — 2026-09-18 하네스가 VACUOUS 로 잡아 준 오지정이다.
+        "tests/test_dependabot_auto_merge_guard.py::TestStabilizationWindowBehaviour::test_catches_a_check_that_appears_after_the_first_confirmation",
     ),
     StaticCase(
         # 다른 워크플로우의 동명 잡까지 제외되어 그 체크를 기다리지 않는다.
