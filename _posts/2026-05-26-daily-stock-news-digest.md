@@ -191,7 +191,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8tVU1YWXlrUzVMMVlNMGN4c0tXN3ZwY0VsTFpFemZrSnJWQ21wRDhXWTI5UFNaeDQ5WGx6YzZ3LWQ4bVR3eGdoVkRUdzg2Y0xxYVEwMngyS0VEX3g2UjJsRVg1MGRLSFJZNnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전·닉스 레버리지 27일 출시.반도체 투톱 주가 ±2배 추종 - 금융소비자뉴스</a>
-<p class="news-desc">[금융소비자뉴스 홍윤정 기자] 오는 27일 삼성전자·SK하이닉스[000660]를 기초자산으로 둔 단일종목 레버리지 상품 상장을 앞두고, 금융당국이 투자자들에게 각별한 주의를 당부했다.금융위원회와 금융감독원은 26일 이같은 내용의 유의사항을 안내하며, 해당 상품이 일간 변동률 ±2배를 추종하는 고위험 구조인 만큼 투자자들의 충분한 이해가 필요하다고 강조했다.이번에 유가증권시장에 상장되는 단일종목 레버리지 상품은 총 18개다. ETF의 경우 삼성·미래에셋·한국투자·KB&amp;mi</p>
+<p class="news-desc">[금융소비자뉴스 홍윤정 기자] 오는 27일 삼성전자·SK하이닉스[000660] 를 기초자산으로 둔 단일종목 레버리지 상품 상장을 앞두고, 금융당국이 투자자들에게 각별한 주의를 당부했다.금융위원회와 금융감독원은 26일 이같은 내용의 유의사항을 안내하며, 해당 상품이 일간 변동률 ±2배를 추종하는 고위험 구조인 만큼 투자자들의 충분한 이해가 필요하다고 강조했다.이번에 유가증권시장에 상장되는 단일종목 레버리지 상품은 총 18개다. ETF의 경우 삼성·미래에셋·한국투자·KB&amp;mi</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -234,7 +234,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1BZHRvOVdWYXZTY01SLVJKTXlYT3I5bFlZcWRFUXBJSFdLY1pTbl95d2FYcXprQUxzdXlOc2x5U2xzNW5tM3JKek16cDZkMW9yZVhXcXB1bFkzbUdIajB0MVBhSFlCX2hmaS1UZHJzVk3SAXRBVV95cUxQTkdJTmlFRE1feUpIUkJZb3lDU0lLYzd2c0pkRkpWSGNCZ081dmQ3VXVJYUc2OElNeGJPYVN5Tm5DeGNlOWZqbXY3eXVFU1pJZ0czXzZSeEpMa1Z1QlB3azJuMk1rNGlwTlVoNkJMQjBBd0VYTw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 투톱 레버리지 상품 상장…고수익 기대 속 손실 경고 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 이하나 기자]삼성전자와 SK하이닉스 주가 흐름을 두 배로 추종하는 단일종목 레버리지 상품이 국내 증시에 처음 선보인다.해외로 빠져나가는 개인 투자자 수요를 국내 시장으로 흡수하려는 취지지만, 최근 대형 반도체주 변동성이 커진 상황에서 고위험 상품이 출시되는 만큼 투자자</p>
+<p class="news-desc">[산경투데이 = 이하나 기자] 삼성전자와 SK하이닉스 주가 흐름을 두 배로 추종하는 단일종목 레버리지 상품이 국내 증시에 처음 선보인다.해외로 빠져나가는 개인 투자자 수요를 국내 시장으로 흡수하려는 취지지만, 최근 대형 반도체주 변동성이 커진 상황에서 고위험 상품이 출시되는 만큼 투자자</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
