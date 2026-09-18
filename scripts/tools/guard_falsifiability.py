@@ -950,6 +950,26 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "",
         "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_merge_is_pinned_to_the_observed_head",
     ),
+    StaticCase(
+        # 2026-09-18 리뷰 실측: 이 4줄을 통째로 지워도 22개 가드가 전부 통과했고,
+        # 스텁 `gh` 로 실행하니 FAILURE 체크를 안고 머지됐다. 분류가 옳아도 그
+        # 결과를 쓰지 않으면 아무 의미가 없다 — 실행 관측 가드가 그 간극을 막는다.
+        "실패 체크 abort 무력화 (분류는 하되 중단하지 않음)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'if [ -n "$failed" ]; then',
+        "if false; then",
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeStepBehaviour::test_a_failed_check_aborts_without_merging",
+    ),
+    StaticCase(
+        # `(pull_request || patch) || dispatch` 가 되어 자동 경로에서 항상 참이다 —
+        # semver-major dependabot PR 이 사람 검토 없이 머지된다. 옛 가드는 두 문자열의
+        # **존재**만 봐서 통과했다.
+        "patch 게이트를 자동 경로에서 분리 (&& → ||)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "&& steps.metadata.outputs.update-type == 'version-update:semver-patch')",
+        "|| steps.metadata.outputs.update-type == 'version-update:semver-patch')",
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeGateTruthTable::test_merge_gate_evaluates_as_specified",
+    ),
 )
 
 

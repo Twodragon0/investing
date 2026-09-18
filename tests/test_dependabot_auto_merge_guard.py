@@ -32,11 +32,39 @@ CI 로그를 읽기 전까지는 티가 나지 않는다 — 워크플로우는 
 교훈은 저장소 메모 `feedback_guard_must_discriminate_not_just_red` 와 같다. red 가
 되는 것만으로는 부족하고, **주장하는 위험과 같은 방향**의 변형에 red 여야 한다.
 그래서 아래 가드는 형태가 아니라 값(집합의 원소, 토큰 위치, 숫자 관계)을 단언한다.
+
+## 2차 버전도 부족했다 (2026-09-18 리뷰 실측)
+
+값을 보도록 고쳤는데도 뮤테이션 24종 중 **9종이 22개 가드를 전부 통과**했다. 같은
+병이 남아 있었다 — docstring 은 위험을 이름으로 선언하는데 단언은 문자열 존재만 본다.
+가장 무거운 둘:
+
+* **실패 체크 abort 블록 4줄을 통째로 지워도 통과**했다. `IN(...)` 집합의 내용은
+  제대로 봤지만, 그 분류 결과가 실제로 머지를 막는지는 아무도 보지 않았다.
+  스텁 `gh` 로 실행해 보니 FAILURE 체크를 안고 머지됐다.
+* **patch 게이트의 안쪽 `&&` 를 `||` 로 바꿔도 통과**했다. 그러면 자동 경로에서
+  update-type 과 무관하게 항상 참이라 semver-major 가 사람 검토 없이 머지된다.
+  옛 단언은 두 문자열의 **존재**만 봤다 — 주석은 "묶여 있어야 한다" 는 결합을
+  주장했지만 단언은 동거만 확인한 것이다.
+
+그래서 이 파일은 이제 두 종류의 가드를 함께 쓴다.
+
+* `TestMergeStepBehaviour` — 머지 스텝의 `run:` 을 스텁 `gh` 와 함께 **실제로
+  실행**하고 종료코드와 `gh pr merge` 호출 여부를 관측한다.
+* `TestMergeGateTruthTable` — `if:` 식을 파싱해 **진리표**로 평가한다. 연산자나
+  괄호를 바꾸면 값이 달라지므로 문자열로는 빠져나갈 수 없다.
+
+새 가드를 여기에 더할 때는 같은 질문을 먼저 하라 — **내가 막겠다는 회귀를 주입하면
+이 단언이 red 가 되는가?** 답이 "그 문자열이 사라지니까" 라면 아직 부족하다.
 """
 
 from __future__ import annotations
 
+import json
+import os
 import re
+import shutil
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -421,3 +449,303 @@ class TestStillScopedToDependabotPatches:
                 f"patch 게이트가 자동 경로(`pull_request`)에 묶여 있지 않다: {gate!r}. "
                 "수동 경로 분기와 OR 로만 이어지면 자동 경로에서도 patch 제한이 풀린다."
             )
+
+
+# ---------------------------------------------------------------------------
+# 실행 관측 가드 — 문자열 검사로는 못 잡는 것들
+# ---------------------------------------------------------------------------
+#
+# 2026-09-18 제3자 리뷰 실측: 뮤테이션 24종 중 **9종이 22개 가드를 전부 통과**했다.
+# 그중 가장 무거운 것이 아래 C1 이다 — 실패 체크 abort 블록 4줄을 **통째로 지워도**
+# 22/22 green 이었고, 스텁 `gh` 로 실행해 보니 FAILURE 체크를 안고 머지됐다.
+#
+# 원인은 방어가 한 칸 어긋나 있던 것이다. `TestStateClassificationIsFailClosed` 는
+# `IN(...)` **집합의 내용**을 제대로 보지만, 그 분류 결과가 실제로 머지를 막는지는
+# 아무도 보지 않았다. `failed` 변수는 계산되고 버려져도 침묵했다.
+#
+# 그래서 이 절은 텍스트를 보지 않는다. 머지 스텝의 `run:` 을 스텁 `gh` 와 함께
+# **실제로 실행**하고, 종료코드와 `gh pr merge` 호출 여부를 관측한다. 이렇게 하면
+# "어떻게 썼는가" 가 아니라 "무엇이 일어나는가" 를 단언하게 되어, 구현을 바꿔도
+# 성질이 유지되는 한 green 이다.
+
+_STUB_GH = """#!/usr/bin/env bash
+# 스텁 `gh`. 모든 호출을 $GH_CALLS 에 기록하고 시나리오대로 응답한다.
+printf '%s\\n' "$*" >> "$GH_CALLS"
+case "$1 $2" in
+  "pr view")
+    # head SHA. 고정값이면 `--match-head-commit` 경로가 항상 같은 값을 받는다.
+    echo "deadbeefcafe0000000000000000000000000000"
+    ;;
+  "pr checks")
+    # 폴링 회차마다 다른 응답을 주기 위해 호출 횟수를 센다.
+    n="$(grep -c '^pr checks' "$GH_CALLS")"
+    f="${GH_CHECKS_DIR}/${n}.json"
+    [ -f "$f" ] || f="${GH_CHECKS_DIR}/last.json"
+    cat "$f"
+    # 실제 `gh pr checks` 는 대기 중이면 exit 8, 실패가 있으면 exit 1 로 끝난다.
+    exit "${GH_CHECKS_RC:-8}"
+    ;;
+  "pr merge")
+    echo "MERGED"
+    ;;
+esac
+"""
+
+
+def _merge_step_raw(job: dict) -> str:
+    """머지 스텝의 `run:` **원문**. 실행 대상이므로 주석을 걷어내지 않는다."""
+    hits = [s["run"] for s in job["steps"] if isinstance(s.get("run"), str) and "gh pr merge" in s["run"]]
+    assert len(hits) == 1, f"`gh pr merge` 스텝이 정확히 1개여야 한다(현재 {len(hits)}개)"
+    return hits[0]
+
+
+def _execute_merge_step(
+    job: dict,
+    tmp_path: Path,
+    polls: list[str],
+    *,
+    checks_rc: str = "8",
+    deadline: str = "5",
+) -> tuple[int, str, list[str]]:
+    """머지 스텝의 `run:` 을 스텁 `gh` 로 실행하고 (rc, 출력, gh 호출목록) 을 준다.
+
+    `polls` 는 폴링 **회차별** `gh pr checks` 응답(JSON 문자열)이다. 회차가 모자라면
+    마지막 응답이 계속 반복된다 — 늦게 뜨는 체크 같은 시간 의존 시나리오를 표현할 수
+    있게 하려는 것이다.
+
+    `SELF_CHECK`/`SELF_WORKFLOW` 는 워크플로우의 `env:` 에서 그대로 읽는다. 여기에
+    값을 베껴 두면 워크플로우 쪽이 바뀌었을 때 이 테스트만 옛 값을 보며 green 이 된다.
+    """
+    bash = shutil.which("bash")
+    if not bash or not shutil.which("jq"):
+        pytest.skip("이 가드는 `bash` 와 `jq` 를 실제로 실행한다 — 둘 다 있어야 의미가 있다")
+
+    stub_dir = tmp_path / "bin"
+    stub_dir.mkdir()
+    stub = stub_dir / "gh"
+    stub.write_text(_STUB_GH, encoding="utf-8")
+    stub.chmod(0o755)
+
+    checks_dir = tmp_path / "checks"
+    checks_dir.mkdir()
+    for idx, payload in enumerate(polls, start=1):
+        (checks_dir / f"{idx}.json").write_text(payload, encoding="utf-8")
+    (checks_dir / "last.json").write_text(polls[-1], encoding="utf-8")
+
+    calls = tmp_path / "calls.txt"
+    calls.write_text("", encoding="utf-8")
+
+    step_env = _merge_step_env(job)
+    env = {
+        **os.environ,
+        "PATH": f"{stub_dir}{os.pathsep}{os.environ['PATH']}",
+        "GH_CALLS": str(calls),
+        "GH_CHECKS_DIR": str(checks_dir),
+        "GH_CHECKS_RC": checks_rc,
+        "PR_URL": "https://github.com/o/r/pull/1",
+        "GH_TOKEN": "stub-token-not-a-secret",
+        "SELF_CHECK": str(step_env["SELF_CHECK"]),
+        "SELF_WORKFLOW": str(step_env["SELF_WORKFLOW"]),
+        # 실행 시간을 줄이기 위한 값. 폴링 간격과 상한만 줄이고 로직은 그대로다.
+        "DEADLINE_SECONDS": deadline,
+        "POLL_SECONDS": "0",
+    }
+    proc = subprocess.run(
+        [bash, "-c", _merge_step_raw(job)],
+        capture_output=True,
+        text=True,
+        env=env,
+        timeout=120,
+        check=False,
+    )
+    invoked = [line for line in calls.read_text(encoding="utf-8").splitlines() if line.strip()]
+    return proc.returncode, proc.stdout + proc.stderr, invoked
+
+
+def _check(name: str, state: str, workflow: str = "Some Workflow") -> dict:
+    return {"name": name, "state": state, "workflow": workflow}
+
+
+def _payload(*checks: dict) -> str:
+
+    return json.dumps(list(checks))
+
+
+class TestMergeStepBehaviour:
+    """머지 스텝을 **실행해** 관측한다. 텍스트 단언으로는 아래 회귀를 못 잡는다."""
+
+    def test_a_failed_check_aborts_without_merging(self, job: dict, tmp_path: Path) -> None:
+        """실패 체크가 하나라도 있으면 머지 호출 자체가 없어야 한다.
+
+        2026-09-18 실측: 실패 체크 abort 블록 4줄을 지워도 기존 22개 가드가 전부
+        통과했고, 실행해 보니 rc=0 으로 **머지됐다**. 분류가 옳아도 그 결과를 쓰지
+        않으면 아무 의미가 없다 — 이 단언이 그 간극을 막는다.
+        """
+        rc, output, calls = _execute_merge_step(
+            job,
+            tmp_path,
+            [_payload(_check("quality", "SUCCESS"), _check("verify", "FAILURE"))],
+            checks_rc="1",
+        )
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert not merges, (
+            f"실패한 체크가 있는데 머지를 호출했다: {merges}. 이 워크플로우의 최악 실패 "
+            f"양식이다.\n--- 출력 ---\n{output}"
+        )
+        assert rc != 0, f"실패 체크를 보고도 성공으로 끝났다(rc={rc}).\n--- 출력 ---\n{output}"
+        assert "verify" in output, (
+            f"중단은 했으나 어느 체크 때문인지 남기지 않았다 — 진단 불가능한 red 다.\n--- 출력 ---\n{output}"
+        )
+
+    def test_all_green_merges_pinned_to_the_polled_head(self, job: dict, tmp_path: Path) -> None:
+        """반대 방향. 전부 통과면 실제로 머지해야 하고, head 고정이 실려야 한다.
+
+        이 단언이 없으면 "아무것도 머지하지 않는" 구현이 위 테스트를 통과한다.
+        """
+        green = _payload(_check("quality", "SUCCESS"), _check("verify", "SUCCESS"))
+        rc, output, calls = _execute_merge_step(job, tmp_path, [green])
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert rc == 0, f"전부 통과인데 머지에 실패했다(rc={rc}).\n--- 출력 ---\n{output}"
+        assert len(merges) == 1, f"머지 호출이 정확히 1회여야 한다(현재 {len(merges)}회): {merges}"
+        assert "--match-head-commit deadbeefcafe0000000000000000000000000000" in merges[0], (
+            f"머지가 폴링 때 관측한 head 에 고정되지 않았다: {merges[0]!r}. 고정이 빠지면 "
+            "마지막 폴링 이후 들어온 커밋이 검증 없이 머지된다."
+        )
+
+
+# ---------------------------------------------------------------------------
+# GitHub expression 진리표 가드
+# ---------------------------------------------------------------------------
+#
+# 2026-09-18 실측: patch 게이트의 안쪽 `&&` 를 `||` 로 바꿔도 22/22 green 이었다.
+# 그러면 `if:` 가 `(pull_request || patch) || dispatch` 가 되어 **자동 경로에서
+# update-type 과 무관하게 항상 참**이다 — semver-major dependabot PR 이 사람 검토
+# 없이 머지된다.
+#
+# 통과한 이유는 옛 단언이 두 문자열의 **존재**만 봤기 때문이다. 주석은 "patch 게이트가
+# 자동 경로에 **묶여** 있어야 한다" 는 결합을 주장했는데, 단언은 결합이 아니라
+# 동거만 확인했다. 그래서 여기서는 식을 파싱해 **진리표**로 단언한다 — 연산자를
+# 바꾸거나 괄호를 옮기면 값이 달라지므로 문자열로는 빠져나갈 수 없다.
+
+_EXPR_TOKEN_RE = re.compile(r"\s*(\(|\)|\|\||&&|==|!=|'[^']*'|[A-Za-z_][A-Za-z0-9_.\-]*)")
+
+
+def _tokenize_expression(expr: str) -> list[str]:
+    tokens: list[str] = []
+    pos = 0
+    while pos < len(expr):
+        if expr[pos].isspace():
+            pos += 1
+            continue
+        match = _EXPR_TOKEN_RE.match(expr, pos)
+        assert match, f"GitHub expression 을 토큰화하지 못했다 — {expr[pos : pos + 40]!r} 부근"
+        tokens.append(match.group(1))
+        pos = match.end()
+    return tokens
+
+
+def _eval_expression(expr: str, context: dict[str, str]) -> bool:
+    """`if:` 식을 평가한다. `==`/`!=`/`&&`/`||`/괄호/문자열/컨텍스트 경로만 지원한다.
+
+    모르는 컨텍스트 경로는 빈 문자열로 넘기지 않고 **에러로 만든다**. 조용히 falsy 로
+    두면 식이 새 컨텍스트를 쓰기 시작했을 때 진리표가 엉뚱한 값을 검증하면서 green 이
+    된다 — 가드가 스스로 무력해지는 경로다.
+    """
+    tokens = _tokenize_expression(expr)
+    pos = 0
+
+    def peek() -> str | None:
+        return tokens[pos] if pos < len(tokens) else None
+
+    def take() -> str:
+        nonlocal pos
+        lexeme = tokens[pos]
+        pos += 1
+        return lexeme
+
+    def primary() -> object:
+        lexeme = take()
+        if lexeme == "(":
+            value = or_expr()
+            assert take() == ")", f"괄호가 닫히지 않았다: {expr!r}"
+            return value
+        if lexeme.startswith("'"):
+            return lexeme[1:-1]
+        assert lexeme in context, (
+            f"진리표가 모르는 컨텍스트 경로가 식에 들어왔다: {lexeme!r}. 이 가드의 "
+            f"context 에 값을 추가해 의도한 진리표를 다시 정의할 것 — 그냥 두면 "
+            f"가드가 엉뚱한 식을 검증하며 통과한다."
+        )
+        return context[lexeme]
+
+    def comparison() -> object:
+        left = primary()
+        lexeme = peek()
+        if lexeme in ("==", "!="):
+            take()
+            right = primary()
+            return (left == right) if lexeme == "==" else (left != right)
+        return left
+
+    def and_expr() -> object:
+        # GitHub 의 `&&`/`||` 는 불리언이 아니라 **피연산자 값**을 돌려주는 단축평가다.
+        # 파이썬의 `and`/`or` 와 같은 의미이므로 그대로 옮긴다.
+        value = comparison()
+        while peek() == "&&":
+            take()
+            right = comparison()
+            value = right if value else value
+        return value
+
+    def or_expr() -> object:
+        value = and_expr()
+        while peek() == "||":
+            take()
+            right = and_expr()
+            value = value if value else right
+        return value
+
+    result = or_expr()
+    assert pos == len(tokens), f"식을 끝까지 소비하지 못했다(남은 토큰 {tokens[pos:]!r}): {expr!r}"
+    return bool(result)
+
+
+def _merge_step_if(job: dict) -> str:
+    steps = [s for s in job["steps"] if isinstance(s.get("run"), str) and "gh pr merge" in s["run"]]
+    assert len(steps) == 1, f"`gh pr merge` 스텝이 정확히 1개여야 한다(현재 {len(steps)}개)"
+    gate = steps[0].get("if")
+    assert isinstance(gate, str) and gate.strip(), "머지 스텝에 `if:` 게이트가 없다 — 모든 PR 이 머지 경로를 탄다."
+    return gate
+
+
+_EVENT = "github.event_name"
+_UPDATE_TYPE = "steps.metadata.outputs.update-type"
+
+#: (이벤트, update-type) → 머지 스텝이 돌아야 하는가.
+#:
+#: 자동 경로(`pull_request`)는 patch 만, 수동 경로(`workflow_dispatch`)는 사람이
+#: 명시적으로 부른 것이므로 update-type 제한을 두지 않는다 — 범위 제약 bump 가
+#: semver-major 로 **오분류**되어 자동 경로를 못 타는 실측(#1321·#1329) 때문에
+#: 수동 경로까지 patch 로 묶으면 정작 막힌 PR 을 풀 수단이 사라진다.
+_GATE_TRUTH_TABLE = [
+    ("pull_request", "version-update:semver-patch", True),
+    ("pull_request", "version-update:semver-minor", False),
+    ("pull_request", "version-update:semver-major", False),
+    ("pull_request", "", False),
+    ("workflow_dispatch", "version-update:semver-major", True),
+    ("workflow_dispatch", "", True),
+    ("push", "version-update:semver-patch", False),
+    ("schedule", "version-update:semver-patch", False),
+]
+
+
+class TestMergeGateTruthTable:
+    @pytest.mark.parametrize(("event", "update_type", "expected"), _GATE_TRUTH_TABLE)
+    def test_merge_gate_evaluates_as_specified(self, job: dict, event: str, update_type: str, expected: bool) -> None:
+        gate = _merge_step_if(job)
+        actual = _eval_expression(gate, {_EVENT: event, _UPDATE_TYPE: update_type})
+        assert actual is expected, (
+            f"머지 게이트가 event_name={event!r}, update-type={update_type!r} 에서 "
+            f"{actual} 로 평가된다(기대 {expected}).\n게이트: {gate!r}\n"
+            "자동 경로에서 patch 제한이 풀리면 semver-minor/major 가 사람 검토 없이 머지된다."
+        )
