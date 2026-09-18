@@ -870,8 +870,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         # 통째로 버려 **전부 통과한 PR 도 머지되지 않는다**(2026-09-15 스텁 실측).
         '체크 조회 출력을 종료코드로 폐기 (|| raw="")',
         ".github/workflows/dependabot-auto-merge.yml",
-        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file" || true)"',
-        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file")" || raw=""',
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$checks_err" || true)"',
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$checks_err")" || raw=""',
         "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_check_query_does_not_discard_output_on_nonzero_exit",
     ),
     StaticCase(
