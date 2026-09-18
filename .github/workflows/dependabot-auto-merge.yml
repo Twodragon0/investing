@@ -273,20 +273,20 @@ jobs:
           # 타임아웃(timeout-minutes)이 잡되 `::error::` 없이 러너 메시지만 남아,
           # "체크를 기다리다 못 끝났다" 와 "머지 호출이 멈췄다" 가 구별되지 않는다.
           #
-          # `timeout` 은 GNU coreutils 다 — ubuntu-latest 에는 있지만 macOS 에는
-          # 기본 설치가 아니다. 이 `run:` 은 가드가 스텁 `gh` 로 **로컬에서도
-          # 실행**하므로, 무조건 쓰면 CI 만 통과하고 로컬은 exit 127 로 깨진다.
-          # 그래서 있을 때만 쓴다.
+          # 예산은 남은 deadline 에서 가져온다. 상수를 박으면 DEADLINE_SECONDS 를
+          # 바꿔도 따라오지 않는다.
           merge_budget=$((deadline - SECONDS))
           [ "$merge_budget" -ge 60 ] || merge_budget=60
-          if command -v timeout >/dev/null 2>&1; then
-            if ! timeout "$merge_budget" gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"; then
-              rc=$?
-              if [ "$rc" -eq 124 ]; then
-                echo "::error::머지 호출이 ${merge_budget}s 안에 끝나지 않았다 (head=${head})"
-              fi
-              exit "$rc"
+
+          # 종료코드는 반드시 `|| rc=$?` 로 받는다. `if ! cmd; then rc=$?` 로 쓰면
+          # `$?` 가 `! cmd` 의 결과라 **항상 0** 이고, 그대로 `exit "$rc"` 하면
+          # 머지 실패가 성공으로 보고된다 — 이 PR 이 닫으려는 fail-open 그 자체다
+          # (2026-09-18 실측으로 잡음).
+          rc=0
+          timeout "$merge_budget" gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head" || rc=$?
+          if [ "$rc" -ne 0 ]; then
+            if [ "$rc" -eq 124 ]; then
+              echo "::error::머지 호출이 ${merge_budget}s 안에 끝나지 않았다 (head=${head})"
             fi
-          else
-            gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"
+            exit "$rc"
           fi

@@ -542,6 +542,19 @@ def _execute_merge_step(
     stub.write_text(_STUB_GH, encoding="utf-8")
     stub.chmod(0o755)
 
+    # `timeout` 은 GNU coreutils 라 ubuntu-latest 에는 있지만 macOS 에는 기본
+    # 설치가 아니다. 그 이식성 문제를 **프로덕션 YAML 에 넣지 않는다** — 이
+    # 워크플로우는 ubuntu-latest 전용이고, 조건부 분기를 넣으면 `gh pr merge` 가
+    # 두 번 등장해 뮤테이션 앵커가 모호해진다(2026-09-18 하네스가 AMBIGUOUS-ANCHOR
+    # 3건으로 잡음). 대신 없는 플랫폼에서만 shim 을 깔아 준다.
+    #
+    # shim 은 시간 제한을 걸지 않는다. 지금 시나리오 중 머지 호출이 걸리는 것은
+    # 없으므로 관측 대상이 아니고, 걸리는 경우를 덮으려면 별도 시나리오가 필요하다.
+    if not shutil.which("timeout"):
+        shim = stub_dir / "timeout"
+        shim.write_text('#!/usr/bin/env bash\nshift\nexec "$@"\n', encoding="utf-8")
+        shim.chmod(0o755)
+
     checks_dir = tmp_path / "checks"
     checks_dir.mkdir()
     for idx, payload in enumerate(polls, start=1):
@@ -1022,6 +1035,13 @@ class TestDiagnosticsAndResilience:
         assert all("$merge_budget" in ln for ln in bounded), (
             f"머지 호출의 시간 예산이 남은 deadline 에서 오지 않는다: {bounded!r}. "
             "상수를 박으면 deadline 을 바꿔도 따라오지 않는다."
+        )
+        # `if ! cmd; then rc=$?` 는 `$?` 가 `! cmd` 의 결과라 **항상 0** 이다.
+        # 그대로 `exit "$rc"` 하면 머지 실패가 성공으로 보고된다 — 이 파일이
+        # 닫으려는 fail-open 그 자체이고, 2026-09-18 에 실제로 한 번 들어왔다.
+        assert all("|| rc=$?" in ln for ln in bounded), (
+            f"머지 종료코드를 `|| rc=$?` 로 받지 않는다: {bounded!r}. "
+            "`if ! cmd; then rc=$?` 형태면 rc 가 항상 0 이라 실패가 성공으로 보고된다."
         )
         assert "-eq 124" in run, (
             "`timeout` 의 종료코드 124 를 구분하지 않는다. 구분하지 않으면 시간 초과가 "
