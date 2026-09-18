@@ -998,6 +998,23 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "|| steps.metadata.outputs.update-type == 'version-update:semver-patch')",
         "tests/test_dependabot_auto_merge_guard.py::TestMergeGateTruthTable::test_merge_gate_evaluates_as_specified",
     ),
+    StaticCase(
+        # 창을 1폴링(=30s)으로 되돌리면 실측 96s 지연 뒤 나타나는 체크를 못 본다.
+        # 그게 실패 체크여도 그냥 머지된다(2026-09-18 스텁 재현).
+        "안정화 창을 실측 지연보다 짧게 (STABLE_POLLS 4 -> 1)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'STABLE_POLLS: "4"',
+        'STABLE_POLLS: "1"',
+        "tests/test_dependabot_auto_merge_guard.py::TestStabilizationWindowCoversObservedDelay::test_window_is_longer_than_the_measured_status_delay",
+    ),
+    StaticCase(
+        # 안정 판정이 커밋을 추적하지 않으면 새 head 를 1회만 보고 머지한다.
+        "head 변경 시 안정화 창 초기화 제거",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'if [ "$current" = "$previous" ] && [ "$head" = "$previous_head" ]; then',
+        'if [ "$current" = "$previous" ]; then',
+        "tests/test_dependabot_auto_merge_guard.py::TestStabilizationWindowBehaviour::test_head_change_restarts_the_window",
+    ),
 )
 
 

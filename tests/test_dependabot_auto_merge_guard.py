@@ -480,9 +480,15 @@ _STUB_GH = """#!/usr/bin/env bash
 printf '%s\\n' "$*" >> "$GH_CALLS"
 case "$1 $2" in
   "pr view")
-    # head SHA 를 **호출마다 다르게** 준다. 고정값이면 "폴링 때 관측한 head" 와
-    # "머지 직전에 다시 읽은 head" 가 구별되지 않아 TOCTOU 가드가 vacuous 해진다.
-    v="$(grep -c '^pr view' "$GH_CALLS")"
+    # 기본은 **고정 head**. 실제 PR 은 폴링 중에 head 가 바뀌지 않는 것이 정상이고,
+    # 안정화 창은 같은 커밋 안에서만 세므로 여기서 매번 바꾸면 창이 영영 안 찬다.
+    # `GH_HEAD_VARY=1` 일 때만 매 호출 다른 SHA 를 준다 — head 변경 시 창이
+    # 초기화되는지 관측하는 시나리오 전용이다.
+    if [ "${GH_HEAD_VARY:-0}" = "1" ]; then
+      v="$(grep -c '^pr view' "$GH_CALLS")"
+    else
+      v=1
+    fi
     printf 'head%036d\n' "$v"
     ;;
   "pr checks")
@@ -515,6 +521,7 @@ def _execute_merge_step(
     *,
     checks_rc: str = "8",
     deadline: str = "60",
+    head_varies: bool = False,
 ) -> tuple[int, str, list[str]]:
     """머지 스텝의 `run:` 을 스텁 `gh` 로 실행하고 (rc, 출력, gh 호출목록) 을 준다.
 
@@ -555,6 +562,10 @@ def _execute_merge_step(
         "GH_TOKEN": "stub-token-not-a-secret",
         "SELF_CHECK": str(step_env["SELF_CHECK"]),
         "SELF_WORKFLOW": str(step_env["SELF_WORKFLOW"]),
+        # 안정화 창 길이는 워크플로우가 정한 값을 그대로 쓴다. 테스트가 줄여 잡으면
+        # 정작 검증하려는 창을 검증하지 못한다.
+        "STABLE_POLLS": str(step_env["STABLE_POLLS"]),
+        "GH_HEAD_VARY": "1" if head_varies else "0",
         # 실행 시간을 줄이기 위한 값. 폴링 간격과 상한만 줄이고 로직은 그대로다.
         "DEADLINE_SECONDS": deadline,
         "POLL_SECONDS": "0",
@@ -616,8 +627,7 @@ class TestMergeStepBehaviour:
         merges = [c for c in calls if c.startswith("pr merge")]
         assert rc == 0, f"전부 통과인데 머지에 실패했다(rc={rc}).\n--- 출력 ---\n{output}"
         assert len(merges) == 1, f"머지 호출이 정확히 1회여야 한다(현재 {len(merges)}회): {merges}"
-        views = [c for c in calls if c.startswith("pr view")]
-        assert f"--match-head-commit head{len(views):036d}" in merges[0], (
+        assert f"--match-head-commit head{1:036d}" in merges[0], (
             f"머지가 폴링 때 관측한 head 에 고정되지 않았다: {merges[0]!r}. 고정이 빠지면 "
             "마지막 폴링 이후 들어온 커밋이 검증 없이 머지된다."
         )
@@ -858,4 +868,90 @@ class TestMergeStepBehaviourRegressions:
         assert checks >= 2, (
             f"이 시나리오는 안정화 창 때문에 폴링이 2회 이상이어야 판별력이 있다(현재 {checks}회). "
             "루프 구조가 바뀌었다면 이 가드의 시나리오도 다시 설계할 것."
+        )
+
+
+#: GitHub App 이 올리는 commit status 가 잡 시작 뒤 **처음 목록에 나타나기까지** 걸린
+#: 실측 최대치(초). 2026-09-14 PR #1320, `Vercel Preview Comments` = 96초.
+#: 안정화 창이 이 값보다 짧으면 그 뒤에 나타나는 체크는 조회조차 되지 않는다.
+_OBSERVED_STATUS_DELAY_SECONDS = 96
+
+
+class TestStabilizationWindowCoversObservedDelay:
+    """창의 **길이**를 단언한다. 창의 존재만 보면 30초짜리 창도 통과한다.
+
+    2026-09-18 실측: `STABLE_POLLS` 도입 전에는 "직전 폴링과 동일" 한 번이면 빠져나가
+    보장 창이 정확히 1 × POLL_SECONDS = 30초였다. 근거로 인용한 지연은 96초이므로
+    3배 부족했고, 3회차에 처음 나타나는 **실패** 체크를 조회하지 않고 머지했다
+    (스텁 재현: 폴링 2회 후 MERGED, rc=0).
+
+    그때 사고가 나지 않은 이유는 이 루프 밖에 있었다 — `code-quality.yml` 의 PR
+    트리거에 경로 필터가 없어 13.5분짜리 `quality` 가 모든 PR 에 붙었기 때문이다
+    (#1328 실측). 이 루프가 통제하지 않는 외부 사실에 기대고 있었으므로, 그 사실이
+    바뀌면 조용히 되살아난다. 그래서 창 길이를 **이 워크플로우 안에서** 고정한다.
+    """
+
+    def test_window_is_longer_than_the_measured_status_delay(self, job: dict) -> None:
+        env = _merge_step_env(job)
+        poll = int(str(env["POLL_SECONDS"]))
+        stable = int(str(env["STABLE_POLLS"]))
+        window = poll * stable
+        assert window > _OBSERVED_STATUS_DELAY_SECONDS, (
+            f"안정화 창이 {window}s(= POLL_SECONDS {poll} × STABLE_POLLS {stable})인데, "
+            f"늦게 생성되는 commit status 의 실측 지연은 {_OBSERVED_STATUS_DELAY_SECONDS}s 다. "
+            "창이 더 짧으면 그 뒤에 나타나는 체크는 조회되지 않고 머지된다 — 실패 체크여도."
+        )
+
+    def test_deadline_leaves_room_for_the_window(self, job: dict) -> None:
+        """창이 상한을 넘으면 모든 PR 이 deadline red 로 끝난다(반대 방향 고장)."""
+        env = _merge_step_env(job)
+        window = int(str(env["POLL_SECONDS"])) * int(str(env["STABLE_POLLS"]))
+        deadline = int(str(env["DEADLINE_SECONDS"]))
+        assert window * 2 < deadline, (
+            f"안정화 창 {window}s 가 상한 {deadline}s 에 비해 너무 크다. 체크가 끝난 뒤에도 "
+            "창을 채우지 못해 정상 PR 이 timeout 으로 죽는다."
+        )
+
+
+class TestStabilizationWindowBehaviour:
+    def test_catches_a_check_that_appears_after_the_first_confirmation(self, job: dict, tmp_path: Path) -> None:
+        """첫 "동일 확인" 이후에 나타나는 체크도 포착해야 한다.
+
+        창이 1폴링이던 시절의 실제 사고 형태다 — 2회차에서 빠져나가므로 3회차에
+        처음 등장하는 실패 체크를 못 본다. `test_waits_for_a_check_that_appears_late`
+        는 2회차에 등장하는 경우만 덮으므로 이 시나리오는 그 가드를 통과한다.
+        """
+        green = _payload(_check("quality", "SUCCESS"))
+        late = _payload(_check("quality", "SUCCESS"), _check("Vercel Preview Comments", "FAILURE"))
+        rc, output, calls = _execute_merge_step(job, tmp_path, [green, green, late])
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert not merges, (
+            f"세 번째 폴링에 나타난 실패 체크를 건너뛰고 머지했다: {merges}. 안정화 창이 "
+            f"실측 지연({_OBSERVED_STATUS_DELAY_SECONDS}s)보다 짧다.\n--- 출력 ---\n{output}"
+        )
+        assert rc != 0 and "Vercel Preview Comments" in output, (
+            f"늦게 나타난 체크를 포착하지 못했다(rc={rc}).\n--- 출력 ---\n{output}"
+        )
+
+    def test_head_change_restarts_the_window(self, job: dict, tmp_path: Path) -> None:
+        """안정 판정은 **같은 커밋 안에서만** 유효하다.
+
+        head 가 바뀌면 그 커밋의 체크는 다시 생성되므로, 옛 커밋에서 센 안정 횟수를
+        이어 쓰면 새 head 를 단 1회 관측하고 머지할 수 있다. `--match-head-commit` 은
+        "관측한 커밋을 머지" 는 보장하지만 "그 커밋의 체크가 다 생성됐는지" 는
+        보장하지 않는다.
+
+        head 가 매 폴링 바뀌는 극단을 넣는다 — 창이 초기화되면 영영 차지 않아 머지가
+        일어나지 않아야 한다. 초기화가 없으면 이름 집합이 같으므로 곧장 빠져나간다.
+        """
+        green = _payload(_check("quality", "SUCCESS"))
+        rc, output, calls = _execute_merge_step(job, tmp_path, [green], head_varies=True, deadline="12")
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert not merges, (
+            f"head 가 폴링마다 바뀌는데 머지했다: {merges}. 안정 판정이 커밋을 추적하지 "
+            f"않으면 새 head 를 1회만 보고 머지한다.\n--- 출력 ---\n{output}"
+        )
+        assert rc != 0, f"창이 차지 않았는데 성공으로 끝났다(rc={rc}).\n--- 출력 ---\n{output}"
+        assert len([c for c in calls if c.startswith("pr checks")]) >= 3, (
+            "폴링이 3회 미만이면 이 시나리오가 창 초기화를 관측하지 못한다."
         )
