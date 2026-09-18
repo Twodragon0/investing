@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-03 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.gokorea.kr">외국인 매도 공세에 코스피·코스닥 급락… 투자자 주의 필요</a> <span class="p0-desc">외국인 매도 공세에 코스피·코스닥 급락… 투자자 주의 필요 공감신문</span></li><li><a href="https://www.marketwatch.com">The S&P 500 has only risen this quickly 4 times since WWII. Once, a historic stock-market crash followed.</a></li><li><a href="https://www.freightwaves.com">Texas Supreme Court Limits Shipper Liability in Trucking Crash Case</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,801.49 (+0.15%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 1,026.03 (-2.29%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-06-03 주식 시장에서 206건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,801.49(+0.15%), KOSDAQ 1,026.03(-2.29%), USD/KRW 1,518.54(+0.45%).
 - *FXEmpire에 대한 전문가 분석에 액세스하세요.*
 
 ## 테마별 주요 뉴스

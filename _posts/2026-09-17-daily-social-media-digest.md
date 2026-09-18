@@ -30,12 +30,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-17 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: US Fed to deliver rate decision with markets betting on hike - 40건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 연준 관련 30건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 연준 관련 18건</li><li>📈 <strong>가격/시장</strong>: 인상, 하락 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 3건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBpUVgwbnd0X05XenhFY3VNS2hOWDdMUUpsWVE0ZFNEeV92SFZ4dDRScFVPdW5SQ2lWZnVwUlVuaGluOE9qX0s1dDVIT2NtVE5mMnlsdGMwRklZOFhsZUt4aERVS0FfN2x5RFJRQTNkRTluQVR6NHd2SXhIYS0?oc=5">US Fed to deliver rate decision with markets betting on hike</a></li><li><a href="https://www.nytimes.com/2026/09/16/business/economy/federal-reserve-interest-rates-warsh.html">Fed Readies for Momentous Rate Decision</a></li><li><a href="https://www.nytimes.com/2026/09/16/business/economy/trump-fed-interest-rates.html">Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 40건 중 텔레그램 0건, 소셜 0건, 정치·경제 40건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 40건 중 텔레그램 0건, 소셜 0건, 정치·경제 40건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

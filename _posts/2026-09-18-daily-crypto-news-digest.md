@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-18 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 미 상원 '클래리티 법안' 부결에 암호화폐 관련주 일제히 폭락 - news.einfomax.co.kr - 81건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 동향 주시</li><li>🔵 <strong>규제/정책</strong>: SEC, 법안 주목</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 관련 14건</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 연준 관련 21건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1WeW5CYmktSmdsTnZhLTZIR3phaW9vS25renp0SE12UldfVktBMk4tMk5Obl9pTE1PRHVXSzNEWFQ0el9QTXYtMjdEV1FZdmVHelRmdFlsZnlndTlGSjR3VGZDTlZVQktCejFZMHpyYkw?oc=5">미 상원 '클래리티 법안' 부결에 암호화폐 관련주 일제히 폭락 - news.einfomax.co.kr</a> <span class="p0-desc">미 상원에서 가상자산 규제 프레임워크를 담은 명확성 법안(클래리티 법안)의 절차 투표가 무산되면서 코인베이스를 비롯한 암호화폐 관련 종목들이 급락했다.15일(현지 시각) 코인데스크.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 미 상원 '클래리티 법안' 부결에 암호화폐 관련주 일제히 폭락 - news.einfomax.co.kr 
-총 81건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (38건): 비트코인, 암호화폐, 연준 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🔵 규제/정책** (24건): SEC, 법안 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **📊 매크로/금리** (14건): 연준, 금리, BTC 매크로 변수 (14건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 미 상원 '클래리티 법안' 부결에 암호화폐 관련주 일제히 폭락 - news.einfomax.co.kr
-
-### 주요 이슈
-
-- Senate blocks cryptocurrency regulation as Democrats push back on Trump investme
-- San Diego moves to require warning signs on cryptocurrency ATMs to prevent scams
-- 미 상원, 가상화폐 '클래리티 법안' 불발.비트코인 7.5만달러선 '뚝' - 머니투데이
-- 외 7건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: CoinDesk(15건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📊 매크로/금리
+- 2026-09-18 암호화폐 시장 81건 분석 — 핵심 테마: 비트코인, 규제/정책, 매크로/금리
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

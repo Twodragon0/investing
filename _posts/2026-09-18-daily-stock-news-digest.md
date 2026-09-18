@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-18 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 선물 - 193건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 국채 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 주목</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 관련 8건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE84TzJvTEVGMGZ2aDJjcTZER0pTZ1Zvb3hYcFNJRUt2VVh4V2V1UFo5WVZRcXV3OXZ4SzYyVVNZeHBCNUJkMkF6bHhzOXVzTXJybUt1YjJRNmM4WEdYOXFJamJ2YmxlTmNyRHphc05NZUdYbnBIUDdPMXZ4djI?oc=5">US Stock Market Today: S&P 500 Futures Edge Higher As Fed Rate Decision Looms - Yahoo Finance Singapore</a></li><li><a href="https://www.cnbc.com/2026/09/17/fed-rate-decision-and-warsh-comments-roiled-markets-where-to-find-opportunities.html">Fed rate decision and Warsh comments roiled markets. Where to find opportunities</a></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNQnVwNHpoMGpWWG1OTnEzR3pWbVI1WS0tQTFrSElnT20zRFlGaVR4TGF0Q2FuT3F1ZWh5RS1TdmNINXRmQy1pVFlRWTQwQUtIdVpQSi1BcnFqam92a0RMRm5IU1J3VjdTeE5vZXBPLUw4MmlhZlAzWXVSZzhPQzJfVlFNWVFWTmQ4OThfaVFPSDlDaDZFczlEdHJmbVljUnFKV3lQUGY2Mk1hSXY4WVZoTw?oc=5">Gold Steadies Below $4,300 as Markets Await Fed Rate Decision</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: US Stock Market Today: S&P 500 Futures Edge Higher As Fed Rate Decision Looms - Yahoo Finance Sin. 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 193건의 뉴스 중 P1 주요 이슈도 24건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (49건): 연준, 국채, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (63건): 코스피, 하이닉스, 코스닥 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (13건): 삼성전자, 하이닉스, 반도체 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- US Stock Market Today: S&P 500 Futures Edge Higher As Fed Rate Decision Looms - Yahoo Finance Singap
-- Fed rate decision and Warsh comments roiled markets. Where to find opportunities
-- Gold Steadies Below $4,300 as Markets Await Fed Rate Decision
-
-### 주요 이슈
-
-- Nasdaq 100 Forecast: NDX slumps on AI warning
-- Semiconductor Stocks Just Tumbled. This Tech ETF Soared 6% Instead. Here's Why.
-- If You Invest $340 a Month in the Vanguard S&P 500 ETF, Here's What History Says
-- 외 21건
-
-### 투자자 체크포인트
-
-- 한국 기사 76건, 글로벌 기사 117건 수집
-- 한국 지수: KOSPI 6,715.41(-0.04%), KOSDAQ 822.18(+0.76%), USD/KRW 1,380.88(+0.27%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:78%"></div></div><span class="theme-count">49건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">63건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:13%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:6%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-18.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,715.41 (-0.04%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 822.18 (+0.76%).
+- 2026-09-18 주식 시장에서 193건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,715.41(-0.04%), KOSDAQ 822.18(+0.76%), USD/KRW 1,380.88(+0.27%).
+- *Davidson College Economics Professor Vikram Kumar analyzes the unique combination of factors behind the recent surge.*
 
 ## 테마별 주요 뉴스
 
