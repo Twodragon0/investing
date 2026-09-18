@@ -1111,7 +1111,7 @@ UNREGISTERED_BY_DESIGN: dict[str, str] = {
     # 로컬 증거가 존재한다.
     "tests/test_injection_guard.py": "Tier 4 — **한 방향만**(2026-09-13). 거짓양성은 막지만 탐지 능력 자체는 미검증. 26개 테스트의 폭이 실질 방어선",
     "tests/test_encoding_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). detects_corrupted_run + french_accent_not_flagged 가 짝을 이룬다",
-    "tests/test_workflow_alerting_coverage_guard.py": "Tier 4 — 카나리 절반 유효(2026-09-13). 첫 단언은 항진명제(glob 결과에 suffix 단언), 둘째만 오염을 잡고 그것도 .github/workflows/AGENTS.md 존재에 의존",
+    "tests/test_workflow_alerting_coverage_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-18). 지목됐던 항진명제(glob 결과에 suffix 단언)를 합성 디렉토리 단언으로 교체했고, 탐지기 귀속 테스트 2종(주석-only 는 커버 아님 / 실제 uses 는 커버임)을 추가해 저장소 상태 의존도 없앴다",
     "tests/test_desc_headline_guard.py": "Tier 4 — **카나리 아님**(2026-09-13). 함수 객체 동일성(is) 단언 — 드리프트는 막지만 탐지 능력은 미검증",
     "tests/test_collector_noop_commit_whitelist_guard.py": "Tier 4 — **양방향 카나리** 확인(2026-09-13). 위반 탐지 + 정상 미탐지 둘 다 단언",
     "tests/test_lock_guard_parity.py": "Tier 4 — **한 방향만**(2026-09-13). 합성 발산 입력 1건, 대조군 없음",
