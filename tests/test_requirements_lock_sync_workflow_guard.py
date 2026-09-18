@@ -33,6 +33,8 @@ from pathlib import Path
 import pytest
 import yaml
 
+from tests import _workflow_scan as ws
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WORKFLOW = REPO_ROOT / ".github" / "workflows" / "requirements-lock-sync.yml"
 
@@ -187,7 +189,12 @@ def test_regeneration_stays_in_place() -> None:
         "pip-compile 로 바꿨다면 in-place 앵커 성질을 새로 검증하고 이 가드를 다시 써야 한다."
     )
     for step in calls:
-        run = str(step.get("run") or "")
+        # 원문이 아니라 **주석을 걷어낸** run 을 본다. 이 저장소는 설명 주석 때문에
+        # 워크플로우 가드가 항상-red 가 되는 사고를 2026-09-02 에 두 번 겪었다
+        # (메모 `feedback_yaml_guard_must_read_run_not_file`). 아래 단언들은 부재
+        # 방향이라 우회가 아니라 false-red 쪽으로 터지는데, 그건 가드를 지우게
+        # 만드는 실패다. 구현은 `tests/_workflow_scan.py` 하나로 모은다.
+        run = ws.strip_shell_comments(str(step.get("run") or ""))
         assert "--upgrade" not in run, (
             f"{WORKFLOW.name}: 헬퍼 호출에 `--upgrade` 가 붙었다 (step: {step.get('name')!r}). "
             "무관 패키지까지 상류로 끌어올려 '봇이 올린 그 패키지만' 이라는 전제가 깨진다."
@@ -223,7 +230,12 @@ def test_best_effort_steps_do_not_include_the_failure_path() -> None:
     """
     absorbed = [s for s in _steps(_workflow()) if s.get("continue-on-error")]
     for step in absorbed:
-        run = str(step.get("run") or "")
+        # 원문이 아니라 **주석을 걷어낸** run 을 본다. 이 저장소는 설명 주석 때문에
+        # 워크플로우 가드가 항상-red 가 되는 사고를 2026-09-02 에 두 번 겪었다
+        # (메모 `feedback_yaml_guard_must_read_run_not_file`). 아래 단언들은 부재
+        # 방향이라 우회가 아니라 false-red 쪽으로 터지는데, 그건 가드를 지우게
+        # 만드는 실패다. 구현은 `tests/_workflow_scan.py` 하나로 모은다.
+        run = ws.strip_shell_comments(str(step.get("run") or ""))
         assert "exit 1" not in run, (
             f"{WORKFLOW.name}: '{step.get('name')}' 이 continue-on-error 인데 exit 1 을 한다 — "
             "실패가 흡수되므로 아무 효과가 없다."
