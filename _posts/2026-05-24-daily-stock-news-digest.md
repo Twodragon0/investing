@@ -43,7 +43,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-24 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBoQkpZVDBXeklickZTMWU3RkV3R0Y5N0lfZDZFWlk2OXpsMnk1UDFSRlVyNHhweTRPQVdPb3ozZEd5RHU2TWRqS1hDX2FsNVN3WTNfVjdZSWp3SGx0Wm1qUGFQM09TeWJ5dFZIZklsN3nSAXRBVV95cUxNX2xldEtuWVg0M01qWHgwLUxGNW5xTXhjT1BhRDBhazhnbnNheXBzcGZtb2JSdG9Ga2x3UVFNRzFxcjRhZlF6LTBhb2RHUEtGS3cyUm9VUDB4Sk5DOFE2VVhvQy02RUVkaEp2dkNZOWpNVjdueQ?oc=5">코스피, 급등 뒤 7,800선 숨고르기…코스닥은 이틀째 사이드카 발동 - 산경투데이</a> <span class="p0-desc">코스피, 급등 뒤 7,800선 숨고르기…코스닥은 이틀째 사이드카 발동 산경투데이</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBoQkpZVDBXeklickZTMWU3RkV3R0Y5N0lfZDZFWlk2OXpsMnk1UDFSRlVyNHhweTRPQVdPb3ozZEd5RHU2TWRqS1hDX2FsNVN3WTNfVjdZSWp3SGx0Wm1qUGFQM09TeWJ5dFZIZklsN3nSAXRBVV95cUxNX2xldEtuWVg0M01qWHgwLUxGNW5xTXhjT1BhRDBhazhnbnNheXBzcGZtb2JSdG9Ga2x3UVFNRzFxcjRhZlF6LTBhb2RHUEtGS3cyUm9VUDB4Sk5DOFE2VVhvQy02RUVkaEp2dkNZOWpNVjdueQ?oc=5">코스피, 급등 뒤 7,800선 숨고르기…코스닥은 이틀째 사이드카 발동 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 한승수 기자]전날 8% 넘게 뛰었던 코스피가 22일 장 초반 강보합권에서 등락하고 있다. 급반등 이후 차익실현 매물이 나오고 있지만 개인과 기관 매수세가 지수를 지지하는 모습이다.이날 오전 코스피는 전 거래일보다 12.08포인트 오른 7,827.67을 기록하고 있다.지</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB1dGp0aWVZSWkwS3Fwcm5hV1dfTjZ3eDZTU2hHem9OQjBlbFhJd3NXdmFyQ3VDMkU5UXFmRTkxR3o1VkpGZHM2amZvQm1iSXBxaVVfby1wak41d9IBVEFVX3lxTE1ZZ0xnTGMyR3BUaGg3YVVKSHFMY2IzTlFzMS02dWxGeWhvVkV0dmF5SVdKU29hTDFVUEZhX0lOVHJiQ0VvUEhlY3czblRQN29DMG5ETQ?oc=5">코스피, 개인·기관 매수에 강세…코스닥선 '매수 사이드카' 발동</a> <span class="p0-desc">코스피, 개인·기관 매수에 강세…코스닥선 '매수 사이드카' 발동 한국경제</span></li>
 </ul>
 </div>
@@ -80,7 +80,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBoa2ZCLUUwQkJXYnAyRnhhTXhMSFM1WmRNazEwa0pQS213S0VHSjNLUWtoa1ZYS2VaWkNSeXZUNEJZeHpaOFl5OE9zdEQtUGUzeUd2TU82RVY5ZU9DSmUwSENkMDNpeFdYZVAtR09nYklmQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전닉스 매수 기회 왔다…대신證 "급등 노린 월말 매수 전략 유효" - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">(서울=연합인포맥스) 송하린 기자 = 엔비디아 실적 호조에도 삼성전자와 SK하이닉스의 주가가 비교적 약하게 전개되자, 대신증권에서는 비중 확대 기회라고 판단했다. 23일 대신증권에 따르면 지난주 삼성전자는 30만원, SK하이닉스는 200만원 선에서 저항받으며 단기 박스권에서 등락을 반복했다. 이경민 대신증권 연구원은 "이는 비중 확대 기회"라며 "매월 초 반복됐던 삼성전자, SK하이닉스 급등을 노린 월말 매수 전략이 유효하다"고 말했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -92,7 +92,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1GQTZrZTJlX3pJTmxNdGE0WW8zeWs2WW1SdWxPdmlZWDMyeUMwQlV1N2dOMXFRdmtqeTFOWERSY1ZZd0hTb1o2VEJsTWFEdkNiVzNZY21PZk5YLUxabm91Qk56YXZrbFZ1Tnpj0gFvQVVfeXFMUGJ2LTNqcEozWElOMy00NGVHU21jbmVYRVR2MkZCbnBLY0RJZmNja1VDMXYzNHJyVEF6d2FWY0lMME1lN2FiRFlTY1d4NkRfYjJHM3BGdnRvVDhIMnB4UzhaMEhJZnM2NzRzb1M0aDQ0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">금융핫이슈] 코스피 1만 시대 열쇠 쥔 삼성전자·SK하이닉스, 갈 길은 멀다</a>
-<p class="news-desc">[금융핫이슈] 코스피 1만 시대 열쇠 쥔 삼성전자·SK하이닉스, 갈 길은 멀다 펜앤마이크</p>
+<p class="news-desc">코스피가 사상 초유의 1만 시대를 열 수 있을까. 이 질문을 품은 국내외 투자자들 시선은 삼성전자와 SK하이닉스에 쏠리고 있다. 두 회사는 한국 증시의 시가총액과 이익을 동시에 좌우하는 핵심 축이다. 삼성전자와 SK하이닉스가 함께 오르면 코스피는 상승하고, 두 종목이 쉬면 지수도 숨을 고른다. 지난 21일 삼성전자 노사가 총파업 위기를 앞두고 잠정합의안을 도출하자 반도체 투톱에 매수세가 집중됐다. 이날 코스피는 전 거래일보다 8.42% 급등한 7815.59로 마감하며 전날 낙폭을 단숨에 만회했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -207,7 +207,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1VSEp2OVhJbGhRNXRqdnBwTlFFTXJDdGtmU0l4NnRyY1hwelMtdjZtQjJMVG9ndFcwdzNvS2Jab0lEWERGWFBfWnVDY3o3a21hYVpqdGk2RG5zcjZIYk9TdXpSdGN3cGJ1bXpjYS1yeW5yX3M?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">1만 BTC로 산 피자 두 판, 지금은 1조원…'비트코인 피자데이' 어느덧 16주년</a>
-<p class="news-desc">1만 BTC로 산 피자 두 판, 지금은 1조원…'비트코인 피자데이' 어느덧 16주년 디지털투데이</p>
+<p class="news-desc">[디지털투데이 홍진주 기자] 2010년 피자 두 판 결제에 쓰였던 1만BTC의 가치가 현재 약 7억7300만달러(약 1조1800억원) 규모로 불어나며, 비트코인의 장기 가치 상승을 상징적으로 보여주는 사례로 다시 주목받고 있다. 22일(현지시간) 블록체인 매체 코인포스트에 따르면, 크립토 애널리스트 다크포스트는 '비트코인 피자데이'를 맞아 비트코인의 실물 구매력 변화를 정리한 데이터를 공개했다.비트코인 피자데이는 2010년 5월22일 미국 개발자 라즐로 하니에츠(Laszlo Hanyecz)가 1만BTC로 피자 두 판을 구매한 거래에</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9GS2E0WXd1UkVPUEFldi1Fck5fNWMwdXZSS0NJTUNPc1dhMEliODJVc2dDRThIM3VaVElMLVdKYWI3bDN2VUJNa2xYdnJhT0pBMC1sUUZB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“비트코인·이더리움·리플 등 주요 암호화폐가 장기간 힘 얻지 못하는 가장 주된 이유” - 위키트리</a>
-<p class="news-desc">소셜 뉴스 미디어 위키트리 - 경제, 사회, 정치, 엔터테인먼트, 스포츠 등 최신 뉴스를 빠르고 정확하게 전달합니다.</p>
+<p class="news-desc">비트코인(Bitcoin, BTC) 등 암호화폐(가상화폐·코인)가 인공지능(AI) 관련 주식 시장에 자금을 빼앗기고 있다는 분석이 나왔다.웨드부시 증권 애널리스트 댄 아이브스(Dan Ives)는 최근 앤서니 폼플리아노(Anthony Pompliano)가 진행하는 팟캐스트…</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE0zUXJvRGsxcGJOVk1YOWxTVXRpUzZlYkdSRG1JaGo2NWxLanZ6T1lpeEcxM01RaXpJM2ZoZHQ5REFqOFJKYzl0ODJ1dFF0MV80ZG15bFNwa0bSAV5BVV95cUxNUkQtMW9xc19jTlg0YmlHQW8tSTE2dE1SLUlBZjdmRWM4MHREMmRNZFlXdU8zck9mZlJOTUJkNTY0aEtvQURzUWI3Vi1NZUdQcVJpbDltdkE3OTFrQm1R?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">자정 시세브리핑] 암호화폐 시장 혼조세… 비트코인 76,685달러, 이더리움 2,115달러 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">암호화폐 시장이 혼조세를 나타내고 있다. 비트코인과 이더리움은 모두 24시간 기준 소폭 하락한 반면, BNB와 솔라나는 상승 흐름을 보였다. 전체 시장 거래량은 754억 달러 수준이며 파생상품 거래는 전일 대비 감소했다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

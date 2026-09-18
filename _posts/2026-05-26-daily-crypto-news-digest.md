@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-26 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5ad1dlT254VGlrSjJWaGZvamlTbV92QTk4RDhGZDF0TmFWQUUwMlFYS3FRd2lRZ1JwNGNpVjVhZjlxbGNrRVpfRFlWWkEwR1BVcnp4eDBMVEZRTWQ1MDYxMnZ1Uk93Y0NFR2dRWHR3?oc=5">비트코인 1억 1500만 원선 상승… 인피닛 14% 급락 속 슈퍼버스 13% 급등</a> <span class="p0-desc">비트코인 1억 1500만 원선 상승… 인피닛 14% 급락 속 슈퍼버스 13% 급등 gukjenews.com</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5ad1dlT254VGlrSjJWaGZvamlTbV92QTk4RDhGZDF0TmFWQUUwMlFYS3FRd2lRZ1JwNGNpVjVhZjlxbGNrRVpfRFlWWkEwR1BVcnp4eDBMVEZRTWQ1MDYxMnZ1Uk93Y0NFR2dRWHR3?oc=5">비트코인 1억 1500만 원선 상승… 인피닛 14% 급락 속 슈퍼버스 13% 급등</a> <span class="p0-desc">가상자산 시장이 비트코인의 보합세 속에 알트코인별로 희비가 엇갈리는 혼조세를 나타내고 있다. 특히 온도파이낸스와 엑스알피(리플)가 거래대금 최상위권을 형성하며 투자자들의 높은 관심을 받고 있다.가상자산 거래소 업비트에 따르면 비트코인(BTC)은 전일 대비 0.18% 소폭 상승한 1억 1508만 원에 거래되며 박스권 흐름을 유지하고 있다.거래대금은 약 716억 원을 기록 중이다. 반면 최근 블랙록 ETF 자금 유출 소식이 전해진 이더리움(ETH)은 1.01% 하락하며 313만 5000원으로 밀려났고, 거래대금은 약 470억 원 규모로</span></li>
 <li><a href="https://cointelegraph.com/news/squid-safe-labs-third-party-module-3-2-million-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Squid and Safe Labs는 320만 달러 규모의 익스플로잇 배후에 타사 모듈이 있다고 밝혔습니다</a> <span class="p0-desc">제3자 모듈이 Safe 지갑에서 약 300만 달러를 빼냈으며 Squid는 핵심 시스템이 영향을 받지 않았다고 말하면서 이 사건이 외부 Safe 모듈에 의한 것이라고 밝혔습니다</span></li>
 </ul>
 </div>
@@ -196,7 +196,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1KWDdYZ3k4b3oxRExIOTVTTDFCSWpIV0M2Tnlkc3FKbEVkeGNudFdIWnluVUJMeHdqWHZHRklvNjFvUE5LclBmN29BamZrbGllbHh2M3NpUXlXM0ZFMWxrY1dueWstMS1xdnlEUVVfNWNIb2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">트럼프의 이란 합의 발표 예고에 비트코인 반등</a>
-<p class="news-desc">트럼프의 이란 합의 발표 예고에 비트코인 반등 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 암호화폐 시장이 미국과 이란의 평화 합의 진전 소식에 시가총액 약 750억달러를 회복했다. 주요 거래소에서 비트코인은 7만7000달러선에 도달하면서 시장 반등세를 이끌고 있다.24일(현지시간) 블록체인 매체 코인텔레그래프에 따르면 도널드 트럼프 미국 대통령은 미국과 이란, 여러 중동 국가가 참여한 합의가 대체로 협상됐으며 최종 세부 사항을 논의 중이라고 밝혔다.트럼프는 트루스소셜에서 협상 참여국으로 사우디아라비아, 아랍에미리트, 카타르, 파키스탄, 튀르키예, 이집트, 요르단, 바레인을 거론했다. 이번 합</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

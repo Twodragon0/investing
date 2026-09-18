@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5GQk5rUHdRamE1MnI0Q05FZTZWNmN1ekl6U1ctdWxJbERiaC10LWpoVVV1SHFEMjBMeXpqRkFIM1k3ZVhOYXZnbHlmekRnVHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인보다 잘 나간다더니…석 달 만에 두 배로 뛰었다</a>
-<p class="news-desc">비트코인보다 잘 나간다더니…석 달 만에 두 배로 뛰었다 v.daum.net</p>
+<p class="news-desc">스테이블코인(법정화폐와 가치가 연동되는 가상자산) USDC 발행사 서클 주가가 지난 2월 저점 대비 두 배가 넘는 수준으로 뛰었다. 같은 기간 비트코인(BTC) 등 주요 가상자산(암호화폐)이 뚜렷한 방향성을 보이지 못하는 가운데 거둔 성과다. 22일 블루밍비트에 따르면 서클(CRCL)은 21일(현지시간) 뉴욕증권거래소에서 전일 대비 2.92% 상승한 11</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9TUk0wbkp6SG1JQ1p0MlFIeGlsYnNTMUQ0alZRXzVtcWg0ZXhBUWtOQnBBZDJ0WDNSVGFUb2czV2xQMG1FeldvTkxXSENGUWdOdkFXRjlzTWRMR1hxVVRBZ3daS1lFbXl5eFA5ODRB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 1억 1300만 원선 후퇴.'니어프로토콜·알트레이어' 나홀로 급등</a>
-<p class="news-desc">비트코인 1억 1300만 원선 후퇴.'니어프로토콜·알트레이어' 나홀로 급등 gukjenews.com</p>
+<p class="news-desc">가상자산 시장이 이더리움 현물 ETF의 자금 이탈과 미국 연방준비제도(Fed·연준) 인사의 매파적 발언 등 대외 악재로 전반적인 조정세를 보이는 가운데, AI 및 기술적 모멘텀을 확보한 일부 알트코인들만 강세를 나타내며 뚜렷한 디커플링(탈동화) 현상을 보이고 있다.23일 국내 가상자산 거래소 업비트에 따르면 비트코인(BTC)은 전일 대비 1.38% 하락한 1억 1356만 7000원에 거래되며 숨고르기에 들어갔다. 전날 뉴욕증시가 미·이란 종전 기대감으로 사상 최고치를 경신했음에도 불구하고, 인플레이션 우려에 따른 연준의 금리 인상</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

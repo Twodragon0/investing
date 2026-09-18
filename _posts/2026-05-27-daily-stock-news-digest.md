@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5iSXFqaTdzTzF4d29VbFZJZTJ1dkRVMW5fSWY3LXVHYVlLeVMwTGFFYi1EX3RyV1lsOFFNOE9kZHZ0eXlHUm00YU9jQVdGc3hHN2VOYi1fX3RaZzJRWEtVbDI2aC1ybDVCSmpj?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">경제>반도체: 삼성·SK하이닉스 투자자, ‘반도체 최악 시나리오’ 반복 경고 - 굿모닝베트남미디어</a>
-<p class="news-desc">경제>반도체: 삼성·SK하이닉스 투자자, ‘반도체 최악 시나리오’ 반복 경고 굿모닝베트남미디어</p>
+<p class="news-desc">최근 메모리 반도체 주가 급등으로 미국과 한국 증시를 견인했던 삼성전자, SK하이닉스 투자자들이 고전적인 산업 사이클을 무시한 대가를 치를 수 있다는 강력한 경고가 나오고 있다. ChatGPT 출시 이후 고대역폭 메모리(HBM) 수요 폭증으로 메모리 반도체 산업은 호황을 이어가고 있다. 올해 들어 삼성전자는 114%, SK하이닉스는 186% 주가가 상승했으</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -217,7 +217,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1rV05SOE96RnJIaFZ6SHVTMm54NXhKMlN6OWpsWm1LSVphMkpDZUFrT0tGUDZJY3RmMTNYQmhweXhudDFfUFRNOUlYUlRJbWVsNldhaHM5Q3g1UWw0TEZrMjdsTWdEd2ctOHo3VDJZX296Zw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 2배 ETF 내일 상장…“하루 60% 손실 가능” - 톱스타뉴스</a>
-<p class="news-desc">삼성전자·SK하이닉스 2배 ETF 내일 상장…“하루 60% 손실 가능” 톱스타뉴스</p>
+<p class="news-desc">삼성전자·SK하이닉스 2배 ETF가 27일 상장되는 가운데 하루 만에 원금 절반 이상 손실도 가능한 구조가 공개되면서 금융당국과 운용사들이 투자 위험 설명에 나섰다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

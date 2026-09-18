@@ -43,8 +43,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-23 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBoQkpZVDBXeklickZTMWU3RkV3R0Y5N0lfZDZFWlk2OXpsMnk1UDFSRlVyNHhweTRPQVdPb3ozZEd5RHU2TWRqS1hDX2FsNVN3WTNfVjdZSWp3SGx0Wm1qUGFQM09TeWJ5dFZIZklsN3nSAXRBVV95cUxNX2xldEtuWVg0M01qWHgwLUxGNW5xTXhjT1BhRDBhazhnbnNheXBzcGZtb2JSdG9Ga2x3UVFNRzFxcjRhZlF6LTBhb2RHUEtGS3cyUm9VUDB4Sk5DOFE2VVhvQy02RUVkaEp2dkNZOWpNVjdueQ?oc=5">코스피, 급등 뒤 7,800선 숨고르기…코스닥은 이틀째 사이드카 발동 - 산경투데이</a> <span class="p0-desc">코스피, 급등 뒤 7,800선 숨고르기…코스닥은 이틀째 사이드카 발동 산경투데이</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5RelBoc2xXVWpJM0p4NFhsSzRZSk1YX1pId1hWUGlRcEJZeXBSZ3BZOVVGSzNrcndKQ3dUWTJRallwaHMyUlB1LVZESE1FVm0wR1MxUUlKMzFqSHlmQm5FNlFoZk00eVB0Zzl0LQ?oc=5">코스피·코스닥 급반등…동시 매수 사이드카</a> <span class="p0-desc">코스피·코스닥 급반등…동시 매수 사이드카 mstoday.co.kr</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBoQkpZVDBXeklickZTMWU3RkV3R0Y5N0lfZDZFWlk2OXpsMnk1UDFSRlVyNHhweTRPQVdPb3ozZEd5RHU2TWRqS1hDX2FsNVN3WTNfVjdZSWp3SGx0Wm1qUGFQM09TeWJ5dFZIZklsN3nSAXRBVV95cUxNX2xldEtuWVg0M01qWHgwLUxGNW5xTXhjT1BhRDBhazhnbnNheXBzcGZtb2JSdG9Ga2x3UVFNRzFxcjRhZlF6LTBhb2RHUEtGS3cyUm9VUDB4Sk5DOFE2VVhvQy02RUVkaEp2dkNZOWpNVjdueQ?oc=5">코스피, 급등 뒤 7,800선 숨고르기…코스닥은 이틀째 사이드카 발동 - 산경투데이</a> <span class="p0-desc">[산경투데이 = 한승수 기자]전날 8% 넘게 뛰었던 코스피가 22일 장 초반 강보합권에서 등락하고 있다. 급반등 이후 차익실현 매물이 나오고 있지만 개인과 기관 매수세가 지수를 지지하는 모습이다.이날 오전 코스피는 전 거래일보다 12.08포인트 오른 7,827.67을 기록하고 있다.지</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5RelBoc2xXVWpJM0p4NFhsSzRZSk1YX1pId1hWUGlRcEJZeXBSZ3BZOVVGSzNrcndKQ3dUWTJRallwaHMyUlB1LVZESE1FVm0wR1MxUUlKMzFqSHlmQm5FNlFoZk00eVB0Zzl0LQ?oc=5">코스피·코스닥 급반등…동시 매수 사이드카</a> <span class="p0-desc">[MS투데이] 국내 증시가 21일 오전 급반등했다. 전날 큰 폭의 조정을 받았던 코스피와 코스닥은 장 초반부터 강한 매수세가 유입되며 나란히 상승폭을 키웠다. 삼성전자 노사 임금협상 잠정합의로 총파업 리스크가 완화된 데다 간밤 미국 증시에서 반도체주가 강세를 보인 영향이 투자심리 회복으로 이어졌다. 장 초반 양대 시장에서는 프로그램 매수호가 효력이 일시 정지되는 매수 사이드카까지 발동됐다.코스피는 이날 전 거래일보다 277.42포인트, 3.85% 오른 7486.37로 출발했다. 이후 상승폭을 확대하며 오전 중 7600선을 회복했다.</span></li>
 <li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB1dGp0aWVZSWkwS3Fwcm5hV1dfTjZ3eDZTU2hHem9OQjBlbFhJd3NXdmFyQ3VDMkU5UXFmRTkxR3o1VkpGZHM2amZvQm1iSXBxaVVfby1wak41d9IBVEFVX3lxTE1ZZ0xnTGMyR3BUaGg3YVVKSHFMY2IzTlFzMS02dWxGeWhvVkV0dmF5SVdKU29hTDFVUEZhX0lOVHJiQ0VvUEhlY3czblRQN29DMG5ETQ?oc=5">코스피, 개인·기관 매수에 강세…코스닥선 '매수 사이드카' 발동</a> <span class="p0-desc">코스피, 개인·기관 매수에 강세…코스닥선 '매수 사이드카' 발동 한국경제</span></li>
 </ul>
 </div>
@@ -93,7 +93,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE0xT3ZwV0tIdnNwN1ltdG52ZUN3QzhJVnZqU1NzMGxLbmJ6bGFyQk1JbmFZTFVaWFBLM2VTaklUblVRQW5NLVZMYk5nTEZPYWxsQVZlU19Ca3FFRW4wQWtUZ0o1N0x6NDZsS3RQNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'국민성장펀드' 기대감에 코스닥 급등.코스피는 숨고르기 - 프리진경제</a>
-<p class="news-desc">'국민성장펀드' 기대감에 코스닥 급등.코스피는 숨고르기 프리진경제</p>
+<p class="news-desc">22일, 코스피는 전 거래일 대비 32.12포인트 오른 7,847.71로 상승 마감했다. 코스닥 역시 55.16포인트 상승한 1,161.13으로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 외국인은 1조 9,225억 원을 순매도하며 차익 실현에 나섰다. 반면 개인은 1조 656억</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -256,7 +256,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5lWjFvbXg2TEdQaFZUVHMtaVc4eWRWeEtjR3l2WkxEOUdvU0I2OEJnSk1kelJHdHJ1cFlIMmJRQ0pLWUowS0FPcVFueDlOa0ZmbE93M09kNTR3UVnSAWBBVV95cUxOVkllNGNIenpDNGpQRV9oNHFVRExyYUx3OFlSUlVoNW5DZWhwdGMxb0ltYjZsSXN4anpwX1ZlNG02a0RUY1lIRl8xbFZ6Vmk5MTVMLXlqZkpNYmFxQlNCdG8?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 노사 합의에 반도체·삼성그룹 ETF도 일제히 '불기둥'</a>
-<p class="news-desc">삼성전자 노사 합의에 반도체·삼성그룹 ETF도 일제히 '불기둥' 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 고은지 기자 = 삼성전자[005930] 노사가 전날 임금협상안에 잠정 합의하고 파업 계획을 보류하면서 반도체와 삼성그룹에 집중...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -139,7 +139,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1TVUpUZXZDVnk1VzVRalJpY0lIMjdTZVFMSnctQ3pLcHZkUUlOYnY4aVpVWFpHWWVoYW56YUJGSm14aE5HdVYtV29OcXRmZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'반도체 톱10' 실적·주가 보니 … 삼전닉스 아직도 가성비 있네</a>
-<p class="news-desc">'반도체 톱10' 실적·주가 보니 … 삼전닉스 아직도 가성비 있네 매일경제</p>
+<p class="news-desc">"프로가 그것밖에 못하냐." 프로야구 경기장에서 나온 소리가 아니다. 사상 유례없는 메모리 반도체 호황을 맞아 급등세를 연출하는 국내 주식시장 뒷얘기다. 수백 개 종목을 분석하고 현장 발품을 팔아 종목을 고른 펀드매니저들이 초보 개인투자자들에게 연전연패 중이다. 개인들이 무장한 '삼전닉스(삼성전자·SK하이닉스)'와 코스피200 관련 상장지수펀드(ETF)가 막강한 화력을 뽐내고 있어서다. 매니저들의 정교한 주식 포트폴리오는 코스피200을 좇는 ETF 하나를 이기지 못한다. 코스피는 2026년 들어 5월 21일까지 80% 급등했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -191,7 +191,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE8tVU1YWXlrUzVMMVlNMGN4c0tXN3ZwY0VsTFpFemZrSnJWQ21wRDhXWTI5UFNaeDQ5WGx6YzZ3LWQ4bVR3eGdoVkRUdzg2Y0xxYVEwMngyS0VEX3g2UjJsRVg1MGRLSFJZNnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전·닉스 레버리지 27일 출시.반도체 투톱 주가 ±2배 추종 - 금융소비자뉴스</a>
-<p class="news-desc">삼전·닉스 레버리지 27일 출시.반도체 투톱 주가 ±2배 추종 금융소비자뉴스</p>
+<p class="news-desc">[금융소비자뉴스 홍윤정 기자] 오는 27일 삼성전자·SK하이닉스[000660]를 기초자산으로 둔 단일종목 레버리지 상품 상장을 앞두고, 금융당국이 투자자들에게 각별한 주의를 당부했다.금융위원회와 금융감독원은 26일 이같은 내용의 유의사항을 안내하며, 해당 상품이 일간 변동률 ±2배를 추종하는 고위험 구조인 만큼 투자자들의 충분한 이해가 필요하다고 강조했다.이번에 유가증권시장에 상장되는 단일종목 레버리지 상품은 총 18개다. ETF의 경우 삼성·미래에셋·한국투자·KB&amp;mi</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -234,7 +234,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1BZHRvOVdWYXZTY01SLVJKTXlYT3I5bFlZcWRFUXBJSFdLY1pTbl95d2FYcXprQUxzdXlOc2x5U2xzNW5tM3JKek16cDZkMW9yZVhXcXB1bFkzbUdIajB0MVBhSFlCX2hmaS1UZHJzVk3SAXRBVV95cUxQTkdJTmlFRE1feUpIUkJZb3lDU0lLYzd2c0pkRkpWSGNCZ081dmQ3VXVJYUc2OElNeGJPYVN5Tm5DeGNlOWZqbXY3eXVFU1pJZ0czXzZSeEpMa1Z1QlB3azJuMk1rNGlwTlVoNkJMQjBBd0VYTw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 투톱 레버리지 상품 상장…고수익 기대 속 손실 경고 - 산경투데이</a>
-<p class="news-desc">반도체 투톱 레버리지 상품 상장…고수익 기대 속 손실 경고 산경투데이</p>
+<p class="news-desc">[산경투데이 = 이하나 기자]삼성전자와 SK하이닉스 주가 흐름을 두 배로 추종하는 단일종목 레버리지 상품이 국내 증시에 처음 선보인다.해외로 빠져나가는 개인 투자자 수요를 국내 시장으로 흡수하려는 취지지만, 최근 대형 반도체주 변동성이 커진 상황에서 고위험 상품이 출시되는 만큼 투자자</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -269,7 +269,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5mbU9FLXRyeGV3VFN0NTAxU2stY1g3VkRjMTZiQTN0bk9fVmhITm9lMlEzVUtsTUhESm5TbTd0SmlrSUUtdXkydUxlWEtrOENVbWpjTUI4RXkzZXJOcFFFbG5ERm50MURKZFZvQ3p2Q2lTZHPSAXdBVV95cUxQSDBUY1RnQTJESjBtaGJKWVRtV0s1WWJQa0habld3WGo4U0FmMXFUMWM2MjY4TlhHYU9QWU01QlJoel85UTFEM3k2QnBWRktyZXZla29HQWVxV3gzUzhmaHUzVUxNQllzaHViZ3lpTUdabVZYWFJTSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전·닉스 몰빵 ETF 출시…‘리스크관리’ 쟁점 - 스트레이트뉴스</a>
-<p class="news-desc">삼전·닉스 몰빵 ETF 출시…‘리스크관리’ 쟁점 스트레이트뉴스</p>
+<p class="news-desc">오는 27일 국내 반도체 투톱 삼성전자와 SK하이닉스의 주가를 2배로 복제하는 단일종목 레버리지 ETF 출시를 앞두고 기대와 우려가 교차한다. 투자자에게는 연일 급등하는 두 종목 투자 수익률을 높일 수 있는 기회지만 자칫 급등한 주가가 하락시 리스크 확대 요인이다. 시가총액이 코스피 시장 절반을 차지하는 두 종목이 시장 전체 변동성을 키울 가능성도 고민 지점이다.25일 금융당국에 따르면 삼성전자와 SK하이닉스 주식 움직임을 2배로 반영하는 단일종목 레버리지 상품이 27일 한국거래소에서 선보인다.당초 이 상품은 개인투자자들의 다양한</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

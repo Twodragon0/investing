@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFAtLS1nREItcEk4NDd1QlNmbHd0WkxONE9aeUJJbHFYa3ljcmdYMzdhdUUzaWxEZ3V6TU81MVE3MWhCbkluN2laNjlEY2pDQTgwSXNPVEFuZ3FwS1k3WTBVT3VmSlhXVnd6NU9scXNkTnFjVUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">10년 넘게 잠자던 비트코인 깨어났다…대규모 매도보단 지갑 이전 가능성</a>
-<p class="news-desc">10년 넘게 잠자던 비트코인 깨어났다…대규모 매도보단 지갑 이전 가능성 디지털투데이</p>
+<p class="news-desc">[디지털투데이 AI리포터] 10년 넘게 보유된 비트코인이 최근 이례적으로 빠른 속도로 이동하고 있다는 소식이다.23일(현지시간) 블록체인 매체 더크립토베이직에 따르면 비트코인이 최근 8만2000달러에서 7만5400달러로 떨어지는 사이 가장 오래된 보유자들의 이동이 기록적인 수준까지 늘었다.밴에크 디지털 자산 리서치 총괄 매튜 시걸은 엑스에서 10년 이상 보유 집단의 비트코인 이동이 기록적 수준이라고 밝혔다. 다만 이 집단의 전체 보유량은 여전히 사상 최고치에 가까워 최근 움직임이 대규모 매도로 이어졌다고 보기는 어렵다고 했다.시걸은</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

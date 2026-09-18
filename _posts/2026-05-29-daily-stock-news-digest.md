@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1YeTFvMXBtTFhWNnIyWDItNzFWb3lNS3Joa084OExEZFlCYXBVWktGOF9YbjFCeVg0TG5SYmZZMU4zTFhnTGYxajNYbUN3TzdjdUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전닉스 2배 ETF는 광풍 … 반도체 소부장·전력株는 찬바람</a>
-<p class="news-desc">삼전닉스 2배 ETF는 광풍 … 반도체 소부장·전력株는 찬바람 매일경제</p>
+<p class="news-desc">코스피 8228 사상 최고삼전닉스 레버리지 14개 출격개미 자금 몰리며 18%대 급등'TIGER닉스' 개인순매수 1위하이닉스 글로벌 시총 12위로반도체 톱2만 자금쏠려 양극화코스피 상승 종목 75개 그쳐삼전닉스 빼면 시총 되레 줄어 삼성전자와 SK하이닉스 단일종목 레버리지 상장지수펀드(ETF) 14종이 27일 국내 증시에 동시 상장했다. 이날 삼성전자와 SK하이닉스 주가가 일제히 급등세를 보이면서 주요 운용사의 레버리지 상품들도 높은 상승률을 기록했고, 하루 거래대금이 1조원을 웃도는 상품들도 쏟아졌다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -216,7 +216,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBHWmNYY2hKRzJFUTR6R3pwcC02d3RWaVhiWWtwNS0tNm1scnFXS0ZYU0ZncmpFejQwcnhqRGl3ZERaTmZIM1psZ2FSQ0VOMzUzazNRRDh6YXVhdnBMSUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">하루 이틀 안에 수십조 몰린다? 삼성전자·하이닉스 레버리지 ETF 출시 [이슈톺] - YTN</a>
-<p class="news-desc">하루 이틀 안에 수십조 몰린다? 삼성전자·하이닉스 레버리지 ETF 출시 [이슈톺] YTN</p>
+<p class="news-desc">코스피가 어제 사상 처음으로 8,000선에서 거래를 마쳤습니다. 오늘은 삼성전자·SK하이닉스의 2배 레버리지 상품도 상장되는데요. 다양한 경제 이슈들은 석병훈 이화여대 경제학과 교수와 함께 짚어보겠습니다. 안녕하십니까? 어제 코스피가 6거래일 만에 8000선 탈환을 했고요. 종가 기준으로는 8000선을 처음으로 넘었는데 어제 시장 상황은 어떻게 보셨습니까?</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE45Tm45OE9BejhxTDNfT0VCajFyaGdFSmF6N1BmclBZTDlPMnI2bFlFdG42Wkw1OFNDUHBzZmZydi1KcXllLVhlWXZ1cTFwYWREZnl2cC1JY0xXZW9DZURxUmRicVZwV0J2YUHSAW5BVV95cUxPM3BmV0tDT2VGeFNDTGVNb0szc0U5LTZUZkY2RDF2TWlhQTlCT3ZwaFYtam9hOExua29WVlBnYlFJZ183aHZiRC1UNXVTQ0k5bmFKYnhkWlVhZ2M5OGFnTEZzSzdaNHFnbUU3UFpvQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">상장하자마자 55% 폭등…‘삼전·하이닉스 2배 ETF’ 폭주</a>
-<p class="news-desc">상장하자마자 55% 폭등…‘삼전·하이닉스 2배 ETF’ 폭주 조선일보</p>
+<p class="news-desc">삼성전자와 SK하이닉스 주가를 2배로 추종하는 국내 첫 단일종목 레버리지 ETF가 상장 첫날부터 폭등세를 연출했다. 미국 반도체주 급등과 함께 투자 수요가 한꺼번에 몰리면서 일부 상품은 장중 50% 넘게 치솟았고, 변동성완화장치(VI)도 잇따라 발동됐다.27일 한국거래소에 따르면 삼성·미래에셋·한국투자·KB·신한·한화·키움·하나자산운용 등 8개 운용사가 출시한 삼성전자·SK하이닉스 단일종목 레버리지·인버스 ETF 16종이 이날 동시에 상장됐다.이날 오전 장중 SK하이닉스 단일종목 레버리지 상품들이 가장 강한 상승세를 나타냈다. ‘1</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -240,7 +240,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFB5VkV4VnEzaThxbG9wcXNuWGJtX3M2Um5XTjhXNFc2TlNkbU5VSXZLSTRTcEI1bHFEaml6TzA0QTAzN3Z4THlCLU9HbGs2d0RPOFZLaHpCTHZMU1F6NVlKdzQ4UGV4dmM3TGd3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 ‘2배 ETF’ 첫날 10조 몰렸다… “코스피 변동성 키울 수도”</a>
-<p class="news-desc">삼성전자·SK하이닉스 ‘2배 ETF’ 첫날 10조 몰렸다… “코스피 변동성 키울 수도” hdnews.co.kr</p>
+<p class="news-desc">[현대경제=경제] 삼성전자와 SK하이닉스 주가를 2배로 추종하는 단일종목 레버리지 상장지수펀드(ETF)가 국내 증시에 처음 상장되면서 첫 거래일부터 10조 원이 넘는 자금이 몰렸다.시장에서는 반도체 대표주를 중심으로 단기 유동성이 급증하는 한편, 레버리지 상품 특성상 주가 변동성이 더</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

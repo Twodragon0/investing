@@ -182,7 +182,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2VDRMaFRLWnRyVnBMR0dMdUdsTFhfRVNESVAwc3N6d1ZPLVM0amV3TlB6M3lPdWxENnl6QS1JTFFVMkhNbGl1RjR5VHkyNnRrVmtnOWM1emnSAVRBVV95cUxOZlNWNUJZRjNpb3R2NGhlSDE1dmt0NDV0WGtiRmRsbTRhamtVUThMLU1IbmpNanpzZ1JhMnljZHJ2WS05M044MkI3aFlpRGVkMjFveno?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 1500원대 고공행진… 물가·금리 ‘복합 충격파’ - 세계일보</a>
-<p class="news-desc">환율 1500원대 고공행진… 물가·금리 ‘복합 충격파’ 세계일보</p>
+<p class="news-desc">원·달러 환율이 지난 22일 1520원 턱밑까지 오르는 등 6거래일 연속 1500원선에서 내려오지 못하고 있다. 원화 약세에 고유가까지 겹치면서 물가·금리가 들썩이고 있다. 주요 은행 주택담보대출 금리 하단이 5%대로 올라서는 등 시중금리 상승 추세가 이어지면서 취약차주를 중심으로 부담이 가중될 전망이다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5oNWpSZk53MjJWYV94Q1p3N0FMVzRmTDBjXzlDR1psTXF3SllnRS1BdDN5Y19GSkctQ2JNQV9KcE5xTVYwNjdzLTZfWUpCUTNsNzg1bUlSbE4yQk5HcDdjStIBeEFVX3lxTE13Tk1uaEFSaUltWng1ZEozMkliYXdEbXpha2NKUHdiWmdQMVczT1RhUTl5ZEROSDJBLW5JUUJCaGhvR3JoRDB6aWxsaXk5YmxpcXlOeGdQbEtBejRqc3IyZkNSa2NMaU1MMWVjOGh2dVZvcE1RakpsSw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'긴축 시대' 오나…한은 금리인상 시계 빨라진다[인플레 공포②</a>
-<p class="news-desc">'긴축 시대' 오나…한은 금리인상 시계 빨라진다[인플레 공포②] 뉴시스</p>
+<p class="news-desc">[서울=뉴시스] 조현아 기자 = 중동 전쟁에 따른 국제유가 급등으로 물가와 환율, 금리가 동시에 높아지는 '3고(高)' 현상이 이어지면서 통화정책을 운용하는 한국은행의 고심도 깊어지고 있다. 금융시장 안팎에서는 이미 한은의 하반기 금리인상 가능성에 무게를 싣는 모습이다.24일 한은에 따르면 신현송 한은 총재는 오는 28일 취임 이후 첫 금융통화위원회(금통위..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

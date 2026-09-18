@@ -41,7 +41,7 @@ image_alt: "소셜 미디어 동향 - 2026-05-24 - 소셜 미디어 뉴스 요�
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxQNkVwZnZSdHowT195ZFhNdmNEdk5xLWVJb004Y2VIcDI0bzNNcXJmb1c3cHdmbHZpSjZoMkE0RW1lbEtnOXZlVzhudWE4dnBSMEd0OTJUOEYxcmNNLTduQ3JlekZmWEZKWVB2X2JqbU45ajhSZzhBSVkwMXF6cHJsTmcwTmNKQTZoRHYxUjVnMGlFTHQtQk1PVjRiR2NNTUNybVpUVFFlNlJWa2dPTExSbDFaNFVNbkx6TkM3XzMwUTJRcHlZSzNyem12T0w2VXZjT2JPVUE2VDZGdUtZNzBfanNaaw?oc=5">백악관 행정 명령, 핀테크 및 결제 시스템에 대한 연방 정책의 주요 변화 신호 - 소비자 금융 모니터</a> <span class="p0-desc">소비자금융보호국(CFPB)의 정책과 조치에 영향을 받는 기업을 위한 뉴스, 지침 및 통찰력 있는 관점.</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBNQUVCT1JqZG56VzVNRkxzUVJZNlRtMGV6YUw1T3V0ZHA3bUFWMDBjNVJVQzNpS0k3aXl1VkdrQlVCYmtQbzg4ZE9jREUwbnYxOGt2UFlVQkF2WVJBQUVoY25LOWdJUGdVTnc?oc=5">다음주 한은 금리 결정 촉각… 성장률 전망 조정 주목 - 천지일보</a> <span class="p0-desc">다음주 한은 금리 결정 촉각… 성장률 전망 조정 주목 천지일보</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBNQUVCT1JqZG56VzVNRkxzUVJZNlRtMGV6YUw1T3V0ZHA3bUFWMDBjNVJVQzNpS0k3aXl1VkdrQlVCYmtQbzg4ZE9jREUwbnYxOGt2UFlVQkF2WVJBQUVoY25LOWdJUGdVTnc?oc=5">다음주 한은 금리 결정 촉각… 성장률 전망 조정 주목 - 천지일보</a> <span class="p0-desc">[천지일보=유영선 기자] 다음 주 국내 경제는 한국은행의 기준금리 결정과 성장률 전망 수정 여부에 관심이 집중될 전망이다. 중동발 고유가와 고환율 압력이 이어지는 가운데 반도체 수출 호조와 내수 흐름, 가계부채 증가세 등이 맞물리며 통화정책 방향에 대한 시장의 긴장감도 커지고 있다.한</span></li>
 </ul>
 </div>
 
