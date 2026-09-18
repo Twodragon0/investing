@@ -961,7 +961,12 @@ class TestStabilizationWindowBehaviour:
         일어나지 않아야 한다. 초기화가 없으면 이름 집합이 같으므로 곧장 빠져나간다.
         """
         green = _payload(_check("quality", "SUCCESS"))
-        rc, output, calls = _execute_merge_step(job, tmp_path, [green], head_varies=True, deadline="12")
+        # 상한은 **뮤테이션이 머지까지 도달하고도 남을** 만큼 줘야 한다. 창 초기화를
+        # 없앤 변형은 STABLE_POLLS+1 회 폴링이면 머지한다(실측 폴링당 ~1.7s → ~9s).
+        # 12s 는 여유가 없었고, #1345 가 폴링마다 jq 검증을 하나 더 붙이자 변형도
+        # 상한에 먼저 걸려 **이 가드가 vacuous** 해졌다 — 하네스가 잡아 줬다.
+        # 정상 경로는 창이 영영 안 차서 어차피 상한까지 도니 이 값이 곧 테스트 비용이다.
+        rc, output, calls = _execute_merge_step(job, tmp_path, [green], head_varies=True, deadline="30")
         merges = [c for c in calls if c.startswith("pr merge")]
         assert not merges, (
             f"head 가 폴링마다 바뀌는데 머지했다: {merges}. 안정 판정이 커밋을 추적하지 "
