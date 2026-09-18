@@ -1,33 +1,5 @@
 {
   "seen": {
-    "4d4aa2c0a54f73f52cfaf1e8": "2026-08-18T22:52:04",
-    "9eb98b7e2d4fdbe0fe3fda80": "2026-08-18T22:52:04",
-    "fa97481340b085d6f3430b08": "2026-08-18T22:52:04",
-    "a894c348114e065a3723faad": "2026-08-18T22:52:04",
-    "d4b48b707f2c28ba9cb331dd": "2026-08-18T22:52:04",
-    "f69d5d5971ce94816d698dd9": "2026-08-18T22:52:04",
-    "fe36ff76d0b7761d55c35749": "2026-08-18T22:52:04",
-    "81dfdbe19a53d2509304cb9b": "2026-08-18T22:52:04",
-    "96607603a72fec422cb0c395": "2026-08-18T22:52:04",
-    "32316af993f122a75e680bab": "2026-08-18T22:52:04",
-    "d0dc6bb24563f4bbedf6367f": "2026-08-18T22:52:04",
-    "5e8b8e7b013be76c57784e47": "2026-08-18T22:52:04",
-    "c4f1f2ffc2bdb6e5c82dfa3f": "2026-08-18T22:52:04",
-    "c1496f562ddb291e9d4ab038": "2026-08-18T22:52:04",
-    "d510bd5f77cbd266439ef072": "2026-08-18T22:52:04",
-    "41bb5b85f944b2d412521e1b": "2026-08-18T22:52:04",
-    "14c85dadf9228af9d0ee4058": "2026-08-18T22:52:04",
-    "2797bfd74dafcb5f906dc740": "2026-08-18T22:52:04",
-    "43952c799deecadb4baa7b97": "2026-08-18T22:52:04",
-    "9f599e623a0a3ea6903e48d4": "2026-08-18T22:52:04",
-    "a335cc715cadba50651f7534": "2026-08-18T22:52:04",
-    "a72917e3810ab6a56b11c222": "2026-08-18T22:52:04",
-    "77cdc5bfcdaa65f123ac4150": "2026-08-18T22:52:04",
-    "fd81baf895b43ceee6c2a075": "2026-08-18T22:52:04",
-    "4f996bee3bbfb8f4c2f622b8": "2026-08-18T22:52:04",
-    "b48edf981dbe7e55f9706691": "2026-08-18T22:52:04",
-    "2fc57aba881570072c0612a5": "2026-08-18T22:52:04",
-    "c2f8ad0e359d0c988b157f77": "2026-08-18T22:52:04",
     "dd8eb1fa67d0c8318766b2da": "2026-08-19T22:52:03",
     "ee8d656d660ad59388e45ad1": "2026-08-19T22:52:03",
     "d92bbafb791e421757ed9cc2": "2026-08-19T22:52:03",
@@ -756,7 +728,45 @@
     "8ac0567c28e5b4e8d26e3749": "2026-09-17T00:47:19",
     "36673b395cf6cd0aa31a83ab": "2026-09-17T00:47:19",
     "27bb3d2dca100cb0e1565659": "2026-09-17T00:47:19",
-    "5b3000ff9bb0407207f67941": "2026-09-17T00:47:19"
+    "5b3000ff9bb0407207f67941": "2026-09-17T00:47:19",
+    "967a9c1620cf59de70e1d9fe": "2026-09-18T00:38:04",
+    "247c24c7bc49c7ba00c49bad": "2026-09-18T00:38:04",
+    "0aee23bbcd70486d37bed1ad": "2026-09-18T00:38:04",
+    "ba13bdf6f7afdfcd71de07e7": "2026-09-18T00:38:04",
+    "e16e2d4be1432d476aa5ef08": "2026-09-18T00:38:04",
+    "66a1c9b5442419960ac11fc8": "2026-09-18T00:38:04",
+    "3c372b62062a6a5d3b351f25": "2026-09-18T00:38:04",
+    "be166d371bf6533e40e58308": "2026-09-18T00:38:04",
+    "951a20ce3d95d6e7707a0bb2": "2026-09-18T00:38:04",
+    "87e59b5b6d5569a6057fe9c0": "2026-09-18T00:38:04",
+    "a85793293542267ea36afe6f": "2026-09-18T00:38:04",
+    "886cf2cd6658e6ec2afe5bac": "2026-09-18T00:38:04",
+    "3dd2106f12f7b7706084acb2": "2026-09-18T00:38:04",
+    "b486d2693d8df324c0ecdd6b": "2026-09-18T00:38:04",
+    "a61907ca12aa51a9145720bd": "2026-09-18T00:38:04",
+    "9137ad03b564bbeb1d75de3f": "2026-09-18T00:38:04",
+    "2a050bd47570f23f8d5b0c67": "2026-09-18T00:38:04",
+    "907e17c4daa3dbbe53d8422f": "2026-09-18T00:38:04",
+    "66adc40e891295437549d62d": "2026-09-18T00:38:04",
+    "aca07fbcf80c5038830cd9ab": "2026-09-18T00:38:04",
+    "016caa325a65867cf6341116": "2026-09-18T00:38:04",
+    "ef9dfad50558efc7388e1711": "2026-09-18T00:38:04",
+    "59f15a67d1836016b81c8ced": "2026-09-18T00:38:04",
+    "b1ba16695267306ecc8299e8": "2026-09-18T00:38:04",
+    "a437f74af7f12374272a8f96": "2026-09-18T00:38:04",
+    "255601cb489ef6b75d5e0944": "2026-09-18T00:38:04",
+    "39ec4da5efd31fb87ed5355e": "2026-09-18T00:38:04",
+    "082833abc54a6e7327e6c53e": "2026-09-18T00:38:04",
+    "bea2c79de3b02923af632a4a": "2026-09-18T00:38:04",
+    "eab5da46700840633c7bb813": "2026-09-18T00:38:04",
+    "14da88004acd572002fa36e9": "2026-09-18T00:38:04",
+    "0b49f391ae7e7d462c3ada5d": "2026-09-18T00:38:04",
+    "8017a52ea33ee99564e826f9": "2026-09-18T00:38:04",
+    "2f8b5839837e74869daaf443": "2026-09-18T00:38:04",
+    "934b94c767e4b1c182f9e3f1": "2026-09-18T00:38:04",
+    "27a75695ada8343cb65f7903": "2026-09-18T00:38:04",
+    "ce7f8f7f3bfff4cd5ac3aed8": "2026-09-18T00:38:04",
+    "c0b3ecc5115d3208533dc435": "2026-09-18T00:38:04"
   },
   "titles": [
     [
@@ -18494,6 +18504,158 @@
     [
       "정치인 거래정책 리포트 20260917",
       "2026-09-17"
+    ],
+    [
+      "ads praise huizenga for stocktrading ban his disclosures show years of stock ownership detroit metro times",
+      "2026-09-18"
+    ],
+    [
+      "trumps 29000 securities trades put presidential wealth under scrutiny tekedia",
+      "2026-09-18"
+    ],
+    [
+      "silver lakelinked director sells dell nyse dell stock stock titan",
+      "2026-09-18"
+    ],
+    [
+      "director at smith wesson swbi gets new stock grant stock titan",
+      "2026-09-18"
+    ],
+    [
+      "twilio twlo director granted 345 new rsus stock titan",
+      "2026-09-18"
+    ],
+    [
+      "smith wesson brands swbi director now holds 98462 shares stock titan",
+      "2026-09-18"
+    ],
+    [
+      "silver lake sells dell nyse dell shares above 540 stock titan",
+      "2026-09-18"
+    ],
+    [
+      "new rsu award for bill nyse bill product chief stock titan",
+      "2026-09-18"
+    ],
+    [
+      "bill holdings bill cfo receives 67681 rsus stock titan",
+      "2026-09-18"
+    ],
+    [
+      "silver lake trims dell nyse dell stake at over 540 a share stock titan",
+      "2026-09-18"
+    ],
+    [
+      "soundhound ai soun corrects date on director award stock titan",
+      "2026-09-18"
+    ],
+    [
+      "rackspace technology rxt grants 40545 stock units to board member stock titan",
+      "2026-09-18"
+    ],
+    [
+      "stardust power sdst cfo sells shares for taxes stock titan",
+      "2026-09-18"
+    ],
+    [
+      "eastern co eml director receives 1217share stock fee stock titan",
+      "2026-09-18"
+    ],
+    [
+      "microsoft nasdaq msft vice chair granted 29077 shares vesting over four years stock titan",
+      "2026-09-18"
+    ],
+    [
+      "restricted stock grant to smith wesson swbi director vests over a year stock titan",
+      "2026-09-18"
+    ],
+    [
+      "whats happening to uk interest rates and what does it mean for mortgages",
+      "2026-09-18"
+    ],
+    [
+      "peter navarro says feds rate raise is a bad decision the hill",
+      "2026-09-18"
+    ],
+    [
+      "gold price drops to 4310oz as fed votes 120 in favor of 25 bps rate hike with 16 of 18 policymakers seeing another hike in 2026 kitco",
+      "2026-09-18"
+    ],
+    [
+      "fed hikes interest rates for first time in 3 yearsunanimous decision comes in defiance of trump",
+      "2026-09-18"
+    ],
+    [
+      "fed meeting is shaping up to be a nightmare for warsh bitcoin might still shine coindesk",
+      "2026-09-18"
+    ],
+    [
+      "fed rates spike as donald trump issues new demand newsweek",
+      "2026-09-18"
+    ],
+    [
+      "tonights us fed rate decision will cast a long shadow over india the economic times",
+      "2026-09-18"
+    ],
+    [
+      "what a fed rate hike means for your bank accounts loans credit cards and investments",
+      "2026-09-18"
+    ],
+    [
+      "한은 금리결정 집값 아닌 이것에 달렸다 이슈톺 ytn",
+      "2026-09-18"
+    ],
+    [
+      "미국 금리 오르면 한국은 어디부터 흔들리나대출환율증시 동시 압박 경북매일",
+      "2026-09-18"
+    ],
+    [
+      "긴축으로 돌아선 美 연준한은 금리 셈법 복잡",
+      "2026-09-18"
+    ],
+    [
+      "미국 기준금리 인상한국은행 각별한 경계감으로 금융외환시장 점검 mbc 뉴스",
+      "2026-09-18"
+    ],
+    [
+      "이슈앤피플 미 연준 기준금리 025p 인상연내 추가 인상 예고 매일경제 마켓",
+      "2026-09-18"
+    ],
+    [
+      "두번 연속 올린 한은물가집값이 인상 여부속도 판단 기준",
+      "2026-09-18"
+    ],
+    [
+      "美 연준 3년 2개월 만에 금리 인상연내 추가 인상도 시사",
+      "2026-09-18"
+    ],
+    [
+      "한은 美 기준금리 인상 직후 시황 점검 회의 개최추가 금리 인상 여부 고심",
+      "2026-09-18"
+    ],
+    [
+      "한동안 코스피 잠잠하더니개미들 다시 초긴장 모드 분석",
+      "2026-09-18"
+    ],
+    [
+      "확대 거시경제금융회의 개최 美 금리 인상 대응방향 논의 한국보험신문",
+      "2026-09-18"
+    ],
+    [
+      "미 기준금리 025p 인상 한은도 추가 인상 만지작",
+      "2026-09-18"
+    ],
+    [
+      "美 3년2개월 만에 금리 인상한미 금리차 1p 한은 추가 인상 저울질 주간한국",
+      "2026-09-18"
+    ],
+    [
+      "美연준 3년 만에 금리 인상한은 긴축 기조 이어질 것",
+      "2026-09-18"
+    ],
+    [
+      "정치인 거래정책 리포트 20260918",
+      "2026-09-18"
     ]
   ],
   "seen_urls": {}
