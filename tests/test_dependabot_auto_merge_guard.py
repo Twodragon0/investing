@@ -790,7 +790,10 @@ class TestMergeStepBehaviourRegressions:
         올라오지 않은 시점이므로 **아무것도 검증하지 않은 머지**다.
         """
         only_self = _payload(self._self_check(job))
-        rc, output, calls = _execute_merge_step(job, tmp_path, [only_self], deadline="2")
+        # 상한은 안정화 창(STABLE_POLLS 회 폴링)을 **채우고도 남을** 만큼 줘야 한다.
+        # 짧게 잡으면 개수 검사를 없앤 변형도 머지에 도달하기 전에 상한에 걸려
+        # 이 시나리오가 아무것도 판별하지 못한다(2026-09-18 하네스가 VACUOUS 로 잡음).
+        rc, output, calls = _execute_merge_step(job, tmp_path, [only_self], deadline="25")
         polls_done = len([c for c in calls if c.startswith("pr checks")])
         assert polls_done >= 1, "폴링이 한 번도 일어나기 전에 끝났다 — 이 시나리오가 아무것도 검증하지 못한다."
         merges = [c for c in calls if c.startswith("pr merge")]

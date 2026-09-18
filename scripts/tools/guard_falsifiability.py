@@ -899,8 +899,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         # GitHub App commit status 는 잡 시작 +96초에 처음 나타난 실측이 있다.
         "안정화 창 제거 (늦게 생성되는 체크를 건너뜀, 앵커는 no-op 으로 보존)",
         ".github/workflows/dependabot-auto-merge.yml",
-        'if [ "$current" = "$previous" ]; then\n                break\n              fi',
-        ': \'"$current" = "$previous"\'\n              break',
+        'if [ "$stable" -ge "$STABLE_POLLS" ]; then\n                  break\n                fi',
+        ': \'"$stable" -ge "$STABLE_POLLS"\'\n                break',
         "tests/test_dependabot_auto_merge_guard.py::TestMergeStepBehaviourRegressions::test_waits_for_a_check_that_appears_late",
     ),
     StaticCase(
