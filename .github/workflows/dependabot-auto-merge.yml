@@ -163,7 +163,11 @@ jobs:
           set -euo pipefail
 
           deadline=$((SECONDS + DEADLINE_SECONDS))
-          err_file="$(mktemp)"
+          # 두 조회의 stderr 를 **따로** 받는다. 하나로 합치면 `gh pr checks` 가
+          # 성공할 때 리다이렉션이 파일을 truncate 해서, 정작 실패한 head 조회의
+          # 사유가 빈칸으로 남는다(2026-09-18 리뷰 실측: `재시도 ()`).
+          checks_err="$(mktemp)"
+          head_err="$(mktemp)"
           previous=""
           previous_head=""
           stable=0
@@ -181,18 +185,32 @@ jobs:
             # 머지 대상 SHA 를 체크 조회와 같은 시점에 고정한다. 마지막 폴링 이후
             # dependabot rebase 로 head 가 바뀌면 `--match-head-commit` 이 머지를
             # 거부한다 — 검증하지 않은 커밋이 들어가는 TOCTOU 를 닫는다.
-            head="$(gh pr view "$PR_URL" --json headRefOid --jq .headRefOid 2>/dev/null || true)"
+            head="$(gh pr view "$PR_URL" --json headRefOid --jq .headRefOid 2>"$head_err" || true)"
 
             # `gh pr checks` 는 **대기 중이면 exit 8, 실패가 있으면 exit 1** 로 끝난다.
             # 즉 정상 경로에서도 non-zero 다. 종료코드로 판정하면 출력을 통째로 버려
             # 루프가 영원히 재시도만 한다 — 실측된 결함이므로 종료코드만 삼키고
             # 판정은 내용으로 한다.
-            raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file" || true)"
+            raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$checks_err" || true)"
 
+            # 응답이 JSON 이 아닐 수 있다(프록시 오류 페이지·부분 전송 등). 그대로
+            # `jq` 에 넘기면 `set -euo pipefail` 로 스크립트가 **즉시 죽는데**,
+            # `::error::` 도 없이 jq 파스 에러만 남아 Actions 요약에 원인이 드러나지
+            # 않는다. 일시적 오염 1회로 런 전체를 잃을 이유가 없으므로 재시도한다.
+            # 빈 응답은 재시도인데 오염 응답은 치명이라는 비대칭도 여기서 없어진다.
+            if [ -n "$raw" ] && ! echo "$raw" | jq -e 'type == "array"' >/dev/null 2>&1; then
+              echo "체크 목록이 JSON 배열이 아니다 — 재시도 (첫 80자: $(echo "$raw" | head -c 80))"
+              raw=""
+            fi
+
+            # 실패한 쪽의 사유만 싣는다. 주어를 틀리면 25분을 돈 뒤 deadline red 가
+            # 났을 때 인증 문제인지 URL 문제인지 로그로 구분할 수 없다.
             if [ -z "$raw" ] || [ -z "$head" ]; then
-              # stderr 를 통째로 버리면 인증 만료·레이트리밋·URL 오류가 전부 같은
-              # 한 줄로 보인다. 마지막 줄만 실어 진단을 남긴다.
-              echo "체크 목록을 읽지 못했다 — 재시도 ($(tail -n 1 "$err_file" 2>/dev/null || true))"
+              if [ -z "$head" ]; then
+                echo "head SHA 를 읽지 못했다 — 재시도 ($(tail -n 1 "$head_err" 2>/dev/null || true))"
+              else
+                echo "체크 목록을 읽지 못했다 — 재시도 ($(tail -n 1 "$checks_err" 2>/dev/null || true))"
+              fi
               sleep "$POLL_SECONDS"
               continue
             fi
@@ -250,4 +268,25 @@ jobs:
           done
 
           echo "모든 체크 통과 — squash 머지 (head=${head})"
-          gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"
+
+          # 머지 호출 자체에도 시간 가드를 둔다. 없으면 이 호출이 걸렸을 때 잡
+          # 타임아웃(timeout-minutes)이 잡되 `::error::` 없이 러너 메시지만 남아,
+          # "체크를 기다리다 못 끝났다" 와 "머지 호출이 멈췄다" 가 구별되지 않는다.
+          #
+          # `timeout` 은 GNU coreutils 다 — ubuntu-latest 에는 있지만 macOS 에는
+          # 기본 설치가 아니다. 이 `run:` 은 가드가 스텁 `gh` 로 **로컬에서도
+          # 실행**하므로, 무조건 쓰면 CI 만 통과하고 로컬은 exit 127 로 깨진다.
+          # 그래서 있을 때만 쓴다.
+          merge_budget=$((deadline - SECONDS))
+          [ "$merge_budget" -ge 60 ] || merge_budget=60
+          if command -v timeout >/dev/null 2>&1; then
+            if ! timeout "$merge_budget" gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"; then
+              rc=$?
+              if [ "$rc" -eq 124 ]; then
+                echo "::error::머지 호출이 ${merge_budget}s 안에 끝나지 않았다 (head=${head})"
+              fi
+              exit "$rc"
+            fi
+          else
+            gh pr merge "$PR_URL" --squash --delete-branch --match-head-commit "$head"
+          fi

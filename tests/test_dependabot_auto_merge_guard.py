@@ -958,3 +958,93 @@ class TestStabilizationWindowBehaviour:
         assert len([c for c in calls if c.startswith("pr checks")]) >= 3, (
             "폴링이 3회 미만이면 이 시나리오가 창 초기화를 관측하지 못한다."
         )
+
+
+class TestDiagnosticsAndResilience:
+    """리뷰(2026-09-18)가 남긴 LOW 4건. 전부 "사고는 안 나지만 진단이 불가능" 계열이다.
+
+    이 워크플로우는 실패해도 required check 가 아니라 아무도 막지 않는다. 그래서
+    로그가 원인을 말해 주지 못하면 결함이 그대로 묻힌다 — #1319·#1320 이 그렇게
+    쌓였다. 진단 가능성은 여기서 기능 요건이다.
+    """
+
+    def test_head_and_checks_stderr_go_to_separate_files(self, job: dict) -> None:
+        """두 조회의 stderr 를 한 파일에 받으면 실패 사유가 빈칸이 된다.
+
+        `gh pr checks` 가 성공하면 `2>"$file"` 리다이렉션이 파일을 truncate 한다.
+        head 조회만 실패한 경우 재시도 로그가 그 빈 파일을 읽어 `재시도 ()` 가 된다
+        — 주어도 틀리고(체크는 읽혔다) 사유도 없다. 25분을 돌고 deadline red 가 난
+        뒤에는 인증 문제인지 URL 문제인지 구분할 수단이 없다.
+        """
+        _, run = _merge_step(job)
+        redirects = set(re.findall(r'2>"\$(\w+)"', run))
+        assert len(redirects) >= 2, (
+            f"stderr 리다이렉션 대상이 {sorted(redirects)} 뿐이다. head 조회와 체크 조회가 "
+            "같은 파일을 쓰면 한쪽 성공이 다른 쪽 실패 사유를 지운다."
+        )
+        assert "2>/dev/null" not in run.split("gh pr view")[1].split("\n")[0], (
+            "head 조회가 stderr 를 버린다. 버리면 실패 사유를 영영 알 수 없다."
+        )
+
+    def test_malformed_json_is_retried_not_fatal(self, job: dict, tmp_path: Path) -> None:
+        """비-JSON 응답 1회로 런 전체가 죽지 않아야 한다.
+
+        `set -euo pipefail` 아래에서 오염된 출력을 `jq` 에 넘기면 스크립트가 즉시
+        죽는다. 방향은 안전하지만(머지 안 함) `::error::` 없이 jq 파스 에러만 남아
+        Actions 요약에 원인이 드러나지 않고, 일시적 오염 1회로 런을 잃는다.
+        빈 응답은 재시도인데 오염 응답은 치명이라는 **비대칭**도 근거가 없다.
+        """
+        green = _payload(_check("quality", "SUCCESS"))
+        rc, output, calls = _execute_merge_step(job, tmp_path, ["<html>502 Bad Gateway</html>", green])
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert len([c for c in calls if c.startswith("pr checks")]) >= 2, (
+            f"오염된 응답 1회로 루프가 끝났다 — 재시도하지 않는다.\n--- 출력 ---\n{output}"
+        )
+        assert merges, f"오염된 응답 뒤 정상 응답이 와도 회복하지 못했다.\n--- 출력 ---\n{output}"
+        assert rc == 0, f"회복 후에도 실패로 끝났다(rc={rc}).\n--- 출력 ---\n{output}"
+
+    def test_merge_call_is_time_bounded(self, job: dict) -> None:
+        """머지 호출이 걸리면 `::error::` 없이 러너 메시지만 남는다.
+
+        그러면 "체크를 기다리다 못 끝났다"(deadline)와 "머지 호출이 멈췄다"가
+        로그에서 구별되지 않는다. 둘은 대응이 다르다.
+        """
+        _, run = _merge_step(job)
+        calls = [ln.strip() for ln in run.splitlines() if "gh pr merge" in ln]
+        bounded = [ln for ln in calls if "timeout " in ln]
+        # `next()` 로 뽑으면 가드가 깨졌을 때 StopIteration 이 나서 **왜** 깨졌는지
+        # 메시지가 없다. 진단 가능성을 다루는 절이 스스로 그러면 곤란하다.
+        assert bounded, (
+            "`timeout` 으로 감싼 `gh pr merge` 호출이 없다. 머지 호출이 걸리면 잡 "
+            "타임아웃이 잡되 `::error::` 없이 러너 메시지만 남아 deadline 초과와 "
+            "구별되지 않는다.\n현재 머지 호출:\n  " + "\n  ".join(calls)
+        )
+        assert all("$merge_budget" in ln for ln in bounded), (
+            f"머지 호출의 시간 예산이 남은 deadline 에서 오지 않는다: {bounded!r}. "
+            "상수를 박으면 deadline 을 바꿔도 따라오지 않는다."
+        )
+        assert "-eq 124" in run, (
+            "`timeout` 의 종료코드 124 를 구분하지 않는다. 구분하지 않으면 시간 초과가 "
+            "일반 실패와 같은 모양으로 보여 진단이 안 된다."
+        )
+
+    def test_self_exclusion_job_has_no_matrix(self, job: dict) -> None:
+        """matrix 를 붙이면 `SELF_CHECK` 가 더는 체크 이름과 맞지 않아 교착한다.
+
+        `gh pr checks` 의 체크 이름은 잡의 `name:` 과 다를 수 있다. 실측(#1328·#1343):
+
+            SKIPPED  Guard Falsifiability  falsifiability (${{ matrix.shard }}/${{ strategy.job-total }})
+
+        matrix 잡은 이름이 확장되거나(`auto-merge (1)`) 스킵 시 템플릿 원문이 그대로
+        노출된다. 그러면 자기 자신을 제외하지 못해 **모든 PR 이 25분 deadline red** 다.
+
+        `test_self_check_name_matches_the_job_name` 은 `SELF_CHECK == job["name"]` 을
+        보는데 matrix 를 붙여도 `job["name"]` 은 그대로라 통과한다 — 그 가드가 막겠다고
+        선언한 교착의 한 형태가 무방비였다(2026-09-18 리뷰). 여기서 닫는다.
+        """
+        assert "strategy" not in job, (
+            f"`{_JOB_ID}` 잡에 strategy 가 생겼다: {job.get('strategy')!r}. matrix 를 쓰면 "
+            f"체크 이름이 `{_JOB_ID} (…)` 로 확장되거나 템플릿 원문으로 노출돼 "
+            "SELF_CHECK 매칭이 깨지고, 자기 자신을 기다리다 모든 PR 이 deadline red 가 된다. "
+            "정말 필요하면 SELF_CHECK 도 확장된 이름을 쓰도록 함께 고칠 것."
+        )
