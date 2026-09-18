@@ -266,8 +266,15 @@ class TestMergeWaitsForChecks:
             "`gh pr merge` 가 관측한 head SHA 에 고정돼 있지 않다. dependabot rebase 나 "
             "락 commit-back 이 폴링 직후 들어오면 검증하지 않은 트리를 머지한다."
         )
-        assert run.index("headRefOid") < run.index("while") or run.index("headRefOid") < run.index("gh pr merge"), (
-            "head SHA 를 머지 직전이 아니라 폴링 시점에 캡처할 것 — 아니면 고정의 의미가 없다."
+        # 옛 단언은 `... or run.index("headRefOid") < run.index("gh pr merge")` 였는데,
+        # `gh pr merge` 가 스크립트의 **마지막 줄**이라 오른쪽이 항상 참이었다 —
+        # `or` 때문에 왼쪽의 진짜 검사가 무력화된 vacuous 단언이다(2026-09-18 실측:
+        # 캡처를 머지 직전으로 옮겨도 22/22 green). 체크 조회보다 앞서는지를 본다.
+        assert run.index("headRefOid") < run.index("gh pr checks"), (
+            "head SHA 를 머지 직전이 아니라 **체크 조회와 같은 시점**에 캡처할 것 — "
+            "나중에 다시 읽으면 마지막 폴링 이후 들어온 커밋의 head 에 고정하게 되어 "
+            "고정이 TOCTOU 를 닫는다는 전제가 사라진다. "
+            "행동 단언은 TestMergeStepBehaviourRegressions::test_head_is_re_read_on_every_poll."
         )
 
 
@@ -473,8 +480,10 @@ _STUB_GH = """#!/usr/bin/env bash
 printf '%s\\n' "$*" >> "$GH_CALLS"
 case "$1 $2" in
   "pr view")
-    # head SHA. 고정값이면 `--match-head-commit` 경로가 항상 같은 값을 받는다.
-    echo "deadbeefcafe0000000000000000000000000000"
+    # head SHA 를 **호출마다 다르게** 준다. 고정값이면 "폴링 때 관측한 head" 와
+    # "머지 직전에 다시 읽은 head" 가 구별되지 않아 TOCTOU 가드가 vacuous 해진다.
+    v="$(grep -c '^pr view' "$GH_CALLS")"
+    printf 'head%036d\n' "$v"
     ;;
   "pr checks")
     # 폴링 회차마다 다른 응답을 주기 위해 호출 횟수를 센다.
@@ -505,7 +514,7 @@ def _execute_merge_step(
     polls: list[str],
     *,
     checks_rc: str = "8",
-    deadline: str = "5",
+    deadline: str = "60",
 ) -> tuple[int, str, list[str]]:
     """머지 스텝의 `run:` 을 스텁 `gh` 로 실행하고 (rc, 출력, gh 호출목록) 을 준다.
 
@@ -607,7 +616,8 @@ class TestMergeStepBehaviour:
         merges = [c for c in calls if c.startswith("pr merge")]
         assert rc == 0, f"전부 통과인데 머지에 실패했다(rc={rc}).\n--- 출력 ---\n{output}"
         assert len(merges) == 1, f"머지 호출이 정확히 1회여야 한다(현재 {len(merges)}회): {merges}"
-        assert "--match-head-commit deadbeefcafe0000000000000000000000000000" in merges[0], (
+        views = [c for c in calls if c.startswith("pr view")]
+        assert f"--match-head-commit head{len(views):036d}" in merges[0], (
             f"머지가 폴링 때 관측한 head 에 고정되지 않았다: {merges[0]!r}. 고정이 빠지면 "
             "마지막 폴링 이후 들어온 커밋이 검증 없이 머지된다."
         )
@@ -748,4 +758,104 @@ class TestMergeGateTruthTable:
             f"머지 게이트가 event_name={event!r}, update-type={update_type!r} 에서 "
             f"{actual} 로 평가된다(기대 {expected}).\n게이트: {gate!r}\n"
             "자동 경로에서 patch 제한이 풀리면 semver-minor/major 가 사람 검토 없이 머지된다."
+        )
+
+
+class TestMergeStepBehaviourRegressions:
+    """리뷰(2026-09-18)가 뚫은 나머지 뮤테이션을 실행으로 고정한다.
+
+    전부 "탈출 조건을 느슨하게 하면 무엇이 머지되는가" 를 묻는다. 문자열 존재 검사는
+    앵커를 `: '...'` no-op 으로 남기면 그대로 통과하므로 여기서는 텍스트를 보지 않는다.
+    """
+
+    def _self_check(self, job: dict, state: str = "SUCCESS") -> dict:
+        env = _merge_step_env(job)
+        return _check(str(env["SELF_CHECK"]), state, str(env["SELF_WORKFLOW"]))
+
+    def test_does_not_merge_when_only_its_own_check_exists(self, job: dict, tmp_path: Path) -> None:
+        """자기 자신만 목록에 있는 순간은 "전부 통과" 가 아니라 "아직 볼 게 없다" 다.
+
+        탈출 조건에서 체크 개수 검사가 빠지면(`&&`→`||`, 또는 조건만 제거) non-self
+        체크가 0건인 첫 폴링에서 즉시 머지된다. 다른 워크플로우의 체크가 아직
+        올라오지 않은 시점이므로 **아무것도 검증하지 않은 머지**다.
+        """
+        only_self = _payload(self._self_check(job))
+        rc, output, calls = _execute_merge_step(job, tmp_path, [only_self], deadline="2")
+        polls_done = len([c for c in calls if c.startswith("pr checks")])
+        assert polls_done >= 1, "폴링이 한 번도 일어나기 전에 끝났다 — 이 시나리오가 아무것도 검증하지 못한다."
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert not merges, (
+            f"non-self 체크가 0건인데 머지했다: {merges}. 목록이 자기 자신뿐인 순간은 "
+            f"'전부 통과' 가 아니다.\n--- 출력 ---\n{output}"
+        )
+        assert rc != 0, f"볼 체크가 없는데 성공으로 끝났다(rc={rc}).\n--- 출력 ---\n{output}"
+
+    def test_waits_for_a_check_that_appears_late(self, job: dict, tmp_path: Path) -> None:
+        """늦게 생성되는 commit status 를 건너뛰지 않는다.
+
+        2026-09-14 #1320 실측: `Vercel Preview Comments` 가 잡 시작 +96초에 **처음**
+        목록에 나타났다. 없는 체크는 대기 대상이 아니므로, 안정화 창이 없으면 그
+        체크가 나타나기 전에 빠져나가 그냥 건너뛴다.
+
+        1회차엔 통과 체크 하나만, 2회차에 실패 체크가 등장하는 시나리오다. 안정화
+        창이 살아 있으면 2회차를 보고 중단하고, 없으면 1회차에서 머지한다 — 두 경우의
+        관측 결과가 **다르므로** 판별력이 있다.
+        """
+        polls = [
+            _payload(_check("quality", "SUCCESS")),
+            _payload(_check("quality", "SUCCESS"), _check("Vercel Preview Comments", "FAILURE")),
+        ]
+        rc, output, calls = _execute_merge_step(job, tmp_path, polls)
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert not merges, (
+            f"늦게 나타난 실패 체크를 건너뛰고 머지했다: {merges}. 안정화 창이 없으면 "
+            f"첫 폴링에서 빠져나간다.\n--- 출력 ---\n{output}"
+        )
+        assert rc != 0 and "Vercel Preview Comments" in output, (
+            f"늦게 나타난 체크를 포착하지 못했다(rc={rc}).\n--- 출력 ---\n{output}"
+        )
+
+    def test_does_not_exclude_a_same_named_check_from_another_workflow(self, job: dict, tmp_path: Path) -> None:
+        """자기 제외는 이름과 워크플로우가 **둘 다** 맞을 때만이다.
+
+        `and` 를 `or` 로 느슨하게 하면 다른 워크플로우의 동명 잡이 제외되어 그 체크를
+        기다리지 않는다. 이 저장소에는 이미 동명 체크가 중복 존재한다
+        (2026-09-15 `gh pr checks 1324`: `verify` ×2, `Supply-chain lock gate` ×2).
+
+        여기서는 **남의 워크플로우**에 자기와 같은 이름의 실패 체크를 둔다. 제외가
+        올바르면 실패로 잡혀 중단하고, 느슨하면 제외되어 머지까지 간다.
+        """
+        env = _merge_step_env(job)
+        foreign = _check(str(env["SELF_CHECK"]), "FAILURE", "Some Other Workflow")
+        polls = [_payload(foreign, _check("quality", "SUCCESS"))]
+        rc, output, calls = _execute_merge_step(job, tmp_path, polls, checks_rc="1")
+        merges = [c for c in calls if c.startswith("pr merge")]
+        assert not merges, (
+            f"다른 워크플로우의 동명 체크를 자기 자신으로 오인해 제외하고 머지했다: {merges}. "
+            f"제외는 이름과 워크플로우가 둘 다 맞을 때만이어야 한다.\n--- 출력 ---\n{output}"
+        )
+        assert rc != 0, f"남의 실패 체크를 보고도 성공으로 끝났다(rc={rc}).\n--- 출력 ---\n{output}"
+
+    def test_head_is_re_read_on_every_poll(self, job: dict, tmp_path: Path) -> None:
+        """head 캡처가 폴링과 **같은 시점**이어야 `--match-head-commit` 이 의미를 갖는다.
+
+        머지 직전에 다시 읽으면 마지막 폴링 이후 들어온 커밋의 head 를 읽어 거기에
+        고정하므로, 검증하지 않은 트리를 그대로 머지한다 — 고정이 TOCTOU 를 닫는다는
+        전제가 사라진다.
+
+        옛 단언(`run.index("headRefOid") < run.index("gh pr merge")`)은 `gh pr merge`
+        가 스크립트의 **마지막 줄**이라 항상 참이었다(vacuous). 대신 여기서는 조회
+        횟수를 본다 — 루프 안에 있으면 폴링 회차만큼, 루프 밖이면 1회다.
+        """
+        green = _payload(_check("quality", "SUCCESS"))
+        _, output, calls = _execute_merge_step(job, tmp_path, [green])
+        views = len([c for c in calls if c.startswith("pr view")])
+        checks = len([c for c in calls if c.startswith("pr checks")])
+        assert views == checks, (
+            f"head 조회 {views}회 / 체크 조회 {checks}회 — 두 값이 다르면 head 를 폴링과 "
+            f"같은 시점에 읽고 있지 않다.\n--- 출력 ---\n{output}"
+        )
+        assert checks >= 2, (
+            f"이 시나리오는 안정화 창 때문에 폴링이 2회 이상이어야 판별력이 있다(현재 {checks}회). "
+            "루프 구조가 바뀌었다면 이 가드의 시나리오도 다시 설계할 것."
         )

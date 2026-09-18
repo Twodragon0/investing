@@ -882,22 +882,50 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         'IN("SUCCESS","SKIPPED","NEUTRAL","FAILURE","TIMED_OUT","PENDING"',
         "tests/test_dependabot_auto_merge_guard.py::TestStateClassificationIsFailClosed::test_pass_whitelist_excludes_every_failure_state",
     ),
+    # 아래 두 케이스는 **앵커 문자열을 지우는** 변형이라, 문자열 존재 가드도 red 를
+    # 낸다. 즉 "가드가 그 속성을 잡는다" 를 증명하지 못한다 — 2026-09-18 리뷰가
+    # 앵커를 `: '...'` 셸 no-op 으로 **보존한 채** 제어흐름에서만 빼자 두 가드 모두
+    # 통과했다. 그래서 여기서는 앵커 보존 형태로 등록하고, 대상 가드도 텍스트가
+    # 아니라 실행 관측으로 바꿨다.
     StaticCase(
         # non-self 체크가 0건인 순간(자기 자신만 올라온 시점)에 즉시 머지된다.
-        "탈출 조건에서 체크 개수 검사 제거",
+        "탈출 조건에서 체크 개수 검사 제거 (앵커는 no-op 으로 보존)",
         ".github/workflows/dependabot-auto-merge.yml",
         'if [ "$total" -gt 0 ] && [ "$waiting" -eq 0 ]; then',
-        'if [ "$waiting" -eq 0 ]; then',
-        "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_break_requires_at_least_one_non_self_check",
+        ': \'"$total" -gt 0\'\n            if [ "$waiting" -eq 0 ]; then',
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeStepBehaviourRegressions::test_does_not_merge_when_only_its_own_check_exists",
     ),
     StaticCase(
         # GitHub App commit status 는 잡 시작 +96초에 처음 나타난 실측이 있다.
-        "안정화 창 제거 (늦게 생성되는 체크를 건너뜀)",
+        "안정화 창 제거 (늦게 생성되는 체크를 건너뜀, 앵커는 no-op 으로 보존)",
         ".github/workflows/dependabot-auto-merge.yml",
-        'if [ "$current" = "$previous" ]; then',
-        "if true; then",
-        "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_break_requires_a_stable_check_set",
+        'if [ "$current" = "$previous" ]; then\n                break\n              fi',
+        ': \'"$current" = "$previous"\'\n              break',
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeStepBehaviourRegressions::test_waits_for_a_check_that_appears_late",
     ),
+    StaticCase(
+        # 다른 워크플로우의 동명 잡까지 제외되어 그 체크를 기다리지 않는다.
+        # 이 저장소에는 이미 동명 체크가 중복 존재한다(`verify` ×2 등).
+        "자기 제외를 이름 OR 워크플로우로 완화 (남의 동명 체크까지 제외)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        ".name == $self and .workflow == $wf",
+        ".name == $self or .workflow == $wf",
+        "tests/test_dependabot_auto_merge_guard.py::TestMergeStepBehaviourRegressions::test_does_not_exclude_a_same_named_check_from_another_workflow",
+    ),
+    # `TestMergeStepBehaviourRegressions::test_head_is_re_read_on_every_poll` 은 여기에
+    # **등록하지 않는다.** 그 가드가 막는 회귀는 head 캡처를 루프 밖 `gh pr merge`
+    # 직전으로 **옮기는** 것이고, 이는 서로 떨어진 두 지점을 동시에 고쳐야 한다 —
+    # 단일 치환인 StaticCase 로는 표현할 수 없다.
+    #
+    # 표현 가능한 단일 치환(캡처 라인을 `true` 로 삭제)은 **방향이 다르다**. 그러면
+    # `head=""` 가 되어 재시도 분기에서 멈추는 fail-closed 변형이고, 주장하는 위험
+    # (검증하지 않은 커밋이 머지되는 fail-open)과 반대다. 억지로 등록하면 하네스는
+    # FALSIFIABLE 을 찍지만 실제로는 다른 사고를 재현한 것이 된다
+    # (메모 `feedback_guard_must_discriminate_not_just_red` 의 함정).
+    #
+    # 2026-09-18 두-지점 이동 뮤테이션을 손으로 주입해 red 를 확인했다:
+    # 캡처를 루프에서 빼고 `[ -z "$head" ]` 재시도 조건을 정리한 뒤 머지 직전에서
+    # 다시 읽게 하자 `test_head_is_re_read_on_every_poll` 이 red 였다(1 failed, 35 passed).
     StaticCase(
         # 푸시 주체 기준 게이트는 잡 자체가 뜨지 않아 self-modification 에 면역이다.
         # 작성자 기준으로 바꾸면 그 성질을 잃는다(2026-09-16 검토에서 철회된 변경).
