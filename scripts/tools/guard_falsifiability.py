@@ -870,8 +870,8 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         # 통째로 버려 **전부 통과한 PR 도 머지되지 않는다**(2026-09-15 스텁 실측).
         '체크 조회 출력을 종료코드로 폐기 (|| raw="")',
         ".github/workflows/dependabot-auto-merge.yml",
-        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file" || true)"',
-        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$err_file")" || raw=""',
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$checks_err" || true)"',
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$checks_err")" || raw=""',
         "tests/test_dependabot_auto_merge_guard.py::TestMergeWaitsForChecks::test_check_query_does_not_discard_output_on_nonzero_exit",
     ),
     StaticCase(
@@ -1018,6 +1018,43 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         'if [ "$current" = "$previous" ] && [ "$head" = "$previous_head" ]; then',
         'if [ "$current" = "$previous" ]; then',
         "tests/test_dependabot_auto_merge_guard.py::TestStabilizationWindowBehaviour::test_head_change_restarts_the_window",
+    ),
+    StaticCase(
+        # 두 조회의 stderr 를 한 파일에 받으면, 체크 조회 성공이 리다이렉션으로
+        # 파일을 truncate 해 head 조회 실패 사유가 빈칸으로 남는다(`재시도 ()`).
+        "head/체크 조회의 stderr 를 한 파일로 합치기 (실패 사유 소실)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$checks_err" || true)"',
+        'raw="$(gh pr checks "$PR_URL" --json name,state,workflow 2>"$head_err" || true)"',
+        "tests/test_dependabot_auto_merge_guard.py::TestDiagnosticsAndResilience::test_head_and_checks_stderr_go_to_separate_files",
+    ),
+    StaticCase(
+        # 오염된 응답을 그대로 jq 에 넘기면 pipefail 로 스크립트가 즉시 죽는다.
+        # `::error::` 없이 jq 파스 에러만 남아 원인이 요약에 드러나지 않는다.
+        "비-JSON 응답 검증 제거 (일시 오염 1회로 런 전체 손실)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'if [ -n "$raw" ] && ! echo "$raw" | jq -e \'type == "array"\' >/dev/null 2>&1; then',
+        "if false; then",
+        "tests/test_dependabot_auto_merge_guard.py::TestDiagnosticsAndResilience::test_malformed_json_is_retried_not_fatal",
+    ),
+    StaticCase(
+        # 머지 호출이 걸리면 잡 타임아웃이 잡되 `::error::` 가 없어, deadline 초과와
+        # 구별되지 않는다. 둘은 대응이 다르다.
+        "머지 호출의 시간 가드 제거",
+        ".github/workflows/dependabot-auto-merge.yml",
+        'timeout "$merge_budget" gh pr merge',
+        "gh pr merge",
+        "tests/test_dependabot_auto_merge_guard.py::TestDiagnosticsAndResilience::test_merge_call_is_time_bounded",
+    ),
+    StaticCase(
+        # matrix 를 붙이면 체크 이름이 `auto-merge (1)` 로 확장되거나 스킵 시 템플릿
+        # 원문이 노출돼 SELF_CHECK 매칭이 깨진다 → 자기 자신을 기다리다 모든 PR 이
+        # deadline red. 기존 `SELF_CHECK == job["name"]` 가드는 이걸 통과시킨다.
+        "auto-merge 잡에 matrix 추가 (self-exclusion 교착)",
+        ".github/workflows/dependabot-auto-merge.yml",
+        "  auto-merge:\n    name: auto-merge\n",
+        "  auto-merge:\n    name: auto-merge\n    strategy:\n      matrix:\n        shard: [1, 2]\n",
+        "tests/test_dependabot_auto_merge_guard.py::TestDiagnosticsAndResilience::test_self_exclusion_job_has_no_matrix",
     ),
 )
 
