@@ -1,31 +1,5 @@
 {
   "seen": {
-    "dd8eb1fa67d0c8318766b2da": "2026-08-19T22:52:03",
-    "ee8d656d660ad59388e45ad1": "2026-08-19T22:52:03",
-    "d92bbafb791e421757ed9cc2": "2026-08-19T22:52:03",
-    "ed1b41a0cb84c0c4ee23a52e": "2026-08-19T22:52:03",
-    "72e6f0b96e7f62a0cfa011f2": "2026-08-19T22:52:03",
-    "5e1b0b9af40a9e529bc996c0": "2026-08-19T22:52:03",
-    "ff1256bca3193fde8b66c7f5": "2026-08-19T22:52:03",
-    "d3c0ec3c23e51d3c9a4999c0": "2026-08-19T22:52:03",
-    "931b10b4358f7fd4c936b0b6": "2026-08-19T22:52:03",
-    "d7613887ecfe3f7a14821f4a": "2026-08-19T22:52:03",
-    "d4d46628e78e5205f22bad95": "2026-08-19T22:52:03",
-    "2878cf7017f197171ae12be5": "2026-08-19T22:52:03",
-    "681d2718d1d7117232e6cdaa": "2026-08-19T22:52:03",
-    "9101f28d42f946cd6bc5a270": "2026-08-19T22:52:03",
-    "04b2465a0637c8f9d779a969": "2026-08-19T22:52:03",
-    "a534ea9daf006a50c4a1e87f": "2026-08-19T22:52:03",
-    "491b88e1d9dd1c2a690dc65b": "2026-08-19T22:52:03",
-    "90cbd08f6db224ac4f69efed": "2026-08-19T22:52:03",
-    "52553b474713262f4e8bbc5d": "2026-08-19T22:52:03",
-    "cd12d0e410973050334f44fa": "2026-08-19T22:52:03",
-    "ea2aa852fc64f7987c2e1024": "2026-08-19T22:52:03",
-    "3c17161a4b43ab2a7136f85e": "2026-08-19T22:52:03",
-    "6f0a29202bd5095f0b7b6502": "2026-08-19T22:52:03",
-    "375a070f352bbdfdaf979f80": "2026-08-19T22:52:03",
-    "cab651f4e99ef2c1e9948eb4": "2026-08-19T22:52:03",
-    "39190d0bdefc93d3404552db": "2026-08-19T22:52:03",
     "db892930ee5ecfa6b720bf3c": "2026-08-20T22:56:01",
     "e4812093bec37ad81051905b": "2026-08-20T22:56:01",
     "96c1edc0ec90f851f48b645a": "2026-08-20T22:56:01",
@@ -766,7 +740,34 @@
     "934b94c767e4b1c182f9e3f1": "2026-09-18T00:38:04",
     "27a75695ada8343cb65f7903": "2026-09-18T00:38:04",
     "ce7f8f7f3bfff4cd5ac3aed8": "2026-09-18T00:38:04",
-    "c0b3ecc5115d3208533dc435": "2026-09-18T00:38:04"
+    "c0b3ecc5115d3208533dc435": "2026-09-18T00:38:04",
+    "ec6575672edd1a91eaab6d8e": "2026-09-19T00:30:15",
+    "8c253a61c97f3403e8ad2aef": "2026-09-19T00:30:15",
+    "fff9c68fef65b1a4a8335876": "2026-09-19T00:30:15",
+    "e5cbdabd0cd5e1e7578d21e8": "2026-09-19T00:30:15",
+    "c734bedffb7b9ddf2999629c": "2026-09-19T00:30:15",
+    "3ee605069a4335f54bf9737d": "2026-09-19T00:30:15",
+    "2cb77dee0e447a18b0e0b55d": "2026-09-19T00:30:15",
+    "e3f7907636017a554375e766": "2026-09-19T00:30:15",
+    "6744fbf4ba69ba0a51b77f23": "2026-09-19T00:30:15",
+    "6ba9bf4f2dd5fe30099bd700": "2026-09-19T00:30:15",
+    "1467b5ef06cf52d3f5afe96b": "2026-09-19T00:30:15",
+    "6d10b7a117aef36147b0df34": "2026-09-19T00:30:15",
+    "61da0a891fe28f3581a19fc1": "2026-09-19T00:30:15",
+    "2656ef47854c8c678005d2d7": "2026-09-19T00:30:15",
+    "6c18c395aa02ebbaacf17082": "2026-09-19T00:30:15",
+    "3c4b10d5096ae980df030ca0": "2026-09-19T00:30:15",
+    "d331fe4c81cf15e857b81ed6": "2026-09-19T00:30:15",
+    "33cb9786cd7b6b98b5a9b360": "2026-09-19T00:30:15",
+    "03205d095966a3cd4347627d": "2026-09-19T00:30:15",
+    "42f5a2dd904f21c9a138cf57": "2026-09-19T00:30:15",
+    "9a4baf47475b7880d62f60c4": "2026-09-19T00:30:15",
+    "fb37d5f72f68a3c1a1c19247": "2026-09-19T00:30:15",
+    "fc18f98d488eb2dfbbc46086": "2026-09-19T00:30:15",
+    "0e88a43051b09fcae5e87e23": "2026-09-19T00:30:15",
+    "60508366856f928b1ad4df5a": "2026-09-19T00:30:15",
+    "ff0e5d797feec1b6f60801a6": "2026-09-19T00:30:15",
+    "34fd9bc7284542dd4e668fed": "2026-09-19T00:30:15"
   },
   "titles": [
     [
@@ -18656,6 +18657,114 @@
     [
       "정치인 거래정책 리포트 20260918",
       "2026-09-18"
+    ],
+    [
+      "form 4 vivos therapeutics inc insider trading activity stock titan",
+      "2026-09-19"
+    ],
+    [
+      "form 4 netskope inc insider trading activity stock titan",
+      "2026-09-19"
+    ],
+    [
+      "form 4 coreweave inc insider trading activity stock titan",
+      "2026-09-19"
+    ],
+    [
+      "general dynamics nyse gd director receives 105share fee grant stock titan",
+      "2026-09-19"
+    ],
+    [
+      "affirm afrm grants 46904 stock units to its cfo stock titan",
+      "2026-09-19"
+    ],
+    [
+      "cisco nasdaq csco awards cfo 92817 stock units stock titan",
+      "2026-09-19"
+    ],
+    [
+      "bloom energy be cco sells shares to cover taxes under plan stock titan",
+      "2026-09-19"
+    ],
+    [
+      "cisco nasdaq csco awards 139k rsus to president jeetendra patel stock titan",
+      "2026-09-19"
+    ],
+    [
+      "cisco nasdaq csco grants chief accounting officer 7826share award stock titan",
+      "2026-09-19"
+    ],
+    [
+      "cisco nasdaq csco legal chief gets 55kshare stock award stock titan",
+      "2026-09-19"
+    ],
+    [
+      "powerfleet aiot director now holds 218220 shares stock titan",
+      "2026-09-19"
+    ],
+    [
+      "insider at cisco nasdaq csco gets 69613share grant stock titan",
+      "2026-09-19"
+    ],
+    [
+      "powerfleet aiot director reports 102309 direct and 3982432 indirect shares stock titan",
+      "2026-09-19"
+    ],
+    [
+      "director at stubhub stub awarded 42445 rsus stock titan",
+      "2026-09-19"
+    ],
+    [
+      "rsu vesting prompts kanzhun nasdaq bz director tax sale stock titan",
+      "2026-09-19"
+    ],
+    [
+      "president trump announces executive order elevating saltwater recreational fishing on the water",
+      "2026-09-19"
+    ],
+    [
+      "ecb to hold fire until final rate hike in december survey shows",
+      "2026-09-19"
+    ],
+    [
+      "euro flattens against us dollar as traders look beyond ecbfed hawkish decisions fxstreet",
+      "2026-09-19"
+    ],
+    [
+      "4분기 기준금리 동결에도 예대금리차 여전",
+      "2026-09-19"
+    ],
+    [
+      "여보 주담대 금리 8까지 오를수도 있데가계부담 커지는 한국 어쩌나",
+      "2026-09-19"
+    ],
+    [
+      "이자부담 어쩌죠 영끌족들 발동동미 3년2개월 만에 금리인상 한은도 올리나",
+      "2026-09-19"
+    ],
+    [
+      "3년만에 기준금리 올린 미 연준한은 금리 또 올릴까 124 세상을 바꾸는 시민언론 민들레",
+      "2026-09-19"
+    ],
+    [
+      "美금리 4 시대매파 연준에 한은 10월 쉬어가기 셈법 복잡",
+      "2026-09-19"
+    ],
+    [
+      "이슈앤피플 미 연준 기준금리 025p 인상연내 추가 인상 예고 매일경제tv",
+      "2026-09-19"
+    ],
+    [
+      "증시 인사이트 boj 금리인상코스피 외국인 자금 이탈 심해질까 sbs biz",
+      "2026-09-19"
+    ],
+    [
+      "美 연준 3년2개월 만에 기준금리 인상한미 격차 1p로 확대 피플투데이",
+      "2026-09-19"
+    ],
+    [
+      "정치인 거래정책 리포트 20260919",
+      "2026-09-19"
     ]
   ],
   "seen_urls": {}
