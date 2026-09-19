@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-19 | 시총 $2.63T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -9.71%</li><li>🔴 <strong>Dogecoin</strong> (DOGE): -5.96%</li><li>🔴 <strong>Ethereum</strong> (ETH): -3.68%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **14건** 수집

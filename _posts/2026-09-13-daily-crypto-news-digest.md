@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9UcHlMYWE2d0pDZkdGMmJoODEtejlVS3o2dFdFeDh3T3RDeUVhRVFIM2JvaTFKWkYwelM0ZG9qYTZNUzJOeURNTmh6NTVNams2cG9DYUlDLVZWMFRuSlVnN3hCMU9Rc2gtdW4yT0tVVHlidw?oc=5">톰 리, 암호화폐 12개월 강세 전망</a> <span class="p0-desc">톰 리는 앞으로 12개월 동안 암호화폐 시장이 “정말 강세”를 보일 것이라고 말합니다. 이 월스트리트 전략가는 자신이 옳기를 바랄 이유가 있습니다. 그가 이끄는 회사의 손실 규모가.</span></li><li><a href="https://decrypt.co/377962/bitcoin-price-cpi-inflation-fed-rate-decision">Bitcoin Rises as Markets Digest Inflation Data Ahead of Fed Rate Decision</a></li><li><a href="https://decrypt.co/377959/blockstream-refuses-ransom-for-return-of-47m-in-bitcoin-from-liquid-hack-it-is-theft">Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **81건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- 2026-09-13 암호화폐 핵심 뉴스: 전 리플 CTO "XRP가 비트코인 시총 추월 가능".역전 시나리오는?. 총 81건 분석, 핵심 테마는 비트코인, 가격/시장, 매크로/금리입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

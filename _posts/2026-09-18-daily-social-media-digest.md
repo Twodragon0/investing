@@ -30,12 +30,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-18 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 포퓰리즘 재정이 부른 '월세 비명' … 李가 자초한 '20대 지지율 폭락' - 37건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 금리 관련 28건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 금리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 인상, 기준금리 관련 21건</li><li>🔵 <strong>규제/정책</strong>: 제재 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE1KWGxjXzRTOVBDOWUwSldmRVM4SThOV3g4LVM5eUJZeXI2Sl9zY213R1JHUlVCMWROYk4tNXhkVWdMcTNnUVA2OW9aNW9saGVQSXNTNnJjaEp5eVRVZm1RMW8zOGoxMzhhQTF1S2hGVTJGcndRYXozc0I5c9IBgAFBVV95cUxOeVV5MXhONkdEbkd2VERJVFVZQ1RjVDRORTBzclJyU2o5b20zMWdUVEg5dy1hZ1VwZlF4RUtmSlUyUWVnOXV4YmI2U0o2VS11QVFXV2laMEU0U2k0OVltUGZ3aDZvRi1mTVdOVWZ4V0tmV0NJTERIbGNtU1NlSjNRVQ?oc=5">포퓰리즘 재정이 부른 '월세 비명' … 李가 자초한 '20대 지지율 폭락'</a> <span class="p0-desc">20대 지지율 10%대, 부정 평가 80% 육박. 이재명 대통령을 향한 청년층의 민심이 통제 불능 수준으로 치닫고 있다. 특히 20대 여성 지지율이 17.6%까지 폭락하며 전통적.</span></li><li><a href="https://www.nytimes.com/2026/09/16/business/economy/trump-fed-interest-rates.html">Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision</a></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBpUVgwbnd0X05XenhFY3VNS2hOWDdMUUpsWVE0ZFNEeV92SFZ4dDRScFVPdW5SQ2lWZnVwUlVuaGluOE9qX0s1dDVIT2NtVE5mMnlsdGMwRklZOFhsZUt4aERVS0FfN2x5RFJRQTNkRTluQVR6NHd2SXhIYS0?oc=5">US Fed to deliver rate decision with markets betting on hike</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 37건 중 텔레그램 0건, 소셜 0건, 정치·경제 37건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 37건 중 텔레그램 0건, 소셜 0건, 정치·경제 37건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

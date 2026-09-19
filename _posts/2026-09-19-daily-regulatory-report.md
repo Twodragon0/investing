@@ -28,29 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-09-19 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 일자, ETF, 기사 관련 39건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 일자, ETF 관련 21건</li><li>🟣 <strong>DeFi</strong>: 집행 이슈 부각</li><li>🏦 <strong>거래소</strong>: ETF, 해외상장 이슈 부각</li><li>🟠 <strong>비트코인</strong>: ETF, 해외상장 관련 2건</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 39건의 뉴스 중 **규제/정책** 관련이 21건(54%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (21건): 일자, ETF, 기사 규제 움직임 (21건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🟣 DeFi** (3건): 집행, 증권 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🏦 거래소** (6건): ETF, 기사, 해외상장 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- Federal Reserve issues FOMC statement
-- Federal Reserve Board and Federal Open Market Committee release economic project
-- 외 7건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 20건, 미국 11건, 유럽 8건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 39건
 - **한국**: 20건

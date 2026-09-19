@@ -29,50 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-09-19 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision - 32건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 인상 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 기자회견 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 인상, 기준금리 주목</li><li>🤖 <strong>AI/기술</strong>: 외국인, 코스피 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.nytimes.com/2026/09/16/business/economy/trump-fed-interest-rates.html">Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision 
-총 32건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
+오늘 수집된 총 32건 중 텔레그램 0건, 소셜 0건, 정치·경제 32건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (22건): 연준, 인상, 기준금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (16건): 트럼프, 기자회견 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **📈 가격/시장** (20건): 인상, 기준금리, 외국인 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Trump’s Latest Threats Loom Over Fed’s Interest Rate Decision
-
-### 주요 이슈
-
-- 100% Trump tariffs loom: Russia sanctions bill passed in US; will it make India
-- 李, 집값 급등 尹·吳 탓… "강남 하락, 외곽 상승은 평탄화 과정"
-- 한미 금리차 1%p로 확대…한은 연내 추가인상 가능성 커져
-- 외 3건
-
-### 투자자 체크포인트
-
-- 정치·경제 32건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:73%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:91%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:5%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-09-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-09-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

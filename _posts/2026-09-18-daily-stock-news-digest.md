@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-18 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 선물 - 193건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 국채 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 주목</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 관련 8건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE84TzJvTEVGMGZ2aDJjcTZER0pTZ1Zvb3hYcFNJRUt2VVh4V2V1UFo5WVZRcXV3OXZ4SzYyVVNZeHBCNUJkMkF6bHhzOXVzTXJybUt1YjJRNmM4WEdYOXFJamJ2YmxlTmNyRHphc05NZUdYbnBIUDdPMXZ4djI?oc=5">US Stock Market Today: S&P 500 Futures Edge Higher As Fed Rate Decision Looms - Yahoo Finance Singapore</a></li><li><a href="https://www.cnbc.com/2026/09/17/fed-rate-decision-and-warsh-comments-roiled-markets-where-to-find-opportunities.html">Fed rate decision and Warsh comments roiled markets. Where to find opportunities</a></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNQnVwNHpoMGpWWG1OTnEzR3pWbVI1WS0tQTFrSElnT20zRFlGaVR4TGF0Q2FuT3F1ZWh5RS1TdmNINXRmQy1pVFlRWTQwQUtIdVpQSi1BcnFqam92a0RMRm5IU1J3VjdTeE5vZXBPLUw4MmlhZlAzWXVSZzhPQzJfVlFNWVFWTmQ4OThfaVFPSDlDaDZFczlEdHJmbVljUnFKV3lQUGY2Mk1hSXY4WVZoTw?oc=5">Gold Steadies Below $4,300 as Markets Await Fed Rate Decision</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,715.41 (-0.04%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 822.18 (+0.76%).
+- 2026-09-18 주식 시장에서 193건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,715.41(-0.04%), KOSDAQ 822.18(+0.76%), USD/KRW 1,380.88(+0.27%).
 - *Davidson College Economics Professor Vikram Kumar analyzes the unique combination of factors behind the recent surge.*
 
 ## 테마별 주요 뉴스
