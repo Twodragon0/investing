@@ -43,8 +43,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-19 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYTlBVmpRVUdJRmZfd1VMVGw4OXdTb0xTMHJTQ21FWVZHeWJNREhHZGJSUEx5UzZwYUJ2YndpbF93MTRGd01fUko4amVFZjlfVEdVc2preDg3X0RLd0dIM0xKUHFfUzFYX0hRbUNYc3MtQmxEOEVJVkFtYmZfNW5CaTk5X0NoelBq?oc=5">특징주] 삼성전자 SK하이닉스, 국제유가 급등과 美 기술주 하락에 '급락'</a> <span class="p0-desc">[특징주] 삼성전자 SK하이닉스, 국제유가 급등과 美 기술주 하락에 '급락' 글로벌이코노믹</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBPUGxSME5lNDl4NjA1VkVacjVvNjhlNnBfbFBZaUYzb3NpY3dINXpFVmlONEExdERVN19tM1llMGpQRzliTWZXTjA5bVcwa2luajh6azNxbTBTN25jSl9wTF9GWTBzX01P?oc=5">삼성전자·SK하이닉스 반등에도 한미반도체 급락…외인 흔들기에 춤추는 반도체주 - CBC뉴스</a> <span class="p0-desc">삼성전자·SK하이닉스 반등에도 한미반도체 급락…외인 흔들기에 춤추는 반도체주 CBC뉴스</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYTlBVmpRVUdJRmZfd1VMVGw4OXdTb0xTMHJTQ21FWVZHeWJNREhHZGJSUEx5UzZwYUJ2YndpbF93MTRGd01fUko4amVFZjlfVEdVc2preDg3X0RLd0dIM0xKUHFfUzFYX0hRbUNYc3MtQmxEOEVJVkFtYmZfNW5CaTk5X0NoelBq?oc=5">특징주] 삼성전자 SK하이닉스, 국제유가 급등과 美 기술주 하락에 '급락'</a> <span class="p0-desc">반도체 투톱인 삼성전자와 SK하이닉스 주가가 18일 오전 급락하고 있다. 지난주 말 뉴욕증시가 국제유가 급등과 미국 국채금리 상승 충격에 일제히 하락한 영향을 받고 있는 것으로 보인다. 한국거래소에 따르면 SK하이닉스는 전장대비 4.07% 빠진 174만5000원에 거래 중이다. 삼성전자</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBPUGxSME5lNDl4NjA1VkVacjVvNjhlNnBfbFBZaUYzb3NpY3dINXpFVmlONEExdERVN19tM1llMGpQRzliTWZXTjA5bVcwa2luajh6azNxbTBTN25jSl9wTF9GWTBzX01P?oc=5">삼성전자·SK하이닉스 반등에도 한미반도체 급락…외인 흔들기에 춤추는 반도체주 - CBC뉴스</a> <span class="p0-desc">[CBC뉴스] 국내 반도체주가 18일 장중 종목별로 극심한 변동성을 나타내며 혼조 흐름을 보이고 있다. 삼성전자와 SK하이닉스가 강세를 나타낸 반면 한미반도체와 미래반도체 등 일부 장비·소부장 종목은 급락세를 보이며 시장 분위기가 엇갈리는 모습이다.삼성전자는 오전 장중 28만7250원으로 전 거래일 대비 6.19% 상승했다. 거래량은 3963만주를 넘어섰다. SK하이닉스 역시 187만7000원으로 3.19% 상승하며 강세 흐름을 이어갔다.반면 한미반도체는 33만1500원으로 10.16% 급락했다. 미래반도체도 11% 넘는 하락률을</span></li>
 </ul>
 </div>
 
@@ -146,7 +146,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBPUGxSME5lNDl4NjA1VkVacjVvNjhlNnBfbFBZaUYzb3NpY3dINXpFVmlONEExdERVN19tM1llMGpQRzliTWZXTjA5bVcwa2luajh6azNxbTBTN25jSl9wTF9GWTBzX01P?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 반등에도 한미반도체 급락…외인 흔들기에 춤추는 반도체주 - CBC뉴스</a>
-<p class="news-desc">CBC뉴스는 경제,금융,정치,공모주,엔터,네티즌어워즈,인기 순위 투표,단박제보를 빠르고 정확하게 제공합니다.</p>
+<p class="news-desc">[CBC뉴스] 국내 반도체주가 18일 장중 종목별로 극심한 변동성을 나타내며 혼조 흐름을 보이고 있다. 삼성전자와 SK하이닉스가 강세를 나타낸 반면 한미반도체와 미래반도체 등 일부 장비·소부장 종목은 급락세를 보이며 시장 분위기가 엇갈리는 모습이다.삼성전자는 오전 장중 28만7250원으로 전 거래일 대비 6.19% 상승했다. 거래량은 3963만주를 넘어섰다. SK하이닉스 역시 187만7000원으로 3.19% 상승하며 강세 흐름을 이어갔다.반면 한미반도체는 33만1500원으로 10.16% 급락했다. 미래반도체도 11% 넘는 하락률을</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -305,7 +305,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9CZWRDQnJmR2I5ckloVFhuQmU4VDFwVE5BcHBJMlVNdnlRRVloN1ZLYU9vZ0ZZMzI1MU5NSW8tMHNiM082Ukp3ejFaRG85N2FrZlRfbmJadVhZdVRtbm5fUkZEWFBFbXY5Q19JWg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한투증권 "주식 투자자들 국내는 반도체·해외는 美지수 ETF 선호" - 중소기업신문</a>
-<p class="news-desc">한투증권 "주식 투자자들 국내는 반도체·해외는 美지수 ETF 선호" 중소기업신문</p>
+<p class="news-desc">한국투자증권은 지난달 출시한 '주식모으기' 서비스 이용자들의 적립식 정기투자 패턴을 분석한 결과 국내주식은 반도체 대형주, 해외주식은 지수 추종 ETF(상장지수펀드)에 자금이 집중된 것으로 나타났다고 18일 밝혔다.주식모으기는 국내외 주식과 ETF를 고객이 원하는 금액과 주기에 맞춰 자동으로 투자할 수 있도록 한 서비스다.서비스 이용자들의 매수 금액 비중이 가장 큰 종목은 SK하이닉스(24%)와 삼성전자(22.8%)였고 삼성전자 우선주(3.9%)까지 포함하면 반도체 대형주가 전체 투자 비중의 절반을 넘겼다. 최근 한 달간 개인 투자</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

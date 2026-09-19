@@ -52,7 +52,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-21 - 암호화폐 뉴스 요
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNcnF0UmMyNWVobTBuamZHN0lVeEZBT245RjdmUmIzTlA1Y2FhX0lzWnFxZ01Jci1Dbm9hRDFKRXI4bXNQYlhKRUphakNFNVlSZmFBSldtZDVSMGRZM05EbTF4Q1l5RzZITFZXU0NxMHhaaHcyWkZCa0dxZ3lUUmw0VGRRMEEzN2VjZV9DREtqRjBNMFZCWDVSU3k2eC1TLV95ajlDZHRYUUFjOUN4OHJoT1p30gHGAUFVX3lxTE5zdEhVN3JVcnFNcXE2SzdYREhLdzRUdFV0RVFfQlRFZWhjWEVkR2xtT0tlYTJrNGw2aFNCZTBEUm9RZlZXY3ViTjJfV0xhZzBYSVZXTmFjVHRoX1lpdmZGaktoWXNYMk9zR1FpWTJScGVpR3BONTJVQkIxajIwQy04U3V3RHlPZEtBZjVuS1Y2TkQ2QWRCTDVRZjc1NGhMOVp3NXV2TkNDa29Gdld5RUJzUGswajlfcUN1eTY0d2s4T1V0MkVrQQ?oc=5">북미 최대 비트코인 ATM 운영업체, 네트워크 폐쇄, 파산 신청 - WBAY</a> <span class="p0-desc">W베이 | 홈페이지 | 그린베이, 위스콘신</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtcmRDRjJMelhTeEU1V0lPSUNCWkEwdUROaThMbDZZMGdaOTV3S3RXbW9hQjIzUW9RaHA3aWhoc285NVdjRWNmRml4aHg3a09tcUpROTJVc2t1d9IBVEFVX3lxTE9zZ1ZrZzFmMG94MUlkWXhobVJFMTI0Ty1sLWFsVV9rM3A4dFhkdFNNeTRubkZKN3kxeTNqOU5Xb25VVWlMREpQYlkyeFk0alpucC1DZQ?oc=5">암호화폐소유자들 "납치,도난 공포"…물리적보안이 초미의 관심사로</a> <span class="p0-desc">암호화폐소유자들 "납치,도난 공포"…물리적보안이 초미의 관심사로 한국경제</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtcmRDRjJMelhTeEU1V0lPSUNCWkEwdUROaThMbDZZMGdaOTV3S3RXbW9hQjIzUW9RaHA3aWhoc285NVdjRWNmRml4aHg3a09tcUpROTJVc2t1d9IBVEFVX3lxTE9zZ1ZrZzFmMG94MUlkWXhobVJFMTI0Ty1sLWFsVV9rM3A4dFhkdFNNeTRubkZKN3kxeTNqOU5Xb25VVWlMREpQYlkyeFk0alpucC1DZQ?oc=5">암호화폐소유자들 "납치,도난 공포"…물리적보안이 초미의 관심사로</a> <span class="p0-desc">암호화폐소유자들 "납치,도난 공포"…물리적보안이 초미의 관심사로, 비트코인 컨퍼런스 핵심주제로 '물리적 보안' 부상 디지털자산 업계, 임원 경호예산 대폭 증액 암호 자산 최대 미덕인 암호키가 보안 위협요인돼</span></li>
 <li><a href="https://bitcoinmagazine.com/news/trump-orders-fed-to-review-crypto-access">트럼프 연준에 미국 결제 레일에 대한 암호화폐 액세스를 검토하라는 명령</a> <span class="p0-desc">비트코인 매거진 트럼프 연준에 미국 결제 레일에 대한 암호화폐 액세스 검토 명령 도널드 트럼프 대통령은 화요일 연준 및 기타 규제 기관에 미국 결제 시스템에서 암호화폐 및 핀테크.</span></li>
 </ul>
 </div>
@@ -155,7 +155,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1zbmpiREFXREtOSDhXMlJBMmZFRTlpQTZqTDR3ejdTVVhBZWoxaW5NUTNsX1R1SFl1N2htWDhRbndGN1FtVHlzTjY3bkJjdTgyV0xBUWEzaWpWMWZ4Wi1xZW1Rc1RUMEZWejdueFh3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한국 개인 투자자, ‘비트코인’에서 ‘코스피’로 갈아타 - 뉴스타운</a>
-<p class="news-desc">한국 개인 투자자, ‘비트코인’에서 ‘코스피’로 갈아타 뉴스타운</p>
+<p class="news-desc">한국 개인 투자자들이 암호화폐(crypto)에서 인공지능(AI) 관련 주식으로 관심을 돌리고 있다. 비트코인 수요는 감소하고 있으며, 한국 증시는 AI 칩에 대한 강한 수요로 인해 사상 최고치를 기록 중이다.삼성전자와 SK하이닉스가 시장 상승을 주도하고 있으며, 개인 투자자들의 신용융자 증가가 위험 선호도(risk appetite : 투자자가 자산 가치 변동의 불확실성을 받아들이는 태도)를 높이고 있다. 반면, 비트코인 한국 프리미엄 지수는 하락세를 보이며 매도 압력이 증가하고 있다고 에프엑스스트리트(fxstreet)가 19일(현지</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -262,7 +262,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE5YMXlRQm1BLXZCSmtCRGJUMXJFNC1DT2JEckJFNHZocTZEbHVUcWVFUjJ3azRNN0lfZm80T09uLVM2SlU3bFlIaFBTV2xBb1Z5Zl9r?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 사우스캐롤라이나주, 비트코인 채굴 보호·CBDC 금지 법안 시행</a>
-<p class="news-desc">美 사우스캐롤라이나주, 비트코인 채굴 보호·CBDC 금지 법안 시행 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 비트코인 [사진: 셔터스톡][디지털투데이 AI리포터] 미국 사우스캐롤라이나주가 주정부와 지방정부의 중앙은행 디지털화폐(CBDC) 결제를 금지하고 비트코인 채굴업 보호 조항을 담은 상원법안 163호를 시행했다.20일(현지시간) 블록체인 매체 코인텔레그래</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

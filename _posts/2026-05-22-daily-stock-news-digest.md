@@ -44,7 +44,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-22 - 주식 뉴스 요약 이�
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5RelBoc2xXVWpJM0p4NFhsSzRZSk1YX1pId1hWUGlRcEJZeXBSZ3BZOVVGSzNrcndKQ3dUWTJRallwaHMyUlB1LVZESE1FVm0wR1MxUUlKMzFqSHlmQm5FNlFoZk00eVB0Zzl0LQ?oc=5">코스피·코스닥 급반등…동시 매수 사이드카</a> <span class="p0-desc">코스피·코스닥 급반등…동시 매수 사이드카 mstoday.co.kr</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0yREFRZS1xRGJZUVh0bjlPWTNpVlN3V3UzYmZIUG93dkRWNUhxZDRRYWd6SldMWWIyU0ZnRFZZNlR2dGUydXNONkhrdHRPMXBNaTBZUzRnV2dySEE4YzFhUmtmVFBOdDQxTVBpNy1JTzRFQdIBdkFVX3lxTE55Y0JJUXAzZG93ME01aUliZlUxQ2RxWlNmTEVsX2VuMy04ZWdJb1o3RzdadEgwbTJlc2gwN3RFUWtSYzJ5WDhUMGVuempNdnVDSjAxWXdMSjFQMEhicmxlNkVlX0pvckgtdlZ4UllkSDBRYkJWa0E?oc=5">삼성전자·SK하이닉스 레버리지 ETF로 한미반도체·DB하이텍 주가 폭락? - 시사저널e</a> <span class="p0-desc">삼성전자·SK하이닉스 레버리지 ETF로 한미반도체·DB하이텍 주가 폭락? 시사저널e</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0yREFRZS1xRGJZUVh0bjlPWTNpVlN3V3UzYmZIUG93dkRWNUhxZDRRYWd6SldMWWIyU0ZnRFZZNlR2dGUydXNONkhrdHRPMXBNaTBZUzRnV2dySEE4YzFhUmtmVFBOdDQxTVBpNy1JTzRFQdIBdkFVX3lxTE55Y0JJUXAzZG93ME01aUliZlUxQ2RxWlNmTEVsX2VuMy04ZWdJb1o3RzdadEgwbTJlc2gwN3RFUWtSYzJ5WDhUMGVuempNdnVDSjAxWXdMSjFQMEhicmxlNkVlX0pvckgtdlZ4UllkSDBRYkJWa0E?oc=5">삼성전자·SK하이닉스 레버리지 ETF로 한미반도체·DB하이텍 주가 폭락? - 시사저널e</a> <span class="p0-desc">[시사저널e=이승용 기자] 삼성전자, SK하이닉스 단일종목 레버리지 ETF가 출시를 앞둔 가운데 기존 반도체 레버리지 ETF에서 대거 자금이 유출될 가능성이 제기</span></li>
 <li><a href="https://www.cnbc.com/2026/05/21/trump-ai-executive-order-postponed.html">Trump postpones AI executive order signing: 'I didn't like certain aspects'</a></li>
 </ul>
 </div>
@@ -81,7 +81,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFB6SDlTbXg0OHZMSUlndG01VzRsM2p6UkptOXdzSV9jN0lqTVBFMUZxVWVweFBGYU1OVkdqM1J4NE42YUVtY3UwZHlibE9lSzdqN3drYU5xaVNIYmtMTzB3RENlcnI2eHVtcEVr?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 21일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다 606.64포인트 오른 7815.59에 마감했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

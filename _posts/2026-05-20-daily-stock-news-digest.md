@@ -43,8 +43,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-20 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9aLTNoZWZzaDZ3aW9iTFBrZThvUHIzWGtWTXY0RWE5b2gya3ROaE5ucHNMS2czbjlkbkdXM2cyd1NRUGd0M05kLWdIbld3Qk0?oc=5">삼성전자 1.96%·SK하이닉스 5.16% 급락 마감</a> <span class="p0-desc">삼성전자 1.96%·SK하이닉스 5.16% 급락 마감 v.daum.net</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYTlBVmpRVUdJRmZfd1VMVGw4OXdTb0xTMHJTQ21FWVZHeWJNREhHZGJSUEx5UzZwYUJ2YndpbF93MTRGd01fUko4amVFZjlfVEdVc2preDg3X0RLd0dIM0xKUHFfUzFYX0hRbUNYc3MtQmxEOEVJVkFtYmZfNW5CaTk5X0NoelBq?oc=5">특징주] 삼성전자 SK하이닉스, 국제유가 급등과 美 기술주 하락에 '급락'</a> <span class="p0-desc">[특징주] 삼성전자 SK하이닉스, 국제유가 급등과 美 기술주 하락에 '급락' 글로벌이코노믹</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9aLTNoZWZzaDZ3aW9iTFBrZThvUHIzWGtWTXY0RWE5b2gya3ROaE5ucHNMS2czbjlkbkdXM2cyd1NRUGd0M05kLWdIbld3Qk0?oc=5">삼성전자 1.96%·SK하이닉스 5.16% 급락 마감</a> <span class="p0-desc">19일 국내 반도체 대장주인 삼성전자와 SK하이닉스 주가가 나란히 약세를 보이며 장을 마쳤다. 이날 유가증권시장에서 삼성전자는 전 거래일보다 1.96% 내린 27만5500원에 거래를 마감했다. 삼성전자는 2.49% 하락한 27만4000원으로 출발한 뒤 장중 한때 5.34% 떨어진 26만6000원까지 밀렸다. 다만 오후 들어 낙폭을 줄이며 한때 28만15</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYTlBVmpRVUdJRmZfd1VMVGw4OXdTb0xTMHJTQ21FWVZHeWJNREhHZGJSUEx5UzZwYUJ2YndpbF93MTRGd01fUko4amVFZjlfVEdVc2preDg3X0RLd0dIM0xKUHFfUzFYX0hRbUNYc3MtQmxEOEVJVkFtYmZfNW5CaTk5X0NoelBq?oc=5">특징주] 삼성전자 SK하이닉스, 국제유가 급등과 美 기술주 하락에 '급락'</a> <span class="p0-desc">반도체 투톱인 삼성전자와 SK하이닉스 주가가 18일 오전 급락하고 있다. 지난주 말 뉴욕증시가 국제유가 급등과 미국 국채금리 상승 충격에 일제히 하락한 영향을 받고 있는 것으로 보인다. 한국거래소에 따르면 SK하이닉스는 전장대비 4.07% 빠진 174만5000원에 거래 중이다. 삼성전자</span></li>
 </ul>
 </div>
 
@@ -134,7 +134,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1tYVR0aGtCX1g4SGJwMnU1VUI0alNUbmpCRi1FY00zekFFdmkydUNrb3NYbHctQUV3dXhvdTFpQzFTNTBXdzIyWGljbmFoZGJoNmpHQmd6cHFmZTIwc01BTG9PR0F0VjZNNGo0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스, AI 타고 ‘구조적 성장주’ 재평가.반도체 ETF 시장도 들썩 - 라이센스뉴스</a>
-<p class="news-desc">삼성전자·SK하이닉스, AI 타고 ‘구조적 성장주’ 재평가.반도체 ETF 시장도 들썩 라이센스뉴스</p>
+<p class="news-desc">라이센스뉴스 = 박창배 기자 | AI 산업의 폭발적인 성장세가 글로벌 반도체 시장의 판을 바꾸고 있다. 그동안 경기 흐름에 따라 실적과 주가가 크게 흔들리는 대표</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -189,7 +189,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1vNlpsa3Q0blBnNE9YaXdRMGVfYlo3eDRSQUVpMk00dE1PU0w4NkFKTmR2QkEwRjRhRmxZR1N5enkxTXRKeFBySF9uaVo1TVZWVVhJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전·하이닉스 오늘은 쉬어가네…코스피·코스닥도 약세</a>
-<p class="news-desc">삼전·하이닉스 오늘은 쉬어가네…코스피·코스닥도 약세 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : [개장 시황] 코스피 지수가 하락세를 보인 19일 오전 서울 중구 하나은행 딜링룸 전광판에 시황이 표시되고 있다. 이날 코스피는 전 거래일 대비 90.38포인트(1.20%) 내린 7425.66, 코스닥은 0.27포인트(0.02%) 오른 1111.36로</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -201,7 +201,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE84QVJuTmtreUo5dElncmVRZ2RjM09DdHdjcDg1ajZhZWc5ajFSaWZNaEQ4ZFNXZHA1MWNMUkc5TmFWVURURDZLMUJoeUFzdkE5QlRrbVMtbnNRQ21pazVwMG5kVjZscVJIakVF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 내림세 출발.코스닥 상승 개장 - 한강타임즈</a>
-<p class="news-desc">코스피, 내림세 출발.코스닥 상승 개장 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 19일 코스피와 코스닥지수가 각각 내림세와 오름세로 장을 열었다.이날 코스피는 전 거래일보다 90.38포인트 내린 7425.66에 시작</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

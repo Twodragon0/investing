@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-20 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE45TlhCVU91SGh0S3JxUzZnWEdhVFhUaWZXTmJSVTdvMTFJQXVMbDA2dXBScE4zVlA0ZWtYUENIeF9ibjNGcF81ZlptVHV1aXdyTm5DamhaZGdoX2FOUDRGdGJ4aDRPREVLblN0em12OU8?oc=5">07;44 가상자산] 비트코인, 해킹 우려 단축 소식에 하락 - 신아일보</a> <span class="p0-desc">[07;44 가상자산] 비트코인, 해킹 우려 단축 소식에 하락 신아일보</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE45TlhCVU91SGh0S3JxUzZnWEdhVFhUaWZXTmJSVTdvMTFJQXVMbDA2dXBScE4zVlA0ZWtYUENIeF9ibjNGcF81ZlptVHV1aXdyTm5DamhaZGdoX2FOUDRGdGJ4aDRPREVLblN0em12OU8?oc=5">07;44 가상자산] 비트코인, 해킹 우려 단축 소식에 하락 - 신아일보</a> <span class="p0-desc">비트코인 가격이 하락했다. 양자 컴퓨팅 기술 발전으로 암호화폐 해킹 우려가 예상보다 빨라졌다는 전망이 제기된 영향으로 보인다.19일 업비트에서 오전 7시 44분</span></li>
 <li><a href="https://decrypt.co/368315/bitcoin-defi-platform-echo-protocol-hit-by-76m-monad-exploit">비트코인 디파이 7,600만 달러 규모의 Monad 악용으로 인해 플랫폼 Echo 프로토콜이 공격당함</a> <span class="p0-desc">Echo Protocol은 손상된 관리 키로 인해 Monad 배포에서 무단 eBTC 발행이 가능해졌다고 말했습니다.</span></li>
 <li><a href="https://cointelegraph.com/news/swan-bitcoin-sued-for-nearly-1b-over-pre-bankruptcy-transfers-from-prime-trust?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Swan 비트코인은 Prime Trust의 파산 전 이체와 관련하여 약 10억 달러에 대한 소송을 제기했습니다.</a> <span class="p0-desc">Swan 비트코인은 2023년 파산 신청 며칠 전에 내부자 접근을 통해 비트코인에 약 10억 달러와 Prime Trust로부터 현금을 인출한 혐의로 고소당했습니다.</span></li>
 </ul>

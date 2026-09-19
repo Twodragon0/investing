@@ -136,7 +136,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5JQ01EcGlhWjRnM3JWYUQyM052b25pZzZ1UHprYzNmYWYzcGN3R1lUV2tJS19XeVJ0dEl2SUhuTWxVTm4wQkRUQksxb20tVWJyRXpDY1FEVVRlUjdUT0NwTVlQc0xYRVJ0WkhWNndBOUQyUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 ‘낙폭 사상 최대’…증시 최악의 날, 빚투 개미들 패닉</a>
-<p class="news-desc">코스피·코스닥 ‘낙폭 사상 최대’…증시 최악의 날, 빚투 개미들 패닉 한겨레</p>
+<p class="news-desc">미국와 이란 전쟁의 파장으로 4일 서울 증시가 사상 최악의 날을 맞았다. 코스피 지수가 12.06%, 코스닥 지수가 14.0% 폭락했다. 두 시장 모두 하락 폭과 하락률이 역대 최대였다. 주가가 급락하며 두 시장에서 모든 거래를 일시 정지시키는 서킷브레이커가 발동됐다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -191,7 +191,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUUpMZjV4SVZoOW1jdHZtMUY0ak5faWs0TVlIbk9FR3EzNVJuU2RwSVVnbExpN0FtMkp4Q0FXZDFqVGM4MFBrelIwSlJ5VlhVcC1tYktrU0RUUU85V0E2eEs4bWpjT2tTbVoxNzAzM1BrQ3NNTU9oN2ROTUx2WlRYY01yUmp2OE9W?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"내 반도체 주식 어쩌나" 중국 디램 역습, 삼성·SK하이닉스 초과이익 흔들린다</a>
-<p class="news-desc">"내 반도체 주식 어쩌나" 중국 디램 역습, 삼성·SK하이닉스 초과이익 흔들린다 글로벌이코노믹</p>
+<p class="news-desc">중국 메모리 반도체 산업이 단순 저가 제품 생산을 넘어 서버용 DDR5와 차세대 3D 디램(DRAM) 시장까지 진입하며 한국 반도체 산업 수익을 압박하고 있다.디지타임스(DIGITIMES)는 지난 16일(현지시각) 보도를 통해 중국 양쯔메모리테크놀로지(YMTC)와 창신메모리테크놀로지(C</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -203,7 +203,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5ub0VvVjJ0b2RSeVdEYlNnY1pyN1lEdm5mZlNDak0wYzJGUnZQNW1kSmVFaVNzUi1DS2YxUEVzTWJBSUFhS2NlRzFiSDVhcGU0am9WVEMzQjN2b0RoMjhPT3FKVHZkNmE2Y3B6SlJLUU5FQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">20만전자·100만닉스 돌아왔다…전쟁 충격 ‘반도체주’ 회복세</a>
-<p class="news-desc">20만전자·100만닉스 돌아왔다…전쟁 충격 ‘반도체주’ 회복세 한겨레</p>
+<p class="news-desc">미국-이란 전쟁 발발 이후 크게 흔들린 주식시장에서 반도체 업체들이 강한 주가 회복력을 보이며 삼성전자 주가가 20만원, 에스케이(SK)하이닉스 주가가 100만원을 회복했다. 18일 한국거래소 시세를 보면, 코스피는 2.24%(125.62) 올라 5767.10에 거래를</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1HVy13TDZfVUktWmFlV2lLQ0lXcmpQeEtDejI1Q1lkQllkZVBHM2ZGLXd1cmdoQ2tKOTVMX1g3eVBnNnZSN0FvV01tZkI0LVk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인,다시 76,000달러대로 하락</a>
-<p class="news-desc">비트코인,다시 76,000달러대로 하락 v.daum.net</p>
+<p class="news-desc">이 기사는 국내 최대 해외 투자정보 플랫폼 한경 글로벌마켓에 게재된 기사입니다. 비트코인이 76,000달러(약 1억1,400만원)대로 하락하면서 2주만에 최저 수준으로 떨어졌다. 18일(현지시간) 비트코인은 24시간동안 2.2% 하락한 76,551달러까지 떨어지며 5월 1일 이후 최저치를 기록했다. 이후 하락폭을 일부 만회해 런던 시간 오전 7시 15분</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE44NFI3cXJKZTk3NVlCUG05bXRCZ3FBRWZRSW1EU0pIMEdoODA2Tmt2a05Ic0tsMS1WWjRxQ2FrVXhxd1hXNV9qRjE0MEFLMlgwRk9ySHZVUlVQVDdnRUljQlZCWWFRR3VpYy1uaXdleTlrNUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 7만7000달러로 후퇴…워시 인준에도 시장 냉담</a>
-<p class="news-desc">비트코인 7만7000달러로 후퇴…워시 인준에도 시장 냉담 디지털투데이</p>
+<p class="news-desc">[디지털투데이 AI리포터] 비트코인이 7만7000달러대로 후퇴하며 주요 알트코인도 동반 약세를 나타냈다. 15일 오후 4시 코인360 기준 비트코인(BTC)은 전일 대비 -1.5% 하락한 7만7014달러를 기록했다. 이더리움(ETH)은 -2.98% 내린 2122달러로 주요 코인 중 낙폭이 가장 컸고, 솔라나(SOL)는 -2.34%, 바이낸스코인(BNB)은 -2.17% 하락했다. BTC 도미넌스는 60.24%로 소폭 상승했다.이날 시장은 케빈 워시(Kevin Warsh) 신임 연준(Fed) 의장 인준에 무덤덤했다. 미 상원은 13일</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -153,7 +153,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1LQThqVjM1ZW5oWFA0OGpidHlCVW1SYXhYMXdXWUVmTHZ2bENVWTBtblA0NXpvMTgwZmxMSFNJcmRvWDhZNV9nRFlva2FZeUlRcS11SF9jYUl0WXZyYkJlY09pd1VmOUVLV0hoZDNySEF6UG8?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]5월 18일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]5월 18일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">18일 오후 암호화폐 시총 상위종목은 대체로 약세였다. 비트코인은 1.42%, 이더리움은 2.90% 하락했고, 솔라나·에이다·체인링크도 약세를 보였다. 반면 트론, 톤코인, 하이퍼리퀴드, 지캐시 등은 단기 상승세를 나타냈다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9ZWTNONUI2RGpKSXlTdGhFNW8xR1ljc19yQ3JDMUlqQjE2YWE4VlRiQjZBLUdpN0pFb3oxQ2Z0SVlVeUd5cmJPX3R0WmxnVWRtbG9yUXNhX0Q4RGtjSGZaMmlJVS1xNXJpbVRTN05Eaw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">가상화폐 시세] 비트코인 1억1000만원선에서 하락…이더리움 310만원선 - 이코노뉴스</a>
-<p class="news-desc">[가상화폐 시세] 비트코인 1억1000만원선에서 하락…이더리움 310만원선 이코노뉴스</p>
+<p class="news-desc">[이코노뉴스=어 만 기자] 18일 대표적인 암호화폐 비트코인이 1억1000만원대에서 거래되고 있다.18일 암호화폐거래소 빗썸에 따르면 오후 3시10분 기준 비트코인은 전 거래일 대비 1.87%(217만원) 하락한 1억1417만9000원에 거래되고 있다.엑스알피는 빗썸에서 2000원선에서 거래되고 있다. 빗썸에서 이더리움은 314만원대에서 거래 중이다.한편, 미국 중앙은행의 기준금리 인하 기대감 약화와 기관 자금 유출 영향으로 비트코인이 7만7000달러선까지 하락했다.물가 급등 우려로 미국 연방준비제도(Fed·Federal Reser</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

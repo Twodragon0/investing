@@ -209,7 +209,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE42R0lVLW54NHY2SHctWDNXQWtNNy1BeTNkUHhTSFlQR3Itd3NnaWlSRnY0RnZuSDFPUUlLSnQ2bWxGQm4yV1JJZ3ZmTkI4QlJyOXBIU2xKd0R4eVNvN3pXWDRoWFNZNnpoRFdWLWEweEpaOFduZDhocHB4eVV5Zw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]5월 21일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]5월 21일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">21일 암호화폐 시총 상위권에서 비트코인이 1위를 유지했고, 이더리움과 테더가 뒤를 이었다. 솔라나·리플·도지코인도 상승했지만, 하이퍼리퀴드와 지캐시가 각각 19%대, 14%대 급등하며 가장 강한 흐름을 보였다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -314,7 +314,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA3SjJ4Ujd4MXgzcHQ4WXJOZFBid3d5T2c3MUFlSUhVcGhLS1FlMTByWFE5MjJhUVBITGJaeTVlOGJqa3lVQ3pWZkFmNHlkaElzcHRTakJ6UURTU3JxMkwyQ2hNb3NhRTdzSHN6Q2lfVVUycUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마운트곡스·중국 규제·FTX까지…'비트코인 종말론' 불 지핀 결정적 순간들</a>
-<p class="news-desc">마운트곡스·중국 규제·FTX까지…'비트코인 종말론' 불 지핀 결정적 순간들 디지털투데이</p>
+<p class="news-desc">[디지털투데이 홍진주 기자] 비트코인(BTC)이 마운트곡스 해킹, 중국 규제, 테라·FTX 붕괴, 지정학적 충돌 등 굵직한 블랙스완 충격마다 "끝났다"는 평가를 받았지만, 이후마다 반등하며 새로운 고점을 경신해왔다는 장기 사이클 분석이 나왔다.20일(현지시간) 블록체인 매체 더크립토베이직에 따르면, 시장 분석가 미키불(Mikybull)은 2009년부터 2026년까지의 흐름을 7개 주요 사이클로 나눠 비트코인의 급락과 회복 패턴을 정리했다. 핵심 메시지는 대형 악재가 반복될 때마다 시장에서는 "비트코인은 죽었다"(BTC is dead</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
