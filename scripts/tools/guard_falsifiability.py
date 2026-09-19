@@ -1045,6 +1045,24 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_auto_lint_hook_guard.py::test_hook_formats_a_python_file",
     ),
     StaticCase(
+        # 이 한 줄이 pre-commit 훅 10개 전부의 **유일한** 강제 지점이다 — 로컬은
+        # `pre-commit install` 미실행이다(2026-09-19 실측). 없어지면 gitleaks·
+        # detect-private-key·ruff-format 등이 어디서도 안 도는데 워크플로우는 green 이다.
+        "CI 의 pre-commit 실행 제거 (훅 10개가 어디서도 안 돌게 됨)",
+        ".github/workflows/code-quality.yml",
+        "        run: pre-commit run --all-files --show-diff-on-failure",
+        "        run: echo skip",
+        "tests/test_auto_lint_hook_guard.py::test_ci_runs_every_pre_commit_hook",
+    ),
+    StaticCase(
+        # 스텝이 살아 있어도 config 에서 훅이 빠지면 그 검사는 사라진다.
+        "pre-commit 훅 하나 삭제 (검사가 조용히 사라짐)",
+        ".pre-commit-config.yaml",
+        "      - id: detect-private-key\n",
+        "",
+        "tests/test_auto_lint_hook_guard.py::test_pre_commit_config_hook_count_is_pinned",
+    ),
+    StaticCase(
         # 두 조회의 stderr 를 한 파일에 받으면, 체크 조회 성공이 리다이렉션으로
         # 파일을 truncate 해 head 조회 실패 사유가 빈칸으로 남는다(`재시도 ()`).
         "head/체크 조회의 stderr 를 한 파일로 합치기 (실패 사유 소실)",

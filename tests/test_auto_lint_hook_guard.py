@@ -39,6 +39,8 @@ from pathlib import Path
 
 import pytest
 
+from tests import _workflow_scan as ws
+
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _HOOK = _REPO_ROOT / ".claude" / "hooks" / "auto-lint-python.sh"
 
@@ -199,4 +201,61 @@ def test_state_blocking_docs_name_the_real_mechanism(doc: str) -> None:
         f"{doc} 가 `_state/` 차단을 설명하면서 실제 주체를 지목하지 않는다. "
         f"`{_STATE_GUARD}`(Claude 훅)를 명시할 것 — `.pre-commit-config.yaml` 에는 "
         "그 훅이 없다."
+    )
+
+
+# ---------------------------------------------------------------------------
+# CI 의 pre-commit 실행 — 10개 훅 전부의 **유일한** 강제 지점
+# ---------------------------------------------------------------------------
+
+_CODE_QUALITY = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
+
+
+def test_ci_runs_every_pre_commit_hook() -> None:
+    """`pre-commit run --all-files` 스텝이 CI 에 살아 있어야 한다.
+
+    2026-09-19 조사의 핵심 사실이다 — 이 클론은 `pre-commit install` 이 안 돼 있어
+    `.pre-commit-config.yaml` 의 10개 훅이 **로컬에서 하나도 돌지 않는다.** 그런데도
+    "검사 누락은 없다" 고 말할 수 있는 이유는 오직 이 한 줄 때문이다.
+
+    즉 이 스텝이 사라지면 `gitleaks`·`detect-private-key`·`ruff-format`·
+    `check-added-large-files` 등이 **어디서도** 돌지 않게 된다. 그런데 그 상태는
+    조용하다 — 워크플로우는 계속 green 이고, 없어진 검사는 없어졌다고 말하지 않는다.
+
+    조사 시점에 이 스텝을 지키는 가드는 **0건**이었다(`grep -rn "pre-commit run"
+    tests/` → 없음). 이 저장소가 가드를 붙이는 관행에 비추면 눈에 띄는 공백이었다.
+
+    `--all-files` 를 함께 요구한다. 그게 없으면 변경된 파일만 보는데, CI 는
+    비교 기준이 되는 이전 리비전이 항상 있지 않아 **아무것도 검사하지 않을 수 있다.**
+    """
+    steps = ws.steps(_CODE_QUALITY)
+    runs = [ws.strip_shell_comments(str(s.get("run") or "")) for s in steps if s.get("run")]
+    hits = [r for r in runs if "pre-commit run" in r]
+
+    assert hits, (
+        "`pre-commit run` 스텝이 code-quality.yml 에서 사라졌다. 이 저장소는 "
+        "`pre-commit install` 이 안 된 채로 운영되므로(2026-09-19 실측) 이 스텝이 "
+        "10개 훅 전부의 **유일한** 강제 지점이다. 없어지면 gitleaks·detect-private-key·"
+        "ruff-format 등이 어디서도 돌지 않는데, 워크플로우는 계속 green 이라 조용하다."
+    )
+    assert any("--all-files" in r for r in hits), (
+        f"`pre-commit run` 에 `--all-files` 가 없다: {hits}. 변경 파일만 보면 비교 기준 "
+        "리비전이 없을 때 아무것도 검사하지 않을 수 있다."
+    )
+
+
+def test_pre_commit_config_hook_count_is_pinned() -> None:
+    """훅이 조용히 빠지는 것을 잡는다.
+
+    위 테스트는 **스텝의 존재**만 본다 — config 에서 훅 하나가 사라져도 통과한다.
+    개수를 고정해 삭제가 리뷰 대상이 되게 한다. 늘어나는 것도 red 이지만, 그건
+    이 상수를 올리는 한 줄 편집이라 비용이 낮다.
+    """
+    config = (_REPO_ROOT / ".pre-commit-config.yaml").read_text(encoding="utf-8")
+    hook_ids = [ln.strip() for ln in config.splitlines() if ln.strip().startswith("- id:")]
+
+    assert len(hook_ids) == 10, (
+        f"pre-commit 훅이 10개가 아니라 {len(hook_ids)}개다: {hook_ids}. "
+        "줄었다면 그 검사는 이제 **어디서도** 돌지 않는다 — 로컬은 미설치이고 CI 는 "
+        "이 config 를 그대로 실행하기 때문이다. 의도한 변경이면 이 숫자를 갱신할 것."
     )
