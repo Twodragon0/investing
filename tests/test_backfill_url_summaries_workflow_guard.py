@@ -69,6 +69,8 @@ from pathlib import Path
 
 import yaml
 
+from tests import _workflow_scan as ws
+
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _WORKFLOW = _REPO_ROOT / ".github" / "workflows" / "backfill-url-summaries.yml"
 
@@ -81,15 +83,24 @@ _MAX_DEFAULT_LIMIT = 400
 
 
 def _strip_shell_comments(script: str) -> str:
-    """Drop whole-line ``#`` comments from a shell script.
+    """Delegate to the shared stripper in ``tests/_workflow_scan.py``.
 
-    Only whole-line comments: a trailing-``#`` rule would have to know about
-    quoting, and this workflow's commentary is all full-line. Without this the
-    guard matches the very comment that explains the flag — the header line
-    ``# --skip-synthetic 고정: ...`` keeps a `--skip-synthetic` assertion green
-    after the argument is gone.
+    This file used to carry its own copy that dropped **whole-line** comments
+    only, on the reasoning that a trailing-``#`` rule needs to know about
+    quoting. The shared helper solves that by requiring whitespace before the
+    ``#``, and the divergence was a live hole. Moving the flag into a trailing
+    comment reproduces the exact false-green the local docstring said it
+    existed to prevent (2026-09-18, mutation on line 101):
+
+        args=(--apply --workers 6 ...)  # --skip-synthetic 은 뺐다
+
+    local copy  -> 10 passed   (silent bypass)
+    shared impl -> test_skip_synthetic_is_fixed RED
+
+    Two guards over the same relationship with two detectors is how they drift.
+    Keep one implementation.
     """
-    return "\n".join(line for line in script.splitlines() if not line.lstrip().startswith("#"))
+    return ws.strip_shell_comments(script)
 
 
 def _load(path: Path) -> dict:

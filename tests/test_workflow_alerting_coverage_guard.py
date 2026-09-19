@@ -37,6 +37,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -111,10 +112,28 @@ def _classifier_allowlist() -> set[str]:
 
 
 def _consecutive_alert_callers() -> set[str]:
+    """`alert-consecutive-failures` 를 **실제로 호출하는** 워크플로우.
+
+    원문 문자열 매치(`REF in path.read_text()`)로 하면 안 된다. 그러면 경로를
+    **주석으로만 언급해도** 커버된 것으로 센다 —
+
+        # TODO: ./.github/workflows/alert-consecutive-failures.yml 를 붙일 것
+
+    이 한 줄이 붙은 스케줄 워크플로우는 알림이 하나도 없는데 가드를 통과한다.
+    fail-open 방향이 정확히 이 가드가 막으려던 사고(#1172, 11일 조용한 실패)
+    쪽이다. 2026-09-18 감사 시점에는 28건 전부 실제 `uses:` 라 라이브 우회는
+    없었지만, 탐지기가 그걸 보장하지 못하고 있었다.
+
+    파싱된 `jobs.<id>.uses` 를 본다. 주석은 파서 단계에서 사라지므로 구조적으로
+    만족시킬 수 없다.
+    """
     names: set[str] = set()
     for path in sorted(WORKFLOWS_DIR.glob("*.yml")):
-        if CONSECUTIVE_ALERT_REF in path.read_text(encoding="utf-8"):
-            names.add(_workflow_name(path, _load(path)))
+        wf = _load(path)
+        for job in (wf.get("jobs") or {}).values():
+            if isinstance(job, dict) and str(job.get("uses") or "") == CONSECUTIVE_ALERT_REF:
+                names.add(_workflow_name(path, wf))
+                break
     return names
 
 
@@ -139,7 +158,10 @@ def _issue_on_failure_workflows() -> set[str]:
                 if "failure()" not in str(step.get("if") or ""):
                     continue
                 script = str((step.get("with") or {}).get("script") or "")
-                if "issues.create" in script:
+                # 주석을 걷어낸 뒤 본다. `// await github.rest.issues.create(` 처럼
+                # 죽은 코드가 커버리지로 세면 안 된다 — 위 `uses:` 와 같은 함정이다.
+                code = "\n".join(re.sub(r"//.*$", "", ln) for ln in script.splitlines())
+                if "issues.create" in code:
                     names.add(_workflow_name(path, wf))
     return names
 
@@ -259,7 +281,106 @@ def test_yaml_quoted_on_key_also_works() -> None:
     assert "schedule" in _triggers(raw)
 
 
-def test_scanner_ignores_non_workflow_files() -> None:
-    """`AGENTS.md` 같은 비-yml 파일이 섞여도 이름 집합이 오염되지 않아야 한다."""
-    assert all(p.suffix == ".yml" for p in WORKFLOWS_DIR.glob("*.yml"))
-    assert "AGENTS" not in _all_workflows()
+def test_scanner_ignores_non_workflow_files(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """비-yml 파일이 섞여도 이름 집합이 오염되지 않아야 한다.
+
+    옛 버전의 첫 단언은 `all(p.suffix == ".yml" for p in glob("*.yml"))` 이었다 —
+    `*.yml` 로 글롭한 결과에 suffix 를 단언하는 **항진명제**라 어떤 회귀도 잡지
+    못한다(`guard_falsifiability.py` 의 면제 사유가 이미 지목하고 있었다). 둘째
+    단언도 `.github/workflows/AGENTS.md` 가 실재하는 데 의존해서, 그 파일이
+    사라지면 조용히 vacuous 해진다.
+
+    합성 디렉토리로 바꾼다 — 오염원을 직접 만들어 넣으므로 저장소 상태에
+    의존하지 않고, 스캐너가 넓어지면 red 가 된다.
+    """
+    (tmp_path / "AGENTS.md").write_text("# not a workflow\n", encoding="utf-8")
+    (tmp_path / "notes.txt").write_text("name: Fake Workflow\n", encoding="utf-8")
+    (tmp_path / "real.yml").write_text(
+        "name: Real\n'on':\n  schedule:\n    - cron: '0 0 * * *'\njobs:\n"
+        "  x:\n    runs-on: ubuntu-latest\n    steps:\n      - run: 'true'\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr("tests.test_workflow_alerting_coverage_guard.WORKFLOWS_DIR", tmp_path, raising=True)
+
+    assert set(_all_workflows()) == {"Real"}, (
+        "스캐너가 비-워크플로우 파일을 이름 집합에 넣었다 — 커버리지 계산이 오염된다."
+    )
+
+
+# ---------------------------------------------------------------------------
+# 탐지기 귀속 — "커버됨" 판정이 무엇으로 만족되는가
+# ---------------------------------------------------------------------------
+#
+# 2026-09-18 감사. 이 가드의 단언들은 전부 `_covered()` 위에 서 있으므로, 탐지기가
+# 느슨하면 위쪽 단언 전부가 조용히 vacuous 해진다. 그런데 탐지기 자신을 확인하는
+# 단언은 없었다 — `test_coverage_sources_are_discovered` 는 **건수 하한**만 보는데,
+# 하한은 원소가 잘못 들어온 것을 구별하지 못한다.
+#
+# 실제로 `_consecutive_alert_callers()` 는 원문 문자열 매치였다. 경로를 주석으로만
+# 언급해도 커버로 셌다. 감사 시점 28건은 전부 진짜였지만, 탐지기가 그걸 보장하고
+# 있지는 않았다. 아래는 그 보장을 만든다.
+
+
+def _write_workflow(tmp_path: Path, name: str, body: str) -> Path:
+    path = tmp_path / name
+    path.write_text(body, encoding="utf-8")
+    return path
+
+
+def _callers_in(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> set[str]:
+    monkeypatch.setattr("tests.test_workflow_alerting_coverage_guard.WORKFLOWS_DIR", tmp_path, raising=True)
+    return _consecutive_alert_callers()
+
+
+def test_a_commented_mention_does_not_count_as_coverage(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """주석으로만 언급한 워크플로우는 **커버되지 않은** 것이다.
+
+    이게 통과하면(= 커버로 셈) 알림이 하나도 없는 스케줄 워크플로우가 가드를
+    지나간다. #1172 은 정확히 "아무 알림도 울리지 않았다" 로 11일을 갔다.
+    """
+    _write_workflow(
+        tmp_path,
+        "commented.yml",
+        "name: Commented Only\n"
+        "'on':\n  schedule:\n    - cron: '0 0 * * *'\n"
+        f"# TODO: {CONSECUTIVE_ALERT_REF} 를 붙일 것\n"
+        "jobs:\n  x:\n    runs-on: ubuntu-latest\n    steps:\n      - run: 'true'\n",
+    )
+
+    assert _callers_in(monkeypatch, tmp_path) == set(), (
+        "경로를 주석으로만 언급한 워크플로우가 커버된 것으로 셌다. "
+        "탐지기가 원문 문자열이 아니라 파싱된 `jobs.<id>.uses` 를 봐야 한다."
+    )
+
+
+def test_a_real_uses_does_count_as_coverage(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """반대 방향 — 이게 없으면 "아무것도 커버로 안 세는" 탐지기가 위를 통과한다."""
+    _write_workflow(
+        tmp_path,
+        "real.yml",
+        "name: Real Caller\n"
+        "'on':\n  schedule:\n    - cron: '0 0 * * *'\n"
+        "jobs:\n"
+        "  work:\n    runs-on: ubuntu-latest\n    steps:\n      - run: 'true'\n"
+        "  alert:\n    needs: work\n    if: failure()\n"
+        f"    uses: {CONSECUTIVE_ALERT_REF}\n"
+        "    secrets: inherit\n",
+    )
+
+    assert _callers_in(monkeypatch, tmp_path) == {"Real Caller"}, (
+        "실제 `uses:` 호출자를 커버로 세지 못했다 — 탐지기가 너무 좁다."
+    )
+
+
+def test_scanner_refuses_to_silently_ignore_yaml_extension() -> None:
+    """워커가 `*.yml` 만 본다 — `.yaml` 로 만든 워크플로우는 **보이지 않는다.**
+
+    보이지 않는 것은 스케줄 목록에도, 커버리지 원본에도 안 들어가므로 갭이 아니라
+    **존재하지 않는 것**이 된다. 조용한 사각이라 `.yaml` 이 하나라도 생기면 여기서
+    멈추게 한다 — 워커를 넓히든 규약을 못박든, 선택을 사람이 하게 만든다.
+    """
+    strays = sorted(p.name for p in WORKFLOWS_DIR.glob("*.yaml"))
+    assert not strays, (
+        f"`.yaml` 확장자 워크플로우가 있다: {strays}. 이 가드의 워커는 `*.yml` 만 보므로 "
+        "그 파일들은 커버리지 계산에서 통째로 빠진다. 워커를 넓히거나 확장자를 통일할 것."
+    )
