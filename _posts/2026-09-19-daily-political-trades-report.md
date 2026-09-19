@@ -14,8 +14,6 @@ description: "정치인 거래·정책 동향 26건 수집. SEC 내부자 15건,
 image_alt: "정치인 거래·정책 리포트 - 2026-09-19 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-
-
 **2026-09-19** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **26건** — SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 10건
 
 ## 한눈에 보기
@@ -27,7 +25,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-19 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-09-19 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 26건 — SEC 내부자 거래 15건, 트럼프 정책 1건, 중앙은행 10건
 - 1. President Trump Announces Executive Order Elevating Saltwater Recreational Fishing - On The Water Press release courtesy of the American Sportfishing…
 
 ## 1. 트럼프 행정명령/정책

@@ -32,13 +32,12 @@ image_alt: "소셜 미디어 동향 - 2026-07-31 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.newdaily.co.kr">"잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세</a> <span class="p0-desc">"잼데믹 왔다" … 국민의힘, 증시 폭락 '李 대통령 책임론' 총공세 newdaily.co.kr</span></li><li><a href="https://www.news2day.co.kr">코스피, 연쇄 폭락 딛고 반등 시도…외국인·기관 ‘쌍끌이’ 매수 - 뉴스투데이</a> <span class="p0-desc">[뉴스투데이=이태희 편집인] 뉴스투데이(대표 강남욱 )와 한국경영커뮤니케이션학회(KABC. 회장 장혜정)가 공동주최하는 ‘2026 지속가능경영소통대상(KSCA)’ 시상식이 오는 1.</span></li><li><a href="https://www.newsin.co.kr">코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 - 뉴스인</a> <span class="p0-desc">코스피, 급락 뒤 저가매수 유입에 혼조세… 외국인·기관 순매수로 낙폭 방어 뉴스인</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 42건 중 텔레그램 0건, 소셜 1건, 정치·경제 41건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 42건 중 텔레그램 0건, 소셜 1건, 정치·경제 41건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
