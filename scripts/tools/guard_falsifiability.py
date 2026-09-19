@@ -1402,8 +1402,37 @@ def _run_static_cases(shard: tuple[int, int] | None = None) -> list[dict]:
     return results
 
 
-#: 하네스가 도는 동안 존재하는 락. `.git/` 아래라 실수로 커밋되지 않고 클론마다 독립이다.
-LOCK_PATH = REPO_ROOT / ".git" / "guard-falsifiability.lock"
+def git_dir_for(root: Path) -> Path:
+    """`root` 체크아웃의 git 디렉토리.
+
+    인자를 받는 이유는 **테스트가 판별할 수 있게** 하기 위해서다. 메인 트리에서는
+    `.git` 이 디렉토리라, 회귀(`root / ".git"` 하드코딩)를 넣어도 메인에서 도는
+    테스트는 green 이다 — 즉 가드가 vacuous 해진다. 합성 worktree 를 만들어 이
+    함수에 넘기면 어디서 돌든 판별된다.
+
+    `REPO_ROOT / ".git"` 로 가정하면 안 된다 — **linked worktree 에서는 `.git` 이
+    디렉토리가 아니라 파일**이고(`gitdir: …` 한 줄), 그 아래에 락을 만들려 하면
+    `FileExistsError` 로 하네스가 **즉시 죽는다**(2026-09-19 실측).
+
+    `--git-dir` 은 worktree 별 디렉토리를 준다. 락은 체크아웃마다 달라야 하므로
+    (워크트리에서 도는 하네스는 그 워크트리의 커밋만 막으면 된다) `--git-common-dir`
+    이 아니라 이쪽이 맞다.
+    """
+    proc = subprocess.run(
+        ["git", "rev-parse", "--absolute-git-dir"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if proc.returncode == 0 and proc.stdout.strip():
+        return Path(proc.stdout.strip())
+    return root / ".git"
+
+
+#: 하네스가 도는 동안 존재하는 락. git 디렉토리 아래라 실수로 커밋되지 않고
+#: 체크아웃마다 독립이다.
+LOCK_PATH = git_dir_for(REPO_ROOT) / "guard-falsifiability.lock"
 
 
 def _process_start_marker(pid: int) -> str | None:
