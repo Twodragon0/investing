@@ -45,14 +45,19 @@ reusable workflow permission lint 배선 3. 감사 시점까지 이 세 축에�
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import os
 import re
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
-from typing import NamedTuple
+from typing import TYPE_CHECKING, NamedTuple
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CONFTEST = REPO_ROOT / "tests" / "conftest.py"
@@ -1020,6 +1025,16 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_dependabot_auto_merge_guard.py::TestStabilizationWindowBehaviour::test_head_change_restarts_the_window",
     ),
     StaticCase(
+        # 훅이 락을 무시하면 하네스 실행 중 커밋이 그대로 통과한다 — 2026-09-18 에
+        # 실제로 뮤테이션이 커밋에 들어갔고, 워킹트리도 풀 스위트도 정상이라
+        # **조용한** 사고였다.
+        "하네스 실행 중 커밋 차단 무력화",
+        ".claude/hooks/guard-harness-commit-guard.sh",
+        'if [[ -n "$HOLDER" ]]; then',
+        "if false; then",
+        "tests/test_harness_commit_guard.py::test_commit_is_blocked_while_the_harness_holds_the_lock",
+    ),
+    StaticCase(
         # 두 조회의 stderr 를 한 파일에 받으면, 체크 조회 성공이 리다이렉션으로
         # 파일을 truncate 해 head 조회 실패 사유가 빈칸으로 남는다(`재시도 ()`).
         "head/체크 조회의 stderr 를 한 파일로 합치기 (실패 사유 소실)",
@@ -1387,6 +1402,69 @@ def _run_static_cases(shard: tuple[int, int] | None = None) -> list[dict]:
     return results
 
 
+#: 하네스가 도는 동안 존재하는 락. `.git/` 아래라 실수로 커밋되지 않고 클론마다 독립이다.
+LOCK_PATH = REPO_ROOT / ".git" / "guard-falsifiability.lock"
+
+
+def _process_start_marker(pid: int) -> str | None:
+    """`pid` 의 프로세스 시작 시각. 죽었으면 None.
+
+    PID 재사용을 구별하는 값이다.
+
+    처음엔 커맨드라인 매칭(`"guard_falsifiability" in ps -o command=`)을 썼는데
+    **호출 방식에 의존해서 못 쓴다** — `python3 -` 로 임포트해 락을 쥐면
+    커맨드라인에 스크립트 이름이 없어 자기 락을 stale 로 오판했다(2026-09-18,
+    이 훅의 프로브가 잡았다). 시작 시각은 어떻게 띄웠든 같다.
+
+    살아있음 검사 자체가 **없으면 안 된다.** 하네스는 SIGKILL 로 죽을 수 있고
+    (같은 날 메모리 압박으로 두 번) 그때 락이 남는다. 안 보면 남은 락이 이후
+    모든 커밋을 영영 막는다 — 막으려던 사고보다 나쁜 고장이다.
+    """
+    proc = subprocess.run(["ps", "-p", str(pid), "-o", "lstart="], capture_output=True, text=True, check=False)
+    marker = proc.stdout.strip()
+    return marker if proc.returncode == 0 and marker else None
+
+
+def read_active_lock() -> dict | None:
+    """살아 있는 하네스가 쥔 락이면 그 내용을, 아니면 None 을 돌려준다.
+
+    stale 락은 **읽는 쪽에서 지운다.** 죽은 프로세스는 자기 락을 치울 수 없다.
+    """
+    try:
+        payload = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    pid = payload.get("pid")
+    if isinstance(pid, int) and _process_start_marker(pid) == payload.get("start"):
+        return payload
+    LOCK_PATH.unlink(missing_ok=True)
+    return None
+
+
+@contextlib.contextmanager
+def _hold_lock() -> Iterator[None]:
+    """실행 구간 동안 락을 쥔다.
+
+    이 하네스는 워킹트리의 파일을 **제자리에서 덮어썼다 복원한다.** 그동안
+    `git add`/`commit` 을 하면 뮤테이션이 그대로 커밋에 들어간다 — 2026-09-18 에
+    실제로 `if [ -n "$failed" ]; then` -> `if false; then`(실패 체크 abort 무력화)이
+    커밋됐다. 커밋 직후 워킹트리는 하네스가 복원해 `git status` 가 깨끗하고 풀
+    스위트도 통과하므로 **조용한** 사고다.
+
+    `.claude/hooks/guard-harness-commit-guard.sh` 가 이 락을 보고 커밋을 막는다.
+    """
+    LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+    pid = os.getpid()
+    LOCK_PATH.write_text(
+        json.dumps({"pid": pid, "start": _process_start_marker(pid), "started": time.time()}),
+        encoding="utf-8",
+    )
+    try:
+        yield
+    finally:
+        LOCK_PATH.unlink(missing_ok=True)
+
+
 def run_all(shard: tuple[int, int] | None = None) -> list[dict]:
     """모든 케이스를 검증하고 결과 리스트를 돌려준다.
 
@@ -1395,6 +1473,11 @@ def run_all(shard: tuple[int, int] | None = None) -> list[dict]:
     보이는 미등록 fixture 는 없고, 누락은 어느 샤드에서든 즉시 드러나야 한다.
     """
     _assert_safe_to_run()
+    with _hold_lock():
+        return _run_all_locked(shard)
+
+
+def _run_all_locked(shard: tuple[int, int] | None) -> list[dict]:
     original = CONFTEST.read_text(encoding="utf-8")
     state_snapshot = _snapshot_state()
 
