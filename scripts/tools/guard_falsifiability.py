@@ -1035,6 +1035,16 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_harness_commit_guard.py::test_commit_is_blocked_while_the_harness_holds_the_lock",
     ),
     StaticCase(
+        # 로컬 포맷 계층이 이 훅 하나뿐이다 — pre-commit 의 `ruff-format` 은
+        # `pre-commit install` 미실행이라 안 돈다(2026-09-19 실측). 여기서 빠지면
+        # 포맷 누락을 CI red 로 알게 된다.
+        "auto-lint 훅에서 ruff format 제거 (로컬 포맷 계층 소멸)",
+        ".claude/hooks/auto-lint-python.sh",
+        '    ruff format "$FILE_PATH" 2>/dev/null\n',
+        "",
+        "tests/test_auto_lint_hook_guard.py::test_hook_formats_a_python_file",
+    ),
+    StaticCase(
         # 두 조회의 stderr 를 한 파일에 받으면, 체크 조회 성공이 리다이렉션으로
         # 파일을 truncate 해 head 조회 실패 사유가 빈칸으로 남는다(`재시도 ()`).
         "head/체크 조회의 stderr 를 한 파일로 합치기 (실패 사유 소실)",

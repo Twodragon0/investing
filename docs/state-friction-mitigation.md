@@ -109,7 +109,7 @@ exit 127 — 원인도 조치도 알 수 없었다).
 - skip-worktree 적용 후 `git pull` 이 `_state` 변경을 덮어쓰지 못해 막힐 수 있다.
   위 `dev_sync_state_safe.sh` 를 쓰거나, `--undo` 로 잠시 해제하거나, 등록된
   merge=ours 드라이버가 충돌을 흡수한다.
-- `_state/*.json` 은 **직접 수동 편집 금지** (pre-commit 훅 `pre-commit-state-guard` 가 차단).
+- `_state/*.json` 은 **직접 수동 편집 금지** (**Claude 훅** `.claude/hooks/pre-commit-state-guard.sh` 가 차단 — pre-commit 프레임워크 훅이 아니다. Claude Code 의 Bash 툴 호출에만 발동한다).
 - 새 `_state` 파일이 추가되면 `dev_ignore_state.sh` 를 다시 실행해 신규 파일에도 플래그를 적용한다.
 
 관련 파일: `scripts/dev_ignore_state.sh`, `.gitattributes`

@@ -324,5 +324,6 @@ Slack 연동:
 1. **파일 충돌 방지**: 각 팀원은 담당 디렉토리만 수정
 2. **Plan approval**: 구조 변경 시 리드에게 계획 승인 요청
 3. **한국어 우선**: 커밋 메시지와 주석은 한국어 사용
-4. **테스트**: 스크립트 변경 시 `python3 -m ruff check scripts/ tests/` 린팅 + `python3 -m ruff format --check scripts/ tests/` 포맷 확인 (pre-commit 훅이 자동 적용)
+4. **테스트**: 스크립트 변경 시 `python3 -m ruff check scripts/ tests/` 린팅 + `python3 -m ruff format --check scripts/ tests/` 포맷 확인
+   (Claude 훅 `auto-lint-python.sh` 가 `.py` 편집마다 check+format 을 돌린다. `.pre-commit-config.yaml` 의 ruff 훅은 **`pre-commit install` 을 해야** 돌고, 안 했더라도 CI 가 `pre-commit run --all-files` 로 전부 강제한다 — 즉 미설치는 커버리지가 아니라 **피드백 시점**의 문제다)
 5. **상태 파일 보호**: `_state/*.json` 직접 수정 금지

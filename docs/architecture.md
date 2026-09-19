@@ -219,8 +219,9 @@ flowchart TD
 └─────────────────────┘
 ```
 
-`_state/*.json`은 중복 방지 상태이므로 수동 수정 금지(pre-commit-state-guard 훅이
-커밋 차단).
+`_state/*.json`은 중복 방지 상태이므로 수동 수정 금지(**Claude 훅**
+`.claude/hooks/pre-commit-state-guard.sh` 가 커밋 차단 — pre-commit 프레임워크
+훅이 아니며, Claude Code 의 Bash 툴 호출에만 발동한다).
 
 ## Jekyll 사이트 구조
 
