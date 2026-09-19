@@ -39,6 +39,6 @@ globs: ["scripts/**/*.py", "_posts/**/*.md", ".github/workflows/**/*.yml"]
 
 # Verification Shortcuts
 
-- Python collector or shared-module changes: `python3 -m ruff check scripts/ tests/` + `python3 -m ruff format --check scripts/ tests/` (CI Code Quality와 동일 — format 누락이 흔한 CI red 원인; pre-commit 훅이 자동 적용)
+- Python collector or shared-module changes: `python3 -m ruff check scripts/ tests/` + `python3 -m ruff format --check scripts/ tests/` (CI Code Quality와 동일 — format 누락이 흔한 CI red 원인. Claude 훅 `auto-lint-python.sh` 가 `.py` 편집마다 check+format 을 돌린다. pre-commit 의 ruff 훅은 `pre-commit install` 을 해야 돌지만, 안 했더라도 CI 가 `pre-commit run --all-files` 로 강제한다)
 - Jekyll or layout-facing changes: `bundle exec jekyll build`
 - Post edits: verify front matter, image references, and parser-contract safety

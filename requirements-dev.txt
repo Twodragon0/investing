@@ -13,9 +13,23 @@ pytest-cov>=7.1.0
 pytest-playwright>=0.9.0
 pytest-timeout>=2.4.0
 
-# Lint/format — CI(code-quality.yml)와 .pre-commit-config.yaml(ruff-pre-commit rev)이
-# 동일 버전을 써야 format 규칙 불일치로 인한 spurious CI red를 막을 수 있음.
-# 세 곳(여기 / code-quality.yml / .pre-commit-config.yaml)을 항상 함께 갱신할 것.
+# 로컬 커밋 단계 훅 러너. **설치만으로는 훅이 걸리지 않는다** — `pre-commit install`
+# 을 1회 실행해야 `.git/hooks/pre-commit` 이 생긴다(README "2.1 Pre-commit 훅 설치").
+#
+# 2026-09-19 실측: 이 저장소 클론에 `.git/hooks/` 는 샘플뿐이었다. 안 걸려 있어도
+# CI 가 `pre-commit run --all-files`(code-quality.yml)로 전부 강제하므로 검사가
+# 누락되지는 않는다 — 다만 auto-fix 훅(ruff/format/EOF/trailing-whitespace)이
+# 로컬에서 안 돌면 그 수정이 CI 에서 **job red** 로 돌아온다.
+pre-commit>=4.0.0
+
+# Lint/format — CI(code-quality.yml)와 로컬이 동일 버전을 써야 format 규칙
+# 불일치로 인한 spurious CI red를 막을 수 있음.
+#
+# 2026-09-19 정정: 옛 주석은 "`.pre-commit-config.yaml`(ruff-pre-commit rev)" 를
+# 세 번째 갱신 지점으로 지목했는데, 그 config 는 `repo: local` + `language: system`
+# 이라 **rev 가 없다**. 오히려 `tests/test_ruff_version_pin_sync.py:253-261` 이
+# rev 부재를 강제한다 — 주석이 테스트와 정반대였다. pre-commit 훅은 여기 핀된
+# ruff 를 그대로 쓰므로 갱신 지점은 **두 곳**(여기 / code-quality.yml)이다.
 ruff==0.16.7
 
 # Type check — CI(code-quality.yml)가 `python -m basedpyright`(include=["scripts"])를
