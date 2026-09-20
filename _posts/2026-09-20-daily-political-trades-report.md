@@ -14,7 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-20 - 정치인 거래 �
 description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거래와 정책 연관성을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-20.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-20** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **7건** — 미국 의회 거래 2건, SEC 내부자 거래 5건
@@ -25,13 +24,11 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(7회), **SEC(미국증권거래위원회)**(6회), **의회**(4회), **내부자**(3회), **공시**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **7건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 5건입니다.
-
-**미국 의회 거래** 동향에서는 President Donald Trump has made more securities trades since returning to office than every member of Congress combined. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
----
+- 2026-09-20 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 7건 — 미국 의회 거래 2건, SEC 내부자 거래 5건
+- 1. 'A huge problem': Trump has traded more stocks than all of Congress combined - Fortune President Donald Trump has made more securities trades since…
 
 ## 1. 미국 의회 거래 동향
 

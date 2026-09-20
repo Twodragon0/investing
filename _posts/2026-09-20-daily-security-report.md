@@ -16,27 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-20 - 보안 뉴스 요약 �
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] Nostra Money Market exploit: Spot Price Manipulat** / 보안 뉴스 헤드라인: International security agencies warn about North Korean hack.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Nostra Money Market exploit: Spot Price Manipulation 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 9건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): security, exploit, manipulation 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (3건): exploit, unbacked, cross 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (5건): exploit, manipulation, spot 생태계 동향 (5건) — 가스비·TVL 변화를 함께 확인하세요.
-
-### 긴급 이슈
-
-- [Security] Nostra Money Market exploit: Spot Price Manipulation
-- [Security] Flamincome exploit: Spot Price Manipulation
-- [Security] Startale exploit: Improper Access Control
-
-### 투자자 체크포인트
-
-- 보안 사건 8건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건

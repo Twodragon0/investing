@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-03 | SOL -5.9% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Solana</strong> (SOL): -5.94%</li><li>🔴 <strong>BNB</strong> (BNB): -5.13%</li><li>🔴 <strong>Chainlink</strong> (LINK): -4.46%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **11건** 수집

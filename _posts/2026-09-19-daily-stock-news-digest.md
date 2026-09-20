@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-19 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: ‘Starting at rock bottom’: Woman filed for bankruptcy at 24 with $65,000 in debt. How she made it. - 220건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 국채 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체, 하이닉스 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com/small-business/articles/starting-rock-bottom-woman-filed-092500033.html">‘Starting at rock bottom’: Woman filed for bankruptcy at 24 with $65,000 in debt. How she made it back from the brink</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,894.23 (+2.66%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 827.12 (+0.60%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-09-19 주식 시장에서 220건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,894.23(+2.66%), KOSDAQ 827.12(+0.60%), USD/KRW 1,384.36(+0.31%).
 - *Wall Street’s post-hike rebound lifted the Nasdaq 1.69% as falling oil and yields revived demand for Nvidia, Amazon.*
 
 ## 테마별 주요 뉴스

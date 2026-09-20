@@ -42,9 +42,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-19 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Hacker turns 25 cents into 46 billion fake Bitcoins to steal $770,000 — Symbiosis DeFi exchange b. - 82건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 금리 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 15건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMisgJBVV95cUxNTVRHWEt4WWwxazJSbGJuOEtpdWNDZFM2NXdSQWlIXzdoYXF5NFM4WFprVEZSVlR4cFdrMHBWNks2dlJiZHhUWWl5elBOekliaG01ZjlLaXp0dUhzNUxFMHp4Rm1JS1ZiZjQyNVVVelFSMUhsMmxQZDF0aUJIZEtjNzlQRTV1dmhCa09sWkduaElKb0dad1ZoX01saGhxQUdEcXpSeXlibnFFWG90MGlKNlo2RlBWcFFkLWVReUJNYUlTcEVQempvc2JvRkJHWGkxRVhOTzdLNmtrS21HWlpaS3hTaVlKNmcxTkZLMzB1c3pOY1oxNGFhWG1aSlMzbWlWd0s4eEJpSUxXU19HNEJoQmp1WHBpLVBXN3R2UVcwRUpwaUl3dUdOLThrNlo0X1prU1E?oc=5">Hacker turns 25 cents into 46 billion fake Bitcoins to steal $770,000 — Symbiosis DeFi exchange bit by lack of basic bounds checking in smart contract - Tom's Hardware</a></li><li><a href="https://decrypt.co/378622/microsoft-staff-asked-if-ai-scraping-was-largest-theft-of-labor-in-human-history">Microsoft Staff Asked If AI Scraping Was 'Largest Theft of Labor in Human History'</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
+- 2026-09-19 암호화폐 시장 82건 분석 — 핵심 테마: 비트코인, 가격/시장, 매크로/금리
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
