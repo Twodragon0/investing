@@ -2,8 +2,9 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-RUN_SCRIPT="$REPO_ROOT/scripts/server_morning_autopost.sh"
-LOG_FILE="$REPO_ROOT/_state/server-morning-autopost.log"
+RUNTIME_DIR="$HOME/.investing-runtime"
+RUN_SCRIPT="$RUNTIME_DIR/bin/server_morning_autopost.sh"
+LOG_FILE="$RUNTIME_DIR/logs/server-morning-autopost.log"
 
 CRON_BEGIN="# BEGIN investing-morning-0910"
 CRON_END="# END investing-morning-0910"

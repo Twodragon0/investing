@@ -7,7 +7,8 @@ SOURCE_PLIST="$REPO_ROOT/scripts/launchd/$PLIST_NAME"
 TARGET_DIR="$HOME/Library/LaunchAgents"
 TARGET_PLIST="$TARGET_DIR/$PLIST_NAME"
 LABEL="com.twodragon.investing-morning-autopost"
-LOG_FILE="$REPO_ROOT/_state/server-morning-autopost.log"
+RUNTIME_DIR="$HOME/.investing-runtime"
+LOG_FILE="$RUNTIME_DIR/logs/server-morning-autopost.log"
 
 MODE="${1:---install}"
 

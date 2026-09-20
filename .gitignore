@@ -89,3 +89,4 @@ _sass/_site/
 # 수집 워크플로우가 `git add _state/` 를 하므로 무시하지 않으면 자동 커밋에 실린다.
 # 고아 탐지는 scripts/tools/check_state_orphans.py 가 계속 담당한다.
 _state/*.tmp
+_state/*.log

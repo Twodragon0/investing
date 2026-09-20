@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.twodragon.investing-morning-autopost</string>
+    <string>com.twodragon.investing-healthcheck</string>
 
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/namyongkim/.investing-runtime/bin/server_morning_autopost.sh</string>
+        <string>/Users/namyongkim/.investing-runtime/bin/health_and_logrotate.sh</string>
     </array>
 
     <key>WorkingDirectory</key>
@@ -16,16 +16,18 @@
 
     <key>StartCalendarInterval</key>
     <dict>
+        <key>Weekday</key>
+        <integer>0</integer>
         <key>Hour</key>
         <integer>9</integer>
         <key>Minute</key>
-        <integer>10</integer>
+        <integer>0</integer>
     </dict>
 
     <key>StandardOutPath</key>
-    <string>/Users/namyongkim/.investing-runtime/logs/server-morning-autopost.log</string>
+    <string>/Users/namyongkim/.investing-runtime/logs/health-check.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/namyongkim/.investing-runtime/logs/server-morning-autopost.log</string>
+    <string>/Users/namyongkim/.investing-runtime/logs/health-check.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
