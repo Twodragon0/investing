@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE8yNXdVSVM4SFFuOUFyZFdzYW8xSDRCVEFsS3V4U3h5eHItUEZpdXhGVG4wRE5vTEdreGc3ZTBnUUtUX0xieXVRMEJRRWdNTGdE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">업비트 상장 소식에…슈퍼폼 120% 폭등 - 블루밍비트</a>
-<p class="news-desc">업비트 상장 소식에…슈퍼폼 120% 폭등 블루밍비트</p>
+<p class="news-desc">슈퍼폼(UP) 가격이 국내 암호화폐 거래소 상장 소식에 급등세를 보이고 있다. 13일 코인마켓캡에 따르면 슈퍼폼은 이날 오후 6시 48분 기준 전일 대비 약 122.51% 치솟은 0.2709달러에 거래되고 있다. 일주일 전과 비교하면 약 129% 오른 수치다. 슈퍼폼</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -260,7 +260,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBGbHptU0c3Z3NEOVFraTFuLVAxa3BFT3ZNY0xKM21BX0JxaVVMaUdBZTgxM2dWLXhPdmNNdi1ScDFHTEFyZ0JibHJvWFlqWVBzN0RIZ0x3bnd4SU16dzBjZmU0X2pTQXM5M21POG0yN3lUQkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">크립토핫이슈] 클래리티법 7월4일 데드라인…리플 IPO 가시화</a>
-<p class="news-desc">[크립토핫이슈] 클래리티법 7월4일 데드라인…리플 IPO 가시화 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 미국 클래리티법의 상원 표결이 현실로 다가오면서 암호화폐 업계가 긴장 상태에 돌입했다. 동시에 리플의 기업공개(IPO) 가능성이 수면 위로 떠오르며 XRP 투자자들의 기대와 우려가 교차했고, WHO의 한타바이러스 경보라는 돌발 변수까지 시장에 불안을 더했다. 이더리움과 알트코인 시장은 조심스러운 반등 기대감 속에 숨 고르기를 이어갔다.• 클래리티법 '14일 표결'에 업계 긴장…백악관은 '7월 4일' 못 박았다• 美 클래리티법 14일이 분수령…스테이블코인 보상·이해충돌 공방• 美 상원 클래리티법 심의 재개</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

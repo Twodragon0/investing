@@ -80,7 +80,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9USGJYcVJfeVdfWmpSb0QxYm1xMVpXZDBJU3NDOHJUWjV4ZHM2OVdCOHJtZXZiX1dMelRxMlZMRi1tM08tQmR1MjBNNzBJc2JhaVp1YWxyQVhVeHRaaGUtWA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">숏폼] '잠수함이니?' 코스피 나는데 코스닥 바닥 기는 이유 - 프라임경제</a>
-<p class="news-desc">[숏폼] '잠수함이니?' 코스피 나는데 코스닥 바닥 기는 이유 프라임경제</p>
+<p class="news-desc">#코스피 #코스닥 #디커플링 #증시양극화 #시황분석 #주식시장 #삼성전자 #SK하이닉스 #반도체관련주 #유동성블랙홀 #경제뉴스 #주식공부 #투자전략 #지수착시 #팩트체크</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -147,7 +147,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQckpibElwU3phd2JBUlhQR2l1c1NlMklUY1U1RWlDLVZudG9hdVQ1a2VLeEFjei1zeVVBWGFYa21EbWp0TWlFQzltMmhWalFGWVNKUWdhcm10U2dDWkhnWkdDekRIeXhmaGlIT09fZnZpcUpqTlhhdE1HQUFmalVUQUhlalo?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">경제이슈] 원·달러 환율 1500원, 뉴노멀인가 - 월간조선</a>
-<p class="news-desc">[경제이슈] 원·달러 환율 1500원, 뉴노멀인가 월간조선</p>
+<p class="news-desc">⊙ “한미 간 기초 체력 역전… 원화는 구조적으로 약해질 수밖에 없어”⊙ “한국 금리가 미국보다 수년째 낮은 것은 처음 있는 일”⊙ 2022년 미국 금리가 한국보다 높아지면서 4년 만에 1100원대에서 1400원대로 치솟아⊙ 연말 이후 달러화 약세 전환 가능성 견해도 있어 원·달러 환율은 2010년 이후 2021년까지 1100원대에서 오르내렸다. 코로나19가 한창이던 2022년 3월에 처음으로 1200원을 넘어섰고, 2022년 5월에 1300원, 2022년 9월에 1400원을 넘어섰다. 불과 반년 만에 벌어진 일이다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Xd3JIQXFyeE42ams5Ym55bFBIMzVqUFV3Z2VLYjlWSGM2UEZ3YTh6enY4TWhMRVVXakVpQnRfZmVvdWFTVUJYcDBNLVlrdlU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전 '43조 폭탄' 경고에도 증권가 전망↑…"더 담을까" 반도체 개미 '고심'</a>
-<p class="news-desc">삼전 '43조 폭탄' 경고에도 증권가 전망↑…"더 담을까" 반도체 개미 '고심' v.daum.net</p>
+<p class="news-desc">[한국경제TV 황효원 기자] 글로벌 투자은행 씨티그룹이 국내 반도체 '투톱' 삼성전자와 SK하이닉스 목표주가를 큰 폭으로 상향 조정했다. 인공지능(AI) 확산에 따른 고대역폭메모리(HBM) 수요 급증과 메모리 가격 상승 흐름이 계속 이어질 것이라는 전망에서다. 12일 금융투자업계에 따르면 씨티는 최근 발표한 보고서를 통해 삼성전자의 목표주가를 기존 30만</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

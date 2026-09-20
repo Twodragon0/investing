@@ -43,8 +43,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-16 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1TalpwdUd6eUZuSWNteVFGS0FpQThVWmlQdEFtZmJoQ1hhV1l5SHA3MXR3MW5uVWttbUdCYVVTdkVyaDViT0NIbjJyOWt4el9iZjdQMDZOckJycHl1aFo5c0xXRHZWTXV4ZDJnMEF6NVJ6S2VlMDZnb9IBeEFVX3lxTE1MbnNHcHRmUlBGSmxkQjgwT0xqdGViODN5SG5YNG5aeWVQTjA4QTlvbnhrWjV5SzlodncyRTBLSGtfYUZoNHN0aW5PVDZhb3NTQmluY2VfeFM3d3JGRDVxRGN1WkZhOWw2QTRHZlp6T1pUTWxkWkNfSQ?oc=5">'8천피' 찍고 곤두박질‥코스피, 매도 사이드카 - MBC 뉴스</a> <span class="p0-desc">'8천피' 찍고 곤두박질‥코스피, 매도 사이드카 MBC 뉴스</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBCVVU1ZnBoUzFRSHAtaTUxaUVEN0ZCQW9WVG12bVRHQnJOSzd4Y0pueEZPNkhGd0JCWEt4U3ZMcjdXU3FWeGlneDhrNzd2UmNQdHlxbDFHWmlLdEhMenRVQUhVRVVOd3d3d1lKajdMd1poSi1CWmJv?oc=5">국채금리 4.18%·환율 1500원 턱밑…코스피 8000선 돌파 후 급락 - 이코노미트리뷴</a> <span class="p0-desc">국채금리 4.18%·환율 1500원 턱밑…코스피 8000선 돌파 후 급락 이코노미트리뷴</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1TalpwdUd6eUZuSWNteVFGS0FpQThVWmlQdEFtZmJoQ1hhV1l5SHA3MXR3MW5uVWttbUdCYVVTdkVyaDViT0NIbjJyOWt4el9iZjdQMDZOckJycHl1aFo5c0xXRHZWTXV4ZDJnMEF6NVJ6S2VlMDZnb9IBeEFVX3lxTE1MbnNHcHRmUlBGSmxkQjgwT0xqdGViODN5SG5YNG5aeWVQTjA4QTlvbnhrWjV5SzlodncyRTBLSGtfYUZoNHN0aW5PVDZhb3NTQmluY2VfeFM3d3JGRDVxRGN1WkZhOWw2QTRHZlp6T1pUTWxkWkNfSQ?oc=5">'8천피' 찍고 곤두박질‥코스피, 매도 사이드카 - MBC 뉴스</a> <span class="p0-desc">그동안 급등했던 반도체 주가는, 노조 파업을 예고한 삼성전자, SK하이닉스 모두 시장 보다 더 떨어졌습니다. 장 초반 8천 선을 넘은 코스피는 8,046까지 치솟으며 최고치를 경신했다가, 곧바로 하락 전환했습니다. 코스피200 선물지수가 5% 넘게 급락하며 프로그램 자동매도를 일시 정지하는 '매도 사이드카'도 발동됐습니다. 미국 10년물 국채금리가 4.5%를 넘기며 시장에 경계감이 확산됐고, 그동안 많이 오른 반도체 대형주 위주로 외국인들이 매물을 쏟아냈습니다.</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBCVVU1ZnBoUzFRSHAtaTUxaUVEN0ZCQW9WVG12bVRHQnJOSzd4Y0pueEZPNkhGd0JCWEt4U3ZMcjdXU3FWeGlneDhrNzd2UmNQdHlxbDFHWmlLdEhMenRVQUhVRVVOd3d3d1lKajdMd1poSi1CWmJv?oc=5">국채금리 4.18%·환율 1500원 턱밑…코스피 8000선 돌파 후 급락 - 이코노미트리뷴</a> <span class="p0-desc">[이코노미트리뷴 = 이진석 기자] 원·달러 환율이 1500원 턱밑까지 오르고 국고채 10년물 금리가 4.18%대까지 치솟으면서 코스피가 장중 8000선 돌파 이후</span></li>
 <li><a href="https://www.marketwatch.com/story/you-now-need-18-months-of-emergency-savings-because-of-how-much-ai-is-disrupting-the-workforce-86dbac97?mod=mw_rss_topstories">You now need 18 months of emergency savings because of how much AI is disrupting the workforce</a></li>
 </ul>
 </div>
@@ -81,7 +81,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5oakVSQlltczBpS3hneTFQNFdRRGowWnZLdzQtSVFvTWtvRUk1VWFRVTJ0ZEhJUlpZRmcyYVc3VEhVT3pXQlQwam9kamhJY29vLWdQRjkwSlNfR2F5dnRsTjZycUR5N1V4Mm5r?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 한강타임즈 김광호 기자 = 15일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 488.23포인트 내린</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -200,7 +200,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFAzYzU5a25fUlM4eWFUdU9OTzNrS0Vpal84b1BkMzVyQUljNS1MU3dJd1JPSlUtNnVTMmlDZWRyOTFDRk5TWVVmS203eWEzaHFNYmxZLTd0YUZmeVnSAWBBVV95cUxNZURMdE1ZcDk1LU9lQjdYbjBpUTZ1MkUyTG9sMEdQMTVORHBGd3Q5M3lrQVZRd3NMN3BfaEhEUG03dFRRczZ3eGh5RFdyN3ZuMy00blhRZW5ybDkwT1F3M00?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">NH아문디 K반도체 ETF 순자산 3조·한투 AI반도체TOP3+ 1조 돌파</a>
-<p class="news-desc">NH아문디 K반도체 ETF 순자산 3조·한투 AI반도체TOP3+ 1조 돌파 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 김태종 기자 = 삼성전자[005930]와 SK하이닉스[000660]를 비롯해 국내 반도체주가 연일 고점을 높이면서 이들 종목을 담고 있는 상장지수펀드(ETF)의 몸집도 불어나고 있다. NH-아문디자산운용은 국내 반도체 산업의 핵심 종목에 투자하는 'HANARO Fn K-반도체 ETF'가 순자산총액 3조원을 돌파했다고 15일 밝혔다. 한국거래소에 따르면 지난 13일 기준 이 ETF의 순자산은 3조639억원으로 집계됐다. 지난 4월 말 2조원을 돌파한 이후 약 2주 만에 1조원이 더 늘었다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -255,7 +255,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNR19DUmc5SUhEZ0RxWXVKQUZnLUFFT2k0bll4YkdYZE1BbVlfbTYxbWtObVlpR2VDQ1QzM3Q5TU5Zd09RMGk5XzlvNEEzaHhPU1lJaWJFRkk2UE9XbzV6T09nMHpkMVB1UFBkQXBrUllScjdPNGlFcS1xWC1OWERpR1BqbF8zT0tx0gGcAUFVX3lxTFBTZk9JYnNwbE9JMWJCZmxXLXN1eXFlQW0tX3VmTUkydWxabnhXNWM1ZEMyZHNCNndjQUp2V09yV0dObnBJQ0l2VFZXWWd6MWs1NnNYY0RmYUZZY0FJVkgzS0EydkU3dXBjYWtxaGg5VnR6NkN6STJXTFRZX3phSmlOMWxtdk1jV0NFaTdsWHNTY0REejE5Z0FkR1RvQw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 폴레드, 코스닥 상장 첫날 ‘따따블’ 성공 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">[특징주] 폴레드, 코스닥 상장 첫날 ‘따따블’ 성공 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">특징주 폴레드, 코스닥 상장 첫날 따따블 성공 육아가전·위생용품 기업 폴레드487580 주가가 14일 코스닥 상장 첫날 따따블공모가의 4배에 성공했다. 이날 오전 9시 18분 기준 폴레드 주식은 코스닥 시장에 공모가5000원 대비 1만5000원3...</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

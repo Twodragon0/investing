@@ -228,7 +228,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9NTmZ5MU1Bajd1djlpV3pjXzYzMm8zdHc5dHdZbE9TbW5mYThjTDBIandLQnN5Y2Mzb3R4Yk5LQi1pNHpMNEoyUzUwTTNjci1lVkYxMWE2X0s5RFRYS0QwSldrYWZfY2d4X2fSAW5BVV95cUxPbTJxaThQcC1saEJOQ2FNUHdLX0YtNFFGTkF0Zk13NEsxTWZNaEt3YzM2ZVdaTWZmTDBoamVBLU9WamtMLThiclYzc0dVZk5mNGlEZnBRT3hTT2EzUDh5aW5pS3Q5cFEwc09WZ2lyQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 슈퍼랠리 올라탄 SK하이닉스… 곽노정 사장, 주식부자 1위 등극 - 뉴시안</a>
-<p class="news-desc">반도체 슈퍼랠리 올라탄 SK하이닉스… 곽노정 사장, 주식부자 1위 등극 뉴시안</p>
+<p class="news-desc">［뉴시안= 신선경 기자］SK하이닉스 곽노정 사장이 삼성전자 노태문 사장을 제치고 국내 반도체 업계 비오너 임원 가운데 가장 많은 주식재산을 보유한 인물에 올랐다. 최근 반도체주 급등 흐름 속에 SK하이닉스 임원들의 주식가치가 가파르게 상승하면서 삼성전자 중심이던 반도체 임원 자산 지형에도 변화가 나타나고 있다.14일 한국CXO연구소가 발표한 ‘삼성전자·SK하이닉스 비오너 임원 주식평가액 분석’에 따르면, 지난 13일 종가 기준 곽노정 SK하이닉스 사장의 주식평가액은 282억8051만원으로 집계됐다. 삼성전자 노태문 사장의 주식재산(</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -44,8 +44,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-17 - 주식 뉴스 요약 이�
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1nZnhoZFZYZF9ZNjN5WUtxLUI4YmxuYjQwdWxSd2ZjSjFjbExxZi11dS1FazNUdWtXa3lFRy15VXZEeXFuT1Zhd1Z1SGpfRXA2TWphbnFQdGpSSVFWYy1NMzRlU25VSzVpSG9TMDZqajM2QQ?oc=5">코스피·코스닥 한때 ‘8% 폭락’ 서킷브레이커 발동</a> <span class="p0-desc">코스피·코스닥 한때 ‘8% 폭락’ 서킷브레이커 발동 한겨레</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE85dFctdUZfV3FIem14S2RHT0Z0U1FtbkVFc1Z0OE1oRk1LYTd5Q1RhRnVsZDFTLWVTYzRqanpyMmdsZl82ZlpubHp1b29GT0FzbGthVWRJdFFsdkl1?oc=5">마감시황] 코스피 8000 찍고 6% 급락…외국인·기관 차익 매도 8조 던졌다 - 뉴스핌</a> <span class="p0-desc">[마감시황] 코스피 8000 찍고 6% 급락…외국인·기관 차익 매도 8조 던졌다 뉴스핌</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBCVVU1ZnBoUzFRSHAtaTUxaUVEN0ZCQW9WVG12bVRHQnJOSzd4Y0pueEZPNkhGd0JCWEt4U3ZMcjdXU3FWeGlneDhrNzd2UmNQdHlxbDFHWmlLdEhMenRVQUhVRVVOd3d3d1lKajdMd1poSi1CWmJv?oc=5">국채금리 4.18%·환율 1500원 턱밑…코스피 8000선 돌파 후 급락 - 이코노미트리뷴</a> <span class="p0-desc">국채금리 4.18%·환율 1500원 턱밑…코스피 8000선 돌파 후 급락 이코노미트리뷴</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE85dFctdUZfV3FIem14S2RHT0Z0U1FtbkVFc1Z0OE1oRk1LYTd5Q1RhRnVsZDFTLWVTYzRqanpyMmdsZl82ZlpubHp1b29GT0FzbGthVWRJdFFsdkl1?oc=5">마감시황] 코스피 8000 찍고 6% 급락…외국인·기관 차익 매도 8조 던졌다 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 김가희 기자 = 코스피가 장중 사상 처음으로 8000선을 돌파했지만 외국인과 기관의 대규모 차익실현 매물에 밀려 6% 넘게 급락 마감했다. 장중 매도 사이드카까지 발동되며 시장 변동성이 급격히 확대됐다.15일 한국거래소에 따르면 이날 코스피 지</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBCVVU1ZnBoUzFRSHAtaTUxaUVEN0ZCQW9WVG12bVRHQnJOSzd4Y0pueEZPNkhGd0JCWEt4U3ZMcjdXU3FWeGlneDhrNzd2UmNQdHlxbDFHWmlLdEhMenRVQUhVRVVOd3d3d1lKajdMd1poSi1CWmJv?oc=5">국채금리 4.18%·환율 1500원 턱밑…코스피 8000선 돌파 후 급락 - 이코노미트리뷴</a> <span class="p0-desc">[이코노미트리뷴 = 이진석 기자] 원·달러 환율이 1500원 턱밑까지 오르고 국고채 10년물 금리가 4.18%대까지 치솟으면서 코스피가 장중 8000선 돌파 이후</span></li>
 </ul>
 </div>
 
@@ -148,7 +148,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5JQ01EcGlhWjRnM3JWYUQyM052b25pZzZ1UHprYzNmYWYzcGN3R1lUV2tJS19XeVJ0dEl2SUhuTWxVTm4wQkRUQksxb20tVWJyRXpDY1FEVVRlUjdUT0NwTVlQc0xYRVJ0WkhWNndBOUQyUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 ‘낙폭 사상 최대’…증시 최악의 날, 빚투 개미들 패닉</a>
-<p class="news-desc">코스피·코스닥 ‘낙폭 사상 최대’…증시 최악의 날, 빚투 개미들 패닉 한겨레</p>
+<p class="news-desc">미국와 이란 전쟁의 파장으로 4일 서울 증시가 사상 최악의 날을 맞았다. 코스피 지수가 12.06%, 코스닥 지수가 14.0% 폭락했다. 두 시장 모두 하락 폭과 하락률이 역대 최대였다. 주가가 급락하며 두 시장에서 모든 거래를 일시 정지시키는 서킷브레이커가 발동됐다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

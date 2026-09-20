@@ -91,7 +91,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE41OGFJeVlIMTlfQUptTng2ejY2QVhvR1B5N1lLbGRDME1mbk9nZ0hDY1k5bUE3NWo5N3ktRHo4TXFpOWN5eXl0YUZqX0JYUDM0LVlQX3VTLXhEbHNlM2Z6Ug?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 훈풍 속 '내 주식'은 한파…코스피 8000의 역설 - 뉴스토마토</a>
-<p class="news-desc">반도체 훈풍 속 '내 주식'은 한파…코스피 8000의 역설 뉴스토마토</p>
+<p class="news-desc">[뉴스토마토 김현경 기자] 코스피가 연일 사상 최고치를 경신하며 8000선 돌파를 눈앞에 두고 있지만 시장 내부 온도는 다릅니다. 지수는 뛰는데 대다수 종목은 제자리이거나 오히려 밀리는 'K자형 장세'가 심화되고 있습니다. 반도체 대형주가 독주하는 사이 코스닥은 코스피 상승률의 3분의 1 수준에 그치며 두 시장의 격차가 좀처럼 좁혀지지 않고 있습니다 12일 한국거래소에 따르면 올해 첫 거래일인 1월2일부터 이날(7643.15)까지 코스피는 77.4% 상승했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -198,7 +198,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1NQkZOU0NPRjMzSTZkclppNnRMMEt1Nkx5N0dmaVcweUdtOTJBQTlJRXdLZnpoVEVKczVkdjZMUktlOVM4MFFYWE4wVHZNcTZmU3c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美반도체 팔아치운 국민연금 … 삼전닉스서도 차익 실현하나 - 매일경제 마켓</a>
-<p class="news-desc">美반도체 팔아치운 국민연금 … 삼전닉스서도 차익 실현하나 매일경제 마켓</p>
+<p class="news-desc">'큰손' 투자기조 변화에 촉각마이크론 880억원어치 팔아웨스턴디지털·시게이트도올 1분기 일부 지분 정리 국민연금이 마이크론 등 미국 메모리 반도체 관련주를 차익 실현한 것으로 드러나면서 삼성전자와 SK하이닉스 투자 기조도 변화할지 투자자 관심이 집중되고 있다. 12일(현지시간) 국민연금공단이 미국 증권거래위원회(SEC)에 제출한 13F 분기 보고서(운용자산 1억달러 이상 기관 공시)에 따르면 국민연금은 지난 1분기에 마이크론, 웨스턴디지털, 시게이트 주식을 팔아치웠다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -241,7 +241,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9kVGVPYUlaMlMtM0FPT2lQZC1keVQzdTFpbklQYWNwTEprRWJjci1sMElIcTVRVWMzcm50clB6S2UyT05JV1lKdlE5ZjZpRGUxQ1psN1E5UnJPOW5RZjAwV0hvMGtYTEnSAWtBVV95cUxOZy1CQUU5enJ3ek1qQ3hBektydGxsYVBFdnBFX1JXckdYNUhjQkpLNGJINzE5SENJZ3hyQWY4U0xwTmZWRkUtNlFtSDNBSEhZbkw0OHV0NVdlY2FJcGJwSnFsRk5JdENaMElwVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 주가 상승에 은값 급등… 비단 ‘e은’ 거래량 20배 증가 - 비온미디어</a>
-<p class="news-desc">삼성전자·SK하이닉스 주가 상승에 은값 급등… 비단 ‘e은’ 거래량 20배 증가 비온미디어</p>
+<p class="news-desc">인공지능(AI)과 반도체 산업 성장 기대감이 커지면서 산업용 원자재인 은(銀) 가격이 급등하고 있다. 이와 함께 부산디지털자산거래소의 디지털 실물자산(RWA) 거래 플랫폼 비단(Bdan)에서 거래되는 실물 은 기반 상품 ‘e은’ 거래량도 큰 폭으로 증가한 것으로 나타났다.13일 비단에 따르면 올해 1분기 e은 거래액은 2,422억원으로 집계됐다. 지난해 같은 기간 약 126억원 대비 약 20배 증가한 규모다. AI 산업 확대와 함께 반도체·전기차·우주항공 산업 성장세가 가속화되면서 산업용 원자재로서 은의 전략적 가치가 재평가된 영향</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
