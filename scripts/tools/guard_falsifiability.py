@@ -1035,6 +1035,34 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_harness_commit_guard.py::test_commit_is_blocked_while_the_harness_holds_the_lock",
     ),
     StaticCase(
+        # 로컬 포맷 계층이 이 훅 하나뿐이다 — pre-commit 의 `ruff-format` 은
+        # `pre-commit install` 미실행이라 안 돈다(2026-09-19 실측). 여기서 빠지면
+        # 포맷 누락을 CI red 로 알게 된다.
+        "auto-lint 훅에서 ruff format 제거 (로컬 포맷 계층 소멸)",
+        ".claude/hooks/auto-lint-python.sh",
+        '    ruff format "$FILE_PATH" 2>/dev/null\n',
+        "",
+        "tests/test_auto_lint_hook_guard.py::test_hook_formats_a_python_file",
+    ),
+    StaticCase(
+        # 이 한 줄이 pre-commit 훅 10개 전부의 **유일한** 강제 지점이다 — 로컬은
+        # `pre-commit install` 미실행이다(2026-09-19 실측). 없어지면 gitleaks·
+        # detect-private-key·ruff-format 등이 어디서도 안 도는데 워크플로우는 green 이다.
+        "CI 의 pre-commit 실행 제거 (훅 10개가 어디서도 안 돌게 됨)",
+        ".github/workflows/code-quality.yml",
+        "        run: pre-commit run --all-files --show-diff-on-failure",
+        "        run: echo skip",
+        "tests/test_auto_lint_hook_guard.py::test_ci_runs_every_pre_commit_hook",
+    ),
+    StaticCase(
+        # 스텝이 살아 있어도 config 에서 훅이 빠지면 그 검사는 사라진다.
+        "pre-commit 훅 하나 삭제 (검사가 조용히 사라짐)",
+        ".pre-commit-config.yaml",
+        "      - id: detect-private-key\n",
+        "",
+        "tests/test_auto_lint_hook_guard.py::test_pre_commit_config_hook_count_is_pinned",
+    ),
+    StaticCase(
         # 두 조회의 stderr 를 한 파일에 받으면, 체크 조회 성공이 리다이렉션으로
         # 파일을 truncate 해 head 조회 실패 사유가 빈칸으로 남는다(`재시도 ()`).
         "head/체크 조회의 stderr 를 한 파일로 합치기 (실패 사유 소실)",
@@ -1402,8 +1430,37 @@ def _run_static_cases(shard: tuple[int, int] | None = None) -> list[dict]:
     return results
 
 
-#: 하네스가 도는 동안 존재하는 락. `.git/` 아래라 실수로 커밋되지 않고 클론마다 독립이다.
-LOCK_PATH = REPO_ROOT / ".git" / "guard-falsifiability.lock"
+def git_dir_for(root: Path) -> Path:
+    """`root` 체크아웃의 git 디렉토리.
+
+    인자를 받는 이유는 **테스트가 판별할 수 있게** 하기 위해서다. 메인 트리에서는
+    `.git` 이 디렉토리라, 회귀(`root / ".git"` 하드코딩)를 넣어도 메인에서 도는
+    테스트는 green 이다 — 즉 가드가 vacuous 해진다. 합성 worktree 를 만들어 이
+    함수에 넘기면 어디서 돌든 판별된다.
+
+    `REPO_ROOT / ".git"` 로 가정하면 안 된다 — **linked worktree 에서는 `.git` 이
+    디렉토리가 아니라 파일**이고(`gitdir: …` 한 줄), 그 아래에 락을 만들려 하면
+    `FileExistsError` 로 하네스가 **즉시 죽는다**(2026-09-19 실측).
+
+    `--git-dir` 은 worktree 별 디렉토리를 준다. 락은 체크아웃마다 달라야 하므로
+    (워크트리에서 도는 하네스는 그 워크트리의 커밋만 막으면 된다) `--git-common-dir`
+    이 아니라 이쪽이 맞다.
+    """
+    proc = subprocess.run(
+        ["git", "rev-parse", "--absolute-git-dir"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if proc.returncode == 0 and proc.stdout.strip():
+        return Path(proc.stdout.strip())
+    return root / ".git"
+
+
+#: 하네스가 도는 동안 존재하는 락. git 디렉토리 아래라 실수로 커밋되지 않고
+#: 체크아웃마다 독립이다.
+LOCK_PATH = git_dir_for(REPO_ROOT) / "guard-falsifiability.lock"
 
 
 def _process_start_marker(pid: int) -> str | None:

@@ -49,7 +49,7 @@ _SETTINGS = _REPO_ROOT / ".claude" / "settings.json"
 
 sys.path.insert(0, str(_REPO_ROOT / "scripts" / "tools"))
 
-from guard_falsifiability import LOCK_PATH, read_active_lock  # noqa: E402
+from guard_falsifiability import LOCK_PATH, git_dir_for, read_active_lock  # noqa: E402
 
 #: 훅이 거부할 때의 종료코드. Claude 훅 규약이다.
 _DENY = 2
@@ -199,3 +199,60 @@ def _own_start_marker() -> str:
         check=False,
     )
     return proc.stdout.strip()
+
+
+def test_lock_path_works_in_a_linked_worktree(tmp_path: Path) -> None:
+    """linked worktree 의 `.git` 은 **디렉토리가 아니라 파일**이다.
+
+    `root / ".git" / …` 로 락 경로를 잡으면 그 아래에 디렉토리를 만들 수 없어
+    하네스가 **즉시 죽는다**:
+
+        FileExistsError: [Errno 17] File exists: '/private/tmp/wt/.git'
+
+    2026-09-19 실측 — 워크트리에서 `--shard 1/60` 이 한 케이스도 못 돌고 크래시했다.
+    `git worktree` 로 격리해 돌리려는 시도(에이전트 `isolation: "worktree"` 포함)가
+    전부 막힌다. `git rev-parse --absolute-git-dir` 로 고친 뒤에는 3/3 falsifiable
+    로 완주했다.
+
+    **합성 worktree 를 만들어 검사한다.** 메인 트리의 `LOCK_PATH` 만 보면 거기선
+    `.git` 이 디렉토리라 회귀를 넣어도 green 이다 — CI 도 메인 체크아웃에서 도므로
+    그대로면 아무것도 지키지 않는다(2026-09-19 에 그 상태를 실제로 만들었다가 잡음).
+    `--no-checkout` 이라 0.3초면 만들어진다.
+    """
+    worktree = tmp_path / "wt"
+    created = subprocess.run(
+        ["git", "worktree", "add", "-q", "--no-checkout", "--detach", str(worktree), "HEAD"],
+        cwd=_REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if created.returncode != 0:
+        pytest.skip(f"worktree 를 만들지 못했다: {created.stderr.strip()}")
+    try:
+        assert (worktree / ".git").is_file(), (
+            "전제가 깨졌다 — linked worktree 의 `.git` 이 파일이 아니다. git 동작이 바뀌었다면 이 가드를 재설계할 것."
+        )
+
+        git_dir = git_dir_for(worktree)
+
+        assert git_dir.is_dir(), (
+            f"worktree 의 git 디렉토리를 파일로 해석했다: {git_dir}. "
+            "`root / '.git'` 로 가정하면 하네스가 워크트리에서 즉시 죽는다 — "
+            "`git rev-parse --absolute-git-dir` 을 쓸 것."
+        )
+        assert git_dir != worktree / ".git", f"worktree 의 `.git` 파일을 그대로 돌려줬다: {git_dir}"
+    finally:
+        subprocess.run(
+            ["git", "worktree", "remove", "--force", str(worktree)],
+            cwd=_REPO_ROOT,
+            capture_output=True,
+            check=False,
+        )
+        subprocess.run(["git", "worktree", "prune"], cwd=_REPO_ROOT, capture_output=True, check=False)
+
+
+def test_lock_path_is_under_a_real_directory() -> None:
+    """메인 체크아웃에서도 락 부모가 실재해야 한다 — 위 테스트의 값싼 짝."""
+    assert LOCK_PATH.parent.is_dir(), f"락의 부모가 디렉토리가 아니다: {LOCK_PATH.parent}"
+    assert LOCK_PATH.name.endswith(".lock"), f"락 파일명이 예상과 다르다: {LOCK_PATH.name}"

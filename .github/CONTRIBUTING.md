@@ -13,10 +13,17 @@ bundle install
 
 # 로컬 상태 파일 노이즈 억제 (권장, 1회)
 bash scripts/dev_ignore_state.sh
+
+# 커밋 단계 훅 활성화 (권장, 1회)
+# 안 하면 ruff/format/gitleaks 등이 로컬에서 돌지 않는다. CI 가 `pre-commit run
+# --all-files` 로 전부 강제하므로 검사가 누락되지는 않지만, auto-fix 훅이 고쳐 줄
+# 것을 CI red 로 알게 된다.
+pre-commit install
 ```
 
-`_state/*.json` 은 중복 방지 상태입니다. 직접 수정하지 마세요 — pre-commit 훅이
-커밋을 차단합니다.
+`_state/*.json` 은 중복 방지 상태입니다. 직접 수정하지 마세요.
+
+차단 주체는 **Claude 훅** `.claude/hooks/pre-commit-state-guard.sh` 입니다 — `.pre-commit-config.yaml` 에는 `_state/` 를 막는 훅이 없습니다. 그 훅은 Claude Code 의 Bash 툴 호출에만 발동하므로, **터미널에서 직접 `git commit` 하면 막히지 않습니다.**
 
 ## 변경 전 확인
 
