@@ -14,8 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-20 - 정치인 거래 �
 description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거래와 정책 연관성을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-
-
 **2026-09-20** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **7건** — 미국 의회 거래 2건, SEC 내부자 거래 5건
 
 ## 한눈에 보기
@@ -27,7 +25,6 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 
 ## 전체 뉴스 요약
 
-- 2026-09-20 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 7건 — 미국 의회 거래 2건, SEC 내부자 거래 5건
 - 1. 'A huge problem': Trump has traded more stocks than all of Congress combined - Fortune President Donald Trump has made more securities trades since…
 
 ## 1. 미국 의회 거래 동향
