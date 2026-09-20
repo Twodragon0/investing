@@ -200,7 +200,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFAzYzU5a25fUlM4eWFUdU9OTzNrS0Vpal84b1BkMzVyQUljNS1MU3dJd1JPSlUtNnVTMmlDZWRyOTFDRk5TWVVmS203eWEzaHFNYmxZLTd0YUZmeVnSAWBBVV95cUxNZURMdE1ZcDk1LU9lQjdYbjBpUTZ1MkUyTG9sMEdQMTVORHBGd3Q5M3lrQVZRd3NMN3BfaEhEUG03dFRRczZ3eGh5RFdyN3ZuMy00blhRZW5ybDkwT1F3M00?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">NH아문디 K반도체 ETF 순자산 3조·한투 AI반도체TOP3+ 1조 돌파</a>
-<p class="news-desc">(서울=연합뉴스) 김태종 기자 = 삼성전자[005930]와 SK하이닉스[000660]를 비롯해 국내 반도체주가 연일 고점을 높이면서 이들 종목을 담고 있는 상장지수펀드(ETF)의 몸집도 불어나고 있다. NH-아문디자산운용은 국내 반도체 산업의 핵심 종목에 투자하는 'HANARO Fn K-반도체 ETF'가 순자산총액 3조원을 돌파했다고 15일 밝혔다. 한국거래소에 따르면 지난 13일 기준 이 ETF의 순자산은 3조639억원으로 집계됐다. 지난 4월 말 2조원을 돌파한 이후 약 2주 만에 1조원이 더 늘었다.</p>
+<p class="news-desc">(서울=연합뉴스) 김태종 기자 = 삼성전자[005930] 와 SK하이닉스[000660] 를 비롯해 국내 반도체주가 연일 고점을 높이면서 이들 종목을 담고 있는 상장지수펀드(ETF)의 몸집도 불어나고 있다. NH-아문디자산운용은 국내 반도체 산업의 핵심 종목에 투자하는 'HANARO Fn K-반도체 ETF'가 순자산총액 3조원을 돌파했다고 15일 밝혔다. 한국거래소에 따르면 지난 13일 기준 이 ETF의 순자산은 3조639억원으로 집계됐다. 지난 4월 말 2조원을 돌파한 이후 약 2주 만에 1조원이 더 늘었다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
