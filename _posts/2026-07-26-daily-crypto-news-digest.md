@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-26 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-gb/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-here">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://decrypt.co/374289/poolin-bitcoin-biggest-mining-pools-files-bankruptcy">Poolin, 한때 비트코인의 가장 큰 채굴 풀 중 하나였으며 파산 신청</a> <span class="p0-desc">싱가포르에 본사를 둔 이 풀은 2022년 인출 동결에서 결코 회복되지 않았습니다. 현재는 여전히 IOU를 보유하고 있는 11,700명의 사용자에게 상환하기 위해 마지막 텍사스 광산.</span></li><li><a href="https://decrypt.co/374282/nvidia-meta-microsoft-washington-dont-kill-open-source-ai">엔비디아, 메타 및 마이크로소프트 워싱턴에 전하십시오: 오픈 소스를 죽이지 마십시오 AI</a> <span class="p0-desc">중국인 AI이 OpenAI 자체 시스템에 의해 유발된 해킹에서 Hugging Face가 살아남도록 도운 지 며칠 후 25개 회사가 개방형 모델을 옹호하는 서한에 서명했습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-07-26 암호화폐 핵심 뉴스: Quantum과 Crypto는 충돌 과정에 있으며 월스트리트은 이를 막기 위해 수백만 달러를 지출하고 있습니다.. 총 99건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

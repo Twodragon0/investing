@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-21 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: If a Stock Market Crash Is Coming, History Says This Is the Smartest Move You Can Make. - 140건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 주목</li><li>🤖 <strong>AI/기술</strong>: IPO, 삼성전자 주목</li><li>📈 <strong>가격/시장</strong>: 폭락, 반도체 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 관련 5건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQU2VmYlNVVmp1eUdtNi1JNG5CNTQxU2NQZFRoQzdGV2ZSLUZJNXZIMC0wRFBOVEtNaURjY0k1cnIwRDA5QmZLNHBoMTBlV241VHd4SzlDSEdxV0RxNWgwMU91ZC1ZVFVZTlpDRWlxTFdOZjNTcG0tLW9oczZ0WTBIVU5zVVRJR3ZxalZDUnNkYVRrdGVobDJUUzdoYjFUX00?oc=5">If a Stock Market Crash Is Coming, History Says This Is the Smartest Move You Can Make.</a></li><li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQVGY1aC1rSkl1SjIwTkRNWjBfcTlPRjltcjdudkd6d0JDWHVuNkFPNy0zbUJIeWhocGRMcTFodEtndXNiZmVPYXFrZU9qSmltRGExNE9TV3dXbHRrVlB3V0lHYWJHb29TeXBscVBxNVdpOVZrQzVjUWdaREtMRUozM29IbUJ5THYxZHFOY2JHdUxwZC10R0ZONWNucVZCOVdNcnFGNTYyOEppLXNEOHlfQTN3Ym1Gb1B4SGlSdmFSRVdFNEwxRWs5a1cwaUs2LWkw?oc=5">The 11 S&P 500 Sectors Are Fading Quickly. Protect Yourself Against a Stock Market Crash Now.</a></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTHc2YlptSXlySkpublJrRVZzcXh1b1ZyYXVCZW1seDZKdGdRVmpqSEgtVjFKS2s5MjUzZi1uNlhjTWtHaU5qQldoc2dMUDdVYThkQk1YZjZFUXJGZFN0QU5pWlQ2dWFKSnJOUF92bTJzR0p3d3dFNEdMakpuUFRHLVBRd01qWElKNHBBa0hNb3FWLW5tb2htcUl6eXltTjdtay1iTFA1T2g?oc=5">Are global stock markets heading for a crash?</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: If a Stock Market Crash Is Coming, History Says This Is the Smartest Move You Can Make. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 140건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (17건): 연준, 인플레이션, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (11건): IPO, 삼성전자, 반도체 기술 이슈 (11건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📈 가격/시장** (20건): 폭락, 반도체, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- If a Stock Market Crash Is Coming, History Says This Is the Smartest Move You Can Make.
-- The 11 S&P 500 Sectors Are Fading Quickly. Protect Yourself Against a Stock Market Crash Now.
-- Are global stock markets heading for a crash?
-
-### 주요 이슈
-
-- The S&P 500 Is Flashing The Same Warning Signs Seen In 2018 And 2022
-- The AI capex boom masks an uncomfortable truth about S&P 500 earnings - Business
-- Caruso-Cabrera: The investing tailwinds for Latin America are the best in decade
-- 외 17건
-
-### 투자자 체크포인트
-
-- 한국 기사 38건, 글로벌 기사 102건 수집
-- 한국 지수: KOSPI 6,894.23(+2.66%), KOSDAQ 827.12(+0.60%), USD/KRW 1,385.95(+0.42%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:85%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:55%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:40%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-21.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,894.23 (+2.66%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 827.12 (+0.60%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-09-21 주식 시장에서 140건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,894.23(+2.66%), KOSDAQ 827.12(+0.60%), USD/KRW 1,385.95(+0.42%).
+- *Wall Street is holding steady as it waits to hear from the Federal Reserve*
 
 ## 테마별 주요 뉴스
 

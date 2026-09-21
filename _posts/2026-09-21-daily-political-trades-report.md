@@ -14,7 +14,6 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 image_alt: "정치인 거래·정책 리포트 - 2026-09-21 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-21.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-21** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **2건** — SEC 내부자 거래 1건, 중앙은행 1건
@@ -25,13 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-21 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **2건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 1건, 중앙은행 1건입니다.
-
-**중앙은행 정책**에서는 매일일보 = 김현태 기자 | 물가 선행지표 반등에 인플레이션에 대한 우려가 확대되면서 한국은행 금융통화위원회의 추가 기준금리 인상 압박도 커지고 있다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-09-21 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 2건 — SEC 내부자 거래 1건, 중앙은행 1건
+- 1. ERAS Form 4 Filings - Erasca, Inc. SEC Form 4 - Stock Titan Every Erasca, Inc.
 
 ## 1. SEC 내부자 거래 (Form 4)
 

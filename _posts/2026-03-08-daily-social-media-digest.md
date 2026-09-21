@@ -22,6 +22,7 @@ permalink: "/social-media/2026/03/08/daily-social-media-digest/"
 <div class="alert-box alert-info"><strong>소셜 트렌드: Bitcoin, Telegram, Blackrock 관련 28건 포착</strong><ul><li>🟠 <strong>비트코인</strong> (10건): Bitcoin, Telegram, Blackrock 이슈가 10건으로 주목받고 있습니다.</li><li>🏛️ <strong>정치/정책</strong> (6건): 대통령 중심으로 6건의 뉴스가 수집되었습니다.</li><li>🏦 <strong>거래소</strong> (6건): transferred, Telegram, USD 중심으로 6건의 뉴스가 수집되었습니다.</li><li>📊 <strong>매크로/금리</strong> (4건): Telegram, Tether, USDT 이슈가 4건으로 주목받고 있습니다.</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 28건 중 텔레그램 20건, 소셜 0건, 정치·경제 8건으로 비트코인 및 정치/정책 이슈가 주요 화제입니다.
