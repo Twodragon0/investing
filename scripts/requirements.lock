@@ -11,13 +11,13 @@ beautifulsoup4==4.15.0 \
     #   -r scripts/requirements.txt
     #   deep-translator
     #   yfinance
-boto3==1.43.94 \
-    --hash=sha256:2534bf331acd2f448b9cf8317f4eed453c65d9e0b7de254e77c99d390ac57aec \
-    --hash=sha256:aa832d88e85035cebb83f04700c65623328b88fe828ff7ed9539483bd9d608c5
+boto3==1.43.98 \
+    --hash=sha256:1ec732e023fb29c12dc8520f925b5bbbed29eeb36b5764b5a5c26052d7c721f7 \
+    --hash=sha256:7454f666a9e852a56db0a7fa23be33a899f64e27828930eac43c3edba7b34e17
     # via -r scripts/requirements.txt
-botocore==1.43.94 \
-    --hash=sha256:1dfb86603a87fdaebda2540db56aef5b226ec58ab72c13ca56737e4d66dea9ab \
-    --hash=sha256:cb97cedec5fceee3261f7fff75d0b0aa2cf68b32eeb2e8c2649e4657419773a6
+botocore==1.43.98 \
+    --hash=sha256:6135dd639ea6d1b3b49381bc253c8a139d61f7d44cb5f7dae8e7cd1791758572 \
+    --hash=sha256:84b35b10402c2fc0c265f634fbf86336eecc6489ee23f55074b329924b2cfd6f
     # via
     #   boto3
     #   s3transfer
