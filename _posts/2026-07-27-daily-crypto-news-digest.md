@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-27 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-gb/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-here">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://kr.beincrypto.com">다음주 두 중앙은행 금리 결정…비트코인 영향은?</a> <span class="p0-desc">BeInCrypto에서 비트코인 및 암호화폐 시장에 대한 속보 뉴스와 편향 없는 분석을 확인해보세요. 블록체인 업계 유일의 광고 없는 미디어입니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **73건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
-- 2026-07-27 암호화폐 핵심 뉴스: 트럼프가(가) 큰 비트코인 푸시를 했습니다. 투자자들은 물지 않는다. 총 73건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
