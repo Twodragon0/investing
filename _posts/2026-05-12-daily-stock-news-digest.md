@@ -73,7 +73,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBiMXpkYlJvOUVIMXlyajlIMWhHaHU4SXZLaHd4ODE1aW5xb2Vsal9laUNqQ1g2a29ZVDNjUEVuVUFneXVYMmhnVi1IRGUyZDdrUEM4a045N2hhUXdZWHEzR1p1a0pUeUNQZVZPOQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 주식 시황] 코스피, 5거래일 연속 상승하며 7800선 돌파…코스닥은 약보합 마감 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 주식 시황] 코스피, 5거래일 연속 상승하며 7800선 돌파…코스닥은 약보합 마감 데일리비즈온</p>
+<p class="news-desc">[데일리비즈온 박노충 기자] 2026년 5월 11일 국내 증시는 뚜렷한 양극화 양상을 보이며 마감했다. 코스피는 전 거래일 대비 324.24포인트(4.32%) 급</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -85,7 +85,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAxYThaZEhubzA2MmVsVF9rN3BnVmpHRzd3UlpNa3loU0FGR2V6T0J6RGZHVTZsdGdpcEZ4SUFtRFpQM2Q2Y3kzdHNBRXRZTkZqSXZkamRhclZYOW5VWkszb29scllXbEdTNW9z?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 마감.코스닥 내림세 마무리 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 마감.코스닥 내림세 마무리 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 11일 코스피와 코스닥지수가 각각 오름세와 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 324.24포인트 오른 7822.24에 마</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQckpibElwU3phd2JBUlhQR2l1c1NlMklUY1U1RWlDLVZudG9hdVQ1a2VLeEFjei1zeVVBWGFYa21EbWp0TWlFQzltMmhWalFGWVNKUWdhcm10U2dDWkhnWkdDekRIeXhmaGlIT09fZnZpcUpqTlhhdE1HQUFmalVUQUhlalo?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">경제이슈] 원·달러 환율 1500원, 뉴노멀인가 - 월간조선</a>
-<p class="news-desc">[경제이슈] 원·달러 환율 1500원, 뉴노멀인가 월간조선</p>
+<p class="news-desc">⊙ “한미 간 기초 체력 역전… 원화는 구조적으로 약해질 수밖에 없어”⊙ “한국 금리가 미국보다 수년째 낮은 것은 처음 있는 일”⊙ 2022년 미국 금리가 한국보다 높아지면서 4년 만에 1100원대에서 1400원대로 치솟아⊙ 연말 이후 달러화 약세 전환 가능성 견해도 있어 원·달러 환율은 2010년 이후 2021년까지 1100원대에서 오르내렸다. 코로나19가 한창이던 2022년 3월에 처음으로 1200원을 넘어섰고, 2022년 5월에 1300원, 2022년 9월에 1400원을 넘어섰다. 불과 반년 만에 벌어진 일이다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

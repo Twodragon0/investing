@@ -140,7 +140,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE03T0d3ZU0wX1FBNUtkd29LTWRkQXZmQ2luaVB1QkROb05aUXl2bFpYOFowbkNvVzYyTDI4eXhyejBfWXkzNXBwdVRHVG1tdHplYzUzVjRKNmQxLVVqMWllaFFyT0s1eXdoRWx6YmpIOFhNRmFXMXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">메모리 가격 8배 폭등! 한국 반도체 다시 주목해야 하는 이유 - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">메모리 반도체 가격 급등과 AI 수요 확대가 삼성전자·SK하이닉스 등 한국 반도체 주식에 어떤 영향을 주는지, 반도체 슈퍼사이클과 변동성 관리 전략까지 쉽게 정리했습니다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -180,7 +180,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9BSlp0VVlXUjZUejhRek85d2J2d2IzTGFXU2M5S0huZHBCYTg4SWpNcjBzZlkxT0luY242bzJJa1Ftc0dvR1Z1bVY1UmxCTEc4VFNLSWhBVXBUUdIBVEFVX3lxTE55RF8xM0NrN0Z5ekJuY2NTRFZ1SFlvdmFZTUhTZ2NOMEVNck9ac201RzVUaWVVSklXUmdoOGRMbEV6SGtsbWJ4bUNBM0JWY3A0VF9qVg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">신현송 첫 금통위 앞두고 커지는 '금리 인상론'…한은 기류 바뀌나</a>
-<p class="news-desc">신현송 첫 금통위 앞두고 커지는 '금리 인상론'…한은 기류 바뀌나 더팩트</p>
+<p class="news-desc">유상대 부총재 이젠 인상 고민할 때…한은 내부 첫 공개 시그널증권가 연내 3.00% 가능성도 거론신현송 한국은행 신임 총재가 지난달 21일 오전 서울 중구 한국은행에서 열린 취..</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

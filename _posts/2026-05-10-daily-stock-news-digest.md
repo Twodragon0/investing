@@ -177,7 +177,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE10bEF5cUljMUZGOWV5OTgwNUh2dVU1SHNmcXdRODZocnRUMHU3bUlXc0ZRRUVKa0RJNkRDR3ZKWlJzMVJmcU1uOVdTVDFkeGRZUHY5QkNES2xIRFlMdk9zYmJJVnZrUdIBZkFVX3lxTE10bEF5cUljMUZGOWV5OTgwNUh2dVU1SHNmcXdRODZocnRUMHU3bUlXc0ZRRUVKa0RJNkRDR3ZKWlJzMVJmcU1uOVdTVDFkeGRZUHY5QkNES2xIRFlMdk9zYmJJVnZrUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“고점론 시기상조… 코스피 영업익 60% 넘는 삼성전자·SK하이닉스, 주가는 45%에 불과” - 동아일보</a>
-<p class="news-desc">“고점론 시기상조… 코스피 영업익 60% 넘는 삼성전자·SK하이닉스, 주가는 45%에 불과” 동아일보</p>
+<p class="news-desc">“삼성전자와 SK하이닉스 주가가 국내 투자자 눈에는 너무 많이 오른 것처럼 보이겠지만 외국인투자자 입장에서는 다를 수 있다. 최근 급상승한 코스피와 달리 미국 S&amp;P500이나 나스닥은 그전부터 이미 많이 올랐기 때문에 현재 조금 큰 종목 가운데 PER(주가수익비율)이…</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
