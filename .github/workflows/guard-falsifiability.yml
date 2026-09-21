@@ -134,16 +134,25 @@ jobs:
           pip install -r scripts/requirements.txt pytest pytest-cov "$RUFF_PIN"
 
       - name: Run falsifiability harness
-        # 하네스는 tests/conftest.py 를 덮어썼다 복원한다. 러너 체크아웃은
-        # 일회성이고 permissions 도 read 이므로 유출 경로가 없다.
+        # 2026-09-21 부터 하네스는 **일회용 linked worktree** 를 만들어 그 안에서
+        # 돈다. 체크아웃된 트리는 건드리지 않는다 — 아래 복원 확인 단계가 그 사실을
+        # 매 런 검증한다.
+        #
+        # 워크트리는 저장소 **밖**(임시 디렉토리)에 만든다. 안에 만들면 이
+        # `git status --porcelain` 에 잡힌다. 러너 체크아웃은 일회성이고
+        # permissions 도 read 라 유출 경로는 없다.
         run: python scripts/tools/guard_falsifiability.py --check --shard ${{ matrix.shard }}/${{ strategy.job-total }}
 
       - name: Verify working tree restored
-        # 하네스가 finally 에서 복원하지 못하고 죽는 회귀를 잡는다. 대상은 두 가지:
-        # conftest.py 원본, 그리고 module-level 케이스가 리다이렉트를 깨뜨린
-        # 동안 atexit flush 가 기록해버린 _state/image_rejection_metrics.json.
-        # 로컬은 skip-worktree(dev_ignore_state.sh)가 후자를 가려서 CI 에서만
-        # 드러났다 — 이 단계가 실제로 그 회귀를 잡아낸 이력이 있다.
+        # 워크트리 격리 **이후에도 남겨 둔다.** 의미가 바뀌었을 뿐이다:
+        # 전에는 "복원이 됐는가", 지금은 "격리가 실제로 성립했는가" 다. 하네스가
+        # 어떤 이유로든 체크아웃된 트리를 건드리면 여기서 red 가 난다.
+        #
+        # 원래 잡던 두 가지(conftest.py 원본, module-level 케이스의 atexit flush 가
+        # 기록한 _state/image_rejection_metrics.json)는 이제 워크트리 쪽에서 나고
+        # 워크트리와 함께 사라진다. 로컬은 skip-worktree(dev_ignore_state.sh)가
+        # `_state` 를 가려서 CI 에서만 드러났고, 이 단계가 실제로 그 회귀를 잡아낸
+        # 이력이 있다 — 그 감시 자체는 유지할 가치가 있다.
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             echo "::error::하네스 실행 후 워킹 트리가 더럽다 — 복원 실패"
