@@ -18,7 +18,7 @@ yfinance==1.7.0
 matplotlib~=3.11.2
 Pillow>=12.3.0
 numpy~=2.4.6
-playwright~=1.62
+playwright~=1.63
 deep-translator==1.11.4
 googlenewsdecoder==0.1.7
 langdetect==1.0.9
