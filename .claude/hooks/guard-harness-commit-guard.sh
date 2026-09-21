@@ -20,9 +20,23 @@
 #
 # ## 왜 pre-commit 훅이 아닌가
 #
-# 이 클론의 `.git/hooks/` 에는 샘플만 있다 — `pre-commit install` 이 안 돼 있어
-# `.pre-commit-config.yaml` 훅은 로컬에서 돌지 않는다(2026-09-18 실측). 실제로
-# 발동하는 자리는 Claude 훅이고, `pre-commit-state-guard.sh` 가 같은 선례다.
+# 작성 시점(2026-09-18)에 이 클론의 `.git/hooks/` 에는 샘플만 있었다 —
+# `pre-commit install` 미실행이라 `.pre-commit-config.yaml` 훅이 로컬에서 돌지
+# 않았다. 실제로 발동하는 자리는 Claude 훅이고, `pre-commit-state-guard.sh` 가
+# 같은 선례다.
+#
+# 2026-09-20 갱신 — 그 전제는 이 클론에서 더 이상 참이 아니다. 설치를 막고 있던
+# 것은 "아무도 명령을 안 쳤다" 가 아니라 **중복 `core.hooksPath` 설정**이었다:
+#
+#   [ERROR] Cowardly refusing to install hooks with `core.hooksPath` set.
+#   local: core.hooksPath = <repo>/.git/hooks     # git 의 기본 경로와 동일
+#
+# 해제 후 설치했고 `pre-commit run --all-files` 가 10개 훅 전부 통과했다.
+#
+# **그래도 이 훅을 pre-commit 으로 옮기지 않는다.** 설치는 추적되지 않는
+# `.git/hooks/` 에 살아서 클론마다 다르다 — 즉 pre-commit 훅으로 옮기면 보장이
+# 강해지는 게 아니라 "이 클론에서만 참" 이 된다. 두 자리 모두 두는 것이
+# 맞고, 터미널 직접 커밋을 덮는 일은 별도 과제다(워크트리 격리 계획 1절 A행).
 #
 # ## stale 락을 막는 쪽이 더 중요하다
 #

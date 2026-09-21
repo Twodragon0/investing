@@ -10,6 +10,11 @@
 | 이 훅 | `ruff check --fix` 만 했다 |
 | 수동 | 사람이 기억해야 함 |
 
+2026-09-20 갱신: 이 클론에 `pre-commit install` 을 했다(막고 있던 건 중복
+`core.hooksPath` 설정이었다). 첫 행은 이 클론에서는 더 이상 참이 아니다.
+그래도 이 가드는 유효하다 — pre-commit 은 **커밋 시점**이고 이 훅은 **편집
+시점**이며, 설치는 추적되지 않는 `.git/hooks/` 에 살아 클론마다 다르다.
+
 `CLAUDE.md` 의 "format 누락이 흔한 CI red 원인" 이 정확히 이 구조다. CI 의
 `ruff format --check` (`code-quality.yml:83`)는 잡아 주지만 그때는 이미 red 고,
 포맷은 되돌릴 판단이 필요 없는 기계적 변환이라 red 로 알 이유가 없다.
@@ -187,8 +192,12 @@ def test_state_blocking_docs_name_the_real_mechanism(doc: str) -> None:
     """`_state/` 차단을 설명하는 문서는 **실제 주체**를 지목해야 한다.
 
     2026-09-19 조사: 5개 문서가 "pre-commit 훅이 차단한다" 고 적었는데 두 겹으로
-    틀렸다 — (a) 이 클론은 `pre-commit install` 이 안 돼 있고, (b) config 에
+    틀렸다 — (a) 당시 이 클론은 `pre-commit install` 이 안 돼 있었고, (b) config 에
     `_state/` 훅이 **없다**. 실제 주체는 Claude 훅이다.
+
+    (a) 는 2026-09-20 에 해소됐지만 **(b) 는 그대로다** — 설치하든 말든
+    `.pre-commit-config.yaml` 에 `_state/` 훅이 없으므로 pre-commit 은 여전히
+    `_state/` 를 막지 않는다. 이 가드가 지키는 건 (b) 쪽이다.
 
     안 도는 메커니즘을 근거로 안전을 주장하는 문서는, 읽는 사람이 자기 환경에서도
     막힐 것이라 믿게 만든다. 터미널 직접 커밋은 막히지 않는다.
@@ -214,9 +223,11 @@ _CODE_QUALITY = _REPO_ROOT / ".github" / "workflows" / "code-quality.yml"
 def test_ci_runs_every_pre_commit_hook() -> None:
     """`pre-commit run --all-files` 스텝이 CI 에 살아 있어야 한다.
 
-    2026-09-19 조사의 핵심 사실이다 — 이 클론은 `pre-commit install` 이 안 돼 있어
-    `.pre-commit-config.yaml` 의 10개 훅이 **로컬에서 하나도 돌지 않는다.** 그런데도
-    "검사 누락은 없다" 고 말할 수 있는 이유는 오직 이 한 줄 때문이다.
+    이 스텝은 10개 훅의 **클론에 의존하지 않는 유일한** 강제 지점이다. 로컬 설치는
+    추적되지 않는 `.git/hooks/` 에 살아서 기여자마다 다르다 — 조사 시점(2026-09-19)
+    에는 이 클론조차 미설치라 10개 훅이 로컬에서 하나도 돌지 않았다(2026-09-20 에
+    설치했지만 그건 이 클론만의 사실이다). 어느 쪽이든 "검사 누락은 없다" 를
+    저장소 전체에 대해 말할 수 있는 근거는 오직 이 한 줄이다.
 
     즉 이 스텝이 사라지면 `gitleaks`·`detect-private-key`·`ruff-format`·
     `check-added-large-files` 등이 **어디서도** 돌지 않게 된다. 그런데 그 상태는
@@ -233,10 +244,11 @@ def test_ci_runs_every_pre_commit_hook() -> None:
     hits = [r for r in runs if "pre-commit run" in r]
 
     assert hits, (
-        "`pre-commit run` 스텝이 code-quality.yml 에서 사라졌다. 이 저장소는 "
-        "`pre-commit install` 이 안 된 채로 운영되므로(2026-09-19 실측) 이 스텝이 "
-        "10개 훅 전부의 **유일한** 강제 지점이다. 없어지면 gitleaks·detect-private-key·"
-        "ruff-format 등이 어디서도 돌지 않는데, 워크플로우는 계속 green 이라 조용하다."
+        "`pre-commit run` 스텝이 code-quality.yml 에서 사라졌다. 로컬 `pre-commit "
+        "install` 여부는 추적되지 않는 `.git/hooks/` 에 달려 있어 클론마다 다르므로, "
+        "이 스텝이 10개 훅 전부의 **클론에 의존하지 않는 유일한** 강제 지점이다. "
+        "없어지면 gitleaks·detect-private-key·ruff-format 등이 설치 안 한 쪽에서는 "
+        "어디서도 돌지 않는데, 워크플로우는 계속 green 이라 조용하다."
     )
     assert any("--all-files" in r for r in hits), (
         f"`pre-commit run` 에 `--all-files` 가 없다: {hits}. 변경 파일만 보면 비교 기준 "

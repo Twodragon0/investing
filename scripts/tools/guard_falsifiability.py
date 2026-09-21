@@ -1035,9 +1035,10 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_harness_commit_guard.py::test_commit_is_blocked_while_the_harness_holds_the_lock",
     ),
     StaticCase(
-        # 로컬 포맷 계층이 이 훅 하나뿐이다 — pre-commit 의 `ruff-format` 은
-        # `pre-commit install` 미실행이라 안 돈다(2026-09-19 실측). 여기서 빠지면
-        # 포맷 누락을 CI red 로 알게 된다.
+        # 편집 시점의 포맷 계층은 이 훅 하나뿐이다. pre-commit 의 `ruff-format` 은
+        # 이 클론에도 설치됐지만(2026-09-20) `git commit` 시점에만 돌고, 다른
+        # 클론은 설치 여부가 제각각이다 — 설치는 추적되지 않는 `.git/hooks/` 에
+        # 산다. 여기서 빠지면 포맷 누락을 CI red 로 알게 된다.
         "auto-lint 훅에서 ruff format 제거 (로컬 포맷 계층 소멸)",
         ".claude/hooks/auto-lint-python.sh",
         '    ruff format "$FILE_PATH" 2>/dev/null\n',
@@ -1045,9 +1046,11 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_auto_lint_hook_guard.py::test_hook_formats_a_python_file",
     ),
     StaticCase(
-        # 이 한 줄이 pre-commit 훅 10개 전부의 **유일한** 강제 지점이다 — 로컬은
-        # `pre-commit install` 미실행이다(2026-09-19 실측). 없어지면 gitleaks·
-        # detect-private-key·ruff-format 등이 어디서도 안 도는데 워크플로우는 green 이다.
+        # 이 한 줄이 pre-commit 훅 10개 전부의 **클론에 의존하지 않는 유일한**
+        # 강제 지점이다. 로컬 설치는 추적되지 않는 `.git/hooks/` 에 사니 기여자마다
+        # 다르다(이 클론은 2026-09-20 에 설치했지만 그건 이 클론만의 사실이다).
+        # 없어지면 gitleaks·detect-private-key·ruff-format 등이 설치 안 한 쪽에서는
+        # 어디서도 안 도는데 워크플로우는 계속 green 이다.
         "CI 의 pre-commit 실행 제거 (훅 10개가 어디서도 안 돌게 됨)",
         ".github/workflows/code-quality.yml",
         "        run: pre-commit run --all-files --show-diff-on-failure",
