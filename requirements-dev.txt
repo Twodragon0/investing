@@ -30,7 +30,7 @@ pre-commit>=4.6.2
 # 이라 **rev 가 없다**. 오히려 `tests/test_ruff_version_pin_sync.py:253-261` 이
 # rev 부재를 강제한다 — 주석이 테스트와 정반대였다. pre-commit 훅은 여기 핀된
 # ruff 를 그대로 쓰므로 갱신 지점은 **두 곳**(여기 / code-quality.yml)이다.
-ruff==0.16.7
+ruff==0.16.8
 
 # Type check — CI(code-quality.yml)가 `python -m basedpyright`(include=["scripts"])를
 # 실행한다. .pre-commit-config.yaml 의 local basedpyright 훅이 로컬 커밋 단계에서
