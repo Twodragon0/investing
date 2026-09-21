@@ -20,7 +20,7 @@ pytest-timeout>=2.4.0
 # CI 가 `pre-commit run --all-files`(code-quality.yml)로 전부 강제하므로 검사가
 # 누락되지는 않는다 — 다만 auto-fix 훅(ruff/format/EOF/trailing-whitespace)이
 # 로컬에서 안 돌면 그 수정이 CI 에서 **job red** 로 돌아온다.
-pre-commit>=4.0.0
+pre-commit>=4.6.2
 
 # Lint/format — CI(code-quality.yml)와 로컬이 동일 버전을 써야 format 규칙
 # 불일치로 인한 spurious CI red를 막을 수 있음.
