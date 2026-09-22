@@ -39,6 +39,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -109,6 +110,60 @@ def test_assert_running_in_worktree_allows_a_worktree(monkeypatch: pytest.Monkey
     monkeypatch.setattr(gf, "is_linked_worktree", lambda _root: True)
 
     gf._assert_running_in_worktree()  # 예외가 없어야 한다
+
+
+def test_the_barrier_is_actually_called_before_mutating(tmp_path: Path) -> None:
+    """**함수가 옳다는 것과 그 함수를 부른다는 것은 다르다.**
+
+    위 두 테스트는 `_assert_running_in_worktree()` 를 **직접** 부른다. 그래서
+    `run_all()` 안의 **호출부를 지우면 둘 다 green 이다** — 방벽이 사라졌는데
+    아무도 모른다. 2026-09-22 에 실제로 그 상태였다(등록된 StaticCase 0건).
+
+    ## 왜 합성 루트인가
+
+    첫 설계는 `_REPO_ROOT` 에서 `--in-worktree` 를 실행했다. 그건 **주변 트리에
+    의존한다** — 하네스는 워크트리 안에서 도므로 방벽이 통과해 rc=0 이 되고,
+    하네스가 CONTROL-FAIL 을 냈다(2026-09-22 실측). 검증이 어디서 도느냐에 따라
+    뒤집히는 테스트는 가드가 아니다.
+
+    그래서 **git 저장소가 아닌 임시 디렉토리**에 도구만 복사해 거기서 돌린다.
+    `REPO_ROOT` 는 스크립트 위치에서 파생되므로 그 임시 루트가 되고,
+    `is_linked_worktree()` 는 확정적으로 False 다.
+
+    ## 판별
+
+    | | rc | stderr |
+    |---|---|---|
+    | 정상(방벽 있음) | ≠0 | 방벽 메시지 **있음** |
+    | 변형(호출부 제거) | ≠0 (conftest 없음) | 방벽 메시지 **없음** |
+
+    둘 다 죽으므로 **rc 만 보면 판별이 안 된다.** 메시지까지 봐야 한다.
+    """
+    root = tmp_path / "synthetic"
+    (root / "scripts" / "tools").mkdir(parents=True)
+    shutil.copy2(_TOOL, root / "scripts" / "tools" / _TOOL.name)
+    # 모듈이 **임포트 시점에** 읽는 것. 없으면 방벽에 닿기도 전에 죽어서
+    # 정상본과 변형이 같은 결과를 낸다(2026-09-22 에 실제로 그렇게 실패했다).
+    shutil.copy2(_REPO_ROOT / "pyproject.toml", root / "pyproject.toml")
+
+    proc = subprocess.run(
+        [sys.executable, str(root / "scripts" / "tools" / _TOOL.name), "--in-worktree", "--json", "--shard", "99/99"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        timeout=300,
+        check=False,
+    )
+
+    assert proc.returncode != 0, (
+        "git 저장소가 아닌 곳에서 `--in-worktree` 로 불렀는데 그냥 성공했다.\n"
+        f"--- stdout ---\n{proc.stdout[:800]}\n--- stderr ---\n{proc.stderr[-800:]}"
+    )
+    assert "linked worktree 가 아니다" in proc.stderr, (
+        "죽긴 했는데 **방벽 때문이 아니다.** `run_all()` 의 "
+        "`_assert_running_in_worktree()` 호출부가 사라지면 하네스가 사람의 "
+        f"워킹트리를 제자리에서 변형하기 시작한다.\n--- stderr ---\n{proc.stderr[-2000:]}"
+    )
 
 
 # ---------------------------------------------------------------------------
