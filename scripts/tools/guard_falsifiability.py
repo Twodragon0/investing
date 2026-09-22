@@ -1131,6 +1131,17 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "\n        pass",
         "tests/test_guard_falsifiability_worktree.py::test_there_is_no_fallback_to_the_main_tree",
     ),
+    StaticCase(
+        # 방벽 **호출부**를 지운다. 함수 자체를 직접 부르는 기존 두 테스트는
+        # 이 변형에 전부 green 이다 — 즉 방벽이 사라져도 아무도 모른다.
+        # 2026-09-22 에 실제로 그 상태였다(등록 0건). 락·훅을 걷는 논의의 전제가
+        # "호출부가 고정돼 있다" 이므로, 그 전제부터 고정한다.
+        "워크트리 방벽 호출부 제거 (메인 트리 변형이 열림)",
+        "scripts/tools/guard_falsifiability.py",
+        "\n    _assert_running_in_worktree()",
+        "\n    pass  # 방벽 제거",
+        "tests/test_guard_falsifiability_worktree.py::test_the_barrier_is_actually_called_before_mutating",
+    ),
 )
 
 
