@@ -85,7 +85,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxORjEwUE0zbGN2R29XdndoZkhZekU4UGpaTS1DbFo3YmNyeHNNMHFJSl9yRVhIV0xvYVdtMUdQWTFMZUhBeE5TSkdpTTNyWEdhcjFnZGs2d3dKeWpzQlM1UXNDMm5YMWdKVzFsUDVZcDdoVGFabFRKcUo2TURfS1ZWWDRDWmRuVWtF0gGcAUFVX3lxTE1PRHplVS1PRVJYQzFVTTFKUmc5NU1VaVhFMU4yOHllUGRZeHRkc0UtYTdEUWdKTWthNERVc0pSYTAxcGNwTG1OeXJkZ3RzdnJvX1dxZVl2NDhUNGxVX0FTZDNnQ21FSXE2ZTBEUExWRk00QlVkNUtiU1hzSnFHT1gtYmdRdW9ieTc5Mjd1bnRTeHIwWXg4Zk93SGpmcQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘반도체 효과’… 올해 SK그룹 시총 ‘최대 점프’ - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">‘반도체 효과’… 올해 SK그룹 시총 ‘최대 점프’ - 조선비즈 Chosunbiz</p>
+<p class="news-desc">반도체 효과 올해 SK그룹 시총 최대 점프 국내 증시 시총 6000조원 삼성·한화 뒤이어 1조 클럽 상장사 사상 첫 400곳 돌파</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

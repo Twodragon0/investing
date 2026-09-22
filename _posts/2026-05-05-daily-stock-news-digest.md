@@ -73,7 +73,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1MdFNtNmZsbl8zV0RyNGM5dEE4ZnloZmJsRUVKdFNJd1M2MURfbkVESVhRNkFvVTBDbHduRVowcElsQTltUFdicGpSOFNzLWxKNTNkNmowNC1NVnhlemhTSm4tUFpONUJMdW1xeQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 주식 시황] 코스피 5.12% 급등 6936.99 마감…'칠천피' 63포인트 앞둬 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 주식 시황] 코스피 5.12% 급등 6936.99 마감…'칠천피' 63포인트 앞둬 데일리비즈온</p>
+<p class="news-desc">[데일리비즈온 박노충 기자] 5월 4일 한국 증시가 큰 폭으로 상승하며 역대 최고치를 다시 썼다. 코스피지수는 전 거래일보다 338.12포인트(5.12%) 급등한</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -128,7 +128,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA3V25uVVZKRGh5MGNGR202TVNQcTFVbVN4X0JmVVpiOUY4RHl1NmxRTDNYYTgwUEZneHllTGlxdFhIa2VoX05TMzZRbnRPOHpVcUlOajdjUmF1MmViWlI2WmM0aU5CNml5?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이달의 주식부호] 코스피 반등에 주식부호 보유주식 20% 증가…반도체주 강세 - CEO스코어데일리</a>
-<p class="news-desc">[이달의 주식부호] 코스피 반등에 주식부호 보유주식 20% 증가…반도체주 강세 CEO스코어데일리</p>
+<p class="news-desc">2026년 3월 31일~2026년 4월 30일 기준 국내 주식부호 상위 10위 주식가치 증감. &lt;표=CEO스코어&gt;미국–이란 전쟁 종전 기대감에 코스피 지수가 반등하며 6...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1FdFB4MGRfckFtZ3FIMEZtN3FTVFl5ZGRXeTdTdTZxR0hGZEd4VE9hY2tCa0Z6SVRfX21wdVZwYjREbzB4U2o5aVh4R2R2OVdpb3JJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 최고치와 인상 시그널에 하락…원·달러 환율, 보름 만에 1460원대</a>
-<p class="news-desc">코스피 최고치와 인상 시그널에 하락…원·달러 환율, 보름 만에 1460원대 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : [이데일리 유준하 기자] 미국이 ‘프로젝트 프리덤’을 가동한 가운데 코스피 지수가 사상 최고치를 경신하면서 원·달러 환율이 보름 만에 1460원대에서 거래를 마쳤다. 시장에선 전쟁 협상 교착이 긴장 고조로 바뀌지 않을 경우 1450원대 진입도 가능하다</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

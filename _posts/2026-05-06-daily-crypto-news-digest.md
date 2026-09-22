@@ -75,7 +75,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TQk1zOXBoVUZHajdyVXdncjlSSGE0Q1NHd3Q2NDJSMGQzMWJXVmFwdG5RX3N5WnlMa1dfMDRKMEZuM0RWQlVuYzdRQ1RwSlJwS2FsTTZR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 스테이블코인 ‘이자 지급’ 합의…비트코인 8만달러 넘었다</a>
-<p class="news-desc">美 스테이블코인 ‘이자 지급’ 합의…비트코인 8만달러 넘었다 중앙일보</p>
+<p class="news-desc">미국 의회에서 스테이블코인 규제 법안의 최대 쟁점이었던 ‘이자 지급’ 문제에 대해 초당적 합의가 도출되자 암호화폐 시장이 환호하고 있다. 톰 틸리스 미 공화당 상원의원과 앤절라 올소브룩스 미 민주당 상원의원은 지난 1일(현지시간) 디지털 자산 규제안인 ‘클래리티 법안(Clarity Act)’의 핵심 쟁점에 대한 초당적 합의안을 마련했다. 이번 절충안은 단순 보유 수익과 실제 활동에 따른 보상을 구분해, 후자를 제도권 안에서 인정하기로 했다는 점에 의의가 있다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBrVW14WUdRMUx5WFJnNlBINi1LV3pUbHktS1FxNXdrdWw3cXlyazhiT2EwR09FU2lDUDItOE0zeGJUc3JKUWhlaHRlMlBxRjFSYUNXYmtMblgzMGppU0FKbkxkdFB4bHFBaWpVeG1mZkrSAXRBVV95cUxQMi1GX3l4TUUwMHNHYk9Ra2kxcE9NdEpmdGl4N0M3ZVZOdFk3SXBfcWZqR1g1Q0lxcEJqdUxxQUxXb01XM1ZBbG9GWGZ4cENaRU9WanRTOUVjc0RjOXFGdTNpX1FGU2d1T29USFl3WWtqeUNQVA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 8만달러 재돌파에…3억달러 넘는 숏포지션 청산 발생</a>
-<p class="news-desc">비트코인 8만달러 재돌파에…3억달러 넘는 숏포지션 청산 발생 연합인포맥스</p>
+<p class="news-desc">비트코인이 8만 달러선을 재차 돌파하면서 암호화폐 시장에서 3억달러가 넘는 숏(매도) 포지션 청산이 일어났다.5일 코인데스크와 연합인포맥스 크립토종합(화면번호 2550)에 따르면 비트코인은 간밤 8만594달러까지 상승하며 지난 1월 말 이후 최고치를 기록했다.이후 일부 차익실현 매물로 상승 폭을 일부 반납했지만, 강한 상승 흐름 속에서 약세에 베팅한 숏 투자자들이 대거 손실을 입었다.가상자산 데이터 제공업체 코인글래스에 따르면 최근 24시간 동안 약 3억7천만 달러 규모의 포지션이 청산됐으며, 이 가운데 약 82%가 숏 포지션이었</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNV1pOSklBVV9YbjctSHpGMzkya3RDM2N4dVFZS0N4dnZ4SWVkVGd5VHU0eVVsaWVzRFZhaGJ4ZFJYcmNaaU0yQjBHRnNyN000NDh4alFULVo1MU5zTHZNSGMzZTlsMHhUbW1NVUxrNUcydW1va3BTdnhMVEpyRjZjcVBYaXJ6dXZQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인베이스·서클, ‘클래리티 법’ 합의안에 폭등… 비트코인 8만 달러 돌파</a>
-<p class="news-desc">코인베이스·서클, ‘클래리티 법’ 합의안에 폭등… 비트코인 8만 달러 돌파 글로벌이코노믹</p>
+<p class="news-desc">미국 암호화폐 업계의 양대 산맥인 코인베이스와 서클이 미 의회의 규제 합의 소식에 폭등하며 시장의 주인공으로 떠올랐다. 지루한 공방을 이어가던 스테이블코인 규제안이 마침내 돌파구를 찾으면서, 비트코인 가격도 한때 8만 달러를 돌파하는 등 가상자산 시장 전반에 강한 훈풍이 불고 있다.'클</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9PNDh2X0FtWDdlMEdVNmtuZlJrV1JZdTEtUlhvbDdoalFnLV81SUhmd1dValM4VUVCZ01RaDJxdThkdzRKY194aDdRYlN5RzRDdVZaYXJ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 1월 이후 첫 8만달러 돌파…클래리티 통과 기대 반영 - 지디넷코리아</a>
-<p class="news-desc">비트코인, 1월 이후 첫 8만달러 돌파…클래리티 통과 기대 반영 지디넷코리아</p>
+<p class="news-desc">비트코인이 올해 1월 말 이후 처음으로 8만 달러를 돌파했다.5일 코인마켓캡에 따르면 비트코인은 전일 대비 0.96% 상승한 8만 446달러에 거래되고 있다.이번 상승에 대해 시장 일각에서는 디지털자산 포괄 규제 법안인 ‘클래리티(Clarity) 법안’ 통과가 가까워지고 있다는 신호로 해석...</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

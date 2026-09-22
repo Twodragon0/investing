@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-07 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5HX3ZOZC1HMlUzRXl6Mk1PM3JPTEJlSklucThiU1U5WmhmWF9veVVrMXlraDFNbGQwLUtMaUhzemlJOS1XcnRWRk9FRTlVNkE?oc=5">연이은 해킹 사태로 힘 빠진 알트코인…"리스크 관리가 중요한 때"</a> <span class="p0-desc">연이은 해킹 사태로 힘 빠진 알트코인…"리스크 관리가 중요한 때" v.daum.net</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5HX3ZOZC1HMlUzRXl6Mk1PM3JPTEJlSklucThiU1U5WmhmWF9veVVrMXlraDFNbGQwLUtMaUhzemlJOS1XcnRWRk9FRTlVNkE?oc=5">연이은 해킹 사태로 힘 빠진 알트코인…"리스크 관리가 중요한 때"</a> <span class="p0-desc">중동 정세 불안이 이어지면서 알트코인 시장에선 투자자들의 관망세가 지속되고 있다. 암호화폐 시장의 비트코인 쏠림 현상도 심화하는 분위기임을 고려하면 당분간 알트코인 투자에 신중해야 한다는 의견이 나온다. 6일 암호화폐 거래소 업비트에 따르면 이더리움은 최근 1주일간 340만원 안팎에서 거래되고 있다. 지난 2월 400만원 밑으로 떨어진 뒤 좀처럼 350만</span></li>
 <li><a href="https://www.coindesk.com/business/2026/05/06/nyse-tokenization-partners-warn-synthetic-stock-tokens-could-mislead-retail-traders">NYSE 토큰화 파트너는 합성 주식 토큰이 소매 거래자를 오도할 수 있다고 경고합니다.</a> <span class="p0-desc">역외 합성 토큰은 기본 자산을 대표할 수 없고, 승인 없이 회사 이름을 사용할 수 없으며, 규제 차익거래를 이용할 수 없습니다.</span></li>
 <li><a href="https://cointelegraph.com/news/coinbase-sued-for-withholding-frozen-crypto-linked-to-55m-defi-saver-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">코인베이스는 5,500만 달러 규모의 암호화폐 도난으로 인해 자금이 동결된 것에 대해 소송을 제기했습니다.</a> <span class="p0-desc">원고는 코인베이스가 2024년 DAI 피싱 도난으로 인한 추적 가능한 자산을 동결했지만 법원 명령 없이는 반환을 거부했다고 말했습니다.</span></li>
 </ul>
@@ -100,7 +100,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xU3NObWo1QVpFY3plNlF5R0JvdUVIelc4RE1RZHpkWU1xR2RScER3ZE1sa2treHM4cTRqMldaT3hVcDlmalV0ZkMweWMtUERYRGE3Sl9ramViZ9IBVEFVX3lxTE5XLThJeW1DSkFCVEt6T1hYTi1JSHIxVjdBSXd6M2R5UUVLLVl0TzlidXN2VXZxblZJb0w0NVl4clNXVDM2NUJJZ3hNOFhaaHYzck5FQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">기관 자금 유입에 반등하는 비트코인…중동 리스크가 변수</a>
-<p class="news-desc">기관 자금 유입에 반등하는 비트코인…중동 리스크가 변수 한국경제</p>
+<p class="news-desc">기관 자금 유입에 반등하는 비트코인…중동 리스크가 변수, 종전 기대로 1억1000만원대 안착 블랙록·스트래티지 공격적 매수 美 투자은행 "강세장 이어질 것" 핵 협상 난항으로 관망세 전망도</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9BRXBOMl9fN1l2WGpXeVltSU1yeVNvTkFKTDQ3X1otYTZkeWRkdHg1MkJsVDcwVmEybnh3dXo3QVlpQ2dsWWJhaDAzS05lNXZjNVI3U2dCT1ZWazZRbzFnX19tVjRsUk5hMTNTcGhGNk9PRTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]5월 6일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]5월 6일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">6일 오후 암호화폐 시총 상위종목은 대체로 강세였다. 비트코인은 0.92% 올라 1위를 지켰고, 이더리움은 소폭 하락했다. 솔라나·도지코인·하이퍼리퀴드와 지캐시, 톤코인이 두드러진 상승세를 보였다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -195,7 +195,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOci1NU0xzZWhmam5xVVlBQ2FoTDB1MDRJdF9BTF81YnlNMWhQdFh0bGVGNl9WSzRKMzJqTHlTQmFpMGplaGRHVVJWb0taaHAtQVd3RVFiZkI4UU85OVZQZndIWHF6cnZXdGQ3cGNEenNpVnhvLUpvRUlBa3RUNUhpdHhIWE42dm9W?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 81만 개 들고 버티더니…스트래티지, 1분기 125억4000만 달러 순손실</a>
-<p class="news-desc">비트코인 81만 개 들고 버티더니…스트래티지, 1분기 125억4000만 달러 순손실 글로벌이코노믹</p>
+<p class="news-desc">비트코인을 가장 많이 보유한 기업인 스트래티지(Strategy)가 암호화폐 가격 하락의 여파로 1분기 손실이 큰 폭으로 확대됐다.5일(현지시) 로이터 통신 등에 따르면, 스트래티지는 지난 3월 말로 끝나는 1분기 동안 125억4000만 달러(주당 38.25달러)의 순손실을 기록했다. 이</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -207,7 +207,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE56MEdMcHlOakpzZkpDand5X0ZTRUREaWF0RnJoSW8zLWp4V3AxaTNzWHJWWjkxVUVOT3BvTmx6UWRiejM1dWt6WkZTV1dxeHZFODBRaTFZUnpITWMwVGpTWGlkd3lVZkp1UjdBQjZ0RnUxSWs?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"안판다더니…" 스트래티지, 비트코인 '무매도' 기조 수정</a>
-<p class="news-desc">"안판다더니…" 스트래티지, 비트코인 '무매도' 기조 수정 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 비트코인 투자 기업 스트래티지가 비트코인 보유 전략을 바꿨다. 주당 비트코인 가치를 높이기 위해 필요하면 비트코인을 매도하겠다는 것이다. 6일(현지시간) 경제매체 CNBC에 따르면 이는 마이클 세일러 회장 겸 창업자가 내세워 온 '절대 팔지 않는다'는 기존 기조에서 한발 물러선 조치다.스트래티지는 최근 실적 발표에서 비트코인을 단순히 쌓아두기보다 주당 비트코인 가치 극대화에 맞춰 재무상태표를 더 적극적으로 운용하겠다고 밝혔다. 비트코인 총보유량 확대보다 주식 1주당 비트코인 노출도를 높이는 데 초점을 맞</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

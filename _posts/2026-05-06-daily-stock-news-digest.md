@@ -79,7 +79,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1MdFNtNmZsbl8zV0RyNGM5dEE4ZnloZmJsRUVKdFNJd1M2MURfbkVESVhRNkFvVTBDbHduRVowcElsQTltUFdicGpSOFNzLWxKNTNkNmowNC1NVnhlemhTSm4tUFpONUJMdW1xeQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 주식 시황] 코스피 5.12% 급등 6936.99 마감…'칠천피' 63포인트 앞둬 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 주식 시황] 코스피 5.12% 급등 6936.99 마감…'칠천피' 63포인트 앞둬 데일리비즈온</p>
+<p class="news-desc">[데일리비즈온 박노충 기자] 5월 4일 한국 증시가 큰 폭으로 상승하며 역대 최고치를 다시 썼다. 코스피지수는 전 거래일보다 338.12포인트(5.12%) 급등한</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -200,7 +200,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1FdFB4MGRfckFtZ3FIMEZtN3FTVFl5ZGRXeTdTdTZxR0hGZEd4VE9hY2tCa0Z6SVRfX21wdVZwYjREbzB4U2o5aVh4R2R2OVdpb3JJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 최고치와 인상 시그널에 하락…원·달러 환율, 보름 만에 1460원대</a>
-<p class="news-desc">코스피 최고치와 인상 시그널에 하락…원·달러 환율, 보름 만에 1460원대 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : [이데일리 유준하 기자] 미국이 ‘프로젝트 프리덤’을 가동한 가운데 코스피 지수가 사상 최고치를 경신하면서 원·달러 환율이 보름 만에 1460원대에서 거래를 마쳤다. 시장에선 전쟁 협상 교착이 긴장 고조로 바뀌지 않을 경우 1450원대 진입도 가능하다</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

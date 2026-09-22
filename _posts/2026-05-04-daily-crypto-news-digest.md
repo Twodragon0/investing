@@ -99,7 +99,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5jbWQxQnE2X1JkQVdReWRCa1V0ZXAzN1NjTFVzX0hQa2p6SnZhRks3NVpBeDlpaXpTOU9MLWVpOHN1TFhnbkZtMmNVR3lSdTA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“비트코인, 2030년까지 10배 오른다”…‘돈나무 언니’의 대폭등 전망, 왜?</a>
-<p class="news-desc">“비트코인, 2030년까지 10배 오른다”…‘돈나무 언니’의 대폭등 전망, 왜? v.daum.net</p>
+<p class="news-desc">[헤럴드경제=장연주 기자] 일명 ‘돈나무 언니’로 불리는 캐시 우드(Cathie Wood) 아크 인베스트(ARK Invest) 최고경영자(CEO)가 비트코인의 ‘대폭등’ 전망을 내놓아 눈길을 끈다. 오랜 기간 비트코인에 대해 낙관적인 입장을 유지해왔던 그는 2030년까지 비트코인이 현재 가격의 10배를 뛰어 넘을 것이라고 내다봤다. 아크 인베스트는 1일</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -209,7 +209,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA2a1dLSGUyc2dueXlUOU1vZ3ZLYlEwZzZRS2J1TDRWTHF4RU1nVGNFUktMRzIzQWdpcm5TXzBQZk92emUwWWR3Mk04WmNlZHlQWmlR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인베이스·글래스노드, 6월 말 암호화폐 반등 전망…비트코인은 '낙관' 구간</a>
-<p class="news-desc">코인베이스·글래스노드, 6월 말 암호화폐 반등 전망…비트코인은 '낙관' 구간 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 [사진: 셔터스톡][디지털투데이 AI리포터] 코인베이스와 글래스노드는 많은 암호화폐가 단기 바닥을 지난 뒤 5월 중순부터 6월 말까지 회복할 가능성이 있다고 전망했다.2일(현지시간) 블록체인 매체 코인포스트에 따르면 두 회사는 2026년 2분</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -292,7 +292,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE96eVR0N2NLN3U2NnRKNHRfVnFhVGpqVHh6MmhKeHpxMGVFYmpFWk41VkY0cy1EWVRnSmZNcnJXR1FFTjBRdi1COGFYM0E0NE9BZ2JvSmVCcldRVjdWZ1VTbNIBZkFVX3lxTE1OMmVNSmZlU19YZnFmSWFKY0J3ZG5VOWdwd2l2aEJKRHZmblp3aW5BNDkwUVRNdHNzRG1ZcjdZdTJHS3RuU0JadXhGMTZMYnJ3TWk4WmJMMEEtVzY2eGFHdzFOX09jQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인, 7만9000달러 저항 재확인…트럼프 발언에 상승 제동 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">비트코인이 7만9000달러 돌파에 다시 실패하며 7만8000달러선으로 밀렸고, 트럼프 대통령의 부정적 발언이 투자심리를 눌렀다고 전했다.&lt;br /&gt; 시장에서는 비트코인 저항 재확인과 함께 리플의 방향성 돌파 가능성이 향후 암호화폐 시장의 분기점으로 주목된다고 밝혔다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

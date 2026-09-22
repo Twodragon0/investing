@@ -251,7 +251,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBJOE0yOGFqYnM0RlpJaUZDVWx1OElBNFo4azlPMkdoTVFvTkNLUWhMdG9WNU1WYXhrNTNYaTlrZXpRNW5OVWUxaFFfeF9MZGVuMkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미 암호화폐 법안 타결·비트코인 8만 달러 돌파, 코인베이스 주목받아</a>
-<p class="news-desc">미 암호화폐 법안 타결·비트코인 8만 달러 돌파, 코인베이스 주목받아 매일경제</p>
+<p class="news-desc">미 암호화폐 규제 법안 타결로 정책 불확실성 해소 비트코인 8만 달러 돌파로 시장 신뢰 강화 2027년 EPS 89% 증가 전망으로 수익성 개선 기대</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -263,7 +263,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5sYXdIcy16N1UtdDVHRTd2TXhKcFgtaV9GYUxKb0JuakREV29Sb0RLaHhZRXFYdU5CU1ZlaElJRkdfaUxuNHZ6MzZCNUFRbU5ZVUFYbkdockp4UdIBVEFVX3lxTE0xbG1HZ0ExUlZIRUx0ZlZMNlBORkh6eWM3bHNrSEo4TkROSlZjNG93OVplb2M0LUt3eUQ5SVJBUWVxLXdTOFNjNm9JeWlZSUJ3bXd6dg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 암호화폐 구조 법안 처리 속도</a>
-<p class="news-desc">美 암호화폐 구조 법안 처리 속도 한국경제</p>
+<p class="news-desc">美 암호화폐 구조 법안 처리 속도, 크립토 나우 5월 '클래리티법' 표결 전망</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -294,7 +294,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBJODZHeFZhNEY3dnFDeDRpek83X1Rwbm1lT3pieHo4My1HZjRWQXgxVFV0c1JGbml2MkZTdWRZb3BNTUU5dE9sYlJCSXlIVzhMaFB3Szhmcm_SAV5BVV95cUxNY3VaMXFqaDdzWVMyMTFOZUpPcmxjNXJjajVIbWFnTGd2dHNrRmlsbDhiT1lEVEhYbXRTcmpJN3lMQVFtWGNBV0pDYkxPMEdtZlNhMXBSWnoxTENsS1Bn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오후 시세브리핑] 암호화폐 시장 상승세… 비트코인 80,160달러, 이더리움 2,374달러 - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">비트코인과 이더리움이 24시간 기준 각각 2%대, 3%대 상승하며 암호화폐 시장이 전반적인 강세를 나타냈다. XRP, BNB, 솔라나도 동반 상승했고, 전체 거래량과 파생상품 거래도 확대되며 투자 심리가 개선되는 흐름을 보였다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -79,7 +79,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1fZmVQU056dlM0WGZRMDZtMk5LUTFpdmlEZVhpeVZHX3JOZmVjVFdrX253ckxsLVFlaVdkai02Zng2RVJOeXpQUHZDdnVMai1nSTJVZ05faHRDdFNramd0QXFRV3dQZGRmWUtJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 =6일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 156.02포인트 오른 7093.01에 시작했으며, 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -91,7 +91,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5UMGE2R0dNeUVuUmRBZFMzR3J0cFhhbnV6NHJjcXBJNTR4VjlGb3BiMEJIbU1sZGItcUU4bEVwcm9SNUhuRHJlbUZWVVBwMkRaRzAtd3pmV0NyQk9MQmNiU3RrZ08zajZQaTkw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 마감.코스닥 내림세 마무리 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 마감.코스닥 내림세 마무리 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 6일 코스피와 코스닥지수가 각각 오름세와 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 447.57포인트 오른 7384.56에 마감</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
