@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-14 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQdEdqR2NCcDBycUxybG8wQ1BydkJZWGstQmh3eC0wU09xOVNnWGN1blZDTWRlSFNnVTV1THRnelBTTFVocEVtbkwwM2NmeUNuTC1PNk1ZM0hmSTIxY2ZWSEJmV1hsSmNXVzlFUmppR25mY1dDTzFaV2NZMEFQX0E2S2V1bXBwTDRqLXBxQ3prNnZjbkI3VVRlb1Q1amZVUQ?oc=5">'Jewelbug' APT, 국가 스파이 활동과 암호화폐 절도의 균형 유지 - Dark Reading</a> <span class="p0-desc">연구원들은 고용된 해커가 동일한 웹 패널에서 사이버 스파이 활동과 재정적 동기를 지닌 강도 행위를 수행하는 것을 발견했습니다.</span></li><li><a href="https://decrypt.co/375501/inner-thoughts-every-major-ai-model-exposed-exploit">대규모 공격에 노출된 모든 주요 AI 모델의 '내부 생각'</a> <span class="p0-desc">연구원들은 모든 주요 AI 공급자가 단일 글로벌 키로 추론 토큰을 암호화하고 이를 활용하여 공개 로그에서 315,320개의 숨겨진 사고 블록을 Decrypt하고 그 과정에서 비밀번.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 📊 매크로/금리
-- 2026-08-14 암호화폐 핵심 뉴스: 러시아는 소매 암호화폐 거래를 비트코인, 이더리움 및 USDT로 제한합니다.. 총 100건 분석, 핵심 테마는 비트코인, 가격/시장, 매크로/금리입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

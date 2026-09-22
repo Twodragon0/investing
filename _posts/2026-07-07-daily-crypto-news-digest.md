@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-07 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.coindesk.com/web3/2026/07/06/defi-protocol-summer-fi-halts-lazy-summer-vaults-after-usd6-million-exploit">디파이 프로토콜 Summer.fi는 600만 달러 악용 후 Lazy Summer 저장소를 중단합니다.</a> <span class="p0-desc">해당 프로토콜의 SUMR 토큰은 사건 이후 18% 이상 하락했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **89건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-07-07 암호화폐 핵심 뉴스: 거의 백만 명의 투자자가 트럼프 암호화폐 코인에서 총 38억 달러의 손실을 입었습니다.. 총 89건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
