@@ -1479,6 +1479,7 @@ def git_dir_for(root: Path) -> Path:
     return root / ".git"
 
 
+#: 설계 배경·실측·사고 기록: docs/harness-worktree-isolation.md
 #: 하네스 전용 워크트리 접두사. 에이전트 워크트리(`agent-<hex>`)와 겹치면 안 된다.
 _WORKTREE_PREFIX = "harness-falsifiability-"
 
