@@ -88,15 +88,19 @@ oh-my-claudecode 플러그인이 관리. `omc update` 시 덮어씌워지므로 
 | `memory-guard.sh` | PreToolUse (Agent) | 시스템 메모리 10% 미만 시 경고 (M1/M2 16GB 보호) |
 | `pre-commit-state-guard.sh` | PreToolUse (Bash) | `_state/` 파일이 staged 면 `git commit` 차단 |
 | `component-counts-drift-guard.sh` | PreToolUse (Bash) | `docs/component-counts.md` 드리프트 시 `git push` 차단 |
-| `guard-harness-commit-guard.sh` | PreToolUse (Bash) | falsifiability 하네스 실행 중 `git commit` 차단 |
 
-Bash 훅 셋은 `git` 하위명령을 **명령 위치**에서만 인정한다 — 줄/세그먼트 시작이거나
+Bash 훅 둘은 `git` 하위명령을 **명령 위치**에서만 인정한다 — 줄/세그먼트 시작이거나
 `;`/`&&`/`||`/`|` 뒤일 때. 부분문자열로 보면 문자열 안의 언급까지 걸려서
 `git commit -m "docs: git push 훅 추가"` 나 `git log --grep="git commit"` 이 막힌다
 (2026-08-12 실측). 반대로 `git -C /repo commit` 처럼 리터럴이 없는 형태는 **놓친다**.
-양방향은 `tests/test_state_guard_command_matching.py`,
-`tests/test_component_counts_drift_hook_guard.py`,
-`tests/test_harness_commit_guard.py` 가 실제 스크립트를 돌려 강제한다.
+양방향은 `tests/test_state_guard_command_matching.py` 와
+`tests/test_component_counts_drift_hook_guard.py` 가 실제 스크립트를 돌려 강제한다.
+
+> `guard-harness-commit-guard.sh`(falsifiability 하네스 실행 중 커밋 차단)는
+> **2026-09-22 에 걷었다.** 하네스가 일회용 워크트리에서 돌게 되면서 메인 워킹트리에
+> 쓰는 경로가 없어져, 막으려던 사고가 구조적으로 불가능해졌다. 대신 지키는 것은
+> `guard_falsifiability._assert_running_in_worktree()` 와 그 **호출부**를 고정한
+> StaticCase 다(`tests/test_guard_falsifiability_worktree.py`).
 
 `component-counts-drift-guard.sh` 는 CI 의
 `tests/test_component_counts.py::test_generated_doc_in_sync` 앞단의 빠른 피드백이다.

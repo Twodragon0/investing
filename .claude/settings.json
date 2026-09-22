@@ -58,10 +58,6 @@
           {
             "type": "command",
             "command": "bash .claude/hooks/component-counts-drift-guard.sh"
-          },
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/guard-harness-commit-guard.sh"
           }
         ]
       }
