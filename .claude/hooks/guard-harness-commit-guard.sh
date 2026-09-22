@@ -3,9 +3,15 @@
 #
 # ## 왜 있나
 #
-# `scripts/tools/guard_falsifiability.py` 는 워킹트리의 워크플로우·스크립트를
-# **제자리에서 덮어썼다 복원한다.** 그 사이에 `git add`/`commit` 을 하면 뮤테이션이
+# `scripts/tools/guard_falsifiability.py` 는 **오래** 워킹트리의 워크플로우·스크립트를
+# 제자리에서 덮어썼다 복원했다. 그 사이에 `git add`/`commit` 을 하면 뮤테이션이
 # 그대로 커밋에 들어간다.
+#
+# **2026-09-21: 하네스가 일회용 linked worktree 에서 돌도록 바뀌었다.** 이제 메인
+# 워킹트리는 변형되지 않으므로 이 훅이 막는 사고는 원인째 사라졌다. 그래도 남긴다 —
+# 락은 "워킹트리를 건드리는 도구가 도는 중" 이라는 더 일반적인 신호이고, 전환 중
+# 회귀(폴백으로 메인 트리에서 도는 경우)가 나면 이 훅이 마지막 방벽이다.
+# 하네스 쪽 방벽은 `_assert_running_in_worktree()` 다.
 #
 # 2026-09-18 실측: `.github/workflows/dependabot-auto-merge.yml` 의
 # `if [ -n "$failed" ]; then` → `if false; then`(실패 체크 abort 무력화, fail-open)이

@@ -52,6 +52,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 from typing import TYPE_CHECKING, NamedTuple
@@ -1102,6 +1103,34 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "  auto-merge:\n    name: auto-merge\n    strategy:\n      matrix:\n        shard: [1, 2]\n",
         "tests/test_dependabot_auto_merge_guard.py::TestDiagnosticsAndResilience::test_self_exclusion_job_has_no_matrix",
     ),
+    StaticCase(
+        # 미추적 파일 이식이 빠지면 **새 가드 테스트가 검증 대상에서 통째로 사라진다**
+        # — 새 파일은 `git diff HEAD` 에 안 잡히기 때문이다. 그리고 하네스는 그걸
+        # "통과" 로 보고한다. 이 전환의 load-bearing 지점이다(계획 4절 Q4).
+        "미커밋 **미추적** 파일 이식 제거 (새 가드가 조용히 미검증)",
+        "scripts/tools/guard_falsifiability.py",
+        '\n    for rel in filter(None, listed.stdout.split("\\0")):',
+        "\n    for rel in []:",
+        "tests/test_guard_falsifiability_worktree.py::test_untracked_files_are_ported",
+    ),
+    StaticCase(
+        # 접두사 필터가 없으면 정리 로직이 **에이전트 워크트리 5개까지** 지운다.
+        # 막으려던 사고보다 나쁜 고장이다.
+        "고아 정리에서 접두사 필터 제거 (에이전트 워크트리까지 삭제)",
+        "scripts/tools/guard_falsifiability.py",
+        "\n        if _WORKTREE_PREFIX in Path(path).name:",
+        "\n        if True:",
+        "tests/test_guard_falsifiability_worktree.py::test_pruning_spares_agent_worktrees",
+    ),
+    StaticCase(
+        # 워크트리를 못 만들었는데 죽지 않으면 메인 트리에서 그대로 뮤테이션한다 —
+        # 정확히 이 전환이 없애려던 사고로 **조용히** 되돌아간다.
+        "워크트리 생성 실패 시 중단 제거 (메인 트리로 fail-open)",
+        "scripts/tools/guard_falsifiability.py",
+        '\n        raise SystemExit(f"중단: 워크트리를 만들지 못했다 — {created.stderr.strip()}")',
+        "\n        pass",
+        "tests/test_guard_falsifiability_worktree.py::test_there_is_no_fallback_to_the_main_tree",
+    ),
 )
 
 
@@ -1525,16 +1554,194 @@ def _hold_lock() -> Iterator[None]:
         LOCK_PATH.unlink(missing_ok=True)
 
 
+#: 하네스 전용 워크트리 접두사. 에이전트 워크트리(`agent-<hex>`)와 겹치면 안 된다.
+_WORKTREE_PREFIX = "harness-falsifiability-"
+
+#: 실행 위치를 stderr 에 남길 때 쓰는 표지. 가드가 이걸 읽어 "정말 워크트리에서
+#: 돌았는가" 를 **직접 관측**한다 — rc 같은 간접 신호로 판정하면, 뮤테이션이
+#: 다른 이유로 rc 를 바꿔도 통과한 것처럼 보인다.
+_WORKTREE_MARKER = "[harness] 격리 워크트리에서 실행:"
+
+
+def is_linked_worktree(root: Path) -> bool:
+    """``root`` 가 linked worktree 인가. 메인 체크아웃이면 False.
+
+    메인은 `git rev-parse --absolute-git-dir` 이 `<repo>/.git` 을, linked worktree 는
+    `<repo>/.git/worktrees/<name>` 을 준다(2026-09-21 실측). 부모 디렉토리 이름으로
+    판정한다 — `.git` 이 파일이냐 디렉토리냐로 보면 CI 의 특수 체크아웃에서 흔들린다.
+    """
+    return git_dir_for(root).parent.name == "worktrees"
+
+
+def _assert_running_in_worktree() -> None:
+    """뮤테이션 직전의 마지막 방벽.
+
+    `--in-worktree` 로 불렸는데 실제로는 메인 트리라면, 이 하네스는 사람의 작업
+    트리를 제자리에서 덮어쓰게 된다 — 이 전환이 없애려는 사고 그 자체다. 조용히
+    진행하지 말고 즉시 죽는다.
+    """
+    if not is_linked_worktree(REPO_ROOT):
+        raise SystemExit(
+            f"중단: `--in-worktree` 인데 {REPO_ROOT} 는 linked worktree 가 아니다 "
+            f"(git-dir={git_dir_for(REPO_ROOT)}). 메인 트리를 변형할 뻔했다."
+        )
+
+
+def _prune_orphan_worktrees(root: Path | None = None) -> None:
+    """이전 실행이 SIGKILL 로 죽어 남긴 하네스 워크트리를 치운다.
+
+    `git worktree prune` 은 **디렉토리가 이미 사라진** 등록만 지운다. 디렉토리가
+    남아 있으면 등록도 남으므로 이름으로 찾아 직접 제거한다.
+
+    ``root`` 를 받는 이유는 **테스트를 격리하기 위해서다.** 2026-09-21 에 이 함수의
+    접두사 필터를 뮤테이션한 프로브가 기본값(실제 저장소)으로 돌아
+    `.claude/worktrees/agent-*` **5개를 실제로 삭제했다.** 커밋은 브랜치에 남아
+    무사했지만 그 디렉토리의 미커밋 변경은 잃었다. 파괴적 동작을 하는 함수의
+    프로브는 **합성 저장소**를 상대로 돌려야 한다.
+    """
+    root = root or REPO_ROOT
+    proc = subprocess.run(
+        ["git", "worktree", "list", "--porcelain"],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    for line in proc.stdout.splitlines():
+        if not line.startswith("worktree "):
+            continue
+        path = line[len("worktree ") :].strip()
+        if _WORKTREE_PREFIX in Path(path).name:
+            subprocess.run(
+                ["git", "worktree", "remove", "--force", path],
+                cwd=root,
+                capture_output=True,
+                check=False,
+            )
+    subprocess.run(["git", "worktree", "prune"], cwd=root, capture_output=True, check=False)
+
+
+def _port_uncommitted_changes(dest: Path) -> None:
+    """메인 워킹트리의 미커밋 변경을 워크트리로 옮긴다.
+
+    **두 종류 모두 필요하다.** 추적 파일 변경은 `git diff HEAD` 로 잡히지만
+    **새 파일은 미추적이라 거기 안 잡힌다** — 새 가드 테스트가 정확히 그 경우다.
+    이 한쪽만 빠뜨리면 "커밋된 것만 검증" 과 같아져서 전환의 목적이 사라진다
+    (계획 4절 Q4).
+    """
+    diff = subprocess.run(
+        ["git", "diff", "HEAD", "--binary"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if diff.returncode != 0:
+        raise SystemExit(f"중단: 미커밋 diff 를 읽지 못했다 — {diff.stderr.strip()}")
+    if diff.stdout.strip():
+        applied = subprocess.run(
+            ["git", "apply", "--whitespace=nowarn", "-"],
+            cwd=dest,
+            input=diff.stdout,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if applied.returncode != 0:
+            raise SystemExit(f"중단: 미커밋 변경을 워크트리에 이식하지 못했다 — {applied.stderr.strip()}")
+
+    listed = subprocess.run(
+        ["git", "ls-files", "--others", "--exclude-standard", "-z"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if listed.returncode != 0:
+        raise SystemExit(f"중단: 미추적 파일 목록을 읽지 못했다 — {listed.stderr.strip()}")
+    for rel in filter(None, listed.stdout.split("\0")):
+        src = REPO_ROOT / rel
+        if not src.is_file():
+            continue
+        target = dest / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, target)
+
+
+@contextlib.contextmanager
+def _disposable_worktree() -> Iterator[Path]:
+    """`HEAD` + 미커밋 변경을 담은 일회용 linked worktree.
+
+    **저장소 밖**에 만든다. 안에 만들면 CI 의 `Verify working tree restored` 가
+    깨진다 — 에이전트 워크트리를 가리는 `**/.claude/worktrees/` 규칙은
+    `.git/info/exclude` 에 있고 그건 **추적되지 않는 로컬 파일**이라 러너에는
+    없다(2026-09-21 실측, 계획 10절 Q5).
+    """
+    _prune_orphan_worktrees()
+    parent = Path(tempfile.mkdtemp(prefix=_WORKTREE_PREFIX))
+    path = parent / "wt"
+    created = subprocess.run(
+        ["git", "worktree", "add", "-q", "--detach", str(path), "HEAD"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if created.returncode != 0:
+        shutil.rmtree(parent, ignore_errors=True)
+        raise SystemExit(f"중단: 워크트리를 만들지 못했다 — {created.stderr.strip()}")
+    try:
+        _port_uncommitted_changes(path)
+        yield path
+    finally:
+        subprocess.run(
+            ["git", "worktree", "remove", "--force", str(path)],
+            cwd=REPO_ROOT,
+            capture_output=True,
+            check=False,
+        )
+        subprocess.run(["git", "worktree", "prune"], cwd=REPO_ROOT, capture_output=True, check=False)
+        shutil.rmtree(parent, ignore_errors=True)
+
+
+def run_via_worktree(argv: list[str]) -> int:
+    """일회용 워크트리를 만들어 **그 안의 하네스**를 서브프로세스로 부른다.
+
+    메인 워킹트리는 한 글자도 바뀌지 않는다. 자식의 stdout/stderr 는 캡처하지 않고
+    그대로 흘려보내므로 `--json` 을 포함해 출력 형식이 달라지지 않는다.
+
+    락은 **부모**가 쥔다. 자식이 쥐면 락 경로가 워크트리의 git 디렉토리가 되어
+    메인 트리의 커밋 가드가 보지 못한다(2026-09-21 실측). 전환이 끝나면 이 락은
+    불필요해지지만, 그때 걷는다(계획 6절).
+    """
+    with _hold_lock(), _disposable_worktree() as worktree:
+        child = [
+            sys.executable,
+            str(worktree / "scripts" / "tools" / "guard_falsifiability.py"),
+            "--in-worktree",
+            *argv,
+        ]
+        return subprocess.run(child, cwd=worktree, check=False).returncode
+
+
 def run_all(shard: tuple[int, int] | None = None) -> list[dict]:
-    """모든 케이스를 검증하고 결과 리스트를 돌려준다.
+    """모든 케이스를 검증하고 결과 리스트를 돌려준다. **워크트리 안에서만 부른다.**
 
     ``shard`` 가 주어지면 해당 샤드에 배정된 케이스만 실행한다. 드리프트 검사
     (CASES 미등록 fixture)는 샤드와 무관하게 항상 전수로 돈다 — 특정 샤드에서만
     보이는 미등록 fixture 는 없고, 누락은 어느 샤드에서든 즉시 드러나야 한다.
+
+    옛 `_assert_safe_to_run()`(대상 파일이 더러우면 중단)은 여기서 부르지 않는다.
+    그 검사는 **사람의 워킹트리를 지키려는 것**이었는데 이제 변형 대상이 일회용
+    워크트리다. 오히려 그대로 두면 이식된 미커밋 변경 때문에 항상 중단한다.
+    대신 `_assert_running_in_worktree()` 가 "메인 트리를 절대 변형하지 않는다" 는
+    더 강한 불변식을 지킨다.
     """
-    _assert_safe_to_run()
-    with _hold_lock():
-        return _run_all_locked(shard)
+    _assert_running_in_worktree()
+    # 어디서 돌았는지를 **출력으로 남긴다.** 이게 없으면 "격리됐다" 를 사후에
+    # 확인할 방법이 로그에 없고, 가드도 간접 신호(rc)로만 판정하게 된다.
+    print(f"{_WORKTREE_MARKER} {REPO_ROOT}", file=sys.stderr)
+    return _run_all_locked(shard)
 
 
 def _run_all_locked(shard: tuple[int, int] | None) -> list[dict]:
@@ -1613,11 +1820,22 @@ def main() -> int:
         help="변경 시 이 하네스를 돌려야 하는 저장소-상대 경로를 한 줄씩 출력 (워크플로우 트리거 판정용)",
     )
     parser.add_argument("--shard", metavar="N/M", help="N번째/M개 샤드만 실행 (CI 매트릭스용)")
+    parser.add_argument(
+        "--in-worktree",
+        action="store_true",
+        help="내부용 — 일회용 워크트리 안에서 실제 검증을 수행한다. 직접 쓰지 말 것 (재귀 방지 플래그).",
+    )
     args = parser.parse_args()
 
     if args.list_targets:
         print("\n".join(trigger_paths()))
         return 0
+
+    # 기본 경로는 **격리**다. 부모는 워크트리를 만들고 그 안의 자신을 부른다.
+    # 폴백을 두지 않는 것은 의도다 — 워크트리를 못 만들면 조용히 메인 트리를
+    # 변형하는 대신 소리 내어 죽어야 한다.
+    if not args.in_worktree:
+        return run_via_worktree([a for a in sys.argv[1:] if a != "--in-worktree"])
 
     results = run_all(parse_shard(args.shard) if args.shard else None)
 
