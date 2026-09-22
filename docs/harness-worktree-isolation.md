@@ -1,0 +1,512 @@
+# falsifiability 하네스의 워크트리 격리
+
+작성 2026-09-19 (계획) → **2026-09-22 구현 완료.** 이 문서는 계획서로 시작해
+단계마다 실측을 덧붙인 기록이다. 결정과 그 **근거**가 함께 남아 있어서, 나중에
+"왜 이렇게 돼 있나" 를 다시 묻지 않아도 된다.
+
+## 요약 — 지금 상태
+
+`scripts/tools/guard_falsifiability.py` 는 **일회용 linked worktree** 안에서 돈다.
+메인 워킹트리는 읽기만 한다. 관련 PR: #1347(락, 이후 철회) · #1348 · #1359 · #1360.
+
+| 단계 | 상태 |
+|---|---|
+| 0. 락 경로를 worktree-safe 하게 | ✅ |
+| 1. Q1·Q6 실측 | ✅ 9절 |
+| 2. Q4 결정 → (a) 미커밋 변경 이식 | ✅ 4절 |
+| 3. 진입점 분리 (`run_via_worktree`) | ✅ |
+| 4. 정리 보장 (`finally` + 고아 prune) | ✅ |
+| 5. CI 전환 | ✅ 8샤드 green, 오버헤드 5.8s/샤드 (13절) |
+| 6. 락·훅 처리 → **걷음** | ✅ 14절 |
+
+읽는 순서가 급하면 **11·12절**부터 보라 — 이 작업에서 실제로 낸 사고와,
+하네스가 자기 자신을 대상으로 삼을 때의 뮤테이션 앵커 함정이다.
+
+## 1. 문제 — 한 가지 구조가 사고 3종을 낳는다
+
+> **아래는 전환 *전* 의 서술이다.** 지금은 워크트리 안에서 돌므로 메인 워킹트리를
+> 건드리지 않는다. 문제를 그대로 남겨 두는 이유는, 해법만 적힌 문서는 "왜 이 복잡도를
+> 감수하나" 에 답하지 못하기 때문이다.
+
+`scripts/tools/guard_falsifiability.py` 는 뮤테이션을 **워킹트리 파일에 제자리에서
+써 넣고 finally 에서 되돌렸다.** 대상은 37개 파일이며
+(2026-09-20 재측정 — 앞서 적은 35는 낡았다)
+`.claude/hooks/`·`.github/workflows/`·`scripts/`·`tests/`·`pyproject.toml`·
+`.gitleaks.toml` 에 걸쳐 있다(`_mutated_files()` — `guard_falsifiability.py:1292-1294`
+실행 결과).
+
+그 구조에서 나온 사고, 전부 2026-09-18~19 실측:
+
+| # | 사고 | 현재 완화 | 남은 구멍 |
+|---|---|---|---|
+| A | 실행 중 커밋 → 뮤테이션이 커밋에 들어감 | #1347 락 + Claude 훅 | Claude 훅 밖의 커밋 경로(터미널 직접, 다른 세션) |
+| B | 스위트와 동시 실행 → bash 가 패치 중 스크립트를 이어 읽어 `exit 127` | 없음(사람이 조심) | 그대로 |
+| C | SIGKILL 시 복원 실패 + git stat 캐시 잔상 | 없음 | 그대로 |
+
+A 는 **조용한** 사고였다 — 커밋 직후 하네스가 워킹트리를 복원하므로 `git status` 가
+깨끗하고 풀 스위트도 7577 passed 로 통과한다. 커밋 내용만 fail-open 이었다.
+
+세 사고의 공통 원인은 하나다: **하네스와 사람이 같은 워킹트리를 공유한다.**
+완화는 각각을 따로 막지만 원인은 남는다.
+
+## 2. 해법 — linked worktree 에서 실행
+
+`git worktree` 로 만든 별도 체크아웃에서 돌리면 메인 워킹트리를 **한 글자도**
+건드리지 않는다. A·B·C 가 동시에 사라진다.
+
+### 2.1 핵심 전제는 이미 참이다 (실측)
+
+`REPO_ROOT = Path(__file__).resolve().parents[2]` (`guard_falsifiability.py:62`).
+즉 **하네스 자신의 위치**가 기준이다. 워크트리 안의 사본을 실행하면 모든 경로가
+자동으로 재타겟된다 — 경로 해석 코드는 **바꿀 필요가 없다.**
+
+```
+$ python3 -c "import sys; sys.path.insert(0,'/tmp/wt-probe2/scripts/tools'); ..."
+REPO_ROOT: /private/tmp/wt-probe2
+CONFTEST : /private/tmp/wt-probe2/tests/conftest.py
+```
+
+`_run_node()` 도 `cwd=REPO_ROOT` (`:1294`) 라 따라간다. `pyproject.toml` 이 뮤테이션
+대상에 있는데, pytest 설정(addopts·coverage)이 거기 있으므로 워크트리의 사본을 읽는
+것이 맞다.
+
+### 2.2 격리가 실제로 성립한다 (실측)
+
+워크트리에서 `--shard 1/60` 을 돌리고 메인 트리를 대조했다.
+
+```
+실행 전 hash-object .github/workflows/dependabot-auto-merge.yml → 664514de…
+실행 후                                                          → 664514de…
+git status --short → (빈 줄)
+```
+
+**3/3 falsifiable 로 완주했고 메인 트리는 무손상이었다.**
+
+## 3. 선결 조건 — 이미 하나 고쳤다
+
+전제 검증 중 #1347 의 회귀를 찾았다. linked worktree 의 `.git` 은 **파일**이라
+`REPO_ROOT / ".git" / …` 아래에 락을 만들 수 없고, 하네스가 즉시 죽었다:
+
+```
+FileExistsError: [Errno 17] File exists: '/private/tmp/wt-probe2/.git'
+```
+
+`git rev-parse --absolute-git-dir` 로 고쳤다(커밋 `ee8990aa2`, 미푸시). 이 수정
+**없이는 이 계획을 시작할 수 없다.**
+
+## 4. 미해결 질문 — 착수 전 답해야 한다
+
+| # | 질문 | 왜 중요한가 | 확인 방법 |
+|---|---|---|---|
+| Q1 | `_state/` 스냅샷·복원(`:1318-1340`)이 워크트리에서 의미가 있는가 | 메인 트리의 `_state/*.json` 은 skip-worktree 19개다. 워크트리에는 정상 체크아웃되므로 **동작이 다르다**. `module-level:image_rejection_metrics` 케이스가 일부러 리다이렉트를 깨는데, 그 오염이 워크트리에만 남으면 스냅샷 자체가 불필요해진다 | 워크트리에서 그 케이스만 돌리고 `_state/` diff 관측 |
+| Q2 | 워크트리 생성 비용을 어디가 부담하는가 | **실측 10.3초 / 22,542 파일**(전체 체크아웃). 로컬 1회 실행에는 무시할 수준(하네스는 ~15분)이지만 CI 는 8샤드 매트릭스(`guard-falsifiability.yml:97,122`)라 8회 × 10초 | 러너에서 1회 측정. `--no-checkout` 는 0.28초지만 테스트 실행에는 못 쓴다 |
+| Q3 | 워크트리를 **매번 만들 것인가 재사용할 것인가** | 재사용하면 비용이 0 에 수렴하지만 이전 실행의 잔재가 남을 수 있다 — 지금 고치려는 문제의 재발 | 매번 생성 + `finally` 제거를 기본으로, 비용이 문제면 그때 재사용 검토 |
+| Q4 | 워크트리가 **커밋되지 않은 변경을 못 본다** | 하네스는 `HEAD` 를 체크아웃하므로 **작업 중인 수정은 검증 대상에서 빠진다.** 지금은 워킹트리를 보므로 미커밋 변경도 검증된다 — 이건 **기능 손실**이다 | 아래 5절 참조 |
+| Q5 | 에이전트 워크트리와 충돌하는가 | 현재 `.claude/worktrees/agent-*` 5개가 상주한다(`git worktree list`). 하네스가 또 만들면 이름 충돌·정리 누락 가능 | 전용 접두사 + `finally` 제거 + `git worktree prune` |
+| Q6 | CI 러너에서 `git worktree` 가 되는가 | `actions/checkout` 은 기본 `fetch-depth: 1` 이다. shallow 클론에서 `git worktree add HEAD` 가 되는지 미확인 | CI 에서 1회 실측 |
+
+### Q4 가 가장 무겁다 — **결정: (a)** (2026-09-20)
+
+현재 하네스는 **미커밋 변경을 포함해** 검증한다. 실제로 이번 세션에서 여러 번
+"고치고 → 하네스 → red 확인" 을 미커밋 상태로 돌렸다. 워크트리로 옮기면 `HEAD` 만
+보므로 그 흐름이 깨진다.
+
+대응 후보:
+- **(a)** 워크트리에 `HEAD` 대신 **워킹트리 사본**을 넣는다(`git worktree add` 후
+  미커밋 변경을 이식). 격리는 유지하면서 대상은 현재 상태.
+- **(b)** `_assert_safe_to_run()` 이 이미 더러운 트리를 거부하므로, "커밋 후 실행"
+  을 규약으로 못박는다.
+
+#### 결정 근거 — 두 집합을 실제로 세어 봤다 (2026-09-20 실측)
+
+앞선 서술("(b) 가 이미 현행 규약이다")은 **한 집합을 다른 집합으로 착각한 것**이다.
+두 집합은 다르고, 차이가 곧 Q4 의 답이다.
+
+```
+$ python3 -c "... g._mutated_files() ..."     # _assert_safe_to_run 이 보호하는 집합
+mutated(rel, uniq): 37   tests/: 10
+$ python3 scripts/tools/guard_falsifiability.py --list-targets
+list-targets: 57
+$ 차집합 (list-targets − mutated) = 20개
+scripts/tools/guard_falsifiability.py
+tests/test_auto_lint_hook_guard.py
+tests/test_check_pilot_observation_control_group_guard.py
+...
+```
+
+- `_assert_safe_to_run()` (`:1340-1358`)은 `git status --porcelain -- <targets>` 로
+  **37개**만 본다. 여기에 미커밋 변경이 있으면 `SystemExit`.
+- `--list-targets` 의 **57개**는 CI 트리거 경로이고, 차집합 **20개**는 정확히
+  **가드 테스트 파일들과 하네스 자신**이다.
+
+그 20개는 **오늘 미커밋인 채로 하네스를 돌릴 수 있는 파일들**이다. 그리고 그게
+가드를 새로 쓸 때의 정확한 루프다 — 테스트를 쓰고 `StaticCase` 를 등록한 뒤
+하네스를 돌려 red 를 확인한다. 이번 세션에서만 이 루프를 여러 번 탔다
+(`test_auto_lint_hook_guard.py`, `test_harness_commit_guard.py`).
+
+`HEAD` 워크트리로 옮기면 그 20개의 미커밋 변경이 **존재하지 않게 된다.** 새로
+등록한 케이스는 실행조차 되지 않고, 하네스는 "0개 케이스 통과" 로 조용히 green 을
+낸다 — 이 하네스가 막으려는 바로 그 침묵이다.
+
+따라서 손실은 가설이 아니라 **주 작업 흐름 자체**다. (a) 를 택한다.
+
+#### (a) 가 안전한 이유 — 패치가 뮤테이션 대상과 겹칠 수 없다
+
+`_assert_safe_to_run()` 이 37개 대상의 청결을 **이미 보증**하므로, 이식할 diff 에는
+그 37개의 헝크가 **구조적으로 0개**다. 즉 이식이 뮤테이션 대상을 건드릴 일이 없고,
+`git apply` 충돌 위험도 그만큼 좁다.
+
+이식 대상은 두 가지이며 **둘 다** 필요하다:
+1. 추적 파일의 변경 — `git diff HEAD`
+2. **미추적 파일** — `git ls-files --others --exclude-standard`.
+   새 가드 테스트 파일은 미추적이고 `git diff HEAD` 에 **안 잡힌다.** 이것만
+   빠뜨리면 (a) 가 (b) 와 같아진다 — 구현 시 이 한 줄이 load-bearing 이다.
+
+#### 남는 비대칭 (수용)
+
+로컬은 워킹트리를, CI 는 `HEAD` 를 검증하게 된다. 이건 **지금도 그렇다**(CI 는
+체크아웃된 커밋을 본다). (a) 는 현상을 바꾸지 않고 유지할 뿐이다.
+
+## 5. 단계
+
+각 단계는 검증 가능한 종료 조건을 갖는다.
+
+**0단계 — 선결(완료, 미푸시).** 락 경로를 `git rev-parse --absolute-git-dir` 로.
+→ 검증: 워크트리에서 `--shard 1/60` 완주(3/3 falsifiable). ✅ 실측 완료
+
+**1단계 — Q1·Q6 실측.** ✅ **완료 (2026-09-21).** 아래 9절에 원시 출력.
+→ Q1: 스냅샷은 **필요하다**(실제 오염을 되돌린다). Q6: shallow 클론에서 **된다**.
+
+**2단계 — Q4 결정.** ✅ **완료 (2026-09-20) — (a) 로 결정.** 근거는 4절 참조:
+`_assert_safe_to_run` 이 보는 37개와 트리거 경로 57개의 **차집합 20개**가 정확히
+가드 테스트 파일들이고, 그게 가드 저작 루프의 작업 대상이다. 미추적 파일 이식이
+load-bearing.
+→ 검증: 결정과 실측 근거가 이 문서 4절에 기록됨. ✅
+
+**3단계 — 진입점 분리.** ✅ **완료 (2026-09-21).** `run_via_worktree()` 가 일회용
+워크트리를 만들고 그 안의 하네스를 서브프로세스로 부른다. 재귀 방지 플래그는
+`--in-worktree`. 폴백 없음 — 워크트리를 못 만들면 `SystemExit`.
+→ 검증: 별도 셸에서 0.4초 간격 폴링하며 `--check --shard 1/8` 실행.
+   **편차 0회**, 뮤테이션 대상 4개 파일 해시 전부 불변, 워크트리 잔재 0. ✅
+
+**4단계 — 정리 보장.** ✅ **구현 완료 (2026-09-21).** `finally` 에서
+`git worktree remove --force` + `prune`, 다음 실행 시작 시 `_prune_orphan_worktrees()`.
+→ 검증: 가드 2건(`test_orphan_harness_worktrees_are_pruned`,
+   `test_pruning_spares_agent_worktrees`) + 뮤테이션 확인. `kill -9` 실측은 미실시.
+
+**5단계 — CI 전환.** `guard-falsifiability.yml:122` 의 8샤드가 각자 워크트리를 만든다.
+→ 검증: CI 8샤드 전부 green, 잡당 추가 시간 측정치 기록.
+
+**6단계 — #1347 락·훅 처리.** 아래 6절.
+
+## 6. #1347 의 락·훅을 걷을 것인가
+
+**걷지 않는다.** 이유:
+
+- 워크트리 전환은 **하네스 경로**만 막는다. 락·훅은 "워킹트리를 건드리는 도구가
+  도는 중" 이라는 더 일반적인 신호이고, 다른 도구가 같은 실수를 하면 재사용된다.
+- 전환이 완료돼 락이 무의미해지면 그때 걷어도 늦지 않다. 먼저 걷으면 전환 중
+  회귀가 무방비다.
+- 비용이 거의 없다 — 락은 파일 1개, 훅은 커밋당 python 1회.
+
+단, 전환 후에는 락의 **의미가 바뀐다**(워크트리 커밋을 막는 것). 그때
+`guard-harness-commit-guard.sh` 의 주석과 `tests/test_harness_commit_guard.py` 의
+docstring 을 갱신해야 한다 — 안 하면 문서가 거짓이 된다.
+
+## 7. 하지 않을 것
+
+- 워크트리 **재사용 캐시**. Q3 대로 매번 생성이 기본이다. 재사용은 지금 고치려는
+  "잔재가 남는다" 문제를 되살린다. 비용이 실제로 문제가 된 뒤에 검토한다.
+- `--no-checkout` 워크트리. 테스트를 돌려야 하므로 파일이 필요하다.
+  (단 **가드 테스트**에는 이미 쓰고 있다 — 0.28초, `test_harness_commit_guard.py`)
+- 하네스 외 다른 도구의 워크트리 전환. 범위 밖이다.
+
+## 8. 되돌리기
+
+3단계까지는 진입점 한 곳의 변경이라 revert 가 단순하다. 5단계(CI) 전환 후
+문제가 나면 워크플로우만 되돌려도 로컬 동작은 유지된다.
+
+## 9. 1단계 실측 결과 (2026-09-21)
+
+### Q6 — CI shallow 클론에서 `git worktree` 가 되는가 → **된다**
+
+`actions/checkout` 의 `fetch-depth: 1` 을 로컬에서 재현했다.
+
+```
+$ git clone --depth 1 --branch main file://$PWD $Q6/shallow
+shallow 여부: 예            # .git/shallow 존재
+커밋 수: 1
+$ git -C $Q6/shallow worktree add --detach $Q6/wt HEAD
+Preparing worktree (detached HEAD 1b7e58a9)
+Updating files: 100% (22781/22781), done.
+소요: 6s
+$ git -C $Q6/wt rev-parse --absolute-git-dir
+…/shallow/.git/worktrees/wt
+.git 이 파일인가: 예
+```
+
+**6초 / 22,781 파일.** 2절의 10.3초보다 빠르다(러너는 다를 수 있으니 5단계에서
+재측정). shallow 라도 `HEAD` 는 온전하므로 체크아웃에 문제가 없다.
+
+### Q1 — `_state` 스냅샷·복원이 워크트리에서 의미가 있는가 → **있다. 유지한다**
+
+워크트리에서 `shard 1/8`(문제의 `module-level:image_rejection_metrics` 포함)을
+두 번 돌려 대조했다. 복원 무력화는 **워크트리 사본에만** 주입했다 — 이 전환이
+가능하게 하는 바로 그 안전성이다.
+
+| | 결과 | `_state` 변경 |
+|---|---|---|
+| A. 스냅샷 활성 (현행) | 15/15 falsifiable | **0건** |
+| B. `_restore_state` 무력화 | 15/15 falsifiable | **1건** — `M _state/image_rejection_metrics.json` |
+
+두 실행 모두 메인 트리 `_state` 변경 **0건**. 즉 스냅샷은 사문이 아니라
+**실제 오염을 되돌리고 있다.**
+
+### Q1 에서 같이 드러난 것 — 워크트리에서는 오염이 **보인다**
+
+```
+skip-worktree(워크트리 내): 0
+skip-worktree(메인 트리):   19
+$ git ls-files -v _state/image_rejection_metrics.json
+S _state/image_rejection_metrics.json
+```
+
+메인에서는 그 파일이 skip-worktree 라 오염이 `git status` 에 **안 잡힌다**
+(`guard-falsifiability.yml` 의 "로컬은 skip-worktree 가 가려서 CI 에서만
+드러났다" 주석 그대로). 워크트리에는 정상 체크아웃되므로 같은 오염이 즉시 보인다.
+
+→ 전환의 부수 이득: `Verify working tree restored` 단계가 **로컬에서도** 의미를
+갖게 된다. 지금은 CI 에서만 유효하다.
+
+### 계획에 없던 발견 — 락 경로가 워크트리별로 갈린다
+
+```
+메인:     …/investing/.git
+워크트리: …/investing/.git/worktrees/wt
+```
+
+`git_dir_for()` 가 `git rev-parse --absolute-git-dir` 을 쓰므로 linked worktree 는
+**자기 전용 git 디렉토리**를 받는다. 즉 하네스가 워크트리에서 락을 쥐어도 메인
+트리의 `guard-harness-commit-guard.sh` 는 그 락을 **보지 못한다.**
+
+전환 후에는 그게 맞는 동작이다 — 메인 트리를 변형하지 않으니 커밋을 막을 이유가
+없다. 다만 6절의 "락의 의미가 바뀐다" 는 서술을 이 사실로 구체화해야 한다:
+바뀌는 것은 의미만이 아니라 **가시 범위**다. 훅 주석과
+`tests/test_harness_commit_guard.py` 갱신 시 이 점을 명시할 것.
+
+## 10. Q2·Q3·Q5 결정 (2026-09-21)
+
+### Q5 — 에이전트 워크트리와 충돌하는가 → **저장소 *밖*에 만든다**
+
+상주 워크트리 5개는 전부 **저장소 내부**다:
+
+```
+$ git worktree list
+…/investing/.claude/worktrees/agent-a1a9f2aa151b5ffd3   [worktree-agent-…]
+…  (5개, 전부 `agent-<hex>`)
+$ ls .git/worktrees
+agent-a1a9f2aa151b5ffd3  …  (등록부 이름도 같다)
+```
+
+이름 충돌은 접두사로 피할 수 있다. **진짜 문제는 위치다:**
+
+```
+$ git check-ignore -v .claude/worktrees/agent-a1a9f2aa151b5ffd3
+.git/info/exclude:11:**/.claude/worktrees/
+```
+
+그 제외 규칙은 `.git/info/exclude` — **추적되지 않는 로컬 파일**이다. CI 체크아웃에는
+존재하지 않는다. 따라서 하네스 워크트리를 저장소 안에 만들면 CI 에서
+`git status --porcelain` 에 잡히고 `Verify working tree restored` 단계가
+**하네스 잘못이 아닌 이유로** red 가 된다.
+
+→ 결정: **저장소 밖 임시 디렉토리**(`tempfile.mkdtemp`)에 만든다. 그러면 세 가지가
+동시에 해결된다 — 이름 충돌 없음, `git status` 오염 없음, 파일 워커 간섭 없음.
+Q1 프로브도 이 방식으로 돌렸고 정상이었다.
+
+부수 확인: 현재 `--list-targets` 에 `worktrees` 경로는 **0건**이라 지금은 워커
+간섭이 없다. 하지만 그건 우연이 아니라 로컬 exclude 덕이므로, 위치 결정의 근거로
+쓰면 안 된다.
+
+### Q3 — 매번 만들 것인가 재사용할 것인가 → **매번 만든다**
+
+재사용은 "이전 실행의 잔재" 를 되살린다 — 이 전환이 없애려는 문제 그 자체다.
+비용(Q2)이 실행 시간의 한 자릿수 %라 재사용의 이득이 위험을 정당화하지 못한다.
+7절의 "하지 않을 것" 과 일치한다.
+
+### Q2 — 워크트리 생성 비용 → 로컬 실측 완료, 러너 수치는 구현 PR 의 CI 에서
+
+| 조건 | 소요 | 파일 수 |
+|---|---|---|
+| 전체 체크아웃 (2026-09-19) | 10.3s | 22,542 |
+| shallow 클론 위 (2026-09-21) | **6s** | 22,781 |
+| `--no-checkout` | 0.28s | — (테스트 실행 불가) |
+
+샤드 잡 1회가 ~2분이므로 6~10초는 **5~8%** 다. 8샤드면 총 48~80초 증가.
+수용 가능하다고 판단한다.
+
+러너 수치는 **3단계 구현 PR 의 CI 가 그대로 측정치**가 된다 — 별도 프로브를
+심지 않는다. 5단계에서 잡당 추가 시간을 기록한다.
+
+## 11. 3단계 구현 중 낸 사고 — 에이전트 워크트리 5개 삭제 (2026-09-21)
+
+**기록해 둔다. 계획이 아니라 실제 피해다.**
+
+`_prune_orphan_worktrees()` 의 접두사 필터를 뮤테이션한 프로브가 **기본값(실제
+저장소)** 으로 돌아 `.claude/worktrees/agent-*` 5개를 전부 지웠다.
+
+```
+$ git worktree list          # 사고 후
+/Users/yong/Desktop/personal/investing  …   (메인만 남음)
+$ ls .claude/worktrees/      # 디렉토리 0개
+```
+
+피해 범위:
+- **커밋은 전부 무사하다.** 브랜치 `worktree-agent-*` 5개가 그대로 있고 SHA 도
+  삭제 전 `git worktree list` 와 동일하다. 4개는 `origin/main` 대비 ahead=2.
+- **잃은 것은 그 디렉토리의 미커밋 변경**이다. 복구 불가이고 양을 알 수 없다.
+- 복구하려면 `git worktree add <경로> <브랜치>` 한 줄이면 체크아웃은 되돌아온다.
+
+원인은 **테스트 설계**였다. 파괴적 동작(`git worktree remove --force`)을 하는
+함수의 프로브를 실제 저장소에 겨눴다. 고친 방식:
+
+1. `_prune_orphan_worktrees(root=None)` 로 루트를 인자화 — 테스트는 합성 저장소를
+   넘긴다.
+2. 그 시그니처를 가드로 고정(`test_prune_defaults_to_the_real_repo_but_tests_must_not`).
+   기본값 하나뿐인 버전으로 되돌리면 red 다.
+
+## 12. 같은 작업에서 드러난 뮤테이션 앵커 함정
+
+하네스가 **자기 자신**(`scripts/tools/guard_falsifiability.py`)을 대상으로 삼는
+케이스는 앵커가 **케이스 정의에도 나타난다.** 앞에 개행을 붙여 구별했는데, 그
+과정에서 두 가지를 동시에 틀렸다:
+
+| 증상 | 원인 | 결과 |
+|---|---|---|
+| VACUOUS 1건 | `old` 가 실제 개행이 아니라 문자 `\`+`n` → **케이스 리터럴 자신에 매칭** | 엉뚱한 곳을 변형 |
+| 허위 FALSIFIABLE 2건 | `new` 가 리터럴 `\n` → 소스에 **문법 오류** 주입 | `patched_rc=4`(pytest 사용 오류)를 "잡았다" 로 오독 |
+
+**`patched_rc` 값이 판별자다.** `rc=1` 은 테스트 실패(가드가 잡음), `rc=4` 는
+pytest 사용 오류(문법 깨짐). 메모 `feedback_mutation_must_be_executable` 이 경고한
+형태가 그대로 재현됐다.
+
+검증 절차에 추가할 것 — 하네스 자신을 대상으로 하는 케이스는 등록 후
+`ast.parse(src.replace(old, new, 1))` 로 **뮤테이션된 소스가 파싱되는지** 확인한다.
+
+## 13. Q2·Q6 러너 실측 (PR #1359 CI, 2026-09-21)
+
+**Q6 는 이제 시뮬레이션이 아니라 실제 러너에서 확인됐다** — 8샤드 전부 green.
+
+**Q2 — 격리 오버헤드 5.8초/샤드.** 스텝 시작 타임스탬프에서 자식이 찍는
+`[harness] 격리 워크트리에서 실행:` 까지를 쟀다. 그 구간이 곧 파이썬 기동 +
+고아 정리 + `git worktree add`(22k 파일) + 미커밋 변경 이식이다.
+
+```
+shard 1  08:34:52.310 → 08:34:58.172   5.86s
+shard 2  08:35:09.386 → 08:35:14.845   5.46s
+shard 4  08:34:55.150 → 08:35:00.962   5.81s
+shard 8  08:35:04.138 → 08:35:10.263   6.12s
+```
+
+샤드 잡이 ~2분이므로 **약 5%**. 8샤드는 병렬이라 벽시계 영향은 잡당 ~6초다.
+로컬 추정(6s, shallow 클론 위)과 일치한다.
+
+잡 총시간 대비(#1348 → #1359)는 샤드당 0~22초 증가로 나오지만, 그 사이
+StaticCase 가 3건 늘어(100→103) 샤드 5·6·7 이 케이스를 하나씩 더 받았다.
+**혼재된 수치이므로 위 직접 측정을 쓴다.**
+
+→ 5단계(CI 전환)는 사실상 이 PR 에서 함께 이뤄졌다. 워크플로우는 하네스를
+같은 명령으로 부르고, 격리는 하네스 안에서 일어난다.
+
+## 14. 6단계 — 락·훅 존치 재판단 (2026-09-22)
+
+6절은 "전환이 완료돼 락이 무의미해지면 그때 걷어도 늦지 않다" 고 썼다. 전환은
+3·4·5단계가 끝나고 CI 8샤드 green 이므로, 이제 그 재판단 시점이다.
+
+### 사실관계
+
+**락은 부모(메인 트리)가 쥔다.** `run_via_worktree()` 가 `_hold_lock()` 을 감싸므로
+`LOCK_PATH = <repo>/.git/guard-falsifiability.lock` 이고, Claude 훅이 그걸 읽어
+메인 트리의 커밋을 막는다.
+
+**막으려던 사고는 구조적으로 불가능해졌다.** 하네스는 메인 워킹트리를 읽기만 한다
+(`git diff HEAD`, `git ls-files`, 파일 복사). 실행 중 커밋해도 워크트리는 이미
+생성·이식을 마쳤으므로 런에 영향이 없고, 커밋에는 사람의 진짜 트리가 들어간다.
+
+**락에 다른 소비자가 없다.** `_hold_lock()` 은 기존 락이 있어도 덮어쓰므로 상호
+배제 기능이 없다. 유일한 소비자는 커밋 차단 훅이다.
+
+### 비용 (2026-09-22 실측, 10회 평균)
+
+| 경로 | 평균 |
+|---|---|
+| bash 기동만 (대조) | 119 ms |
+| 훅 — 비-커밋 (조기 탈출) | **510 ms** |
+| 훅 — 커밋 (python 임포트) | **1568 ms** |
+
+즉 **모든 Bash 호출에 ~390ms**, 커밋마다 **~1.45s** 를 더 낸다. 훅은
+PreToolUse/Bash 에 걸려 있어 커밋이 아닌 명령도 비용을 낸다.
+
+### 재판단 전 닫은 공백
+
+걷는 쪽을 검토하려면 "메인 트리 변형이 열리면 누가 잡는가" 가 확정돼야 한다.
+확인해 보니 **아무도 안 잡았다**:
+
+- `_assert_running_in_worktree()` 를 **직접 부르는** 테스트만 2개 있었다.
+  `run_all()` 안의 **호출부**를 지우면 둘 다 green 이다.
+- 등록된 StaticCase 0건.
+
+`test_the_barrier_is_actually_called_before_mutating` 을 추가하고 StaticCase 로
+등록했다(shard 8, FALSIFIABLE patched_rc=1). 설계 노트:
+
+- **합성 루트를 쓴다.** 첫판은 `_REPO_ROOT` 에서 `--in-worktree` 를 실행했는데,
+  하네스는 워크트리 안에서 도므로 방벽이 통과해 CONTROL-FAIL 이 났다. 검증이
+  어디서 도느냐로 뒤집히는 테스트는 가드가 아니다.
+- **`pyproject.toml` 을 함께 복사해야 한다.** 모듈이 임포트 시점에 읽는다. 없으면
+  방벽에 닿기 전에 죽어 정상본과 변형이 같은 결과를 낸다.
+- **rc 만으로는 판별이 안 된다.** 정상본도 변형본도 죽는다(변형본은 conftest
+  부재로). 그래서 stderr 의 방벽 메시지까지 단언한다.
+
+### 판단
+
+**걷을 수 있는 상태가 됐다.** 다만 이건 안전장치 제거이므로 사용자 결정 사항으로
+남긴다. 정리:
+
+| | 걷기 | 유지 |
+|---|---|---|
+| 막는 사고 | 구조적으로 불가능 | 동일 |
+| 비용 | 0 | Bash 호출당 ~390ms, 커밋당 ~1.45s |
+| 회귀 대비 | `_assert_running_in_worktree` + StaticCase(신규) | 위 + 훅(이중) |
+| 문서 정확성 | 잔여 거짓 문구 제거 | 훅의 deny 메시지가 여전히 "overwrites … in place" 라 **거짓** |
+
+유지를 택하면 최소한 deny 메시지는 고쳐야 한다 — 지금은 사용자에게 틀린 이유를
+보여 준다.
+
+### 6단계 결정: **걷는다** (2026-09-22 실행)
+
+14절의 표대로 판단했다. 결정적인 것은 **비용이 확실하고 보호가 없다**는 비대칭이다:
+
+- 훅 매처가 `Bash` 라 **커밋이 아닌 명령도** 값을 치른다 (Bash 호출당 ~390ms)
+- 하네스가 메인 워킹트리에 **쓰는 경로가 하나도 없다** (읽기만: `git diff HEAD`,
+  `git ls-files`, 파일 복사). 실행 중 커밋해도 워크트리는 이미 생성·이식을 마쳤다
+- 락에 **다른 소비자가 없다** — `_hold_lock()` 은 상호배제를 하지 않는다
+- 훅의 deny 메시지가 사용자에게 **거짓**을 말한다("overwrites … in place")
+
+제거한 것:
+
+| 대상 | 비고 |
+|---|---|
+| `.claude/hooks/guard-harness-commit-guard.sh` | 파일 삭제 |
+| `.claude/settings.json` 등록 | PreToolUse 5 → 4 |
+| `tests/test_harness_commit_guard.py` | 가드 대상이 사라짐 |
+| `LOCK_PATH`·`_hold_lock`·`read_active_lock`·`_process_start_marker` | 64줄, 소비자 0 |
+| StaticCase "하네스 실행 중 커밋 차단 무력화" | 대상 파일 삭제 |
+| `.claude/README.md` 표 행 + "Bash 훅 셋" → "둘" | 정합 재확인: 등록 6 / 표 6 / 파일 6, 차집합 0 |
+
+대체 보장(전부 하네스 등록):
+- `_assert_running_in_worktree()` — 메인 트리에서 뮤테이션 시작 시 즉시 사망
+- `test_the_barrier_is_actually_called_before_mutating` — 그 **호출부**를 고정
+- `test_there_is_no_fallback_to_the_main_tree` — 워크트리 생성 실패 시 폴백 금지
+
+제거 후 실측: `--check --shard 8/8` → 13/13 falsifiable, `git status` 편차 0,
+뮤테이션 대상 해시 불변, 락 파일 미생성.

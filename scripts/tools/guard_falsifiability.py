@@ -53,7 +53,6 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import time
 from pathlib import Path
 from typing import TYPE_CHECKING, NamedTuple
 
@@ -1026,16 +1025,6 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "tests/test_dependabot_auto_merge_guard.py::TestStabilizationWindowBehaviour::test_head_change_restarts_the_window",
     ),
     StaticCase(
-        # 훅이 락을 무시하면 하네스 실행 중 커밋이 그대로 통과한다 — 2026-09-18 에
-        # 실제로 뮤테이션이 커밋에 들어갔고, 워킹트리도 풀 스위트도 정상이라
-        # **조용한** 사고였다.
-        "하네스 실행 중 커밋 차단 무력화",
-        ".claude/hooks/guard-harness-commit-guard.sh",
-        'if [[ -n "$HOLDER" ]]; then',
-        "if false; then",
-        "tests/test_harness_commit_guard.py::test_commit_is_blocked_while_the_harness_holds_the_lock",
-    ),
-    StaticCase(
         # 편집 시점의 포맷 계층은 이 훅 하나뿐이다. pre-commit 의 `ruff-format` 은
         # 이 클론에도 설치됐지만(2026-09-20) `git commit` 시점에만 돌고, 다른
         # 클론은 설치 여부가 제각각이다 — 설치는 추적되지 않는 `.git/hooks/` 에
@@ -1501,70 +1490,7 @@ def git_dir_for(root: Path) -> Path:
     return root / ".git"
 
 
-#: 하네스가 도는 동안 존재하는 락. git 디렉토리 아래라 실수로 커밋되지 않고
-#: 체크아웃마다 독립이다.
-LOCK_PATH = git_dir_for(REPO_ROOT) / "guard-falsifiability.lock"
-
-
-def _process_start_marker(pid: int) -> str | None:
-    """`pid` 의 프로세스 시작 시각. 죽었으면 None.
-
-    PID 재사용을 구별하는 값이다.
-
-    처음엔 커맨드라인 매칭(`"guard_falsifiability" in ps -o command=`)을 썼는데
-    **호출 방식에 의존해서 못 쓴다** — `python3 -` 로 임포트해 락을 쥐면
-    커맨드라인에 스크립트 이름이 없어 자기 락을 stale 로 오판했다(2026-09-18,
-    이 훅의 프로브가 잡았다). 시작 시각은 어떻게 띄웠든 같다.
-
-    살아있음 검사 자체가 **없으면 안 된다.** 하네스는 SIGKILL 로 죽을 수 있고
-    (같은 날 메모리 압박으로 두 번) 그때 락이 남는다. 안 보면 남은 락이 이후
-    모든 커밋을 영영 막는다 — 막으려던 사고보다 나쁜 고장이다.
-    """
-    proc = subprocess.run(["ps", "-p", str(pid), "-o", "lstart="], capture_output=True, text=True, check=False)
-    marker = proc.stdout.strip()
-    return marker if proc.returncode == 0 and marker else None
-
-
-def read_active_lock() -> dict | None:
-    """살아 있는 하네스가 쥔 락이면 그 내용을, 아니면 None 을 돌려준다.
-
-    stale 락은 **읽는 쪽에서 지운다.** 죽은 프로세스는 자기 락을 치울 수 없다.
-    """
-    try:
-        payload = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return None
-    pid = payload.get("pid")
-    if isinstance(pid, int) and _process_start_marker(pid) == payload.get("start"):
-        return payload
-    LOCK_PATH.unlink(missing_ok=True)
-    return None
-
-
-@contextlib.contextmanager
-def _hold_lock() -> Iterator[None]:
-    """실행 구간 동안 락을 쥔다.
-
-    이 하네스는 워킹트리의 파일을 **제자리에서 덮어썼다 복원한다.** 그동안
-    `git add`/`commit` 을 하면 뮤테이션이 그대로 커밋에 들어간다 — 2026-09-18 에
-    실제로 `if [ -n "$failed" ]; then` -> `if false; then`(실패 체크 abort 무력화)이
-    커밋됐다. 커밋 직후 워킹트리는 하네스가 복원해 `git status` 가 깨끗하고 풀
-    스위트도 통과하므로 **조용한** 사고다.
-
-    `.claude/hooks/guard-harness-commit-guard.sh` 가 이 락을 보고 커밋을 막는다.
-    """
-    LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
-    pid = os.getpid()
-    LOCK_PATH.write_text(
-        json.dumps({"pid": pid, "start": _process_start_marker(pid), "started": time.time()}),
-        encoding="utf-8",
-    )
-    try:
-        yield
-    finally:
-        LOCK_PATH.unlink(missing_ok=True)
-
-
+#: 설계 배경·실측·사고 기록: docs/harness-worktree-isolation.md
 #: 하네스 전용 워크트리 접두사. 에이전트 워크트리(`agent-<hex>`)와 겹치면 안 된다.
 _WORKTREE_PREFIX = "harness-falsifiability-"
 
@@ -1721,11 +1647,13 @@ def run_via_worktree(argv: list[str]) -> int:
     메인 워킹트리는 한 글자도 바뀌지 않는다. 자식의 stdout/stderr 는 캡처하지 않고
     그대로 흘려보내므로 `--json` 을 포함해 출력 형식이 달라지지 않는다.
 
-    락은 **부모**가 쥔다. 자식이 쥐면 락 경로가 워크트리의 git 디렉토리가 되어
-    메인 트리의 커밋 가드가 보지 못한다(2026-09-21 실측). 전환이 끝나면 이 락은
-    불필요해지지만, 그때 걷는다(계획 6절).
+    2026-09-22 까지 여기서 실행 락(`.git/guard-falsifiability.lock`)을 쥐고
+    Claude 훅이 그걸 보고 커밋을 막았다. **걷었다** — 하네스가 메인 워킹트리에
+    쓰는 경로가 더 이상 없어서(읽기만 한다: `git diff HEAD`, `git ls-files`,
+    파일 복사) 실행 중 커밋해도 뮤테이션이 섞일 수 없다. 대신 지키는 것은
+    `_assert_running_in_worktree()` 와 그 **호출부**를 고정한 StaticCase 다.
     """
-    with _hold_lock(), _disposable_worktree() as worktree:
+    with _disposable_worktree() as worktree:
         child = [
             sys.executable,
             str(worktree / "scripts" / "tools" / "guard_falsifiability.py"),
