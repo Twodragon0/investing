@@ -22,10 +22,12 @@ permalink: "/stock-news/2026/03/05/daily-stock-news-digest/"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMiVkFVX3lxTFBqT2tyQ2FCSGVWMDc1bl9YSy1odWdSQmNVLS1qbzAtZTBuUDFQejVtakh1LWNIdmc2OXp4R1FreEx5TC02SWJPZGVBQVhSMnJBaG5KMmlR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] '패닉셀' 코스피·코스닥 8%대 폭락…동반 서킷브레이커</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li><li><a href="https://news.google.com/read/CBMibEFVX3lxTFBoR01UNGVEQTZIM0J3aTYzeldtLWFxZFBPNENLOWU0WUNXQjFuRE5HYUIydjNrdVdXdUZoNmNFa3VsOXl5dFRldXdkZ1BzOEMtVTJWSC1UbFhZTW1CZ01YcW1POGtmdjVXb1lYMA?hl=ko&gl=KR&ceid=KR%3Ako">코스피·코스닥 동반 급등…하루 만에 ‘매수 사이드카’</a> — 급락 이후 반등 과정에서 매수 사이드카가 발동되었습니다. 변동성 확대 장세에서 저점 매수세 유입 신호입니다.</li><li><a href="https://news.google.com/read/CBMiVkFVX3lxTE4tV2RTVWtSODhTSFVhb0ZBUFVhR2M4T3N2QjBiR0xkNklWQnFJaUhfbEdzQ1lnOHFKUVIzcGFmNF9meDBQQ0xlaXhEeml1dEVWUEY4aVJR?hl=ko&gl=KR&ceid=KR%3Ako">[속보] 코스피·코스닥 서킷브레이커 발동…20분간 거래 중단</a> — 급격한 하락으로 매매거래가 일시 중단되었습니다. 투자 심리 위축과 추가 하방 리스크에 유의해야 합니다.</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,614.49 (+8.13%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,117.23 (+11.33%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-03-05 주식 시장에서 173건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,614.49(+8.13%), KOSDAQ 1,117.23(+11.33%), USD/KRW 1,464.58(+0.19%).
 - *KOSPI·KOSDAQ 서킷브레이커 발동 후 급반등, 중동 유가 급등 여파로 에너지·방산주 강세.*
 
 ## 테마별 주요 뉴스

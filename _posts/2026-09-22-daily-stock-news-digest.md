@@ -33,50 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-22 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 베선트 "AI 모델이 해킹 사고 내면 해당 AI 회사 경영진 책임" - 150건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 코스피 주목</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 반도체 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 관련 14건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202609219335i">베선트 "AI 모델이 해킹 사고 내면 해당 AI 회사 경영진 책임"</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 베선트 "AI 모델이 해킹 사고 내면 해당 AI 회사 경영진 책임" 
-총 150건의 뉴스 중 P1 주요 이슈도 17건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (41건): 삼성전자, 코스피, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (22건): 삼성전자, 반도체, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (14건): 연준, 금리, 환율 매크로 변수 (14건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 베선트 "AI 모델이 해킹 사고 내면 해당 AI 회사 경영진 책임"
-
-### 주요 이슈
-
-- 핫타임] 삼성전자 4% 가까이 급등…美 반도체 훈풍 속 실적 기대도 재부각 - 아주경제
-- History Says You Should Know These 3 Things Before Buying the Vanguard S&P 500 E
-- The resilient stock market is flashing warning signs
-- 외 14건
-
-### 투자자 체크포인트
-
-- 한국 기사 43건, 글로벌 기사 107건 수집
-- 한국 지수: KOSPI 7,007.72(+1.65%), KOSDAQ 836.27(+1.11%), USD/KRW 1,374.15(-0.85%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">41건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:54%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:34%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:37%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:27%"></div></div><span class="theme-count">11건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-22.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,007.72 (+1.65%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 836.27 (+1.11%).
+- 2026-09-22 주식 시장에서 150건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,007.72(+1.65%), KOSDAQ 836.27(+1.11%), USD/KRW 1,374.15(-0.85%).
+- *한강타임즈 김광호 기자 = 21일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스
 

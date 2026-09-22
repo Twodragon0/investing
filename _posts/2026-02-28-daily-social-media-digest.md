@@ -22,6 +22,7 @@ permalink: "/social-media/2026/02/28/daily-social-media-digest/"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://reddit.com/r/CryptoCurrency/comments/1rge90w/iranians_are_mining_bitcoin_for_1325_with_50x/">[Reddit] Iranians are Mining Bitcoin for $1,325 with 50x Returns Despite Electricity Shortages</a> — 지정학적 분쟁이 글로벌 금융시장에 충격을 주고 있습니다. 안전자산 선호와 위험자산 회피 흐름에 주목하세요.</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 43건 중 텔레그램 0건, 소셜 0건, 정치·경제 23건으로 매크로/금리 및 정치/정책 이슈가 주요 화제입니다.

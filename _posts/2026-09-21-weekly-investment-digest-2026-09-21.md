@@ -54,9 +54,11 @@ image_alt: "주간 투자 다이제스트 - 2026년 09월 21일 - 시장 분석 
 - 2026-09-21 [암호화폐 시장 종합 리포트 - 2026-09-21 | 시총 $2.76T (-4.2%)](/market-analysis/2026/09/21/daily-crypto-market-report/) -- Top 20 코인 중 5개 상승, 15개 하락으로 전반적 매도 압력이 나타나고 있습니다. 최고 상승은 Avalanche(AVAX) +13.96%, 최대 하락은 Monero(XMR) -4.61%입니다.
 - 2026-09-21 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-21](/market-analysis/2026/09/21/daily-worldmonitor-briefing/) -- 2026-09-21 글로벌 핵심 이슈: Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says (지정학/안보). WorldMonitor…
 - 2026-09-21 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-21](/market-analysis/2026/09/21/daily-worldmonitor-briefing/) -- 9 Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece 사회/기타 낮음 WorldMonitor/BBC World
-- 2026-09-21 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-21](/market-analysis/2026/09/21/daily-worldmonitor-briefing/) -- 오늘의 글로벌 리스크 스냅샷 총 수집: 20건 핵심 테마: 사회/기타, 지정학/안보, 정책/법률 집중 출처: WorldMonitor/BBC World
-- 2026-09-21 [주요 경제 캘린더 및 실적 일정 (2026-09-21)](/market-analysis/2026/09/21/fmp-economic-calendar/) -- 2026-09-21 오늘 일정 — 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 21건(고·중간 중요도), 대형주 실적 3건, IPO 일정 12건을 정리했습니다
-- 2026-09-21 [주요 경제 캘린더 및 실적 일정 (2026-09-21)](/market-analysis/2026/09/21/fmp-economic-calendar/) -- Thu, 17 Sep 2026 18:30:23 GMT
+<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+<li>총 수집: N/A</li>
+<li>핵심 테마: N/A</li>
+<li>집중 출처: N/A</li>
+</ul></div>
 
 ## 암호화폐 뉴스 (8건)
 

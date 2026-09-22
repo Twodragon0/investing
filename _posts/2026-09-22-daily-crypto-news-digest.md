@@ -40,34 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-22 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (28회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, ETF 중심 80건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, ETF 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러 관련 39건</li><li>🏦 <strong>거래소</strong>: 13건 수집</li><li>🔵 <strong>규제/정책</strong>: 암호화폐 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 80건의 뉴스 중 **비트코인** 관련이 49건(61%)으로 압도적입니다. 비트코인이 오늘 시장의 핵심 화제입니다
-
-### 테마별 동향
-
-- **🟠 비트코인** (49건): 비트코인, ETF, 급등 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **📈 가격/시장** (39건): 달러, 암호화폐, 급등 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (13건): ETF 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- Investors Can Now Invest in the Surging Tron Cryptocurrency Via an ETF. Here's W
-- Bitcoin surged to an eight-month high above $85,000 as oil fell and ETF inflows
-- 비트코인 8만 달러 돌파에 관련주 급등…철강주는 실적 우려에 약세-[美증시 특징주
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News KR(15건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-22.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-09-22 암호화폐 시장 80건 분석 — 핵심 테마: 비트코인, 가격/시장, 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
