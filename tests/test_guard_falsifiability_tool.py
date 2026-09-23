@@ -297,7 +297,14 @@ def test_exemption_list_only_shrinks():
 
 
 def test_mutated_files_covers_every_static_target():
-    """안전 검사(_assert_safe_to_run)가 변형 대상 전부를 감시해야 한다."""
+    """`_mutated_files()` 가 변형 대상 전부를 담아야 한다.
+
+    옛 이유는 "안전 검사(`_assert_safe_to_run`)가 감시해야 한다" 였는데, 그 함수는
+    워크트리 격리로 불필요해져 2026-09-23 에 삭제됐다. **단언은 그대로 유효하다** —
+    지금은 `trigger_paths()`(CI 트리거 판정)와
+    `test_main_tree_is_untouched_by_a_run`(실행 후 무손상 확인)이 이 집합을 쓴다.
+    빠진 대상은 곧 트리거 누락이자 검증 누락이다.
+    """
     watched = {p.resolve() for p in gf._mutated_files()}
 
     for case in gf.STATIC_CASES:

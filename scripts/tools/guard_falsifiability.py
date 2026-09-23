@@ -1369,27 +1369,6 @@ def _mutated_files() -> list[Path]:
     return [CONFTEST, GUARD_FILE, *(REPO_ROOT / c.target for c in STATIC_CASES)]
 
 
-def _assert_safe_to_run() -> None:
-    """하네스가 건드릴 파일에 커밋되지 않은 변경이 있으면 중단한다.
-
-    하네스는 대상 파일을 덮어썼다 복원한다. 미커밋 변경이 있는 상태에서 중간에
-    죽으면 사용자의 작업이 사라질 수 있다.
-    """
-    targets = sorted({str(p) for p in _mutated_files()})
-    proc = subprocess.run(
-        ["git", "status", "--porcelain", "--", *targets],
-        cwd=REPO_ROOT,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    if proc.stdout.strip():
-        raise SystemExit(
-            "중단: 하네스가 변형할 파일에 커밋되지 않은 변경이 있다. 덮어썼다 "
-            "복원하는 방식이므로 먼저 커밋하거나 stash 할 것.\n" + proc.stdout
-        )
-
-
 def _snapshot_state() -> dict[Path, bytes]:
     """`_state/` 파일 내용을 스냅샷한다.
 
@@ -1555,6 +1534,17 @@ def _prune_orphan_worktrees(root: Path | None = None) -> None:
                 capture_output=True,
                 check=False,
             )
+            # `remove` 가 실패해도 아래 `prune` 이 등록만 지우므로 **디렉토리가
+            # 남는다**(2026-09-23 SIGKILL 실측). 그래서 부모까지 직접 치운다.
+            #
+            # 조건이 **둘 다** 필요하다 — 부모 이름 검사는 위 필터와 독립이어야
+            # 한다. 위 필터가 `if True:` 로 무력화돼도 여기서 멈춘다. 그게 없으면
+            # `.claude/worktrees/agent-*` 의 부모인 `.claude/worktrees/` 가
+            # 통째로 날아간다. 2026-09-21 에 에이전트 워크트리 5개를 실제로
+            # 지운 적이 있으므로 가정하지 않고 막는다.
+            parent = Path(path).parent
+            if parent.name.startswith(_WORKTREE_PREFIX):
+                shutil.rmtree(parent, ignore_errors=True)
     subprocess.run(["git", "worktree", "prune"], cwd=root, capture_output=True, check=False)
 
 
@@ -1616,7 +1606,16 @@ def _disposable_worktree() -> Iterator[Path]:
     """
     _prune_orphan_worktrees()
     parent = Path(tempfile.mkdtemp(prefix=_WORKTREE_PREFIX))
-    path = parent / "wt"
+    # **워크트리 디렉토리 이름 자체가** 접두사를 가져야 한다. 정리 로직은
+    # `git worktree list` 가 주는 경로의 `.name` 만 보기 때문이다.
+    #
+    # 2026-09-22 까지는 `parent / "wt"` 였다 — 접두사가 부모에만 있어서
+    # `.name == "wt"` 였고, **고아 정리가 한 번도 매치되지 않았다.** SIGKILL 실측
+    # (2026-09-23)에서 드러났다: 강제 종료 후 재실행해도 고아가 그대로 남았다.
+    # 가드가 통과했던 이유는 테스트가 고아를 `<prefix>orphan` 으로 만들어
+    # **프로덕션과 모양이 달랐기** 때문이다. 이제
+    # `test_created_worktree_is_recognised_by_the_pruner` 가 생성↔정리를 묶는다.
+    path = parent / f"{_WORKTREE_PREFIX}wt"
     created = subprocess.run(
         ["git", "worktree", "add", "-q", "--detach", str(path), "HEAD"],
         cwd=REPO_ROOT,
@@ -1670,7 +1669,7 @@ def run_all(shard: tuple[int, int] | None = None) -> list[dict]:
     (CASES 미등록 fixture)는 샤드와 무관하게 항상 전수로 돈다 — 특정 샤드에서만
     보이는 미등록 fixture 는 없고, 누락은 어느 샤드에서든 즉시 드러나야 한다.
 
-    옛 `_assert_safe_to_run()`(대상 파일이 더러우면 중단)은 여기서 부르지 않는다.
+    옛 `_assert_safe_to_run()`(대상 파일이 더러우면 중단)은 **2026-09-23 에 삭제했다**.
     그 검사는 **사람의 워킹트리를 지키려는 것**이었는데 이제 변형 대상이 일회용
     워크트리다. 오히려 그대로 두면 이식된 미커밋 변경 때문에 항상 중단한다.
     대신 `_assert_running_in_worktree()` 가 "메인 트리를 절대 변형하지 않는다" 는

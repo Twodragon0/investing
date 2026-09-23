@@ -15,7 +15,7 @@
 | 1. Q1·Q6 실측 | ✅ 9절 |
 | 2. Q4 결정 → (a) 미커밋 변경 이식 | ✅ 4절 |
 | 3. 진입점 분리 (`run_via_worktree`) | ✅ |
-| 4. 정리 보장 (`finally` + 고아 prune) | ✅ |
+| 4. 정리 보장 (`finally` + 고아 prune) | ✅ `kill -9` 실측까지 (15절) — **그 실측이 결함 2건을 찾았다** |
 | 5. CI 전환 | ✅ 8샤드 green, 오버헤드 5.8s/샤드 (13절) |
 | 6. 락·훅 처리 → **걷음** | ✅ 14절 |
 
@@ -32,8 +32,7 @@
 써 넣고 finally 에서 되돌렸다.** 대상은 37개 파일이며
 (2026-09-20 재측정 — 앞서 적은 35는 낡았다)
 `.claude/hooks/`·`.github/workflows/`·`scripts/`·`tests/`·`pyproject.toml`·
-`.gitleaks.toml` 에 걸쳐 있다(`_mutated_files()` — `guard_falsifiability.py:1292-1294`
-실행 결과).
+`.gitleaks.toml` 에 걸쳐 있다(`_mutated_files()` — `guard_falsifiability.py:1367` 실행 결과).
 
 그 구조에서 나온 사고, 전부 2026-09-18~19 실측:
 
@@ -66,7 +65,7 @@ REPO_ROOT: /private/tmp/wt-probe2
 CONFTEST : /private/tmp/wt-probe2/tests/conftest.py
 ```
 
-`_run_node()` 도 `cwd=REPO_ROOT` (`:1294`) 라 따라간다. `pyproject.toml` 이 뮤테이션
+`_run_node()` 도 `cwd=REPO_ROOT` (`:1348`) 라 따라간다. `pyproject.toml` 이 뮤테이션
 대상에 있는데, pytest 설정(addopts·coverage)이 거기 있으므로 워크트리의 사본을 읽는
 것이 맞다.
 
@@ -98,8 +97,8 @@ FileExistsError: [Errno 17] File exists: '/private/tmp/wt-probe2/.git'
 
 | # | 질문 | 왜 중요한가 | 확인 방법 |
 |---|---|---|---|
-| Q1 | `_state/` 스냅샷·복원(`:1318-1340`)이 워크트리에서 의미가 있는가 | 메인 트리의 `_state/*.json` 은 skip-worktree 19개다. 워크트리에는 정상 체크아웃되므로 **동작이 다르다**. `module-level:image_rejection_metrics` 케이스가 일부러 리다이렉트를 깨는데, 그 오염이 워크트리에만 남으면 스냅샷 자체가 불필요해진다 | 워크트리에서 그 케이스만 돌리고 `_state/` diff 관측 |
-| Q2 | 워크트리 생성 비용을 어디가 부담하는가 | **실측 10.3초 / 22,542 파일**(전체 체크아웃). 로컬 1회 실행에는 무시할 수준(하네스는 ~15분)이지만 CI 는 8샤드 매트릭스(`guard-falsifiability.yml:97,122`)라 8회 × 10초 | 러너에서 1회 측정. `--no-checkout` 는 0.28초지만 테스트 실행에는 못 쓴다 |
+| Q1 | `_state/` 스냅샷·복원(`_snapshot_state` `:1372` / `_restore_state` `:1386`)이 워크트리에서 의미가 있는가 | 메인 트리의 `_state/*.json` 은 skip-worktree 19개다. 워크트리에는 정상 체크아웃되므로 **동작이 다르다**. `module-level:image_rejection_metrics` 케이스가 일부러 리다이렉트를 깨는데, 그 오염이 워크트리에만 남으면 스냅샷 자체가 불필요해진다 | 워크트리에서 그 케이스만 돌리고 `_state/` diff 관측 |
+| Q2 | 워크트리 생성 비용을 어디가 부담하는가 | **실측 10.3초 / 22,542 파일**(전체 체크아웃). 로컬 1회 실행에는 무시할 수준(하네스는 ~15분)이지만 CI 는 8샤드 매트릭스(`guard-falsifiability.yml:98`, 실행은 `:145`)라 8회 × 10초 | 러너에서 1회 측정. `--no-checkout` 는 0.28초지만 테스트 실행에는 못 쓴다 |
 | Q3 | 워크트리를 **매번 만들 것인가 재사용할 것인가** | 재사용하면 비용이 0 에 수렴하지만 이전 실행의 잔재가 남을 수 있다 — 지금 고치려는 문제의 재발 | 매번 생성 + `finally` 제거를 기본으로, 비용이 문제면 그때 재사용 검토 |
 | Q4 | 워크트리가 **커밋되지 않은 변경을 못 본다** | 하네스는 `HEAD` 를 체크아웃하므로 **작업 중인 수정은 검증 대상에서 빠진다.** 지금은 워킹트리를 보므로 미커밋 변경도 검증된다 — 이건 **기능 손실**이다 | 아래 5절 참조 |
 | Q5 | 에이전트 워크트리와 충돌하는가 | 현재 `.claude/worktrees/agent-*` 5개가 상주한다(`git worktree list`). 하네스가 또 만들면 이름 충돌·정리 누락 가능 | 전용 접두사 + `finally` 제거 + `git worktree prune` |
@@ -123,38 +122,45 @@ FileExistsError: [Errno 17] File exists: '/private/tmp/wt-probe2/.git'
 두 집합은 다르고, 차이가 곧 Q4 의 답이다.
 
 ```
-$ python3 -c "... g._mutated_files() ..."     # _assert_safe_to_run 이 보호하는 집합
-mutated(rel, uniq): 37   tests/: 10
-$ python3 scripts/tools/guard_falsifiability.py --list-targets
-list-targets: 57
-$ 차집합 (list-targets − mutated) = 20개
-scripts/tools/guard_falsifiability.py
-tests/test_auto_lint_hook_guard.py
-tests/test_check_pilot_observation_control_group_guard.py
-...
+# 2026-09-23 재측정 (아래 숫자가 현재값이다)
+mutated(rel, uniq): 37   tests/: 10     # _mutated_files() — 하네스가 변형하는 집합
+list-targets:       56                  # CI 트리거 경로
+차집합 (list-targets − mutated): 19     # 전부 tests/ 파일
 ```
 
-- `_assert_safe_to_run()` (`:1340-1358`)은 `git status --porcelain -- <targets>` 로
-  **37개**만 본다. 여기에 미커밋 변경이 있으면 `SystemExit`.
-- `--list-targets` 의 **57개**는 CI 트리거 경로이고, 차집합 **20개**는 정확히
-  **가드 테스트 파일들과 하네스 자신**이다.
+> **결정 당시(2026-09-20)에는 57 / 20 이었고, 차집합에 하네스 자신이 들어 있었다.**
+> 그 뒤 두 가지가 바뀌었다 — `test_harness_commit_guard.py` 삭제(14절)로 −1,
+> 하네스 자신이 StaticCase 대상이 되면서(12절) 뮤테이션 집합으로 이동. **결론은
+> 그대로다.** 차집합이 여전히 "가드 테스트 파일들" 이고, 그게 논거의 전부다.
 
-그 20개는 **오늘 미커밋인 채로 하네스를 돌릴 수 있는 파일들**이다. 그리고 그게
-가드를 새로 쓸 때의 정확한 루프다 — 테스트를 쓰고 `StaticCase` 를 등록한 뒤
-하네스를 돌려 red 를 확인한다. 이번 세션에서만 이 루프를 여러 번 탔다
-(`test_auto_lint_hook_guard.py`, `test_harness_commit_guard.py`).
+- `_mutated_files()` 의 **37개**는 하네스가 실제로 덮어썼다 복원하는 파일이다.
+- `--list-targets` 의 **56개**는 CI 트리거 경로이고, 차집합 **19개**는 전부
+  `tests/` 의 가드 테스트 파일이다.
 
-`HEAD` 워크트리로 옮기면 그 20개의 미커밋 변경이 **존재하지 않게 된다.** 새로
+그 19개는 **미커밋인 채로 하네스를 돌릴 수 있는 파일들**이다. 그리고 그게 가드를
+새로 쓸 때의 정확한 루프다 — 테스트를 쓰고 `StaticCase` 를 등록한 뒤 하네스를 돌려
+red 를 확인한다. 이번 작업에서만 이 루프를 여러 번 탔다.
+
+`HEAD` 워크트리로 옮기면 그 19개의 미커밋 변경이 **존재하지 않게 된다.** 새로
 등록한 케이스는 실행조차 되지 않고, 하네스는 "0개 케이스 통과" 로 조용히 green 을
 낸다 — 이 하네스가 막으려는 바로 그 침묵이다.
 
 따라서 손실은 가설이 아니라 **주 작업 흐름 자체**다. (a) 를 택한다.
 
-#### (a) 가 안전한 이유 — 패치가 뮤테이션 대상과 겹칠 수 없다
+#### (a) 가 안전한 이유 — 워크트리가 일회용이라서
 
-`_assert_safe_to_run()` 이 37개 대상의 청결을 **이미 보증**하므로, 이식할 diff 에는
-그 37개의 헝크가 **구조적으로 0개**다. 즉 이식이 뮤테이션 대상을 건드릴 일이 없고,
-`git apply` 충돌 위험도 그만큼 좁다.
+> **2026-09-23 정정.** 원래 여기 적은 논거는 "`_assert_safe_to_run()` 이 37개
+> 대상의 청결을 보증하므로 이식할 diff 에 그 헝크가 구조적으로 0개다" 였다.
+> **그 함수는 이제 없다** — 이식된 미커밋 변경 때문에 항상 중단하게 되어 3단계에서
+> 호출을 뺐고, 죽은 코드로 남아 있던 것을 2026-09-23 에 삭제했다. 논거만 무효이고
+> 결론은 유효하다.
+
+지금의 근거는 더 단순하다: **변형 대상이 일회용 워크트리 사본이다.** 뮤테이션 대상
+37개에 미커밋 변경이 있으면 그것도 워크트리로 이식되고, 하네스는 **그 사본을**
+변형했다 복원한다. 메인 트리는 어느 쪽이든 읽히기만 한다.
+
+부수 효과로 **작업 흐름이 넓어졌다** — 옛 규약에서는 대상 파일이 더러우면 하네스가
+아예 중단했지만, 이제는 그 파일들도 미커밋 상태로 검증할 수 있다.
 
 이식 대상은 두 가지이며 **둘 다** 필요하다:
 1. 추적 파일의 변경 — `git diff HEAD`
@@ -178,9 +184,9 @@ tests/test_check_pilot_observation_control_group_guard.py
 → Q1: 스냅샷은 **필요하다**(실제 오염을 되돌린다). Q6: shallow 클론에서 **된다**.
 
 **2단계 — Q4 결정.** ✅ **완료 (2026-09-20) — (a) 로 결정.** 근거는 4절 참조:
-`_assert_safe_to_run` 이 보는 37개와 트리거 경로 57개의 **차집합 20개**가 정확히
-가드 테스트 파일들이고, 그게 가드 저작 루프의 작업 대상이다. 미추적 파일 이식이
-load-bearing.
+뮤테이션 집합(37)과 트리거 경로(56)의 **차집합 19개**가 전부 가드 테스트 파일이고,
+그게 가드 저작 루프의 작업 대상이다. 미추적 파일 이식이 load-bearing.
+(결정 당시 수치는 57/20 이었다 — 4절에 차이의 출처를 적었다.)
 → 검증: 결정과 실측 근거가 이 문서 4절에 기록됨. ✅
 
 **3단계 — 진입점 분리.** ✅ **완료 (2026-09-21).** `run_via_worktree()` 가 일회용
@@ -189,19 +195,23 @@ load-bearing.
 → 검증: 별도 셸에서 0.4초 간격 폴링하며 `--check --shard 1/8` 실행.
    **편차 0회**, 뮤테이션 대상 4개 파일 해시 전부 불변, 워크트리 잔재 0. ✅
 
-**4단계 — 정리 보장.** ✅ **구현 완료 (2026-09-21).** `finally` 에서
+**4단계 — 정리 보장.** ✅ **완료 (2026-09-23 실측까지).** `finally` 에서
 `git worktree remove --force` + `prune`, 다음 실행 시작 시 `_prune_orphan_worktrees()`.
-→ 검증: 가드 2건(`test_orphan_harness_worktrees_are_pruned`,
-   `test_pruning_spares_agent_worktrees`) + 뮤테이션 확인. `kill -9` 실측은 미실시.
+→ 검증: `kill -9` 실측 완료 — **15절 참조. 그 실측이 실제 결함 2건을 찾아냈다.**
 
-**5단계 — CI 전환.** `guard-falsifiability.yml:122` 의 8샤드가 각자 워크트리를 만든다.
+**5단계 — CI 전환.** `guard-falsifiability.yml:145` 의 8샤드가 각자 워크트리를 만든다.
 → 검증: CI 8샤드 전부 green, 잡당 추가 시간 측정치 기록.
 
 **6단계 — #1347 락·훅 처리.** 아래 6절.
 
-## 6. #1347 의 락·훅을 걷을 것인가
+## 6. #1347 의 락·훅을 걷을 것인가 — ⚠️ **이 절의 결론은 14절에서 뒤집혔다**
 
-**걷지 않는다.** 이유:
+> **아래는 2026-09-19 시점의 판단이다. 2026-09-22 에 걷었다** — 락, 훅,
+> `tests/test_harness_commit_guard.py` 전부 제거됐다. 재판단의 근거와 실행 내역은
+> **14절**에 있다. 이 절을 남기는 이유는 "그때는 왜 남기기로 했는가" 가 14절의
+> 전제이기 때문이다.
+
+**(당시 판단) 걷지 않는다.** 이유:
 
 - 워크트리 전환은 **하네스 경로**만 막는다. 락·훅은 "워킹트리를 건드리는 도구가
   도는 중" 이라는 더 일반적인 신호이고, 다른 도구가 같은 실수를 하면 재사용된다.
@@ -213,12 +223,16 @@ load-bearing.
 `guard-harness-commit-guard.sh` 의 주석과 `tests/test_harness_commit_guard.py` 의
 docstring 을 갱신해야 한다 — 안 하면 문서가 거짓이 된다.
 
+> **후일담:** 갱신 대신 **삭제**가 답이었다. 두 파일 다 14절에서 제거됐다.
+
 ## 7. 하지 않을 것
 
 - 워크트리 **재사용 캐시**. Q3 대로 매번 생성이 기본이다. 재사용은 지금 고치려는
   "잔재가 남는다" 문제를 되살린다. 비용이 실제로 문제가 된 뒤에 검토한다.
 - `--no-checkout` 워크트리. 테스트를 돌려야 하므로 파일이 필요하다.
-  (단 **가드 테스트**에는 이미 쓰고 있다 — 0.28초, `test_harness_commit_guard.py`)
+  (단 **가드 테스트**에는 쓰고 있다 — 0.3초,
+  `tests/test_guard_falsifiability_worktree.py:56` 의 `synthetic_worktree` 픽스처.
+  원래 여기 적었던 `test_harness_commit_guard.py` 는 14절에서 삭제됐다.)
 - 하네스 외 다른 도구의 워크트리 전환. 범위 밖이다.
 
 ## 8. 되돌리기
@@ -290,9 +304,10 @@ S _state/image_rejection_metrics.json
 트리의 `guard-harness-commit-guard.sh` 는 그 락을 **보지 못한다.**
 
 전환 후에는 그게 맞는 동작이다 — 메인 트리를 변형하지 않으니 커밋을 막을 이유가
-없다. 다만 6절의 "락의 의미가 바뀐다" 는 서술을 이 사실로 구체화해야 한다:
-바뀌는 것은 의미만이 아니라 **가시 범위**다. 훅 주석과
-`tests/test_harness_commit_guard.py` 갱신 시 이 점을 명시할 것.
+없다.
+
+> **결말(14절):** 이 관측이 "락이 무엇을 지키는가" 를 되묻게 했고, 결국 락·훅을
+> **걷는** 판단으로 이어졌다. 훅 주석을 갱신할 일은 없었다 — 파일 자체가 사라졌다.
 
 ## 10. Q2·Q3·Q5 결정 (2026-09-21)
 
@@ -510,3 +525,54 @@ PreToolUse/Bash 에 걸려 있어 커밋이 아닌 명령도 비용을 낸다.
 
 제거 후 실측: `--check --shard 8/8` → 13/13 falsifiable, `git status` 편차 0,
 뮤테이션 대상 해시 불변, 락 파일 미생성.
+
+## 15. SIGKILL 실측 — 고아 정리가 **한 번도 작동하지 않았다** (2026-09-23)
+
+4단계의 종료 조건 중 `kill -9` 실측만 미실시로 남아 있었다. 돌려 보니 **결함 2건**이
+나왔다. 가드는 둘 다 green 이었다.
+
+### 결함 1 — 접두사가 엉뚱한 곳에 있었다
+
+프로덕션이 만드는 경로는 `mkdtemp(prefix=…)/wt` 였다. 정리 로직은
+`_WORKTREE_PREFIX in Path(path).name` 을 보는데, `git worktree list` 가 주는 경로의
+`.name` 은 **`"wt"`** 다. 접두사는 **부모**에만 있었다.
+
+즉 **고아 정리가 단 한 번도 매치된 적이 없다.** SIGKILL 후 재실행해도 고아가 그대로
+남았다(실측).
+
+가드가 통과한 이유: `test_orphan_harness_worktrees_are_pruned` 이 고아를
+`tmp_path / f"{PREFIX}orphan"` 으로 만들었다 — **워크트리 디렉토리 자체가** 접두사를
+가진, 프로덕션과 다른 모양이다. 손으로 만든 픽스처가 프로덕션 경로를 대변하지
+못한 전형적인 경우다.
+
+→ 수정: 워크트리 디렉토리 이름에 접두사를 붙인다(`{PREFIX}wt`).
+→ 재발 방지: `test_created_worktree_is_recognised_by_the_pruner` 가 **프로덕션이
+  실제로 만든 경로**를 받아 정리 필터에 먹인다. **생성과 정리를 묶는다.**
+
+### 결함 2 — 등록은 지워지고 디렉토리는 남았다
+
+`git worktree remove --force` 가 실패해도 뒤따르는 `git worktree prune` 이 등록을
+지운다. 그러면 `git worktree list` 는 깨끗해 보이는데 `/tmp` 에 22k 파일 체크아웃이
+남고, **이후 실행은 그것을 목록에서 찾을 수 없어 영영 정리하지 못한다.**
+
+→ 수정: 제거 시도와 **같은 반복 안에서** 부모 디렉토리를 `rmtree` 한다(prune 전).
+→ 폭발 반경 제한: 부모 이름 검사(`parent.name.startswith(PREFIX)`)는 앞의 필터와
+  **독립**이어야 한다. 앞 필터가 무력화돼도 여기서 멈춘다 — 안 그러면
+  `.claude/worktrees/agent-*` 의 부모인 `.claude/worktrees/` 가 통째로 날아간다.
+  11절의 사고가 실제로 있었으므로 가정하지 않고 막았다.
+  가드: `test_pruning_never_touches_a_parent_without_the_prefix`.
+
+### 수정 후 실측 (깨끗한 시작점)
+
+```
+kill -9 직후   등록된 고아 2 / 임시 디렉토리 1
+재실행         15/15 guards falsifiable
+재실행 후      하네스 워크트리 등록 0 / 임시 디렉토리 0 / 메인 트리 무손상
+               에이전트 워크트리 5개 그대로
+```
+
+### 계측 자체도 한 번 틀렸다
+
+`git worktree list | grep -c harness-` 로 셌더니 **현재 브랜치명**
+(`fix/harness-orphan-prune-never-matched`)에 매칭돼 잔존 1건으로 나왔다. 경로만
+세도록 고치니 0이다. 계측 도구도 판별력을 확인해야 한다.

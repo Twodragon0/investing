@@ -351,6 +351,31 @@ def test_a_clean_tree_ports_nothing_and_does_not_fail(tmp_path: Path, monkeypatc
 # ---------------------------------------------------------------------------
 
 
+def test_created_worktree_is_recognised_by_the_pruner() -> None:
+    """**생성과 정리를 묶는다.** 이게 이 파일에서 가장 중요한 단언일 수 있다.
+
+    정리 로직은 `git worktree list` 가 주는 경로의 `.name` 에서 접두사를 찾는다.
+    그런데 생성 쪽이 `mkdtemp(prefix=…) / "wt"` 였다 — 접두사가 **부모**에만 있고
+    `.name` 은 `"wt"` 라서 **고아 정리가 한 번도 매치되지 않았다.**
+
+    기존 고아 테스트는 이걸 못 잡았다. 고아를 `<prefix>orphan` 으로 직접 만들어
+    **프로덕션과 모양이 달랐기** 때문이다. 손으로 만든 픽스처가 프로덕션 경로를
+    대변하지 못한 전형적인 경우다.
+
+    2026-09-23 SIGKILL 실측에서 드러났다 — 강제 종료 후 재실행해도 고아가 그대로
+    남았다. 여기서는 **프로덕션이 실제로 만든 워크트리 경로**를 받아 정리 필터에
+    그대로 먹여 본다.
+    """
+    with gf._disposable_worktree() as worktree:
+        created = worktree
+
+    assert gf._WORKTREE_PREFIX in Path(created).name, (
+        f"프로덕션이 만든 워크트리 이름 {Path(created).name!r} 에 접두사 "
+        f"{gf._WORKTREE_PREFIX!r} 가 없다. 정리 로직은 `.name` 만 보므로 "
+        "SIGKILL 이 남긴 고아가 **영영 정리되지 않는다** — 매 실행마다 워크트리가 쌓인다."
+    )
+
+
 def test_orphan_harness_worktrees_are_pruned(tmp_path: Path) -> None:
     """SIGKILL 이 남긴 워크트리를 다음 실행이 치운다.
 
@@ -371,6 +396,50 @@ def test_orphan_harness_worktrees_are_pruned(tmp_path: Path) -> None:
 
     listed = subprocess.run(["git", "worktree", "list"], cwd=src, capture_output=True, text=True, check=False).stdout
     assert str(orphan) not in listed, f"고아 워크트리가 등록부에 남았다:\n{listed}"
+
+
+def test_pruning_also_removes_the_leftover_directory(tmp_path: Path) -> None:
+    """등록만 지우면 **디스크에 디렉토리가 남는다.**
+
+    2026-09-23 SIGKILL 실측: `git worktree remove --force` 가 실패해도
+    `git worktree prune` 이 등록을 지워 `git worktree list` 는 깨끗해진다. 그래서
+    "정리됐다" 로 보이지만 `/tmp` 에 22k 파일짜리 체크아웃이 그대로 남는다.
+
+    프로덕션과 **같은 모양**(부모·자식 둘 다 접두사)으로 만들어 검증한다.
+    """
+    src = _synthetic_repo(tmp_path)
+    parent = tmp_path / f"{gf._WORKTREE_PREFIX}leftover"
+    parent.mkdir()
+    orphan = parent / f"{gf._WORKTREE_PREFIX}wt"
+    _worktree_of(src, orphan)
+    assert orphan.exists()
+
+    gf._prune_orphan_worktrees(root=src)
+
+    assert not parent.exists(), f"등록은 지웠지만 디렉토리 {parent} 가 남았다. 매 SIGKILL 마다 체크아웃 한 벌씩 쌓인다."
+
+
+def test_pruning_never_touches_a_parent_without_the_prefix(tmp_path: Path) -> None:
+    """**폭발 반경 제한.** 부모 이름 검사는 앞의 필터와 **독립**이어야 한다.
+
+    실제 배치는 `.claude/worktrees/agent-<hex>` 다 — 부모가 `worktrees` 로,
+    접두사가 없다. 부모 검사가 앞 필터에서 파생되면, 그 필터가 무력화됐을 때
+    `.claude/worktrees/` 가 통째로 날아간다. 2026-09-21 에 에이전트 워크트리
+    5개를 실제로 지운 적이 있어서 가정하지 않고 고정한다.
+    """
+    src = _synthetic_repo(tmp_path)
+    shared_parent = tmp_path / "worktrees"
+    shared_parent.mkdir()
+    bystander = shared_parent / "agent-deadbeef"
+    _worktree_of(src, bystander)
+    # 같은 부모 아래에 하네스 워크트리를 둔다 — 부모는 접두사가 없다.
+    harness = shared_parent / f"{gf._WORKTREE_PREFIX}wt"
+    _worktree_of(src, harness)
+
+    gf._prune_orphan_worktrees(root=src)
+
+    assert shared_parent.exists(), f"접두사 없는 부모 {shared_parent} 를 지웠다 — 이웃 워크트리가 함께 날아간다"
+    assert bystander.exists(), "하네스가 아닌 워크트리가 삭제됐다"
 
 
 def test_pruning_spares_agent_worktrees(tmp_path: Path) -> None:
