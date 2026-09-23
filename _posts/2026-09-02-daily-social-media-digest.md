@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-09-02 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeUxjcERJSDVINVoxRF9GazhDY180RWYyUl9mMWlKSlZSR2VnWlFOb1VFME9CZ1JYSThDVjR1RWRFQkxhd0lfRHJXNHgyUWxGQTNjOGVoVTBWT1pvdkpWdDhmQl8yUG10cG9HcWRobGZXQkFRTWlKcWh2cjROWDNjM2FFdUVGclpXOVZqMjFKeS05YkJ5MXZPX0Qyd0psYVZDeDhPUmF5LTFzT2RORkdrOHZYNmhFdzB5MUZn?oc=5">BoC 금리 결정 앞두고 캐나다 달러 약세, 10년물 수익률 2년래 최고치 기록 - KITCO</a> <span class="p0-desc">토론토, 9월 1일 (Reuters) - 투자자들이 다음 달 연준 금리 인상에 베팅하고 글로벌 채권 시장의 매도는 캐나다 은행(Bank of Canada) 금리 결정을 앞두고 국내.</span></li><li><a href="https://www.forexfactory.com/news/1415959-canadian-dollar-weakens-ahead-of-boc-rate-decision">캐나다 달러는 BoC 금리 결정을 앞두고 약세, 10년 수익률이 2년 최고치를 기록 - Forex Factory</a> <span class="p0-desc">캐나다 달러는 BoC 금리 결정을 앞두고 약세를 보이고, 10년 수익률은 2년 최고치를 기록했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQeGNmR2NENUNjc3N6bjM3LUNXM1ZfRXUzVDhSNkRsUlBXU1ZMTlN5NmNBUkRhbG9tZC01NEVaT29HaExLb2FqYTVGQTdoUjhMREdaM2piUUd1bHlaWHh1eW40R1ZoNXFuMjZ1RExxN3YxVEM2bm5pb0NwWGVsYngyanMtUlJ2dWcxSFRyQldFaS05WGJHMGZBQ0NrdTNZUWc1MFB4dVBsNldSQ2JKSGJ5RDF1cG9oaW5fQWZtUTVlTW5GT1FWN1VPNTB3OE9leGRqSU93V0NkYWhfUUVRTzQwenln?oc=5">미국 국채 수익률은 계속해서 신고가를 경신하고 있으며, 9월 미국 주식이 3중 압력에 직면하면서 필라델피아 반도체 지수가 2% 이상 하락했습니다. - TradingKey</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 37건 중 텔레그램 0건, 소셜 0건, 정치·경제 37건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 37건 중 텔레그램 0건, 소셜 0건, 정치·경제 37건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

@@ -23,12 +23,9 @@ permalink: "/political-trades/2026/03/08/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **trump(트럼프)**(4회), **congress**(4회), **pelosi**(2회), **sec(미국증권거래위원회)**(2회), **tariff(관세)**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
 - 트럼프 정책: 2건 (관세·무역 1건, 암호화폐 1건). 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
-- 1. Pelosi는 혼자가 아닙니다 - 의회는 거래 현장입니다 - Washington Examiner Pelosi는 혼자가 아닙니다.
 
 ## 미국 의회 거래 동향
 
