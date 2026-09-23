@@ -33,51 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-23 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 폭락 - 207건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 선물 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPVU84Ukp5c3BKWWhwTjAwUm1GakFUSnJVQVVNRjNLNnRGWU5EN19Ndk9wM05iU19rSmdtZGlyMlRIUFVfQU9JWklwZXdlRzNacUtUUTdtRkl6b0pRZHk2SGRrdFdIM0dRYTBTQzd1aUJ0a1N4MTM2V1paRk1qYUJtcktIcklJUUl4RlNPSUJfeVhDMEx0QndwVw?oc=5">Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Almost 70 Years' Worth of History. - The Motley Fool</a></li><li><a href="https://www.sedaily.com/article/20094090">추석 앞두고 달러 매도 쏟아져…원·달러 환율 22.8원 급락 [김혜란의 FX</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Almost 70 Ye. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 207건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (58건): 코스피, 하이닉스, 코스닥 가격 변동 (58건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (20건): 환율, 국채, 연준 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (21건): 반도체, 삼성전자, 하이닉스 기술 이슈 (21건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Almost 70 Years
-- 추석 앞두고 달러 매도 쏟아져…원·달러 환율 22.8원 급락 [김혜란의 FX
-
-### 주요 이슈
-
-- 핫타임] 삼성전자 4% 가까이 급등…美 반도체 훈풍 속 실적 기대도 재부각
-- Good News for S&P 500 Earnings: 86% of Companies Beat Expectations in 2026
-- Princeton’s 15-year run as the nation’s top-ranked university is over. MIT is no
-- 외 15건
-
-### 투자자 체크포인트
-
-- 한국 기사 71건, 글로벌 기사 136건 수집
-- 한국 지수: KOSPI 7,017.91(+0.15%), KOSDAQ 834.38(-0.23%), USD/KRW 1,357.43(-1.26%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">58건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:34%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:21%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:14%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-23.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,017.91 (+0.15%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 834.38 (-0.23%).
+- 2026-09-23 주식 시장에서 207건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,017.91(+0.15%), KOSDAQ 834.38(-0.23%), USD/KRW 1,357.43(-1.26%).
+- *한강타임즈 김광호 기자 = 22일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스
 

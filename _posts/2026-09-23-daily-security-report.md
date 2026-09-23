@@ -16,27 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 10건 분석. 주목 사건: **[Security] North Korean fake recruiters infect 30K devices, **.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Drop exploit: Malicious Proposal 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 10건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (10건): security, exploit, manipulation 보안 이슈 (10건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (7건): exploit, manipulation, compromised 생태계 동향 (7건) — 가스비·TVL 변화를 함께 확인하세요.
-- **📈 가격/시장** (3건): manipulation, exploit, spot 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-### 긴급 이슈
-
-- [Security] Drop exploit: Malicious Proposal
-- [Security] Astroport exploit: Malicious Proposal
-- [Security] The Internet Token exploit: Arbitrary External Call
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 10건

@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-23 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: White hats outrun Coldcard hackers in 52-Bitcoin evacuation - 85건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 20건 수집</li><li>🟣 <strong>DeFi</strong>: 9건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/white-hats-coldcard-btc-exploit-galaxy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">White hats outrun Coldcard hackers in 52-Bitcoin evacuation</a></li><li><a href="https://decrypt.co/378978/white-hat-hackers-coldcard-exploit-bitcoin-recovery-trust">White-Hat Hackers Route Coldcard Exploit Bitcoin Into 'Recovery Trust'</a></li><li><a href="https://www.coindesk.com/markets/2026/09/22/whitehats-move-52-bitcoin-from-the-coldcard-hack-to-a-recovery-trust">Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: White hats outrun Coldcard hackers in 52-Bitcoin evacuation 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 85건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인, 달러, 돌파 관련 (47건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (33건): 암호화폐, 달러, 돌파 가격 변동 (33건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (20건): binance, circle, stake 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- White hats outrun Coldcard hackers in 52-Bitcoin evacuation
-- White-Hat Hackers Route Coldcard Exploit Bitcoin Into 'Recovery Trust'
-- Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust
-
-### 주요 이슈
-
-- Investors Can Now Invest in the Surging Tron Cryptocurrency Via an ETF. Here's W
-- Zcash gets first European ETP following US ETF launch
-- ECB, EU cenbanks seek changes in MiCA’s minimum bank deposit for stablecoins
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Google News KR(15건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-23.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-09-23 암호화폐 시장 85건 분석 — 핵심 테마: 비트코인, 가격/시장, 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

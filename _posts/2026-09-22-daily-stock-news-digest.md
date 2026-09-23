@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-22 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 베선트 "AI 모델이 해킹 사고 내면 해당 AI 회사 경영진 책임" - 150건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 코스피 주목</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 반도체 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 관련 14건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202609219335i">베선트 "AI 모델이 해킹 사고 내면 해당 AI 회사 경영진 책임"</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 7,007.72 (+1.65%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 836.27 (+1.11%).
+- 2026-09-22 주식 시장에서 150건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,007.72(+1.65%), KOSDAQ 836.27(+1.11%), USD/KRW 1,374.15(-0.85%).
 - *한강타임즈 김광호 기자 = 21일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스
