@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5lcURjQkg5NlZoeXI0OWEyN2QtVXc2SVZ5X0o4MkZUdnNPa3ZjNmZEYTJyOVpKSUtoODlwenhmYU96dklicnJvbjg5enotdG1FVm40VmhWaU9ydEZD?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 7만7000달러 박스권…8만달러 '벽' 못 넘고 관망 장세 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 7만7000달러 박스권…8만달러 '벽' 못 넘고 관망 장세 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 가상자산 시장이 뚜렷한 방향성을 찾지 못한 채 박스권 흐름을 이어가고 있다.비트코인은 7만7000달러 부근에서 등락을 반복하며 상승을 시도하고 있지만, 핵심 저항선인 8만달러 돌파에는 거듭 실패하는 모습이다.한국 시간 1일 오후</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -206,7 +206,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxNbEprOVFhM3hyQ3RJMGFWY2dnRVQ3V3ItNEw4dmhVSDVuRFROTTZVczh3OXhrSkJvZkhMZEZlX3ctd0szX3FNNktGTVFVc1B2REEySkN2M3A5dnBxdnVId2ZmMzFNTENrS2VYRzBmV1VZbnlDZFlQRXNHNlRTOU5vX08tVU4xSkgtWE0yNDBGeFJYMWZHLVppUXJWSG01cnhUejdfRDVSWkxJTV9wdHFaSnUzV2ZIbzZiM1dNeXc0WW5xU3QzV2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인(BTC), 주가 상승과 이란 낙관론에 따른 유가 하락 속에서 8만 달러 재도전 - CoinDesk</a>
-<p class="news-desc">비트코인(BTC), 주가 상승과 이란 낙관론에 따른 유가 하락 속에서 8만 달러 재도전 CoinDesk</p>
+<p class="news-desc">비트코인은 금요일 미 증시 개장과 함께 위험 선호 심리가 개선되면서 상승세를 이어갔습니다. 가장 큰 암호화폐는 지난 24시간 동안 거의 3% 상승하며 밤사이 시작된 상승세를 계속 이어가고 있습니다. 비트코인은 마지막 거래에서 78,722달러를 기록하며 다시 한 번 80,000달러 선에 근접했습니다. 이번 주 초, 비트코인은 해당 수준에 접근했으나 돌파에는 실패했고, 매수세가 다시 유입되기 전 가격이 하락했습니다. 동시에, 이란이 미국과의 협상 재개를 목표로 한 새로운 제안을 보냈다는 보도 후 원유 가격이 하락했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -285,7 +285,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UbHJGVHdsWlBESmhUWlV5SUhoX2tDYm13WTlqYXprUlBHUzdhbUVyVkoxZUY0My0zWlowUXJPaC1IVGt4U3JhTC0zcmE4VXBUTUh3dVpES2NDeTBXUV9WRNIBZkFVX3lxTE9TZURrNWROYUk0ZFNYei1naVp5YkpnQnBheFN3TG1MRzd3amhUamp4bS1NTmRuUzljcEh4TmZlMjQ4V3d6Ml9kbXBSU3c5Yjd5MC00Y2ZHN09xekhXNG1MRkF5VFdDQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미 국방장관 "비트코인, 대중국 전략 레버리지 될 수 있다" - tokenpost.kr</a>
-<p class="news-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인사이트를 제공합니다.</p>
+<p class="news-desc">피트 헤그세스 미 국방장관이 의회에서 비트코인(BTC)이 중국과의 경쟁에서 미국의 전략적 지렛대가 될 수 있다고 밝혔다.&lt;br /&gt; 미 국방부 수뇌부가 비트코인을 안보 자산이자 지정학 변수로 보기 시작하면서 후속 정책 여부에 관심이 쏠린다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -297,7 +297,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQdThjVXc5bjNWYmtfUGQxTE5vYmpJQl82MFJYR0RlR2hiOGZhLXdYLVZ1aUxUeXBqVndLSnFCOEUxd0FaVEZpeDBOeW9wd2NRbTQxaEhUcXNBUkdtQVJxeUhxSGpveXpJREktNmVRQnYycXBONkJwUmlLSjRKS0xKMWxJV0l6X1FmX2hscjhvZ3FDZWx3XzJvRE56THRvcy1yaE5IMFM0MFVlY3l3c1E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">그록이 찍어준 비트코인·이더리움·리플 5월 관전 포인트 - Cryptonews</a>
-<p class="news-desc">그록이 찍어준 비트코인·이더리움·리플 5월 관전 포인트 Cryptonews</p>
+<p class="news-desc">그록이 비트코인 9.5만 달러, 리플 예상가 2달러라는 구체적인 가격 전망을 내놓았다. 비트코인 7만 5,000달러 사수 여부에 따른 상방 돌파 조건과 이더리움·리플의 핵심 지지선을 심층 분석한다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -91,7 +91,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9UV0pWZFlSVzUwMTRqdXlsUTdYTkVxdF9pWGRWd0tHUFBHRGVZOXBGTFdpZ1JFdmNKWlU4bElMWGp6S1NseHF3aWthNHN6UGhRQWFCY1o0WHVBSHJGOURNVDRVYjVkUEJoRlZMekFKUDdCTlIxUnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">0923마감체크] 메타發 AI 호재 지속 속 반도체주 강세… 코스피·코스닥 상승 마감</a>
-<p class="news-desc">[0923마감체크] 메타發 AI 호재 지속 속 반도체주 강세… 코스피·코스닥 상승 마감 인포스탁데일리</p>
+<p class="news-desc">[인포스탁데일리=윤서연 기자]▶마감체크■ 코스피 지수밤사이 뉴욕증시가 美-이란 협상 주시, 美-中 정상회담 대기 속 혼조세를 나타냈고, 유럽 주요국 증시는 대부분 상승했다.반도체주 강세 속 장초반 2% 가까이 상승하기도 했던 코스피지수는 추석 연휴를 앞두고 관망 심리가 짙어지며 일부 상승폭을 반납하며 0.90% 상승한 7080.92에 장을 마감했다.수급별로는 기관이 3192억 순매수, 개인과 외국인은 각각 1조4329억, 5196억 순매도했다. 기타법인은 1조6387억 순매수했다. 선물시장에서는 외국인과 개인이 각각 1356계약,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

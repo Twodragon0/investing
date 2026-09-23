@@ -148,7 +148,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBJNlRNRktmTFAwaHlQUWxBQTk5R0dLb0JPNzdwdWhTdjc2RnFTY0hwUWJycWZ2bXlmRjQyN1Q5RU9SV2tHTHRYbjdEcDZ4dTlkanJFNnNla0ZDalUtWnFKOW02RHEtdUFjd2pr?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 =30일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 48.49포인트 오른 6739.39에 시작했으며, 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -179,7 +179,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kLVZmQXpBRzQwV2FLN0V2NHdFZFBkYlpndDdUbmxkSm5JOFZOWVJydVNQZ0VfZmFjVWVja3gzdmgzUXNCY0o4RUZ0S2RHV0tqMHVRdUFsT3ZHUdIBVEFVX3lxTFBRMWxIWFY5ckw3LUJyaWJuOG9ybmdPMkJmdTNyeUxOUG04TC1STDVEamM4b21nOU0weXV0LTBwRG96a2NLS21IOE1mbFBCOV9UdEMzQw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'반도체만 가란 법 있나'…소외주 5월에 '대반전' 노린다</a>
-<p class="news-desc">'반도체만 가란 법 있나'…소외주 5월에 '대반전' 노린다 한국경제</p>
+<p class="news-desc">전쟁 리스크를 뚫고 4월 한 달간 쉼없이 질주하던 코스피지수가 6590선에서 마감했다. 증권가에선 실적 모멘텀이 약한 5월에 들어서면 그간 상승장을 이끈 반도체, 건설주 등이 ‘숨 고르기’에 들어갈 것이란 예측이 많다. 그 대신 헬스케어, 화장품, 유통 등 상대적으로 소외됐던 업종을 중심으로 ‘순환매 장세’가 펼쳐질 것이란 의견이 나온다. 30일 한국거래소에 따르면 이날 코스피지수는 전일 대비 1.38% 내린 6598.87에 마감했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -191,7 +191,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5zbmZHQWlkYXhtMVlPVVVRMXBMSm8zZkNub2VaaHNhbHR5MkZMdjZqNmNOSXFNeU1hdlYxN2t0X2RsRkhoUFhaZllLNE9WNFM1b08yYmd3cWRsVllHTUtZOFd5VnMxX2RhYlhPVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">올해 90% 폭등한 KRX반도체…증시 견인 속 쏠림현상 우려도</a>
-<p class="news-desc">올해 90% 폭등한 KRX반도체…증시 견인 속 쏠림현상 우려도 seoulwire.com</p>
+<p class="news-desc">[THE Biz(더비즈)=김범수 기자] 올해 국내 반도체 주가가 4개월 만에 90% 급등하며 코스피 상승세를 주도하고 있다. 하지만 반도체 단일 업종에 대한 우려</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

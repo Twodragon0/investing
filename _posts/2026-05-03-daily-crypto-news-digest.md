@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5jbWQxQnE2X1JkQVdReWRCa1V0ZXAzN1NjTFVzX0hQa2p6SnZhRks3NVpBeDlpaXpTOU9MLWVpOHN1TFhnbkZtMmNVR3lSdTA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“비트코인, 2030년까지 10배 오른다”…‘돈나무 언니’의 대폭등 전망, 왜?</a>
-<p class="news-desc">“비트코인, 2030년까지 10배 오른다”…‘돈나무 언니’의 대폭등 전망, 왜? v.daum.net</p>
+<p class="news-desc">[헤럴드경제=장연주 기자] 일명 ‘돈나무 언니’로 불리는 캐시 우드(Cathie Wood) 아크 인베스트(ARK Invest) 최고경영자(CEO)가 비트코인의 ‘대폭등’ 전망을 내놓아 눈길을 끈다. 오랜 기간 비트코인에 대해 낙관적인 입장을 유지해왔던 그는 2030년까지 비트코인이 현재 가격의 10배를 뛰어 넘을 것이라고 내다봤다. 아크 인베스트는 1일</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -98,7 +98,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZ2xCM3BIZWhBcFNHOHdXbEMySk55RWppMlJJa1BQV0otS1dfUU9FZ095OTQ4NjBxMWV5RVVMMzh3ekd1NTduMUstbEVyM0x0VzJ0TnFjUTBxWm1HWWZBNEl0SlVUNkZmOGRhNHB5dXFQX3ZNclBmUzVhX3NFMktBSzBYWTB2SGlB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미국 암호화폐 판도 뒤흔들 5월 10대 뉴스… 비트코인·XRP 운명은?</a>
-<p class="news-desc">미국 암호화폐 판도 뒤흔들 5월 10대 뉴스… 비트코인·XRP 운명은? 글로벌이코노믹</p>
+<p class="news-desc">미국 암호화폐 시장이 5월의 시작과 함께 거센 변화의 물결을 맞이하고 있다. 비트코인이 8만 달러라는 심리적 저항선 아래에서 숨 고르기에 들어간 가운데, 워싱턴 정가의 규제 움직임과 주요 기업들의 전략적 행보가 시장의 향방을 결정지을 핵심 변수로 떠올랐다.암호화폐 전문매체 크립토베이직이</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -208,7 +208,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA2a1dLSGUyc2dueXlUOU1vZ3ZLYlEwZzZRS2J1TDRWTHF4RU1nVGNFUktMRzIzQWdpcm5TXzBQZk92emUwWWR3Mk04WmNlZHlQWmlR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인베이스·글래스노드, 6월 말 암호화폐 반등 전망…비트코인은 '낙관' 구간</a>
-<p class="news-desc">코인베이스·글래스노드, 6월 말 암호화폐 반등 전망…비트코인은 '낙관' 구간 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 암호화폐 [사진: 셔터스톡][디지털투데이 AI리포터] 코인베이스와 글래스노드는 많은 암호화폐가 단기 바닥을 지난 뒤 5월 중순부터 6월 말까지 회복할 가능성이 있다고 전망했다.2일(현지시간) 블록체인 매체 코인포스트에 따르면 두 회사는 2026년 2분</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

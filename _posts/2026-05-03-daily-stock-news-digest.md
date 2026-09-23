@@ -179,7 +179,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ZaGJFX25QbVl2S19HX1Y0UFFET2ZYSlU4c29BaUR1Tmp6UFBZWFNJNDRjRy1xOWdaNlBCcFY2Ym43RldDR25rY3dmRy1nRThiR0pVM0ZLRVRxSTc3ZUNuV0UzTzBwRV8z?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">FOMC의 '매파적 동결'이 쏜 화살, 환율 1,480원 돌파에 한국 경제 비상 - 더쎈뉴스</a>
-<p class="news-desc">FOMC의 '매파적 동결'이 쏜 화살, 환율 1,480원 돌파에 한국 경제 비상 더쎈뉴스</p>
+<p class="news-desc">(더쎈뉴스 / The CEN News 추재연 기자) 미국 연방준비제도(Fed·연준)가 기준금리 동결과 함께 강한 긴축 의지를 드러내면서 한국 금융시장이 직격탄을 맞았다. 30일 서울 외환시장에서 원/달러 환율은 1,480원을 넘어섰다. 중동발 에너지 쇼크와 연준의 고금리 고수 전략이</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

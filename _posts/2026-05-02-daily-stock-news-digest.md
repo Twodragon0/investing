@@ -79,7 +79,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFAzMFdUVVRjR2c4MlpfVWVfWUlWNTBzaDJUN2tPeFNveXE5TjliclBYQ3BVNS1reExkdXg5SjdsWDl2czcwVGgzMDQ0V0lSWk1CUFhnSEtfS3M5VWx3TWdkTzhYTnhZSEll?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 역사적 실적에 반도체 소부장 주가도 날았다 - 주간동아</a>
-<p class="news-desc">삼성전자·SK하이닉스 역사적 실적에 반도체 소부장 주가도 날았다 주간동아</p>
+<p class="news-desc">반도체 투톱 삼성전자와 SK하이닉스가 올해 1분기 시장 예상치를 뛰어넘는 역사적 실적을 발표하면서 주가 상승세가 소재·부품·장비(소부장)로 확대되는 양상을 보이고 있다. 인공지능…</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -91,7 +91,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-05-02 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kLVZmQXpBRzQwV2FLN0V2NHdFZFBkYlpndDdUbmxkSm5JOFZOWVJydVNQZ0VfZmFjVWVja3gzdmgzUXNCY0o4RUZ0S2RHV0tqMHVRdUFsT3ZHUdIBVEFVX3lxTFBRMWxIWFY5ckw3LUJyaWJuOG9ybmdPMkJmdTNyeUxOUG04TC1STDVEamM4b21nOU0weXV0LTBwRG96a2NLS21IOE1mbFBCOV9UdEMzQw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'반도체만 가란 법 있나'…소외주 5월에 '대반전' 노린다</a>
-<p class="news-desc">'반도체만 가란 법 있나'…소외주 5월에 '대반전' 노린다 한국경제</p>
+<p class="news-desc">전쟁 리스크를 뚫고 4월 한 달간 쉼없이 질주하던 코스피지수가 6590선에서 마감했다. 증권가에선 실적 모멘텀이 약한 5월에 들어서면 그간 상승장을 이끈 반도체, 건설주 등이 ‘숨 고르기’에 들어갈 것이란 예측이 많다. 그 대신 헬스케어, 화장품, 유통 등 상대적으로 소외됐던 업종을 중심으로 ‘순환매 장세’가 펼쳐질 것이란 의견이 나온다. 30일 한국거래소에 따르면 이날 코스피지수는 전일 대비 1.38% 내린 6598.87에 마감했다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

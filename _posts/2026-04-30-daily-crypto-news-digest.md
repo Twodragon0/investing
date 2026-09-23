@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE0zUk03ZkxLTk1HOUFSVzRVdUZab0NZRjFZM2lSeUQtcnRDREczUzRSWDZRYVFwNG5LOVJzUWtxWjZOZUZMd281cl8zOExER2o4YWltUnpVSWdPdVdxSjNWNExuRzIwenItY0JHeXBhZF_SAXRBVV95cUxQMEdyWlJPUjdaOUxEWWVNUUhXRE1IMlFZUl9UT3puRE1PMzVPTG5qWkJZSEtESjJ2R3FmelZ5WGoxYlloNm1xVTVVTjJVMlNyeXpESkc0WE80dzlIWlFWc3dhUFVoLVd5TGZBS1VySzhQMmZ2VA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">가상화폐 대부 "비트코인, 아직 저점 아냐"</a>
-<p class="news-desc">가상화폐 대부 "비트코인, 아직 저점 아냐" 연합인포맥스</p>
+<p class="news-desc">'가상화폐의 대부'로 불리는 투자자 마이클 터핀은 비트코인 가격이 아직 바닥에 도달하지 않았으며, 오는 10월경 5만7천달러 근처에서 저점을 형성할 것이라고 예상했다.28일(현지시간) 코인데스크에 따르면 터핀은 인터뷰에서 "4월 들어 두 자릿수 상승률을 기록했음에도 비트코인은 여전히 하락 국면에 있다"고 진단했다.터핀의 주장은 비트코인이 지난 2월 6만달러에서 저점을 형성했으며, 비트코인 상장지수펀드(ETF)로의 자금 유입과 지정학적 긴장 등에 비트코인 회복세가 시작될 것이란 분석들에 반하는 것이다.비트코인은 지난해 10월 12만</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -99,7 +99,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQm8zZDd4NXhKZHlaMF9KVGJSODBLOGs0UVptb3phenF0MFM4TUtYQjZkb0Qta0xjRGwxSk5DUERNcnJHcXZ1QVh3Y3lKZlBOR241UWJ1UnpXNFR6WW5pem5uNTRIbFM1VEY0V2d4TDBheEpDMTNmQ0xaWm02NGZIak1qYlc0RHlP?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">루미스 의원 "5월 클래리티 법안 심의"… 비트코인 '자유의 돈' 규정</a>
-<p class="news-desc">루미스 의원 "5월 클래리티 법안 심의"… 비트코인 '자유의 돈' 규정 글로벌이코노믹</p>
+<p class="news-desc">미국 정계 내 대표적인 '비트코인 전도사' 신시아 루미스 상원의원이 가상자산 규제 체계의 핵심인 '클래리티 법안(Clarity Act)'의 구체적인 심의 일정을 전격 공개했다. 26일(현지 시각) 코인피디아 등 주요 외신에 따르면, 루미스 의원은 '비트코인 2026' 컨퍼런스 기조연설에</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -130,7 +130,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPMXNXT3loQVZnazFKY0ttRDhXSUthNHFfdjRTWGVTbzhwRzFoQ29JSHlCSWVTUDdCaE0yQ0hqQ29kdWVtdkNQb0VGb0lSTkVMWXA4bHc1VFBtVDVPTUFVaklXbms3dGE3cE1mTDJHckZBUzJYZE4zdjZiQkNZTVVweFhVOUk4V3hoYmppTmtGRFYxdTlIalFiTUhGWXFaQ29oQkN2dk1XWTdUUjZRVHlZMG1YTWs?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인(BTC) 거래량이 빠르게 감소하고 있습니다. 이는 거의 원활하게 끝나지 않는 경우가 많습니다: 크립토 데일리 - CoinDesk</a>
-<p class="news-desc">비트코인(BTC) 거래량이 빠르게 감소하고 있습니다. 이는 거의 원활하게 끝나지 않는 경우가 많습니다: 크립토 데일리 CoinDesk</p>
+<p class="news-desc">비트코인의 추가 상승을 요구하는 목소리가 커지고 있는 가운데, 현물 시장의 참여는 둔화되고 있어 변동성 있는 가격 움직임의 가능성이 열려 있다. Glassnode에 따르면, 일일 비트코인 거래량, 즉 거래된 비트코인 ​​달러 가치가 최근 80억 달러 미만으로 떨어졌습니다. 이는 비트코인 ​​가격이 4만 달러 미만이었던 2023년 10월 이후 최저 수준입니다. 거래량은 2월 초 250억 달러 이상을 기록한 이후 감소세를 보이고 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTFBOdEJEdDM5MXJaLVdiRTdoQUVPNE9QY0hZNXZQYlZlbkV2YW1OM1pPYnFIM3E1bm0xektDX0NyR3lrQlNTM096eEYwTUdUT0RlSENGblhpeldTeWhYMHJoVWVTNmVpRWtOX2NGNVc1QmMtSGZsa2xsMG42Z1FVUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">서울데이터랩]4월 29일 암호화폐 시총 상위종목 동향 - 서울신문</a>
-<p class="news-desc">[서울데이터랩]4월 29일 암호화폐 시총 상위종목 동향 서울신문</p>
+<p class="news-desc">29일 오후 암호화폐 시총 상위종목은 대체로 혼조세였다. 비트코인과 이더리움은 소폭 상승했지만, 리플과 트론은 약세였고 테더는 거래량이 크게 늘었다. 도지코인과 지캐시는 주간 변동성이 두드러졌다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -206,7 +206,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4YTJpdFpqVmJCc1Vua0hXaDZDV04xSjhOZTlHbXlQQ1FGT3dGbGlHeVNoSXROSk5LNEVNOTR5Y09sSjJtSmtITEtfY3FOTE4xYkkw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">캐나다, 암호화폐 ATM 금지 추진…사기범·자금세탁 통로로 규정</a>
-<p class="news-desc">캐나다, 암호화폐 ATM 금지 추진…사기범·자금세탁 통로로 규정 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 종합 - 뉴스 : 비트코인 ATM 기기 [사진: ChainBytes][디지털투데이 AI리포터] 캐나다 정부가 비트코인 등 암호화폐 ATM 금지를 추진한다.29일(현지시간) 블록체인 매체 코인텔레그래프에 따르면 캐나다 정부는 28일 공개한 '2026년 봄 경제 업데이트'</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

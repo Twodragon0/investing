@@ -80,7 +80,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5uRkhjNXFRWUZISlNpYUdzbHRRX2l2U25PdFJ0TWJKa3VHV0gzRkx2LXZQLWhZTGFlUjJxbGEzcnpXUDJLMmxkY0Fhb3BSVzRYLWdPMzdraFlrNVVSVE42Qk1lN2tsRVRDak5B?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 28일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 31.77포인트 오른 6646.80에 시작했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

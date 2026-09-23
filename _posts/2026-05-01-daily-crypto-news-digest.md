@@ -186,7 +186,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB3Qm4wOU1SUndVUmtPOFdJLWZEQzl4Rzd2d1o0aDRjZFprZ1dmTEhSSF94RXRFeVFuemRiR1JBeUFIcFdILXFSMVY3TUZUa2NIdEhudGkxTjBHdUYtalEyWVRfM21BeGJ5RVhSdjMtNNIBc0FVX3lxTE9pVlpqNDVFU1hEQXg1c0x5Y0xueEN4clVzVDlHN3dfZ1V3eWp4OWJHRmp6dDdiSW43WERqS2Q0WjBpaS1NVEtDdGJPT1g2d1VQWEFpanJrRmZUWnpNQzdIS2RYMkVxTER6SHJibWpFUDFSbnc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인시황] 美 해상 봉쇄·금리 동결 '겹악재'…비트코인, 7만5000달러선 '후퇴' - 뉴스웍스</a>
-<p class="news-desc">[코인시황] 美 해상 봉쇄·금리 동결 '겹악재'…비트코인, 7만5000달러선 '후퇴' 뉴스웍스</p>
+<p class="news-desc">[뉴스웍스=정희진 기자] 미국의 해상 봉쇄 방침이 중동 긴장을 키운 가운데 연준의 금리 동결까지 겹치며 가상자산 시장이 약세를 보였다.30일 코인마켓캡에 따르면 오후 1시 36분 기준 비트코인은 24시간 전보다 2.15% 하락한 7만5517.34달러에 거래됐다. 국내 거래소 빗썸에서는 같은 시각 1.301% 내린 1억1294만원을 기록했다.같은 시각 알트코인 역시 하락세를 기록했다. 시가총액 2위 이더리움은 24시간 전보다 3.99% 하락한 2237.69달러에 거래 중이며, 시총 3위 테더는 하루 전 대비 0.05% 내린 0.99달</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -198,7 +198,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOQVVrUGlsWlVZMmNvdUZTVEVybzZ3a3JmUmcyNWlOMGRieGVBTDVPVllPUTFfc0l2elU2SWV0dmRlY2VyRVMwSzVHaDdERTBDV1NjR3UwWXU1ODZtVk5vWDhRb1BSVHBqdjBiQ2FfX3ZKcDNSaDQ0S204MG1oQnJ1Tng2QzVTNDdoV3kzVw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">지금 비트코인과 XRP 내부에서 조용히 일어나고 있는 일 - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">지금 비트코인과 XRP 내부에서 조용히 일어나고 있는 일 네이버 프리미엄콘텐츠</p>
+<p class="news-desc">지금 비트코인과 XRP 내부에서 조용히 일어나고 있는 일 https://t.me/+bQV8JJyruZA3Y2Jl 요즘 암호화폐 시장을 보면 솔직히 답답하죠. 비트코인은 7만 달러대에서 꼼짝을 안 하고, XRP는 1달러 30센트대에서 몇 주째 횡보 중이에요. 차트만 보면</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

@@ -73,7 +73,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOdEpUOXVwTG5ZRmpwVVdxb0d1Vy1mNnp6Qml3V0VIeU9jODVBbW14YlI0bm1YN0FBckc4eEtId05pT2N4YjhnS2lQOURXYkpCc0pUWUkyaGRqYlR5UWc4bjlrZnp6MXpJWU96aDhqM2VnSnJVS2M3S1oxZG1nZUV5UQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">경제이슈] 원·달러 환율 1500원, 뉴노멀인가 - 월간조선</a>
-<p class="news-desc">[경제이슈] 원·달러 환율 1500원, 뉴노멀인가 월간조선</p>
+<p class="news-desc">⊙ “한미 간 기초 체력 역전… 원화는 구조적으로 약해질 수밖에 없어”⊙ “한국 금리가 미국보다 수년째 낮은 것은 처음 있는 일”⊙ 2022년 미국 금리가 한국보다 높아지면서 4년 만에 1100원대에서 1400원대로 치솟아⊙ 연말 이후 달러화 약세 전환 가능성 견해도 있어 원·달러 환율은 2010년 이후 2021년까지 1100원대에서 오르내렸다. 코로나19가 한창이던 2022년 3월에 처음으로 1200원을 넘어섰고, 2022년 5월에 1300원, 2022년 9월에 1400원을 넘어섰다. 불과 반년 만에 벌어진 일이다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -128,7 +128,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBrNDFqTTFyT2hWRGlYcndYVG5wZzh6Y2s2RjJjeFA4b0ZMejl6SlBlLTNjeEdudDd2NGdGNTAxZXNEcVg3VEs5d29iUEZLWlJ6YmFJaUFNeUQ1VEJo?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">개장시황] 코스피, 개인 매수에 강보합…코스닥은 차익실현에 하락 - 뉴스핌</a>
-<p class="news-desc">[개장시황] 코스피, 개인 매수에 강보합…코스닥은 차익실현에 하락 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 28일 국내 증시는 전날 급등에 따른 부담 속에서 보합권 흐름을 보이며 종목별 차별화 장세를 나타내고 있다.한국거래소에 따르면 이날 오전 9시 4분 기준 코스피 지수는 전 거래일 대비 16.74포인트(0.25%) 오른 6631.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
