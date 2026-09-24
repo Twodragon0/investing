@@ -1,39 +1,5 @@
 {
   "seen": {
-    "164538749f31129dab73f92f": "2026-08-24T22:54:37",
-    "347026af1102ddcdcdb37e00": "2026-08-24T22:54:37",
-    "03117b745b6ce39fc302f878": "2026-08-24T22:54:37",
-    "8c0f4d37080356ab4e02d41a": "2026-08-24T22:54:37",
-    "3d9d6552def416b46279ad56": "2026-08-24T22:54:37",
-    "09849776236d39efa0749923": "2026-08-24T22:54:37",
-    "1a85bc6e944d605e3a1fe466": "2026-08-24T22:54:37",
-    "c33b8508bb97d06c03c77a1d": "2026-08-24T22:54:37",
-    "aca27a43e3a6978afe57a435": "2026-08-24T22:54:37",
-    "3ff8a695471cc26d1a969fb7": "2026-08-24T22:54:37",
-    "01e25ae6783b16aa36558fcc": "2026-08-24T22:54:37",
-    "924d86e45351201411608ee4": "2026-08-24T22:54:37",
-    "5a34501048c7434fb7430626": "2026-08-24T22:54:37",
-    "d88b83ef0eb2d7584d7d9f9d": "2026-08-24T22:54:37",
-    "6b0c0e0b7e1543855b9d64ca": "2026-08-24T22:54:37",
-    "509fd9a77d24111aad4ef3ce": "2026-08-24T22:54:37",
-    "39644cf0bd62be2590a12746": "2026-08-24T22:54:37",
-    "f7b80c75456eedfd6280b2d2": "2026-08-24T22:54:37",
-    "4b95b35ec8c487e3060cbd53": "2026-08-24T22:54:37",
-    "fd3dd4047361249d4ee7bc2a": "2026-08-24T22:54:37",
-    "7d62bcb52b1d33f30d1aeb7d": "2026-08-24T22:54:37",
-    "587eac089e950b421c42e7ea": "2026-08-24T22:54:37",
-    "e30be4e5e6a6371db390c05b": "2026-08-24T22:54:37",
-    "9ec8494f4c4ed0f201f0ad51": "2026-08-24T22:54:37",
-    "ec2d1120e5093a68faf734bc": "2026-08-24T22:54:37",
-    "6cfc228ea578483ce21d5c24": "2026-08-24T22:54:37",
-    "208ce2b082964b5af8f5ec19": "2026-08-24T22:54:37",
-    "5f402b10d1fce33bdc42d120": "2026-08-24T22:54:37",
-    "f8fce29025117e8e85400fc8": "2026-08-24T22:54:37",
-    "11a633f7c037636a5b8dbd47": "2026-08-24T22:54:37",
-    "d485d0790350cdf06e9e582d": "2026-08-24T22:54:37",
-    "e22d953d889f8c8018bad7b5": "2026-08-24T22:54:37",
-    "8285a9ee8a9d9d0ba4f22b7f": "2026-08-24T22:54:37",
-    "7be011a97d5b1839da9ed680": "2026-08-24T22:54:37",
     "24a06f4cb61dfe7a905a432a": "2026-08-25T22:56:41",
     "c5b5116c9504371c2ba8b95a": "2026-08-25T22:56:41",
     "8cf3f90683e42cdb51d20808": "2026-08-25T22:56:41",
@@ -725,7 +691,28 @@
     "a8780580e85f9475eb2d7ad6": "2026-09-23T00:50:41",
     "ccd3c8dbe3bead62683db4aa": "2026-09-23T00:50:41",
     "29cabbce05dce4434a725fbb": "2026-09-23T00:50:41",
-    "26d4a84090880c0b86d3ddf6": "2026-09-23T00:50:41"
+    "26d4a84090880c0b86d3ddf6": "2026-09-23T00:50:41",
+    "314f2cb22956d9dd6acdbc5e": "2026-09-24T00:43:30",
+    "c49498ae4615f7478a6b65e6": "2026-09-24T00:43:30",
+    "6cdb0f18cd8b18372a53db46": "2026-09-24T00:43:30",
+    "e6da26f93a02621906b8538b": "2026-09-24T00:43:30",
+    "efb43ccbcb13e8e5175a4789": "2026-09-24T00:43:30",
+    "d205a5fb46e58382f6cf70fd": "2026-09-24T00:43:30",
+    "b727cd5b238686ab9f0aca67": "2026-09-24T00:43:30",
+    "d2dccf01535060b77ae193d7": "2026-09-24T00:43:30",
+    "62db81ed6dcf2033d1fd5fac": "2026-09-24T00:43:30",
+    "79bf71d283ce7791fb733bf5": "2026-09-24T00:43:30",
+    "803703a3605b0a0035c9b940": "2026-09-24T00:43:30",
+    "a6eeea60dfdf7c112272c1eb": "2026-09-24T00:43:30",
+    "6252dda9ca53627e43966ad9": "2026-09-24T00:43:30",
+    "5acd3d20c82f8074caa12276": "2026-09-24T00:43:30",
+    "fd0ff2c74f3f5b4a9e8d7cf7": "2026-09-24T00:43:30",
+    "103e790e6a1b0690a37042c3": "2026-09-24T00:43:30",
+    "e9ba6960d93fca1f0ee723f7": "2026-09-24T00:43:30",
+    "ece9d78842e984faf29b80b9": "2026-09-24T00:43:30",
+    "c971f1ff01a5e8a100d43d38": "2026-09-24T00:43:30",
+    "285810eb3c4b1a74709c74ba": "2026-09-24T00:43:30",
+    "3a97d0dd3ddac49f7ece6923": "2026-09-24T00:43:30"
   },
   "titles": [
     [
@@ -18939,6 +18926,90 @@
     [
       "정치인 거래정책 리포트 20260923",
       "2026-09-23"
+    ],
+    [
+      "트럼프 한 달 주식거래 액수만 3650억 美 의원 전체보다 많아",
+      "2026-09-24"
+    ],
+    [
+      "ford accepts debate challenge fires back at spartz over stock trades larryinfishers",
+      "2026-09-24"
+    ],
+    [
+      "form 4 pinnacle acquisition corp insider trading activity stock titan",
+      "2026-09-24"
+    ],
+    [
+      "sold at 43 a share over two days the bristow group vtol shares were held by solusmanaged accounts stock titan",
+      "2026-09-24"
+    ],
+    [
+      "at 8652 a share mercury systems mrcy executive stuart kupinsky sells stock under a trading plan stock titan",
+      "2026-09-24"
+    ],
+    [
+      "no rights remained after a wilson bank holding co wbhc director exercised 450 cashsettled rights stock titan",
+      "2026-09-24"
+    ],
+    [
+      "a proposed tax sale quantumsi qsi officer christian lapointe lists 14516 shares stock titan",
+      "2026-09-24"
+    ],
+    [
+      "a quantumsi qsi officer plans to sell 7665 shares to cover taxes not as a discretionary trade stock titan",
+      "2026-09-24"
+    ],
+    [
+      "to cover taxes on vested stock quantumsi qsi officer jeffrey alan hawkins plans to sell 29852 shares stock titan",
+      "2026-09-24"
+    ],
+    [
+      "pinnacle acquisition sponsor surrenders 750k shares stock titan",
+      "2026-09-24"
+    ],
+    [
+      "under a trading plan a directors trust sold 5000 cloudflare net shares at 3531501 each stock titan",
+      "2026-09-24"
+    ],
+    [
+      "life360 lif director alex haro exercises options for 50000 shares then sells shares under a preset plan stock titan",
+      "2026-09-24"
+    ],
+    [
+      "no payment changed hands as pinnacle acquisition pnaqs sponsor surrendered shares leaving it with 5 million stock titan",
+      "2026-09-24"
+    ],
+    [
+      "sofi sofi technology chief sells shares under a trading plan and retains 912650 stock titan",
+      "2026-09-24"
+    ],
+    [
+      "daktronics dakt cfo and cto granted 9626 stock units stock titan",
+      "2026-09-24"
+    ],
+    [
+      "under a trading plan lumentum lite executive wupen yuen sold shares on three days stock titan",
+      "2026-09-24"
+    ],
+    [
+      "after selling 14208 shares in june a pinterest pins officer plans another sale stock titan",
+      "2026-09-24"
+    ],
+    [
+      "기준금리와 예금금리 결정 주체부터 다르다 비건뉴스",
+      "2026-09-24"
+    ],
+    [
+      "dollar jumps to 8week high on fed ratehike bets",
+      "2026-09-24"
+    ],
+    [
+      "kevin hassett questions fed rate hike says warsh leads an unusually partisan fed bloomingbit",
+      "2026-09-24"
+    ],
+    [
+      "정치인 거래정책 리포트 20260924",
+      "2026-09-24"
     ]
   ],
   "seen_urls": {}
