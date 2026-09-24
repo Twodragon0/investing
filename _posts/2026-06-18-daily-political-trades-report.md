@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-06-18 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(26회), **내부자**(26회), **트럼프**(2회), **SEC(미국증권거래위원회)**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-06-18 정치권 핵심 이슈: Insider는 International General(나스닥: IGIC) - Stock Titan 주식 100,000주를 매각합니다.. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 30건 (SEC 내부자 거래 15건, 중앙은행…
+- 1. Insider는 International General(나스닥: IGIC) - Stock Titan 주식 100,000주를 매각합니다. Stock Titan의 AI 기반 도구를 사용하여 거래 수준을 높이세요.
 
 ## 1. SEC 내부자 거래 (Form 4)
 

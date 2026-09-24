@@ -16,28 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-24 - 보안 뉴스 요약 �
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] Drop exploit: Malicious Proposal** / 보안 뉴스 헤드라인: 솔라나 뉴스: 솔라나, 시장이 흔들리면서 2억 8천만 달러의 드리프트 익스플로잇 이후 보안을 재평가 - Co.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Drop exploit: Malicious Proposal 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 9건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): security, exploit, manipulation 보안 이슈 (9건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (6건): exploit, manipulation, compromised 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-- **📈 가격/시장** (2건): manipulation, exploit, spot 가격 변동 (2건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Astroport exploit: Malicious Proposal
-- [Security] The Internet Token exploit: Arbitrary External Call
-
-### 투자자 체크포인트
-
-- 보안 사건 8건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건

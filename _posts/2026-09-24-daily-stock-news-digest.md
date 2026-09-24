@@ -33,50 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-24 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 환율 1340원대까지 급락 후 반등…0.2원 오른 1358.4원 [김혜란의 FX - 191건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 관련 44건</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 관련 17건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 관세 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sedaily.com/article/20094610">환율 1340원대까지 급락 후 반등…0.2원 오른 1358.4원 [김혜란의 FX</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 환율 1340원대까지 급락 후 반등…0.2원 오른 1358.4원 [김혜란의 FX 
-총 191건의 뉴스 중 P1 주요 이슈도 26건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (44건): 코스피, 삼성전자, 상승 가격 변동 (44건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (15건): 환율, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (17건): 반도체, 삼성전자, 하이닉스 기술 이슈 (17건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 환율 1340원대까지 급락 후 반등…0.2원 오른 1358.4원 [김혜란의 FX
-
-### 주요 이슈
-
-- The Stock Market Is Flashing Multiple Warning Signs. Is Now the Time to Pull Mon
-- This Stock Market Warning Is Flashing Red for the 2nd Time in 145 Years. Here's
-- Nasdaq 100 Forecast: NDX slumps on AI warning
-- 외 23건
-
-### 투자자 체크포인트
-
-- 한국 기사 63건, 글로벌 기사 128건 수집
-- 한국 지수: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,366.00(+0.78%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">44건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:34%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:39%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:16%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:14%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-24.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,080.92 (+0.90%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 844.48 (+1.21%).
+- 2026-09-24 주식 시장에서 191건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,366.00(+0.78%).
+- *한강타임즈 김광호 기자 = 23일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스
 
