@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-05-31 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(14회), **연준**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-05-31 정치권 핵심 이슈: Form 4] American Clean Resources Group, Inc. 내부자 거래 활동 - Stock Titan. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 15건 (SEC 내부자 거래 12건, 중앙은행 3건)을 종합…
-- 1. Form 4\ American Clean Resources Group, Inc. 내부자 거래 활동 - Stock Titan Stock Titan의 AI 기반 도구를 사용하여 거래 수준을 높이세요.
 
 ## 1. SEC 내부자 거래 (Form 4)
 

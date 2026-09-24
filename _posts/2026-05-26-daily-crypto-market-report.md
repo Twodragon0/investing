@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-26 | 시총 $2.66T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Toncoin</strong> (TON): +15.54%</li><li>🔴 <strong>Hyperliquid</strong> (HYPE): -3.74%</li><li>🔴 <strong>Monero</strong> (XMR): -2.95%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

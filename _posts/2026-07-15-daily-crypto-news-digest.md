@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-15 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/features/from-dot-com-bust-to-bitcoin-king-has-michael-saylor-rewritten-his-legacy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">전략은 닷컴의 상징이 되었습니다 폭락: 역사가 반복될 수 있을까요?</a> <span class="p0-desc">MicroStrategy는 Michael Saylor가 MicroStrategy를 세계 최대의 기업 비트코인 보유자로 변모시키기 전인 닷컴 시대에 폭발적으로 성장했습니다. 그는 교.</span></li><li><a href="https://cointelegraph.com/news/humanity-protocol-operational-security-36m-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">3,600만 달러 규모의 해킹 이후 운영 보안을 우선시하는 Humanity Protocol</a> <span class="p0-desc">Humanity Protocol의 창립자는 악의적인 행위자가 스마트 계약 취약성에서 인간 행동을 악용하는 것으로 전환함에 따라 운영 보안에 다시 집중할 것이라고 말했습니다.</span></li><li><a href="https://cointelegraph.com/news/dragonfly-defi-ai-hackpocalypse-fears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">AI은(는) 디파이 '해킹포칼립스'를 실행하지 않았습니다. Dragonfly 파트너가 말합니다.</a> <span class="p0-desc">Dragonfly의 관리 파트너인 Haseeb Qureshi는 도난당한 총 가치와 해킹 규모 중앙값이 2025년에 비해 감소하고 있으며 이는 AI 해킹 대재앙이 잘못된 경보였다는.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🟣 DeFi
-- 2026-07-15 암호화폐 핵심 뉴스: 트럼프는 Lindsey Graham을 기리기 위해 의회에 Clarity Act 암호화 법안을 통과시킬 것을 요구합니다.. 총 100건 분석, 핵심 테마는 비트코인, 거래소, DeFi입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
