@@ -19,7 +19,6 @@ image_alt: "지정학 리스크 리포트 - 2026-09-13 - 글로벌 이슈 뉴스
 ## 전체 뉴스 요약
 
 - 총 **1건** 수집
-- 2026-09-13 지정학 핵심 이슈: Companies Need to Anticipate Geopolitical Risk Before Investing, Contracting: Legal Expert (Google News). 주요 테마는 기타 지정학이며, Polymarket…
 - 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
 
 

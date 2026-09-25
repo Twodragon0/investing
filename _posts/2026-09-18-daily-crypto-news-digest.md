@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-18 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1WeW5CYmktSmdsTnZhLTZIR3phaW9vS25renp0SE12UldfVktBMk4tMk5Obl9pTE1PRHVXSzNEWFQ0el9QTXYtMjdEV1FZdmVHelRmdFlsZnlndTlGSjR3VGZDTlZVQktCejFZMHpyYkw?oc=5">미 상원 '클래리티 법안' 부결에 암호화폐 관련주 일제히 폭락 - news.einfomax.co.kr</a> <span class="p0-desc">미 상원에서 가상자산 규제 프레임워크를 담은 명확성 법안(클래리티 법안)의 절차 투표가 무산되면서 코인베이스를 비롯한 암호화폐 관련 종목들이 급락했다.15일(현지 시각) 코인데스크.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📊 매크로/금리
-- 2026-09-18 암호화폐 시장 81건 분석 — 핵심 테마: 비트코인, 규제/정책, 매크로/금리
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
