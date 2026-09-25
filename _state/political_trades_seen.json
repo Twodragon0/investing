@@ -1,38 +1,5 @@
 {
   "seen": {
-    "24a06f4cb61dfe7a905a432a": "2026-08-25T22:56:41",
-    "c5b5116c9504371c2ba8b95a": "2026-08-25T22:56:41",
-    "8cf3f90683e42cdb51d20808": "2026-08-25T22:56:41",
-    "aaad6e02ee3a1174ac12c209": "2026-08-25T22:56:41",
-    "6a49199ffb671b85615b8b93": "2026-08-25T22:56:41",
-    "242d730470727f88971c496b": "2026-08-25T22:56:41",
-    "37bac64a2591c80e9a1f7944": "2026-08-25T22:56:41",
-    "a565dc060a68822f4f2f7145": "2026-08-25T22:56:41",
-    "9bb1792fbff33bb047ebc8c3": "2026-08-25T22:56:41",
-    "99a6165ff4ef34c2708d5226": "2026-08-25T22:56:41",
-    "619b6f285a2c320750104c8c": "2026-08-25T22:56:41",
-    "0c638bd9cc6c2243e52579c2": "2026-08-25T22:56:41",
-    "57a623a3fd525561aaa089d0": "2026-08-25T22:56:41",
-    "93a1672b4c932b92907a02af": "2026-08-25T22:56:41",
-    "ffc6a8e1729cad371c10340b": "2026-08-25T22:56:41",
-    "3f8bcb4ecda61449d672ba80": "2026-08-25T22:56:41",
-    "6125aea5566cbf42edb0c10a": "2026-08-25T22:56:41",
-    "c249ddafe6ad81fa2aca6915": "2026-08-25T22:56:41",
-    "2757a9b39fd5b238b7acce5b": "2026-08-25T22:56:41",
-    "a8448ff09ea8ecaca128054b": "2026-08-25T22:56:41",
-    "1a30911f79f8f3d36f0ddf1d": "2026-08-25T22:56:41",
-    "bc1eab23491d656b654d731c": "2026-08-25T22:56:41",
-    "931418647ecfad82709c8383": "2026-08-25T22:56:41",
-    "f159cd0cbc7a6fcce0289f3a": "2026-08-25T22:56:41",
-    "554440c11e46c7fbc2c61b72": "2026-08-25T22:56:41",
-    "a0e59c2aa682015e4d9576fa": "2026-08-25T22:56:41",
-    "7c7307579a9c3a2a4e89e280": "2026-08-25T22:56:41",
-    "b6059a424feed5ce43a0979b": "2026-08-25T22:56:41",
-    "af4f207010c490841d456ee7": "2026-08-25T22:56:41",
-    "583bf43e6f28b7622df3c9a1": "2026-08-25T22:56:41",
-    "dd7a3fd59fdd41a4d4f579a9": "2026-08-25T22:56:41",
-    "69c1ebc208b14b9968d754e8": "2026-08-25T22:56:41",
-    "778c09d5fa13ba93038bdf65": "2026-08-25T22:56:41",
     "7d39f65f79b288a506bb527f": "2026-08-27T03:28:10",
     "151f8243d9017bec6d8f2405": "2026-08-27T03:28:10",
     "38d4700ebb47d35887e9acfc": "2026-08-27T03:28:10",
@@ -712,7 +679,29 @@
     "ece9d78842e984faf29b80b9": "2026-09-24T00:43:30",
     "c971f1ff01a5e8a100d43d38": "2026-09-24T00:43:30",
     "285810eb3c4b1a74709c74ba": "2026-09-24T00:43:30",
-    "3a97d0dd3ddac49f7ece6923": "2026-09-24T00:43:30"
+    "3a97d0dd3ddac49f7ece6923": "2026-09-24T00:43:30",
+    "5b8d757895e09dbb04cfb608": "2026-09-25T00:41:19",
+    "82a94bca435fffb40e23f422": "2026-09-25T00:41:19",
+    "a23a8265dd34cdedcd1f75fb": "2026-09-25T00:41:19",
+    "c23a20adfd6ddc2c5b6bdb04": "2026-09-25T00:41:19",
+    "cf84bc54596f2d2edc447154": "2026-09-25T00:41:19",
+    "3e37a69d089702e68bd020d8": "2026-09-25T00:41:19",
+    "b30d5cabe4c9a536b8a38cb9": "2026-09-25T00:41:19",
+    "7051ef5f865d591f75a24e4b": "2026-09-25T00:41:19",
+    "e0b6d82b94ea26040f9e61b7": "2026-09-25T00:41:19",
+    "fec301247e0861b4cd1454b6": "2026-09-25T00:41:19",
+    "5816581668a9c706eec17cfa": "2026-09-25T00:41:19",
+    "c11aa23d31d3509e19d96888": "2026-09-25T00:41:19",
+    "e30d1ecebc667866c4b3a51a": "2026-09-25T00:41:19",
+    "ed3ab0477d5a4218cc999c81": "2026-09-25T00:41:19",
+    "22fc55412f4c0fc4185a378e": "2026-09-25T00:41:19",
+    "b3cc96863cefd463bab7146b": "2026-09-25T00:41:19",
+    "88793a6c1c8869a85ac02ad5": "2026-09-25T00:41:19",
+    "1939aeeec08a775d51b3a71c": "2026-09-25T00:41:19",
+    "ced265ff2923535d4dda6de6": "2026-09-25T00:41:19",
+    "4fd77caa38d6210523842a2e": "2026-09-25T00:41:19",
+    "94600e4c19433c47f6416584": "2026-09-25T00:41:19",
+    "6dfb90764481eafa682b7c8b": "2026-09-25T00:41:19"
   },
   "titles": [
     [
@@ -19010,6 +18999,94 @@
     [
       "정치인 거래정책 리포트 20260924",
       "2026-09-24"
+    ],
+    [
+      "ai 투자 나선 트럼프와 펠로시 종목 취향은 완전히 달랐다",
+      "2026-09-25"
+    ],
+    [
+      "culp culp director marks 12941 stock units depend on his remaining a director stock titan",
+      "2026-09-25"
+    ],
+    [
+      "form 4 aberdeen municipal income fund insider trading activity stock titan",
+      "2026-09-25"
+    ],
+    [
+      "a 150000share insider option was cancelled without payment in theravance biopharma tbphs merger stock titan",
+      "2026-09-25"
+    ],
+    [
+      "one share sold 67042 still held eplus plus coos trust reports a planned sale stock titan",
+      "2026-09-25"
+    ],
+    [
+      "theravance biopharma ceos 138m shares canceled stock titan",
+      "2026-09-25"
+    ],
+    [
+      "a 300 million buyback includes shares opera opra bought from chairman zhou yahuis indirect holdings stock titan",
+      "2026-09-25"
+    ],
+    [
+      "115000 stock options go to cfo tyler j minnick at athena gold ahnrf exercisable at can 034 stock titan",
+      "2026-09-25"
+    ],
+    [
+      "a vested stock bonus leaves precision optics poci cfo wayne coll holding 44806 shares directly stock titan",
+      "2026-09-25"
+    ],
+    [
+      "form 4 aberdeen intermediate income fund insider trading activity stock titan",
+      "2026-09-25"
+    ],
+    [
+      "after a stock bonus grant precision optics poci ceo reports 150701 directly held shares stock titan",
+      "2026-09-25"
+    ],
+    [
+      "at 33908 a share a directors trust sold snowflake snow stock and also gave shares as a gift stock titan",
+      "2026-09-25"
+    ],
+    [
+      "an amended apollomics aplm insider report corrects an options expiration date and accounts for 100 omitted shares stock titan",
+      "2026-09-25"
+    ],
+    [
+      "crowdstrike crwd ceo sells shares under a trading plan a family trust lists 400000 shares stock titan",
+      "2026-09-25"
+    ],
+    [
+      "methode electronics mei general counsel received a stock award that vests through 2029 stock titan",
+      "2026-09-25"
+    ],
+    [
+      "내년 첫 기준금리 결정은 1월 15일한은 금통위 일정 발표 이데일리tv",
+      "2026-09-25"
+    ],
+    [
+      "연준 금리 인상에 복잡해진 한은 셈법11월에 쏠린 시선",
+      "2026-09-25"
+    ],
+    [
+      "기준금리와 예금금리 결정 주체부터 다르다",
+      "2026-09-25"
+    ],
+    [
+      "이승현 도박 게임 설명에 등장하는 배수 표기",
+      "2026-09-25"
+    ],
+    [
+      "kevin warsh is against forward guidance but that hasnt stopped other fed officials",
+      "2026-09-25"
+    ],
+    [
+      "new york feds williams says its reasonable to expect another rate hike by yearend",
+      "2026-09-25"
+    ],
+    [
+      "정치인 거래정책 리포트 20260925",
+      "2026-09-25"
     ]
   ],
   "seen_urls": {}
