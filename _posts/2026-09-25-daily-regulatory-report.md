@@ -28,30 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-09-25 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 일자, ETF, 기사 관련 26건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 일자, ETF 동향 주시</li><li>🏦 <strong>거래소</strong>: ETF, 해외상장 이슈 부각</li><li>🟠 <strong>비트코인</strong>: ETF, 해외상장 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 26건의 뉴스 중 **규제/정책** 관련이 15건(58%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (15건): 일자, ETF, 기사 규제 움직임 (15건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (5건): ETF, 해외상장, 단일종목 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **🟠 비트코인** (2건): ETF, 해외상장, 단일종목 관련 (2건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- CFTC Releases Staff Advisory on Mention Markets
-- Federal Reserve Board announces approval of application by BancFirst Corporation
-- 국내-해외상장 ETF간 비대칭 규제 해소를 위한 단일종목 레버리지 상품(ETF·ETN) 관련 설명 - YTN 9월 16일자 보도 등에 대한 설명
-- 외 2건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 20건, 미국 5건, 유럽 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 26건
 - **한국**: 20건

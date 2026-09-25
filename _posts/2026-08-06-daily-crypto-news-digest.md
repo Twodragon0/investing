@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-06 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9IcXBXZkdkaEVmX2JXLXhzbE5CWTY4SVdIbzgwU0hweTBnTHNnYXJPMTc2YUh4djhRN21DcjdoMXdhMUFxN2lxLWNGRFkyMl9JRjZmZl95Y0tXVlVsNTVfSHRtVFM5QjlHZ1phZ1BwVVdTbENqRFo4UWtR?oc=5">1억 달러 규모 비트코인을 도난당한 현재 진행 중인 Coldcard 해킹에 대해 우리가 알고 있는 것 - CBC</a> <span class="p0-desc">CBC는 캐나다를 위해 항상 여기에 있습니다. 뉴스, 엔터테인먼트, 스포츠, 음악 등을 위한 홈입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNSG0yZWtWaTVMUDd4eXB6QXl5MERELWh5X1dJMUkybWdyMjlRYXlLMTRNR0gyYUNJcTM0RUhHazd3eFdNaTRKNE5SZGVZOWRkdUE5NTVxZzk5Rmc2MXlRWnd1b1ZwR0J1N0JGQzBiVXBWRUtySzF6WHZZa044ZmNldFY3RWhOOGZacEU1YWx0VXZUaDA?oc=5">진행 중인 대규모 암호화폐 해킹으로부터 자신을 보호하는 방법 - Lifehacker</a> <span class="p0-desc">Lifehacker는 삶의 모든 측면을 최적화하는 최고의 권위자입니다. 모든 것을 더 잘하십시오.</span></li><li><a href="https://thehill.com">FBI 요원, 러시아에서 약 100만 달러 규모의 암호화폐를 훔친 혐의로 기소 - The Hill</a> <span class="p0-desc">FBI 요원, 러시아에서 약 100만 달러 규모 암호화폐를 훔친 혐의로 기소</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **111건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-08-06 암호화폐 핵심 뉴스: 100만 달러 규모 암호화폐를 훔친 혐의로 기소된 요원은 FBI에 불만을 토로했다 - NBC4 Washington. 총 111건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

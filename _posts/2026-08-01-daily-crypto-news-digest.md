@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-01 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMilAFBVV95cUxQRWFxVnI0dExnaXpvZ01YMzVEbUpjaEdHQmxHVWZma1pPS0dWVUthY192Vm1fTnNaaGloOGhhRVoyS1ZRaWxoOFZwSUdvcktRQmNwczYySXpuY2wtbjE2NFplLXk3bzUtaC03dW9CQWIwQ1dMY3Vfb2tvSkFjUmV2WUh1MTdDV3oxSjQ3S21DVHlhNnQz?hl=en-US&gl=US&ceid=US%3Aen">Crypto Winter 또는 Big 폭락? 비트코인이 다음에 갈 수 있는 곳</a> <span class="p0-desc">60,000달러를 향해 급락한 후, 투자자들은 규제, 통화 정책 및 미국 중간고사가 가격에 미치는 영향에 중점을 둡니다.</span></li><li><a href="https://www.tokenpost.kr">코스피 반등에도 비트코인 무반응…해킹 악재 속 6만4300달러 버텼다 - tokenpost.kr</a> <span class="p0-desc">토큰포스트는 대한민국 No.1 블록체인·암호화폐 뉴스 미디어입니다. 비트코인, 이더리움, 솔라나, XRP, 리플, 밈코인, 스테이블코인, NFT, 디파이 등 최신 트렌드와 투자 인.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-08-01 암호화폐 핵심 뉴스: 국회의원들은 암호화폐 투자자들을 위한 수익성 있는 세금 허점을 없애기 위한 노력을 재개했습니다.. 총 103건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

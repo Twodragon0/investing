@@ -32,45 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-25 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">844.48</div><div class="stat-label">KOSDAQ +1.21%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 국채, 채권, 수익률 부각 184건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 채권 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 주목</li><li>🟠 <strong>비트코인</strong>: ETF, 배당 관련 8건</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 184건의 뉴스에서 **매크로/금리**(27건)과 **가격/시장**(30건)이 동시에 부각되고 있습니다. 거시경제 이벤트와 시장 가격이 밀접하게 연동되고 있어 경제 지표 발표에 주목해야 합니다
-
-### 테마별 동향
-
-- **📊 매크로/금리** (27건): 국채, 채권, 수익률 매크로 변수 (27건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (30건): 코스피, 삼성전자, 한강타임즈 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (17건): 반도체, 삼성전자, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- Can AI Investment Drive S&P 500 Earnings Even Higher? - Goldman Sachs
-- The Stock Market Is Flashing Multiple Warning Signs. Is Now the Time to Pull Mon
-- May Mobility's SPAC Merger: Is This a Road to Nowhere for Investors?
-- 외 29건
-
-### 투자자 체크포인트
-
-- 한국 기사 51건, 글로벌 기사 133건 수집
-- 한국 지수: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,369.39(+0.32%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:90%"></div></div><span class="theme-count">27건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:57%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:27%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:20%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-25.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-25.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,080.92 (+0.90%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 844.48 (+1.21%).
+- 2026-09-25 주식 시장에서 184건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,369.39(+0.32%).
+- *미국 연방준비제도(Fed)의 긴축 전환으로 한국은행의 추가 금리 인상 시점에 관심이 쏠리고 있다.*
 
 ## 테마별 주요 뉴스
 

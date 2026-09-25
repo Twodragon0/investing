@@ -16,6 +16,12 @@ image_alt: "주요 경제 캘린더 및 실적 일정 (2026-09-25) - 시장 분�
 
 **2026-09-25** 오늘 일정 — 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 23건(고·중간 중요도), 대형주 실적 0건, IPO 일정 8건을 정리했습니다
 
+## 전체 뉴스 요약
+
+- 총 **8건** 수집
+- 2026-09-25 오늘 일정 — 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 23건(고·중간 중요도), 대형주 실적 0건, IPO 일정 8건을 정리했습니다
+
+
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">주요 지수</div></div><div class="stat-item"><div class="stat-value">23</div><div class="stat-label">경제 이벤트</div></div><div class="stat-item"><div class="stat-value">8</div><div class="stat-label">IPO 일정</div></div></div>
 
 ## 📊 주요 시장 지수
