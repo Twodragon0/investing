@@ -309,7 +309,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTHBqbnRTYVRBX2NjRTRaUzZ0UnJDZ0NEZjZtTG5sOEw3NURVbUMtQ1c1dHBtVVoxaEROMWNXMmViZVJCQXZLcGxYT2ZDUU42cWdlbUo2QXNjMVFuNWNtbjBzSmtwbzZVb2VNVmNvS3A5dUVsZnk0LXFQMXNTSFN4cnh2cml0UXY3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 채굴자 3.2만 BTC 역대급 매도·CEX 거래량 39% 급감…크립토 윈터인가 바닥인가 - 네이버 프리미엄콘텐츠</a>
-<p class="news-desc">비트코인 채굴자 3.2만 BTC 역대급 매도·CEX 거래량 39% 급감…크립토 윈터인가 바닥인가 네이버 프리미엄콘텐츠</p>
+<p class="news-desc">비트코인 채굴자 매도, 1분기 역대 최대 규모 기록 2026년 1분기, 비트코인 시장에 전례 없는 매도 압력이 쏟아졌습니다. 상장 비트코인 채굴 기업들이 이번 분기에 3만 2,000 BTC 이상을 매도하며 업계 신기록을 세웠습니다. 주목할 점은 이 수치가 2025년 한</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

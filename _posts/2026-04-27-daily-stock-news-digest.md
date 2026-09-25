@@ -194,7 +194,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5SQldoM0UzS0plOWZtVzkxb2F5bnJwem1xYmRTLVN0NGw1TzAzcUlfdlBYVmsycjJEVHpTNHdrWjRSaFAzcnBOcEJaZUFSMl9fODJjblpmal9OQdIBWEFVX3lxTE5rNzkwejBmN2Z4NUROMzBvbkpsMGFhWGp0N0lFc3RfdHItNHJkWXlqMGhnNVp3RDcwSlFRTXZVQ2xHVVJleHFzTkhhZnRnN0p1dXRrN1p6UTM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">외국인‧기관 팔자→사자 반전…개인은 14조 역대 최고 순매도 - 아주경제</a>
-<p class="news-desc">외국인‧기관 팔자→사자 반전…개인은 14조 역대 최고 순매도 아주경제</p>
+<p class="news-desc">수급 방향이 한 달 만에 완전히 뒤바뀐 모습이다. 외국인 투자자들의 수급은 ‘팔자’에서 ‘사자’로 전환됐다. 반면 지난...</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>

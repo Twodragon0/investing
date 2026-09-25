@@ -73,7 +73,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE51cklsc1FyaVg4Uk1rUmdqRFJlZnZuQzB4OUthZXQ5R3FheTViTWhzZmlTWkdibE05Q3RwYTZjU3U5MFVxZGlkeTNTalJTMUpkQS05WHZ4QzBrOWpWSHd3SnZnM0RVNUtaZWxn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 27일 코스피와 코스닥지수가 모두 오름세로 장을 마쳤다.이날 코스피는 전 거래일보다 139.40포인트 오른 6615.03에 마감했으며,</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

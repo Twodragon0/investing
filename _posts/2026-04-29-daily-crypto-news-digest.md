@@ -204,7 +204,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQm8zZDd4NXhKZHlaMF9KVGJSODBLOGs0UVptb3phenF0MFM4TUtYQjZkb0Qta0xjRGwxSk5DUERNcnJHcXZ1QVh3Y3lKZlBOR241UWJ1UnpXNFR6WW5pem5uNTRIbFM1VEY0V2d4TDBheEpDMTNmQ0xaWm02NGZIak1qYlc0RHlP?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">루미스 의원 "5월 클래리티 법안 심의"… 비트코인 '자유의 돈' 규정</a>
-<p class="news-desc">루미스 의원 "5월 클래리티 법안 심의"… 비트코인 '자유의 돈' 규정 글로벌이코노믹</p>
+<p class="news-desc">미국 정계 내 대표적인 '비트코인 전도사' 신시아 루미스 상원의원이 가상자산 규제 체계의 핵심인 '클래리티 법안(Clarity Act)'의 구체적인 심의 일정을 전격 공개했다. 26일(현지 시각) 코인피디아 등 주요 외신에 따르면, 루미스 의원은 '비트코인 2026' 컨퍼런스 기조연설에</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -259,7 +259,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE92N2lNOGFSamxwREFtQjlTZmhnVktvdVA5VjgzRWt1QWoxOFVpbjhZZkFHRkkwTUE1bzN0elp2VUdYdy1EdDdiWEpyelFueUhyeFNGMXlGc3VBSE4zSl9uaGtPM3dPYjFHUzFFUGRmNnY?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">08:08 가상자산] 비트코인, EU 對러 탈중앙화 거래소 제재 소식에 하락 - 신아일보</a>
-<p class="news-desc">[08:08 가상자산] 비트코인, EU 對러 탈중앙화 거래소 제재 소식에 하락 신아일보</p>
+<p class="news-desc">비트코인 등 주요 가상자산 가격이 하락했다.유럽연합(EU)이 러시아 제재를 위해 탈중앙화 거래소와의 거래를 전면 금지하는 안을 발표한 영향으로 보인다.28일 업비</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

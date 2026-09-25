@@ -113,7 +113,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiREFVX3lxTE9Hc1I1TGcxZUJFdmd5Q1E0QjlYTFJLRWdHdHZXSWlHX09JYVdPaDR4SGp1UmNEZUJrdGdVM1hVS1psNHNW?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인(BTC), S&P 500 제쳤다.스마트 머니 암호화폐로 이동 - 코인리더스</a>
-<p class="news-desc">비트코인(BTC), S&P 500 제쳤다.스마트 머니 암호화폐로 이동 코인리더스</p>
+<p class="news-desc">비트코인(BTC),S&amp;P500/AI생성이미지 미국증시가사상최고치부근에서기초체력약화경고음을내고있다.반면,암호화폐시장은상위100개종목대다수가200</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

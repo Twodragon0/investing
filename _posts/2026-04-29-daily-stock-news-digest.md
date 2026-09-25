@@ -92,7 +92,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBrNDFqTTFyT2hWRGlYcndYVG5wZzh6Y2s2RjJjeFA4b0ZMejl6SlBlLTNjeEdudDd2NGdGNTAxZXNEcVg3VEs5d29iUEZLWlJ6YmFJaUFNeUQ1VEJo?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">개장시황] 코스피, 개인 매수에 강보합…코스닥은 차익실현에 하락 - 뉴스핌</a>
-<p class="news-desc">[개장시황] 코스피, 개인 매수에 강보합…코스닥은 차익실현에 하락 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 28일 국내 증시는 전날 급등에 따른 부담 속에서 보합권 흐름을 보이며 종목별 차별화 장세를 나타내고 있다.한국거래소에 따르면 이날 오전 9시 4분 기준 코스피 지수는 전 거래일 대비 16.74포인트(0.25%) 오른 6631.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -123,7 +123,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFB2ZmpCYXNheTREYW9OS1dBQlNYaVhsdGJldE1xMU5mNWxxN19URG9Ra0JSOFYyY1pYWkl2RVpVT1BYWHZ5dGxUOUwxWTdyUThI?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">HBM이란? AI 반도체 전쟁의 승패를 가를 고대역 메모리 - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">AI 연산에는 HBM이 필수적이에요. HBM 수요가 늘면서 SK하이닉스, 삼성전자 주가도 날아올랐는데요. HBM이 무엇이고, 왜 만들기 어려운지 살펴볼게요.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -135,7 +135,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFAzcHhkM1BpX1Rlc3M1QnlLNFFtNHJGVERxd3d3akNfbHBwWjlJR0NCYU16M0dnZGRhNUtaX3JhRHppeFVJRW41LV9UVjhVbG1ieVppMVhHZlgwUXBPcUloUDZIRVJkT1ZZX0pHX0t5NlNxR1nSAXdBVV95cUxQYldELTRqSlh4bERvUE43Y1huVUdtSnFsRWF6SU5mRXJQMlZlUG8zaG9hcU9YcDM3bnVtOWtaYkVXVlU4ejhoUktiTXNVVzJwM0lONGRubVJjNzhLdDZZQXJXWEdzZXpwTlZpbUp2S2ZJZmhQNkpKaw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">ACE AI반도체TOP3+ ETF, 올해 개인 순매수 1000억원 돌파 - 스트레이트뉴스</a>
-<p class="news-desc">ACE AI반도체TOP3+ ETF, 올해 개인 순매수 1000억원 돌파 스트레이트뉴스</p>
+<p class="news-desc">국내 증시에서 반도체주 강세가 이어지면서 인공지능(AI) 반도체 상장지수펀드(ETF)로 개인 자금이 빠르게 몰리고 있다. 삼성전자와 SK하이닉스 등 대형 반도체주가 지수 상승을 이끄는 가운데, 고대역폭메모리(HBM) 관련 핵심 종목에 집중 투자하는 상장지수펀드(ETF)가 개인 투자자의 선택을 받고 있다.◇ 순자산급증…K반도체 ETF 수익률 1위28일 한국투자신탁운용은 “올해 들어 ‘ACE AI반도체TOP3+ ETF’로 유입된 개인투자자 순매수액이 1000억원을 넘어섰다”고 밝혔다. 한국거래소 기준 지난 27일까지 이 ETF로 유입된</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
