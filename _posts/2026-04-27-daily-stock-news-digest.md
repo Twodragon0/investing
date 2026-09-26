@@ -284,7 +284,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5TdnB5dmFwdzRWaE05VjJGVV9nWTdhODZWN3RjRW9DOXdrVkdDVldjSTZ5aFVNeHpwZnpxelJjYnRuQzlXYmtoOVo5ajVtZV96V3FWblV3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">단일종목 ETF 상장: 삼성전자·SK하이닉스, 레버리지 ETF 투자 가능해져요 📊 - 뉴닉</a>
-<p class="news-desc">단일종목 ETF 상장: 삼성전자·SK하이닉스, 레버리지 ETF 투자 가능해져요 📊 뉴닉</p>
+<p class="news-desc">정부는 삼성전자와 SK하이닉스에 대해 단일종목 레버리지 ETF 상장을 허용하기로 했어요. 빠르면 5월 22일 상장될 예정인데요. 단일종목 레버리지 ETF에 투자하려면 사전교육을 추가로 들어야 한다고.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -296,7 +296,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZU55YzNGS0VDbE1JV1lpems5V01RcldmUWI0MmpoZEVnRldpRFVRM0p5U0g3T1F0M2U0bXV4YU42VW1UUjFTbE4zWmY3ZlFvRFFMUGZvRkJnWlVmSlpvek9QblNwU1QzbjNTM1dhSXBFVEFMb2o0MGxaTFlMOXQtVkx0cUF0c3Q00gGcAUFVX3lxTE9uaVFwbTJzVmw2Zy0tZ01QNmlrU2dGaGpTcnZlTFZCaE5uVjEzRVdrbFZwbmNWakpOTEJRMHFybVotN2ZoNUwxcTlGWk5Qa1E1SUU2VU1WYXFkSFFUdzA5T2tOQ0QyY3dpTV8ybVFTVlpJM2JwU2pNUFV1S3RnM1dRZTRQNXN2aVVPOGdpVlV5dHhVUERibU1yNzR2Vg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">공모주 시장 찬바람… 1분기 신규 상장 반토막 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">공모주 시장 찬바람… 1분기 신규 상장 반토막 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">공모주 시장 찬바람 1분기 신규 상장 반토막 증시 훈풍에도 11곳 그쳐</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

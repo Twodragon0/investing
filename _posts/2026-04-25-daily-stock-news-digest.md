@@ -79,7 +79,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE56ZWRrNEM2R0dHTzM0M3hhSTZid1JKQVdMQ3Nya2NqZW00blJ1aER1ajNLek43ZUlwa1N5UktaR2luUk5SUzROaVNOb01yNjBHeEVfWVBIU0dvM3o2LTJBV1FNaw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">휴전협상만 바라봐야 하는 한국은행, 연내 동결기조 유지 - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">중동 리스크 속 한국은행 금리 동결과 향후 금리 방향성을 알아봐요.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -133,7 +133,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1RSVZNRENnQkRIQkhnMlk3d2RWaWlSc2Vib3Bhc19wLXZWU0JFNzRCMXFNYXBZTFV1d1BWMG0yVXhoSDA5LURTUkZGZHk4aHdFRnM1ejdlQlpDQ3VFeXFCTU85Nk1pZ1lKTURJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 내림세 장 종료.코스닥 상승 마감 - 한강타임즈</a>
-<p class="news-desc">코스피, 내림세 장 종료.코스닥 상승 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 24일 코스피와 코스닥지수가 각각 내림세와 오름세로 장을 마무리했다.이날 코스피는 전 거래일보다 0.18포인트 내린 6475.63에 마</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -145,7 +145,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA3VUQtSHB2RmRJWUtxSGVDMEhXUXoxR2s3SFpZOEcyY0ZFcWV3ZVpjZFVkY19jYkJVNmRoazZUZGRJWXEtTHJlbnVWdFI3RVlNNlFF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'엑시콘' 52주 신고가 경신, 외국인, 기관 각각 5일 연속 순매수, 4일 연속 순매도</a>
-<p class="news-desc">'엑시콘' 52주 신고가 경신, 외국인, 기관 각각 5일 연속 순매수, 4일 연속 순매도 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : ◆ 주체별 매매동향- 외국인, 기관 각각 5일 연속 순매수, 4일 연속 순매도지난 한달을 기준으로 보면 외국인이 21.3만주를 순매수했고, 기관도 8.4만주를 순매수했다. 반면 개인들은 31.9만주를 순매도한 것으로 나타났다. 같은 기간 이 종목의 거</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>

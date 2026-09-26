@@ -229,7 +229,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE56ZWRrNEM2R0dHTzM0M3hhSTZid1JKQVdMQ3Nya2NqZW00blJ1aER1ajNLek43ZUlwa1N5UktaR2luUk5SUzROaVNOb01yNjBHeEVfWVBIU0dvM3o2LTJBV1FNaw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">휴전협상만 바라봐야 하는 한국은행, 연내 동결기조 유지 - KB Think</a>
-<p class="news-desc">국민은행의 금융 콘텐츠 플랫폼 KB Think. 저축, 투자, 대출, 라이프, 부동산, 세금, 보험, 연금, 사업자 콘텐츠를 KB의 생각에서 만나보세요!</p>
+<p class="news-desc">중동 리스크 속 한국은행 금리 동결과 향후 금리 방향성을 알아봐요.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
