@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-26 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회 - 75건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>🏦 <strong>거래소</strong>: 18건 수집</li><li>🔴 <strong>보안/해킹</strong>: 22건 수집</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 데일리비즈온 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE94VjJkTVB3RkpEWVRMN2x5cjRLZ3dXaXFZbWFPQUtvS2Z0TTBiNHVWRWJCOVRQVWhSVTd3Rk0xTEN0MmpUVlVEM0luaDdmT3FMMi1RWWstdkFnVk9uZkZhbjhTUmdBVm55WGVTemplaDjSAXRBVV95cUxPTmZXUkhxUllVTWdmZmxGWVk3ckpMTC1UZGVXc1FpaC1TRDlmRWZHRmRWUXZ2T21Gd0JUYkpQUndnTDNVZmlxM1FwaGMwdklDcnM0RmhmaC1qbVRfMHBlckUySkZaWk5saDFxa2NLSXB0ODR3ag?oc=5">미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회</a> <span class="p0-desc">미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회 연합인포맥스 비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 kr.investing.com 美.</span></li><li><a href="https://cointelegraph.com/news/former-hack-vc-partner-hsin-ju-chuang-found-dead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Former Hack VC partner Hsin-Ju Chuang’s death ruled a suicide</a></li><li><a href="https://cointelegraph.com/news/no-confirmed-crypto-theft-iphone-safari-attack-slowmist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">SlowMist has yet to confirm crypto theft from iPhone Safari attack</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회 
-외 P0 긴급 이슈 12건이 추가 감지되었습니다. 총 75건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (32건): 비트코인, 암호화폐, 데일리비즈온 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (18건): bitget, hack, tether 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **🔴 보안/해킹** (22건): bitget, exploit, hack 보안 이슈 (22건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회
-- Former Hack VC partner Hsin-Ju Chuang’s death ruled a suicide
-- SlowMist has yet to confirm crypto theft from iPhone Safari attack
-
-### 주요 이슈
-
-- The ‘Monster’ Behind Russia’s Global Effort to Evade Western Sanctions
-- Police warn residents about cryptocurrency scam at a Brazoria County gas station
-- D-BIZ 암호화폐 뉴스] 비트코인 차익실현 진행 중…과거 최고점 대비 속도 완만·ETF 유입이 흡수 - 데일리비즈온
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Cointelegraph(15건), Decrypt(15건), CoinDesk(15건)
-- 프로모션성 거래소 공지 5건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-26.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🔴 보안/해킹
+- 2026-09-26 암호화폐 시장 75건 분석 — 핵심 테마: 비트코인, 거래소, 보안/해킹
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

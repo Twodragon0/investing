@@ -16,33 +16,6 @@ description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고
 
 블록체인 보안 15건 분석. 주목 사건: **[Security] Here’s what happened in crypto today** / 보안 뉴스 헤드라인: DeFi hack attack: Three exploits snatch $11M in a single day.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 15건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (15건): security, exploit, bitget 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (5건): exploit, bridge, logic DeFi 동향 (5건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🏦 거래소** (4건): $352M 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit
-- [Security] Bitget CEO suspects North Korea behind $352M hack, citing IP clues
-- [Security] Duelbits exploit: Hot Wallet Key Compromised
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 14건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 15건

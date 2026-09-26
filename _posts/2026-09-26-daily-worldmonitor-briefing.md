@@ -25,30 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-26 - 시�
 - 주요 출처: WorldMonitor/CNBC (15건), WorldMonitor/Guardian World (5건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 보통</strong><ul><li>안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(7건), **지정학/안보**(5건), **금융시장**(4건) 중심으로 전개되고 있습니다.
-
-안보 이슈(5건)와 금융시장 뉴스(4건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-에너지 이슈 **2건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-### 고중요도 이슈 (5건)
-
-- Saudi Arabia crude oil exports hit highest level since Iran war began despite pipeline outage
-- Warsh's regime change at the Fed pushes ahead – and meets resistance
-- Rebel offensive against Ethiopian army stokes fears of return to civil war
-- Hurricane Polo barrels towards Baja California region of Mexico
-
-### 투자자 체크포인트
-
-- **안전자산**: 금·달러·미국채로의 자금 이동 가속 여부 확인
-- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/CNBC (15건), WorldMonitor/Guardian World (5건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">안보 이슈</div></div></div>
 

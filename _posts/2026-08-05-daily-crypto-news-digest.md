@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-05 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQeEQ5cV83UlJnTGk5X00xY3BGQk5VS0pLSnZCVHppNWFwRDAwTnkxZEFEOU1wZkFROE9CVlZIM3BtNV9CRWZGcW13QU9acGJ1aUlDOVNWSUN4dGQzUC13SHRQekN6T0s4empJS1hpMUVQZW1JZ0tmRkNQbFFYelJkMzByUU55czlMN3d4WnVsb1BaTTJjNG5ydFR4TWtoaTB1c21udTFIY1FxanJwR1k1Mzg5SQ?oc=5">FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다.</a> <span class="p0-desc">FBI 요원, 용의자 계좌에서 암호화폐 빼돌린 혐의 WSJ F.B.I. FBI 요원, 암호화폐 훔친 혐의로 기소 nytimes.com 연준은 러시아에서 거의 100만 달러에 달하는.</span></li><li><a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxOUm5rQnJKNE5qYUVlNDdxTGlpVzNvVExBeTMzY3VvZEtaeVJwZE11SnBvSUdCNnoyc2g5dTkzYVZLMVZHUjNGZU0waS1qME5IeFJ1LVdoR0NMRzJ3WFRVUTlVaWxZVkJEMTdmYTE5dGI3b2VqRk1idm9HTmpzQmJPZHhONl82RFFSeTNuSFdySjBTd0VUXzEwTmtrei0zbzdsVTU0b0pJcWVaOV9xSWdYWkRYYzhQeWdYYkJYZ1dwNXg4NS1VYjdpSml5d3pGVm8zSUNvcmtTaTdUQXpSWmRQc2lDWm1idkI5V2JkYTdNSQ?oc=5">FBI agent accused in $1 million cryptocurrency theft: Report - WSBT</a></li><li><a href="https://www.pymnts.com">FBI 요원, 100만 달러 규모 암호화폐 절도 혐의 인정</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **104건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-08-05 암호화폐 핵심 뉴스: FBI 요원은 용의자의 계좌에서 암호화폐를 빼낸 혐의를 받고 있습니다.. 총 104건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

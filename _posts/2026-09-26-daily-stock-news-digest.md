@@ -32,45 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-26 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">844.48</div><div class="stat-label">KOSDAQ +1.21%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 국채, 채권, 수익률 부각 147건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 채권 관련 24건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li><li>📈 <strong>가격/시장</strong>: 국채 관련 22건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 147건의 뉴스에서 **매크로/금리**(24건), **정치/정책**(11건)과 **가격/시장**(22건) 순으로 많은 보도가 집중되고 있습니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (24건): 국채, 채권, 수익률 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (11건): 트럼프 정치 이슈 (11건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📈 가격/시장** (22건): 국채, 전망 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- Nasdaq 100 Forecast: NDX slumps on AI warning
-- Can AI Investment Drive S&P 500 Earnings Even Higher? - Goldman Sachs
-- Prediction: The S&P 500 Finishes 2027 Above 9,000. Here's the Earnings Math.
-- 외 22건
-
-### 투자자 체크포인트
-
-- 한국 기사 27건, 글로벌 기사 120건 수집
-- 한국 지수: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,357.34(-0.71%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:89%"></div></div><span class="theme-count">24건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:41%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:81%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:100%"></div></div><span class="theme-count">27건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-26.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,080.92 (+0.90%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 844.48 (+1.21%).
+- 2026-09-26 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,357.34(-0.71%).
+- *[시민의소리=취재팀] 미국 연방준비제도가 기준금리를 3.75~4.00%로 올린 데 이어 추가 인상 가능성까지 열어두면서 세계 금융시장이 다시 고금리 충격에 빠졌다.미국 10년물 국채금리는 24일 장중.*
 
 ## 테마별 주요 뉴스
 

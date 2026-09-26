@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-20 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://biz.heraldcorp.com">“-30% 부터 안본다” “그냥 버텨라” 공포의 월요일 온다…한달새 40% 폭락→또 폭락?</a> <span class="p0-desc">“-30% 부터 안본다” “그냥 버텨라” 공포의 월요일 온다…한달새 40% 폭락→또 폭락? 헤럴드경제</span></li><li><a href="https://www.marketwatch.com/story/i-have-racked-up-35-000-in-credit-card-debt-should-i-file-for-bankruptcy-4c92d9e5?mod=mw_rss_topstories">I racked up $35,000 in credit-card debt. Should I file for bankruptcy?</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,820.60 (-6.37%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 791.84 (-4.53%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-07-20 주식 시장에서 145건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,820.60(-6.37%), KOSDAQ 791.84(-4.53%), USD/KRW 1,487.46(+0.66%).
 - *S&P 500 하락 마감, 나스닥 칩 주가 하락으로 인해 1% 이상 하락: 2026년 7월 17일 CNBC Stock Market 실시간 업데이트: Dow, S&P 500 및 나스닥는 칩 주가 약세장에.*
 
 ## 테마별 주요 뉴스
