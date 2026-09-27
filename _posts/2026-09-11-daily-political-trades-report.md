@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-11 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(12회), **내부자**(3회), **펠로시**(2회), **의회**(1회), **SEC(미국증권거래위원회)**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-09-11 정치권 핵심 이슈: 의회 거래: Maria Elvira Salazar 대표가 방금 새로운 주식 거래를 공개했습니다. - Quiver Quantitative. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 47건 (미국 의회 거래 2건, SEC 내부자 거래…
-- 1. 의회 거래: Maria Elvira Salazar 대표가 방금 새로운 주식 거래를 공개했습니다. - Quiver Quantitative 마리아 엘비라 살라자르(Maria Elvira Salazar) 대표는 방금 주식법에 따라 새로운 주식 거래를 제출했습니다.
 
 ## 1. 미국 의회 거래 동향
 
