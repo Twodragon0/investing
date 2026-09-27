@@ -16,33 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-09-27 - 보안 뉴스 요약 �
 
 블록체인 보안 16건 분석. 주목 사건: **[Security] Here’s what happened in crypto today** / 보안 뉴스 헤드라인: Bitget Hit by $350 Million Exploit: Largest Crypto Hack of 2.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 16건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (16건): security, exploit, bitget 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (6건): exploit, bridge, logic DeFi 동향 (6건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🏦 거래소** (5건): $352M 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit
-- [Security] Bitget CEO suspects North Korea behind $352M hack, citing IP clues
-- [Security] Duelbits exploit: Hot Wallet Key Compromised
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 14건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 16건

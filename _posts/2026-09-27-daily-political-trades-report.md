@@ -14,7 +14,6 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 image_alt: "정치인 거래·정책 리포트 - 2026-09-27 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-27.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-27** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **4건** — SEC 내부자 거래 4건
@@ -25,11 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-27 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **4건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 4건입니다.
-
----
+- 2026-09-27 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 4건 — SEC 내부자 거래 4건
+- 1. An insider returned shares to Safe Pro Group (SPAI) and still reported holding 695,000. - Stock Titan An insider returned shares to Safe Pro Group (SPAI)…
 
 ## 1. SEC 내부자 거래 (Form 4)
 

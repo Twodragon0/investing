@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-27 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: North Korea Suspected in $351 Million Bitget Crypto Heist - SecurityWeek - 79건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 관련 16건</li><li>🏦 <strong>거래소</strong>: 달러 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: 17건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQZUk5ZUF3d09sbkk0WFdUT29sakhOOS14UHpDMUlqQ2Z3TnJMZTh2WjFGLWU0cnhBZVFqWnoySnBmd1k2RXd4MnVxTnBOUDBLbXFpenQzR3gtek50VnJmZmVXTnVMS09yRDdJTEp5RXJCZTBTZlRraG4wWHk2U0tXUW9zTGhxWmp5VU9TVEFIONIBlAFBVV95cUxQREV5allvbnJTN2RiSjJ3clVhN2tYZWR3b05Db05NUGhnVF9jNFVWWlBjVHhLbzdPZlhYQlFaYUxSNldxcjZieWV4OW9HM25iRFBEdkhzazU5QWp0TkpmQXI1X09wR2N3NzZVaGprQ0VjZ1JpaTlvRnhlQllrVS1kU1c0VTY5eVJoVUNXdVh2UFhFZVJI?oc=5">North Korea Suspected in $351 Million Bitget Crypto Heist - SecurityWeek</a></li><li><a href="https://kr.investing.com/news/cryptocurrency-news/article-2106340">비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 - Investing.com 한국어</a> <span class="p0-desc">비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 Investing.com 한국어</span></li><li><a href="https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack">Circle and Tether Freeze Stablecoins Tied to Bitget Hack—But Most Funds Slip Away</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: North Korea Suspected in $351 Million Bitget Crypto Heist - SecurityWeek 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 79건의 뉴스 중 P1 주요 이슈도 8건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (30건): 비트코인, 달러, 암호화폐 관련 (30건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (16건): 달러, 암호화폐, 옵션 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏦 거래소** (19건): 달러 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- North Korea Suspected in $351 Million Bitget Crypto Heist - SecurityWeek
-- 비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 - Investing.com 한국어
-- Circle and Tether Freeze Stablecoins Tied to Bitget Hack—But Most Funds Slip Away
-
-### 주요 이슈
-
-- Police warn residents about cryptocurrency scam at a Brazoria County gas station
-- Today's Crypto News: Bitcoin, Ether and Altcoin Insights - Investing News Networ
-- 채권 금리 상승이 규제 진전을 상쇄하며 비트코인 8만4천 달러 선 유지 - Investing.com 한국어
-- 외 5건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Decrypt(15건), Cointelegraph(15건), CoinDesk(15건)
-- 프로모션성 거래소 공지 5건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-09-27 암호화폐 시장 79건 분석 — 핵심 테마: 비트코인, 가격/시장, 거래소
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
