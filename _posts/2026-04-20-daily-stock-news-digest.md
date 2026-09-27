@@ -74,7 +74,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiQ0FVX3lxTE01ZldjZEJRZDNIOGt1VU1nbnhWR2FwRGJQcVNHem9Sc3djU2lhTVZEZWRta25nLURmdDNIVTU0UEF5N2M?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">조상권의 경제이야기] 삼성전자,SK하이닉스, 실적 급성장에 따른 반도체 강세 지속 전망 - 브랜드경제신문</a>
-<p class="news-desc">[조상권의 경제이야기] 삼성전자,SK하이닉스, 실적 급성장에 따른 반도체 강세 지속 전망 브랜드경제신문</p>
+<p class="news-desc">국내외 반도체 주식들이 강세를 지속하면서 고점 논란에도 불구하고 증권업계에서는 반도체 슈퍼사이클이 여전히 진행 중임을 시사하고 있습니다. 주요 기업들의 실적 전망이 잇따라 상향 조정되면서 AI 인프라 확대가 지속되는 현상과 맞물려 호재로 평가받고 있습니다. 글로벌 반도체 장비 및 제조사인 ASML과 TSMC의 긍정적 가이던스는 이 같은 산업 성장 신뢰를 뒷</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE94bUJVX0JndDFvUVpMaWhTZ1hueHlfc2hnRl9TdzMwYW9wZFhOMW9PZzY1TWdURzNDWWZaZDZNcUZVY2tVQk1oU0RIM3lGQVhSc2owWWFDOF9KOGwzUEFEU053?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼전 3조원·SK하닉 2조원 '빚투' 연일 급증…반도체 업황 회복 기대감 - 이코노미스트</a>
-<p class="news-desc">삼전 3조원·SK하닉 2조원 '빚투' 연일 급증…반도체 업황 회복 기대감 이코노미스트</p>
+<p class="news-desc">코스피 추가 상승 기대감이 커지면서 국내 증시 대표 반도체 종목인 삼성전자와 SK하이닉스에 대한 ‘빚투(빚내서 투자)’가 빠르게 늘고 있다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

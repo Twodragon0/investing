@@ -51,7 +51,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-23 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9uQVZtdEo2V2M3SnJEUkd5aEhTekVWUFlpNVM1ckhuR3U5ZWs1bHFYU0VsMHhNYlJQV2ExN3RoeUYzQlBrX3JIb1NJUFRRdVdaY0UyS20wU0RlQWEzdHRKNVNWVXdseFphWFBlak5n?oc=5">비트코인 보합권, 알트코인은 하락세. 유에스디에이아이 9%대 급락</a> <span class="p0-desc">비트코인 보합권, 알트코인은 하락세. 유에스디에이아이 9%대 급락 gukjenews.com</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9uQVZtdEo2V2M3SnJEUkd5aEhTekVWUFlpNVM1ckhuR3U5ZWs1bHFYU0VsMHhNYlJQV2ExN3RoeUYzQlBrX3JIb1NJUFRRdVdaY0UyS20wU0RlQWEzdHRKNVNWVXdseFphWFBlak5n?oc=5">비트코인 보합권, 알트코인은 하락세. 유에스디에이아이 9%대 급락</a> <span class="p0-desc">가상자산 시장이 비트코인의 보합세 속에 종목별로 뚜렷한 온도 차를 보이며 혼조세를 기록하고 있다.23일 가상자산 거래소 업비트에 따르면, 시장의 지표가 되는 비트코인(BTC)은 전일 대비 0.05% 소폭 상승한 1억 1,595만 9,000원에 거래되며 횡보 흐름을 이어가고 있다. 거래대금은 약 2,564억 원 규모를 형성하며 시장의 관심을 유지했다.반면 알트코인 시장에서는 종목별로 명암이 갈렸다. 바이오프로토콜(BIO)은 전일 대비 12.56% 급등한 48.4원을 기록하며 주요 종목 중 가장 눈에 띄는 상승 폭을 보였다. 스테이블</span></li>
 <li><a href="https://www.coindesk.com/business/2026/04/23/ftx-sold-its-cursor-stake-for-usd200-000-in-2023-it-would-be-worth-usd3-billion-today">FTX는 2023년에 Cursor 지분을 200,000달러에 매각했습니다. 현재 가치는 30억 달러에 달합니다.</a> <span class="p0-desc">SpaceX가 AI 코딩 스타트업 Cursor를 600억 달러 가치로 인수하기로 합의하면서 FTX 자산의 일상적인 파산 자산 매각이 암호화폐 역사상 가장 큰 손실 복구 중 하나로.</span></li>
 <li><a href="https://www.coindesk.com/tech/2026/04/21/the-usd292-million-kelp-dao-exploit-shows-why-crypto-bridges-are-still-one-of-the-industry-s-weakest-links">2억 9200만 달러 규모의 Kelp DAO 익스플로잇은 암호화폐 브리지가 여전히 업계에서 가장 약한 링크 중 하나인 이유를 보여줍니다.</a> <span class="p0-desc">문제는 구조적이며 브리지가 공유 인프라와 숨겨진 신뢰 가정을 갖춘 복잡한 시스템에 의존하는 한 취약한 상태로 유지됩니다.</span></li>
 </ul>

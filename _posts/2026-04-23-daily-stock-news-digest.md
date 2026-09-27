@@ -73,7 +73,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBWeUoyOUx2dERFWmIzeXpvWGxEODlrUkFLNWRDdHd6UHBUMGpRYlNRSS1SYXd2NTdsSlVUYl9DLWpIc0lIRzFpY001VUdMYU55eFZRT0ZRRUQ1cFdwb0VHb1FHUndtNWZRcUJJOTFCSXhmX2PSAXdBVV95cUxNNzhUX1dMeGdPVFMxdm55YV9IQXNabDZrMjkwRmNyTlJCVVN0X2VmRGRfdU14LXltcHNLTThSNXJCTDZQdURpb0g5MElUb3p2U2ZPanpnVFEtUmFmajdBcVNsbWxUUy1xLUF4dTRoYWs0WnpxWEN2MA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(22일) 주요공시는.OCI, 1분기 영업이익 278억원</a>
-<p class="news-desc">코스피·코스닥 전 거래일(22일) 주요공시는.OCI, 1분기 영업이익 278억원 핀포인트뉴스</p>
+<p class="news-desc">▲ SK하이닉스[000660], 150억 규모 자사주 처분…곽노정 등 경영진에 지급▲ OCI, 1분기 영업이익 278억원…작년 동기보다 171.4%↑▲ LG디스플레이, 신규 OLED 인프라에 1조1천억원 투자▲ SIMPAC[009160] "제노밸류업사모투자 합자회사 주식 354억원에 취득"▲ 핑거[163730], 300억원 유상증자…서룡전자 주식회사에 제3자배정▲ 큐로홀딩스[051780], 9억9천만원 유상증자…김규한 등에 3자 배정▲ 서진시스템[178320], 1천800억유증…네오영·토러스자산운용에 3자배정▲ SNT모티브[0649</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -85,7 +85,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5HcUZkVnE3RC1SQy02X0RDOENRMVQ1YkkxWGo2dmNTM0VBdzd4Wk5ibGgxV0dvNkEzSmdFOWVxYjQyRjVIMGNVT1pqenVYNUZXMUtHTURoZzNOVXo4VWw4U2NhcmYyVmRHUlN3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 마감.코스닥 내림세 마무리 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 마감.코스닥 내림세 마무리 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 23일 코스피와 코스닥지수가 각각 오름세와 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 57.88포인트 오른 6475.81에 마감</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -192,7 +192,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5PejBidDZxUWIxSjJ0eHdoVDlhYzNMVlhUVEtOZ0hnUjQ2bnRNUFBBMDBBT3FnbVZiSVJOR01CUnJaV2RvX21uWHkwVG1GRGpOQ2NISmpQeFZYT2dvZS1sV0hVczhPUHR3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성운용, 삼성전자·SK하이닉스 채권혼합 ETF 순자산 5000억 돌파</a>
-<p class="news-desc">삼성운용, 삼성전자·SK하이닉스 채권혼합 ETF 순자산 5000억 돌파 fetv.co.kr</p>
+<p class="news-desc">[FETV=김예진 기자] 삼성자산운용의 'KODEX 삼성전자SK하이닉스채권혼합50' ETF가 상장 2주 만에 순자산 5000억원을 넘어섰다. 23일 삼성자산운용에</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbk1xckZVbmFfV1hoSUJfbUJvaFZmUlQyNlJNOHZSWUQzTURTZUpmMEZFNXBVbmJFSmtHdnJHQWtmdmtXSWx0bG41ZlB1c0VzVmY4TkwzVk5EWm4xMkR0aGM1VkNOeFExeXRTbzlGVnFqYWdLZm56TmFEcnRtaTE4aERVLVkyTmFB0gGcAUFVX3lxTFBQR1lmZEwwRHZEUGlvbTVWd0JlSXdzYTNCV3lHb0QxWmFyWW94a242c2tlTm85Y3FmeHFUclpIbFZvWGJidlJWVG82b1NQSnhzbzROeGxCMjNSYmtXUlBOZUxMWDhkZ0ZEcXFUVlNNMTdoWEVLQXVVWlU2Z3E5OE1HckdENkpJNlBXVVFQaUlxalpLbzVETUdjT1RIaw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스페이스X, 상장 후 머스크에 ‘수퍼 의결권’ 부여 - 조선비즈 - Chosunbiz</a>
-<p class="news-desc">스페이스X, 상장 후 머스크에 ‘수퍼 의결권’ 부여 - 조선비즈 Chosunbiz</p>
+<p class="news-desc">스페이스X, 상장 후 머스크에 수퍼 의결권 부여 클래스 B 주식, 주당 10개 의결권</p>
 <span class="source-tag" data-source-type="kr-media">조선비즈</span>
 </div>
 </div>

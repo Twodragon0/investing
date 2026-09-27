@@ -80,7 +80,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE8tdUZuMDBUR2RCVFZTeU5xYkNGSzV1MWF5YkN6WlVjcWFiT3hJR29OOXk3djM5M1pIX0RpdVQ2LWN5MS1iQzE3YTc3dUh3aGgxdEVmbnQ0ajZtQm1QMkY0RzBzd0tXUDhpZWN3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 17일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 1.28포인트 오른 6227.33에 시작했으며, 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -92,7 +92,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBvWTNkNjNiLVQ3RWVMVFNyamdRalhvSzRSYXVsb1owSVBNUGQtMXMwTk9OcERFZGZPQTc2Zzg2em5OR0RzcnltSFRmNzZmaThEWXJWNHk0T2VmVTJOTVZFSXVtSG01eVJkNXpRSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6,190선 안착.코로나19 변종 이슈로 관련주 급등 - 프리진경제</a>
-<p class="news-desc">코스피 6,190선 안착.코로나19 변종 이슈로 관련주 급등 프리진경제</p>
+<p class="news-desc">17일, 코스피는 전 거래일 대비 34.13포인트 오른 6,191.92로 상승 마감했다. 코스닥 역시 7.07포인트 상승한 1,170.04로 장을 마쳤다. 수급 동향을 보면, 코스피 시장에서 외국인은 1조 9,975억 원을 순매도하며 매도세를 보였다. 반면 개인은 1조 4,462억 원</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1GZEFMUXh1eVlubndHalpkbHBOaTlBSkxsUGxlSkdlMmo2elNHOFp6NS1ua3VCSkNQbm5Mbm95LUxoN2x4ZTZEZXpJU29DWFNlOV90WmZHdnQzR3dCVzlkelRZVGthX1pOZHRJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“삼성전자·하이닉스 배당 잔치”…반도체 슈퍼사이클에 주주 ‘두둑’</a>
-<p class="news-desc">“삼성전자·하이닉스 배당 잔치”…반도체 슈퍼사이클에 주주 ‘두둑’ hdnews.co.kr</p>
+<p class="news-desc">[현대경제=경제] 국내 반도체 양대 축인 삼성전자와 SK하이닉스가 사상 최대 실적을 바탕으로 주주들에게 ‘배당 보너스’를 안긴다. 주가 상승과 배당 확대가 동시에 이어지며 투자자들의 기대감도 커지고 있다.17일 업계에 따르면 삼성전자는 주당 566원의 배당금을 지급한다. 이번 배당에는</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

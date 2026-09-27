@@ -94,7 +94,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBvWTNkNjNiLVQ3RWVMVFNyamdRalhvSzRSYXVsb1owSVBNUGQtMXMwTk9OcERFZGZPQTc2Zzg2em5OR0RzcnltSFRmNzZmaThEWXJWNHk0T2VmVTJOTVZFSXVtSG01eVJkNXpRSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6,190선 안착.코로나19 변종 이슈로 관련주 급등 - 프리진경제</a>
-<p class="news-desc">코스피 6,190선 안착.코로나19 변종 이슈로 관련주 급등 프리진경제</p>
+<p class="news-desc">17일, 코스피는 전 거래일 대비 34.13포인트 오른 6,191.92로 상승 마감했다. 코스닥 역시 7.07포인트 상승한 1,170.04로 장을 마쳤다. 수급 동향을 보면, 코스피 시장에서 외국인은 1조 9,975억 원을 순매도하며 매도세를 보였다. 반면 개인은 1조 4,462억 원</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
