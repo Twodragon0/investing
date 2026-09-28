@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1wbzM3cUhISldRUldKUFBBejBIWkIzUVdkbWpOT1gtNFJuOUR4WTNDbVgxTmtEa1ZZZlRuTV9DVHhobW0xdF8tUlBEbVZubE4wS19ZZlV1U3lGc3F6eUpOX2JydjhNUmF4OWltatIBcEFVX3lxTE9xVnFVYk90WGdjMzlzbV9FQkxjQmRGUXp3Sm4tNThQTVc1Y05XSjJSQ1Z3amZLY3F3RzMxZTJXeFMtNEJNYTRISlJKeG9xOUJXdlFDcUhhOS1jTlJLVVdhakRPLWdnd1cyVk9tZEpNNUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주]‘116만 하이닉스’ 사상 최고가… 美 반도체 랠리에 삼성전자도 강세 - 남도일보</a>
-<p class="news-desc">[특징주]‘116만 하이닉스’ 사상 최고가… 美 반도체 랠리에 삼성전자도 강세 남도일보</p>
+<p class="news-desc">미국 기술주 급등 영향으로 15일 국내 반도체주가 장 초반 강세를 보이고 있다. SK하이닉스는 역대 최고가를 경신했으며, 삼성전자도 3% 이상 상승하며 거래 중이</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -229,7 +229,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQZ0JaYzJleFpoMXBHaVRLaU1wb01KZXNMTUdFQ1MyMzcteDRwcFlkTml3TXBwQTBhZmxyTnlrNkdFcnlVZkpvMlhvdUt0a3dCaWlCRXVLTkRhU2c0a0pDbDJKdUJQMU5xN253aW9OQnltclNQUGFxN29Sei1GVEVObmEwV0VyM0JJaDNBVUJ0WUJ4RXBoWXJzRlEwN3NyRkk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">BTC 가격이 하락하는 가운데 XRP, 플라즈마, DOGE에 주목: 크립토 데일리 - CoinDesk</a>
-<p class="news-desc">분석, 비디오 및 실시간 가격 업데이트가 포함된 암호화폐, 비트코인, 이더리움, XRP, 블록체인, 디파이, 디지털 금융 및 웹 3.0 뉴스의 리더입니다.</p>
+<p class="news-desc">비트코인BTC$84,117.13이 75,000달러 부근에서 부진한 거래를 이어가는 가운데, 여러 암호화폐 프로젝트들이 주목할 만한 발전을 보이고 있습니다. 그 중 하나는 핀테크 기업 리플이 국경 간 거래를 촉진하기 위해 사용하는 결제 중심 토큰인 XRP(XRP)입니다. 미국에 상장된 현물 XRP ETF는 데이터 소스 SoSoValue에 따르면 수요일에 1,700만 달러 이상 유입되어 2월 2일 이후 가장 많은 금액을 기록했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -287,7 +287,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1FOE1vb25odmZUMXBKbFRWd2xSWmlqT3JHTUVjdjU0b0xfaDhPZ3NpaTd6QlRlaEFmQVFJTFRnN2FLa3dHS1l6cVloY1hVS2JUbU9qdlM2WVNsNHcxSUtPYWQ5WjZ3alVGaklpOG9n?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">가상화폐 시세] 비트코인 1억1000만원선으로 상승…엑스알피 2000원선, 이더리움 340만원선 거래 - 이코노뉴스</a>
-<p class="news-desc">[가상화폐 시세] 비트코인 1억1000만원선으로 상승…엑스알피 2000원선, 이더리움 340만원선 거래 이코노뉴스</p>
+<p class="news-desc">[이코노뉴스=어 만 기자] 16일 대표적인 암호화폐 비트코인이 1억1000만원대에서 거래되고 있다.16일 암호화폐거래소 빗썸에 따르면 오전 8시50분 기준 비트코인은 전 거래일 대비 0.6%(66만원) 상승한 1억1037만원에 거래되고 있다.엑스알피는 빗썸에서 2000원선에서 거래되고 있다. 빗썸에서 이더리움은 340만원대에서 거래 중이다.한편, 미국과 이란의 종전 협상 기대감이 높아지면서 비트코인이 7만5000달러선을 회복했다. 트럼프 대통령은 폭스비즈니스 인터뷰 예고 영상에서 “전쟁이 종식에 근접했다”고 언급하며 2차 종전 협상</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

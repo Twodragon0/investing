@@ -44,7 +44,7 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-04-18 - 규제 뉴스 요�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE11Y091WHltd0dTTE9HenIxOXF4VEpTSGlmQmhOZEtSTkR2Q3h0dnh3VkxyZzdIbWdzOFFxT2U5ODZ6Mkg1T1poYXpTNHZ0a3hpcElzUzBwcnNzLVk4VjBweDdjTTVjTjFYMFEyUklKYXFxQmPSAXdBVV95cUxQMFlpeGZTeU5lZHZGWFVzMU1NQkpGQ2EtUWhmQUtINS0wOXl5Z1pncE5BWDh3ZmkxMFJVYldSX2VFV1pKLUsyWDJmNFdNRlJ6T0tTdTM3M1FOekU1Y281NU1TMFpMZ1k1ei1RMHR6dldWVDVGblFBbw?oc=5">기자수첩] ‘가상자산 서킷브레이커’ 보호장치인가, 해외유출 신호탄인가 - 스트레이트뉴스</a> <span class="p0-desc">기자수첩] ‘가상자산 서킷브레이커’ 보호장치인가, 해외유출 신호탄인가. 서킷브레이커/사이드카 발동.</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE11Y091WHltd0dTTE9HenIxOXF4VEpTSGlmQmhOZEtSTkR2Q3h0dnh3VkxyZzdIbWdzOFFxT2U5ODZ6Mkg1T1poYXpTNHZ0a3hpcElzUzBwcnNzLVk4VjBweDdjTTVjTjFYMFEyUklKYXFxQmPSAXdBVV95cUxQMFlpeGZTeU5lZHZGWFVzMU1NQkpGQ2EtUWhmQUtINS0wOXl5Z1pncE5BWDh3ZmkxMFJVYldSX2VFV1pKLUsyWDJmNFdNRlJ6T0tTdTM3M1FOekU1Y281NU1TMFpMZ1k1ei1RMHR6dldWVDVGblFBbw?oc=5">기자수첩] ‘가상자산 서킷브레이커’ 보호장치인가, 해외유출 신호탄인가 - 스트레이트뉴스</a> <span class="p0-desc">한국은행이 가상자산 시장에도 주식시장과 같은 서킷브레이커 도입을 검토해야 한다고 공개 제안했다. 지난 2월 빗썸의 비트코인 오지급 사고처럼 단 한 번의 내부 통제 실패가 수십조원대 오주문과 급격한 가격 변동으로 이어질 수 있다는 점이 드러났기 때문이다.한국은행은 이 사고를 운영 리스크 사례로 짚으면서 이상거래 차단 장치와 거래 중단 같은 시스템적 안전판이 필요하다고 봤다. 금융당국도 3월 가상자산위원회에서 거래소 내부통제 기준과 안전장치 도입 필요성을 논의했다. 문제는 방향이 아니라 방식이다. 투자자 보호라는 취지 자체를 반대할 사</span></li>
 <li><a href="https://www.fsa.go.jp/en/conference/minister/2026/20260327.html">가타야마 사츠키 금융장관 기자회견(2026년 3월 27일)</a> <span class="p0-desc">우선 네 가지 점을 말씀드리고 싶습니다.세 번째 요점은 중동 상황을 고려한 재정 조치에 관한 것입니다. 기업들이 심각한 현금흐름에 어려움을 겪지 않도록 오늘 긴급회의를 개최.</span></li>
 </ul>
 </div>

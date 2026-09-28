@@ -171,7 +171,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5FU3U3X1VEOWNzNEhySVB3OVJ0dGQ4MDJwV3c1ZDU0QlpuTXp0aWowTkhydTVKclI2Z0FLWVJQV2ZVWXBJMEYzS1g3Rno5c2huMHE0SS00VFA3LUtmTngycFFwWmJLVGw5QUR4TkRaRXdUYjQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">韓, 전 세계 코인 거래량 30% 쥐었다…유별난 알트코인 사랑, 왜?</a>
-<p class="news-desc">韓, 전 세계 코인 거래량 30% 쥐었다…유별난 알트코인 사랑, 왜? 디지털투데이</p>
+<p class="news-desc">[디지털투데이 홍진주 기자] 한국이 글로벌 암호화폐 시장에서 알트코인 중심 거래 허브로 다시 부상하고 있다. 비트코인(BTC)과 이더리움(ETH) 위주의 거래 구조가 지배적인 해외 시장과 달리 국내 거래소에서는 알트코인이 가격 형성과 유동성을 주도하는 흐름이 뚜렷하다.15일(현지시간) 블록체인 매체 크립토폴리탄에 따르면, 한국 거래소는 글로벌 암호화폐 거래량의 약 30%를 차지하며, 이 가운데 약 85%가 알트코인 거래에 집중된 것으로 나타났다.이는 주요 해외 거래소와는 대조적인 구조다. 코인베이스 등 미국 투자자 비중이 높은 거래</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

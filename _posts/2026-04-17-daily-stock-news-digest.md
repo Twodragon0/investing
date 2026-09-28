@@ -92,7 +92,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBpVjNuU1hkQjQxYmp4cHJIbU91S2FYQXhmWTh4cFdFRUlNVVZRTFh2cE85S1R4aUpyMUUya2tJckd2Q09RU0ozdVAxUkwzbnRodFdrUkU4X0FmUzQyNk9UVk1Yd3k3ZWt4MmNWSm5tQ2hraEk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(15일) 주요공시는.한국단자 "자회사 케이티 인터내쇼날 주식 383억원에 취득"</a>
-<p class="news-desc">코스피·코스닥 전 거래일(15일) 주요공시는.한국단자 "자회사 케이티 인터내쇼날 주식 383억원에 취득" 핀포인트뉴스</p>
+<p class="news-desc">▲ 한국단자[025540] "자회사 케이티 인터내쇼날 주식 383억원에 취득"▲ 네이버파이낸셜 상장 추진…주식교환 완료후 최장 7년내 목표▲ 세니젠[188260], 9억9천만원 유상증자…김태근에 제3자배정▲ 셀비온[308430] 250억 유증…삼호그린 2026 딥테크 창업벤처전문 사모투자 등에 3자배정▲ 한울반도체[320000], 230억원 주주배정 유상증자 결정▲ 테크윙[089030] 1분기 영업이익 97억원…작년 동기 대비 444.1%↑▲ 삼성SDS, KKR과 전략적 협력…1.2조원 규모 전환사채 발행▲ 코나아이[052400]</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -127,7 +127,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9YWnBVdl85MzJZOEFTVldJYXJnWWU5YlRKVnBYeUQxVTVvVlJ3N05Fcm90eS15T1kwbHF0bUZyUVZTUW9Id1VlT082OEx6N1Vlb2JUUGVxWGJmSFRmM3hYMTA3YkJXUUpiaDRnWTVWVjlRdThlLUIxRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 'K메모리 ETF' 보름만에 1조원…돈 빨아들이는 AI반도체</a>
-<p class="news-desc">美 'K메모리 ETF' 보름만에 1조원…돈 빨아들이는 AI반도체 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : 삼성전자와 SK하이닉스의 합산 영업이익이 올해 500조원, 내년 800조원이라는 전망이 나오면서 인공지능(AI) 반도체가 시중 자금을 끌어모으는 블랙홀이 되고 있다. '대체 불가능'한 독점력을 바탕으로 강력한 록인(Lock-in) 효과를 지닌 AI 반</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -139,7 +139,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBRSHBtaUoyVlJRZ1llODRUS21ON2IxdWhEZEVHb2thaTZYZ3RGM0kzRkhXVTJ5ZWJYRWZwa3h2SWdVX3p0Y1hCYzYxdHB2ajZUM2x5R0VB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“아직 싸다” 반도체株 랠리 시작…SK하이닉스 또 최고가 경신·삼성전자도 동반 강세 [종목Pick</a>
-<p class="news-desc">“아직 싸다” 반도체株 랠리 시작…SK하이닉스 또 최고가 경신·삼성전자도 동반 강세 [종목Pick] 헤럴드경제</p>
+<p class="news-desc">[헤럴드경제=문이림 기자] 국내 반도체 대형주가 동반 강세를 보이고 있다. 미·이란 전쟁 종전 기대감과 미국 기술주 급등에 외국인의 매수세가 유입된 영향으로 풀이된다. 15일 오전 9시8분 현재 삼성전자는 전장 대비 3.63% 오른 21만4500원에 거래 중이다. SK하이닉스는 전장 대비 5.35% 오른 116만2000원에 거래되고 있다. SK하이닉스는 전날 장중 112만8000원까지 오르며 최고가를 경신한 데 이어 이날 개장 직후 116만6000원까지 치솟으며 또다시 기록을 갈아치웠다.</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

@@ -41,7 +41,7 @@ image_alt: "소셜 미디어 동향 - 2026-04-17 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBLMVhJSzBBOW5MWU9oOGVGSnBmeU5XOWJTeUxmajdiVFJxc2UwelZjNy1nZjdXLWs2RmMzMF9lTzZaSjBBXzkyN1VWM0ZUdDh3VGc1Y3lhb3FvT0Y0UE5GUHlYR1ROR2RaUkNfcw?oc=5">신현송 한은 총재 후보 청문회 마무리…통화정책과 금리 결정 주목 - 스페셜경제</a> <span class="p0-desc">신현송 한은 총재 후보 청문회 마무리…통화정책과 금리 결정 주목 스페셜경제</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBLMVhJSzBBOW5MWU9oOGVGSnBmeU5XOWJTeUxmajdiVFJxc2UwelZjNy1nZjdXLWs2RmMzMF9lTzZaSjBBXzkyN1VWM0ZUdDh3VGc1Y3lhb3FvT0Y0UE5GUHlYR1ROR2RaUkNfcw?oc=5">신현송 한은 총재 후보 청문회 마무리…통화정책과 금리 결정 주목 - 스페셜경제</a> <span class="p0-desc">스페셜경제=남하나 기자 | 신현송 한국은행 총재 후보자가 국회 인사청문회를 마무리하며 사실상 총재 취임 수순에 들어갔다.한은 총재는 국회 동의와 무관하게 대통령이</span></li>
 </ul>
 </div>
 
