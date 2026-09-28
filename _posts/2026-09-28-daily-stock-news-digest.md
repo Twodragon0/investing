@@ -33,50 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-28 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffe. - 126건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 관련 14건</li><li>📊 <strong>매크로/금리</strong>: 국채, 채권 동향 주시</li><li>📈 <strong>가격/시장</strong>: 연속, 랠리 이슈 부각</li><li>🟠 <strong>비트코인</strong>: ETF, IPO 관련 4건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQdnpRdGR3M1NVYVF1MFA0RjE4RzRMZDFza1psbWFFejcwWHRmTm90V2UxR3BXRjdVZUNCN3UyRVlRV0hPN2pIUW8taTExdWtmR0kwczBzVkhmUFVFaHVabW91bWNmVk9OdXBBNVNfcTczMFVheHlidk9jdWNXSjViallvNUktdjdZQlh3YXlCRnZpVXZOU1Bodg?oc=5">Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffett's Time-Tested Advice. - The Motley Fool</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffe. 
-총 126건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🤖 AI/기술** (14건): 반도체, 엔비디아, 애플 기술 이슈 (14건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (12건): 국채, 채권, 인플레이션 매크로 변수 (12건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (18건): 연속, 랠리, 삼성전자 가격 변동 (18건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffett'
-
-### 주요 이슈
-
-- ETF 언박싱] KB운용, 삼성·SK 그룹주 묶은 ETF 출격…AI 생태계 투자 : 네이버 블로그 - Naver Blog
-- This S&P 500 ETF Could Help Protect You Against One of the Stock Market's Bigges
-- Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit gro
-- 외 9건
-
-### 투자자 체크포인트
-
-- 한국 기사 43건, 글로벌 기사 83건 수집
-- 한국 지수: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,355.28(-0.86%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:78%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:67%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:100%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:33%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-09-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-09-28.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,080.92 (+0.90%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 844.48 (+1.21%).
+- 2026-09-28 주식 시장에서 126건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,355.28(-0.86%).
+- *[이데일리 최오현 기자] 올 상반기 주식시장에서 ‘반도체주’ 광풍이 몰아쳤다.*
 
 ## 테마별 주요 뉴스
 

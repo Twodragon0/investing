@@ -24,9 +24,12 @@ image_alt: "정치인 거래·정책 리포트 - 2026-03-31 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(18회), **연준**(7회), **재산**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 0건(0%), 매도 신호 4건(100%). 매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+- 1. Form 4\ DOLLAR GENERAL CORP 내부자 거래 활동 [Form 4] DOLLAR GENERAL CORP 내부자 거래 활동 stocktitan.net
 
 ## SEC 내부자 거래 (Form 4)
 

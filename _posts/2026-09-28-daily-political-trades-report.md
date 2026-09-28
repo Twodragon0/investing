@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 3건 수집. 트럼프 정책 1건
 image_alt: "정치인 거래·정책 리포트 - 2026-09-28 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-28.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-28** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **3건** — 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 1건
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-28 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(2회), **이재명**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **3건**의 뉴스가 수집되었습니다. 세부 구성은 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 1건입니다.
-
-**트럼프 정책** 관련으로는 Trump Approves Fuel Economy Rollback That Gives Gas Cars More Room Autoblog 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 By: Jessica Fredrickson – 01.07.25 The Calgary Roughnecks and the […] 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 PK 추석 민심부동산·주식 등 각종 정책 불만잘못된 부분 개선 목소리 높아한동훈 복당 희망 의견도 많아“국힘 단결해 이재명 정부 견제” 무소속 한동훈 의원이 지난 24일 용산구 국방부 앞에서 비무장지대(DMZ) 내 지뢰 폭발사고 관련 즉각 조사를 촉구하는 1인시위를 하고 있다. 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-09-28 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 3건 — 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 1건
+- 1. Trump Approves Fuel Economy Rollback That Gives Gas Cars More Room - Autoblog Trump Approves Fuel Economy Rollback That Gives Gas Cars More Room Autoblog
 
 ## 1. 트럼프 행정명령/정책
 

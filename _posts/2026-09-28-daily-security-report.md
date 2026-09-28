@@ -16,31 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] Here’s what happened in crypto today**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Duelbits exploit: Hot Wallet Key Compromised 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 9건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): security, exploit, compromised 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (3건): exploit, logic, flaw DeFi 동향 (3건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (6건): exploit, compromised, wallet 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-
-### 긴급 이슈
-
-- [Security] Duelbits exploit: Hot Wallet Key Compromised
-- [Security] Bitget exploit: Hot Wallet Key Compromised
-- [Security] Payy Network exploit: Bridge Logic Flaw
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 9건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건
