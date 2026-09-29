@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-08 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/ctrl-wallet-shutdown-security-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">보안 악용 후 몇 주 동안 폐쇄되는 Ctrl Wallet</a> <span class="p0-desc">이러한 움직임은 2026년 8월 3일 모든 기능이 비활성화되기 전에 사용자가 자산을 인출할 것을 촉구하면서 지갑을 폐쇄하게 된 6월 23일 익스플로잇에 따른 것입니다.</span></li><li><a href="https://cointelegraph.com/news/trader-loses-2m-in-same-block-backrun-extraction-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">트레이더는 '동일 블록 백런 추출' 악용으로 200만 달러 손실</a> <span class="p0-desc">한 암호화폐 거래자는 피경쟁 우위가 거래에 서명하기 전에 거래 경로를 읽었다면 200만 달러의 손실을 예방할 수 있었다고 지적했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **105건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-07-08 암호화폐 핵심 뉴스: 거의 백만 명의 투자자가 트럼프 암호화폐 코인에서 총 38억 달러의 손실을 입었습니다.. 총 105건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

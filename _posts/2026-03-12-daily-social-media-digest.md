@@ -39,7 +39,6 @@ permalink: "/social-media/2026/03/12/daily-social-media-digest/"
 </div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 36건 중 텔레그램 20건, 소셜 1건, 정치·경제 15건으로 정치/정책 및 비트코인 이슈가 주요 화제입니다.
