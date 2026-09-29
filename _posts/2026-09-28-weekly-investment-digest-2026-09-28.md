@@ -54,9 +54,11 @@ image_alt: "주간 투자 다이제스트 - 2026년 09월 28일 - 시장 분석 
 - 2026-09-28 [암호화폐 시장 종합 리포트 - 2026-09-28 | 시총 $2.88T (-3.5%)](/market-analysis/2026/09/28/daily-crypto-market-report/) -- 현재가 $71.03, 24시간 -1.96% 하락, 7일 +20.39%. 시가총액 $5.52B
 - 2026-09-28 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-28](/market-analysis/2026/09/28/daily-worldmonitor-briefing/) -- 2026-09-28 글로벌 핵심 이슈: Ireland defeats Israel in controversial UEFA Nations League match (지정학/안보). WorldMonitor 연계 소스…
 - 2026-09-28 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-28](/market-analysis/2026/09/28/daily-worldmonitor-briefing/) -- 12 Ramos fires holders Portugal to 2-1 Nations League win in Norway 사회/기타 낮음 WorldMonitor/Al Jazeera
-- 2026-09-28 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-09-28](/market-analysis/2026/09/28/daily-worldmonitor-briefing/) -- 오늘의 글로벌 리스크 스냅샷 총 수집: 20건 핵심 테마: 사회/기타, 지정학/안보, 금융시장 집중 출처: WorldMonitor/Al Jazeera
-- 2026-09-28 [주요 경제 캘린더 및 실적 일정 (2026-09-28)](/market-analysis/2026/09/28/fmp-economic-calendar/) -- 2026-09-28 오늘 일정 — 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 29건(고·중간 중요도), 대형주 실적 0건, IPO 일정 11건을 정리했습니다
-- 2026-09-28 [주요 경제 캘린더 및 실적 일정 (2026-09-28)](/market-analysis/2026/09/28/fmp-economic-calendar/) -- Tue, 22 Sep 2026 20:09:00 GMT
+<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+<li>총 수집: N/A</li>
+<li>핵심 테마: N/A</li>
+<li>집중 출처: N/A</li>
+</ul></div>
 
 ## 암호화폐 뉴스 (8건)
 

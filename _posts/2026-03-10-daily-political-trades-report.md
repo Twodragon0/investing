@@ -27,9 +27,12 @@ permalink: "/political-trades/2026/03/10/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **sec(미국증권거래위원회)**(4회), **trump(트럼프)**(2회), **executive order**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 트럼프 정책: 1건 (암호화폐 1건, 행정명령 1건). 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
+- 1. 암호화폐에 대한 행정명령: 초보자를 위한 트럼프의 정책 설명 - FinanceFeeds 암호화폐에 대한 행정명령: 초보자를 위한 트럼프의 정책 설명 FinanceFeeds
 
 ## 트럼프 행정명령/정책
 
