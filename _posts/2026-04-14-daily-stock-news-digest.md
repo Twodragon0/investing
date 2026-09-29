@@ -44,8 +44,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-14 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFA3Wll1YXZscHhHamNJdWM4MUsxbXFTa2tFMnRDeVBySUhJMWw1SURXdEExcC1XUDFMVngxVUhlaUJzSkZUeUVCQjkweHdwaEFNTUZqc2JrOWJCREJ3VDRZRW9jaXZBUGpSWjg5SFhRVQ?oc=5">코스피, 장 초반 급락 딛고 5800선 사수…0.86% 하락 마감 - 진일보</a> <span class="p0-desc">코스피, 장 초반 급락 딛고 5800선 사수…0.86% 하락 마감 진일보</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5rN04tTjRIdV9yRG02enk0QUhObkI5MENrVVh0VzdZWjU3Z2NIczhsYzJOMWd4SmNkWW1hZWoxYy1GV3FsckNMRTVaUHY1Q0V6N3E5STRLMVhIRHBHVWlHQThPRFgtMk9NczNmcHpJYw?oc=5">코스피 100포인트 넘게 급락…5750선으로 주저앉아 - 진일보</a> <span class="p0-desc">코스피 100포인트 넘게 급락…5750선으로 주저앉아 진일보</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFA3Wll1YXZscHhHamNJdWM4MUsxbXFTa2tFMnRDeVBySUhJMWw1SURXdEExcC1XUDFMVngxVUhlaUJzSkZUeUVCQjkweHdwaEFNTUZqc2JrOWJCREJ3VDRZRW9jaXZBUGpSWjg5SFhRVQ?oc=5">코스피, 장 초반 급락 딛고 5800선 사수…0.86% 하락 마감 - 진일보</a> <span class="p0-desc">코스피가 13일 소폭 하락하며 5800선에서 장을 마쳤다.이날 코스피는 전장보다 50.25포인트(0.86%) 떨어진 5808.62에 거래를 마감했다.지수는 전장</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5rN04tTjRIdV9yRG02enk0QUhObkI5MENrVVh0VzdZWjU3Z2NIczhsYzJOMWd4SmNkWW1hZWoxYy1GV3FsckNMRTVaUHY1Q0V6N3E5STRLMVhIRHBHVWlHQThPRFgtMk9NczNmcHpJYw?oc=5">코스피 100포인트 넘게 급락…5750선으로 주저앉아 - 진일보</a> <span class="p0-desc">코스피가 13일 하락 출발하며 5750선으로 내려앉았다.이날 오전 9시 3분께 코스피는 전장보다 101.55포인트(1.73%) 하락한 5757.32에 거래되고 있</span></li>
 <li><a href="https://finance.yahoo.com/markets/crypto/articles/korea-calls-circuit-breakers-crypto-162900326.html">Korea Calls For Circuit Breakers On Crypto Exchanges</a></li>
 </ul>
 </div>
@@ -82,7 +82,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5rUUNWZ1NlVzM1VGU2SzRrVGJSSFdMZnJXZ2Q2WC1SM2owRWlpNnViVTNfQUxTd3hZNk5fc01TOGNocTVidUtKVzFGQ0pkSWNWMTM5SmJJY2dwd2hnYTNoSmNKOE8tNHN6aDNF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">주식] 코스피·코스닥 주춤.줄기세포치료 '메디포스트' 18% 강세 - 히트뉴스</a>
-<p class="news-desc">[주식] 코스피·코스닥 주춤.줄기세포치료 '메디포스트' 18% 강세 히트뉴스</p>
+<p class="news-desc">메디포스트(+18.02%), 옵투스제약(+15.20%), 아이엠바이오로직스(+14.87%), 강스템바이오텍(+12.50%), 큐리옥스바이오시스템즈(+11.04%) 와이바이오로직스(-6.29%), 코오롱티슈진(-5.64%), 쓰리빌리언(-5.45%), 지아이이노베이션(-4.60%), 명인제약(-3.84%)</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

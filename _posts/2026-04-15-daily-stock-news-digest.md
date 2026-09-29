@@ -44,8 +44,8 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-15 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent">
 <strong>긴급 알림</strong>
 <ul>
-<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFA3Wll1YXZscHhHamNJdWM4MUsxbXFTa2tFMnRDeVBySUhJMWw1SURXdEExcC1XUDFMVngxVUhlaUJzSkZUeUVCQjkweHdwaEFNTUZqc2JrOWJCREJ3VDRZRW9jaXZBUGpSWjg5SFhRVQ?oc=5">코스피, 장 초반 급락 딛고 5800선 사수…0.86% 하락 마감 - 진일보</a> <span class="p0-desc">코스피, 장 초반 급락 딛고 5800선 사수…0.86% 하락 마감 진일보</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5rN04tTjRIdV9yRG02enk0QUhObkI5MENrVVh0VzdZWjU3Z2NIczhsYzJOMWd4SmNkWW1hZWoxYy1GV3FsckNMRTVaUHY1Q0V6N3E5STRLMVhIRHBHVWlHQThPRFgtMk9NczNmcHpJYw?oc=5">코스피 100포인트 넘게 급락…5750선으로 주저앉아 - 진일보</a> <span class="p0-desc">코스피 100포인트 넘게 급락…5750선으로 주저앉아 진일보</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFA3Wll1YXZscHhHamNJdWM4MUsxbXFTa2tFMnRDeVBySUhJMWw1SURXdEExcC1XUDFMVngxVUhlaUJzSkZUeUVCQjkweHdwaEFNTUZqc2JrOWJCREJ3VDRZRW9jaXZBUGpSWjg5SFhRVQ?oc=5">코스피, 장 초반 급락 딛고 5800선 사수…0.86% 하락 마감 - 진일보</a> <span class="p0-desc">코스피가 13일 소폭 하락하며 5800선에서 장을 마쳤다.이날 코스피는 전장보다 50.25포인트(0.86%) 떨어진 5808.62에 거래를 마감했다.지수는 전장</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5rN04tTjRIdV9yRG02enk0QUhObkI5MENrVVh0VzdZWjU3Z2NIczhsYzJOMWd4SmNkWW1hZWoxYy1GV3FsckNMRTVaUHY1Q0V6N3E5STRLMVhIRHBHVWlHQThPRFgtMk9NczNmcHpJYw?oc=5">코스피 100포인트 넘게 급락…5750선으로 주저앉아 - 진일보</a> <span class="p0-desc">코스피가 13일 하락 출발하며 5750선으로 내려앉았다.이날 오전 9시 3분께 코스피는 전장보다 101.55포인트(1.73%) 하락한 5757.32에 거래되고 있</span></li>
 <li><a href="https://www.cnbc.com/2026/04/14/jamie-dimon-anthropic-mythos-vulnerabilities-cyber-attacks.html">Jamie Dimon says Anthropic's Mythos reveals 'a lot more vulnerabilities' for cyberattacks</a></li>
 </ul>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE84Wm9uMXY4RHdhY0JwNDlWR3Mwc2JCMll1UnB5MXFWUkZjZkdfaS1xNmFJWTI3NkZ4b3VwdnpmMndLVVlqbjlsNXIycHNxUnFFUWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 대장주 갈아탄다…SK하이닉스 팔고 삼성전기 담았다 [주식 초고수는 지금</a>
-<p class="news-desc">반도체 대장주 갈아탄다…SK하이닉스 팔고 삼성전기 담았다 [주식 초고수는 지금] 매일경제</p>
+<p class="news-desc">미래에셋증권에서 거래하는 고수익 투자자들이 14일 오전 가장 많이 순매수한 종목은 삼성전기로 집계됐다. 이날 미래에셋증권에 따르면 최근 1개월간 투자 수익률 상위 1%에 해당하는 ‘주식 초고수’들은 오전 9시30분까지 삼성전기를 가장 많이 사들였다. 증권가는 최근 삼성전기 목표주가를 일제히 올려잡고 있는 추세다. 삼성전기 주가는 이 시각 기준 전 거래일 대</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

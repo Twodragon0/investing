@@ -241,7 +241,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9iZjVkUVI2MXJIWG5XeXR4MVdsb2ttbjlzNWhLd2FaMDIwXzFsQUdYTDJCVDJHS1NVTlZ6dEpWMmtRUkpQdENvdEV6ZmZ3MzFjdzlF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 7만3000달러 돌파에 이더리움 강세까지…'암호화폐 로테이션 랠리' 본격화</a>
-<p class="news-desc">[코인 시황] 비트코인 7만3000달러 돌파에 이더리움 강세까지…'암호화폐 로테이션 랠리' 본격화 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : [서울=뉴스핌] 고인원 기자= 미국 현물 비트코인 상장지수펀드(ETF)에서 대규모 자금이 빠져나가는 가운데, 이더리움(ETH) 관련 펀드로 자금이 재유입되면서 암호화폐 시장의 주도주가 비트코인(BTC)에서 이더리움으로 이동하는 이른바 '로테이션 장세'</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
