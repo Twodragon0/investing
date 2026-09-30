@@ -128,7 +128,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE04OXhFOXVpZExZeE1BLU1WWUhfVW1oVHhHSVVfdUFhU082UmZLMzlxVkQ3R3FpSlk1eDl5ekVTd01udjV6RTJtbnlienZsNFdkN21WVEQzYlI2ZTFsUm1TMtIBYEFVX3lxTE04OXhFOXVpZExZeE1BLU1WWUhfVW1oVHhHSVVfdUFhU082UmZLMzlxVkQ3R3FpSlk1eDl5ekVTd01udjV6RTJtbnlienZsNFdkN21WVEQzYlI2ZTFsUm1TMg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이란전쟁에 국내 주식 10개 중 7개 녹았다…하락률 1위는</a>
-<p class="news-desc">이란전쟁에 국내 주식 10개 중 7개 녹았다…하락률 1위는 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 이민영 기자 = 국내 증시가 이란 전쟁 여파로 휘청인 가운데 전쟁 발발 이후 상장 종목 10개 중 7개 꼴로 하락한 것으로 나...</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBuT0xWMWRQdkd6V2ljRUVsbWx1aHFSNkI0TGpIVFJ0TkxoVS1NcVBuUzhSUnJ1cERaNGo4S3A3OF9WRDdXUXBMaUVlWmJLYklzUXJId01oTmR1SmV1NTZZMW1rcnEtV204b1dGMEJKV0JDQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">개장시황] 미-이란 종전 협상 '낙관론'…개인, 코스피·코스닥 끌어올려 - 중앙이코노미뉴스</a>
-<p class="news-desc">[개장시황] 미-이란 종전 협상 '낙관론'…개인, 코스피·코스닥 끌어올려 중앙이코노미뉴스</p>
+<p class="news-desc">[중앙이코노미뉴스 김수현] 미국과 이란이 2주간의 휴전 사이 종전 협상을 타결할 수 있다는 전망에 개인 투자자의 매수세가 국내 증시를 상승시키고 있다.지난 9일(</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -187,7 +187,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UeGxnanVNbWp3eEx4MWpBaG1BSEpJUm5vd0lXX2ZielJOcHN6NXBNWGZ5LXZLbkxFOGpfQWdRWjg5ZW5wbjFoNUtDZFlpSTA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘40만전자·200만닉스 시대’ 열리나… 반도체 양강, 사상 초유 ‘슈퍼 사이클’ 진입</a>
-<p class="news-desc">‘40만전자·200만닉스 시대’ 열리나… 반도체 양강, 사상 초유 ‘슈퍼 사이클’ 진입 v.daum.net</p>
+<p class="news-desc">삼성전자가 1분기 영업이익 57조원이라는 기록적인 실적을 발표하며 모두의 예상을 깬 가운데 증권가를 중심으로 삼성전자 ‘40만 원’, SK하이닉스 ‘200만 원’이라는 사상 초유의 목표주가가 등장했다. 메모리 반도체 가격 상승폭이 예상치를 압도하면서 국내 반도체 양강의 수익성이 유례없는 속도로 개선될 것이라는 전망이 지배적이다. 10일 유가증권시장에서 삼성</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

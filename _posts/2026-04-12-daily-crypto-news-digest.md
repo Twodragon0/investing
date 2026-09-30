@@ -147,7 +147,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1wbFNSbnBmWkt6ZlJOVzlMc1NBMFA2RnptdFlCdmdEZDBnMjUza2dxbnpxcDlGMW91UjZqeHFlQm5SQWdkZjFabFh6b05JZm8wWDNDVjh1Z3pPeG9lSTl2Q1EzN0RPc3RPXzRDZ3o1SXVtRFE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">일본, 암호화폐 '금융상품' 분류 법안 추진…세율도 인하</a>
-<p class="news-desc">일본, 암호화폐 '금융상품' 분류 법안 추진…세율도 인하 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 일본 정부가 암호화폐를 금융상품으로 분류하는 금융상품거래법 개정안을 승인했다. 10일(현지시간) 블록체인 매체 크립토폴리탄에 따르면 일본은 암호화폐 수익 과세도 기존 최고 55% 누진세에서 20% 단일세로 바꾸는 새 세제를 도입했다.이번 개정안은 암호화폐를 결제 수단이 아니라 투자 가능한 금융자산으로 다루는 데 초점을 맞췄다. 이에 따라 주식시장에 적용하던 내부자거래 규제가 암호화폐 거래에도 적용된다. 비공개 중요정보를 이용한 거래를 막겠다는 취지다.암호화폐 발행 주체에는 최소 연 1회 정보 공시 의무도</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>

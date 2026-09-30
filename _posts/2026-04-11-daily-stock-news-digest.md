@@ -129,7 +129,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE04OXhFOXVpZExZeE1BLU1WWUhfVW1oVHhHSVVfdUFhU082UmZLMzlxVkQ3R3FpSlk1eDl5ekVTd01udjV6RTJtbnlienZsNFdkN21WVEQzYlI2ZTFsUm1TMtIBYEFVX3lxTE04OXhFOXVpZExZeE1BLU1WWUhfVW1oVHhHSVVfdUFhU082UmZLMzlxVkQ3R3FpSlk1eDl5ekVTd01udjV6RTJtbnlienZsNFdkN21WVEQzYlI2ZTFsUm1TMg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">이란전쟁에 국내 주식 10개 중 7개 녹았다…하락률 1위는</a>
-<p class="news-desc">이란전쟁에 국내 주식 10개 중 7개 녹았다…하락률 1위는 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 이민영 기자 = 국내 증시가 이란 전쟁 여파로 휘청인 가운데 전쟁 발발 이후 상장 종목 10개 중 7개 꼴로 하락한 것으로 나...</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -141,7 +141,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE15c01aUTJWRHFiT2FVZW9CUkVyTTZEV3RIRjlJTGFGbHRzcFpBZ1hmVFNMZUkza25Hdkc1OGlic2dxQXp5T3ZjYWh4bHdZMnVxWFhGclpxcnJTNEotNVBpRVY3by0xSE1wUmRaWEZyYw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 5810선 하락 출발…코스닥도 0.8%대 내림세 - 진일보</a>
-<p class="news-desc">코스피, 5810선 하락 출발…코스닥도 0.8%대 내림세 진일보</p>
+<p class="news-desc">코스피가 9일 하락 출발해 5810대를 나타내고 있다.이날 오전 9시1분께 코스피는 전날보다 52.92포인트(0.90%) 내린 5819.42다.지수는 전장 대비</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

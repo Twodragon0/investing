@@ -53,7 +53,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-13 - 암호화폐 뉴스 요
 <strong>긴급 알림</strong>
 <ul>
 <li><a href="https://news.google.com/read/CBMingFBVV95cUxNYWltNldmRFdJSFdIZmQtVFhsdjhxb2JhOVhVT0FZRDBTemtIdmhaeDJqM3VUWkhXZkRoT3c3VER3MGZPQ3BmVUxVRXJRMDBWMVlnd1BJNUhLd2xSNEtjdDZnNU5yZzVOcXNoZ0R1THAzN2RyUjJfUkx2MmttY2VoTzBpSFVLRUtpbThCMEowSno1N0xxNGY0T1JlYVRPUQ?hl=en-US&gl=US&ceid=US%3Aen">이란, 호르무즈 해협을 비트코인 유료 부스로 전환: 암호화폐가 다시 10만 달러를 기록할 것인가?</a> <span class="p0-desc">비트코인(CRYPTO:BTC)은(는) 최근에 난폭한 상황을 겪었습니다. 10월에는 126,198달러라는 사상 최고치를 기록했고 2월 초에는 약 60,000달러까지 폭락했습니다.</span></li>
-<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFA0LTJTTHBZVDhnLWY2bGJyYUd6X3JDQl9zYVdCeUl4UHdqLVpvRnpPX0Z2WlRpWWtYN0wzU1Z5ZW4zLWpNR2ViTUtlMS1yRjFDc29CU0ZUekE5R3ZSUDhiX3JjX1k?oc=5">암호화폐 ATM `비트코인 디포` 54억 해킹…북한 연계성은 "아직"</a> <span class="p0-desc">암호화폐 ATM `비트코인 디포` 54억 해킹…북한 연계성은 "아직" 디지털데일리</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFA0LTJTTHBZVDhnLWY2bGJyYUd6X3JDQl9zYVdCeUl4UHdqLVpvRnpPX0Z2WlRpWWtYN0wzU1Z5ZW4zLWpNR2ViTUtlMS1yRjFDc29CU0ZUekE5R3ZSUDhiX3JjX1k?oc=5">암호화폐 ATM `비트코인 디포` 54억 해킹…북한 연계성은 "아직"</a> <span class="p0-desc">보안사고는 '일상'입니다. 이번 주 국내외에서 발생한 주요 사이버 위협과 사건·사고를 소개합니다. 최신 소식이 궁금하다면, '위클리 쓰렛(Weekly Threat)'을 확인해 보세요. &lt;편집자주&gt; [디지털데일리 김보민기자] 암호화폐 자동입출금기(ATM) 기업 '비트코인디포'가 해킹을 당해 54억원대 비트코인이 무단 이체되는 사고가 발생했다. 솔라나 기반 탈중앙화 거래소 '드리프트'에서 발생한 해킹 사고와 연계성은 밝혀지지 않았다. 드리프트 사고의 경우 배후로 북한 해킹 조직이 지목된 상태다. 국내에서는 랜섬웨어 공격이 이어졌다.</span></li>
 <li><a href="https://cointelegraph.com/news/trump-backlash-crypto-tokens-crash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">트럼프 미국 대통령은 트럼프에 연결된 토큰 폭락으로 인해 다시 반발에 직면합니다.</a> <span class="p0-desc">민주당 국회의원과 암호화폐 투자자들은 트럼프에 의해 시작되거나 이와 관련된 암호화폐 프로젝트를 사기 및 정치적 부패로 규정했습니다.</span></li>
 </ul>
 </div>
@@ -242,7 +242,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE82a0gyZk1vV1gyOC1jazI1SzRBbncwcXZiS3RhU3hxX3F1ZVJLMzE1MnFRT0hlcy1US09rWTNybVNXcWJJQXN6TDZXU21sZEJWNTU1dE1sMjh3akZHZDg5T1AtcjY4S08zOGRUNHR3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 1억 800만 원대 유지… 이더리움·온톨로지 동반 상승세</a>
-<p class="news-desc">비트코인 1억 800만 원대 유지… 이더리움·온톨로지 동반 상승세 gukjenews.com</p>
+<p class="news-desc">가상자산 시장이 비트코인과 이더리움 등 주요 종목을 중심으로 완만한 상승세를 보이고 있다.12일 국내 가상자산 거래소 업비트에 따르면 비트코인은 전일 대비 0.23% 상승한 1억 855만 5,000원에 거래되며 견조한 흐름을 이어가고 있다.특히 이더리움은 1.77% 오른 339만 4,000원을 기록하며 주요 알트코인 상승을 이끌고 있다.종목별로는 온톨로지의 활약이 두드러졌다. 온톨로지는 전일 대비 9.40% 급등한 128원에 거래되며 투자자들의 높은 관심을 받았다. 이어 스페이스아이디(+6.22%), 온톨로지가스(+3.73%), 블</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
