@@ -14,8 +14,6 @@ description: "정치인 거래·정책 동향 21건 수집. SEC 내부자 15건,
 image_alt: "정치인 거래·정책 리포트 - 2026-09-30 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-
-
 **2026-09-30** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **21건** — SEC 내부자 거래 15건, 한국 정치인 2건, 중앙은행 4건
 
 ## 한눈에 보기
@@ -27,7 +25,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-30 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-09-30 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 21건 — SEC 내부자 거래 15건, 한국 정치인 2건, 중앙은행 4건
 - 1. Through a controlled corporation, KE Holdings (BEKE) CEO Yongdong Peng sold shares. - Stock Titan Through a controlled corporation, KE Holdings (BEKE) CEO…
 
 ## 1. SEC 내부자 거래 (Form 4)

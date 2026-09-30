@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-25 | Fear 25 - 시장
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Zcash</strong> (ZEC): +8.95%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +8.12%</li><li>🟢 <strong>Canton</strong> (CC): +4.21%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집
