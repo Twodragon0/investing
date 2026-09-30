@@ -19,6 +19,7 @@ image_alt: "지정학 리스크 리포트 - 2026-08-31 - 글로벌 이슈 뉴스
 ## 전체 뉴스 요약
 
 - 총 **0건** 수집
+- 2026-08-31 지정학 핵심 이슈: Opinion : Benjamin Netanyahu doesnt have to trust Hamas to accept peace (GDELT). 주요 테마는 기타 지정학이며, Polymarket 15건·GDELT 30건·뉴스 0건을 종합…
 - 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
 
 

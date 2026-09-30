@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 21건 수집. SEC 내부자 15건,
 image_alt: "정치인 거래·정책 리포트 - 2026-09-30 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-09-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-09-30.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-09-30** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **21건** — SEC 내부자 거래 15건, 한국 정치인 2건, 중앙은행 4건
@@ -25,15 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-30 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **재산**(10회), **연준**(5회), **내부자**(4회), **SEC(미국증권거래위원회)**(2회), **이재명**(1회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **21건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 한국 정치인 2건, 중앙은행 4건입니다.
-
-**중앙은행 정책**에서는 한국은행 금융통화위원회가 지난달 기준금리를 3.00%로 두 달 연속 인상한 가운데, 금통위원들은 최근 고용의 더딘 회복성과 주요국의 국채금리 상승에 따른 영향도 주시하고 있다. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 매일일보 = 김수빈 기자 | 이재명 정부 청와대 참모진의 재산이 29일 공개됐다. 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-09-30 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 21건 — SEC 내부자 거래 15건, 한국 정치인 2건, 중앙은행 4건
+- 1. Through a controlled corporation, KE Holdings (BEKE) CEO Yongdong Peng sold shares. - Stock Titan Through a controlled corporation, KE Holdings (BEKE) CEO…
 
 ## 1. SEC 내부자 거래 (Form 4)
 

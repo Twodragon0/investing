@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-27 | 시총 $2.70T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Monero</strong> (XMR): +5.15%</li><li>🟢 <strong>Ethereum</strong> (ETH): +2.36%</li><li>🟢 <strong>Chainlink</strong> (LINK): +1.98%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

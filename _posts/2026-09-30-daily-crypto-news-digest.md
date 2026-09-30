@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-30 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Pokemon Fan Charged With $55 Million Crypto Hack Goes on Trial - 80건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 한국어 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 10건 수집</li><li>🟣 <strong>DeFi</strong>: 국채, 수익률 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-29/pokemon-fan-charged-with-55-million-crypto-hack-goes-on-trial">Pokemon Fan Charged With $55 Million Crypto Hack Goes on Trial</a></li><li><a href="https://seekingalpha.com/news/4647405-bitget-says-crypto-theft-reached-387_5m-as-stolen-xrp-moves-through-wallets">Bitget says crypto theft reached $387.5M as stolen XRP moves through wallets (XRP-USD:Cryptocurrency)</a></li><li><a href="https://decrypt.co/379463/chainlink-institutions-add-bridge-checks-kelp-hack">Months After the $292M Kelp Hack, Chainlink Lets Institutions Add Their Own Bridge Checks</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Pokemon Fan Charged With $55 Million Crypto Hack Goes on Trial 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 80건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (39건): 비트코인, 한국어, 암호화폐 관련 (39건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (17건): IPO, 파생상품, 스테이블코인 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🤖 AI/기술** (10건): 엔비디아 기술 이슈 (10건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Pokemon Fan Charged With $55 Million Crypto Hack Goes on Trial
-- Bitget says crypto theft reached $387.5M as stolen XRP moves through wallets (XRP-USD:Cryptocurrency
-- Months After the $292M Kelp Hack, Chainlink Lets Institutions Add Their Own Bridge Checks
-
-### 주요 이슈
-
-- Anthropic plans to spend $518 billion on AI infrastructure. Pre-IPO perps barely
-- Circle CFO to step down following $1.05B IPO - CFO Dive
-- ETF 특징주] 비트코인 현물 ETF 10월 이후 최대 주간 순유입 - 뉴스핌
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Google News KR(15건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-09-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-09-30.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🤖 AI/기술
+- 2026-09-30 암호화폐 시장 80건 분석 — 핵심 테마: 비트코인, 거래소, AI/기술
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

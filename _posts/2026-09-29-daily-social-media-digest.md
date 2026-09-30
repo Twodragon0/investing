@@ -30,12 +30,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-29 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 삼성전자 주가 5.43% 급락, 무슨 일이? 외국인·기관 매도에 코스피도 흔들 - 얼리어답터뉴스 - 20건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 신현송, 이형일 관련 16건</li><li>📈 <strong>가격/시장</strong>: 신현송, 경제 관련 17건</li><li>🤖 <strong>AI/기술</strong>: 외국인, 코스피 관련 4건</li><li>🏛️ <strong>정치/정책</strong>: 이형일, 신현송 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE5yYkVLRmpORnYtMlBsMmRqZk9GU2oybmxQcWVZNHU5SkJjM3hvY2tJUklqeUhEZmRvc1lvdHRrZWtCVlUtSDFsaWp3?oc=5">삼성전자 주가 5.43% 급락, 무슨 일이? 외국인·기관 매도에 코스피도 흔들 - 얼리어답터뉴스</a> <span class="p0-desc">사진=삼성전자 네이버 주식 추석 연휴 이후 첫 거래일부터 삼성전자를 비롯한 국내 반도체 대형주가 큰 폭으로 하락했다. 외국인과 기관의 대규모 매도 물량이 삼성전자와 SK하이닉스에.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 20건 중 텔레그램 0건, 소셜 0건, 정치·경제 20건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 20건 중 텔레그램 0건, 소셜 0건, 정치·경제 20건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향

@@ -16,33 +16,6 @@ description: "보안 알림: 블록체인 보안 리포트. 주요 보안 사고
 
 블록체인 보안 17건 분석. 주목 사건: **[Security] Here’s what happened in crypto today** / 보안 뉴스 헤드라인: ⚡ Weekly Recap: $387M Crypto Hack, Citrix Exploits, AI Agent.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Bitget CEO says $388M hack exploited third-party security vulnerability 
-외 P0 긴급 이슈 13건이 추가 감지되었습니다. 총 17건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (17건): ETH 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🔷 이더리움** (9건): ETH 생태계 동향 (9건) — 가스비·TVL 변화를 함께 확인하세요.
-- **🏦 거래소** (7건): ETH, $388M 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Bitget CEO says $388M hack exploited third-party security vulnerability
-- [Security] Bitget resumes Bitcoin withdrawals as hacker swaps ETH via THORChain
-- [Security] THORChain under fire over Bitget, ETH evolves beyond blockchain: Hodler’s Digest
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 14건, 보안 뉴스 3건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 17건
