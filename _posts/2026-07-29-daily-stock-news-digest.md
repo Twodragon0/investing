@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-29 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com">매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락'</a> <span class="p0-desc">매도 사이드카 이어 서킷브레이커…코스피·코스닥 동반 '폭락' 한국경제</span></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1CSnpQamxMX29hRmFwbGhmTm92WkQzUXN4UWJLT04yeGVVVnZLa2VZT0NJWmpEckZSYTFWVDl6akZBZVJzakZDbXlDVUQtUEVfV0RYbzRB?oc=5">中 메모리 CXMT 상장에…코스피·코스닥 동반 매도 사이드카 발동 - 지디넷코리아</a> <span class="p0-desc">中 메모리 CXMT 상장에…코스피·코스닥 동반 매도 사이드카 발동 지디넷코리아</span></li><li><a href="https://www.sankyungtoday.com">코스피·코스닥 동반 급락…개장 직후 매도 사이드카 발동 - 산경투데이</a> <span class="p0-desc">코스피·코스닥 동반 급락…개장 직후 매도 사이드카 발동 산경투데이</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,023.66 (-10.84%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 705.85 (-7.72%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-07-29 주식 시장에서 208건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,023.66(-10.84%), KOSDAQ 705.85(-7.72%), USD/KRW 1,453.18(-0.80%).
 - *NBCNews.com을 방문하면 세계 뉴스, 비즈니스, 정치, 건강 및 대중 문화에 관한 속보, 비디오 및 최신 주요*
 
 ## 테마별 주요 뉴스

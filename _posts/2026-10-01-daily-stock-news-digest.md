@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-01 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 - 지이코노미 - 202건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 채권, 인플레이션 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 하이닉스, 삼성전자 관련 16건</li><li>🏦 <strong>거래소</strong>: IPO, 조선비즈 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE0wbXY1ekducjBRWHc0eEJwLW1VQ1QtVGJXQkRha3RXYmpmWWxrdnk0amdSS0lqTVpMbXVQV0g3aFFLOHhRbnFIQzNoaFBzRHlKY0dsMGF6ZGJRYVktSlJHVUtoc1Q?oc=5">美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 - 지이코노미</a> <span class="p0-desc">지이코노미 강매화 기자 | 추석 연휴 사이 치솟은 미국 국채금리와 중동발 국제유가 불안이 국내 금융시장을 한꺼번에 덮쳤다. 미국 10년물 국채금리가 2007년 이후 최고 수준까지 오르면서 달러가 강세를 보였고, 외국인은 국내 주식시장에서 하루 3조원이 넘는 물량을 쏟아냈다. 코스피는 2.7% 급락해 7,000선을 내줬고 원·달러 환율은 1,365원대로 올라</span></li><li><a href="https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html">FTC is investigating OpenAI, Anthropic and other AI companies over product risks</a></li><li><a href="https://www.cnbc.com/2026/09/30/israel-flight-diverted-saudi-arabia-brawl-pilots-flydubai.html">Passengers overcame pilot who tried to crash Flydubai flight, Israel says</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 - 지이코노미 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 202건의 뉴스 중 P1 주요 이슈도 30건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (53건): 코스피, 코스닥, 한강타임즈 가격 변동 (53건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (31건): 채권, 인플레이션, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (16건): 하이닉스, 삼성전자, 반도체 기술 이슈 (16건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 - 지이코노미
-- FTC is investigating OpenAI, Anthropic and other AI companies over product risks
-- Passengers overcame pilot who tried to crash Flydubai flight, Israel says
-
-### 주요 이슈
-
-- Stock Market Midday, Sept. 30: Markets Rise on Softer Inflation Data, Investors
-- Stock Market: Will S&P 500 Open Up or Down Today? - State Street SPDR S&P 500 ET
-- AI Stocks Are Creating a Sneaky Risk for S&P 500 Investors, and History Is Flash
-- 외 27건
-
-### 투자자 체크포인트
-
-- 한국 기사 73건, 글로벌 기사 129건 수집
-- 한국 지수: KOSPI 6,838.04(-0.48%), KOSDAQ 855.91(+0.72%), USD/KRW 1,355.00(+0.17%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">53건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:58%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:30%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:23%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:26%"></div></div><span class="theme-count">14건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-01.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,838.04 (-0.48%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 855.91 (+0.72%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-10-01 주식 시장에서 202건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,838.04(-0.48%), KOSDAQ 855.91(+0.72%), USD/KRW 1,355.00(+0.17%).
+- *[마감시황] 코스피, 외인 2.3조 순매도에 0.48%↓…코스닥은 0.72%↑ newspim.com*
 
 ## 테마별 주요 뉴스
 

@@ -28,30 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-01 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 일자, 기사, SEC 관련 39건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 일자, SEC 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 디파이 이슈 부각</li><li>🏦 <strong>거래소</strong>: 8건 수집</li><li>🟠 <strong>비트코인</strong>: ETF, 비트코인 동향 주시</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 39건의 뉴스 중 **규제/정책** 관련이 28건(72%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (28건): 일자, 기사, SEC 규제 움직임 (28건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🟣 DeFi** (3건): 디파이 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🏦 거래소** (8건): fca, proposes, gateways 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 주요 이슈
-
-- SEC Charges Meyer Global Management and Its CEO With Defrauding Retail Investors
-- 국내-해외상장 ETF간 비대칭 규제 해소를 위한 단일종목 레버리지 상품(ETF·ETN) 관련 설명 - YTN 9월 16일자 보도 등에 대한 설명
-- 동양생명에 대한 과징금 등 제재는 확정된 바 없습니다. - 머니투데이 9월 8일자 기사(인터넷판)에 대한 설명
-- 외 5건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 17건, 한국 12건, 미국 8건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 39건
 - **유럽**: 17건

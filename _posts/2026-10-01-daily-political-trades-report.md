@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 23건 수집. 의회 거래 1건, 
 image_alt: "정치인 거래·정책 리포트 - 2026-10-01 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-01.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-01** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **23건** — 미국 의회 거래 1건, SEC 내부자 거래 14건, 트럼프 정책 2건, 한국 정치인 1건, 중앙은행 5건
@@ -25,19 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-01 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(5회), **트럼프**(4회), **SEC(미국증권거래위원회)**(4회), **재산**(3회), **관세**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **23건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, SEC 내부자 거래 14건, 트럼프 정책 2건, 한국 정치인 1건, 중앙은행 5건입니다.
-
-**트럼프 정책** 관련으로는 President Donald Trump signed an executive order instituting 100% tariffs on some pharmaceutical products on Thursday. 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 What financial disclosure reports show for Kean, Bennett in District 7 Bergen Record 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 ECB board member Schnabel highlights price expectations, demand, and borrowing costs as key factors for the central bank's next interest rate decision. 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 [아이뉴스24 김현동 기자] 같은 아파트의 신고가액이 반년 만에 24억원 가까이 줄었다. 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-10-01 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 23건 — 미국 의회 거래 1건, SEC 내부자 거래 14건, 트럼프 정책 2건, 한국 정치인 1건, 중앙은행 5건
+- 1. What financial disclosure reports show for Kean, Bennett in District 7 - Bergen Record What financial disclosure reports show for Kean, Bennett in District…
 
 ## 1. 미국 의회 거래 동향
 

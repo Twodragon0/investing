@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-21 | HYPE -3.8% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -3.82%</li><li>🟢 <strong>TRON</strong> (TRX): +2.94%</li><li>🟢 <strong>Bitcoin Cash</strong> (BCH): +2.25%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-30 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피 급락 후 '반등'…삼성전자·SK하이닉스 '분전' > 뉴스 - 지데일리 - 199건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 반도체주 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9xU0pJUzVZZlJXUFY1d1J4X2pZN1p5ckpWbmxmM1ZqUWRtYjdoalU0emhtU0FzWXB6M28yeVktT0ZhSGZRdkZ3N18wb2dQdmlnemdTUWJYLVpnemE0S1d2YmZ5b3MxYUVLanJkZw?oc=5">코스피 급락 후 '반등'…삼성전자·SK하이닉스 '분전' > 뉴스 - 지데일리</a> <span class="p0-desc">코스피 장중 6828선까지 급락했지만 반도체 반등에 낙폭 축소외국인·기관 1조원 넘게 순매도…개인은 7786억원 매수삼성전자·SK하이닉스 강세…대형 반도체주가 지수 방어</span></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQUGpNZzVQZUZDRS0taWN5NlE2M2hQVzZQQ3F6R1AwM0YydzhtejVMYUx5VW5PRDY3dlRHbWV1Y3RoZzFLazVoMDh4RlVzYWpXWnhENUNHbGFOa1pWem1ucy1RNWcwZnRKWHlrSEpKMUNaZzNzTDFXM0JYY3pjeUdZcw?oc=5">S&P500: An October Crash Likely (NYSEARCA:SPY)</a></li><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE0wbXY1ekducjBRWHc0eEJwLW1VQ1QtVGJXQkRha3RXYmpmWWxrdnk0amdSS0lqTVpMbXVQV0g3aFFLOHhRbnFIQzNoaFBzRHlKY0dsMGF6ZGJRYVktSlJHVUtoc1Q?oc=5">美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 - 지이코노미</a> <span class="p0-desc">美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 지이코노미</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,870.81 (-0.27%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 849.80 (+0.38%).
+- 2026-09-30 주식 시장에서 199건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,870.81(-0.27%), KOSDAQ 849.80(+0.38%), USD/KRW 1,354.17(-0.42%).
 - *29일 오전 장 기준, 국내 증시는 코스피와 코스닥 모두 하락세를 나타내고 있다.*
 
 ## 테마별 주요 뉴스

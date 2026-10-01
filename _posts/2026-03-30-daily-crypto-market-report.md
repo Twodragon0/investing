@@ -29,6 +29,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-30 | BCH -6.5% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -6.45%</li><li>🔴 <strong>Cardano</strong> (ADA): -3.74%</li><li>🔴 <strong>Stellar</strong> (XLM): -3.54%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집

@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-25 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SRDhaeTlLZXJRR2RqQVRIVTlIejk5NHRXTEFQYTdzcTU2NE5Vb0RRNUc3NllReHJMM1BtREZiUEx3M2IyTDJpRE85NWpZUE84VkhiR3VFVDNoUQ?oc=5">또 '검은 금요일'…코스피·코스닥 5% 넘게 급락</a> <span class="p0-desc">또 '검은 금요일'…코스피·코스닥 5% 넘게 급락 한국경제</span></li><li><a href="https://www.freezinenews.com">오락가락 변동성 무너지는 증시…코스피·코스닥 동반 급락 - 프리진뉴스</a> <span class="p0-desc">오락가락 변동성 무너지는 증시…코스피·코스닥 동반 급락 프리진뉴스</span></li><li><a href="https://biz.chosun.com">특징주] 롯데쇼핑, 신동빈 회장 지분 매도 소식에…10% 급락 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">법원이 고(故) 임성기 한미그룹 창업주의 장녀 임주현 한미사이언스 부회장이 보유한 한미사이언스 주식에 대해 100억원 규모 가압류 결정을 내렸다. 한미그룹 경영권 분쟁 과정에서 체결된 '4자 연합'의 의결권 공동행사 약정과 관련해 신동국 한양정밀 회장 측이 제기한 가압류 신청을 인용한 것이다. 다만 이번 결정은 채권 보전을 위한 임시 조치인 가압류 단계의 판단으로, 임 부회장의 위약벌 책임이 최종 확정된 것은 아니다. 향후 본안 소송에서 4자협약 위반 여부와 책임 범위가 다뤄질 전망이다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,690.62 (-5.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 748.22 (-5.32%).
+- 2026-07-25 주식 시장에서 188건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,690.62(-5.72%), KOSDAQ 748.22(-5.32%), USD/KRW 1,460.27(-0.97%).
 - *대한민국 잡지 미디어의 새 장을 열어가고 있는 한경매거진&북, 주간 한경BUSINESS, 월간 한경MONEY, 격주간 한경JOB&JOY 발행*
 
 ## 테마별 주요 뉴스

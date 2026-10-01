@@ -16,33 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 14건 분석. 주목 사건: **[Security] Could THORChain face prosecution over stolen Bitg** / 보안 뉴스 헤드라인: Bitget CEO says $388M hack exploited third-party security vu.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Could THORChain face prosecution over stolen Bitget funds? 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 14건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (14건): security, exploit, bitget 보안 이슈 (14건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🏦 거래소** (6건): $388M 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-- **🔷 이더리움** (6건): exploit, compromised, bridge 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Could THORChain face prosecution over stolen Bitget funds?
-- [Security] SlowMist traces Bitget hack activity to Aug. 31 zero-day exploit
-- [Security] Bitget CEO ‘not very optimistic’ on recovering funds from $388M breach
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 13건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 14건

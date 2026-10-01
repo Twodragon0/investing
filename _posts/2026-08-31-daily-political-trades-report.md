@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-31 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **행정명령**(3회), **트럼프**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-08-31 정치권 핵심 이슈: 'Saturday Night Live'의 무언가처럼: 온타리오 총리가 'Lake America' 행정 명령을 비웃습니다 - Politico. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 3건 (트럼프 정책 2건, 중앙은행 1건)을…
+- 1. 'Saturday Night Live'의 무언가처럼: 온타리오 총리가 'Lake America' 행정 명령을 비웃습니다 - Politico 'Saturday Night Live'의 무언가처럼: 온타리오 총리는 'Lake America' 행정 명령 Politico를 비웃습니다.
 
 ## 1. 트럼프 행정명령/정책
 
