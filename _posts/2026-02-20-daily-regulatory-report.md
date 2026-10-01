@@ -27,11 +27,9 @@ permalink: "/regulatory-news/2026/02/20/daily-regulatory-report/"
 ---
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🔵 규제/정책, 🏦 거래소
-- 전 세계 금융 규제기관의 최신 동향 6건을 요약합니다.
 
 ## 규제 요약
 

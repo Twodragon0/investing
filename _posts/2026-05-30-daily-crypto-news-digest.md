@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-30 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.barrons.com/articles/bitcoin-xrp-ethereum-cryptos-today-d588a761">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격 하락</a> <span class="p0-desc">비트코인, XRP 미국과 이란의 긴장이 암호화폐를 강타하면서 가격이 폭락했습니다.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</span></li><li><a href="https://www.newspim.com">코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" - 뉴스핌</a> <span class="p0-desc">[코인시황] 비트코인, 유가 급락·증시 신고가에도 힘 못 쓴다…"문제는 전쟁 아닌 매수자 실종" 뉴스핌</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **106건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
-- 2026-05-30 암호화폐 핵심 뉴스: Q-Day는 비트코인과 우리의 은퇴 저축을 파괴할 수 있습니다.. 총 106건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

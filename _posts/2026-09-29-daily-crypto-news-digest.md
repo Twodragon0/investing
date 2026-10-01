@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-29 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9ITmZIeXp5UWJxME5XM29MZnBnQ003eGp3ZGhIUXAyVk5qZjdNQUlkd0dkUDVjamFnUkplbUM3WlczNnI2Zjd0VnJfQ2w2U0Jj0gFTQVVfeXFMTWttMVVZTFEyeExwUUdJWE91RG5aQmNqRjF6Rm5DNFM1YVJZczRBWmd5ZHlEY0FET19QcjdOalRFMHZ2cll4eWlvSk9IWDljdllZLWM?oc=5">북 해킹자금 거쳐간 '토르체인'.차단 요청 거부해 논란 - VOA 한국어 홈페이지</a> <span class="p0-desc">북한이 바이비트에서 훔친 암호화폐 가운데 약 9억 달러가 거쳐 간 탈중앙 교환망이 최근 북한이 연루된 또 다른 도난자금에 대한 차단 요청을 거부했습니다. 보안업체는 교환망 업체가.</span></li><li><a href="https://www.coindesk.com/markets/2026/09/28/ai-agents-could-drain-cheap-bank-deposits-apollo-s-torsten-slok-warns">AI agents could drain cheap bank deposits, Apollo's Torsten Slok warns</a></li><li><a href="https://www.coindesk.com/tech/2026/09/28/thorchain-rejects-bitget-request-to-block-hacker-as-usd6-million-moves-to-bitcoin">THORChain rejects Bitget request to block hacker as $6 million moves to bitcoin</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-09-29 암호화폐 시장 70건 분석 — 핵심 테마: 비트코인, 가격/시장, 거래소
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
