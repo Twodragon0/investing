@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5FM0xkQl9QSC1HNldmNnFvREFROGJxVUprNVV2dF9MTjd2X1BOLXF4WDFyeE1xRUhNRXhfcGpYd19DdTVvcUxndDdqMlZLV0Yzc2lzdlFhcGxHSGdRSmZYODdPclBsUXlDbkhF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">채권전문가 93% "4월 금통위 기준금리 동결 예상" - 파이낸셜신문</a>
-<p class="news-desc">채권전문가 93% "4월 금통위 기준금리 동결 예상" 파이낸셜신문</p>
+<p class="news-desc">채권전문가 100명 중 93명은 오는 10일 예정된 한국은행 금융통화위원회에서 기준금리가 동결될 것으로 예상했다.8일 금융투자협회는 '2026년 5월 채권시장지표'를 통해 "중동 지정학적 리스크 장기화로 고유가·고환율로 인한 물가 상승 우려에 이달 금통위의 기준금리 인상에 대한 예상이 지난 2월 조사 대비 증가한 것으로 조사됐다"며 이같이 밝혔다.BMSI(Bond Market Survey Index)는 설문문항에 대한 답변인원의 응답으로 산출하며, 100 이상이면 채권가격이 상승(금리 하락)할 것으로 기대하며 채권시장 심리가 양호함</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -250,7 +250,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1EcW9EN0cxbENwM19qN2g2OVVMU1lFTnI1OV9qZHV2WlpVRXhQaGpYa1hLa2l5U3ozVG95bDhPOU5UeTZRQnA1ZmVaeE5qYS1qSU1j?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스, 주가 반등에 ETF 시장도 들썩</a>
-<p class="news-desc">삼성전자·SK하이닉스, 주가 반등에 ETF 시장도 들썩 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : 삼성전자와 SK하이닉스의 주가 상승세가 이어지면서 두 종목에 집중 투자하는 상장지수펀드(ETF) 출시가 급증하고 있다. 반도체 업황 회복 기대와 함께 증시 강세가 맞물리며 투자 수요가 빠르게 확대되는 모습이다.9일 금융투자업계와 한국거래소에 따르면 자</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

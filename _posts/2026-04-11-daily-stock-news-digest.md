@@ -176,7 +176,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Lam15NEdmRnhPSTdaS2xpOHljWElfMDNfcFlLbVhPNjJvSjZyY1hLVlF0SV93SlBSaFczUWtJcXM3NlpQLXRBeGkzSlU1d0pNRUtFV1M4X0Q3Z9IBVEFVX3lxTE4yekc5U3BxbkFMb3U2a29RZVA5anNEeXlXMXhnQU1IUFRXdXJkY3ZfY29TblVXT1JfeVZJTXFVN1R5UEd6cUtaZUMxcWVPaGcySWhGNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"내년 반도체 신공장 가동…소재·부품 실적개선 기대"</a>
-<p class="news-desc">"내년 반도체 신공장 가동…소재·부품 실적개선 기대" 한국경제</p>
+<p class="news-desc">"내년 반도체 신공장 가동…소재·부품 실적개선 기대", 밸류체인 투자 전략</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5EQU5iZXN1eWlmYmdhV3ZYeTNRMF9GbFZIVlJ5V2dHTjU4VFJyNmpxX0x0QkMtV1ZxN2VJZjJaWk1YT0EwZVJVdFhXd1FoVE5ETkZoMXpvM1NNNFlnUXVEYzhJM2ZEVEdlMEx6aUFWeV9QQk0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">미 반도체 랠리·실적 상향 기대에 삼성전자·SK하이닉스 동반 강세 - 마켓인</a>
-<p class="news-desc">미 반도체 랠리·실적 상향 기대에 삼성전자·SK하이닉스 동반 강세 마켓인</p>
+<p class="news-desc">삼성전자와 SK하이닉스가 미국 반도체주 랠리와 증권가의 실적 눈높이 상향에 힘입어 장 초반 나란히 강세를 나타내고 있다. 간밤 뉴욕증시에서 필라델피아 반도체지수가 사상 최고치를 다시 쓴 데다 국내 증권가도 삼성전자와 SK하이닉스의 실적 개선 기대를 잇달아 높여 잡으면서 투자심리가 살아나는 모습이다. 10일 엠피닥터에 따르면 삼성전자는 이날 오전 9시 13...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
