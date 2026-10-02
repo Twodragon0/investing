@@ -81,7 +81,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE9tWUxxS0tfVlROeWRhVTFJOE1aZzE0WmRlNXZFNm9tQ21TUEVYdFhpUV9EZTZrdFRxd0NNdnJtd3ZKMEQyU3pKTmFkM3Q2WWtVS1g4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'동일고무벨트' 52주 신고가 경신, 외국인, 기관 각각 5일 연속 순매수, 6일 연속 순매도</a>
-<p class="news-desc">'동일고무벨트' 52주 신고가 경신, 외국인, 기관 각각 5일 연속 순매수, 6일 연속 순매도 네이트</p>
+<p class="news-desc">한눈에 보는 오늘 : 경제 - 뉴스 : ◆ 주체별 매매동향- 외국인, 기관 각각 5일 연속 순매수, 6일 연속 순매도지난 한달을 기준으로 보면 외국인이 1.7만주를 순매수했고, 기관도 505주를 순매수했다. 반면 개인들은 2.1만주를 순매도한 것으로 나타났다. 같은 기간 이 종목의 거래비중</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9JZ3ZmRWdoclpZSkdRSnl4UHRJSEQ2MF83eWFHdjF4MTk1YVVjRURQc3ROTU80VktBYnBiRERhWTM3SmNVbU1pNUJMQ2FYOW4yY3ZLYzVtUVRyWE00eWRfZ09vV25YcFpZLXlTRVlULUpESk9KZ0Jn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 가격 상승과 2주 휴전 소식에 '20만전자', '100만 닉스'</a>
-<p class="news-desc">반도체 가격 상승과 2주 휴전 소식에 '20만전자', '100만 닉스' thecommoditiesnews.com</p>
+<p class="news-desc">대장주 삼성전자와 SK하이닉스가 8일 '20만 전자', '100만 닉스'를 나란히 회복했다. 메모리 수요 폭증과 공급부족에 두 회사 영업이익이 급증할 것이라는 전망이 나온 가운데 미국과 이란이 2주간 휴전에 사실상 합의하면서 영향을 미친 것으로 보인다. 증권가는 '36만전자',' 180만닉스'를 내거는 등 공격적으로 목표 주가를 올리고 있다. 한국거래소에 따르면,이날 오전 9시 22분 현재 유가증권시장에서 삼성전자는 전날에 비해 7.38%(1만 4500원) 오른 21만1000원에 거래됐다.또 SK하이닉스는 9.17%(8만 9000원</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -174,7 +174,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5FM0xkQl9QSC1HNldmNnFvREFROGJxVUprNVV2dF9MTjd2X1BOLXF4WDFyeE1xRUhNRXhfcGpYd19DdTVvcUxndDdqMlZLV0Yzc2lzdlFhcGxHSGdRSmZYODdPclBsUXlDbkhF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">채권전문가 93% "4월 금통위 기준금리 동결 예상" - 파이낸셜신문</a>
-<p class="news-desc">채권전문가 93% "4월 금통위 기준금리 동결 예상" 파이낸셜신문</p>
+<p class="news-desc">채권전문가 100명 중 93명은 오는 10일 예정된 한국은행 금융통화위원회에서 기준금리가 동결될 것으로 예상했다.8일 금융투자협회는 '2026년 5월 채권시장지표'를 통해 "중동 지정학적 리스크 장기화로 고유가·고환율로 인한 물가 상승 우려에 이달 금통위의 기준금리 인상에 대한 예상이 지난 2월 조사 대비 증가한 것으로 조사됐다"며 이같이 밝혔다.BMSI(Bond Market Survey Index)는 설문문항에 대한 답변인원의 응답으로 산출하며, 100 이상이면 채권가격이 상승(금리 하락)할 것으로 기대하며 채권시장 심리가 양호함</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -186,7 +186,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ibDVOYVI3bUpyaFljVFhLUHdSa3p2SUJBT25rUzRsNnNDUElJcU1uQ2NhcFFMeGM0akN1N05rLTkwX292UlU2UTJyZFRZMGd1SGFOZFZxNWRvdE43WWtpTWpvOWZlajg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">기획]한국은행, 기준금리 전쟁 리스크에 ‘인하보다 동결’ 무게 - M이코노미뉴스</a>
-<p class="news-desc">[기획] 한국은행, 기준금리 전쟁 리스크에 ‘인하보다 동결’ 무게 M이코노미뉴스</p>
+<p class="news-desc">미국·이스라엘-이란 간 전쟁(이하 전쟁)의 불확실성이 이어지는 가운데 한국은행이 오는 10일 금융통화위원회(이하 금통위)를 열고 기준금리를 결정한다. 증권가에서는 고유가와 1500원대 환율에 대한 부담으로 인해 기준금리 동결을 결정할 것이라는 관측이 지배적이다. 7일 현재 국제유가는 100달러대, 환율은 1500원대를 유지하고 있다. 유가 급등은 국내 민생</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

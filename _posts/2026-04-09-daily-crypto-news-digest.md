@@ -195,7 +195,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-04-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNdjNvZGpRVkowbG1wQmVieGRWSFVldE45YkJTY1JUcV9MVHJhdVZrZFVLNEVYQzRfbk9McTlHMllWdXB0YXgxYldhczJ5LU45OW5RWmt6X3lJT0hqeF9EcmdaczJUV2tpem9OWEsyUnlvQ0JlaGt1eDRua2FYc0hpWklEZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">전쟁 종식 가능성 암호화폐 상승세…클래리티 법안은 여전히 논의 중</a>
-<p class="news-desc">전쟁 종식 가능성 암호화폐 상승세…클래리티 법안은 여전히 논의 중 글로벌이코노믹</p>
+<p class="news-desc">글로벌 암호화폐 시장에서 8일 비트코인이 급등했다. 비트코인의 급등은 암호화폐 전반 상승세를 주도하고 있다. 미국과 이란의 2주간 휴전 소식이 전해진 게 상승세의 원인으로 꼽힌다. 비트코인은 미국 동부시간 2시 27분 기준 4.7% 상승한 7만1835 달러를 기록했다. 세계 2위 암호</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
