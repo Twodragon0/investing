@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-02 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft - The Hacker News - 81건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, XRP 주목</li><li>📈 <strong>가격/시장</strong>: 만달러, XRP 관련 25건</li><li>🔵 <strong>규제/정책</strong>: 19건 수집</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 만달러 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNTGN0VkgwWnoycGhYRlZFVUVydkNVb05PajdSRVM1ZXp6eEFWWkZiT3luR3ljYWs5eVN3NTBLQ2ZVT0haU0lqUUgzVG9KSm9ITXRSM1JLdzZzMkgtQmxJQ0U0QUloUWtQY0kxc1FIYy0yVzJfQjVtemE4c29HMmZ6TQ?oc=5">Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft - The Hacker News</a></li><li><a href="https://kr.investing.com/news/cryptocurrency-news/article-2111208">비트코인·이더리움·솔라나: 해킹보다 무서운 ’뱅크런’… 이 거래소가 흔들린다 - Investing.com 한국어</a> <span class="p0-desc">비트코인·이더리움·솔라나: 해킹보다 무서운 ’뱅크런’… 이 거래소가 흔들린다 Investing.com 한국어</span></li><li><a href="https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">NEAR Intents suffers $3.8M exploit after assistance with Bitget breach</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft - The Hacker News 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 81건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, XRP, 한국어 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (25건): 만달러, XRP, 전망 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔵 규제/정책** (19건): prediction, exemption, lawsuit 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft - The Hacker News
-- 비트코인·이더리움·솔라나: 해킹보다 무서운 ’뱅크런’… 이 거래소가 흔들린다 - Investing.com 한국어
-- NEAR Intents suffers $3.8M exploit after assistance with Bitget breach
-
-### 주요 이슈
-
-- Winston Taylor adds Digital Assets partner Michael Frisch in Chicago
-- 비트코인, 9월 주식·금 제쳤다…20만달러 돌파 전망도
-- 클래리티 법안 막혔는데 더 좋아졌다?…비트와이즈가 짚은 반전 수혜 4가지
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News KR(15건), Decrypt(15건), Cointelegraph(15건)
-- 프로모션성 거래소 공지 5건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-02.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-10-02 암호화폐 시장 81건 분석 — 핵심 테마: 비트코인, 가격/시장, 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

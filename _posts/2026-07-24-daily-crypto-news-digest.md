@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-24 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBzNmV5X2VUWFFEMWJKdUZkcHhLSjVQVHpkUkxOR1JDd1o0MDBLNXN0Vl91TU5Zbm5ldzVKQXdLbndYcS1fVE5icTNyeFM0dVluVEw1dlg3VkVSM2VqTU9xREU0dmVmWkwxWUVBUU81T0xOd1U?oc=5">비트코인, 6만 5천 달러 유지…클래리티법 진행 상황 주목 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 6만 5천 달러 유지…클래리티법 진행 상황 주목 Investing.com 한국어 [코인시황] 유가·국채금리 급등에 비트코인 약세…규제 불확실성·해킹 악재 겹쳐 뉴스핌 비.</span></li><li><a href="https://cointelegraph.com/magazine/ai-hasnt-unleashed-a-defi-hackpocalypse-but-its-making-every-weakness-more-dangerous?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">AI으로 인한 디파이 해킹 전염병에 대한 두려움은 현재로서는 과장되었지만 오래 가지 않을 것입니다.</a> <span class="p0-desc">AI이 주도하는 해킹 전염병에 대한 두려움은 완전히 과장된 것입니까, 아니면 이것은 단지 폭풍 전의 소강 상태에 불과합니까?</span></li><li><a href="https://decrypt.co/374133/arbitrum-perp-dex-afx-trade-drained-of-24m-offers-hacker-30-to-return-it">아비트럼 Perp DEX AFX 거래에서 2400만 달러 손실, 해커에게 30% 반환 제안</a> <span class="p0-desc">이 익스플로잇은 아비트럼 네트워크 자체가 아닌 AFX가 운영하는 관리 브리지를 공격했으며, 도난당한 자금은 신속하게 이더리움로 이동했습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **102건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-07-24 암호화폐 핵심 뉴스: 상승세는 비트코인의 17년 역사에서 유례없는 시험에 직면합니다: Crypto Daily. 총 102건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
