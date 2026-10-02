@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-07 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ft.com/content/06bb85c7-ab3c-4cc2-bdcf-679976b6e901?syn-25a6b1a6=1">비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.</a> <span class="p0-desc">비트코인은 전략 판매 이후 암호화폐 거래자들을 불안하게 만들었습니다. 급락 관련 보도.</span></li><li><a href="https://v.daum.net">비트코인 한때 6만 달러 붕괴…"AI가 가상화폐 밀어내 VS 저점 매수 기회"</a> <span class="p0-desc">비트코인 한때 6만 달러 붕괴…"AI가 가상화폐 밀어내 VS 저점 매수 기회" v.daum.net 비트코인 6만달러선 붕괴…AI 열풍에 밀리고 고금리에 흔들 이데일리 비트코인, 6.</span></li><li><a href="https://marketin.edaily.co.kr">암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 - 마켓인</a> <span class="p0-desc">암호화폐株, 비트코인 6만달러선 붕괴·스트레티지 지분 매각…주가 급락 마켓인</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-06-07 암호화폐 핵심 뉴스: 비트코인이 분화되고 있지만 새로운 월스트리트 암호화폐에 대한 과대 광고가 증가하고 있습니다.. 총 99건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
