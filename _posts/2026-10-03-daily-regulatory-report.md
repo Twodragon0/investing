@@ -28,30 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-03 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 22건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 12건 수집</li><li>🏛️ <strong>정치/정책</strong>: 4건 수집</li><li>🔷 <strong>이더리움</strong>: 1건 수집</li><li>📈 <strong>가격/시장</strong>: 2건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 22건의 뉴스 중 **규제/정책** 관련이 12건(55%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (12건): esma, mica, federal 규제 움직임 (12건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏛️ 정치/정책** (4건): minister, conference, financial 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **🔷 이더리움** (1건): minister, conference, financial 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- Statement on Departure of Commissioner Hester Peirce
-- Federal Reserve Board announces approval of application by Fleur Capital Corpora
-- Federal Reserve Board announces it will extend, until November 4, the comment pe
-- 외 1건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 11건, 유럽 7건, 한국 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 22건
 - **미국**: 11건

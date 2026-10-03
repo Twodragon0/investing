@@ -33,50 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-03 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 예가람저축은행 고객 개인정보 유출…2금융권서 해킹 - 175건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 관련 26건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 주목</li><li>🏦 <strong>거래소</strong>: IPO 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202610021315i">예가람저축은행 고객 개인정보 유출…2금융권서 해킹</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 예가람저축은행 고객 개인정보 유출…2금융권서 해킹 
-총 175건의 뉴스 중 P1 주요 이슈도 27건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (40건): 코스피, 코스닥, 하이닉스 가격 변동 (40건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (26건): 환율, 국채, 금리 매크로 변수 (26건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (15건): 반도체, 엔비디아, 마이크론 기술 이슈 (15건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 예가람저축은행 고객 개인정보 유출…2금융권서 해킹
-
-### 주요 이슈
-
-- Nasdaq Composite Inches Up to 26,871.60 as Chip Stocks Recover and Anthropic IPO
-- “HBM은 없어서 못 파는데 주가는 왜?”…마이크론 최대 실적 뒤 숨은 경고 [플러스 관심종목] - 매일경제 마켓
-- 마이크론, ‘깜짝 실적’에도 주가 잠잠···삼성전자·SK하이닉스에 쏠린 시선 - 스마트비즈
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 74건, 글로벌 기사 101건 수집
-- 한국 지수: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,345.64(-1.07%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">40건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:65%"></div></div><span class="theme-count">26건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:38%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:32%"></div></div><span class="theme-count">13건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-03.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 893.29 (-0.11%).
+- 2026-10-03 주식 시장에서 175건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,345.64(-1.07%).
+- *[서울=뉴스핌] 김가희 기자 = 2일 코스피가 기관 순매수에 힘입어 7000선을 회복했다.*
 
 ## 테마별 주요 뉴스
 

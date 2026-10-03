@@ -21,6 +21,7 @@ permalink: "/social-media/2026/03/06/daily-social-media-digest/"
 <div class="alert-box alert-info"><strong>소셜 트렌드: Trump, 이재명, 대통령 관련 47건 포착</strong><ul><li>🏛️ <strong>정치/정책</strong> (23건): Trump, 이재명, 대통령 관련 23건의 뉴스가 보고되었습니다.</li><li>🟠 <strong>비트코인</strong> (15건): Bitcoin, Telegram, 비트코인 관련 15건의 뉴스가 보고되었습니다.</li><li>📊 <strong>매크로/금리</strong> (11건): 기준금리, Telegram, Tether 관련 11건의 뉴스가 보고되었습니다.</li><li>📈 <strong>가격/시장</strong> (16건): 비트코인, 암호화폐, 기준금리 관련 16건의 뉴스가 보고되었습니다.</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 47건 중 텔레그램 20건, 소셜 2건, 정치·경제 25건으로 정치/정책 및 비트코인 이슈가 주요 화제입니다.

@@ -16,33 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 20건 분석. 주목 사건: **[Security] Crypto’s billions are back, but the premiums aren** / 보안 뉴스 헤드라인: NEAR Intents hit by $3.8M exploit, pauses cross-chain servic.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Aave founder says V3 unaffected after third-party adapter exploit drains $305K 
-외 P0 긴급 이슈 12건이 추가 감지되었습니다. 총 20건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (20건): security, exploit, intents 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (8건): $3.8M 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (6건): exploit, compromised, bridge 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Aave founder says V3 unaffected after third-party adapter exploit drains $305K
-- [Security] NEAR Intents suffers $3.8M exploit after assistance with Bitget breach
-- [Security] Bitget’s $388M hack pushes Q3 crypto security losses past $1B
-
-### 주요 이슈
-
-- [Security] Crypto’s billions are back, but the premiums aren’t
-
-### 투자자 체크포인트
-
-- 보안 사건 18건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 20건

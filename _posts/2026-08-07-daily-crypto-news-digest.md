@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-07 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/coldcard-hackers-64-btc-200-eth-cryptocurrency-mixers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 해커는 64 BTC 및 200 ETH을 암호화폐 믹서로 전송합니다.</a> <span class="p0-desc">Coldcard 익스플로잇 배후의 해커들은 수백만 달러에 달하는 디지털 자산을 암호화폐 믹서로 옮겼으며, 대부분의 도난 자금은 공격자가 통제하는 지갑에서 추적할 수 있었습니다.</span></li><li><a href="https://cointelegraph.com/markets/situational-awareness-400m-investment-nearly-collapsing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Situational Awareness는 거의 붕괴된 후 4억 달러를 투자하여 수익을 얻었습니다. 보고서</a> <span class="p0-desc">Situational Awareness는 7월의 AI 주식 폭락 이후 헤지 펀드가 거의 붕괴된 지 며칠 후 미공개 회사에 4억 달러를 투자한 것으로 알려졌습니다.</span></li><li><a href="https://decrypt.co/374975/bitcoin-price-test-zcash-holds-golden-cross">비트코인은 Zcash가 보유자에게 희망을 주면서 시장의 인내심을 테스트합니다: 분석</a> <span class="p0-desc">비트코인이 데드크로스에서 벗어날 수 있을까요? Zcash가 보유자들이 6월 중순 폭락을 잊게 만들 수 있습니까? 차트에 따르면 다음과 같습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-08-07 암호화폐 핵심 뉴스: DOJ: FBI 감독관, 100만 달러 규모 암호화폐를 훔쳤다고 자백 - FEDagent. 총 100건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
