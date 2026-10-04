@@ -1,29 +1,5 @@
 {
   "seen": {
-    "7d14a2203768c2c0e583aa10": "2026-09-04T00:17:04",
-    "8d498758c0f6eaff17a63893": "2026-09-04T00:17:04",
-    "eb83d1b7f8e33b58c7ca5f92": "2026-09-04T00:17:04",
-    "46319fbf59e1066098a0f8c8": "2026-09-04T00:17:04",
-    "d2d2cc65587393ea032cc966": "2026-09-04T00:17:04",
-    "077c1ff3977dca639e57f776": "2026-09-04T00:17:04",
-    "722b3f359302e642d73b6131": "2026-09-04T00:17:04",
-    "580ae430652ece7609ba9e76": "2026-09-04T00:17:04",
-    "386849acbd84aefce558f061": "2026-09-04T00:17:04",
-    "f4d6989689f98e20c25f24ad": "2026-09-04T00:17:04",
-    "61ffc94e106dc07aaa5b199a": "2026-09-04T00:17:04",
-    "2a22723a4ab2430fb9a519c4": "2026-09-04T00:17:04",
-    "e1ac42be4075097b836119f8": "2026-09-04T00:17:04",
-    "10cc370a1453269ebb23c508": "2026-09-04T00:17:04",
-    "f1c37bef0ddc4899b85b7011": "2026-09-04T00:17:04",
-    "72bb76ef57cbb20c7b4ae3b1": "2026-09-04T00:17:04",
-    "ab36e8b10c65a2a205c61964": "2026-09-04T00:17:04",
-    "f040e007454f6b9ba0cad1a0": "2026-09-04T00:17:04",
-    "2b6ef301a604852b5b1baad4": "2026-09-04T00:17:04",
-    "ab0c003ad0fa4873b4cbb076": "2026-09-04T00:17:04",
-    "87a87c5ecaed72f62e1b2b33": "2026-09-04T00:17:04",
-    "620bb68f142508502b0c8cdc": "2026-09-04T00:17:04",
-    "648bfef71849aa9f8dc94c54": "2026-09-04T00:17:04",
-    "1d64728654b5d70f72027638": "2026-09-04T00:17:04",
     "76ebeab3911332b8ab8e4939": "2026-09-05T00:18:17",
     "1910ea7a40bf437bcf66659a": "2026-09-05T00:18:17",
     "661d8d5b1783f9b632feb4a5": "2026-09-05T00:18:17",
@@ -650,7 +626,18 @@
     "a08aacfb76d152c6befdeab7": "2026-10-02T15:57:27",
     "ab5ff86c0117fc1eb7470629": "2026-10-02T15:57:27",
     "d2062e1d24ba27b6e5813d94": "2026-10-02T15:57:27",
-    "c9ae46d86560e2f949a6eed0": "2026-10-02T15:57:27"
+    "c9ae46d86560e2f949a6eed0": "2026-10-02T15:57:27",
+    "7104864981dd2ff960974dbe": "2026-10-04T01:48:37",
+    "4cab55575e94765c0b53e0c0": "2026-10-04T01:48:37",
+    "4dc08fd25f0743693ce19a9e": "2026-10-04T01:48:37",
+    "1598075d3d6b9af53d0c7b4d": "2026-10-04T01:48:37",
+    "f9e012dcad83bdc6e9606eff": "2026-10-04T01:48:37",
+    "65c6f3fdef12f4feebe55d7b": "2026-10-04T01:48:37",
+    "eda8aa1c11e0d3c35c1d9ae3": "2026-10-04T01:48:37",
+    "f62a34fdb0df224a4b27548b": "2026-10-04T01:48:37",
+    "01e68a834b5f62f425cfc5a5": "2026-10-04T01:48:37",
+    "71eb80cd5f94e1c198d8078a": "2026-10-04T01:48:37",
+    "b06bd7288d9d974ada0506ba": "2026-10-04T01:48:37"
   },
   "titles": [
     [
@@ -19568,6 +19555,50 @@
     [
       "정치인 거래정책 리포트 20261003",
       "2026-10-03"
+    ],
+    [
+      "form 4 verifyme inc insider trading activity stock titan",
+      "2026-10-04"
+    ],
+    [
+      "form 4 tompkins financial corp insider trading activity stock titan",
+      "2026-10-04"
+    ],
+    [
+      "marketing chief bought 1000 shares at 392 each z squared zsqr updates his ownership totals stock titan",
+      "2026-10-04"
+    ],
+    [
+      "after exercising 1450 options spyre therapeutics syre legal chief sells 28933 shares stock titan",
+      "2026-10-04"
+    ],
+    [
+      "after exercising 1450 options spyre therapeutics syre cfo sells 25000 shares stock titan",
+      "2026-10-04"
+    ],
+    [
+      "a 12920option exercise accompanies the presidents share sales at crowdstrike crwd stock titan",
+      "2026-10-04"
+    ],
+    [
+      "ceo cameron turtle sells 15000 shares of spyre therapeutics syre under a trading plan stock titan",
+      "2026-10-04"
+    ],
+    [
+      "at 1038 a share sprout social spt ceo delivers or withholds 2189 shares stock titan",
+      "2026-10-04"
+    ],
+    [
+      "금리 인상 청구서 더 남았는데5 넘는 가계대출 1년새 27배",
+      "2026-10-04"
+    ],
+    [
+      "fed may skip october but pull rate hike trigger in december",
+      "2026-10-04"
+    ],
+    [
+      "정치인 거래정책 리포트 20261004",
+      "2026-10-04"
     ]
   ],
   "seen_urls": {}
