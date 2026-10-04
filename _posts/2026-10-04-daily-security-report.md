@@ -16,34 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 18건 분석. 주목 사건: **[Security] Here’s what happened in crypto today** / 보안 뉴스 헤드라인: Third-party Aave adapter exploit drains 114 ETH from Safes.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Aave founder says V3 unaffected after third-party adapter exploit drains $305K 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 18건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (18건): security, exploit, intents 보안 이슈 (18건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (10건): exploit, intents, bridge 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (8건): exploit, compromised, bridge 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Aave founder says V3 unaffected after third-party adapter exploit drains $305K
-- [Security] FlashLoopAdapter exploit: Improper Access Control
-- [Security] NEAR Intents exploit: Bridge Logic Flaw
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-- [Security] Crypto’s billions are back, but the premiums aren’t
-
-### 투자자 체크포인트
-
-- 보안 사건 16건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 18건

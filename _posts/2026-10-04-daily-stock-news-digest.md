@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: The No. 1 mistake beginners make with travel cards, according to The Points Guy - 144건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 30건</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 주목</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 박스권 주목</li><li>🏦 <strong>거래소</strong>: IPO 관련 6건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.marketwatch.com/story/the-no-1-mistake-beginners-make-with-travel-cards-according-to-the-points-guy-3502e859?mod=mw_rss_topstories">The No. 1 mistake beginners make with travel cards, according to The Points Guy</a></li><li><a href="https://www.cnbc.com/2026/10/03/flydubai-co-pilot-attacked-pilot-with-axe-uae-says.html">FlyDubai plane attack by co-pilot was an attempted 'terrorist' act, UAE says</a></li><li><a href="https://www.hankyung.com/article/2026100319347">은행·저축은행·캐피탈까지 뚫리자…금융당국, CEO 긴급 소집</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: The No. 1 mistake beginners make with travel cards, according to The Points Guy 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 144건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (30건): 코스피, 코스닥, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (17건): 환율, 금리, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (8건): 엔비디아, 박스권, 반도체 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- The No. 1 mistake beginners make with travel cards, according to The Points Guy
-- FlyDubai plane attack by co-pilot was an attempted 'terrorist' act, UAE says
-- 은행·저축은행·캐피탈까지 뚫리자…금융당국, CEO 긴급 소집
-
-### 주요 이슈
-
-- 마이크론, ‘깜짝 실적’에도 주가 잠잠···삼성전자·SK하이닉스에 쏠린 시선 - 스마트비즈
-- Wall St Week Ahead Spiking bond yields, midterms, earnings to test US stocks' ty
-- Goldman Sachs says buy these stocks now, ahead of their earnings
-- 외 15건
-
-### 투자자 체크포인트
-
-- 한국 기사 59건, 글로벌 기사 85건 수집
-- 한국 지수: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,342.51(-1.30%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:57%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:27%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:23%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-04.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 893.29 (-0.11%).
+- 2026-10-04 주식 시장에서 144건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,342.51(-1.30%).
+- *Stocks rise Friday after soft jobs data, Nvidia leads Nasdaq to intraday record CNBC Stock market today: Dow, S&P.*
 
 ## 테마별 주요 뉴스
 

@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-03 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-06-02/bitcoin-s-inflation-hedging-promise-in-tatters-after-36-plunge">비트코인의 인플레이션 헤지 약속은 36% 폭락 후 엉망이 되었습니다.</a> <span class="p0-desc">비트코인의 인플레이션 헤징 약속은 36% 폭락 후 엉망이 되었습니다. (36% 갱신) 급락 관련 회사입니다.</span></li><li><a href="https://news.google.com/read/CBMimgFBVV95cUxPdzd3UHB2V21ONFBmcEFrTDFzdXVMUjNPOEZjVFZCbHFVck9FQUxScFdITWtRRzhqelI2QVV4UHBPUmdrNlVGbVNRejRMTjR0a21zZ1hpMU11dmxZdmxDNFhkZ0oyeWx0a0tRTDhHcmczMXZaZUc2TDVxTTBuZzRSbFc5ek1Mb3dtbWVJSzhMNlNIZWN6aWZpZjlR?hl=en-US&gl=US&ceid=US%3Aen">비트코인의 폭락 $70K 미만으로 $800M가 손실되고 ETF 유출이 11일 기록을 달성했습니다.</a> <span class="p0-desc">이더리움은 매도 기간 동안 비트코인보다 더 좋은 가격을 유지했으며 가격은 약 $1,970로 비교적 안정적으로 유지되었습니다.</span></li><li><a href="https://kr.investing.com">암호화폐 주식 급락, 비트코인 3일 연속 내림세 지속 - Investing.com 한국어</a> <span class="p0-desc">암호화폐 주식 급락, 비트코인 3일 연속 내림세 지속 Investing.com 한국어</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **105건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-03 암호화폐 핵심 뉴스: BTC 가격은 4월 최저치를 기록하고 AI 토큰은 급등하여 암호화폐 시장의 분할을 노출합니다.. 총 105건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

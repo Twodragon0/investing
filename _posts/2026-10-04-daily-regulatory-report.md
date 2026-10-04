@@ -29,35 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-04 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트 - 17건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 8건 수집</li><li>🔴 <strong>보안/해킹</strong>: 디지털자산기업, 블루밍비트 관련 1건</li><li>🏛️ <strong>정치/정책</strong>: 4건 수집</li><li>🔷 <strong>이더리움</strong>: 1건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE11RFRyRm4wQ1YybkVldmEtdE45ekZ4UjE5YzBXZkhXUTZHZ3RDSDFfVmlsRG5IZlVUN2ZLQXlHQXBrekxGUjdFNnNROUJLX05h?oc=5">해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트</a> <span class="p0-desc">해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트 
-총 17건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (8건): federal, esma, mica 규제 움직임 (8건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🔴 보안/해킹** (1건): 디지털자산기업, 블루밍비트, 금융위 보안 이슈 (1건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🏛️ 정치/정책** (4건): minister, conference, financial 정치 이슈 (4건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트
-
-### 주요 이슈
-
-- Statement on Departure of Commissioner Hester Peirce
-- Federal Reserve Board announces approval of application by Fleur Capital Corpora
-- Federal Reserve Board announces it will extend, until November 4, the comment pe
-- 외 1건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 9건, 한국 3건, 유럽 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 17건
 - **미국**: 9건

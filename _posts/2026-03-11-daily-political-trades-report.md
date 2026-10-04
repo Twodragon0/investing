@@ -29,9 +29,11 @@ permalink: "/political-trades/2026/03/11/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **trump(트럼프)**(4회), **sec(미국증권거래위원회)**(2회), **fed(연방준비제도)**(2회), **tariff(관세)**(2회), **executive order**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 1건(100%), 매도 신호 0건(0%). 매수 비중이 압도적으로 높아, 정치인들이 시장에 대해 낙관적 시각을 갖고 있음을 시사합니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. Kevin Hern 의원은 주식 공개가 늦어진 것으로 보입니다. 그의 사무실은 그가 늦었다고 이의를 제기합니다 - Public Radio Tulsa Kevin Hern 의원은 주식 공개가 늦어진 것으로 보입니다.
 
 ## 미국 의회 거래 동향

@@ -39,6 +39,7 @@ permalink: "/market-analysis/2026/03/15/daily-crypto-market-report/"
 </div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

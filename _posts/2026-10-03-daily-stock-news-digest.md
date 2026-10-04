@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-03 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 예가람저축은행 고객 개인정보 유출…2금융권서 해킹 - 175건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 국채 관련 26건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 주목</li><li>🏦 <strong>거래소</strong>: IPO 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.hankyung.com/article/202610021315i">예가람저축은행 고객 개인정보 유출…2금융권서 해킹</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 893.29 (-0.11%).
+- 2026-10-03 주식 시장에서 175건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,345.64(-1.07%).
 - *[서울=뉴스핌] 김가희 기자 = 2일 코스피가 기관 순매수에 힘입어 7000선을 회복했다.*
 
 ## 테마별 주요 뉴스
