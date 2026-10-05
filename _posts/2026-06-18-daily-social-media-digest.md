@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-06-18 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com">연준 오늘 회의: 투자자들은 Kevin Warsh의 일류 결정을 기다리고 있습니다 — 실시간 업데이트</a> <span class="p0-desc">연준 오늘 회의: 투자자들은 Kevin Warsh의 일류 결정을 기다리고 있습니다</span></li><li><a href="https://www.cbsnews.com">연준의 다음 이자율 결정이 귀하에게 미치는 영향</a> <span class="p0-desc">CBS 뉴스는 오늘의 주요 헤드라인에 대한 속보를 제공합니다. 균형 있고 신뢰할 수 있는 보고를 통해 가장 큰 새로운 이야기에 대한 최신 정보를 받아보세요.</span></li><li><a href="https://www.euronews.com">Warsh가 주도권을 잡습니다: 연준이 금리 결정을 내릴 때 주목해야 할 사항</a> <span class="p0-desc">이번 발표는 에비앙에서 열린 G7 정상회담 마지막 날에 이뤄졌습니다. 이곳에서 지도자들은 중국의 점점 커지는 경쟁적 도전에 대해 논의하고 주요 인공지능 기업의 경영진과 만났습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 36건 중 텔레그램 0건, 소셜 0건, 정치·경제 36건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 36건 중 텔레그램 0건, 소셜 0건, 정치·경제 36건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

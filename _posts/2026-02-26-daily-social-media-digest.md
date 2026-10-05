@@ -24,7 +24,6 @@ permalink: "/social-media/2026/02/26/daily-social-media-digest/"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li>트럼프 10% 관세 발효 — 15%까지 추가 인상 가능성 시사, IT 종목 매도세 확대</li><li>한국은행 기준금리 결정 — 경제 성장률 전망이 핵심 변수</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 51건 중 텔레그램 20건, 소셜 1건, 정치·경제 30건으로 매크로/금리 및 정치/정책 이슈가 주요 화제입니다.
