@@ -29,26 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-05 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트 - 4건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 디지털자산기업 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 디지털자산기업, 블루밍비트 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE11RFRyRm4wQ1YybkVldmEtdE45ekZ4UjE5YzBXZkhXUTZHZ3RDSDFfVmlsRG5IZlVUN2ZLQXlHQXBrekxGUjdFNnNROUJLX05h?oc=5">해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트</a> <span class="p0-desc">해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트 
-총 4건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (2건): 디지털자산기업, 블루밍비트 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🔴 보안/해킹** (1건): 디지털자산기업, 블루밍비트, 금융위 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 2건, 유럽 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 4건
 - **한국**: 2건

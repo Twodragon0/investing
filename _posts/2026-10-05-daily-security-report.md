@@ -16,33 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Here’s what happened in crypto today** / 보안 뉴스 헤드라인: Crypto hackers exploit third-party Aave tool to steal 114 ET.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] FlashLoopAdapter exploit: Improper Access Control 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 12건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): security, exploit, bridge 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (8건): exploit, bridge, logic DeFi 동향 (8건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (8건): exploit, compromised, bridge 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] FlashLoopAdapter exploit: Improper Access Control
-- [Security] NEAR Intents exploit: Bridge Logic Flaw
-- [Security] SKYDAO exploit: Swap Logic Flaw
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건

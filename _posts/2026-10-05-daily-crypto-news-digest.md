@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum - 46건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 주목</li><li>📈 <strong>가격/시장</strong>: 코인리더스, 강세 이슈 부각</li><li>🔵 <strong>규제/정책</strong>: SEC 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum">'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum</a></li><li><a href="https://decrypt.co/380005/chainalysis-ai-87m-bitget-hack-north-korea">Chainalysis Used AI to Trace the $387M Bitget Hack Back to North Korea</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 46건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (14건): 비트코인, 코인리더스, ETF 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (9건): 코인리더스, 강세 가격 변동 (9건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🔵 규제/정책** (11건): SEC 규제 움직임 (11건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum
-- Chainalysis Used AI to Trace the $387M Bitget Hack Back to North Korea
-
-### 주요 이슈
-
-- 美 SEC, 비트코인 등 6개 자산 3배 레버리지 ETF 상장 승인
-- 암호화폐 반등 놓치기 싫다면? 월가서 주목받는 비트코인·이더리움·솔라나 ETF - 코인리더스
-- Here’s what happened in crypto today
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: AI, 비트코인, ETF
-- **주요 출처**: Decrypt(10건), Google News KR(9건), Cointelegraph(9건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-05.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-05.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-10-05 암호화폐 시장 46건 분석 — 핵심 테마: 비트코인, 가격/시장, 규제/정책
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
