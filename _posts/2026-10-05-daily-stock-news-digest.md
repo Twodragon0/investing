@@ -39,6 +39,48 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 - KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 893.29 (-0.11%).
 - *Minutes from the September meeting may provide extra context, as the real fed-funds rate is now surprisingly low.*
+**긴급**: 같은 IP가 여러 금융사 해킹…AI 활용해 대량 공격 정황 
+외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 111건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
+
+### 테마별 동향
+
+- **📈 가격/시장** (22건): 랠리, 달러, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
+- **📊 매크로/금리** (11건): 연준, 인플레이션, 파월 매크로 변수 (11건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
+- **🤖 AI/기술** (8건): 엔비디아 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
+
+**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
+
+### 긴급 이슈
+
+- 같은 IP가 여러 금융사 해킹…AI 활용해 대량 공격 정황
+- 금융기관 해킹 잇따르자…李 “엄중 인식 하에 철저 조사”
+
+### 주요 이슈
+
+- Nasdaq Composite Inches Up to 26,871.60 as Chip Stocks Recover and Anthropic IPO
+- AI spending to drive another strong S&P 500 earnings season, Goldman Sachs says
+- Why Pay to Own U.S. Stocks? This Zero-Fee ETF Is Beating the S&P 500 - 24/7 Wall
+- 외 9건
+
+### 투자자 체크포인트
+
+- 한국 기사 36건, 글로벌 기사 75건 수집
+- 한국 지수: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,342.51(-1.30%)
+
+
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">11건</span></div>
+<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">8건</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:36%"></div></div><span class="theme-count">8건</span></div>
+<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:23%"></div></div><span class="theme-count">5건</span></div>
+</div>
+
+*기사는 여러 테마에 중복 집계될 수 있음*
+
+
+
+---
 
 ## 테마별 주요 뉴스
 

@@ -46,6 +46,37 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
 - *기사는 여러 테마에 중복 집계될 수 있음*
+**긴급**: 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum 
+외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 46건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
+
+### 테마별 동향
+
+- **🟠 비트코인** (14건): 비트코인, 코인리더스, ETF 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
+- **📈 가격/시장** (9건): 코인리더스, 강세 가격 변동 (9건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
+- **🔵 규제/정책** (11건): SEC 규제 움직임 (11건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
+
+**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
+
+### 긴급 이슈
+
+- 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum
+- Chainalysis Used AI to Trace the $387M Bitget Hack Back to North Korea
+
+### 주요 이슈
+
+- 美 SEC, 비트코인 등 6개 자산 3배 레버리지 ETF 상장 승인
+- 암호화폐 반등 놓치기 싫다면? 월가서 주목받는 비트코인·이더리움·솔라나 ETF - 코인리더스
+- Here’s what happened in crypto today
+- 외 3건
+
+### 투자자 체크포인트
+
+- **핫 키워드**: AI, 비트코인, ETF
+- **주요 출처**: Decrypt(10건), Google News KR(9건), Cointelegraph(9건)
+- 시장 영향 가능성이 있는 거래소 공지 2건 포함
+- 프로모션성 거래소 공지 3건 제외
+
+
 
 ## 테마별 주요 뉴스
 

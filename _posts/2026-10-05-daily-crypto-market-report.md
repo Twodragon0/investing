@@ -22,6 +22,11 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-10-05 | 시총 $2.91T (-
 ## 오늘의 브리핑
 
 
+
+## 오늘의 브리핑
+
+
+
 ## 한눈에 보기
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">$85,953</div><div class="stat-label">BTC (+1.4%)</div></div><div class="stat-item"><div class="stat-value">65</div><div class="stat-label">공포/탐욕 (Greed)</div></div><div class="stat-item"><div class="stat-value">$2.91T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">59.3%</div><div class="stat-label">BTC 도미넌스</div></div></div>
