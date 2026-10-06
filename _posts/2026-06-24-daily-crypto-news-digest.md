@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-24 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.newspim.com">코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인, 6만3000달러 붕괴…AI 랠리 흔들리자 코인도 급락 뉴스핌</span></li><li><a href="https://cointelegraph.com/news/thorchain-resumes-trading-month-10m-exploit?utm_source=rss&utm_medium=rss&utm_campaign=rss">THORChain은 1,000만 달러 규모의 악용 후 한 달 이상 거래를 재개합니다.</a> <span class="p0-desc">THORChain은 1,070만 달러 규모의 악용을 초래한 취약점을 수정하기 위해 여러 보안 업그레이드와 볼트 마이그레이션을 구현한 후 모든 네트워크 활동을 재개했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집
 - 주요 테마: 🟠 비트코인, 🔵 규제/정책, 📈 가격/시장
-- 2026-06-24 암호화폐 핵심 뉴스: 데이터에 따르면 공화당원은 민주당원보다 암호화폐를 더 많이 구매합니다. 무엇이 분열을 주도하고 있습니까?. 총 103건 분석, 핵심 테마는 비트코인, 규제/정책, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-01 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE0wbXY1ekducjBRWHc0eEJwLW1VQ1QtVGJXQkRha3RXYmpmWWxrdnk0amdSS0lqTVpMbXVQV0g3aFFLOHhRbnFIQzNoaFBzRHlKY0dsMGF6ZGJRYVktSlJHVUtoc1Q?oc=5">美 국채·중동발 충격 한국 덮쳤다…코스피 2.7% 급락·환율 1,365원 - 지이코노미</a> <span class="p0-desc">지이코노미 강매화 기자 | 추석 연휴 사이 치솟은 미국 국채금리와 중동발 국제유가 불안이 국내 금융시장을 한꺼번에 덮쳤다. 미국 10년물 국채금리가 2007년 이후 최고 수준까지 오르면서 달러가 강세를 보였고, 외국인은 국내 주식시장에서 하루 3조원이 넘는 물량을 쏟아냈다. 코스피는 2.7% 급락해 7,000선을 내줬고 원·달러 환율은 1,365원대로 올라</span></li><li><a href="https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html">FTC is investigating OpenAI, Anthropic and other AI companies over product risks</a></li><li><a href="https://www.cnbc.com/2026/09/30/israel-flight-diverted-saudi-arabia-brawl-pilots-flydubai.html">Passengers overcame pilot who tried to crash Flydubai flight, Israel says</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,838.04 (-0.48%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 855.91 (+0.72%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-01 주식 시장에서 202건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,838.04(-0.48%), KOSDAQ 855.91(+0.72%), USD/KRW 1,355.00(+0.17%).
 - *[마감시황] 코스피, 외인 2.3조 순매도에 0.48%↓…코스닥은 0.72%↑ newspim.com*
 
 ## 테마별 주요 뉴스

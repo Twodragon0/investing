@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 
 - KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 893.29 (-0.11%).
-- 2026-10-06 주식 시장에서 141건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,340.74(-0.13%).
 - *Intel may not be the only semiconductor company tapped to help with chip manufacturing for the Terafab project, as.*
 
 ## 테마별 주요 뉴스
