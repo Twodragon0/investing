@@ -63,7 +63,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-06 - 소셜 미디어 뉴스 요�
 ---
 
 
-
 ## 정치·경제 동향
 
 **1. [세제·집값·대미투자…경제 국감, 이재명 정부 정책 검증대](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1VaU9NYlMzbnRWcTE3VzVVZmQwaUNmSXo1c25fNG9JenhnS3M4SXBSUzZVSHRONWxUZW1pYzVfSmZUV1ZBczN6ZUIxV2FGbkk?oc=5)**
