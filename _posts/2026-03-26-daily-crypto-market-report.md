@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-26 | XLM +5.9% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Stellar</strong> (XLM): +5.88%</li><li>🟢 <strong>Cardano</strong> (ADA): +3.74%</li><li>🟢 <strong>Dogecoin</strong> (DOGE): +3.36%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집

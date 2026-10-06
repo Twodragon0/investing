@@ -24,13 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-06 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(4회), **내부자**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **17건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 중앙은행 2건입니다.
-
-**중앙은행 정책**에서는 How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic TradingKey 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-10-06 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 17건 — SEC 내부자 거래 15건, 중앙은행 2건
+- 1. Form 4\ MODINE MANUFACTURING CO Insider Trading Activity - Stock Titan [Form 4] MODINE MANUFACTURING CO Insider Trading Activity Stock Titan
 
 ## 1. SEC 내부자 거래 (Form 4)
 

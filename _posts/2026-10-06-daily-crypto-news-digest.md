@@ -41,38 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum - 50건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 관련 21건</li><li>🔵 <strong>규제/정책</strong>: SEC 주목</li><li>🟣 <strong>DeFi</strong>: 13건 수집</li><li>📈 <strong>가격/시장</strong>: 분기 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum">'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum</a></li><li><a href="https://cointelegraph.com/features/too-big-to-pause-the-economic-stakes-of-an-ai-slowdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Too big to pause: Could an AI slowdown crash the economy?</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 50건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (21건): 비트코인, BTC 관련 (21건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🔵 규제/정책** (15건): SEC 규제 움직임 (15건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🟣 DeFi** (13건): tokenized, nyse, okx DeFi 동향 (13건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum
-- Too big to pause: Could an AI slowdown crash the economy?
-
-### 주요 이슈
-
-- An XRP treasury SPAC surges nearly 300% ahead of Evernorth merger
-- Kraken operator Payward and Singapore Gulf Bank partner for 24/7 institutional c
-- CFTC joins SEC in proposing crypto framework after failed CLARITY vote
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, AI
-- **주요 출처**: CoinDesk(15건), Cointelegraph(15건), Decrypt(14건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
+- 주요 테마: 🟠 비트코인, 🔵 규제/정책, 🟣 DeFi
+- 2026-10-06 암호화폐 시장 50건 분석 — 핵심 테마: 비트코인, 규제/정책, DeFi
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
