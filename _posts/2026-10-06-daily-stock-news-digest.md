@@ -73,7 +73,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 
 *기사는 여러 테마에 중복 집계될 수 있음*
 
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-06.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-06.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
 
 
 ---
