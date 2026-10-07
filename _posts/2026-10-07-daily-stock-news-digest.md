@@ -32,43 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">919.92</div><div class="stat-label">KOSDAQ +2.98%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 외국인, 하락 부각 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>📊 <strong>매크로/금리</strong>: 국채 관련 21건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 174건의 뉴스에서 **가격/시장**(39건)과 **매크로/금리**(21건)이 동시에 부각되고 있습니다. 금리/경제 지표 변화가 시장 가격에 직접적인 영향을 미치는 국면입니다
-
-### 테마별 동향
-
-- **📈 가격/시장** (39건): 코스피, 외국인, 하락 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (21건): 국채, 연준 매크로 변수 (21건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (22건): 반도체, 삼성전자, 하이닉스 기술 이슈 (22건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- Nasdaq notches record high close as investors focus on earnings
-- 삼성전자·SK하이닉스, 3분기 실적 발표 앞두고 주가 하락 - Investing.com 한국어
-- 심층분석] ‘삼전닉스’ 17조 덜어낸 외국인…실적·금리 개선이 복귀 가른다 - 굿모닝경제
-- 외 23건
-
-### 투자자 체크포인트
-
-- 한국 기사 55건, 글로벌 기사 119건 수집
-- 한국 지수: KOSPI 6,941.39(-0.89%), KOSDAQ 919.92(+2.98%), USD/KRW 1,338.14(-0.24%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:54%"></div></div><span class="theme-count">21건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:56%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:18%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:18%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
+- KOSPI 6,941.39 (-0.89%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 919.92 (+2.98%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-10-07 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,941.39(-0.89%), KOSDAQ 919.92(+2.98%), USD/KRW 1,338.14(-0.24%).
+- *Nvidia-backed Lambda seeks up to $4B in pre-IPO funding at a $14.5B valuation as backlog jumps to $50B.*
 
 ## 테마별 주요 뉴스
 

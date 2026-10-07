@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-24 | 시총 $2.68T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Zcash</strong> (ZEC): +9.83%</li><li>🟢 <strong>Monero</strong> (XMR): +3.61%</li><li>🟢 <strong>MemeCore</strong> (M): +3.15%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집

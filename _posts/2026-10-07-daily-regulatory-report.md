@@ -28,27 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-07 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 9건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 4건 수집</li><li>🏦 <strong>거래소</strong>: 가상자산사업, 블루밍비트 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 국감, 디지털자산 주목</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 9건의 뉴스 중 **규제/정책** 관련이 4건(44%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (4건): fca, jurisdiction, headquarters 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (1건): 가상자산사업, 블루밍비트, 거래소 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **🏛️ 정치/정책** (1건): 국감, 디지털자산, 기본법 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- FCA Finalises Cryptoasset Perimeter Guidance Ahead of the New UK Regime - The Na
-
-### 투자자 체크포인트
-
-- **주요 지역**: 아시아 3건, 유럽 3건, 한국 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 9건
 - **아시아**: 3건

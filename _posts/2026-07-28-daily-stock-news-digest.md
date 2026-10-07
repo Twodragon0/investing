@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-28 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1tODZqemM3SS1VRjd5UUU4M2IzWjJ5QnBuaURiOUpYNFVNc05qWFBKLWs1R0ZUNy15d2JzaXhmdHU0OVkwa1lGZGZPWGRVbzNqYi0zQ3otbzZuelhhanlORDA1NmJsZ1oyaFcwWEs0OA?oc=5">"전장 급락 딛고 상승" 코스피·코스닥 장 초반 '1%대 반등' - 진일보</a> <span class="p0-desc">진일보, 전남일보 광주, 전라남도 지역신문, 경제, 사회 등 분야별 기사, 칼럼, 독자투고 수록</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,755.75 (+0.97%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 764.86 (+2.22%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-07-28 주식 시장에서 166건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,755.75(+0.97%), KOSDAQ 764.86(+2.22%), USD/KRW 1,465.50(+0.42%).
 - *진일보, 전남일보 광주, 전라남도 지역신문, 경제, 사회 등 분야별 기사, 칼럼, 독자투고 수록*
 
 ## 테마별 주요 뉴스

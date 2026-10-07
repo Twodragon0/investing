@@ -16,27 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-10-07 - 보안 뉴스 요약 �
 
 블록체인 보안 9건 분석. 주목 사건: **[Security] Former SEC boss made AI Czar, Bitcoin may hit $60**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] FlashLoopAdapter exploit: Improper Access Control 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 9건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (9건): security, exploit, bridge 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (4건): exploit, bridge, logic 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (6건): exploit, compromised, bridge 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-
-### 긴급 이슈
-
-- [Security] FlashLoopAdapter exploit: Improper Access Control
-- [Security] NEAR Intents exploit: Bridge Logic Flaw
-- [Security] SKYDAO exploit: Swap Logic Flaw
-
-### 투자자 체크포인트
-
-- 보안 사건 9건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 9건

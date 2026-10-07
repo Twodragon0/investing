@@ -44,6 +44,7 @@ permalink: "/social-media/2026/03/14/daily-social-media-digest/"
 </div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 38건 중 텔레그램 20건, 소셜 0건, 정치·경제 18건으로 매크로/금리 및 비트코인 이슈가 주요 화제입니다.

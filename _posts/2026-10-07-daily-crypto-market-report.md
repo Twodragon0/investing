@@ -28,9 +28,11 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-10-07 | 시총 $2.92T (-
 
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🔴 <strong>Uniswap</strong> (UNI): -4.56%</li><li>🟢 <strong>Cardano</strong> (ADA): +2.58%</li><li>🟢 <strong>Zcash</strong> (ZEC): +2.27%</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$85,629**에서 24시간 +0.09% 상승하며 투자 심리 회복을 견인하고 있습니다. 전체 시가총액은 **$2.92T**으로 전일 대비 -2.61% 변동했으며, BTC 도미넌스 58.7%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **73** (Greed)으로, 탐욕 구간으로, 차익 실현을 고려할 시점입니다.
+- 오늘의 시장 인사이트:
+- 2026-10-07 비트코인 $85,629 (24h +0.1%) · 공포·탐욕 지수 73/100 (Greed) · BTC 도미넌스 58.7%. 상위 30개 코인의 시세 및 모멘텀을 정리합니다.
 
 ## 시장 인사이트
 

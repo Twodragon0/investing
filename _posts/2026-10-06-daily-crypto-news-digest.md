@@ -42,9 +42,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum - 50건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 관련 21건</li><li>🔵 <strong>규제/정책</strong>: SEC 주목</li><li>🟣 <strong>DeFi</strong>: 13건 수집</li><li>📈 <strong>가격/시장</strong>: 분기 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum">'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum</a></li><li><a href="https://cointelegraph.com/features/too-big-to-pause-the-economic-stakes-of-an-ai-slowdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Too big to pause: Could an AI slowdown crash the economy?</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🔵 규제/정책, 🟣 DeFi
+- 2026-10-06 암호화폐 시장 50건 분석 — 핵심 테마: 비트코인, 규제/정책, DeFi
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
