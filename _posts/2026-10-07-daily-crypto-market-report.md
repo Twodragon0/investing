@@ -18,13 +18,10 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-10-07 | 시총 $2.92T (-
 
 ## 시장 시각화
 
-<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-10-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-10-07.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-10-07)" loading="lazy" decoding="async"></picture>
-<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-10-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-10-07.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-10-07)" loading="lazy" decoding="async"></picture>
 
 
 ## 오늘의 브리핑
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-10-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-10-07.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
 
 
 ## 한눈에 보기
