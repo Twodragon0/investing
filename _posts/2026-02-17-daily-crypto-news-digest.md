@@ -38,11 +38,9 @@ permalink: "/crypto-news/2026/02/17/daily-crypto-news-digest/"
 <strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMijAFBVV95cUxQbVV0SmFHakNyTnRETnZxRmptSmN0V1Zva21XX1VsZzhSaFZhTkRwcjEydzJVRDBvck00Q1FLU1h4Rzl5VWR0bVNBM0RlbFhVWDAzRGkybmtXaVRpOC1FZjhTMEpRWEJXUWVvdS13Y05rZHVad19IZnpIQWNUSF9zVEFfNXE1REVLZ0hQbQ?hl=en-US&gl=US&ceid=US%3Aen">Veteran analyst warns of shocking Bitcoin crash to $10K</a> — 시장 급락 소식입니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
-- 2026-02-17 암호화폐 시장에서 109건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 이더리움 관련 소식이 주목됩니다.
 
 ## 테마별 주요 뉴스
 

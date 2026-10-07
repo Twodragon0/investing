@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-27 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQZUk5ZUF3d09sbkk0WFdUT29sakhOOS14UHpDMUlqQ2Z3TnJMZTh2WjFGLWU0cnhBZVFqWnoySnBmd1k2RXd4MnVxTnBOUDBLbXFpenQzR3gtek50VnJmZmVXTnVMS09yRDdJTEp5RXJCZTBTZlRraG4wWHk2U0tXUW9zTGhxWmp5VU9TVEFIONIBlAFBVV95cUxQREV5allvbnJTN2RiSjJ3clVhN2tYZWR3b05Db05NUGhnVF9jNFVWWlBjVHhLbzdPZlhYQlFaYUxSNldxcjZieWV4OW9HM25iRFBEdkhzazU5QWp0TkpmQXI1X09wR2N3NzZVaGprQ0VjZ1JpaTlvRnhlQllrVS1kU1c0VTY5eVJoVUNXdVh2UFhFZVJI?oc=5">North Korea Suspected in $351 Million Bitget Crypto Heist - SecurityWeek</a></li><li><a href="https://kr.investing.com/news/cryptocurrency-news/article-2106340">비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 - Investing.com 한국어</a> <span class="p0-desc">비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 Investing.com 한국어</span></li><li><a href="https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack">Circle and Tether Freeze Stablecoins Tied to Bitget Hack—But Most Funds Slip Away</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-09-27 암호화폐 시장 79건 분석 — 핵심 테마: 비트코인, 가격/시장, 거래소
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

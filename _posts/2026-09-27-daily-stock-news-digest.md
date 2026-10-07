@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-27 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQdnpRdGR3M1NVYVF1MFA0RjE4RzRMZDFza1psbWFFejcwWHRmTm90V2UxR3BXRjdVZUNCN3UyRVlRV0hPN2pIUW8taTExdWtmR0kwczBzVkhmUFVFaHVabW91bWNmVk9OdXBBNVNfcTczMFVheHlidk9jdWNXSjViallvNUktdjdZQlh3YXlCRnZpVXZOU1Bodg?oc=5">Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffett's Time-Tested Advice. - The Motley Fool</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,080.92 (+0.90%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 844.48 (+1.21%).
-- 2026-09-27 주식 시장에서 138건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,354.40(-0.92%).
 - *[이데일리 최오현 기자] 올 상반기 주식시장에서 ‘반도체주’ 광풍이 몰아쳤다.*
 
 ## 테마별 주요 뉴스

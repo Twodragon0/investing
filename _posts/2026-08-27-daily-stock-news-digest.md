@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-27 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE15ZHNLZ2dDWHpfY1ZYNmVNZTJJcEdDNmp1WlJ3cWVxbE9DS1pmVVpRU1k3LVVXOGZ5c0o4cVFRRl84NVNYTElhbTEtaHl6ZTZ6RGVkdWpnRDU2MXRxNEhxbWZXUHZyOHpM?oc=5">반도체 주식 약세 여파… 코스피·코스닥 동반 급락</a> <span class="p0-desc">[공감신문] 정재은 기자=25일 오전, 코스피 지수는 뉴욕 증시에서의 반도체 주식 약세 영향으로 장 초반부터 2% 이상의 하락세를 보였다. 이날 오전 9시 1분 기준으로, 코스피는 전날 대비 159.25포인트 하락한 6,537.71을 기록했다. 지수는 장 시작 전보다 161.03포인트</span></li><li><a href="https://www.marketwatch.com/story/your-portfolio-can-recover-from-a-bear-market-but-can-it-survive-you-living-to-110-cc6d344c?mod=mw_rss_topstories">The biggest risk to retirement plans may no longer be a stock market crash or inflation</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,808.21 (+0.97%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 826.87 (-0.03%).
-- 2026-08-27 주식 시장에서 210건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,808.21(+0.97%), KOSDAQ 826.87(-0.03%), USD/KRW 1,385.78(+0.28%).
 - *코스닥이 26일 장 막판까지 보합권 공방을 벌인 끝에 소폭 내림세로 거래를 마쳤다.*
 
 ## 테마별 주요 뉴스
