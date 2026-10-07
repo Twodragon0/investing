@@ -7,7 +7,7 @@ tags: ["일일요약", "암호화폐", "주식", "규제", "소셜미디어", "�
 keywords: "일일요약, 암호화폐, 주식, 규제, 소셜미디어"
 source: "consolidated"
 lang: "ko"
-image: "/assets/images/generated/news-briefing-daily-2026-10-07.png"
+image: "/assets/images/generated/og-daily-news-summary-2026-10-07.png"
 description: "암호화폐 83건, 주식 174건, 보안 9건, 소셜 미디어 16건, 정치인 거래 22건의 뉴스를 종합 분석한 일일 요약입니다."
 excerpt: "암호화폐 83건, 주식 174건, 보안 9건, 소셜 미디어 16건, 정치인 거래 22건의 뉴스를 종합 분석한 일일 요약"
 image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요약 이미지"
