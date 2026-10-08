@@ -33,51 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 - 180건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 금리 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 반도체 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">[표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 핀포인트뉴스</span></li><li><a href="https://www.sedaily.com/article/20099308">기아 노조원 5000여명 개인정보 유출…산업계로 해킹 공포 번졌다</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 180건의 뉴스 중 P1 주요 이슈도 27건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (40건): 코스닥, 코스피, 외국인 가격 변동 (40건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (20건): 국채, 금리, 연준 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (19건): 엔비디아, 반도체, 마이크로소프트 기술 이슈 (19건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락
-- 기아 노조원 5000여명 개인정보 유출…산업계로 해킹 공포 번졌다
-
-### 주요 이슈
-
-- What “Real” Interest Rates Are Telling Us - ETF Database
-- S&P 500, Nasdaq reach record closing highs as focus pivots to earnings
-- Here comes third-quarter earnings season. Booming profits could propel the S&P 5
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 65건, 글로벌 기사 115건 수집
-- 한국 지수: KOSPI 6,775.59(-0.74%), KOSDAQ 901.73(+0.06%), USD/KRW 1,337.43(-0.16%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">40건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:48%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:12%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:20%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-08.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,775.59 (-0.74%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 901.73 (+0.06%).
+- 2026-10-08 주식 시장에서 180건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,775.59(-0.74%), KOSDAQ 901.73(+0.06%), USD/KRW 1,337.43(-0.16%).
+- *몸값 134조원…SK하이닉스 솔리다임, 美 IPO 주관사 선정, 골드만 모건 대표 주관사로 선정 2027년 상장 통해 최대 100억달러 조달 추진 인텔 낸드 인수 5년 만에 독자 상장 추진 AI 데이터센터용.*
 
 ## 테마별 주요 뉴스
 

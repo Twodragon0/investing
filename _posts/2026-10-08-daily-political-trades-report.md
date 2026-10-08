@@ -24,15 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-08 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **의회**(4회), **펠로시**(2회), **연준**(2회), **공시**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **17건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 3건, SEC 내부자 거래 12건, 중앙은행 2건입니다.
-
-**미국 의회 거래** 동향에서는 Home Depot stock gets a congressional purchase disclosure AD HOC NEWS 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 Fed minutes could detail rate-hike decision, policy path Reuters 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-10-08 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 17건 — 미국 의회 거래 3건, SEC 내부자 거래 12건, 중앙은행 2건
+- 1. Home Depot stock gets a congressional purchase disclosure - AD HOC NEWS Home Depot stock gets a congressional purchase disclosure AD HOC NEWS
 
 ## 1. 미국 의회 거래 동향
 

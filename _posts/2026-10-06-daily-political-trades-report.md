@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-06 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(4회), **내부자**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-10-06 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 17건 — SEC 내부자 거래 15건, 중앙은행 2건
+- 1. Form 4\ MODINE MANUFACTURING CO Insider Trading Activity - Stock Titan [Form 4] MODINE MANUFACTURING CO Insider Trading Activity Stock Titan
 
 ## 1. SEC 내부자 거래 (Form 4)
 

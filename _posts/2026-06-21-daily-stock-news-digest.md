@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-21 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/06/20/cheap-airline-fares-summer-travel.html">The budget airline model in the U.S. is running out of runway</a></li><li><a href="https://www.investing.com/news/economy-news/bolivias-paz-declares-state-of-emergency-over-blockade-crisis-4751603">Bolivia’s Paz declares state of emergency to break protest gridlock</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 9,052.42 (-0.13%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 966.59 (-3.43%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-06-21 주식 시장에서 164건의 뉴스를 분석했습니다. 한국 시장: KOSPI 9,052.42(-0.13%), KOSDAQ 966.59(-3.43%), USD/KRW 1,529.89(-0.43%).
 - *경제타임스 김은국 기자 | 서울 중심부의 가장 상징적인 역사문화 공간이자 문화지구인 종로구 인사동 일대 한옥 건축 규제가 16년 만에 전면적인 대수술을 맞이했다.*
 
 ## 테마별 주요 뉴스

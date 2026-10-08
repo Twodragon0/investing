@@ -33,10 +33,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 외국인, 하락 부각 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>📊 <strong>매크로/금리</strong>: 국채 관련 21건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,941.39 (-0.89%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 919.92 (+2.98%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-10-07 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,941.39(-0.89%), KOSDAQ 919.92(+2.98%), USD/KRW 1,338.14(-0.24%).
 - *Nvidia-backed Lambda seeks up to $4B in pre-IPO funding at a $14.5B valuation as backlog jumps to $50B.*
 
 ## 테마별 주요 뉴스
