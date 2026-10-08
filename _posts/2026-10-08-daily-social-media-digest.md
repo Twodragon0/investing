@@ -63,7 +63,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-08 - 소셜 미디어 뉴스 요�
 ---
 
 
-
 ## 정치·경제 동향
 
 **1. [경제수석도 산업부 출신…'재경부 천하'에서 '산업부 전성시대' - 머니투데이](https://news.google.com/rss/articles/CBMiekFVX3lxTE5HdEl0QVVaY3VjVFNlUkZtTWpHLWxGQ1NmZFh4Mlo0U2U0VEsycEl1Mk9VLTRkdHVxR0R0WXE4ek1sNzMxZEFTOW95ZTRBVGxoS0hLa2VnUV8yU2ZfR2NJQ2RubVNYdmNfcjliTVM1ZzBYV1hQOVBUR3JR0gF_QVVfeXFMUE9OU2ZRN0tRZ1pZUUd2eTdjWjBPdmhXU2lzbldjcWMtVW1XTnZRUVJTV2lycWZiWVB0UkRDN0VCN1JobHBLdmZubXAteHBNTjlsSEh6c1NpaGYya0Fjc0M3eWZRT1NFaDdwbVQ3aUFyZU94Rjh1MlRrdklLTGZOdw?oc=5)**
