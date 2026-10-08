@@ -1,5 +1,5 @@
-posts_checked=27
-unique_urls=498
+posts_checked=26
+unique_urls=437
 invalid_format=0
 live_checked=60
 live_failures=0

@@ -28,7 +28,6 @@ image_alt: "DeFi TVL 리포트 - 2026-10-08 - DeFi 뉴스 요약 이미지"
 2. **체인**: Ethereum — TVL $52.46B로 체인 생태계를 주도합니다.
 
 
-<picture><source srcset="{{ '/assets/images/generated/defi-tvl-dashboard-2026-10-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/defi-tvl-dashboard-2026-10-08.png' | relative_url }}" alt="DeFi TVL Dashboard" loading="lazy" decoding="async"></picture>
 
 
 ## 1. 상위 20개 프로토콜 TVL 순위

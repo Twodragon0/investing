@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 17건 수집. 의회 거래 3건, 
 image_alt: "정치인 거래·정책 리포트 - 2026-10-08 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-08.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-08** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **17건** — 미국 의회 거래 3건, SEC 내부자 거래 12건, 중앙은행 2건
