@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-09 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1tcjVIdXdGdHA2SE9PYndKRDFjbnlDc2NkMVNVcU5aelo2UjQwUmxkU0dhY3hMVUJQeUpmSlNhaWZnV1czMjlDNWYzODRpMXdJVUt3ZnBXNl95X2xSbFliaWNxY0RPOXg2RXJYRmx3?oc=5">한 달 새 125원 급락…1,410원대 원·달러, ‘언더슈팅’ 가능성도</a> <span class="p0-desc">원·달러 환율이 8월 7일 오전 10시 44분 1,417.9원까지 내려갔다. 불과 한 달 전만 해도 1,550원선을 넘나들며 “1,600원도 갈 수 있다”는 전망</span></li><li><a href="https://www.cnbc.com/2026/08/08/hugging-face-ai-hack-cybersecurity-black-hat.html">Hugging Face hack marks start of dangerous AI cyber era and many firms 'don't even know it'</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,258.77 (-0.60%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 798.81 (-0.36%).
-- 2026-08-09 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,258.77(-0.60%), KOSDAQ 798.81(-0.36%), USD/KRW 1,407.45(-1.09%).
 - *나스닥 조정은 AI 지출 우려와 연준 불확실성으로 인해 심화됨 Tech Stocks Equiti.com*
 
 ## 테마별 주요 뉴스

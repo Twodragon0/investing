@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 
 - KOSPI 6,941.39 (-0.89%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 919.92 (+2.98%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-07 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,941.39(-0.89%), KOSDAQ 919.92(+2.98%), USD/KRW 1,338.14(-0.24%).
 - *Nvidia-backed Lambda seeks up to $4B in pre-IPO funding at a $14.5B valuation as backlog jumps to $50B.*
 
 ## 테마별 주요 뉴스

@@ -34,7 +34,6 @@ permalink: "/political-trades/2026/02/15/daily-political-trades-report/"
 ---
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **5건** 수집
