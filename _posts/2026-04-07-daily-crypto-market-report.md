@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-07 | LINK +4.2% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Chainlink</strong> (LINK): +4.19%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +4.17%</li><li>🟢 <strong>Ethereum</strong> (ETH): +3.83%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **14건** 수집

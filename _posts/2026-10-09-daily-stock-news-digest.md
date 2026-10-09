@@ -33,50 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 - 181건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채, 인플레이션 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 마이크로소프트, 엔비디아 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 국채, 선거 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">[표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0zUUc5OGlRSFM4bGx0X2w2YUlEREtmWVdUZkhfQV9PdFlOSV9kOWFXa3BSTkQzUlJYTUNkSTQxSlFTdnk1c00xS3I3RDM4djhWMVpyc093clJuLTBtcGNaM2dFYVd6aUZ1bWhMa0N5MzZPZw?oc=5">산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 - TopStarNews</a> <span class="p0-desc">[산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 TopStarNews</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 181건의 뉴스 중 P1 주요 이슈도 27건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (43건): 코스피, 코스닥, 외국인 가격 변동 (43건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (23건): 국채, 인플레이션, 금리 매크로 변수 (23건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (15건): 마이크로소프트, 엔비디아 기술 이슈 (15건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락
-- 삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려
-- 산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 - TopStarNews
-
-### 주요 이슈
-
-- What “Real” Interest Rates Are Telling Us - ETF Database
-- 실적 신기록 앞둔 삼전·하이닉스.주가는 '그 다음'을 본다 - 메트로신문
-- Nebius Group bull and bear case ahead of October earnings
-- 외 24건
-
-### 투자자 체크포인트
-
-- 한국 기사 63건, 글로벌 기사 118건 수집
-- 한국 지수: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,342.17(+0.20%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">43건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:53%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:35%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:21%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
+- KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-10-09 주식 시장에서 181건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,342.17(+0.20%).
+- *Housing policy has long prioritized homeownership.*
 
 ## 테마별 주요 뉴스
 

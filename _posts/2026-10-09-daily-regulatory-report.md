@@ -29,34 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-09 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 이억원 "AI로 해킹 막겠다…집값은 공급으로 안정화" - www.ebn.co.kr - 32건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 지분, 규제 이슈 부각</li><li>🏦 <strong>거래소</strong>: 이억원, 거래소 주목</li><li>🏛️ <strong>정치/정책</strong>: 입법, 디지털자산기본법 주목</li><li>🔷 <strong>이더리움</strong>: 4건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE8yaWlDRGZjdU93SWNoV004ZTFoTm9ZSmRiSHRSRG1pUi04eEhuOFhnc09HQlBjTU1YVVVvcjNhYk1pYU91SElFUUktZkVFR3I1ZGttc3NQOERSLU1hV3poZ3ltcWJBRHBi?oc=5">이억원 "AI로 해킹 막겠다…집값은 공급으로 안정화" - www.ebn.co.kr</a> <span class="p0-desc">이억원 "AI로 해킹 막겠다…집값은 공급으로 안정화". AI 산업 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 이억원 "AI로 해킹 막겠다…집값은 공급으로 안정화" - www.ebn.co.kr 
-총 32건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (24건): 지분, 규제, 지시 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (4건): 이억원, 거래소, 지분 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **🏛️ 정치/정책** (4건): 입법, 디지털자산기본법, 스테이블코인 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 이억원 "AI로 해킹 막겠다…집값은 공급으로 안정화" - www.ebn.co.kr
-
-### 주요 이슈
-
-- 이억원 "가상자산 거래소 지분 규제, 누구의 지시 아냐"
-- 이억원 금융위원장 “가상자산 거래소 지분 규제, 특정인 지시 아냐” - 스페셜타임스
-- 속보]금융위 “최대한 빨리 스테이블코인 입법…지분 규제 누구 지시 아냐”
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 11건, 한국 10건, 아시아 9건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 32건
 - **유럽**: 11건

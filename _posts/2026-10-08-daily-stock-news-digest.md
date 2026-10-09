@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 - 180건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 금리 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 반도체 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">[표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 핀포인트뉴스</span></li><li><a href="https://www.sedaily.com/article/20099308">기아 노조원 5000여명 개인정보 유출…산업계로 해킹 공포 번졌다</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,775.59 (-0.74%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 901.73 (+0.06%).
+- 2026-10-08 주식 시장에서 180건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,775.59(-0.74%), KOSDAQ 901.73(+0.06%), USD/KRW 1,337.43(-0.16%).
 - *몸값 134조원…SK하이닉스 솔리다임, 美 IPO 주관사 선정, 골드만 모건 대표 주관사로 선정 2027년 상장 통해 최대 100억달러 조달 추진 인텔 낸드 인수 5년 만에 독자 상장 추진 AI 데이터센터용.*
 
 ## 테마별 주요 뉴스

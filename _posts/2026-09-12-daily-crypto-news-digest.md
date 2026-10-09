@@ -43,9 +43,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-12 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZVhXbFFLWWUtSmlpWUJIdU5yQUZjU1llVDFjR05Gem1GRlRTVE8zV2Z4M3hHbHd5U08zU3FyYkhaMG96clpEbnIyc0xtWW9wSExtYVFGX2pGWVdQTmhzRHZxZ1lwM2ZoUUdaTzRZYktnZ2lXUldCUzFQeFJoaUM4dlVKZ2RhRG5I?oc=5">美 PPI 급등에 금리 인상 공포…비트코인·이더리움·XRP 급락</a> <span class="p0-desc">미국의 도매물가 지표가 예상치를 웃돌며 인플레이션 경계감을 자극한 가운데, 연방준비제도(Fed·연준)의 추가 금리 인상 가능성이 높아지면서 가상자산 시장이 일제히 약세로 돌아섰다.</span></li><li><a href="https://decrypt.co/377962/bitcoin-price-cpi-inflation-fed-rate-decision">Bitcoin Rises as Markets Digest Inflation Data Ahead of Fed Rate Decision</a></li><li><a href="https://decrypt.co/377959/blockstream-refuses-ransom-for-return-of-47m-in-bitcoin-from-liquid-hack-it-is-theft">Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📊 매크로/금리, 📈 가격/시장
+- 2026-09-12 암호화폐 시장 81건 분석 — 핵심 테마: 비트코인, 매크로/금리, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
