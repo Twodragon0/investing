@@ -17,8 +17,6 @@ permalink: "/market-analysis/2026/02/08/weekly-investment-digest-2026-02-08/"
 
 ## 전체 뉴스 요약
 
-- 이번 주 (02월 01일 ~ 02월 08일) 투자 관련 뉴스와 시장 분석을 종합 정리합니다.
-
 
 ## 시장 분석
 
