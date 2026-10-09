@@ -74,7 +74,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 - 시장 영향 가능성이 있는 거래소 공지 1건 포함
 - 프로모션성 거래소 공지 4건 제외
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-09.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 테마별 주요 뉴스

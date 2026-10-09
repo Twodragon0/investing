@@ -62,7 +62,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-09 - 소셜 미디어 뉴스 요�
 
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-10-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-10-09.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 정치·경제 동향

@@ -18,7 +18,6 @@ description: "글로벌 브리핑: 지정학 리스크 리포트. 국제 정세�
 
 <div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 스냅샷</strong><ul><li>Polymarket 예측 시장: <strong>15건</strong></li><li>GDELT 글로벌 뉴스: <strong>30건</strong></li><li>뉴스 기사: <strong>1건</strong></li><li>주요 테마: <strong>기타 지정학</strong></li></ul></div>
 
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">Polymarket</div></div><div class="stat-item"><div class="stat-value">30</div><div class="stat-label">GDELT 뉴스</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">뉴스 기사</div></div></div><picture><source srcset="{{ '/assets/images/generated/news-briefing-geopolitical-2026-10-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-geopolitical-2026-10-09.png' | relative_url }}" alt="geopolitical-briefing" loading="lazy" decoding="async"></picture>
 
 
 ## 1. 예측 시장 동향 (Polymarket)
