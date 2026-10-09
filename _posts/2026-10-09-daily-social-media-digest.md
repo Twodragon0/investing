@@ -63,7 +63,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-09 - 소셜 미디어 뉴스 요�
 ---
 
 
-
 ## 정치·경제 동향
 
 **1. ["국회 감시 피하는 이재명 쌈짓돈"…162조 '미래대응기금' 충돌에 국감 난타전 - 한국일보](https://news.google.com/rss/articles/CBMibkFVX3lxTE16TDBQZThEYmYwVVl0SmxfbVFJcHM3cmJlVDlaVDJSMGc3SkxHWlVTUFluNTZZRjRJc0RzVWd1N3Y2cms2cDJXUHpxWnpRUlh4RFh4ZDF0R0hIX2pVUGwxT0pTU2lZMnJSdnQ4SWZB0gFzQVVfeXFMTzZGcUR4Ukp3UVVxNGppMGtJY0RBcnBzYy1ybjFBZ3pxOURpN2xqSmNaS21tX2ZoWVVId3VTX2MtX3dCTnlXbU9IcUhZSkwtT2NKb1M2Rm56ZzVJb1dWSFIwNVVjSW5ud2UzNkNQOTRBREotUQ?oc=5)**
