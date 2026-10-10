@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-09 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(16회), **트럼프**(4회), **의회**(2회), **행정명령**(2회), **재산**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-10-09 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 24건 — 미국 의회 거래 1건, SEC 내부자 거래 12건, 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 9건
 - 1. Congress Has a Billion-Dollar Stock Trading Problem. President Trump Trades Three Times the Amount. - Common Cause Congress Has a Billion-Dollar Stock…
 
 ## 1. 미국 의회 거래 동향

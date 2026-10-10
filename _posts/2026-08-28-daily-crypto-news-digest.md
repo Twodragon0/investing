@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-28 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/376750/no-ledger-wasnt-hacked-ethereum-app-exploit">아니요, Ledger는 해킹되지 않았습니다: 취약한 이더리움 앱은 악용되기 전에 패치되었다고 회사는 밝혔습니다</a> <span class="p0-desc">OneKey는 오래된 이더리움 앱이 Ledger 장치에 표시된 것과 다른 거래에 서명할 수 있는 방법을 시연했지만 지갑 제조업체는 취약점이 이미 수정되었다고 말합니다.</span></li><li><a href="https://decrypt.co/376714/ai-critical-flaw-bitcoin-lightning-warning">AI은 비트코인 Lightning에서 심각한 결함을 발견하고 개발자는 긴급 경고를 발행합니다.</a> <span class="p0-desc">Lightning 소프트웨어 프로젝트는 AI에서 생성된 여러 취약점 보고서가 정확하다는 것을 확인한 후 수정 사항을 준비하고 있다고 밝혔습니다</span></li><li><a href="https://www.coindesk.com/business/2026/08/27/gta-6-leaker-cashes-out-of-his-own-memecoin-hours-before-rockstar-s-gameplay-reveal">GTA 6 유출자는 Rockstar의 게임플레이가 공개되기 밈코인시간 전에 자신의 돈을 현금화했습니다.</a> <span class="p0-desc">9일간의 미공개 Grand Theft Auto VI 영상에 힘입어 토큰은 2,500만 달러의 시가총액을 기록했습니다. 이제 제작자는 Rockstar의 첫 공식 게임플레이가 공개되기.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-08-28 암호화폐 핵심 뉴스: AI 구축: AI 골드 러시가 암호화폐 기업을 비트코인에서 멀어지게 합니다.. 총 100건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -28,7 +28,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-14 | HYPE +6.6% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +6.62%</li><li>🟢 <strong>Canton</strong> (CC): +3.75%</li><li>🟢 <strong>Bitcoin</strong> (BTC): +3.02%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **17건** 수집

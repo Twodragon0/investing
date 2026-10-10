@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE8zTmpiQnJBOVFSTTFyR2dOTEVBTHNxUmpNaDRqVDBxNU9JWC1MWkNKTHNwT29yRXlEd2dwN1dIdEdzRHVkbVZscXF0TkZEVm1ub05BMHNkUW4yZmpFelFWM1F0ajVhNkZUUkN0RklLMzEyaGotV1laeUcyZ9IBgAFBVV95cUxNZUYzQnZkSjAtc3R2blZIaVdLYnpfQXM1QU9sWGd6c1hjVXBZVkx1Y3piX0JHQkR6Zy05aEVhMlF5UTdjbzdhajQ1ZUtnVnhPUjMxVlpfbDFsVVI1N09KdTBmbXg1aUpKTlktTnNwMzVlY3Q5aUZZandkYkRSdFd1SA?oc=5">Bitget 'not expecting to recover a lot' from $388 million hack, CEO tells CNBC</a></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNTGN0VkgwWnoycGhYRlZFVUVydkNVb05PajdSRVM1ZXp6eEFWWkZiT3luR3ljYWs5eVN3NTBLQ2ZVT0haU0lqUUgzVG9KSm9ITXRSM1JLdzZzMkgtQmxJQ0U0QUloUWtQY0kxc1FIYy0yVzJfQjVtemE4c29HMmZ6TQ?oc=5">Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft - The Hacker News</a></li><li><a href="https://cointelegraph.com/news/aave-v3-third-party-adapter-exploit-305k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Aave founder says V3 unaffected after third-party adapter exploit drains $305K</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
-- 2026-10-03 암호화폐 시장 77건 분석 — 핵심 테마: 비트코인, 가격/시장, DeFi
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

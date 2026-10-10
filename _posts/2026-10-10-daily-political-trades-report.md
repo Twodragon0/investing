@@ -14,8 +14,6 @@ description: "정치인 거래·정책 동향 24건 수집. 의회 거래 2건, 
 image_alt: "정치인 거래·정책 리포트 - 2026-10-10 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-
-
 **2026-10-10** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **24건** — 미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책 2건, 중앙은행 5건
 
 ## 한눈에 보기
@@ -27,7 +25,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-10 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-10-10 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 24건 — 미국 의회 거래 2건, SEC 내부자 거래 15건, 트럼프 정책 2건, 중앙은행 5건
 - 1. Tony Wied's trades show reason for stock trading rules, experts say - Milwaukee Journal Sentinel Tony Wied's trades show reason for stock trading rules,…
 
 ## 1. 미국 의회 거래 동향

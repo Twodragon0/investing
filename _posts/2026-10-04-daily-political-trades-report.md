@@ -23,11 +23,8 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(4회), **연준**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-10-04 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 10건 — SEC 내부자 거래 8건, 중앙은행 2건
-- 1. Form 4\ VerifyMe, Inc. Insider Trading Activity - Stock Titan [Form 4] VerifyMe, Inc.
 
 ## 1. SEC 내부자 거래 (Form 4)
 
