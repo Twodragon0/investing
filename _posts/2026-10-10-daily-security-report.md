@@ -16,33 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Bitcoin consolidates near $82.5K as crypto weathe**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 12건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): security, exploit, improper 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (5건): exploit, bridge, logic 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (8건): exploit, improper, control 생태계 동향 (8건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
-- [Security] Locus Finance exploit
-- [Security] Set Protocol exploit: Rounding Error
-
-### 주요 이슈
-
-- [Security] Vitalik Buterin backs crypto ‘bunker mode’ amid rapid AI math advance
-
-### 투자자 체크포인트
-
-- 보안 사건 12건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건

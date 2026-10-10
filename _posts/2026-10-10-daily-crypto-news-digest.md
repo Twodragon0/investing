@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme - Chicago Tri. - 100건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>📈 <strong>가격/시장</strong>: 달러, 코인리더스 관련 24건</li><li>🟣 <strong>DeFi</strong>: 15건 수집</li><li>🏦 <strong>거래소</strong>: 제재 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE10YmI5Z1dyTGt3Ri1xTG5zOUk1aHllWS0zLUF0d1psYTFnR0VFSTNTMWRtR0RQbWZ4QVM2LWNpWDJiNW5EblRIYzRtaDNsYktLVzZnVEpELVdNeTFBbTdJR0xjT3BqZEdRbTlBYUE5M1NZaFctNWwzOVdB?oc=5">Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme - Chicago Tribune</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9tckdOYjBuWWN4Tmc5UHZXT1pxUGlLd2tJazc4ZEFISEdvdHNLelBXLW95RlEtVWFJOC1OYkttZ1pOc2pHTHM4TE1xbDlDZl9JbnRMYjM5bE1XenZ4ak4wSFNZYW9vem9fTzI0ODJjMWRsSzA?oc=5">비트코인, 중동 긴장·금리 급등에 $83,000 아래로 하락 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 중동 긴장·금리 급등에 $83,000 아래로 하락 Investing.com 한국어 [코인 시황] 비트코인, 트럼프 '이란 공격 유예'에 8만2000달러 회복…11억900.</span></li><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9GaVZSOGp6b0hMM3NBTlVJUUFieGNSOWN0NU1VYjdhN3BIdWtuV3ROcjhiQXNBZjhZb1BKMkZ1RHFaMjU1bmVLb3J3?oc=5">암호화폐 해킹 피해 3분기에만 11억7,000만 달러…올해 2025년 기록 넘어설까 - 코인리더스</a> <span class="p0-desc">암호화폐 해킹 피해 3분기에만 11억7,000만 달러…올해 2025년 기록 넘어설까 코인리더스</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme - Chicago Tri. 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 100건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인, 달러, 코인리더스 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (24건): 달러, 코인리더스, 암호화폐 가격 변동 (24건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🟣 DeFi** (15건): tokenized, stablecoins, prediction DeFi 동향 (15건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme - Chicago Tribun
-- 비트코인, 중동 긴장·금리 급등에 $83,000 아래로 하락 - Investing.com 한국어
-- 암호화폐 해킹 피해 3분기에만 11억7,000만 달러…올해 2025년 기록 넘어설까 - 코인리더스
-
-### 주요 이슈
-
-- UK Targets Cryptomus and TokenSpot in New Russia Sanctions Package
-- AI Startup Manus Raises $500 Million After China Nixed Meta’s $2 Billion Acquisi
-- Here’s what happened in crypto today
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News KR(15건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- 2026-10-10 암호화폐 시장 100건 분석 — 핵심 테마: 비트코인, 가격/시장, DeFi
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
