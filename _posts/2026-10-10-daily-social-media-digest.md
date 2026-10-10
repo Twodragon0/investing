@@ -58,7 +58,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-10 - 소셜 미디어 뉴스 요�
 ---
 
 
-
 ## 정치·경제 동향
 
 **1. [Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVkdZWUJTVWlqeFdIT2tOeU16X19ITlY3NVMtUWg0ZlNFLUZmZTJETHlmcElLYk03dkkwdndWRU5ZNmpva1JUeVpjVzdnMEQ4M2hVaWd6VVpfWmEyOHdKRXdRaUxXaU5ySk1pUF9acFpBazFzX25INmh5SDl4Sy1MTG52ZTNISWJXNWdYVWRVQnEwUU5HVzN2MmZ3ZXEzdEFnTkFsZGwyZld3WXZmSGQ1S2RfU2Jpc1RwbXRoakY0U1lyUWM?oc=5)**
