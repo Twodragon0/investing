@@ -28,28 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-11 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 특정 관련 9건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 특정 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 특정 주목</li><li>🏦 <strong>거래소</strong>: 2건 수집</li><li>📊 <strong>매크로/금리</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 9건의 뉴스 중 **규제/정책** 관련이 6건(67%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (6건): 특정 규제 움직임 (6건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🟣 DeFi** (3건): 특정 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🏦 거래소** (2건): cooperation, financial, stability 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 이억원 “가상자산 거래소 지분 규제, 누구의 지시도 아니다” "인가제 전화에 걸맞은 공공성 필요" : 정치 - 재경일보
-- Podcast Plus: Crypto under the FCA – Special edition - Authorisation - Global Re
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 3건, 유럽 3건, 한국 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 9건
 - **미국**: 3건

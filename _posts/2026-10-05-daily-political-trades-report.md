@@ -23,8 +23,10 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(2회), **연준**(2회), **관세**(2회), **행정명령**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-10-05 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 2건 — 트럼프 정책 1건, 중앙은행 1건
 - 1. Trump slaps 100% tariff on some pharmaceutical drugs via executive order - ABC7 Los Angeles Trump slaps 100% tariff on some pharmaceutical drugs via…
 
 ## 1. 트럼프 행정명령/정책

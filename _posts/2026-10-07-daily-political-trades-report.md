@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-07 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **의회**(6회), **연준**(6회), **행정명령**(2회), **내부자**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-10-07 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 22건 — 미국 의회 거래 3건, SEC 내부자 거래 14건, 트럼프 정책 1건, 중앙은행 4건
 - 1. Gridlock looms on congressional stock trade ban as parties clash over divestment - WBMA Gridlock looms on congressional stock trade ban as parties clash…
 
 ## 1. 미국 의회 거래 동향

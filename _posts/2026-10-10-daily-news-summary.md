@@ -17,17 +17,11 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 
 ## 전체 뉴스 요약
 
-- 총 **335건** 수집
 - 주요 테마: 📋 정책/규제, 💰 금리/유동성, 🔄 수급/심리
 - 암호화폐: 100건. 대표 헤드라인: Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers.
 - 주식: 174건. 2026-10-10 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,341.43(-0.03%). 주요 수치: KOSPI 6,625.93(-2.62%).
+- 소셜: 25건. 화제 키워드: Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk.
 
-
-> **한눈에 보는 시장 상황**
-> - 총 수집: **335건**
-> - 긴급 알림(P0): **12건**
-> - 중요 뉴스(P1): **2건**
-> - 리스크 레벨: **🔴 높음** (P0 12건, 부정비율 88%)
 
 ## 종합 대시보드
 

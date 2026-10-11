@@ -14,7 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-11 - 정치인 거래 �
 description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거래와 정책 연관성을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-11.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-11** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **15건** — SEC 내부자 거래 14건, 중앙은행 1건
@@ -23,13 +22,11 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">14</div><div class="stat-label">SEC 내부자</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">중앙은행</div></div></div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **15건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 14건, 중앙은행 1건입니다.
-
-**중앙은행 정책**에서는 잡히지 않는 물가…한은·미 연준 ‘기준금리’ 올릴까 [10월 경제캘린더] 더스쿠프 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-10-11 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 15건 — SEC 내부자 거래 14건, 중앙은행 1건
+- 1. A director’s 200-share IPO buy at $15 each was omitted from Reformation (REF)’s earlier report. - Stock Titan A director’s 200-share IPO buy at $15 each…
 
 ## 1. SEC 내부자 거래 (Form 4)
 

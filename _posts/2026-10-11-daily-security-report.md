@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-10-11 - 보안 뉴스 요약 �
 
 블록체인 보안 10건 분석. 주목 사건: **[Security] Ledger investigates fund losses linked to Southea**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 10건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (10건): security, exploit, improper 보안 이슈 (10건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (5건): exploit, bridge, logic DeFi 동향 (5건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (6건): exploit, improper, control 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
-- [Security] Locus Finance exploit
-- [Security] Set Protocol exploit: Rounding Error
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 10건
