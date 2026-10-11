@@ -14,8 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-11 - 정치인 거래 �
 description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거래와 정책 연관성을 분석합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-
-
 **2026-10-11** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **15건** — SEC 내부자 거래 14건, 중앙은행 1건
 
 ## 한눈에 보기
@@ -25,7 +23,6 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 
 ## 전체 뉴스 요약
 
-- 2026-10-11 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 15건 — SEC 내부자 거래 14건, 중앙은행 1건
 - 1. A director’s 200-share IPO buy at $15 each was omitted from Reformation (REF)’s earlier report. - Stock Titan A director’s 200-share IPO buy at $15 each…
 
 ## 1. SEC 내부자 거래 (Form 4)

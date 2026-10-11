@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.sedaily.com/article/20098023">같은 IP가 여러 금융사 해킹…AI 활용해 대량 공격 정황</a></li><li><a href="https://www.sedaily.com/article/20097996">금융기관 해킹 잇따르자…李 “엄중 인식 하에 철저 조사”</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 893.29 (-0.11%).
-- 2026-10-05 주식 시장에서 111건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,003.74(+0.46%), KOSDAQ 893.29(-0.11%), USD/KRW 1,342.51(-1.30%).
 - *Minutes from the September meeting may provide extra context, as the real fed-funds rate is now surprisingly low.*
 
 ## 테마별 주요 뉴스
