@@ -39,6 +39,45 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 - *S&P 500, Nasdaq end lower as crude prices jump, chip stocks weigh Reuters Stock market today: S&P 500, Nasdaq fall.*
+**긴급**: AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says - Insurance Journal 
+총 146건의 뉴스 중 P1 주요 이슈도 26건 확인됩니다.
+
+### 테마별 동향
+
+- **🤖 AI/기술** (12건): 엔비디아, 반도체 기술 이슈 (12건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
+- **📈 가격/시장** (19건): 실적, 강세, 랠리 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
+- **📊 매크로/금리** (6건): 국채, 포트폴리오 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
+
+### 긴급 이슈
+
+- AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says - Insurance Journal
+
+### 주요 이슈
+
+- 삼전닉스 대신 방산·반도체 테마형으로…변화하는 레버리지 ETF 판도 - 매일경제 마켓
+- Stock market today: Dow, S&P 500, Nasdaq rally to cap volatile week as earnings
+- Futures: Market Trends Higher With These Big Earnings Due - Investor's Business
+- 외 23건
+
+### 투자자 체크포인트
+
+- 한국 기사 39건, 글로벌 기사 107건 수집
+- 한국 지수: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,340.90(-0.07%)
+
+
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:63%"></div></div><span class="theme-count">12건</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">19건</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:32%"></div></div><span class="theme-count">6건</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:42%"></div></div><span class="theme-count">8건</span></div>
+<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:26%"></div></div><span class="theme-count">5건</span></div>
+</div>
+
+*기사는 여러 테마에 중복 집계될 수 있음*
+
+
+
+---
 
 ## 테마별 주요 뉴스
 

@@ -47,6 +47,38 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 - 총 **89건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
 - *기사는 여러 테마에 중복 집계될 수 있음*
+**긴급**: 암호화폐 시장 급락 3가지 이유…다음은? 
+외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 89건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
+
+### 테마별 동향
+
+- **🟠 비트코인** (36건): 비트코인, 달러, 암호화폐 관련 (36건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
+- **📈 가격/시장** (20건): 달러, 암호화폐, 반등 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
+- **🟣 DeFi** (16건): tokenized, investigates, stolen 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
+
+**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
+
+### 긴급 이슈
+
+- 암호화폐 시장 급락 3가지 이유…다음은?
+- Ledger Probes Potential Theft of $87M in User Funds Tied to Crypto Wallet Reseller
+- Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
+
+### 주요 이슈
+
+- 비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들
+- Blockchain.com seeks U.S. approval for prediction markets, crypto derivatives tr
+- Blockchain.com Seeks Approval for US Prediction Markets and Crypto Derivatives
+- 외 11건
+
+### 투자자 체크포인트
+
+- **핫 키워드**: 비트코인, AI, ETF
+- **주요 출처**: Decrypt(15건), Cointelegraph(15건), CoinDesk(15건)
+- 시장 영향 가능성이 있는 거래소 공지 3건 포함
+- 프로모션성 거래소 공지 2건 제외
+
+
 
 ## 테마별 주요 뉴스
 
