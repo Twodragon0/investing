@@ -203,7 +203,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 ### 🏛️ 정치/정책 (9건)
 
 
-
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb news-card-thumb--favicon"><img src="https://www.google.com/s2/favicons?domain=news.google.com&sz=128" alt="" loading="lazy"></div>
@@ -250,7 +249,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 
 
 ### 🟠 비트코인 (4건)
-
 
 
 <div class="news-card-item news-sev-medium">

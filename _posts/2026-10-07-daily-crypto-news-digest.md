@@ -158,7 +158,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 ### 🏦 거래소 (12건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb news-card-thumb--favicon"><img src="https://www.google.com/s2/favicons?domain=news.google.com&sz=128" alt="" loading="lazy"></div>
@@ -208,7 +207,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 
 
 ### 🔵 규제/정책 (18건)
-
 
 
 <div class="news-card-item news-sev-medium">
@@ -262,7 +260,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 
 
 ### 🤖 AI/기술 (7건)
-
 
 
 <div class="news-card-item news-sev-medium">

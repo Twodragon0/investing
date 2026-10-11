@@ -95,7 +95,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 ### 🤖 AI/기술 (11건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb news-card-thumb--favicon"><img src="https://www.google.com/s2/favicons?domain=news.google.com&sz=128" alt="" loading="lazy"></div>
@@ -198,7 +197,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 ### 🏛️ 정치/정책 (9건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://images.mktw.net/im-82465321" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -245,7 +243,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 
 
 ### 🏦 거래소 (4건)
-
 
 
 <div class="news-card-item news-sev-medium">

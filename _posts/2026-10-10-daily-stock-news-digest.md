@@ -149,7 +149,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 ### 📊 매크로/금리 (11건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb news-card-thumb--favicon"><img src="https://www.google.com/s2/favicons?domain=news.google.com&sz=128" alt="" loading="lazy"></div>

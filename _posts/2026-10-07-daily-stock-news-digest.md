@@ -203,7 +203,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 ### 🏦 거래소 (7건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2295025074/image_2295025074.jpg?io=getty-c-w630" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -248,7 +247,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 
 
 ### 🏛️ 정치/정책 (7건)
-
 
 
 <div class="news-card-item news-sev-high">

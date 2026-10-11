@@ -108,7 +108,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 ### 🔵 규제/정책 (15건)
 
 
-
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://cdn.sanity.io/images/s3y3vcno/production/6d6f178b9823ada860129fe771c32694011310c3-3524x1982.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -162,7 +161,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 ### 🟣 DeFi (13건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://cdn.sanity.io/images/s3y3vcno/production/b6e96032161d6dcf99d95c60578a52fdca91b2f3-5594x3147.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -213,7 +211,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 
 
 ### 📈 가격/시장 (8건)
-
 
 
 <div class="news-card-item news-sev-medium">

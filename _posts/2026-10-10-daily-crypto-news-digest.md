@@ -160,7 +160,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 ### 🟣 DeFi (15건)
 
 
-
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://cdn.decrypt.co/wp-content/uploads/2025/05/Jail-cell-2-gID_7.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -214,7 +213,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 ### 🏦 거래소 (13건)
 
 
-
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://s3-images.ctmedia.io/media/article-covers/2026/10/01M4GNSX9H9TAR1WVGN6VK00JF/rope-and-some-sand.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -265,7 +263,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 
 
 ### 🔴 보안/해킹 (12건)
-
 
 
 <div class="news-card-item news-sev-medium">

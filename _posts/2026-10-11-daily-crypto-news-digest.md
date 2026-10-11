@@ -75,7 +75,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 - 프로모션성 거래소 공지 2건 제외
 
 
-
 ## 테마별 주요 뉴스
 
 ### 🟠 비트코인 (36건)
@@ -187,7 +186,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 ### 🟣 DeFi (16건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://cdn.decrypt.co/wp-content/uploads/2025/08/Paris-gID_7.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -294,7 +292,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 
 
 ### 🏦 거래소 (10건)
-
 
 
 <div class="news-card-item news-sev-high">

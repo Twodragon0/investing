@@ -160,7 +160,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 ### 🟣 DeFi (22건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://cdn.decrypt.co/wp-content/uploads/2026/10/header-article-gID_7.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -212,7 +211,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 
 
 ### 🔵 규제/정책 (15건)
-
 
 
 <div class="news-card-item news-sev-high">

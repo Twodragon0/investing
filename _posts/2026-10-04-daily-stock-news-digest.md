@@ -98,7 +98,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 ### 📊 매크로/금리 (17건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb news-card-thumb--favicon"><img src="https://www.google.com/s2/favicons?domain=news.google.com&sz=128" alt="" loading="lazy"></div>
@@ -199,7 +198,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 ### 🏦 거래소 (6건)
 
 
-
 <div class="news-card-item news-sev-high">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://image.cnbcfm.com/api/v1/image/108350672-1787003285285-Novig.jpg?v=1787003338&amp;w=1920&amp;h=1080" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -242,7 +240,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 
 
 ### 🔵 규제/정책 (7건)
-
 
 
 <div class="news-card-item news-sev-medium">

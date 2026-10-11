@@ -72,7 +72,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 *기사는 여러 테마에 중복 집계될 수 있음*
 
 
-
 ---
 
 ## 테마별 주요 뉴스
@@ -129,7 +128,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 
 ### 📈 가격/시장 (19건)
-
 
 
 <div class="news-card-item news-sev-high">
@@ -229,7 +227,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 ### 🏛️ 정치/정책 (8건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb news-card-thumb--favicon"><img src="https://www.google.com/s2/favicons?domain=news.google.com&sz=128" alt="" loading="lazy"></div>
@@ -274,7 +271,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 
 ### 🟠 비트코인 (5건)
-
 
 
 <div class="news-card-item news-sev-medium">

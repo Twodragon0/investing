@@ -213,7 +213,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 ### 📊 매크로/금리 (9건)
 
 
-
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
 <div class="news-card-thumb"><img src="https://s3-images.ctmedia.io/media/article-covers/2026/10/01M3YKXXV4WP8TTTRPX217ZDQQ/bitcoin-investment-pump-1.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
@@ -260,7 +259,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 
 
 ### 🔷 이더리움 (9건)
-
 
 
 <div class="news-card-item news-sev-medium">
