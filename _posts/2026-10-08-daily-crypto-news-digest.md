@@ -159,7 +159,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (10건)
 
-*OKX raises more, $500M+ in crypto longs liquidated after a late evening selloff, and Abstract calls it quits.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -308,19 +307,14 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 
 ## 거래소 공지사항
 
-**1. [Binance Has Completed the Stargate Finance (STG) Token Merge to LayerZero (ZRO)](https://www.binance.com/en/support/announcement/detail/b109477116f6463a91151946e9ac0fdf)**
 Binance Has Completed the Stargate Finance (STG) Token Merge to LayerZero (ZRO). STG, ZRO 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**2. [Binance Will Add 4 bStocks Tokenized Securities as Collateral Asset - 2026-10-07](https://www.binance.com/en/support/announcement/detail/a1a7996170f246da90ea49f199a61bcd)**
 Binance Will Add 4 bStocks Tokenized Securities as Collateral Asset - 2026-10-07. Binance, Add 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**3. [Binance Exchange Adds JPMorgan Chase (JPMB), Eli Lilly (LLYB), Securitize Corp (SECZB) and StablecoinX Inc (USDEB) bStocks Trading Pairs on Binance Spot/Convert - 2026-10-07](https://www.binance.com/en/support/announcement/detail/9c34999b27234dfe9c43d2ac33cebde4)**
-Binance Exchange Adds JPMorgan Chase (JPMB), Eli Lilly (LLYB), Securitize Corp (SECZB) and StablecoinX Inc (USDEB) bStoc.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**4. [Update on the Collateral Ratio Under Cross Margin and Portfolio Margin](https://www.binance.com/en/support/announcement/detail/74c7657a53f141e8b2d584bf44e6dd87)**
 Update on the Collateral Ratio Under Cross Margin and Portfolio Margin (2026-10-09). Collateral, Ratio 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
@@ -329,7 +323,6 @@ Update on the Collateral Ratio Under Cross Margin and Portfolio Margin (2026-10-
 
 시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.
 
-- [Trade Futures & Win: Complete Tasks to Share 200 BNB in Rewards!](https://www.binance.com/en/support/announcement/detail/c6f5ccd7407f40ac98ff0d38ea9dfa3e) (Binance)
 
 ## 오늘의 인사이트
 

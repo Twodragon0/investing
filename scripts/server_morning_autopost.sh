@@ -143,6 +143,7 @@ if [[ ${#RECENT_POSTS[@]} -gt 0 ]]; then
   # python-collect 액션과 같은 재시도가 여기에도 있어야 post-quality.yml 의
   # --max-findings 상한이 성립한다.
   run_py scripts/tools/fix_untranslated_body.py --apply --files "${RECENT_POSTS[@]}"
+  run_py scripts/fix_untranslated_post_artifacts.py --days 3 --apply
 fi
 
 echo "$LOG_PREFIX clean translation cache"

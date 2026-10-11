@@ -51,16 +51,11 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-08 - 규제 뉴스 요�
 
 ## 1. 미국 규제 동향
 
-**1. [tm2626975-1_s1.htm](https://news.google.com/rss/articles/CBMijgFBVV95cUxPUjRBVk1FWUhlZ2xXeTdiZmpoM1hGcW5jaWY4MC1lZ1VtVnJ4cEdyZE1JS3F5QmhDMkZwNElRVl94YWpaUl9lRFpXRmdDQzZ4NzF1b0U3djZfNkJqc0RsYmpSZmw3NFBZRG1nYk1GX1p3Z1R4V1VnbUhfRldvdGthdTl5U0ltcnJLay02ZHl3?oc=5)**
 미국 증권거래위원회(SEC) 보도. tm2626975-1_s1.htm
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**2. [SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case](https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdlozQzQzRlRKX25reEN0SHhtN1RfMHAxeXVxZUNzMHdDVFNEZWdxSUQ0emtiNU1xdWZiZWMyNnNNakg5RThPVHpBSUJ2Q0tnS0hMRnE5VHpGWEFUV3Q0eWxZVkV4Z25tLTlUQ0lSeEhpSFNqazJNbFJjcHBGbjZrVzRWdHFwMGYzRWRUUXJzX21zejBXVGNDa2xObnl6SWVKdno0UDlEZ1A1MnNBN1JRQkdjZ0NjbEZ1aGJTTmJ3b25WQUdfblJENm5Oc2c5QjFpVmc0cDZOTHZjTTQ?oc=5)**
-SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**3. [Minutes of the Federal Open Market Committee, September 15-16, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm)**
-The Federal Reserve on Wednesday released the minutes of the Federal Open Market Committee meeting that was held on September 15–16, 2026.
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
 ---
@@ -91,44 +86,24 @@ The Federal Reserve on Wednesday released the minutes of the Federal Open Market
 
 ## 3. 아시아 규제 동향
 
-**1. [International,Hosting Overseas Regulatory Officials at the Global Financial Partnership Center (29th Program: 15 Insurance Supervisory Authorities)](https://www.fsa.go.jp/en/glopac/20260825_29th/20260825_29th.html)**
-(*) As of September 2026, GLOPAC has conducted 29 training programs for overseas financial authorities, including initiatives under its predecessor, the Asia Financial Partnership Center (AFPAC),
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
-**2. [Publication,FSA Weekly Review No.705 October 6, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/705.html)**
-This page contains the latest in events, developments, and updates to the FSA website.For files in HTML formats, when you click original press release links, and click the "Language" button on the
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
-**3. [Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant](https://news.google.com/rss/articles/CBMipwFBVV95cUxNT2M3VndZVVJxWVE5bzMyNjBQek5PTFhBWFB3Z0FnTDFoNmZaamlLRTV4NldObE9STGZoOFNzWkNnVnlkQ1UtQVZQS0NCNThveVd2cXVVWm5ZdC0tbGdmWFA2Y1V6NFJiQjExdGwySkozdVRyNGNXQi1uZEtWSEVPSTdBRE5DZjVyOG5ORlFUU3RUbTZUdFQ5aF9SN3RsMHFmQzlfVUJhNA?oc=5)**
-Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**4. [Hyperliquid Labs Is Registered in Singapore, but the Blockchain Is a Different Story](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZmJ6djR6OVlHQXhOOXlleWtQTUFfaUE0VXdxUENMZ2FzeHkxSUIwazh1M1BFeTBLZUpFRmVaSlA3SHBmRFh5d3FqZi1sZXpFN3F4YmtVWEVRaWVkM1pRNDZQdDNLSWNmd2hLRnRQYjV0dk42cjRjSm1vMDZjMGJGV2Q2X2R3cks3?oc=5)**
-Hyperliquid Labs Is Registered in Singapore, but the Blockchain Is a Different Story.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**5. [Hyperliquid Confirms Singapore Base Without a MAS License - TOKENPOST](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YMkh6US1YWlUtUlJXRWVocHB4YXkwYnJIM0lVX2FId2hPZE02cmVRM2hqcGdzYVNZV0ZWV05ZUGRJQjRJb1FoY0pPRW1ZRGFpdG03Z0FERVZTUEU?oc=5)**
-Hyperliquid Confirms Singapore Base Without a MAS License - TOKENPOST.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**6. [Hyperliquid Faces Singapore Regulatory Questions Despite Local HQ: Report - CryptoPotato](https://news.google.com/rss/articles/CBMinwFBVV95cUxQaDY5SExzekpkZEJfeEJUbWJaNVp2ZWdvUWNlemkzaE9wSkxISG1HNmppcklfNERWU0FGSHZxQThscEFxMGxYaWRhNFFIejIzM2xrTGNvMU1HS3lRc3kwczhYLUhtV0c0YXRPUnhxRWpaQ3B3WWZRZ2E2Vzh0YjVBTmh6VUU5ZlZnNnktYWtrYWFsbVZxbUJPd0d1d1RWWDg?oc=5)**
-Hyperliquid Faces Singapore Regulatory Questions Despite Local HQ: Report - CryptoPotato.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**7. [Singapore-based Hyperliquid lacks MAS license, raising crypto-derivatives regulatory questions. - Pluang](https://news.google.com/rss/articles/CBMikgFBVV95cUxOR2FYSF9CTm9vQXJqUExyRFBibTJmZ3FxYkNpVy1pbzd4MzNXTmIwU19qcmh4S3lkZnlCYnlCRGtNT2F6NWp0Snh0TzVXc1NINm5RU3hxclZzN0xrQkRrNHBSeWsxWW81SW5nWVNDdGxBR1lScUVodXh6NVF1MWZ3azRaS3lraDNJUnhZN0F4Z3IwQQ?oc=5)**
-Singapore-based Hyperliquid lacks MAS license, raising crypto-derivatives regulatory questions.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**8. [Singapore MAS Says Hyperliquid May Be Outside Its Jurisdiction Amid Dispute Over Headquarters - bloomingbit](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBsWm4zNUhyZ21QTEplWmNsT2FVTS1lZVZfVWRUQ3dQTVBOTVRaaGVlV3kzX0ZrOHRMbkUtbEs2dmxUYnRPNmtMYkdiV2VOQllhajRIYw?oc=5)**
-Singapore MAS Says Hyperliquid May Be Outside Its Jurisdiction Amid Dispute Over Headquarters - bloomingbit.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**9. [Hyperliquid Labs’ Singapore Base Puts Regulatory Scope in Focus](https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1UnhHR2ozblhfeTBaWFZTYVVTOS02S1pxaUNLRHk3R3lxOC03T2o4NUZRMmRYWkJFX3EtWEI5enc0ZjlsTE1Ud0F2QWxrRVBXYjZQS1BtNEREWlAwQndJcTlRa2VVc2Q0?oc=5)**
-Hyperliquid Labs’ Singapore Base Puts Regulatory Scope in Focus.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**10. [Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside Its Jurisdiction - Blockhead](https://news.google.com/rss/articles/CBMizAFBVV95cUxOSml6UzlkdEZRSEdSbVNPQy0xV2h2d1ZnTTJjVFFPdi1xc3NaUWJ4SFRxOVFHWkc4dUlKQW5wOFJUTzdnRWdudWVIVzh1VzFiN2dzYk8yQWJtNnhEVzM1OVpvZlptaV91ZVFoQTBUaUwyRmtFNXZHRTdhcERZZVRnaEQ1Yzh1ZXZxbkpkcGY0WEVpNHRaSWRmX1VJdTlzNnc2MGdTUS04aEpybHNYbmpwRDdxNWxwTnVCaTJ2bG5XVUIzS2lTdEFUTFBsUm4?oc=5)**
-Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside Its Jurisdiction - Blockhead.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
 ---
@@ -141,10 +116,8 @@ Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside I
 전체의 63%로 압도적 비중을 차지합니다. 주요 출처: MAS Singapore(7건), SEC (Google News)(2건), 한국 금융규제 뉴스(2건). 관련 지역: 아시아, 미국, 한국.
 
 **주요 동향:**
-- [tm2626975-1_s1.htm](https://news.google.com/rss/articles/CBMijgFBVV95cUxPUjRBVk1FWUhlZ2xXeTdiZmpoM1hGcW5jaWY4MC1lZ1VtVnJ4cEdyZE1JS3F5QmhDMkZwNElRVl94YWpaUl9lRFpXRmdDQzZ4NzF1b0U3djZfNkJqc0RsYmpSZmw3NFBZRG1nYk1GX1p3Z1R4V1VnbUhfRldvdGthdTl5U0ltcnJLay02ZHl3?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
  > 미국 증권거래위원회(SEC) 보도.
-- [SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case](https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdlozQzQzRlRKX25reEN0SHhtN1RfMHAxeXVxZUNzMHdDVFNEZWdxSUQ0emtiNU1xdWZiZWMyNnNNakg5RThPVHpBSUJ2Q0tnS0hMRnE5VHpGWEFUV3Q0eWxZVkV4Z25tLTlUQ0lSeEhpSFNqazJNbFJjcHBGbjZrVzRWdHFwMGYzRWRUUXJzX21zejBXVGNDa2xObnl6SWVKdno0UDlEZ1A1MnNBN1JRQkdjZ0NjbEZ1aGJTTmJ3b25WQUdfblJENm5Oc2c5QjFpVmc0cDZOTHZjTTQ?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
  > SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case.
 - [馬 하원 금융위원장 "SEC·CFTC 가상자산 규제만으로 부족…클래리티법 처리 기대" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9IVnJ4UUo3TmtJQ21uY3IwU0tuRlNUSi1ubDE1WWpuR0p1THBsQkxTZ1hzVUNlcnBPRllkU0Z0V2tKWG5xUFBILTdYdV9VLUJR?oc=5)
@@ -156,13 +129,10 @@ Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside I
 전체의 26%로 수치입니다. 주요 출처: MAS Singapore(4건), Japan FSA(1건).
 
 **주요 동향:**
-- [Publication,FSA Weekly Review No.705 October 6, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/705.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
  > This page contains the latest in events, developments, and updates to the FSA website.For files in HTML formats, when.
-- [Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant](https://news.google.com/rss/articles/CBMipwFBVV95cUxNT2M3VndZVVJxWVE5bzMyNjBQek5PTFhBWFB3Z0FnTDFoNmZaamlLRTV4NldObE9STGZoOFNzWkNnVnlkQ1UtQVZQS0NCNThveVd2cXVVWm5ZdC0tbGdmWFA2Y1V6NFJiQjExdGwySkozdVRyNGNXQi1uZEtWSEVPSTdBRE5DZjVyOG5ORlFUU3RUbTZUdFQ5aF9SN3RsMHFmQzlfVUJhNA?oc=5)
  <span class="source-tag" data-source-type="default">MAS Singapore</span>
  > Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant.
-- [Hyperliquid Confirms Singapore Base Without a MAS License - TOKENPOST](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YMkh6US1YWlUtUlJXRWVocHB4YXkwYnJIM0lVX2FId2hPZE02cmVRM2hqcGdzYVNZV0ZWV05ZUGRJQjRJb1FoY0pPRW1ZRGFpdG03Z0FERVZTUEU?oc=5)
  <span class="source-tag" data-source-type="default">MAS Singapore</span>
  > Hyperliquid Confirms Singapore Base Without a MAS License - TOKENPOST.
 
@@ -183,7 +153,6 @@ Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside I
 주요 출처: MAS Singapore(1건).
 
 **주요 동향:**
-- [Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside Its Jurisdiction - Blockhead](https://news.google.com/rss/articles/CBMizAFBVV95cUxOSml6UzlkdEZRSEdSbVNPQy0xV2h2d1ZnTTJjVFFPdi1xc3NaUWJ4SFRxOVFHWkc4dUlKQW5wOFJUTzdnRWdudWVIVzh1VzFiN2dzYk8yQWJtNnhEVzM1OVpvZlptaV91ZVFoQTBUaUwyRmtFNXZHRTdhcERZZVRnaEQ1Yzh1ZXZxbkpkcGY0WEVpNHRaSWRmX1VJdTlzNnc2MGdTUS04aEpybHNYbmpwRDdxNWxwTnVCaTJ2bG5XVUIzS2lTdEFUTFBsUm4?oc=5)
  <span class="source-tag" data-source-type="default">MAS Singapore</span>
  > Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside Its Jurisdiction - Blockhead.
 
@@ -192,7 +161,6 @@ Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside I
 전체의 21%로 수치입니다. 주요 출처: 한국 금융규제 뉴스(3건), SEC (Google News)(1건). 관련 지역: 한국, 미국.
 
 **주요 동향:**
-- [SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case](https://news.google.com/rss/articles/CBMi2wFBVV95cUxOdlozQzQzRlRKX25reEN0SHhtN1RfMHAxeXVxZUNzMHdDVFNEZWdxSUQ0emtiNU1xdWZiZWMyNnNNakg5RThPVHpBSUJ2Q0tnS0hMRnE5VHpGWEFUV3Q0eWxZVkV4Z25tLTlUQ0lSeEhpSFNqazJNbFJjcHBGbjZrVzRWdHFwMGYzRWRUUXJzX21zejBXVGNDa2xObnl6SWVKdno0UDlEZ1A1MnNBN1JRQkdjZ0NjbEZ1aGJTTmJ3b25WQUdfblJENm5Oc2c5QjFpVmc0cDZOTHZjTTQ?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
  > SEC Seeks Final Judgment Against Former Western Asset Co-CIO Ken Leech in Cherry Picking Case.
 - [馬 하원 금융위원장 "SEC·CFTC 가상자산 규제만으로 부족…클래리티법 처리 기대" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9IVnJ4UUo3TmtJQ21uY3IwU0tuRlNUSi1ubDE1WWpuR0p1THBsQkxTZ1hzVUNlcnBPRllkU0Z0V2tKWG5xUFBILTdYdV9VLUJR?oc=5)

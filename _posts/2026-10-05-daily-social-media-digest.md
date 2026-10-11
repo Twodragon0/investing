@@ -45,11 +45,8 @@ image_alt: "소셜 미디어 동향 - 2026-10-05 - 소셜 미디어 뉴스 요�
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **2. [연준은 인플레이션이 3년 최고치에 도달함에도 불구하고 금리를 안정적으로 유지합니다. - ABC 뉴스 - 속보, 최신 뉴스 및 비디오](https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5)**
-Fed holds interest rates steady as inflation hits 3-year high ABC News - Breaking News, Latest News and Videos
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**3. [Fed holds interest rates steady in 1st move since Iran war spiked oil prices - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMilAFBVV95cUxOWVgwU0l2bjYwREJ2NE9WVC1ObnpJa3Qxa2syS0lmUXphVm8zTWpnYVJ5NXpFZmxWYUZlVXpmc3ZFQzk2ZnZlYjNSUHRPb3F1emZhVDdPNEMxak1mM2wzOEZtYnA5dklfUFlfOUdVRU5lSXNmTlhqMy1pUElaMjNBTEFJbV9IRHNkRGt1NHJKVDVFd1Za0gGaAUFVX3lxTE9IOWFDX2MzMVhjUXl2VE1oTGNTTlowMmxkMUZnNEQ1TzhKemJ3TmlSTElmdzVPQ3VmR2E3OGdNLXN2dVBHQ2xiLXl0WWJfdjBUQktuSnNwbTNQV3puQzBJTUVZS295S2lHYU9iQVpFd05FQkw4WmhmZ2EyU3dCUWt0bHNCUy1xX0pHME5ZbVBlZ1RXSkxnSVZ1TWc?oc=5)**
-Fed holds interest rates steady in 1st move since Iran war spiked oil prices ABC News - Breaking News, Latest News and Videos
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **4. [증시 프리즘\ "반도체·금융에 실탄 쏠렸다"…4분기 코스피 외국인·기관 비중 지형도](https://news.google.com/rss/articles/CBMicEFVX3lxTE9YRUcyU19xNks2eU1HR09rU2ZJdFRYZUZvNmZ4Qk1IYzcwa0xrc3Z6S1NVMjdVQlFuY3YxQkFfTjRSOEtTcGFCWlBGZUFTUHo1M21TY3BNUUVxZ2VWaVpSZXNSWHBOR0ZackllaHd3ZG0?oc=5)**
@@ -82,9 +79,7 @@ Fed holds interest rates steady in 1st move since Iran war spiked oil prices ABC
 
 전체의 75%로 압도적 비중을 차지합니다. 주요 출처: 한국은행 금리정책(4건), Fed Policy(2건).
 
-- [Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5) — Fed Policy
  > Fed holds interest rates steady as inflation hits 3-year high ABC News - Breaking News, Latest News and Videos
-- [Fed holds interest rates steady in 1st move since Iran war spiked oil prices - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMilAFBVV95cUxOWVgwU0l2bjYwREJ2NE9WVC1ObnpJa3Qxa2syS0lmUXphVm8zTWpnYVJ5NXpFZmxWYUZlVXpmc3ZFQzk2ZnZlYjNSUHRPb3F1emZhVDdPNEMxak1mM2wzOEZtYnA5dklfUFlfOUdVRU5lSXNmTlhqMy1pUElaMjNBTEFJbV9IRHNkRGt1NHJKVDVFd1Za0gGaAUFVX3lxTE9IOWFDX2MzMVhjUXl2VE1oTGNTTlowMmxkMUZnNEQ1TzhKemJ3TmlSTElmdzVPQ3VmR2E3OGdNLXN2dVBHQ2xiLXl0WWJfdjBUQktuSnNwbTNQV3puQzBJTUVZS295S2lHYU9iQVpFd05FQkw4WmhmZ2EyU3dCUWt0bHNCUy1xX0pHME5ZbVBlZ1RXSkxnSVZ1TWc?oc=5) — Fed Policy
  > Fed holds interest rates steady in 1st move since Iran war spiked oil prices ABC News - Breaking News, Latest News and Videos
 - [美, 금리인상 속도조절 관측에도… “韓 포함 금리 상승 시간문제”](https://news.google.com/rss/articles/CBMidkFVX3lxTE1wRnZ5a0twODBDR01pcDJVdzBKQUdkREUyTGthOGZ2MmxGRTJXbFVERUlwWlRPbXA4cFNEMTUydEJBTnF6VXdScHZRYWZjRVVRelQ2RmQxcS1oZE5aX3FzWFRCaU1mSkNrZGk4WFFfMzJRTkN6cFHSAWZBVV95cUxNWjQ2bW9UTXpIeEl1bUpsM19Jc1hWUDBUdi1jMWszUTFnSVpBdjF0THF6blc5VkdHSHJ3ekxBMlZ1dDFfTDlIeWZ5NTluU2FnRllsWExYWHFpeU1JbVptWGdQSjRGWVE?oc=5) — 한국은행 금리정책
  > 美, 금리인상 속도조절 관측에도… “韓 포함 금리 상승 시간문제” donga.com
@@ -109,7 +104,6 @@ Fed holds interest rates steady in 1st move since Iran war spiked oil prices ABC
 
 전체의 75%로 압도적 비중을 차지합니다. 주요 출처: 한국은행 금리정책(4건), Fed Policy(1건), 한국증시 수급(1건).
 
-- [Fed holds interest rates steady in 1st move since Iran war spiked oil prices - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMilAFBVV95cUxOWVgwU0l2bjYwREJ2NE9WVC1ObnpJa3Qxa2syS0lmUXphVm8zTWpnYVJ5NXpFZmxWYUZlVXpmc3ZFQzk2ZnZlYjNSUHRPb3F1emZhVDdPNEMxak1mM2wzOEZtYnA5dklfUFlfOUdVRU5lSXNmTlhqMy1pUElaMjNBTEFJbV9IRHNkRGt1NHJKVDVFd1Za0gGaAUFVX3lxTE9IOWFDX2MzMVhjUXl2VE1oTGNTTlowMmxkMUZnNEQ1TzhKemJ3TmlSTElmdzVPQ3VmR2E3OGdNLXN2dVBHQ2xiLXl0WWJfdjBUQktuSnNwbTNQV3puQzBJTUVZS295S2lHYU9iQVpFd05FQkw4WmhmZ2EyU3dCUWt0bHNCUy1xX0pHME5ZbVBlZ1RXSkxnSVZ1TWc?oc=5) — Fed Policy
  > Fed holds interest rates steady in 1st move since Iran war spiked oil prices ABC News - Breaking News, Latest News and Videos
 - [증시 프리즘\ "반도체·금융에 실탄 쏠렸다"…4분기 코스피 외국인·기관 비중 지형도](https://news.google.com/rss/articles/CBMicEFVX3lxTE9YRUcyU19xNks2eU1HR09rU2ZJdFRYZUZvNmZ4Qk1IYzcwa0xrc3Z6S1NVMjdVQlFuY3YxQkFfTjRSOEtTcGFCWlBGZUFTUHo1M21TY3BNUUVxZ2VWaVpSZXNSWHBOR0ZackllaHd3ZG0?oc=5) — 한국증시 수급
  > [증시 프리즘] "반도체·금융에 실탄 쏠렸다"…4분기 코스피 외국인·기관 비중 지형도 thefairnews.co.kr

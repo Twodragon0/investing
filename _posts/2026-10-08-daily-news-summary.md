@@ -19,7 +19,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 - 주요 테마: 💰 금리/유동성, 📋 정책/규제, 🔄 수급/심리
 - 암호화폐: 86건. 주요 수치: 비트코인 82,872달러. 대표 헤드라인: 코인.*
-- *OKX raises more, $500M+ in crypto longs liquidated after a late evening selloff, and Abstract calls it quits.*
 
 
 ## 종합 대시보드
@@ -66,7 +65,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 ### 🏦 거래소 (10건)
 
-*OKX raises more, $500M+ in crypto longs liquidated after a late evening selloff, and Abstract calls it quits.*
 
 ### 🔵 규제/정책 (12건)
 
@@ -74,7 +72,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 ## 거래소 공지사항
 
-**1. [Binance Has Completed the Stargate Finance (STG) Token Merge to LayerZero (ZRO).
 - **소셜:** 20건. 화제 키워드: 경제수석도 산업부 출신…'재경부 천하'에서 '산업부 전성시대'.
 - **우선순위:** P0 8건, P1 5건. 긴급: Set Protocol exploit: Rounding Error, MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control.
 
@@ -97,11 +94,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[Set Protocol exploit: Rounding Error](https://defillama.com/hacks#Set%20Protocol)**
-- **[MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control](https://defillama.com/hacks#MakerDAO%20ETH-A%20Liquidation%20Keeper%20Bot)**
-- **[FlashLoopAdapter exploit: Improper Access Control](https://defillama.com/hacks#FlashLoopAdapter)**
-- **[NEAR Intents exploit: Bridge Logic Flaw](https://defillama.com/hacks#NEAR%20Intents)**
-- **[SKYDAO exploit: Swap Logic Flaw](https://defillama.com/hacks#SKYDAO)**
 
 ## 교차자산 연관성 체크
 
@@ -146,11 +138,8 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 ## 거래소 공지사항
 
-**1. [Binance Has Completed the Stargate Finance (STG) Token Merge to LayerZero (ZRO)
 - [코스피, 외국인·기관 매도에 6900선 공방…삼성전자 실적 앞두고 경계감 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE8teFVwN0lpb2xlNmZsZmtFUXk3VGVPeUxpcUZWUDNVVDRQWF9HNVNMMjZMbnFiVGJfWHl3eUpBWGRLUF9SdnBlVTlJSXFISmtr?oc=5)
 - [마감시황\ 10/07 실적 경계감에 코스피 6,803.90(-1.98%) - 네이버 프리미엄콘텐츠](https://news.google.com/rss/articles/CBMikAFBVV95cUxNS3ZqcjExSnBfeDQxR2paOUY2d19uU3pkZGJybnBlOWRGaFRBRmg0NUxBYUdaTExTNGVBbk9xOWN4b09aRWI4cUI0a3BxUkdPZ1BhSlp5c3lsdVdydi1TdmVqTExjcDFPSXEtUEc4OWhVak1LQmJJRTJqZng1SGE5dTNSVXBneTRfUHcwT0FOOV8?oc=5)
-- [Q4 outlook joins the agenda for Radware (RDWR)'s October 28 earnings call. - Stock Titan](https://news.google.com/rss/articles/CBMiqwFBVV95cUxQa3Nkc3A2WnRiSEhGcHBvdHNwRGhLaXNFUHg4RnFvZ1FUQi1vT2I1MkZQTlphd3FEMEU5QTJsNFNxdVI3Tkt4NktRR1laSXd3cG0ydndtNXZJOXBZVTk3R3pSZGp4NnVKZ0RqaFV0em85RElKdzhXVzNwekRNYTNlSWNUNzNnOUl2aVBmeVdqd0FlaUhmc3c1OGhCdlRHdGNpaXhZSVNaNnVKSk0?oc=5)
-- [What are the FOMC meeting minutes and why do they rarely move markets? - investingLive](https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUG9hMjQ3YmFDb0F6M1dKcnoydFZsSXlYMDczZzIwSzNJclBlY3N3d2M0SlMyd0pTWjVPVnB1N1ZvenR0VEZXTVk5WlZsYS1pbEM0VDZTelVrd2NWSWEwQS1lekNoM2J3b0RLSlNPQm51aXBEVjBzcHRyLXczZ3BpZmtmdkF6bXpCZWM4aFByc0tSbWFGTGpGZ0o2M3VpOE84T010M09SYTEydw?oc=5)
 
 ---
 
@@ -173,18 +162,12 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 ## 거래소 공지사항
 
-**1. [Binance Has Completed the Stargate Finance (STG) Token Merge to LayerZero (ZRO)
-- Binance Will Add 4 bStocks Tokenized Securities as Collateral Asset - 2026-10-07
-- Binance Exchange Adds JPMorgan Chase (JPMB), Eli Lilly (LLYB), Securitize Corp (SECZB) and StablecoinX Inc (USDEB) bStocks Trading Pairs on Binance Spot/Convert - 2026-10-07
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/08/daily-crypto-news-digest/)
 
 ### 보안 리포트 (8건)
 
 **주요 보안 이슈:**
-- Set Protocol exploit: Rounding Error
-- MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-- FlashLoopAdapter exploit: Improper Access Control
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -207,8 +190,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 
 ## 주목할 소식
 
-- Update on the Collateral Ratio Under Cross Margin and Portfolio Margin
-- Fed’s minutes show no appetite for a series of interest-rate hikes
 
 ---
 
@@ -300,10 +281,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 ### 연관 뉴스 클러스터
 
 **해킹** (8건 연관)
-- Set Protocol exploit: Rounding Error
-- MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-- FlashLoopAdapter exploit: Improper Access Control
-- NEAR Intents exploit: Bridge Logic Flaw
 
 **AI(인공지능)** (6건 연관)
 - 코인.*
@@ -313,15 +290,9 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-08 - 시장 분석 뉴스 요�
 ### 🏦 거래소 (10건)
 
 *OKX raises more, $500M+ in crypto…
-- Binance Exchange Adds JPMorgan Chase (JPMB), Eli Lilly (LLYB), Securitize Corp…
-- Fed minutes could detail rate-hike decision, policy path
 - 코스피, 美 AI 강세에도 6,990선 하락 전환…외국인 매도 속 기관 매수 - 뉴스투데이
 
 **연준(Fed)** (4건 연관)
-- Fed’s minutes show no appetite for a series of interest-rate hikes
-- Most Fed Officials See Another Rate Hike This Year but Leave Timing Open
-- Fed Minutes Show Hawkish Unity Behind September Rate Hike
-- What are the FOMC meeting minutes and why do they rarely move markets? -…
 
 
 ---

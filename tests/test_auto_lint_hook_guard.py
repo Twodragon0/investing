@@ -38,6 +38,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -53,8 +54,22 @@ _HOOK = _REPO_ROOT / ".claude" / "hooks" / "auto-lint-python.sh"
 _UNFORMATTED = "x = {  'a' :1,'b':2 }\n"
 
 
+def _ruff_cmd() -> str:
+    which = shutil.which("ruff")
+    if which:
+        return which
+    venv_ruff = _REPO_ROOT / ".venv" / "bin" / "ruff"
+    if venv_ruff.is_file():
+        return str(venv_ruff)
+    return "ruff"
+
+
 def _run_hook(file_path: Path) -> subprocess.CompletedProcess[str]:
     payload = json.dumps({"tool_input": {"file_path": str(file_path)}})
+    env = os.environ.copy()
+    venv_bin = _REPO_ROOT / ".venv" / "bin"
+    if venv_bin.is_dir() and str(venv_bin) not in env.get("PATH", ""):
+        env["PATH"] = f"{venv_bin}:{env.get('PATH', '')}"
     return subprocess.run(
         ["bash", str(_HOOK)],
         input=payload,
@@ -63,12 +78,14 @@ def _run_hook(file_path: Path) -> subprocess.CompletedProcess[str]:
         cwd=_REPO_ROOT,
         timeout=60,
         check=False,
+        env=env,
     )
 
 
 @pytest.fixture
 def ruff_required() -> None:
-    if not shutil.which("ruff"):
+    venv_ruff = _REPO_ROOT / ".venv" / "bin" / "ruff"
+    if not (shutil.which("ruff") or venv_ruff.is_file()):
         pytest.fail("ruff 가 없다 — 이 가드를 skip 하면 포맷 계층 검증이 통째로 사라진다")
 
 
@@ -101,7 +118,7 @@ def test_check_fix_alone_would_not_have_formatted_this_input(tmp_path: Path, ruf
     target = tmp_path / "sample.py"
     target.write_text(_UNFORMATTED, encoding="utf-8")
 
-    subprocess.run(["ruff", "check", "--fix", str(target)], capture_output=True, cwd=_REPO_ROOT, check=False)
+    subprocess.run([_ruff_cmd(), "check", "--fix", str(target)], capture_output=True, cwd=_REPO_ROOT, check=False)
 
     assert target.read_text(encoding="utf-8") == _UNFORMATTED, (
         "입력이 `check --fix` 만으로 바뀐다 — 위 테스트가 `format` 유무를 구별하지 못한다. "

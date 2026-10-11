@@ -82,11 +82,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-05 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[FlashLoopAdapter exploit: Improper Access Control](https://defillama.com/hacks#FlashLoopAdapter)**
-- **[NEAR Intents exploit: Bridge Logic Flaw](https://defillama.com/hacks#NEAR%20Intents)**
-- **[SKYDAO exploit: Swap Logic Flaw](https://defillama.com/hacks#SKYDAO)**
-- **[Fake GIWA Bridge exploit: Impersonation Scam](https://defillama.com/hacks#Fake%20GIWA%20Bridge)**
-- **[Duelbits exploit: Hot Wallet Key Compromised](https://defillama.com/hacks#Duelbits)**
 
 ## 교차자산 연관성 체크
 
@@ -112,9 +107,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-05 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (46건)
 
 **대표 헤드라인:**
-- Updates on International Virtual Asset Transfer Procedures in Brazil
-- Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03
-- Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/05/daily-crypto-news-digest/)
 
@@ -137,9 +129,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-05 - 시장 분석 뉴스 요�
 ### 보안 리포트 (12건)
 
 **주요 보안 이슈:**
-- Here’s what happened in crypto today
-- NEAR Intents recovers entire stolen $3.8M after ultimatum to exploiter
-- FlashLoopAdapter exploit: Improper Access Control
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -153,7 +142,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-05 - 시장 분석 뉴스 요�
 
 ## 주목할 소식
 
-- Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03
 
 ---
 
@@ -240,15 +228,9 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-05 - 시장 분석 뉴스 요�
 ### 연관 뉴스 클러스터
 
 **해킹** (11건 연관)
-- NEAR Intents recovers entire stolen $3.8M after ultimatum to exploiter
-- FlashLoopAdapter exploit: Improper Access Control
-- NEAR Intents exploit: Bridge Logic Flaw
 - SKYDAO exploit: Swap Logic Flaw
 
 **바이낸스** (3건 연관)
-- Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back
-- Binance Alpha Trading Competition: Trade Concrete (CT) and Share $200K Worth…
-- Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03
 
 
 ---

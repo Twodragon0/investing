@@ -81,11 +81,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-06 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[FlashLoopAdapter exploit: Improper Access Control](https://defillama.com/hacks#FlashLoopAdapter)**
-- **[NEAR Intents exploit: Bridge Logic Flaw](https://defillama.com/hacks#NEAR%20Intents)**
-- **[SKYDAO exploit: Swap Logic Flaw](https://defillama.com/hacks#SKYDAO)**
-- **[Fake GIWA Bridge exploit: Impersonation Scam](https://defillama.com/hacks#Fake%20GIWA%20Bridge)**
-- **[Duelbits exploit: Hot Wallet Key Compromised](https://defillama.com/hacks#Duelbits)**
 
 ## 교차자산 연관성 체크
 
@@ -121,9 +116,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-06 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (50건)
 
 **대표 헤드라인:**
-- Binance Pay Exclusive: Get up to 20% Off Mobile Top-Ups in Selected Regions!
-- Binance Lite Loan Promotion Extended: Enjoy Simple Borrowing with 50% Off Service Fee!
-- Updates on International Virtual Asset Transfer Procedures in Brazil
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/06/daily-crypto-news-digest/)
 
@@ -139,9 +131,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-06 - 시장 분석 뉴스 요�
 ### 보안 리포트 (9건)
 
 **주요 보안 이슈:**
-- Former SEC boss made AI Czar, Bitcoin may hit $600K this cycle: Hodler’s Digest
-- FlashLoopAdapter exploit: Improper Access Control
-- NEAR Intents exploit: Bridge Logic Flaw
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -156,7 +145,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-06 - 시장 분석 뉴스 요�
 **화제 토픽:**
 - 세제·집값·대미투자…경제 국감, 이재명 정부 정책 검증대
 - 이재명 정부 2년 차 국감 개막…여야 ‘정책 성적표’ 격돌 - 일간투데이
-- Trump administration proposes new crypto rules - The Hill
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/10/06/daily-social-media-digest/)
 
@@ -258,20 +246,13 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-06 - 시장 분석 뉴스 요�
 ### 연관 뉴스 클러스터
 
 **해킹** (8건 연관)
-- FlashLoopAdapter exploit: Improper Access Control
-- NEAR Intents exploit: Bridge Logic Flaw
 - SKYDAO exploit: Swap Logic Flaw
-- Fake GIWA Bridge exploit: Impersonation Scam
 
 **금리** (6건 연관)
-- Federal Reserve interest rate decision looms as inflation worries persist
 - 연준이 올해 이자율을 인상할까요? 분열된 경제학자들의 의견 - ABC 뉴스 - 속보, 최신 뉴스 및 비디오
-- How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic
 - “영끌했는데 매달 이자 어쩌죠”.치솟는 주담대 금리
 
 **AI(인공지능)** (2건 연관)
-- Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back
-- Former SEC boss made AI Czar, Bitcoin may hit $600K this cycle: Hodler’s Digest
 
 
 ---

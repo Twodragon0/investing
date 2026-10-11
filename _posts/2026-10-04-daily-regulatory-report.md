@@ -53,40 +53,22 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-04 - 규제 뉴스 요�
 
 ## 1. 미국 규제 동향
 
-**1. [SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws](https://news.google.com/rss/articles/CBMi4wFBVV95cUxQLU1Rd2lGandMMG1FamN3bzdnaExyaGFqMWswX2pVTWJXbl9aM3lNLVA5WWRvMVZ6cXRsdXJZYklqMUtsTHZOSXBGSGZJa1VaVTNqNjdqallzNTVjOGx0MWdrRTA4UzM3YW4zbDV3OUZUemV4XzhiVkNJNVhJTEdvU2VXbGFPcnUyZ1dnSUl3eS15T3pxbFJwa3FjRGRTV3BYLS1mLUpmWFdYeTV3REk0cUV6UE42X0lZZklYWkZWcUE4cDl4TjRFTHdEdHB5TUJlcVh3a0tmcC1uNmtSa2RuV1hzSQ?oc=5)**
-SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**2. [Statement on Proposal to Address the Custody of Crypto Assets Under the Investment Advisers Act and the Investment Company Act](https://news.google.com/rss/articles/CBMihgJBVV95cUxPSmEtOWdXN1FBWTJyRkNtLVFsc3BOcUU2elBiUDRxeTdxaERTb1FvWlpjemdldkxrU3RHYTJEODU0REdIZnZlNHZMLW5DdzhyUFgtejlaWVZlcVFZRWVBZFR0RkVaT3dPNW1HTDdZVjNMR1VvZUI1WnY0YzNwdUpKbmVuQjR4cVZyNFQ2eG1vNWdXcjNDU3JmOXd1SXo1TnhrS2MwR2t3VWVKaThXUW9MU2hPbHp1WldDM2JMMHBudWdPYWFmVXFQeUtHTWFJazd5WjZNU3FlZ25kVG9qU0lwa1RIbDl0YThvRmpNTnpkTHZRRkcwWDF6Y2RfcmQxQjY4cFRBd2ZR?oc=5)**
-Statement on Proposal to Address the Custody of Crypto Assets Under the Investment Advisers Act and the Investment Compa.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**3. [Roller Coaster Ride: Statement on Proposed Adviser and Regulated Fund Custody Rules; Crypto Custody Rules](https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQVFmV0VDaFM1ZDFNcVdMVDcyb3BGMmZpUUk1RTJBN0RvOHJzeGN0R19oWnJLNWs3Q2R6anJONU9Ld3NBbFhlYnVqMzRJQjFoaEFIbXVxQ29mU0U3RFJ4Y21iUEVVcUlZY3hjckJUS3pyRU1yLVdfczZFbS04ZXZWNTRBQ1VJeHNrUTdIX0FqU21IQm5HVldVaXR4T2FfNGRIbkIyMWkzZnJVZw?oc=5)**
-Roller Coaster Ride: Statement on Proposed Adviser and Regulated Fund Custody Rules; Crypto Custody Rules.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**4. [Proposed rule: Adviser and Regulated Fund Custody Rules; Crypto Custody Rules](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBxODVWbEg3UWdLZ3NNVk1ac0toMWVOYjJNNTV5VEg0WlJRV3prRW84Y2tScjhiYmdQNFhMc1RBMW82dkNhTFlhVzBuaTB1dGxzb214ZjZwOS0tQkVSdXVMajVvN01EMFNB?oc=5)**
-Proposed rule: Adviser and Regulated Fund Custody Rules; Crypto Custody Rules.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**5. [Statement on Departure of Commissioner Hester Peirce](https://news.google.com/rss/articles/CBMinwFBVV95cUxQUWJJSkx6bXRlQVVCVlNLaHVPcWE5eUNzRE94bzZmMlRXakJpaFF2MFh6aTR1V2I4VGtseWtnQ0FMM0FXWFd0LUVuU3hOMFR1UUdTQUpqcy1sR045eUJWS1pHRjR6Wl9WZzM4UVg5WFllZ0I0VFRXazRhOXltdmNpS1p4N2FpcDNjRkk0dmJtZXNpOEhIN0hJbW5BbFJSWDQ?oc=5)**
-Statement on Departure of Commissioner Hester Peirce.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**6. [Statement on Proposed Amendments to the Custody Rules](https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZE5nY2wwR0hTNW5mRGVUNnJZTko5RjFqcUY4U3BDTnJ5ZlYzR3NJaGdON0E4clJDa0w5cDdLbDB5UE5Zenh5M0pSQTB6RnptbEJWbld4b1liT3VQenFVNC12Slg4dTlEVHNOcWdBVDBLR0N3aXMxRVprQTRONEthelY4akxJamFHT2hEREQtcDNOTDZZT3BzOVVCLXFrRi1rWXAwOThzVGk?oc=5)**
-Statement on Proposed Amendments to the Custody Rules.
 <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
 
-**7. [Federal Reserve Board announces approval of application by Fleur Capital Corporation](https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm)**
-The Federal Reserve Board on Friday announced its approval of the application by Fleur Capital Corporation to acquire Simmesport State Bank, both of Simmesport
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
-**8. [Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm)**
-Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regula.
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
-**9. [Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm)**
-The Federal Reserve Board on Friday announced the execution of the following enforcement action listed below: Ontario Bancorporation, Inc., Ontario, Wisconsin
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
 ---
@@ -109,28 +91,18 @@ The Federal Reserve Board on Friday announced the execution of the following enf
 
 ## 3. 아시아 규제 동향
 
-**1. [Press Conference by KATAYAMA Satsuki, Minister of Finance and Minister of State for Financial Services (September 15, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260915.html)**
-(Tuesday, September 15, 2026, 16:42 am to 16:57 am) We plan to publish today the FSA Strategic Priorities, which set out the policy direction and key priorities for financial administration over the coming year.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
-**2. [Press Conference by KATAYAMA Satsuki, Minister of Finance and Minister of State for Financial Services (September 18, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260918.html)**
-Following yesterday’s inauguration of the Reshuffled Second Takaichi Cabinet, I have been reappointed as Minister of Finance, Minister of State for Financial Services, and Minister in charge of
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 ---
 
 ## 4. 유럽 규제 동향
 
-**1. [Esma seeks MiCA changes for emerging crypto services](https://news.google.com/rss/articles/CBMihAFBVV95cUxNbHR4TDRqSXpGWFptcnp2VzFUTWJUWE9Ja1JZSkx2ZnBwZ1dvMlJoeWtHa2ZpbXFiY3JucjdNVTlaYXBjMFd2N2VkYU00cTRwX0dnM3lMQkphbEZXaFNlZWI4ZkxFdk5TOWdkNXpBdlFVY1Jqb1V1TFpfSHBVaXJQOVNqZlU?oc=5)**
-Esma seeks MiCA changes for emerging crypto services.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**2. [ESMA calls for MiCA changes in response to European Commission consultation - The TRADE](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa1F1RkZHWGJuQXEzQnA1ejhMNFBGdkpQMXhYWGRnRzdLeFJDMndmTngzNE5Id1Nvb1Z3SVFJNkhvaWhuLUdrWHZhMjV0NlRaaEVndDRCU3pGb1p0S1VDRDJLY01haFVXRUFHV3ByWHVHUTlXeXVRX2g5bFNDamFwS19QWVRSS05wOWF6VHZ4ZHNOZlZmZGxMUDFCM0pOaXRLWHFqUC1zbEc?oc=5)**
-ESMA calls for MiCA changes in response to European Commission consultation - The TRADE.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**3. [ESMA Calls for New Powers to Freeze Crypto Assets and Block Fraud Sites in MiCA Review](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNVTJ3TW5kYmVSckdSM1h0dU1hU0V0ZjhsdHd4RWk3TDZGM3U5WXBLMGxqYUdmSy1EQm1UM1N4ZlFOS1plcndfUDFxRnJDTW5sbGhiT1FVUWxHdU9mUUVMZHdJNmhoRlBYVVp3X3dEMkdNaXFfWFdpbHk4bHQtQjFwNUVQMTRtM1Q4?oc=5)**
-ESMA Calls for New Powers to Freeze Crypto Assets and Block Fraud Sites in MiCA Review.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
 ---
@@ -143,13 +115,10 @@ ESMA Calls for New Powers to Freeze Crypto Assets and Block Fraud Sites in MiCA 
 전체의 47%로 높은 비중을 보입니다. 주요 출처: EU ESMA(3건), Federal Reserve(2건), 한국 금융규제 뉴스(2건). 관련 지역: 미국, 유럽, 한국.
 
 **주요 동향:**
-- [SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws](https://news.google.com/rss/articles/CBMi4wFBVV95cUxQLU1Rd2lGandMMG1FamN3bzdnaExyaGFqMWswX2pVTWJXbl9aM3lNLVA5WWRvMVZ6cXRsdXJZYklqMUtsTHZOSXBGSGZJa1VaVTNqNjdqallzNTVjOGx0MWdrRTA4UzM3YW4zbDV3OUZUemV4XzhiVkNJNVhJTEdvU2VXbGFPcnUyZ1dnSUl3eS15T3pxbFJwa3FjRGRTV3BYLS1mLUpmWFdYeTV3REk0cUV6UE42X0lZZklYWkZWcUE4cDl4TjRFTHdEdHB5TUJlcVh3a0tmcC1uNmtSa2RuV1hzSQ?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
  > SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities.
-- [Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm)
  <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
  > Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize.
-- [Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm)
  <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
  > The Federal Reserve Board on Friday announced the execution of the following enforcement action listed below: Ontario.
 
@@ -167,13 +136,10 @@ ESMA Calls for New Powers to Freeze Crypto Assets and Block Fraud Sites in MiCA 
 전체의 24%로 수치입니다. 주요 출처: Japan FSA(2건), SEC (Google News)(1건), Federal Reserve(1건). 관련 지역: 미국, 아시아.
 
 **주요 동향:**
-- [SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws](https://news.google.com/rss/articles/CBMi4wFBVV95cUxQLU1Rd2lGandMMG1FamN3bzdnaExyaGFqMWswX2pVTWJXbl9aM3lNLVA5WWRvMVZ6cXRsdXJZYklqMUtsTHZOSXBGSGZJa1VaVTNqNjdqallzNTVjOGx0MWdrRTA4UzM3YW4zbDV3OUZUemV4XzhiVkNJNVhJTEdvU2VXbGFPcnUyZ1dnSUl3eS15T3pxbFJwa3FjRGRTV3BYLS1mLUpmWFdYeTV3REk0cUV6UE42X0lZZklYWkZWcUE4cDl4TjRFTHdEdHB5TUJlcVh3a0tmcC1uNmtSa2RuV1hzSQ?oc=5)
  <span class="source-tag" data-source-type="regulator">SEC (Google News)</span>
  > SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities.
-- [Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm)
  <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
  > Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize.
-- [Press Conference by KATAYAMA Satsuki, Minister of Finance and Minister of State for Financial Services (September 15, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260915.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
  > (Tuesday, September 15, 2026, 16:42 am to 16:57 am) We plan to publish today the FSA Strategic Priorities, which set.
 
@@ -182,7 +148,6 @@ ESMA Calls for New Powers to Freeze Crypto Assets and Block Fraud Sites in MiCA 
 주요 출처: Japan FSA(1건).
 
 **주요 동향:**
-- [Press Conference by KATAYAMA Satsuki, Minister of Finance and Minister of State for Financial Services (September 18, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260918.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
  > Following yesterday’s inauguration of the Reshuffled Second Takaichi Cabinet, I have been reappointed as Minister of.
 
@@ -197,7 +162,6 @@ ESMA Calls for New Powers to Freeze Crypto Assets and Block Fraud Sites in MiCA 
 - ["가상자산 디파이·OTC, 접속·거래 제한 조치 필요" [금융위·금융연 용역보고서③ - digitalasset.works](https://news.google.com/rss/articles/CBMickFVX3lxTE1FeWJQMHZ0YWN5OG12Tlozd1M0TDNtOWYtN0pFYXJ5Y3BoZlZwWnlHb19HTE9NOC1EOVFabXBUeUpxMnFOdDZFeVhlNFdtVFNxOHVzaWM5MU5vSjkxRTZYbWpxSWF6c0xXcHNWcExobkkwdw?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > "가상자산 디파이·OTC, 접속·거래 제한 조치 필요" [금융위·금융연 용역보고서③].
-- [Press Conference by KATAYAMA Satsuki, Minister of Finance and Minister of State for Financial Services (September 18, 2026)](https://www.fsa.go.jp/en/conference/minister/2026/20260918.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
  > Following yesterday’s inauguration of the Reshuffled Second Takaichi Cabinet, I have been reappointed as Minister of.
 

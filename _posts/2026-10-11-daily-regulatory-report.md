@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-10-11.png"
 permalink: "/regulatory-news/2026/10/11/daily-regulatory-report/"
-description: "글로벌 규제 동향 9건 수집. 주요 테마: 규제/정책, DeFi, 거래소. 미국 핵심: CFTC Seeks Public Comment on Notice of Proposed Rulemaking Concerning"
-excerpt: "글로벌 규제 동향 9건 수집. 주요 테마: 규제/정책, DeFi, 거래소. 미국 핵심: CFTC Seeks Public Comment on Notice of Proposed…"
+description: "글로벌 규제 동향 9건 수집. 주요 테마: 규제/정책, DeFi, 거래소. 미국·유럽 규제 기관 동향 분석 리포트."
+excerpt: "글로벌 규제 동향 9건 수집. 주요 테마: 규제/정책, DeFi, 거래소. 미국·유럽 규제 기관 동향 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-10-11 - 규제 뉴스 요약 이미지"
 ---
 
@@ -52,15 +52,12 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-11 - 규제 뉴스 요�
 ## 1. 미국 규제 동향
 
 **1. [CFTC Seeks Public Comment on Notice of Proposed Rulemaking Concerning the Inclusion of Certain Event Contracts in the Definition of Swap](https://www.cftc.gov/PressRoom/PressReleases/9310-26)**
-The CFTC today published a Notice of Proposed Rulemaking that proposes providing additional market clarity by expressly further defining the term “swap” to include event contracts,
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 **2. [CFTC Issues Interim Final Rule Excluding Certain Activity from the Definition of Swap](https://www.cftc.gov/PressRoom/PressReleases/9309-26)**
-The CFTC today published an Interim Final Rule that codifies the CFTC’s longstanding position that casino-style gambling products, including wagers placed on sportsbooks and casino games, are
 <span class="source-tag" data-source-type="regulator">CFTC Press Releases</span>
 
 **3. [Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families](https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm)**
-The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insi
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
 ---
@@ -80,7 +77,6 @@ The Federal Reserve Board on Friday released the results of the 2025 Survey of C
 ## 3. 아시아 규제 동향
 
 **1. [Others,Twenty-fifth Meeting of the "Council for Cooperation on Financial Stability"](https://www.fsa.go.jp/en/news/2026/20261009nichiginrenrakukai.html)**
-On October 9, 2026, the Financial Services Agency (FSA) and the Bank of Japan (BOJ) held the twenty-fifth meeting of the "Council for Cooperation on Financial Stability," which comprises senior
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
 ---
@@ -88,15 +84,12 @@ On October 9, 2026, the Financial Services Agency (FSA) and the Bank of Japan (B
 ## 4. 유럽 규제 동향
 
 **1. [ESMA Stresses Stablecoins in Scope of MiCA - The Full FX](https://news.google.com/rss/articles/CBMic0FVX3lxTE1TUUdmVWpPMVVpTklUYTczV0Fyek4zbWhTcTMwMEQyYV9kdG9uMHMxS2FpSUF0RlhfaUItcjc2T2xDcjBNejEzNkFNalk2MGMya3ZJdHZyYjQzZGZqakVoeGhZUUF3NHVqbjNCQjFpQ1pKZGs?oc=5)**
-ESMA Stresses Stablecoins in Scope of MiCA - The Full FX.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
 **2. [EU Securities Regulator Wants Crypto Platforms to Wind Down Non-MiCA Stablecoin Services](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR1BtdkQ3eG0wcnNIdUVEMU9rR3dkOXFqX2Z6U0xVejdQYWU1azRfbW9iMzBvNThkTmJCdVV0a0dsa2ZPcnBUQ2NQWGc0Nm9Ea0RoQXFDdW96N2tFdV9VNDBoNFJ4Wk5Xa2ZyVlc1RG9FMDQzaC1sVUY0bm10aVdXeVYtNnctT3EzRERwRVh4ck5OcW9PSlhtMEp3eWxORVZOU3JUcHV1SnhfTmtTc0hRaHJfNzBQeTl1?oc=5)**
-EU Securities Regulator Wants Crypto Platforms to Wind Down Non-MiCA Stablecoin Services.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
 **3. [Podcast Plus: Crypto under the FCA – Special edition - Authorisation - Global Regulation Tomorrow](https://news.google.com/rss/articles/CBMizwFBVV95cUxORU82MlBEQ0JyTHBYUkw4Qk55NFVwbmIwS21JaklxbnAybmRvODBXeUlHTVptTjluQ2tGWFlUY18zRHZ6Zlh2ckpUZnVYZ0FTRGlaVmdXOHlqbFZBam84Q3padWlrVkpWT2R4NFZXeWtpanloUG4tLWprR2ZiV2Znd3ZVMlBzeU94S1BPNUhIc3phUUdXVER0eVlUcjloSFd6RGs3SVpMeWsxejhXQTVPbmZWZWJqRU4yS2hRU1RoTi1VTHZiS0lSN3hKTi02Wmc?oc=5)**
-Podcast Plus: Crypto under the FCA – Special edition - Authorisation - Global Regulation Tomorrow.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 ---

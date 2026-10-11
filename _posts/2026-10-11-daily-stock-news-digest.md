@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- *S&P 500, Nasdaq end lower as crude prices jump, chip stocks weigh Reuters Stock market today: S&P 500, Nasdaq fall.*
 **긴급**: AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says - Insurance Journal 
 총 146건의 뉴스 중 P1 주요 이슈도 26건 확인됩니다.
 
@@ -50,13 +49,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 ### 긴급 이슈
 
-- AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says - Insurance Journal
 
 ### 주요 이슈
 
 - 삼전닉스 대신 방산·반도체 테마형으로…변화하는 레버리지 ETF 판도 - 매일경제 마켓
-- Stock market today: Dow, S&P 500, Nasdaq rally to cap volatile week as earnings
-- Futures: Market Trends Higher With These Big Earnings Due - Investor's Business
 - 외 23건
 
 ### 투자자 체크포인트
@@ -134,7 +130,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 ### 📈 가격/시장 (19건)
 
-*S&P 500, Nasdaq end lower as crude prices jump, chip stocks weigh Reuters Stock market today: S&P 500, Nasdaq fall.*
 
 
 <div class="news-card-item news-sev-high">
@@ -233,7 +228,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (8건)
 
-*Ukraine President Volodymyr Zelenskyy said in a searing statement that the U.S.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -281,7 +275,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 
 ### 🟠 비트코인 (5건)
 
-*Wall Street has continued to blur the lines between investing and gambling with one recently launched.*
 
 
 <div class="news-card-item news-sev-medium">

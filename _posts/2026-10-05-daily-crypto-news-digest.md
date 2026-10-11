@@ -152,7 +152,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 
 ### 🔵 규제/정책 (11건)
 
-*President Trump named a new "Super Intelligence Force" to coordinate federal AI policy, with Director of National.*
 
 
 <div class="news-card-item news-sev-high">
@@ -250,7 +249,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 
 ### 🤖 AI/기술 (4건)
 
-*The YouTuber says OpenAI suspended his account twice while he trained a small, uncensored model built to run on your.*
 
 
 <div class="news-card-item news-sev-high">
@@ -295,11 +293,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 
 ## 거래소 공지사항
 
-**1. [Updates on International Virtual Asset Transfer Procedures in Brazil](https://www.binance.com/en/support/announcement/detail/21b54c9e5d1d44268cd2607aba8cd3a6)**
 Updates on International Virtual Asset Transfer Procedures in Brazil. Updates, International 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**2. [Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03](https://www.binance.com/en/support/announcement/detail/7b65382a718f45a4979035bfdb0e6115)**
 Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03. Binance, Support 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
@@ -308,9 +304,6 @@ Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03. 
 
 시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.
 
-- [Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back](https://www.binance.com/en/support/announcement/detail/271b588ed6e64723a3e05399310d61b2) (Binance)
-- [PK Exclusive: Trading Rush - Trade, Invite and Unlock Rewards](https://www.binance.com/en/support/announcement/detail/e0b21949852e4888949d009effcabda5) (Binance)
-- [Binance Alpha Trading Competition: Trade Concrete (CT) and Share $200K Worth of Rewards](https://www.binance.com/en/support/announcement/detail/a9a21d0533bf40158b3ec8a011f96ad3) (Binance)
 
 ## 오늘의 인사이트
 

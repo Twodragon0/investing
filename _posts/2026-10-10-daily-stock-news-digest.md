@@ -39,7 +39,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- *Trump tried to fire Cook, a nominee of former President Joe Biden, but the Supreme Court blocked his first attempt.*
 
 ## 테마별 주요 뉴스
 
@@ -149,7 +148,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 
 ### 📊 매크로/금리 (11건)
 
-*Trump tried to fire Cook, a nominee of former President Joe Biden, but the Supreme Court blocked his first attempt.*
 
 
 <div class="news-card-item news-sev-medium">

@@ -64,20 +64,12 @@ image_alt: "소셜 미디어 동향 - 2026-10-08 - 소셜 미디어 뉴스 요�
 코스피, 장 초반 7030선 상승…외국인·기관 동반 매수 블루밍비트
 <span class="source-tag" data-source-type="default">한국증시 수급</span>
 
-**7. [Fed minutes could detail rate-hike decision, policy path](https://news.google.com/rss/articles/CBMiogFBVV95cUxPaFdleVVLSGdCQUlSODJ0bVFmdlh3cl9WZFFrUG5oUHhxdGNTMUlKUW1QaDBfVXAwd2FLaE0yYk9nb1lNcGY2Z0twTXNweEtEV203X09TTUR3ai1fellVelpWUHlEWWRUYW9oVTByX0ttLXl5b1I0ZjRyQm9ZVFBldFVLR0Z3UVRScGI2b2NuVC1pblU3dzJtd1JnNHY0M1Y0SlE?oc=5)**
-Fed minutes could detail rate-hike decision, policy path Reuters
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**8. [Fed’s minutes show no appetite for a series of interest-rate hikes](https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaF9QQWc3MVFwTXJjNGdBRjd0NUZ6aExkdFpqRkxBSThxMUZteXNiSWJDak1qdTdwRXBkNkdQdDRfekQzN243ODFqNUhBQllGV0pQS3pWY090WThXMTVzZmFnc3pBbENCMGJLaVRXSF9zRUZtZ2dzZE0zelF5dzBadldsZm51dVNVaVpHQTNvVHA3Q2wzQWFmemJIOEs1RzZmQUp5N1hKZzJ1Umc?oc=5)**
-Fed’s minutes show no appetite for a series of interest-rate hikes MarketWatch
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**9. [Most Fed Officials See Another Rate Hike This Year but Leave Timing Open](https://news.google.com/rss/articles/CBMifkFVX3lxTE12YldKeENTSzMzU0hTU0h2dnFJWWU5RTNBU3daWlZObEd2SjRNWVVOTVBHdFp0QnlsNTBBVGxKZV9MTHR0TE5oTjNraHprUmU0cWVENERBdkx2aHNQX2dYTXUxdjJITmZVX0VlOHFuUzdhNjBob3dCY3RxcjZMZw?oc=5)**
-Most Fed Officials See Another Rate Hike This Year but Leave Timing Open Barron's
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**10. [Fed Minutes Show Hawkish Unity Behind September Rate Hike](https://news.google.com/rss/articles/CBMirAFBVV95cUxNc2dJM2Q2bTVvQVNpNUNzSTgzNHJCbWc3Ync3aXEyYmdSVHo1b1JZNHB1UXdGYVY5YWpPTHpDdWtQYjdtbnZOa1k0SzVIeV9SS0ljelRxbUdIWXB5NHBtdk5lUDM1ZWQyUHlNSjFlbVh6Q1lHbm9jdUJCRllMZXdnVWluOHRwV2x4WUdZdHBkU2NuY3BJNWtYS1puYWVtTTQySDR1QXJEaGJrTng2?oc=5)**
-Fed Minutes Show Hawkish Unity Behind September Rate Hike Bloomberg.com
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 
@@ -90,11 +82,8 @@ Fed Minutes Show Hawkish Unity Behind September Rate Hike Bloomberg.com
 
 전체의 60%로 압도적 비중을 차지합니다. 주요 출처: Fed Policy(7건), 한국은행 금리정책(5건).
 
-- [Fed minutes could detail rate-hike decision, policy path](https://news.google.com/rss/articles/CBMiogFBVV95cUxPaFdleVVLSGdCQUlSODJ0bVFmdlh3cl9WZFFrUG5oUHhxdGNTMUlKUW1QaDBfVXAwd2FLaE0yYk9nb1lNcGY2Z0twTXNweEtEV203X09TTUR3ai1fellVelpWUHlEWWRUYW9oVTByX0ttLXl5b1I0ZjRyQm9ZVFBldFVLR0Z3UVRScGI2b2NuVC1pblU3dzJtd1JnNHY0M1Y0SlE?oc=5) — Fed Policy
  > Fed minutes could detail rate-hike decision, policy path Reuters
-- [Fed’s minutes show no appetite for a series of interest-rate hikes](https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaF9QQWc3MVFwTXJjNGdBRjd0NUZ6aExkdFpqRkxBSThxMUZteXNiSWJDak1qdTdwRXBkNkdQdDRfekQzN243ODFqNUhBQllGV0pQS3pWY090WThXMTVzZmFnc3pBbENCMGJLaVRXSF9zRUZtZ2dzZE0zelF5dzBadldsZm51dVNVaVpHQTNvVHA3Q2wzQWFmemJIOEs1RzZmQUp5N1hKZzJ1Umc?oc=5) — Fed Policy
  > Fed’s minutes show no appetite for a series of interest-rate hikes MarketWatch
-- [Most Fed Officials See Another Rate Hike This Year but Leave Timing Open](https://news.google.com/rss/articles/CBMifkFVX3lxTE12YldKeENTSzMzU0hTU0h2dnFJWWU5RTNBU3daWlZObEd2SjRNWVVOTVBHdFp0QnlsNTBBVGxKZV9MTHR0TE5oTjNraHprUmU0cWVENERBdkx2aHNQX2dYTXUxdjJITmZVX0VlOHFuUzdhNjBob3dCY3RxcjZMZw?oc=5) — Fed Policy
  > Most Fed Officials See Another Rate Hike This Year but Leave Timing Open Barron's
 
 ### 📈 가격/시장 (11건)
@@ -114,9 +103,7 @@ Fed Minutes Show Hawkish Unity Behind September Rate Hike Bloomberg.com
 
 - [2026국감 국정감사 개막…與 "민생 정책 작동 점검" 野 "이재명 실정 묻겠다"](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxamhYUFF4NHNPYmFVQ3ZLSXA2M0xabHMwbEhlbGo2MGNRaUFGd2pUR3FDZXpYV0hRSE1pYTdidS1UVGljT1JsbXd2XzhHX2l0ZE5qaWdGZFBvekEyZHdxNQ?oc=5) — 이재명 경제정책
  > [2026국감] 국정감사 개막…與 "민생 정책 작동 점검" 野 "이재명 실정 묻겠다" 아시아경제
-- [Fed minutes could detail rate-hike decision, policy path](https://news.google.com/rss/articles/CBMiogFBVV95cUxPaFdleVVLSGdCQUlSODJ0bVFmdlh3cl9WZFFrUG5oUHhxdGNTMUlKUW1QaDBfVXAwd2FLaE0yYk9nb1lNcGY2Z0twTXNweEtEV203X09TTUR3ai1fellVelpWUHlEWWRUYW9oVTByX0ttLXl5b1I0ZjRyQm9ZVFBldFVLR0Z3UVRScGI2b2NuVC1pblU3dzJtd1JnNHY0M1Y0SlE?oc=5) — Fed Policy
  > Fed minutes could detail rate-hike decision, policy path Reuters
-- [U.S. Fed raises interest rates despite Trump: ‘Important shift’ Canadians must make as fixed mortgage rates respond - Yahoo! Finance Canada](https://news.google.com/rss/articles/CBMiggFBVV95cUxNbmNTa3hKeWx2RlpaLU1LZWNBVERHcVZ3SUYxS2NTeU0wSVlnb1JVSTI4ZFJ1WDhxLS1mdFVHdUZieU9TRGdueS1GY1VncXhDcGszNVB1a19hdjFTZjBqQ19OVU0tQlpiMWl3RlZLQ1FjQndGb2hEMVlrdkgxbnE4dzln?oc=5) — Fed Policy
  > U.S. Fed raises interest rates despite Trump: ‘Important shift’ Canadians must make as fixed mortgage rates respond Yahoo! Finance Canada
 
 

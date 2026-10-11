@@ -40,36 +40,20 @@ image_alt: "소셜 미디어 동향 - 2026-10-10 - 소셜 미디어 뉴스 요�
 
 ## 정치·경제 동향
 
-**1. [Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVkdZWUJTVWlqeFdIT2tOeU16X19ITlY3NVMtUWg0ZlNFLUZmZTJETHlmcElLYk03dkkwdndWRU5ZNmpva1JUeVpjVzdnMEQ4M2hVaWd6VVpfWmEyOHdKRXdRaUxXaU5ySk1pUF9acFpBazFzX25INmh5SDl4Sy1MTG52ZTNISWJXNWdYVWRVQnEwUU5HVzN2MmZ3ZXEzdEFnTkFsZGwyZld3WXZmSGQ1S2RfU2Jpc1RwbXRoakY0U1lyUWM?oc=5)**
-Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms CoinDesk
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**2. [Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market - The Bronx Daily](https://news.google.com/rss/articles/CBMirwFBVV95cUxPOUVpNU1fUTdpM1Nlb0ZXSVZ4VnFWaVN4VVV6aXBJb0lJVWZtRTk0WndneXZiTGQ1ZFpZeFZ4RDlVMTc0RF8ydGpIZ1VFT0xFRi1hS1R1aFFsMHdLNGRyQWEtXzhMelkySjlNQV8wdlo3R1dfSVBCb1pldUhua0dHanlYYUppWWlKdElEVGlaU2pMdjMxWkNqSnYzd19rUWVqSDlEOW53NTFQSUdxT0FJ?oc=5)**
-Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market The Bronx Daily
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**3. [Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops - CoinDesk](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPb1F0MEZKcDk1WXdCUFNCWUtXYURISnczS2xMQ3phYUJJcUozOUN5eExTR25aWXdLd2ZWMTd3cTJLYmctM1FFRHNfLUFFZndPa05JLWsyd0FmSFhncURpWFNCMldrWVZhclpyT1dCNHdvLWhFYWR0dS0zejVDT1FGSFBMUTl2bkZHSGFPeWtjZWJHWVI1NU9rVWpWVkNJWGY4bzVxNGVtMjg?oc=5)**
-Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops CoinDesk
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**4. [Trump Rules Out Diesel Export Ban—Crypto Punters Weigh Odds of One Before 2026 Ends](https://news.google.com/rss/articles/CBMivAFBVV95cUxOZTFMU1VwdU1waGRoclRNYXMtZ2VJTklYT3B4U2hMNy1PVEl5d3pKRHdlanpkVG5OUldiOE1rOWpyeEw2dzZzYUZIMzAwZFlsdF9NVkYwMXpUNVpfY2lqV203YUpxSWh4VjlrYWJsaElzT193WDlfd2NUeUdwcXRYTHdvNUxaR2xhcksybXlLN1RKeko4YkxmM3B6UGlXYlctQTl2Y0Z6a1FQTTBBTW1rWkt0empXS1BSTm5vOA?oc=5)**
-Trump Rules Out Diesel Export Ban—Crypto Punters Weigh Odds of One Before 2026 Ends Benzinga
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**5. [Bitcoin reclaims $81K as Trump rules out pre-midterm Iran strikes - Crypto News](https://news.google.com/rss/articles/CBMifkFVX3lxTE1ndVdaN3JEQmQtOEtOanlQa1lzUXF3eVdQZmJWdy1wU2NBUDVLY1RfT3FfNEJfdHprZXhKRzRpbWFDYVRTRHBCcENGNU93UXlKdHFlQnQ3a3NZb3JtczB4c21wclVpVjJCSVh1cU9JVHQ3UE5vTkotR1dnd04wQQ?oc=5)**
-Bitcoin reclaims $81K as Trump rules out pre-midterm Iran strikes Crypto News
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**6. [Fed Interest Rate Forecast for the Next 5 Years: 2026 to 2031 - Norada Real Estate Investments](https://news.google.com/rss/articles/CBMioAFBVV95cUxNVnFWOWJRSThWYmhuZmU3VWU2UVRiVUF1a3JQNGV2Z3NFXzRNTmoxRHFTVWFjYkJodnh3Z0RYeUFIWF9CeUdUWlNpMXEwZ0Z3S1RNRk1NNjRoWkFMaU9jMEdpdXpnbGFQNkQxUE8tNG9NZnI2dUJCSjNoUHhIZnB1Q0NTWjFudEhhSXViX2ZRU1hpSzhnWnlaZ2V1OGdBbWJh?oc=5)**
-Fed Interest Rate Forecast for the Next 5 Years: 2026 to 2031 Norada Real Estate Investments
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**7. [A Top Fed Official Casts Further Doubt on a Rate Rise This Month](https://news.google.com/rss/articles/CBMikwFBVV95cUxNckNMd0xCc1RMemJpSlNXQVBEeVFKUktQWmFwTlBZWTFrM19DWTA1d1dtN3djS0tSbTY3VzhWYlp2NEdpQ1RIdUthT2xGMVhPNmxqRXFyUEloVVNRQWZ6S3VQeHlZaklEbGh2SWRmckNONnZXaV81TjItOTAwZlBPakZsTzRoVHpMUDVEYlFpbTJraXM?oc=5)**
-A Top Fed Official Casts Further Doubt on a Rate Rise This Month The New York Times
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**8. [Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News - U.S. News & World Report](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOEhjMDU4NFJob2h1bXdWZUlrRE52N190X0FXTnpUQ3JYZU16dWNYYVhyOWdHTF9TZE50VXR0X0otWHlBdklleVJlNmh4aWdYWXBLYXF0QkM2MHZtSFpLTmM1Zl9KS1FkRF9uQms1SlF5Y19ScmZSbnFJbHhxZEx0NlVRSDlOYkpFblhCMkZHVUNzWGZtdkJuNGhuZjhPV0JYUGVWeXNmdjV6WlU?oc=5)**
-Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News U.S. News & World Report
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **9. [코스피, 외국인·기관 3.6조 매도.삼성전자 역대급 실적에도 2.62% 하락](https://news.google.com/rss/articles/CBMic0FVX3lxTFBtN2dSS1JOLVVZaDhwMy15MDdXbndMYmNPTkcwS2xzNHV5TTZ0OUJIeExaT2ZjT3NpUXR2eDc2cTFDdUY4OWw1VXA1azVlUlUtTWw1UDdUdnRpVGVlLVNxSEFteHN1OVBXSVhQR2dzNmlBRUE?oc=5)**
@@ -90,22 +74,16 @@ Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News U.S. N
 
 전체의 52%로 압도적 비중을 차지합니다. 주요 출처: 이재명 경제정책(7건), Trump Crypto Policy(5건), 한국은행 금리정책(1건).
 
-- [Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVkdZWUJTVWlqeFdIT2tOeU16X19ITlY3NVMtUWg0ZlNFLUZmZTJETHlmcElLYk03dkkwdndWRU5ZNmpva1JUeVpjVzdnMEQ4M2hVaWd6VVpfWmEyOHdKRXdRaUxXaU5ySk1pUF9acFpBazFzX25INmh5SDl4Sy1MTG52ZTNISWJXNWdYVWRVQnEwUU5HVzN2MmZ3ZXEzdEFnTkFsZGwyZld3WXZmSGQ1S2RfU2Jpc1RwbXRoakY0U1lyUWM?oc=5) — Trump Crypto Policy
  > Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms CoinDesk
-- [Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market - The Bronx Daily](https://news.google.com/rss/articles/CBMirwFBVV95cUxPOUVpNU1fUTdpM1Nlb0ZXSVZ4VnFWaVN4VVV6aXBJb0lJVWZtRTk0WndneXZiTGQ1ZFpZeFZ4RDlVMTc0RF8ydGpIZ1VFT0xFRi1hS1R1aFFsMHdLNGRyQWEtXzhMelkySjlNQV8wdlo3R1dfSVBCb1pldUhua0dHanlYYUppWWlKdElEVGlaU2pMdjMxWkNqSnYzd19rUWVqSDlEOW53NTFQSUdxT0FJ?oc=5) — Trump Crypto Policy
  > Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market The Bronx Daily
-- [Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops - CoinDesk](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPb1F0MEZKcDk1WXdCUFNCWUtXYURISnczS2xMQ3phYUJJcUozOUN5eExTR25aWXdLd2ZWMTd3cTJLYmctM1FFRHNfLUFFZndPa05JLWsyd0FmSFhncURpWFNCMldrWVZhclpyT1dCNHdvLWhFYWR0dS0zejVDT1FGSFBMUTl2bkZHSGFPeWtjZWJHWVI1NU9rVWpWVkNJWGY4bzVxNGVtMjg?oc=5) — Trump Crypto Policy
  > Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops CoinDesk
 
 ### 📊 매크로/금리 (7건)
 
 전체의 28%로 주요 테마입니다. 주요 출처: 한국은행 금리정책(4건), Fed Policy(3건).
 
-- [Fed Interest Rate Forecast for the Next 5 Years: 2026 to 2031 - Norada Real Estate Investments](https://news.google.com/rss/articles/CBMioAFBVV95cUxNVnFWOWJRSThWYmhuZmU3VWU2UVRiVUF1a3JQNGV2Z3NFXzRNTmoxRHFTVWFjYkJodnh3Z0RYeUFIWF9CeUdUWlNpMXEwZ0Z3S1RNRk1NNjRoWkFMaU9jMEdpdXpnbGFQNkQxUE8tNG9NZnI2dUJCSjNoUHhIZnB1Q0NTWjFudEhhSXViX2ZRU1hpSzhnWnlaZ2V1OGdBbWJh?oc=5) — Fed Policy
  > Fed Interest Rate Forecast for the Next 5 Years: 2026 to 2031 Norada Real Estate Investments
-- [A Top Fed Official Casts Further Doubt on a Rate Rise This Month](https://news.google.com/rss/articles/CBMikwFBVV95cUxNckNMd0xCc1RMemJpSlNXQVBEeVFKUktQWmFwTlBZWTFrM19DWTA1d1dtN3djS0tSbTY3VzhWYlp2NEdpQ1RIdUthT2xGMVhPNmxqRXFyUEloVVNRQWZ6S3VQeHlZaklEbGh2SWRmckNONnZXaV81TjItOTAwZlBPakZsTzRoVHpMUDVEYlFpbTJraXM?oc=5) — Fed Policy
  > A Top Fed Official Casts Further Doubt on a Rate Rise This Month The New York Times
-- [Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News - U.S. News & World Report](https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOEhjMDU4NFJob2h1bXdWZUlrRE52N190X0FXTnpUQ3JYZU16dWNYYVhyOWdHTF9TZE50VXR0X0otWHlBdklleVJlNmh4aWdYWXBLYXF0QkM2MHZtSFpLTmM1Zl9KS1FkRF9uQms1SlF5Y19ScmZSbnFJbHhxZEx0NlVRSDlOYkpFblhCMkZHVUNzWGZtdkJuNGhuZjhPV0JYUGVWeXNmdjV6WlU?oc=5) — Fed Policy
  > Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News U.S. News & World Report
 
 ### 📈 가격/시장 (10건)
@@ -123,11 +101,8 @@ Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News U.S. N
 
 전체의 16%입니다. 주요 출처: Trump Crypto Policy(4건).
 
-- [Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVkdZWUJTVWlqeFdIT2tOeU16X19ITlY3NVMtUWg0ZlNFLUZmZTJETHlmcElLYk03dkkwdndWRU5ZNmpva1JUeVpjVzdnMEQ4M2hVaWd6VVpfWmEyOHdKRXdRaUxXaU5ySk1pUF9acFpBazFzX25INmh5SDl4Sy1MTG52ZTNISWJXNWdYVWRVQnEwUU5HVzN2MmZ3ZXEzdEFnTkFsZGwyZld3WXZmSGQ1S2RfU2Jpc1RwbXRoakY0U1lyUWM?oc=5) — Trump Crypto Policy
  > Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms CoinDesk
-- [Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market - The Bronx Daily](https://news.google.com/rss/articles/CBMirwFBVV95cUxPOUVpNU1fUTdpM1Nlb0ZXSVZ4VnFWaVN4VVV6aXBJb0lJVWZtRTk0WndneXZiTGQ1ZFpZeFZ4RDlVMTc0RF8ydGpIZ1VFT0xFRi1hS1R1aFFsMHdLNGRyQWEtXzhMelkySjlNQV8wdlo3R1dfSVBCb1pldUhua0dHanlYYUppWWlKdElEVGlaU2pMdjMxWkNqSnYzd19rUWVqSDlEOW53NTFQSUdxT0FJ?oc=5) — Trump Crypto Policy
  > Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market The Bronx Daily
-- [Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops - CoinDesk](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPb1F0MEZKcDk1WXdCUFNCWUtXYURISnczS2xMQ3phYUJJcUozOUN5eExTR25aWXdLd2ZWMTd3cTJLYmctM1FFRHNfLUFFZndPa05JLWsyd0FmSFhncURpWFNCMldrWVZhclpyT1dCNHdvLWhFYWR0dS0zejVDT1FGSFBMUTl2bkZHSGFPeWtjZWJHWVI1NU9rVWpWVkNJWGY4bzVxNGVtMjg?oc=5) — Trump Crypto Policy
  > Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops CoinDesk
 
 

@@ -49,24 +49,15 @@ image_alt: "소셜 미디어 동향 - 2026-10-06 - 소셜 미디어 뉴스 요�
 이재명 정부 2년 차 국감 개막…여야 ‘정책 성적표’ 격돌 일간투데이
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
-**3. [Trump administration proposes new crypto rules - The Hill](https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtfZlotOC1CTTFKcUpWb25SREpOeUJKZ004RkVhZlJsLXI3emxZVnJacFZHcWZwTXdWQmpINms0NlVwaWpWSkp6bUdBemd0X1NMTWJqaTZVeU5nY2Y1cU5JbmhNTkZubzdCMFNJTms1akszQ3JjUHh2LThFSklyUlBtSTJIMUhldDFJOHVtakx3UmQ5eFlGRkxieGEwMnN0Nk82b2dTVdIBrAFBVV95cUxOX0tMU1B0UE9zc3V3amxpVVVISE05S0ZiaWpISXRUSTExN01aNk5QU2xFVFBMNElpQkpCU2JvSnY1ZThaeDg2aGdRSjQtZi15Y21TN2ExY2xreHZKMmFMZzNERnRxNWZiS0FhYkpmT29JNlp3VHNsZEtXTlNTR000VmgxcWZyM3dFYkY1VGlLRFVXS2l6X2lBUUktODYtdUVBTDdsdWdxTzgyaUhX?oc=5)**
-Trump administration proposes new crypto rules The Hill
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**4. [The Definitive Guide to Donald Trump’s Crypto Ventures in 2026 - CoinMarketCap](https://news.google.com/rss/articles/CBMihAFBVV95cUxQZEdDZHF4UTRORFBpSEZCYWVObmlNVXBxMDM4NC1WeEpwUEJocDZQUm91S0tIWE5wNXBILW1qbkRfQzFRa3VnQjVucHh2anNCMlhvTkdvbVZ5MWRTU1hOck5aUXR6WGJSTWtLR0dhb0VVLXQ2Z2Z3c0JaR1RfZ2o5RE1mNlY?oc=5)**
-The Definitive Guide to Donald Trump’s Crypto Ventures in 2026 CoinMarketCap
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**5. [Federal Reserve interest rate decision looms as inflation worries persist](https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4ZVZIQnAyNXMtT1dBejBuSXRIOEVmQ015cHRtYjBlSnlFSHNaMTdnTWtGbHBnOGhvMkZJNXp0ZU9wdUZFc21xXzkzb3hOUXJOWG1KOHkxV01Jd2c?oc=5)**
-Federal Reserve interest rate decision looms as inflation worries persist Fox Business
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **6. [연준이 올해 이자율을 인상할까요? 분열된 경제학자들의 의견 - ABC 뉴스 - 속보, 최신 뉴스 및 비디오](https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3NMLXhhYU1lOVVLWU9sY0k0SDUyQnEwMG9SZ1RzNHZobTIyYk9KWGJlOGhic3FKdlQ2NXlIVDF6SW1oRlNWZlY2NHlNLWlnNGoybzAwLWlkV3V1Q1ZtM21KS2FLTy02NEF6VjY4UmFNc2hYa21mRURlSkJYZWxtc1R3VmRYZFlKNUU3NzZiMkZGNGJZcG1xZUNCN0RQNkRndEVPb9IBqgFBVV95cUxOU1FSZ3pWOURaQUxBS296TzBtRFFGclJXTnpLYWwzZXU1Q01kcVZUczBxUDAwR3FaYmFZdzlXUWM2T0Q3TDVldm9nSVY4OERYRUtkdm5sdndPSU1ETU1yc3BuMEpXLTd2VFFZRTVQcWdMZFdEZ0EzYjhTS200RFBkZy1jbE01WVhVbEgyX1Z2dXc4MWxmbXd6cl9pSlp2TDRldkdkS2hwOVE0Zw?oc=5)**
-Will the Fed raise interest rates this year? Divided economists weigh in ABC News - Breaking News, Latest News and Videos
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**7. [How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic](https://news.google.com/rss/articles/CBMitwFBVV95cUxQNUVZWk5MSTJmR3FOSGNkdVFaNTVjLUxQUUhpeTUzaGdLVm1PV2hwVHYzY1dNM01odFBTQjJ3bUdSNHptdWhaNTEyZ1ZobDlMLXBHQ1ctVkNTdlU3amJ3UVNpU09RUWxxYzh6Y1NZOGNtSGUySElpVE00b3VPTDcwZ0NCVHhjN0VKSmxzRHVKQzhEU0U1ZUJ5UHg5MVdfVmc0dDNQM1RiTW5EVVpUMnVTX1ZITVJTSUE?oc=5)**
-How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic tradingkey.com
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **8. [“영끌했는데 매달 이자 어쩌죠”.치솟는 주담대 금리](https://news.google.com/rss/articles/CBMiVEFVX3lxTE52Ym5mSEhzbnlYeGI2QzE4SzRhZUpwRlVfUWx1dnVFQUNUZ01pcmxqVDhtRnJFTkF2a0pudTNHeFczX29DNWxtXzJ2dldrWTZQTTZKLQ?oc=5)**
@@ -91,11 +82,8 @@ How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic tradin
 
 전체의 58%로 압도적 비중을 차지합니다. 주요 출처: 한국은행 금리정책(4건), Fed Policy(3건).
 
-- [Federal Reserve interest rate decision looms as inflation worries persist](https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4ZVZIQnAyNXMtT1dBejBuSXRIOEVmQ015cHRtYjBlSnlFSHNaMTdnTWtGbHBnOGhvMkZJNXp0ZU9wdUZFc21xXzkzb3hOUXJOWG1KOHkxV01Jd2c?oc=5) — Fed Policy
  > Federal Reserve interest rate decision looms as inflation worries persist Fox Business
-- [Will the Fed raise interest rates this year? Divided economists weigh in - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3NMLXhhYU1lOVVLWU9sY0k0SDUyQnEwMG9SZ1RzNHZobTIyYk9KWGJlOGhic3FKdlQ2NXlIVDF6SW1oRlNWZlY2NHlNLWlnNGoybzAwLWlkV3V1Q1ZtM21KS2FLTy02NEF6VjY4UmFNc2hYa21mRURlSkJYZWxtc1R3VmRYZFlKNUU3NzZiMkZGNGJZcG1xZUNCN0RQNkRndEVPb9IBqgFBVV95cUxOU1FSZ3pWOURaQUxBS296TzBtRFFGclJXTnpLYWwzZXU1Q01kcVZUczBxUDAwR3FaYmFZdzlXUWM2T0Q3TDVldm9nSVY4OERYRUtkdm5sdndPSU1ETU1yc3BuMEpXLTd2VFFZRTVQcWdMZFdEZ0EzYjhTS200RFBkZy1jbE01WVhVbEgyX1Z2dXc4MWxmbXd6cl9pSlp2TDRldkdkS2hwOVE0Zw?oc=5) — Fed Policy
  > Will the Fed raise interest rates this year? Divided economists weigh in ABC News - Breaking News, Latest News and Videos
-- [How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic](https://news.google.com/rss/articles/CBMitwFBVV95cUxQNUVZWk5MSTJmR3FOSGNkdVFaNTVjLUxQUUhpeTUzaGdLVm1PV2hwVHYzY1dNM01odFBTQjJ3bUdSNHptdWhaNTEyZ1ZobDlMLXBHQ1ctVkNTdlU3amJ3UVNpU09RUWxxYzh6Y1NZOGNtSGUySElpVE00b3VPTDcwZ0NCVHhjN0VKSmxzRHVKQzhEU0U1ZUJ5UHg5MVdfVmc0dDNQM1RiTW5EVVpUMnVTX1ZITVJTSUE?oc=5) — Fed Policy
  > How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic tradingkey.com
 
 ### 🏛️ 정치/정책 (4건)
@@ -106,7 +94,6 @@ How Do Fed Rate Hikes Affect US Stocks? A Detailed Breakdown of the Logic tradin
  > 세제·집값·대미투자…경제 국감, 이재명 정부 정책 검증대 v.daum.net
 - [이재명 정부 2년 차 국감 개막…여야 ‘정책 성적표’ 격돌 - 일간투데이](https://news.google.com/rss/articles/CBMia0FVX3lxTFBFLUpZWVJXeWpSMmg0NHd5WWVkeU9UNDVfY0hBLVZ3andlaFBNQkRJdi1NYlB6YXRjX3ozMmZfenFYMWJCVXlwUl9kenM0WDdRc0dFS24yS1JoX2JxY25TRFBNNDlYVVlYcjRN?oc=5) — 이재명 경제정책
  > 이재명 정부 2년 차 국감 개막…여야 ‘정책 성적표’ 격돌 일간투데이
-- [Trump administration proposes new crypto rules - The Hill](https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtfZlotOC1CTTFKcUpWb25SREpOeUJKZ004RkVhZlJsLXI3emxZVnJacFZHcWZwTXdWQmpINms0NlVwaWpWSkp6bUdBemd0X1NMTWJqaTZVeU5nY2Y1cU5JbmhNTkZubzdCMFNJTms1akszQ3JjUHh2LThFSklyUlBtSTJIMUhldDFJOHVtakx3UmQ5eFlGRkxieGEwMnN0Nk82b2dTVdIBrAFBVV95cUxOX0tMU1B0UE9zc3V3amxpVVVISE05S0ZiaWpISXRUSTExN01aNk5QU2xFVFBMNElpQkpCU2JvSnY1ZThaeDg2aGdRSjQtZi15Y21TN2ExY2xreHZKMmFMZzNERnRxNWZiS0FhYkpmT29JNlp3VHNsZEtXTlNTR000VmgxcWZyM3dFYkY1VGlLRFVXS2l6X2lBUUktODYtdUVBTDdsdWdxTzgyaUhX?oc=5) — Trump Crypto Policy
  > Trump administration proposes new crypto rules The Hill
 
 ### 📈 가격/시장 (4건)

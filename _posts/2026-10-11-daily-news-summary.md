@@ -88,11 +88,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports](https://cointelegraph.com/markets/bitcoin-consolidates-crypto-weathers-ledger-theft-reports?utm_source=rss_feed&utm_medium=rss_tag_hacks&utm_campaign=rss_partner_inbound)**
-- **[Locus Finance exploit](https://defillama.com/hacks#Locus%20Finance)**
-- **[Set Protocol exploit: Rounding Error](https://defillama.com/hacks#Set%20Protocol)**
-- **[MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control](https://defillama.com/hacks#MakerDAO%20ETH-A%20Liquidation%20Keeper%20Bot)**
-- **[GoldPesa exploit: Incorrect Share Accounting](https://defillama.com/hacks#GoldPesa)**
 
 ## 교차자산 연관성 체크
 
@@ -126,8 +121,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 
 > 규제, ETF, 실적 등 주요 뉴스입니다.
 
-- [A director’s 200-share IPO buy at $15 each was omitted from Reformation (REF)’s earlier report. - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxPX05BdURrdjN0b1lNZlBBbGhNQmpZME9IMC1nc0RYSVlMTmlOT1RhMGQtV2d5b0MxeG4tS1JZT0E4R0M0cWdMUlJ1QUxndDJjN2hqcnFNNjh6OUVIaUlIZUQ4MWFFNzRRTEozazkwbUpmRFNnR04taGc4VUxJZmFuUGY5RWtvYktkUU52WlZhZ2ZJbXlScHhudWhIOTVWMkRhSm1TZnZuUkxEa0hJZlNITjFXcmI1UHRtdFE?oc=5)
-- [A director bought 3,500 IPO shares at $15 each; Reformation (REF) adds the omitted purchase. - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxQQmE0SW9aYUpkYS1TYkNqMmYtT25fdzZEQ2c0T01pOE1NUjFhTm43bUVCWHYwdFFreUd4emVpbmZJZFVaelpGMFVRTHRVdVZubHVkdmFkME92b3JXSmZrV1VmaEdBQ0F5MExIUXJWMkJOc0JGVlBlSWl3aGN6d3RwNE12a05uRUhQaTlwR3lfT2x3b3p0em8tNkVFMFVnZGNteEtOeXVSUDF4NmdxUks2QjhmZ2l6cGVvSGc?oc=5)
 
 ---
 
@@ -136,9 +129,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (89건)
 
 **대표 헤드라인:**
-- Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers
-- Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI
-- Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/11/daily-crypto-news-digest/)
 
@@ -154,8 +144,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 ### 보안 리포트 (10건)
 
 **주요 보안 이슈:**
-- Ledger investigates fund losses linked to Southeast Asian reseller, warns users
-- Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
 - Locus Finance exploit
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
@@ -169,9 +157,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 ### 소셜 미디어 동향 (18건)
 
 **화제 토픽:**
-- Fed Interest Rate Forecast for the Next 5 Years: 2026 to 2031 - Norada Real Estate Investments
-- Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops - CoinDesk
-- Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/10/11/daily-social-media-digest/)
 
@@ -273,20 +258,10 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 
 **해킹** (8건 연관)
 - Locus Finance exploit
-- Set Protocol exploit: Rounding Error
-- MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-- GoldPesa exploit: Incorrect Share Accounting
 
 **AI(인공지능)** (5건 연관)
-- Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE,…
-- Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are…
-- Bitcoin reclaims $81K as Trump rules out pre-midterm Iran strikes - Crypto News
-- Stock replaces cash fees for Astera Labs (ALAB) director Craig H. Barratt in a…
 
 **비트코인(BTC)** (3건 연관)
-- Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
-- Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops -…
-- Bitcoin steadies near $82,500 after Trump rules out Iran strike before…
 
 
 ---

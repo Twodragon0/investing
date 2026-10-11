@@ -39,7 +39,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 
 - KOSPI 7,003.74 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 893.29 (-0.11%).
-- *Stocks rise Friday after soft jobs data, Nvidia leads Nasdaq to intraday record CNBC Stock market today: Dow, S&P.*
 
 ## 테마별 주요 뉴스
 
@@ -98,7 +97,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 
 ### 📊 매크로/금리 (17건)
 
-*Stocks rise Friday after soft jobs data, Nvidia leads Nasdaq to intraday record CNBC Stock market today: Dow, S&P.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -200,7 +198,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 
 ### 🏦 거래소 (6건)
 
-*Novig's "Just Sports" campaign drew backlash from some female athletes but also brought in a rush of trading volume.*
 
 
 <div class="news-card-item news-sev-high">
@@ -246,7 +243,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 
 ### 🔵 규제/정책 (7건)
 
-*“The only debts were utility and credit-card bills, which we will pay off.”*
 
 
 <div class="news-card-item news-sev-medium">

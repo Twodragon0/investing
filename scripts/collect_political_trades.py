@@ -36,7 +36,8 @@ from common.markdown_utils import (
 )
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feeds_concurrent
-from common.translator import get_display_title
+from common.summary_quality import contains_english_clause
+from common.translator import get_display_title, translate_to_korean
 from common.utils import request_with_retry
 
 _log = logging.getLogger(__name__)
@@ -749,7 +750,12 @@ class PoliticalTradesCollector(BaseCollector):
                     card_lines = [f"**{i}. {title}**"]
                 if description and description != title:
                     desc_text = _first_sentence(description)
-                    card_lines.append(desc_text)
+                    if contains_english_clause(desc_text):
+                        ko_trans = translate_to_korean(desc_text)
+                        if ko_trans and ko_trans != desc_text and not contains_english_clause(ko_trans):
+                            card_lines.append(ko_trans)
+                    else:
+                        card_lines.append(desc_text)
                 card_lines.append(html_source_tag(source))
                 content_parts.append("\n".join(card_lines))
 

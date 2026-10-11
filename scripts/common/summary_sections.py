@@ -24,6 +24,7 @@ from common.summary_analysis import (
     _relation_rows,
     _render_generated_image,
 )
+from common.summary_quality import contains_english_clause
 from common.summary_text_ko import (
     _best_non_noise_title,
     _clean_bullet_text,
@@ -35,7 +36,7 @@ from common.summary_text_ko import (
     _strip_markdown_link,
     _summary_keywords_for_korean,
 )
-from common.translator import get_display_title
+from common.translator import get_display_title, translate_to_korean
 
 logger = logging.getLogger("daily-summary")
 
@@ -965,11 +966,21 @@ def _build_priority_and_category_sections(
         content_parts.append("## 정치인 워치\n")
         if political_summary.get("key_summary"):
             for h in political_summary["key_summary"][:5]:
-                content_parts.append(h)
+                if contains_english_clause(h):
+                    ko = translate_to_korean(h)
+                    if ko and ko != h and not contains_english_clause(ko):
+                        content_parts.append(ko)
+                else:
+                    content_parts.append(h)
         if political_summary.get("highlights"):
             content_parts.append("")
             for h in political_summary["highlights"][:3]:
-                content_parts.append(h)
+                if contains_english_clause(h):
+                    ko = translate_to_korean(h)
+                    if ko and ko != h and not contains_english_clause(ko):
+                        content_parts.append(ko)
+                else:
+                    content_parts.append(h)
         content_parts.append(f"\n[상세 보기]({political_summary.get('url', '#')})\n")
 
     # ═══════════════════════════════════════

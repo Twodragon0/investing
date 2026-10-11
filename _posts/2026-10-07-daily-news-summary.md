@@ -80,11 +80,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[FlashLoopAdapter exploit: Improper Access Control](https://defillama.com/hacks#FlashLoopAdapter)**
-- **[NEAR Intents exploit: Bridge Logic Flaw](https://defillama.com/hacks#NEAR%20Intents)**
-- **[SKYDAO exploit: Swap Logic Flaw](https://defillama.com/hacks#SKYDAO)**
-- **[Fake GIWA Bridge exploit: Impersonation Scam](https://defillama.com/hacks#Fake%20GIWA%20Bridge)**
-- **[Duelbits exploit: Hot Wallet Key Compromised](https://defillama.com/hacks#Duelbits)**
 
 ## 교차자산 연관성 체크
 
@@ -117,8 +112,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요�
 
 > 규제, ETF, 실적 등 주요 뉴스입니다.
 
-- [A Nasdaq delisting notice covers 2030 and 2033 notes guaranteed by Warner Bros. Discovery (WBD). - Stock Titan](https://news.google.com/rss/articles/CBMiogFBVV95cUxOV3p5bm1WX1NzLTlpcGsza3hWVFNhVUN2WkRZdVZPQ0IxdHBjVWFlOG05djlYSG9RVXFUZFNYaGxHaUFnYlZlcnVRQlQ2ck9yenZFcEN5WkRULWJDRzJ6RXFwVXdmc1lITnpqMUNVdTZSc2lqMHRTcURSYzFERzJ3N1JaTGV3WWd3N2VkV3lRYWRwY1JIN1VKOUJ6REVYdUJZLXc?oc=5)
-- [Series A common stock faces removal from listing at Warner Bros. Discovery (NASDAQ: WBD). - Stock Titan](https://news.google.com/rss/articles/CBMipwFBVV95cUxPQUZXV094VGhvS0MtYkxXTFFSY19tUnFHQ0FucFJNbngyVVNqQlhORVJyellPZ3RmM2hhNW9pOWdxWGJXTVVBQWFDeHlCZGJEaDNuUnZNMlYxYWEwaVpWVklyV0hiSDV0bDI4YVhtVGsyYWZRdFdkOExQeTFHZV9hRWlZZkFhZDBsNWotNkQybjl3RW5vS1VkLWVIdmEzTmwxb2Nrb0VERQ?oc=5)
 
 ---
 
@@ -127,9 +120,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (83건)
 
 **대표 헤드라인:**
-- Update on the Collateral Ratio Under Cross Margin and Portfolio Margin
-- APAC Exclusive: Win a Fully Hosted Trip to Binance Blockchain Week 2026
-- Binance Will Support Marvell Technology (MRVL) and Oracle Corporation (ORCL) Cash Dividend Distribution via bStocks
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/07/daily-crypto-news-digest/)
 
@@ -145,9 +135,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요�
 ### 보안 리포트 (9건)
 
 **주요 보안 이슈:**
-- Former SEC boss made AI Czar, Bitcoin may hit $600K this cycle: Hodler’s Digest
-- FlashLoopAdapter exploit: Improper Access Control
-- NEAR Intents exploit: Bridge Logic Flaw
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -170,8 +157,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요�
 
 ## 주목할 소식
 
-- Binance Futures Will Launch Multiple TradFi USDⓈ-Margined Perpetual Contracts
-- Update on the Collateral Ratio Under Cross Margin and Portfolio Margin
 
 ---
 
@@ -269,21 +254,13 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-07 - 시장 분석 뉴스 요�
 ### 연관 뉴스 클러스터
 
 **해킹** (8건 연관)
-- FlashLoopAdapter exploit: Improper Access Control
-- NEAR Intents exploit: Bridge Logic Flaw
 - SKYDAO exploit: Swap Logic Flaw
-- Fake GIWA Bridge exploit: Impersonation Scam
 
 **금리** (7건 연관)
-- Federal Reserve interest rate decision looms as inflation worries persist
 - 연준은 인플레이션이 3년 최고치에 도달함에도 불구하고 금리를 안정적으로 유지합니다. - ABC 뉴스 - 속보, 최신 뉴스 및 비디오
-- The Fed Could Raise Interest Rates Again This Year. Here's What That Might…
 - 경제칼럼\ 금리 인상이 주택가격에 미치는 영향 - 경북일보
 
 **AI(인공지능)** (4건 연관)
-- New User bStocks Convert Campaign: Join and Share a Reward Pool of Up to 110…
-- APAC Exclusive: Win a Fully Hosted Trip to Binance Blockchain Week 2026
-- Former SEC boss made AI Czar, Bitcoin may hit $600K this cycle: Hodler’s Digest
 - 코스피, 美 AI 강세에도 6,990선 하락 전환…외국인 매도 속 기관 매수 - 뉴스투데이
 
 

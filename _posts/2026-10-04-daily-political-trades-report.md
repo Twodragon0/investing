@@ -28,36 +28,21 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 
 ## 1. SEC 내부자 거래 (Form 4)
 
-**1. [Form 4\ VerifyMe, Inc. Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSFZvVmlsZ1AzNmM3bDZ6RU94TEhXRXhYUkRfVjNOS1ZqM3B3bHlWN19vTUJoYzVzcjJTcjRJaGNPVmQtU3RjanNKWTc1emMwVnRLMUtvZzRRbEhkb1Fad0FzNFVBUWUxcFA2UmtlN1c4R1JVbHoyMVl0SUJyWkFkYmpPMGtzSnV5bkpUV0lIM29sNTJVQ21mUW5TbTBDRGV2Z1pkNjhyeDlEdUE?oc=5)**
 [Form 4] VerifyMe, Inc.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**2. [Form 4\ TOMPKINS FINANCIAL CORP Insider Trading Activity - Stock Titan](https://news.google.com/rss/articles/CBMitwFBVV95cUxNTDE1Nkk2WDFkSzZMaHRVVUxXSnM4NmtiTmUyR2YwWnpnTTI5VjBsWHVicGg2SU96M1dlQjZRNWl2UEpoU2dLdlVsSDdDYm5FNDd4N1U4dWRQUEMzZ29vOTllMDB5N1lEOXM0MGcwVUpHaEtkVG5MQkwyMWRBSmZyVEFGUnJOcDlKcEJiODFndDJuUGRSY0hhMlZwR2xlV2dOVnQzTFR5ZFFhZlBiaHB0WVBKNE5GVDA?oc=5)**
-[Form 4] TOMPKINS FINANCIAL CORP Insider Trading Activity Stock Titan
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**3. [Marketing chief bought 1,000 shares at $3.92 each; Z Squared (ZSQR) updates his ownership totals. - Stock Titan](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQaXpPTzdYbGVVck54QVFoT0ZkMTRmUk1SVG5wYTd0cHp6Q0VLNGZJMGc3UkJYeE91NDJYYk00ME9EV0s2Z2lBUHU0Sm1HX0RKek9JOVpLVjJzN1R3R2JobjJLQTU2ZzdLN0xwNVZWb19Td05GZ3l0N05QMi16eFFIV1JnVzJqZVAwdWQwbzZMVXhuWWw5YmFOZHEzVl9WenNEeWx3cmRLRlVtRUtoN0VYZHRMMXZ3SjhQ?oc=5)**
-Marketing chief bought 1,000 shares at $3.92 each; Z Squared (ZSQR) updates his ownership totals.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**4. [After exercising $14.50 options, Spyre Therapeutics (SYRE) legal chief sells 28,933 shares. - Stock Titan](https://news.google.com/rss/articles/CBMitwFBVV95cUxQdzVFVFM1bFNORVpEQTgwVDg0RHUwYXZlaXVuRnZSMTlZSDZabDJ1QVZ5NFh3LXdubWdyb1Q2YU56bDFJdXJoeTZNUVBkY01zRXpXT3pLT1I0UXprZERUSG56U2l3R0hYcHU3U2NocUdYSVZoMUdBQkdUN1R6S0picEVrN25EMEdFNHBNX2Y1cDlTeFc3anpteGFvTnc3WmFlYVVQNTZ3MnBfRTdrMGY3YXBHUmhIQW8?oc=5)**
-After exercising $14.50 options, Spyre Therapeutics (SYRE) legal chief sells 28,933 shares.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**5. [After exercising $14.50 options, Spyre Therapeutics (SYRE) CFO sells 25,000 shares. - Stock Titan](https://news.google.com/rss/articles/CBMitwFBVV95cUxQdm1VN2U3LW1ycVh3M01XdXluMV9tZW12aDRibnVQb3pqemJhZ2YwUG9YVXN1R3BNdV9TNmZzR1duRHVCSl90YWZIa0d0a2p4YjI1eFNUblBPZjFwWFlQWFJkcy1VYm55TU9rUWg4ZlMwdUlmdUt6M19hbm1xQjhOWFk5VjIxWU0wcThSUDA5Q3gxVVVqb0E0aHQzU1htX0ZlWVlCNnkxVGNhd0lOMTQ1SEJOQmRZUTg?oc=5)**
-After exercising $14.50 options, Spyre Therapeutics (SYRE) CFO sells 25,000 shares.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**6. [A 12,920-option exercise accompanies the president's share sales at CrowdStrike (CRWD). - Stock Titan](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQktGMDU5UjZaRWlFek9mZWZFbjVObjJ3bTFicGhPZUo2aFZJNVZ3UGJGdzZLZTBic0lLbks2MVpMMFF0Q0pEMkpuUU5WTmlyeWZKZzhfOXdXbHlGLV9HbF82U3d1bkd6Nmw4OTZHQm9yazlRaWF0a1ppclJtZ1I4OXBacVlzVG5ZaURfN1BMRXQwVFJWczlmSjFZVUVJMlh2Q1NVU2dSMlRGLXlITWFEd3dXd0J3U2hDTE04?oc=5)**
-A 12,920-option exercise accompanies the president's share sales at CrowdStrike (CRWD).
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**7. [CEO Cameron Turtle sells 15,000 shares of Spyre Therapeutics (SYRE) under a trading plan. - Stock Titan](https://news.google.com/rss/articles/CBMitwFBVV95cUxQTDFwNmhkODI5TUFQQ0RUVVh2dEZ3QXkxQmhDNThub0JIR0Ezb3E5U0o1MW4xc2p2MmlxSjJ6MC1rZHItNElzNU1KcHo1TmFhOEg4YS1LdzI4eTdfb3p1b3FHUWJsSUFfMzhjV3FDYlNZWkE3RUU4dGFld1BsdS1WczN6MEEzcmh1eXZ2S2docnhCcXpuMm45cXEtSGJuMk0ySV9JQm03VWFFeUNwZnZwZUlCRTJtWEU?oc=5)**
-CEO Cameron Turtle sells 15,000 shares of Spyre Therapeutics (SYRE) under a trading plan.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
-**8. [At $10.38 a share, Sprout Social (SPT) CEO delivers or withholds 2,189 shares. - Stock Titan](https://news.google.com/rss/articles/CBMirwFBVV95cUxPUWhuUTk0X2x5NC1LT3hRMnJqbEhZVEZKMkMxTFU2TVhDTk5faDdxYzVvdEtpdDdQempUWkFRU3htY3VXSDlJcndpc2RtNWxWbFNrdFpqTWpQdTVhNFJqYXEtcjVvTFlzRW43V0MwX3Z4R3ZGMUxqbkczOHRmRG1GdW9LaGNBYl82bEQwU3NaSlhudlVNUk1venFRUUlkcjZJdTA1TkZXWUpHLThZbUs4?oc=5)**
-At $10.38 a share, Sprout Social (SPT) CEO delivers or withholds 2,189 shares.
 <span class="source-tag" data-source-type="regulator">SEC Insider Trading</span>
 
 ## 2. 중앙은행 정책 동향
@@ -66,8 +51,6 @@ At $10.38 a share, Sprout Social (SPT) CEO delivers or withholds 2,189 shares.
 금리 인상 '청구서' 더 남았는데…5% 넘는 가계대출 1년새 2.7배 edaily.co.kr
 <span class="source-tag" data-source-type="regulator">한국은행 금리결정</span>
 
-**2. [Fed may skip October but pull rate hike trigger in December](https://news.google.com/rss/articles/CBMingFBVV95cUxNOVRfM1dqWHpoenJab09IVXh3am1peVNMWFFPOFhOSjl1SkI5MklDUDl6VFpkSkZxUE8tU0Q4S3R3VXNxd0t5Mlc3NGxXNTBid1N4U0czdVA2b09hVmRyT0VtaEU3M243T09TQjVTSzVMYURvSkg5WjBSc2tjVnpzM29ZMHdTMC1hUGlRUzBJRXBQdWk3bG9heTJOQjQ3QQ?oc=5)**
-Fed may skip October but pull rate hike trigger in December Reuters
 <span class="source-tag" data-source-type="default">Fed Rate Decision</span>
 
 ---

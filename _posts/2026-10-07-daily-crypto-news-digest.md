@@ -157,7 +157,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (12건)
 
-*A London quantitative hedge fund joins the round too, seven months after the NYSE's owner bought in at exactly the.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -210,7 +209,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 
 ### 🔵 규제/정책 (18건)
 
-*Attacks grew more sophisticated and less predictable over the period, according to researchers who scanned more than.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -265,7 +263,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 
 ### 🤖 AI/기술 (7건)
 
-*Paris-based Mistral launched Large 4, a model nicknamed after a June internet joke.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -313,16 +310,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 
 ## 거래소 공지사항
 
-**1. [Update on the Collateral Ratio Under Cross Margin and Portfolio Margin](https://www.binance.com/en/support/announcement/detail/74c7657a53f141e8b2d584bf44e6dd87)**
 Update on the Collateral Ratio Under Cross Margin and Portfolio Margin (2026-10-09). Collateral, Ratio 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**2. [APAC Exclusive: Win a Fully Hosted Trip to Binance Blockchain Week 2026](https://www.binance.com/en/support/announcement/detail/2e9c4a3d133947f1b6a24daa43952256)**
 APAC Exclusive: Win a Fully Hosted Trip to Binance Blockchain Week 2026. APAC, Exclusive 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**3. [Binance Will Support Marvell Technology (MRVL) and Oracle Corporation (ORCL) Cash Dividend Distribution via bStocks](https://www.binance.com/en/support/announcement/detail/857a0d3d304045c4bf633885d4ec4707)**
-Binance Will Support Marvell Technology (MRVL) and Oracle Corporation (ORCL) Cash Dividend Distribution via bStocks. MRV.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 
@@ -330,8 +323,6 @@ Binance Will Support Marvell Technology (MRVL) and Oracle Corporation (ORCL) Cas
 
 시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.
 
-- [Binance Futures Will Launch Multiple TradFi USDⓈ-Margined Perpetual Contracts](https://www.binance.com/en/support/announcement/detail/ea19450f515843098a5d5e55fc6e3589) (Binance)
-- [New User bStocks Convert Campaign: Join and Share a Reward Pool of Up to 110 SPCXB](https://www.binance.com/en/support/announcement/detail/197b9abe9a61458a8b191493b9f7e80c) (Binance)
 
 ## 오늘의 인사이트
 

@@ -80,11 +80,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[Locus Finance exploit](https://defillama.com/hacks#Locus%20Finance)**
-- **[Set Protocol exploit: Rounding Error](https://defillama.com/hacks#Set%20Protocol)**
-- **[MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control](https://defillama.com/hacks#MakerDAO%20ETH-A%20Liquidation%20Keeper%20Bot)**
-- **[GoldPesa exploit: Incorrect Share Accounting](https://defillama.com/hacks#GoldPesa)**
-- **[FlashLoopAdapter exploit: Improper Access Control](https://defillama.com/hacks#FlashLoopAdapter)**
 
 ## 교차자산 연관성 체크
 
@@ -120,9 +115,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 
 - [코스피, 외국인·기관 매도에 6900선 공방…삼성전자 실적 앞두고 경계감 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE8teFVwN0lpb2xlNmZsZmtFUXk3VGVPeUxpcUZWUDNVVDRQWF9HNVNMMjZMbnFiVGJfWHl3eUpBWGRLUF9SdnBlVTlJSXFISmtr?oc=5)
 - [마감시황\ 10/07 실적 경계감에 코스피 6,803.90(-1.98%) - 네이버 프리미엄콘텐츠](https://news.google.com/rss/articles/CBMikAFBVV95cUxNS3ZqcjExSnBfeDQxR2paOUY2d19uU3pkZGJybnBlOWRGaFRBRmg0NUxBYUdaTExTNGVBbk9xOWN4b09aRWI4cUI0a3BxUkdPZ1BhSlp5c3lsdVdydi1TdmVqTExjcDFPSXEtUEc4OWhVak1LQmJJRTJqZng1SGE5dTNSVXBneTRfUHcwT0FOOV8?oc=5)
-- [All Fed officials backed vote to hike benchmark rate: FOMC minutes - CFO Dive](https://news.google.com/rss/articles/CBMizwFBVV95cUxNUVJMRjNDd1BzNDdRUDNOemw4NkZKNlRNLXdaRWdRNWoxczhDMzJBR3BKckp2NXJyTWhfYXRiR0xzOVFqSzU2aTAtTjg4WkZFMlBkcDdYbWdxTlRHRnJnbFhWRlNtMENwem9CVXBOVlJBRTFnTkxLTDJMbTVJZDczZGZtdzRYc3JoRzBvN28xT3BYdm8tQ3dMMkJlUERiMFFJREZWMVdUOFl4ZmRYS3BRbWJRMDlYQ3U3SUdnYmFSOUFMX213ZURlbUxHTXgzWGs?oc=5)
-- [Fed policymakers saw multiple 2026 rate hikes as likely, September FOMC minutes show - Scotsman Guide](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQjNXczh3TFljWnFMenBsWlpvQzkxNE9lejhuWlRYMVBsRUlWeHlkaURHMTlEUWJYZkZ5MFp6b1FYRW9oT1IwRzB6d0ZrUGkxMTM5bXlCN3JMbTFsdF9nT2FRdkpiTnEzbnd6WFFoREVPTnEtM0hkallJcFNXTzc4R0g1MmRGY3JacTQzU2JVVW1XRnBab2RMRThwSGo5SkViaHliZXFyRDRlQVpyUzJHalBJX1ZjeWhIX0Vn?oc=5)
-- [FOMC minutes show another rate increase possible - ABA Banking Journal](https://news.google.com/rss/articles/CBMikgFBVV95cUxPdkhIblFETEEtQ1BndVppdkdtdTcwQmZqemF5UWFETWN3OGZ3b2FIYzlTMlFiWnp6UWpXQy15RlBMcDlYVzZ1SDBNNXExbmNQRlEyclVSTlJTa1FUZ2hPaDJ6ZzkyNG9FOG96Z2oxVTNrSlphdF9aWGFxQjJTSTMwcVVWSThjM0ZHTDZnRDlCTUNLdw?oc=5)
 
 ---
 
@@ -131,9 +123,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (98건)
 
 **대표 헤드라인:**
-- MET Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers
-- New Users Exclusive: Subscribe to USDT Simple Earn Flexible Products to Enjoy 30% Bonus APR!
-- Binance Alpha Trading Competition: Trade Zest Protocol (ZEST) and Share $200K Worth of Rewards
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/09/daily-crypto-news-digest/)
 
@@ -149,9 +138,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 ### 보안 리포트 (11건)
 
 **주요 보안 이슈:**
-- Crypto lending rises again… but have they solved the risks?
-- US government moves $770M of seized Bitcoin to Coinbase Prime
-- Vitalik Buterin backs crypto ‘bunker mode’ amid rapid AI math advances
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -166,7 +152,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 **화제 토픽:**
 - "국회 감시 피하는 이재명 쌈짓돈"…162조 '미래대응기금' 충돌에 국감 난타전 - 한국일보
 - 野 "미래대응기금, '이재명 쌈짓돈'" … 박홍근 "국가재정법 따른 것"
-- Trump Rules Out Diesel Export Ban—Crypto Punters Weigh Odds of One Before 2026 Ends
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/10/09/daily-social-media-digest/)
 
@@ -174,8 +159,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 
 ## 주목할 소식
 
-- CEO back-pay shares totaled 220,947, not 202,947, in Eva Live (GOAI)'s corrected report. - Stock Titan
-- Fed’s minutes show no appetite for a series of interest-rate hikes
 
 ---
 
@@ -275,22 +258,12 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-09 - 시장 분석 뉴스 요�
 ### 연관 뉴스 클러스터
 
 **AI(인공지능)** (11건 연관)
-- Next Stop - BBW: Bring Qualified Referrals to Earn Your Spot at Binance…
-- Africa Exclusive: Merchant Referral Campaign - Earn 50 USDT Each on Binance P2P
-- Crypto lending rises again… but have they solved the risks?
-- Vitalik Buterin backs crypto ‘bunker mode’ amid rapid AI math advances
 
 **연준(Fed)** (9건 연관)
 - 연준은 인플레이션이 3년 최고치에 도달함에도 불구하고 금리를 안정적으로 유지합니다. - ABC 뉴스 - 속보, 최신 뉴스 및 비디오
-- Fed Minutes Signal Further Rate Increase This Year, but No Urgency for October…
-- Fed officials see another hike coming, but no sign as to when, minutes show
-- All Fed officials backed vote to hike benchmark rate: FOMC minutes - CFO Dive
 
 **해킹** (8건 연관)
 - Locus Finance exploit
-- Set Protocol exploit: Rounding Error
-- MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-- GoldPesa exploit: Incorrect Share Accounting
 
 
 ---

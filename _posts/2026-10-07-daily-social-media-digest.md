@@ -53,28 +53,17 @@ image_alt: "소셜 미디어 동향 - 2026-10-07 - 소셜 미디어 뉴스 요�
 [2026국감] 국정감사 개막…與 "민생 정책 작동 점검" 野 "이재명 실정 묻겠다" 아시아경제
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
-**4. [US commodities regulator proposes new federal crypto oversight rules](https://news.google.com/rss/articles/CBMirwFBVV95cUxQSWMwYjBmbmRQV1RYQXlDczJHN0ZMdzRhSVgzTE01dzJrOXNidlBqZzg3ZjlmcjlqM0dxd3g1eGZEcGtVUVFQVmNVQVgwTnE1M2VHV2lBbU1ySTZWa05DN1kzcEFxamdEVE56UGRBNkxwWnhqSktWWkFFSjF3S1kwaEVBem10cE1QNnBUc19mdkJ2TlZqaVpaVmdjbHgwczZ6LU5RQ2loWUd5NjFPbjgw?oc=5)**
-US commodities regulator proposes new federal crypto oversight rules Reuters
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**5. [Trump administration proposes new crypto rules - The Hill](https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtfZlotOC1CTTFKcUpWb25SREpOeUJKZ004RkVhZlJsLXI3emxZVnJacFZHcWZwTXdWQmpINms0NlVwaWpWSkp6bUdBemd0X1NMTWJqaTZVeU5nY2Y1cU5JbmhNTkZubzdCMFNJTms1akszQ3JjUHh2LThFSklyUlBtSTJIMUhldDFJOHVtakx3UmQ5eFlGRkxieGEwMnN0Nk82b2dTVdIBrAFBVV95cUxOX0tMU1B0UE9zc3V3amxpVVVISE05S0ZiaWpISXRUSTExN01aNk5QU2xFVFBMNElpQkpCU2JvSnY1ZThaeDg2aGdRSjQtZi15Y21TN2ExY2xreHZKMmFMZzNERnRxNWZiS0FhYkpmT29JNlp3VHNsZEtXTlNTR000VmgxcWZyM3dFYkY1VGlLRFVXS2l6X2lBUUktODYtdUVBTDdsdWdxTzgyaUhX?oc=5)**
-Trump administration proposes new crypto rules The Hill
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**6. [The Definitive Guide to Donald Trump’s Crypto Ventures in 2026 - CoinMarketCap](https://news.google.com/rss/articles/CBMihAFBVV95cUxQZEdDZHF4UTRORFBpSEZCYWVObmlNVXBxMDM4NC1WeEpwUEJocDZQUm91S0tIWE5wNXBILW1qbkRfQzFRa3VnQjVucHh2anNCMlhvTkdvbVZ5MWRTU1hOck5aUXR6WGJSTWtLR0dhb0VVLXQ2Z2Z3c0JaR1RfZ2o5RE1mNlY?oc=5)**
-The Definitive Guide to Donald Trump’s Crypto Ventures in 2026 CoinMarketCap
 <span class="source-tag" data-source-type="default">Trump Crypto Policy</span>
 
-**7. [Federal Reserve interest rate decision looms as inflation worries persist](https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4ZVZIQnAyNXMtT1dBejBuSXRIOEVmQ015cHRtYjBlSnlFSHNaMTdnTWtGbHBnOGhvMkZJNXp0ZU9wdUZFc21xXzkzb3hOUXJOWG1KOHkxV01Jd2c?oc=5)**
-Federal Reserve interest rate decision looms as inflation worries persist Fox Business
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **8. [연준은 인플레이션이 3년 최고치에 도달함에도 불구하고 금리를 안정적으로 유지합니다. - ABC 뉴스 - 속보, 최신 뉴스 및 비디오](https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5)**
-Fed holds interest rates steady as inflation hits 3-year high ABC News - Breaking News, Latest News and Videos
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
-**9. [The Fed Could Raise Interest Rates Again This Year. Here's What That Might Mean for the Stock Market.](https://news.google.com/rss/articles/CBMimwFBVV95cUxPRjVLc3hGd191Q05JcHQySHBIZld4NlUwdWlVNzFjc3NMRHZ1WFBMSTlLMEtZR2VVWWcwaGMyYkMteGRqdk14dmZVMm9KVzNBemRxUWpHV0pwUWxId0ZHWTA0LU5IbXFmbmtlVW51aVhEcnVWWUVuQnR6aG5lQmZnMmo5UmZ6M2Z2V0dYcl9ISkJXN1U0Wm93bWtyRQ?oc=5)**
-The Fed Could Raise Interest Rates Again This Year. Here's What That Might Mean for the Stock Market. Yahoo Finance
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **10. [코스피, 美 AI 강세에도 6,990선 하락 전환…외국인 매도 속 기관 매수 - 뉴스투데이](https://news.google.com/rss/articles/CBMiXkFVX3lxTE9IUl9LWmFmcGtQbHdzaUFQQUJaZ0t2cVBtSHczc19kZDFjLTlKVzRfNzBjV1JVM2YtUUZ2Vk96NGxudWFZYWh2eW5icnZYUUc4RjJwaGVSQnhCWms1SEE?oc=5)**
@@ -91,11 +80,8 @@ The Fed Could Raise Interest Rates Again This Year. Here's What That Might Mean 
 
 전체의 50%로 압도적 비중을 차지합니다. 주요 출처: 한국은행 금리정책(5건), Fed Policy(3건).
 
-- [Federal Reserve interest rate decision looms as inflation worries persist](https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4ZVZIQnAyNXMtT1dBejBuSXRIOEVmQ015cHRtYjBlSnlFSHNaMTdnTWtGbHBnOGhvMkZJNXp0ZU9wdUZFc21xXzkzb3hOUXJOWG1KOHkxV01Jd2c?oc=5) — Fed Policy
  > Federal Reserve interest rate decision looms as inflation worries persist Fox Business
-- [Fed holds interest rates steady as inflation hits 3-year high - ABC News - Breaking News, Latest News and Videos](https://news.google.com/rss/articles/CBMinwFBVV95cUxObE9meWdub2FOS2dVY0pKYUxReEZrZGJhMnIyNG9JTEJpZlhISXFXMlZGZk1kSjRPWlRPejV6aTdXSHZnWWFkeHBvZVEydk9Sa1dLallzVGtIenB2OV9yR2daTDNrb2psQW5uZ2JSYnlOMUxmYzExZ1NBT1V3OGVlaERaZ1pPaVYwTDUyNVJCR1lJUkpoRFhhMzJha09TOVXSAaQBQVVfeXFMUGc0WHV5TzVaUnlTZjZ2Y1h3RHdSSnc0LWZoTzF3Uzk4WFkyQVByY1kxNkNoeDREX3Z6TDRSOUsyMmFvbHBGUWNlWUlXZGxJZFN6RFB5NWREWWtlRXUyMXJyUUlMTXo0cmh4NlpfT1pMUklyOGJLb1F5SDdteTItMzl5NVQybXk5U2ZQWkRGYmhnU0dJZ2hoTEFjb3FLaktRcjZNbDc?oc=5) — Fed Policy
  > Fed holds interest rates steady as inflation hits 3-year high ABC News - Breaking News, Latest News and Videos
-- [The Fed Could Raise Interest Rates Again This Year. Here's What That Might Mean for the Stock Market.](https://news.google.com/rss/articles/CBMimwFBVV95cUxPRjVLc3hGd191Q05JcHQySHBIZld4NlUwdWlVNzFjc3NMRHZ1WFBMSTlLMEtZR2VVWWcwaGMyYkMteGRqdk14dmZVMm9KVzNBemRxUWpHV0pwUWxId0ZHWTA0LU5IbXFmbmtlVW51aVhEcnVWWUVuQnR6aG5lQmZnMmo5UmZ6M2Z2V0dYcl9ISkJXN1U0Wm93bWtyRQ?oc=5) — Fed Policy
  > The Fed Could Raise Interest Rates Again This Year. Here's What That Might Mean for the Stock Market. Yahoo Finance
 
 ### 📈 가격/시장 (7건)

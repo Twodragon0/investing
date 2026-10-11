@@ -50,8 +50,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-07 - 규제 뉴스 요�
 
 ## 1. 미국 규제 동향
 
-**1. [Federal Reserve Board announces approval of application by Isabella Bank Corporation](https://www.federalreserve.gov/newsevents/pressreleases/orders20261005a.htm)**
-The Federal Reserve Board on Monday announced its approval of the application by Isabella Bank Corporation, of Mount Pleasant, Michigan, to acquire Grand River
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
 ---
@@ -70,32 +68,20 @@ The Federal Reserve Board on Monday announced its approval of the application by
 
 ## 3. 아시아 규제 동향
 
-**1. [Publication,FSA Weekly Review No.705 October 6, 2026](https://www.fsa.go.jp/en/newsletter/weekly2026/705.html)**
-This page contains the latest in events, developments, and updates to the FSA website.For files in HTML formats, when you click original press release links, and click the "Language" button on the
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
-**2. [Singapore MAS Says Hyperliquid May Be Outside Its Jurisdiction Amid Dispute Over Headquarters - bloomingbit](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBsWm4zNUhyZ21QTEplWmNsT2FVTS1lZVZfVWRUQ3dQTVBOTVRaaGVlV3kzX0ZrOHRMbkUtbEs2dmxUYnRPNmtMYkdiV2VOQllhajRIYw?oc=5)**
-Singapore MAS Says Hyperliquid May Be Outside Its Jurisdiction Amid Dispute Over Headquarters - bloomingbit.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**3. [Hyperliquid Calls Singapore Home — But Does It Have a License?](https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1UnhHR2ozblhfeTBaWFZTYVVTOS02S1pxaUNLRHk3R3lxOC03T2o4NUZRMmRYWkJFX3EtWEI5enc0ZjlsTE1Ud0F2QWxrRVBXYjZQS1BtNEREWlAwQndJcTlRa2VVc2Q0?oc=5)**
-Hyperliquid Calls Singapore Home — But Does It Have a License.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
 ---
 
 ## 4. 유럽 규제 동향
 
-**1. [ESMA Asks EU to End Custody of Non-Compliant Stablecoins as Data Shows USDT Retreat - Forex Crunch](https://news.google.com/rss/articles/CBMilAFBVV95cUxPVlVxRUE0cmVaMDFIYlk0QnQzT205Y1RPeWJnT3p5WUNVblJJVVVwQWdraHpqaFZVaFA0Wll3NWlSTjlJZU1fYUw4Q2EtRFNnb3pBUFhqZGdnVWVIX1lGc0tZaXlhb2ZTb1dGTS1yQl9KZGF0Y3pRTHBUVEVFWmRJTGNoYzJrVHFFbExna0JVTVR0UXFD?oc=5)**
-ESMA Asks EU to End Custody of Non-Compliant Stablecoins as Data Shows USDT Retreat - Forex Crunch.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**2. [FCA Finalises Cryptoasset Perimeter Guidance Ahead of the New UK Regime - The National Law Review](https://news.google.com/rss/articles/CBMingFBVV95cUxQQThNODJ5cFpEYnhvQ1ZOWmhmbnNzOGVwTEkwSFBsWTJLT2tCWmpXSnlSbmo1aUVRNUNWaDFxYnkyVkpINHRDRXRGRnBldVpybFJtUl9HdzJuUmsyZk0zdVczN2ViZ2hvMG5PbDdpalZoVGFEcF9NVDdqMzlLVE5GczRMOGtqWTk3d1dWb2oySHFBMmpuOWVSY3ZaZEQtd9IBowFBVV95cUxNYlRHZ2xZOERiZk1FdEZtRjJlMW5PQWdDbjlCV0JnTkVxd2NheHFpd3l0S2huRE9LcEFlZG1MQXQ0akdFUzMta3NORVk5NTNEZ2dBNm84MndLRk5GTFZuQnRKSjI2R1JPUGpxR2JMM2NpY3JjZXUtdXgxMTF6Ull3cHhhZ2NNNFRZSEdtRVgyQk1fRk8xbjR6UFRfLTBvb255QXNB?oc=5)**
-FCA Finalises Cryptoasset Perimeter Guidance Ahead of the New UK Regime - The National Law Review.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
-**3. [MiCA Crypto Alliance Launches UK Disclosure Services to Streamline FCA Compliance - FF News](https://news.google.com/rss/articles/CBMilgFBVV95cUxPdGlRMnE3eWVhUlgwVnNRX0xRejh1d25MdkNVZjN2cDNNNFh1UUdTSWFZZkNBdmF4NkpaNDlFTmZWZmRaaERRTmZkR0lfQU5Ob3RpSGtPdmVGZl9uN0pHenk4dHoxQlU0MC1IX1ZjenNOUWhUZWtDak9vQTA5MlYyd19ZejdlX0J5MXNXak9WNFFPTklGVnc?oc=5)**
-MiCA Crypto Alliance Launches UK Disclosure Services to Streamline FCA Compliance - FF News.
 <span class="source-tag" data-source-type="regulator">UK FCA</span>
 
 ---
@@ -108,13 +94,10 @@ MiCA Crypto Alliance Launches UK Disclosure Services to Streamline FCA Complianc
 전체의 44%로 높은 비중을 보입니다. 주요 출처: UK FCA(2건), MAS Singapore(1건), EU ESMA(1건). 관련 지역: 유럽, 아시아.
 
 **주요 동향:**
-- [Singapore MAS Says Hyperliquid May Be Outside Its Jurisdiction Amid Dispute Over Headquarters - bloomingbit](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBsWm4zNUhyZ21QTEplWmNsT2FVTS1lZVZfVWRUQ3dQTVBOTVRaaGVlV3kzX0ZrOHRMbkUtbEs2dmxUYnRPNmtMYkdiV2VOQllhajRIYw?oc=5)
  <span class="source-tag" data-source-type="default">MAS Singapore</span>
  > Singapore MAS Says Hyperliquid May Be Outside Its Jurisdiction Amid Dispute Over Headquarters - bloomingbit.
-- [ESMA Asks EU to End Custody of Non-Compliant Stablecoins as Data Shows USDT Retreat - Forex Crunch](https://news.google.com/rss/articles/CBMilAFBVV95cUxPVlVxRUE0cmVaMDFIYlk0QnQzT205Y1RPeWJnT3p5WUNVblJJVVVwQWdraHpqaFZVaFA0Wll3NWlSTjlJZU1fYUw4Q2EtRFNnb3pBUFhqZGdnVWVIX1lGc0tZaXlhb2ZTb1dGTS1yQl9KZGF0Y3pRTHBUVEVFWmRJTGNoYzJrVHFFbExna0JVTVR0UXFD?oc=5)
  <span class="source-tag" data-source-type="regulator">EU ESMA</span>
  > ESMA Asks EU to End Custody of Non-Compliant Stablecoins as Data Shows USDT Retreat - Forex Crunch.
-- [FCA Finalises Cryptoasset Perimeter Guidance Ahead of the New UK Regime - The National Law Review](https://news.google.com/rss/articles/CBMingFBVV95cUxQQThNODJ5cFpEYnhvQ1ZOWmhmbnNzOGVwTEkwSFBsWTJLT2tCWmpXSnlSbmo1aUVRNUNWaDFxYnkyVkpINHRDRXRGRnBldVpybFJtUl9HdzJuUmsyZk0zdVczN2ViZ2hvMG5PbDdpalZoVGFEcF9NVDdqMzlLVE5GczRMOGtqWTk3d1dWb2oySHFBMmpuOWVSY3ZaZEQtd9IBowFBVV95cUxNYlRHZ2xZOERiZk1FdEZtRjJlMW5PQWdDbjlCV0JnTkVxd2NheHFpd3l0S2huRE9LcEFlZG1MQXQ0akdFUzMta3NORVk5NTNEZ2dBNm84MndLRk5GTFZuQnRKSjI2R1JPUGpxR2JMM2NpY3JjZXUtdXgxMTF6Ull3cHhhZ2NNNFRZSEdtRVgyQk1fRk8xbjR6UFRfLTBvb255QXNB?oc=5)
  <span class="source-tag" data-source-type="regulator">UK FCA</span>
  > FCA Finalises Cryptoasset Perimeter Guidance Ahead of the New UK Regime - The National Law Review.
 

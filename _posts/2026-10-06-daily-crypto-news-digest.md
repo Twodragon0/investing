@@ -107,7 +107,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 
 ### 🔵 규제/정책 (15건)
 
-*The derivatives regulator is proposing two rules meant to cover the waterfront of crypto activity and exchanges, as.*
 
 
 <div class="news-card-item news-sev-high">
@@ -162,7 +161,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 
 ### 🟣 DeFi (13건)
 
-*The planned 24/7 venue will offer dozens of tokenized U.S.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -216,7 +214,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 
 ### 📈 가격/시장 (8건)
 
-*Key price averages are on the verge of confirming a major bullish configuration for the first time in over a year.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -315,15 +312,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 
 ## 거래소 공지사항
 
-**1. [Binance Pay Exclusive: Get up to 20% Off Mobile Top-Ups in Selected Regions!](https://www.binance.com/en/support/announcement/detail/d1bd48f85bc344c2a7b0dbe21f4509a2)**
 Binance Pay Exclusive: Get up to 20% Off Mobile Top-Ups in Selected Regions. (20% 변동)
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**2. [Binance Lite Loan Promotion Extended: Enjoy Simple Borrowing with 50% Off Service Fee!](https://www.binance.com/en/support/announcement/detail/7996a0800e93462b8373ec9f9bc24d09)**
 Binance Lite Loan Promotion Extended: Enjoy Simple Borrowing with 50% Off Service Fee. (50% 변동) Binance, Lite 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**3. [Updates on International Virtual Asset Transfer Procedures in Brazil](https://www.binance.com/en/support/announcement/detail/21b54c9e5d1d44268cd2607aba8cd3a6)**
 Updates on International Virtual Asset Transfer Procedures in Brazil. Updates, International 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
@@ -332,8 +326,6 @@ Updates on International Virtual Asset Transfer Procedures in Brazil. Updates, I
 
 시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.
 
-- [Word of the Day: Test Your Knowledge on “Proactive Security Wins” to Unlock USDC Rewards!](https://www.binance.com/en/support/announcement/detail/41e531ead6b44b35aca9e6821b37baf3) (Binance)
-- [Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back](https://www.binance.com/en/support/announcement/detail/271b588ed6e64723a3e05399310d61b2) (Binance)
 
 ## 오늘의 인사이트
 

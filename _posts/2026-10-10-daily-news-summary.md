@@ -80,11 +80,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports](https://cointelegraph.com/markets/bitcoin-consolidates-crypto-weathers-ledger-theft-reports?utm_source=rss_feed&utm_medium=rss_tag_hacks&utm_campaign=rss_partner_inbound)**
-- **[Locus Finance exploit](https://defillama.com/hacks#Locus%20Finance)**
-- **[Set Protocol exploit: Rounding Error](https://defillama.com/hacks#Set%20Protocol)**
-- **[MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control](https://defillama.com/hacks#MakerDAO%20ETH-A%20Liquidation%20Keeper%20Bot)**
-- **[GoldPesa exploit: Incorrect Share Accounting](https://defillama.com/hacks#GoldPesa)**
 
 ## 교차자산 연관성 체크
 
@@ -118,8 +113,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 
 > 규제, ETF, 실적 등 주요 뉴스입니다.
 
-- [In a merger exchange, OpenWorld (OPNW) president acquires options on 216,355 and 469,568 shares. - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxOQVFBRzFGS3Y1LVg0OUV4TWNSMGpoeTg0UEdFLTkwNUMzNzRyZUVvVXBJRV9ZbXpxblVTUW14aExJUDZlb2M4TVZuRkIyamc0UDdoLURsSE5MQUZPdlRHZDgzTFFBNmpJQnBfelh6YlAwRW42U2JteXFjZDA5YzhmQl9BS3hlekFvRHhPdDd6QURuX3pESEgxTmZFWHFBRmJ5bmNXTkcxQVYxMHZ0NEVwV2ttZi1TYnY4MlE?oc=5)
-- [Corrected options received in OpenWorld's (OPNW) merger carry $2.18 and $6.51 exercise prices. - Stock Titan](https://news.google.com/rss/articles/CBMiugFBVV95cUxOcEpkWENCQTNTbUhBRU1CNDZuay1UQ0ZfY3JBZVB2bkR4Z2EtYU8zTTZGN0g1WEF1NElDcUxsVkR5Ny1ZN2QyaWNLd3REY0JOYUFjX1R5OHpnbVN3TjMtLU9jRTVJTU5vdmw3RnpYR1ZMaml0N3E4bmNmTDByclFxSk4wak9rY2hPcXFnbFFOd2p6Mmh2MlM5a2c2X0dpN192cXlmZXhPNXFaOGtWT3Fyckt2VHprSVNEQkE?oc=5)
 
 ---
 
@@ -128,9 +121,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (100건)
 
 **대표 헤드라인:**
-- Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers
-- Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI
-- Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/10/daily-crypto-news-digest/)
 
@@ -146,9 +136,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 ### 보안 리포트 (12건)
 
 **주요 보안 이슈:**
-- Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
-- Crypto lending rises again… but have they solved the risks?
-- US government moves $770M of seized Bitcoin to Coinbase Prime
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -161,9 +148,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 ### 소셜 미디어 동향 (25건)
 
 **화제 토픽:**
-- Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms - CoinDesk
-- Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are Reshaping The Market - The Bronx Daily
-- Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops - CoinDesk
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/10/10/daily-social-media-digest/)
 
@@ -171,7 +155,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 
 ## 주목할 소식
 
-- Fed Telegraphs Another Interest Rate Hike This Year | Economy | U.S. News - U.S. News & World Report
 
 ---
 
@@ -272,19 +255,10 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-10 - 시장 분석 뉴스 요�
 
 **해킹** (8건 연관)
 - Locus Finance exploit
-- Set Protocol exploit: Rounding Error
-- MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-- GoldPesa exploit: Incorrect Share Accounting
 
 **트럼프** (7건 연관)
-- Bitcoin steadies near $82,500 after Trump rules out Iran strike before…
-- Bitcoin Under Trump’s Second Round & Washington’s New Crypto Rules Are…
-- Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops -…
-- Trump Rules Out Diesel Export Ban—Crypto Punters Weigh Odds of One Before 2026…
 
 **비트코인(BTC)** (2건 연관)
-- Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
-- US government moves $770M of seized Bitcoin to Coinbase Prime
 
 
 ---

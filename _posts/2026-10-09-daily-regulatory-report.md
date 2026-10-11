@@ -9,8 +9,8 @@ source: "consolidated"
 lang: "ko"
 image: "/assets/images/generated/og-daily-regulatory-report-2026-10-09.png"
 permalink: "/regulatory-news/2026/10/09/daily-regulatory-report/"
-description: "글로벌 규제 동향 32건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 유럽 핵심: Federal Reserve Board announces enforcement action against American"
-excerpt: "글로벌 규제 동향 32건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 유럽 핵심: Federal Reserve Board announces enforcement…"
+description: "글로벌 규제 동향 32건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 유럽·미국 규제 기관 동향 분석 리포트."
+excerpt: "글로벌 규제 동향 32건 수집. 주요 테마: 규제/정책, 거래소, 정치/정책. 유럽·미국 규제 기관 동향 분석 리포트."
 image_alt: "글로벌 규제 동향 리포트 - 2026-10-09 - 규제 뉴스 요약 이미지"
 ---
 
@@ -53,12 +53,8 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-09 - 규제 뉴스 요�
 
 ## 1. 미국 규제 동향
 
-**1. [Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm)**
-The Federal Reserve Board on Thursday announced an enforcement action against American Express Company to address, among other things, the firm's failure to su
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
-**2. [Minutes of the Federal Open Market Committee, September 15-16, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm)**
-The Federal Reserve on Wednesday released the minutes of the Federal Open Market Committee meeting that was held on September 15–16, 2026.
 <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
 
 ---
@@ -109,84 +105,46 @@ The Federal Reserve on Wednesday released the minutes of the Federal Open Market
 
 ## 3. 아시아 규제 동향
 
-**1. [Banks,The FSA publishes the status of loans held by all banks as of the end of March 2026, based on the Financial Reconstruction Act](https://www.fsa.go.jp/en/regulated/npl/20261008.html)**
-The total amount of loans held by all banks as of the end of March 2026, based on the definition in the FRA (Act No.132 of 1998), is 8.4 trillion yen, staying almost the same as the level as of end-March 2024.
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
-**2. [International,Hosting Overseas Regulatory Officials at the Global Financial Partnership Center (29th Program: 15 Insurance Supervisory Authorities)](https://www.fsa.go.jp/en/glopac/20260825_29th/20260825_29th.html)**
-(*) As of September 2026, GLOPAC has conducted 29 training programs for overseas financial authorities, including initiatives under its predecessor, the Asia Financial Partnership Center (AFPAC),
 <span class="source-tag" data-source-type="default">Japan FSA</span>
 
-**3. [Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant](https://news.google.com/rss/articles/CBMipwFBVV95cUxNT2M3VndZVVJxWVE5bzMyNjBQek5PTFhBWFB3Z0FnTDFoNmZaamlLRTV4NldObE9STGZoOFNzWkNnVnlkQ1UtQVZQS0NCNThveVd2cXVVWm5ZdC0tbGdmWFA2Y1V6NFJiQjExdGwySkozdVRyNGNXQi1uZEtWSEVPSTdBRE5DZjVyOG5ORlFUU3RUbTZUdFQ5aF9SN3RsMHFmQzlfVUJhNA?oc=5)**
-Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**4. [Standard Chartered Targets Singapore With New Crypto Custody Push - The Coin Republic](https://news.google.com/rss/articles/CBMiswFBVV95cUxQVk9xWm85ZjBRNXFHNFdmU2N1TEZrX3BJU2Uxd3hqekNzZEFEYUJSbVdGRWtSNElQMldDRml5cXhVZmtQNGdTblZaLXQ1c2V4R1pUSU1vSThRY3BHVnF4c2FRRmEzcWdoRnJlMk5VXzNPLWtXUXJuN3dsUFpMQmNYdVZ6ZDZySDNaWUdWbWRjQjdKc1VvM0lOQ28ydENmTlNxdWhDdmphdUFKOW5xcWVxd1ViY9IBswFBVV95cUxQVk9xWm85ZjBRNXFHNFdmU2N1TEZrX3BJU2Uxd3hqekNzZEFEYUJSbVdGRWtSNElQMldDRml5cXhVZmtQNGdTblZaLXQ1c2V4R1pUSU1vSThRY3BHVnF4c2FRRmEzcWdoRnJlMk5VXzNPLWtXUXJuN3dsUFpMQmNYdVZ6ZDZySDNaWUdWbWRjQjdKc1VvM0lOQ28ydENmTlNxdWhDdmphdUFKOW5xcWVxd1ViYw?oc=5)**
-Standard Chartered Targets Singapore With New Crypto Custody Push - The Coin Republic.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**5. [Hyperliquid Labs Is Registered in Singapore, but the Blockchain Is a Different Story](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZmJ6djR6OVlHQXhOOXlleWtQTUFfaUE0VXdxUENMZ2FzeHkxSUIwazh1M1BFeTBLZUpFRmVaSlA3SHBmRFh5d3FqZi1sZXpFN3F4YmtVWEVRaWVkM1pRNDZQdDNLSWNmd2hLRnRQYjV0dk42cjRjSm1vMDZjMGJGV2Q2X2R3cks3?oc=5)**
-Hyperliquid Labs Is Registered in Singapore, but the Blockchain Is a Different Story.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**6. [Hyperliquid Faces Singapore Regulatory Questions Despite Local HQ: Report - CryptoPotato](https://news.google.com/rss/articles/CBMinwFBVV95cUxQaDY5SExzekpkZEJfeEJUbWJaNVp2ZWdvUWNlemkzaE9wSkxISG1HNmppcklfNERWU0FGSHZxQThscEFxMGxYaWRhNFFIejIzM2xrTGNvMU1HS3lRc3kwczhYLUhtV0c0YXRPUnhxRWpaQ3B3WWZRZ2E2Vzh0YjVBTmh6VUU5ZlZnNnktYWtrYWFsbVZxbUJPd0d1d1RWWDg?oc=5)**
-Hyperliquid Faces Singapore Regulatory Questions Despite Local HQ: Report - CryptoPotato.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**7. [Singapore-based Hyperliquid lacks MAS license, raising crypto-derivatives regulatory questions. - Pluang](https://news.google.com/rss/articles/CBMikgFBVV95cUxOR2FYSF9CTm9vQXJqUExyRFBibTJmZ3FxYkNpVy1pbzd4MzNXTmIwU19qcmh4S3lkZnlCYnlCRGtNT2F6NWp0Snh0TzVXc1NINm5RU3hxclZzN0xrQkRrNHBSeWsxWW81SW5nWVNDdGxBR1lScUVodXh6NVF1MWZ3azRaS3lraDNJUnhZN0F4Z3IwQQ?oc=5)**
-Singapore-based Hyperliquid lacks MAS license, raising crypto-derivatives regulatory questions.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**8. [Hyperliquid confirms Singapore base as MAS says it falls outside its remit - Crypto News](https://news.google.com/rss/articles/CBMid0FVX3lxTE5TazZKUE5lcWRIWGpZcFB2OXZZSkhPLVVXTzZhWlNMT0NoY1RZb2FfWlNEeXY1V0k5U0Ita2k5aFJBS21BS1BaSlkzVjBCb0hhUk01VXpXeEowdjZXZjVrVUVMbmhlZ08zaFJZNXViY0h4Y05zX1lR?oc=5)**
-Hyperliquid confirms Singapore base as MAS says it falls outside its remit - Crypto News.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
-**9. [Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside Its Jurisdiction - Blockhead](https://news.google.com/rss/articles/CBMizAFBVV95cUxOSml6UzlkdEZRSEdSbVNPQy0xV2h2d1ZnTTJjVFFPdi1xc3NaUWJ4SFRxOVFHWkc4dUlKQW5wOFJUTzdnRWdudWVIVzh1VzFiN2dzYk8yQWJtNnhEVzM1OVpvZlptaV91ZVFoQTBUaUwyRmtFNXZHRTdhcERZZVRnaEQ1Yzh1ZXZxbkpkcGY0WEVpNHRaSWRmX1VJdTlzNnc2MGdTUS04aEpybHNYbmpwRDdxNWxwTnVCaTJ2bG5XVUIzS2lTdEFUTFBsUm4?oc=5)**
-Hyperliquid Confirms Singapore Registration as MAS Says Exchange Falls Outside Its Jurisdiction - Blockhead.
 <span class="source-tag" data-source-type="default">MAS Singapore</span>
 
 ---
 
 ## 4. 유럽 규제 동향
 
-**1. [ESMA gives EU crypto platforms 3 months to drop non-MiCA stablecoins such as USDT - CoinDesk](https://news.google.com/rss/articles/CBMizgFBVV95cUxPY3hSOE8xazBBTjJ4TUMtQXo3YWpyOGlwcEtWaXJtTE9XYXI0SGVjYWxDaTlFYXJFTHVteTVtU3dvWmxUdVE1MVMzazVqczJSaTlPNktkZkFWSGNMQU5aTGlzTFlkZmxaM3ZTd1hCb1ZIRHpyMXM4cUpFTjJGcHNtdm9CLWlBRTFEVzJsNnRyOTBJMG1HNDMtcjdQTVR2QXVyU2o0MlhKU3BZVy1IcDROcE5WYTJuaFlXd2IxUzdnc2JTakpCdnlmYlRyRS0yUQ?oc=5)**
-ESMA gives EU crypto platforms 3 months to drop non-MiCA stablecoins such as USDT.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**2. [ESMA prioritizes investor protection in crypto - Investment Executive](https://news.google.com/rss/articles/CBMioAFBVV95cUxPUl85TFduR3V2MFNDT0lZU21iVHJHS2hDaHg4LTdlRkdxQnlXamJrR3NCTkF5dTFRODFBZzZEV2E2VnU0aUhZanFjdXVVOHR2elFiZ0ZJSVhCWDNudWNKZjhJWXF2VVRmdEd2V3pnNFpUNEtUbjdsQzhjS3M0QVZDMnNJenVJNkx2RmhrY05CNWJjcjRXb3BJdlItdTZ0WUxR?oc=5)**
-ESMA prioritizes investor protection in crypto - Investment Executive.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**3. [ESMA sets USDT deadline for January 8, 2027 - CryptoTicker](https://news.google.com/rss/articles/CBMibkFVX3lxTE5TakxiYWk0RHItM2RCLVM1NV9lUzgxTmdud0E5T1FQT1pseThzQ0pPeEszbEpMQ2p0ajdLcWRUVnhlejNuT2tJTmx5aGZHN2V4bGhZMjR2RGpzeEloZEJKaEpOUHNYdmJEOWpEM01R?oc=5)**
-ESMA sets USDT deadline for January 8, 2027 - CryptoTicker.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**4. [MiCA Stablecoin Deadline: ESMA Gives EU Crypto Platforms 3 Months to Remove USDT](https://news.google.com/rss/articles/CBMidkFVX3lxTE4xVzRKQlBlOWZ0NElDWXlJdDJPaF9ZalhlX1Z5cHlrTEN1ekVvYkZVWEw2UkY1aVY0Q0N0U1Z2UEN5Wk9vVlRHb21OODBvd3Q3ZEtKQU9mNmNRWmtMckEwS01FOXdqdVJWZXRtNGpyVU9CQ0pzYXc?oc=5)**
-MiCA Stablecoin Deadline: ESMA Gives EU Crypto Platforms 3 Months to Remove USDT.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**5. [NEWS: ESMA, AMLA urge crackdown on unauthorised stablecoins - AML Intelligence](https://news.google.com/rss/articles/CBMinwFBVV95cUxPWUh4SGthYVN4d2diT1A1VHd1QVppUTNPeVN0QkZwMlNLNU1keGxwekNicU5DODZ2ZFZkcTBOUjdvR2drUE9TZ29MR09ZSDllV191OUFHMzN1OGZGc3dSRXpCdzN0RkxaXzFSN1VUUjcyNGtqbzZRb2Z0U1BmUFhDZ2VENHZDd1lfZGdDcVY0VzJvTzdaTmlNNFppUmY0c0k?oc=5)**
-NEWS: ESMA, AMLA urge crackdown on unauthorised stablecoins - AML Intelligence.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**6. [ESMA Sets 8 January 2027 Deadline for Non-Compliant Stablecoins - Altcoin Buzz](https://news.google.com/rss/articles/CBMilAFBVV95cUxOTm9id1dERzk3YWZnQ1gtcHhEbE9NcUdjM0RaelBtLS1JenctbjYwQzExOHloOEttYTVnWTE5RlVDWktJMzhDcjBmMmJyRml5QVM1LWZUeThwRHkwaDdtSHZUcVV0SzZ1aHpRZGlYNFN5TVc5bjlzZFQzNUVVWjhjd2l0cGRtTFRDWWtTeWJ2ckhuVkRa?oc=5)**
-ESMA Sets 8 January 2027 Deadline for Non-Compliant Stablecoins - Altcoin Buzz.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**7. [ESMA directs crypto firms to cease providing services related to non-MiCA-compliant stablecoins - FX News Group](https://news.google.com/rss/articles/CBMi3wFBVV95cUxPRmk3V1ZmdHpWaEZTM1pXYXJ2X1VVazB4SkFYMlVvX1pRWEVmb1Vnb0RkY1pqbHc0QXRUWXhaTzUxRDZhZk9POVMtUkl4RjhQOWRITC1NUnNjRmViZVFUNklkSmxSUmU3eFc2a05OUjZWNGV4bEZLWkhEYW5kRmNZS1pWbDFKdnNsXzNXQTFRWmVTSkk5ZktYa3pYX29oTWFuUzJWMExkNEktYnpGbHhYTk9QNXZDdHZPMGRBMTVjT28xclJNZjRwenpLbURONmVycm56ZVowVFV1MWRhZFFv?oc=5)**
-ESMA directs crypto firms to cease providing services related to non-MiCA-compliant stablecoins - FX News Group.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**8. [ESMA gives crypto firms 3 months to drop some stablecoins - Crypto News](https://news.google.com/rss/articles/CBMifkFVX3lxTE5aR3hVeDdzX21hTWJuNXZGRk45MTF6YlBYMUE1TGFiZEhGOWVnU1ZKTFFXOU1nUzJXWElOZFo2ZEV1cmFuQXp1ZGM5MUFXWTZWUVcxN2VBTUlCaDdlLUhvVUhMSDNjLVJGZHF6cTdseVdKZnZ4Y0x2RkZKa0Etdw?oc=5)**
-ESMA gives crypto firms 3 months to drop some stablecoins - Crypto News.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**9. [ESMA Expects MiCA-Authorised Crypto Firms to Stop Non-Compliant Stablecoin Services - LeapRate](https://news.google.com/rss/articles/CBMiywFBVV95cUxPYVlzZUtteExScFJtbDZVSW5kaFQtcXlCNEtra1lleGRWZjF5UVh6X2VXNlZ3V01FM2w5UmZrU052V0RBb2VsS01NWl9uQzBjcHZUb08wb0Z3cHpVRjJ2S0tvcVpzbmFrOVFYQlpsa1h3eHN1cE1rd25uakplYVFaZ0ZELWdhb0JidDRIQlBQb0FuRkh6eW54cTFSZ1VNUXE5X3FCUldRdFYyU3lxMGNmQU5FTm4xZ09tNDRrVWd6RGlwVHRCN0pBcjdZVQ?oc=5)**
-ESMA Expects MiCA-Authorised Crypto Firms to Stop Non-Compliant Stablecoin Services - LeapRate.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**10. [MiCA: ESMA triggers a three-month countdown for platforms - Cointribune](https://news.google.com/rss/articles/CBMitAFBVV95cUxNNFVyc3lpV3R4Y293eXQ5MnFKU0s5ZHNFTlY1Y05WaDl2cFRtXzk5Q1NvOTZMbnlKVWVmMGRCdGd6N0tGZnBVLU5lS2pWSzdlZUtkVjRFTVR0Rnhxci01Smx3dndrdnRYSV9ZTjBFZEphNE9vay1JanE2UFRsaU1jemxjOUtLOEVTR3cwbkN1UzIxQWdjbTFKVFpUdWpVRkZwclJwRGFwVngtUER6YVZjeC1UcXU?oc=5)**
-MiCA: ESMA triggers a three-month countdown for platforms - Cointribune.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
 ---
@@ -199,7 +157,6 @@ MiCA: ESMA triggers a three-month countdown for platforms - Cointribune.
 전체의 75%로 압도적 비중을 차지합니다. 주요 출처: EU ESMA(10건), 한국 금융규제 뉴스(6건), MAS Singapore(5건). 관련 지역: 유럽, 한국, 아시아, 미국.
 
 **주요 동향:**
-- [Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm)
  <span class="source-tag" data-source-type="regulator">Federal Reserve</span>
  > The Federal Reserve Board on Thursday announced an enforcement action against American Express Company to address,.
 - [馬 하원 금융위원장 "SEC·CFTC 가상자산 규제만으로 부족…클래리티법 처리 기대" - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE9IVnJ4UUo3TmtJQ21uY3IwU0tuRlNUSi1ubDE1WWpuR0p1THBsQkxTZ1hzVUNlcnBPRllkU0Z0V2tKWG5xUFBILTdYdV9VLUJR?oc=5)
@@ -244,13 +201,10 @@ MiCA: ESMA triggers a three-month countdown for platforms - Cointribune.
 주요 출처: MAS Singapore(3건), Japan FSA(1건).
 
 **주요 동향:**
-- [Banks,The FSA publishes the status of loans held by all banks as of the end of March 2026, based on the Financial Reconstruction Act](https://www.fsa.go.jp/en/regulated/npl/20261008.html)
  <span class="source-tag" data-source-type="default">Japan FSA</span>
  > The total amount of loans held by all banks as of the end of March 2026, based on the definition in the FRA (Act No.132.
-- [Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant](https://news.google.com/rss/articles/CBMipwFBVV95cUxNT2M3VndZVVJxWVE5bzMyNjBQek5PTFhBWFB3Z0FnTDFoNmZaamlLRTV4NldObE9STGZoOFNzWkNnVnlkQ1UtQVZQS0NCNThveVd2cXVVWm5ZdC0tbGdmWFA2Y1V6NFJiQjExdGwySkozdVRyNGNXQi1uZEtWSEVPSTdBRE5DZjVyOG5ORlFUU3RUbTZUdFQ5aF9SN3RsMHFmQzlfVUJhNA?oc=5)
  <span class="source-tag" data-source-type="default">MAS Singapore</span>
  > Hyperliquid Confirms Singapore Base but Says It Has No MAS License - The Defiant.
-- [Singapore-based Hyperliquid lacks MAS license, raising crypto-derivatives regulatory questions. - Pluang](https://news.google.com/rss/articles/CBMikgFBVV95cUxOR2FYSF9CTm9vQXJqUExyRFBibTJmZ3FxYkNpVy1pbzd4MzNXTmIwU19qcmh4S3lkZnlCYnlCRGtNT2F6NWp0Snh0TzVXc1NINm5RU3hxclZzN0xrQkRrNHBSeWsxWW81SW5nWVNDdGxBR1lScUVodXh6NVF1MWZ3azRaS3lraDNJUnhZN0F4Z3IwQQ?oc=5)
  <span class="source-tag" data-source-type="default">MAS Singapore</span>
  > Singapore-based Hyperliquid lacks MAS license, raising crypto-derivatives regulatory questions.
 

@@ -31,6 +31,7 @@ from common.markdown_utils import (
 from common.post_generator import build_dated_permalink
 from common.rss_fetcher import fetch_rss_feed
 from common.summarizer import ThemeSummarizer
+from common.summary_quality import contains_english_clause
 from common.translator import get_display_title, translate_to_korean
 
 logger = setup_logging("collect_regulatory")
@@ -282,7 +283,13 @@ def build_region_section(
                     break
             else:
                 desc_text = desc_text[:200].rsplit(" ", 1)[0] if len(desc_text) > 200 else desc_text
-            card_lines.append(desc_text)
+
+            if contains_english_clause(desc_text):
+                ko_trans = translate_to_korean(desc_text)
+                if ko_trans and ko_trans != desc_text and not contains_english_clause(ko_trans):
+                    card_lines.append(ko_trans)
+            else:
+                card_lines.append(desc_text)
         card_lines.append(html_source_tag(source))
         lines.append("\n".join(card_lines))
 
@@ -850,19 +857,36 @@ class RegulatoryCollector(BaseCollector):
         _desc_ko = f"글로벌 규제 동향 {len(all_items)}건 수집. "
         if _top_themes:
             _desc_ko += f"주요 테마: {', '.join(_top_themes)}. "
-        _reg_raw_title = (all_items[0].get("title_ko") or all_items[0].get("title", "") if all_items else "").strip()
-        _reg_top_title = translate_to_korean(_reg_raw_title) if _reg_raw_title else ""
-        if not _reg_top_title:
-            _reg_top_title = _reg_raw_title
-        if region_counts and _reg_top_title:
-            _reg_desc_region = region_counts.most_common(1)[0][0]
+
+        _reg_desc_region = region_counts.most_common(1)[0][0] if region_counts else ""
+        _target_item = None
+        if _reg_desc_region:
+            for itm in all_items:
+                if itm.get("region") == _reg_desc_region:
+                    _target_item = itm
+                    break
+        if not _target_item and all_items:
+            _target_item = all_items[0]
+
+        _reg_top_title = ""
+        if _target_item:
+            _reg_top_title = (_target_item.get("title_ko") or "").strip()
+            if not _reg_top_title:
+                _raw = _target_item.get("title", "").strip()
+                _trans = translate_to_korean(_raw)
+                if _trans and _trans != _raw and not contains_english_clause(_trans):
+                    _reg_top_title = _trans
+
+        if _reg_desc_region and _reg_top_title:
             _reg_top_title = _reg_top_title[:70].rsplit(" ", 1)[0] if len(_reg_top_title) > 70 else _reg_top_title
             _desc_ko += f"{_reg_desc_region} 핵심: {_reg_top_title}"
         elif _reg_top_title:
             _reg_top_title = _reg_top_title[:70].rsplit(" ", 1)[0] if len(_reg_top_title) > 70 else _reg_top_title
             _desc_ko += f"핵심: {_reg_top_title}"
-        else:
+        elif region_counts:
             _desc_ko += f"{len(region_counts)}개 지역 규제 기관 동향 분석"
+        else:
+            _desc_ko += "글로벌 금융 규제 및 정책 동향 분석"
         _desc_ko = _desc_ko[:160]
 
         filepath = self.create_post(

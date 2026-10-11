@@ -50,12 +50,8 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-05 - 규제 뉴스 요�
 
 ## 2. 유럽 규제 동향
 
-**1. [ESMA proposes changes to strengthen and simplify EU crypto rules - Digital Watch Observatory](https://news.google.com/rss/articles/CBMicEFVX3lxTE1kN0xybEJ2YS1oUjA1YWJPdVZmLS1mdFV6UzNnVjlBb2ozVFJtVVp2QU1ZTlhWcEhMekVYa2pXUGUxQ1pvNVk1N0E1Z3hjZlRNb0VpS05tM2tDcFZoUmJDRjg4VWJBd2lGdzlaSFBUMGg?oc=5)**
-ESMA proposes changes to strengthen and simplify EU crypto rules - Digital Watch Observatory.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
-**2. [EU May Block Crypto Firms From Holding Non-Compliant Stablecoins - Altcoin Buzz](https://news.google.com/rss/articles/CBMilgFBVV95cUxNdV9zNVJ6SzVnM2prZWZKc1NNLXI4WUlRZnUwaTRkNGhOLXlpVmVrLWhJc0RHZlhIWklBYzRzaHdKZTB5NW5YekFPdVczOEsyc2huOVN5SzhuUnB2RGpkcS11NGdMX3NvTjl1QjlaN2ZmbXprRWkzRTJ1ZnpnUWFBdjYwYWdGcWhWTGJTdUxmcmFMM014ZkE?oc=5)**
-EU May Block Crypto Firms From Holding Non-Compliant Stablecoins - Altcoin Buzz.
 <span class="source-tag" data-source-type="regulator">EU ESMA</span>
 
 ---
@@ -71,7 +67,6 @@ EU May Block Crypto Firms From Holding Non-Compliant Stablecoins - Altcoin Buzz.
 - [해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집 - 블루밍비트](https://news.google.com/rss/articles/CBMiUEFVX3lxTE11RFRyRm4wQ1YybkVldmEtdE45ekZ4UjE5YzBXZkhXUTZHZ3RDSDFfVmlsRG5IZlVUN2ZLQXlHQXBrekxGUjdFNnNROUJLX05h?oc=5)
  <span class="source-tag" data-source-type="default">한국 금융규제 뉴스</span>
  > 해킹 피해 확산…금융위, 디지털자산기업 포함 금융권 CEO 긴급 소집.
-- [ESMA proposes changes to strengthen and simplify EU crypto rules - Digital Watch Observatory](https://news.google.com/rss/articles/CBMicEFVX3lxTE1kN0xybEJ2YS1oUjA1YWJPdVZmLS1mdFV6UzNnVjlBb2ozVFJtVVp2QU1ZTlhWcEhMekVYa2pXUGUxQ1pvNVk1N0E1Z3hjZlRNb0VpS05tM2tDcFZoUmJDRjg4VWJBd2lGdzlaSFBUMGg?oc=5)
  <span class="source-tag" data-source-type="regulator">EU ESMA</span>
  > ESMA proposes changes to strengthen and simplify EU crypto rules - Digital Watch Observatory.
 

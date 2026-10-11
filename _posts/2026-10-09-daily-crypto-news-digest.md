@@ -159,7 +159,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 
 ### 🟣 DeFi (22건)
 
-*One self-custodial platform to power Earn, Swaps, Predictions and Perps on Decrypt, as it builds out its financial.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -214,7 +213,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 
 ### 🔵 규제/정책 (15건)
 
-*A draft bill would exempt the first €500 of annual gains, as crypto tax rates across Europe run from Cyprus's 8% to.*
 
 
 <div class="news-card-item news-sev-high">
@@ -321,8 +319,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 
 ## 거래소 공지사항
 
-**1. [MET Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers](https://www.binance.com/en/support/announcement/detail/473fb8d21dfe480a93eefc0cf7a8839f)**
-MET Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 
@@ -330,10 +326,6 @@ MET Trading Tournament: Trade to Share Up to 400 BNB Token Vouchers.
 
 시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.
 
-- [New Users Exclusive: Subscribe to USDT Simple Earn Flexible Products to Enjoy 30% Bonus APR!](https://www.binance.com/en/support/announcement/detail/1bc71223e32b478b8c0995dab47ea57d) (Binance)
-- [Binance Alpha Trading Competition: Trade Zest Protocol (ZEST) and Share $200K Worth of Rewards](https://www.binance.com/en/support/announcement/detail/c0d20c76f1464506b607c66ae56dd726) (Binance)
-- [Next Stop - BBW: Bring Qualified Referrals to Earn Your Spot at Binance Blockchain Week 2026!](https://www.binance.com/en/support/announcement/detail/d51ff145a65e49babb4478052cf495d0) (Binance)
-- [Africa Exclusive: Merchant Referral Campaign - Earn 50 USDT Each on Binance P2P](https://www.binance.com/en/support/announcement/detail/1fb55a34145a4f4b8f82407a766a5a2b) (Binance)
 
 ## 오늘의 인사이트
 

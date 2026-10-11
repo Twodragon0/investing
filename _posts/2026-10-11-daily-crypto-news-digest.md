@@ -61,14 +61,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 ### 긴급 이슈
 
 - 암호화폐 시장 급락 3가지 이유…다음은?
-- Ledger Probes Potential Theft of $87M in User Funds Tied to Crypto Wallet Reseller
-- Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports
 
 ### 주요 이슈
 
 - 비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들
-- Blockchain.com seeks U.S. approval for prediction markets, crypto derivatives tr
-- Blockchain.com Seeks Approval for US Prediction Markets and Crypto Derivatives
 - 외 11건
 
 ### 투자자 체크포인트
@@ -190,7 +186,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 
 ### 🟣 DeFi (16건)
 
-*A National Assembly committee adopted amendments taxing stablecoin swaps and crypto exits by wealthy holders, then.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -300,7 +295,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (10건)
 
-*Hardware wallet maker Ledger probes losses tied to reseller CryptoBilis, as researchers separately estimate more.*
 
 
 <div class="news-card-item news-sev-high">
@@ -351,15 +345,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 
 ## 거래소 공지사항
 
-**1. [Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers](https://www.binance.com/en/support/announcement/detail/f99ead6436ba4fb8ad92abc9d2fdce5c)**
-Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**2. [Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI](https://www.binance.com/en/support/announcement/detail/56476c15963b4c0cb113ab0e22613c5c)**
-Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI (2026-10.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
-**3. [Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09](https://www.binance.com/en/support/announcement/detail/0dfee98051814fccb9f18ce49b8425bb)**
 Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09. BICO, CVC 관련 보도.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
@@ -368,8 +357,6 @@ Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09. BICO
 
 시장 정보 가치가 낮은 거래소 홍보성 공지는 아래처럼 별도 분리했습니다.
 
-- [Binance Alpha Trading Competition: Trade Stable (STABLE) and Share $200K Worth of Rewards](https://www.binance.com/en/support/announcement/detail/008b71e5fc82428a9b5947fbc3757791) (Binance)
-- [Binance Earn: Enjoy Up to 5% APR on USDC Flexible Products — Exclusive 5.5% APR for VIP Users with 200,000 USDC Tier](https://www.binance.com/en/support/announcement/detail/aa50d46ffef448f98c42f9272fcee663) (Binance)
 
 ## 오늘의 인사이트
 

@@ -84,11 +84,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 
 > 즉시 확인이 필요한 긴급 뉴스입니다.
 
-- **[Aave founder says V3 unaffected after third-party adapter exploit drains $305K](https://cointelegraph.com/news/aave-v3-third-party-adapter-exploit-305k?utm_source=rss_feed&utm_medium=rss_tag_hacks&utm_campaign=rss_partner_inbound)**
-- **[FlashLoopAdapter exploit: Improper Access Control](https://defillama.com/hacks#FlashLoopAdapter)**
-- **[NEAR Intents exploit: Bridge Logic Flaw](https://defillama.com/hacks#NEAR%20Intents)**
-- **[SKYDAO exploit: Swap Logic Flaw](https://defillama.com/hacks#SKYDAO)**
-- **[Fake GIWA Bridge exploit: Impersonation Scam](https://defillama.com/hacks#Fake%20GIWA%20Bridge)**
 
 ## 교차자산 연관성 체크
 
@@ -118,10 +113,8 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 ## 정치인 워치
 
 - 2026-10-04 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 10건 — SEC 내부자 거래 8건, 중앙은행 2건
-- 1. Form 4\ VerifyMe, Inc. Insider Trading Activity - Stock Titan [Form 4] VerifyMe, Inc.
 
 - 2026-10-04 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 10건 — SEC 내부자 거래 8건, 중앙은행 2건
-- 1. Form 4\ VerifyMe, Inc. Insider Trading Activity - Stock Titan [Form 4] VerifyMe, Inc.
 
 [상세 보기](https://investing.2twodragon.com/political-trades/2026/10/04/daily-political-trades-report/)
 
@@ -131,8 +124,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 
 > 규제, ETF, 실적 등 주요 뉴스입니다.
 
-- [Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm)
-- [Federal Reserve Board announces approval of application by Fleur Capital Corporation](https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm)
 - [이재명 정부,‘투자 속도전’ 승부수…규제 대폭 완화 - 대한경제](https://news.google.com/rss/articles/CBMidEFVX3lxTE05b1hLX1Y1ZjFqUnNxT0JHSDU3cFVNSHgtTVYyYmRtMzR5R0NKWHVzRlRhNHdLX2RuSml1dnFVMVM4Y2lQOFJzcUFMM1FmRGR3SHd5SGpIWDJsNTBfTk9iY2E0OWR1U29QTjhrVlR2Sm8wQlZS?oc=5)
 
 ---
@@ -142,9 +133,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (0건)
 
 **대표 헤드라인:**
-- Updates on International Virtual Asset Transfer Procedures in Brazil
-- Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03
-- Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/04/daily-crypto-news-digest/)
 
@@ -160,9 +148,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 ### 규제 동향 (17건)
 
 **주요 규제 이슈:**
-- SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws
-- Statement on Proposal to Address the Custody of Crypto Assets Under the Investment Advisers Act and the Investment Company Act
-- Roller Coaster Ride: Statement on Proposed Adviser and Regulated Fund Custody Rules; Crypto Custody Rules
 
 [상세 보기](https://investing.2twodragon.com/regulatory-news/2026/10/04/daily-regulatory-report/)
 
@@ -176,9 +161,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 ### 보안 리포트 (2건)
 
 **주요 보안 이슈:**
-- Here’s what happened in crypto today
-- NEAR Intents recovers entire stolen $3.8M after ultimatum to exploiter
-- Crypto’s billions are back, but the premiums aren’t
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -192,7 +174,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 
 **화제 토픽:**
 - 화면에 남은 심벌을 해석하는 암호 화폐 포트폴리오 유지 기능 안내 - Calgary Roughnecks
-- Trump’s potential AI czar, Jay Clayton, helped pioneer the SEC’s crypto crackdown - CoinDesk
 - 이재명 정부,‘투자 속도전’ 승부수…규제 대폭 완화 - 대한경제
 
 [상세 보기](https://investing.2twodragon.com/social-media/2026/10/04/daily-social-media-digest/)
@@ -201,7 +182,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 
 ## 주목할 소식
 
-- Binance Will Support Scheduled Upgrade for Stock Trading Services - 2026-10-03
 
 ---
 
@@ -324,22 +304,10 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-04 - 시장 분석 뉴스 요�
 ### 연관 뉴스 클러스터
 
 **해킹** (15건 연관)
-- NEAR Intents recovers entire stolen $3.8M after ultimatum to exploiter
-- Aave founder says V3 unaffected after third-party adapter exploit drains $305K
-- Zano exploiter minted more than a quadrillion fUSD before blockchain rollback
-- NEAR Intents says it’s identified the hacker, gives 48-hour ultimatum
 
 **AI(인공지능)** (4건 연관)
-- Binance Lifestyle Venezuela Cashback Campaign: Spend 5 USDT, Get 2 USDT Back
-- Furious debate about THORChain vs NEAR shows idealism has limits
-- Another Fed Official Suggests Next Rate Increase Can Wait
-- Trump’s potential AI czar, Jay Clayton, helped pioneer the SEC’s crypto…
 
 **연준(Fed)** (5건 연관)
-- SEC Proposal Would Address How Investment Advisers and Funds Can Custody…
-- Federal Reserve Board announces it will extend, until November 4, the comment…
-- Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc
-- Federal Reserve Board announces approval of application by Fleur Capital…
 
 
 ---
