@@ -14,7 +14,6 @@ description: "생활비 비싸지는데 의원들은 주식으로 돈 번다?”
 image_alt: "정치인 거래·정책 리포트 - 2026-10-12 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-12.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-12** 정치권 핵심 이슈: **“생활비 비싸지는데 의원들은 주식으로 돈 번다?”…美 중간선거 덮친 ‘부패 심판론’[나우,어스**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **2건** (미국 의회 거래 1건, 트럼프 정책 1건)을 종합 정리합니다
