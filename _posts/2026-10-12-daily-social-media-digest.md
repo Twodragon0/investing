@@ -58,7 +58,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-12 - 소셜 미디어 뉴스 요�
 ---
 
 
-
 ## 주요 소셜 미디어 트렌드
 
 **1. [게임 소개에 담긴 장르 표현을 풀어보는 암호 화폐 전망 2024 - Calgary Roughnecks](https://news.google.com/rss/articles/CBMizgFBVV95cUxNMlF5a21qYmtkYnlEeFBGUzBrZDE5ak1wdTFZSTRQa0ZjNGYyT0gxa2tkZzNQU1dXQ3BKVmNjT0xvNXpPcHppWHZPSGs3QTVER3RIc3dUN0FzUWhVcnI3UnoxSUo3YnBMTkkxR0d1c2czMmtqa3NGRTVSWG1qa2U3bi1JbVFWQ1dQQkJhYVVzSmtHVF9TN2ZiVGl5eGUxUFV5SHZVaUFUZkZNZi02TGV5UDhXYjk3dzBQY0ZKdVRiVzJaNjV6em1rcDkyWUwxQQ?oc=5)**
