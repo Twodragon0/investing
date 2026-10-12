@@ -2776,5 +2776,18 @@
     },
     "btc_price": 82419.9921875,
     "recorded_at": "2026-10-09T19:19:44Z"
+  },
+  {
+    "date": "2026-10-13",
+    "composite_score": 57.0,
+    "verdict": "강세",
+    "confidence": "high",
+    "signal_scores": {
+      "공포·탐욕 지수": 0.457,
+      "VIX 변동성": 0.7763,
+      "매크로": 0.4412
+    },
+    "btc_price": 82520.8671875,
+    "recorded_at": "2026-10-12T22:02:11Z"
   }
 ]
