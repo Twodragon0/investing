@@ -7,7 +7,7 @@ tags: ["weekly-digest", "summary", "market-analysis"]
 keywords: "weekly-digest, summary, market-analysis"
 source: "auto-generated"
 lang: "ko"
-image: "/assets/images/generated/og-weekly-investment-digest-2026-10-12-2026-10-12.png"
+image: "/assets/images/generated/news-summary-weekly-2026-10-12.png"
 description: "BTC $83,534, 탐욕(61), KOSPI 6,625.93-2.62%, 118건 분석 주간 다이제스트. 시장 분석 38건, DeFi 16건, 블록체인 8건"
 excerpt: "이번 주 (10월 05일 10월 12일) 투자 시장의 주요 동향과 핵심 이슈를 종합 분석합니다. 기간: 10월 05일 10월 12일"
 image_alt: "주간 투자 다이제스트 - 2026년 10월 12일 - 시장 분석 뉴스 요약 이미지"
