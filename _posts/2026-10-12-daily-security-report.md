@@ -16,29 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 11건 분석. 주목 사건: **[Security] Coldcard says it’s investigating how phishing lin**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Locus Finance exploit 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 11건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (11건): security, exploit, improper 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (5건): exploit, bridge, logic 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🔷 이더리움** (6건): exploit, improper, control 생태계 동향 (6건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Locus Finance exploit
-- [Security] Set Protocol exploit: Rounding Error
-- [Security] MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-
-### 투자자 체크포인트
-
-- 보안 사건 11건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 11건

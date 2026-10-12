@@ -41,39 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어 - 65건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 동향 주시</li><li>🟣 <strong>DeFi</strong>: 12건 수집</li><li>🏦 <strong>거래소</strong>: 파생상품 관련 7건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1FeXlvVkNtZWFlbHhkdWljVWVTSFlUMHBweFAzb01OMlBYcndKeWdpY3I0dURVTDlVbkt1YkhlQlRWTE1DYk5iYTNkRGJmeE1DaTdtSWIzZDVodmkxWE13Wkx0THFLVU5qSjRuRkJpR2h4bXc?oc=5">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 Investing.com 한국어</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1DYkp2aFJla1VDeVZiNDlyR0o4SVR5VzNOLXpkaFVnQVB4Ykg0Y3phSm9FMVpkal9VekRPZUcySkVJcnlPNHBsUlpIMW40X21ibFNXNk1mSTJLb2FRZ0pUdlNoSjRPTmwxNEZxYw?oc=5">D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온</a> <span class="p0-desc">[D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' 데일리비즈온</span></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOY2JRN0NzUktSR2lWT2xQdFpucGhMTVhUOXJHd25QY3hMV2dLSU1KTDZtRWlWbzEzWEI3cmZ2eUFZZXpJRkZNOTQzQU5Ja0IzWkRRUUdOMTR0cjlUR1ppUjlhNUJxd3kxZGZEdWxFaXJmUHozeWtHUTdZVjNNVHVTVmY2OWFzNnBZYlViYUlSYWtuTC1XTmc?oc=5">190억 달러 규모의 폭락 사태 이후 1년이 지난 지금, 암호화폐는 새로운 현실에 직면해 있습니다. - Vietnam.vn</a> <span class="p0-desc">190억 달러 규모의 폭락 사태 이후 1년이 지난 지금, 암호화폐는 새로운 현실에 직면해 있습니다. Vietnam.vn</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 65건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (22건): 비트코인, 암호화폐, 달러 관련 (22건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (15건): 암호화폐, 달러, 반등 가격 변동 (15건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🟣 DeFi** (12건): tokenized, markets, cftc DeFi 동향 (12건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어
-- D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온
-- 190억 달러 규모의 폭락 사태 이후 1년이 지난 지금, 암호화폐는 새로운 현실에 직면해 있습니다. - Vietnam.vn
-
-### 주요 이슈
-
-- 비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들
-- Blockchain.com Seeks Approval for US Prediction Markets and Crypto Derivatives
-- Here’s what happened in crypto today
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Cointelegraph(14건), Decrypt(12건), CoinDesk(10건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- 2026-10-12 암호화폐 시장 65건 분석 — 핵심 테마: 비트코인, 가격/시장, DeFi
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

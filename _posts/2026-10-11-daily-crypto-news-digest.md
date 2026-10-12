@@ -42,38 +42,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-11 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐 시장 급락 3가지 이유…다음은? - 89건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 16건 수집</li><li>🔵 <strong>규제/정책</strong>: 14건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1saGV4V3kxaTg5cGVSd2l5aV81SHJpSjh1WWJ1S3JCUEhlR2k4UUxpN21wWXFYeDFfRnZNcENFLVAyM3NLUjY5RS15bm1uZXljalFMMVNnOEdXbS1vU1hDdGhYWHB4ZVdLVElpOVBiQ04?oc=5">암호화폐 시장 급락 3가지 이유…다음은?</a> <span class="p0-desc">암호화폐 시장 급락 3가지 이유…다음은? BeInCrypto</span></li><li><a href="https://decrypt.co/380582/ledger-probes-87m-theft-crypto-wallet-reseller">Ledger Probes Potential Theft of $87M in User Funds Tied to Crypto Wallet Reseller</a></li><li><a href="https://cointelegraph.com/markets/bitcoin-consolidates-crypto-weathers-ledger-theft-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Bitcoin consolidates near $82.5K as crypto weathers Ledger theft reports</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **89건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
+- 2026-10-11 암호화폐 핵심 뉴스: 비트코인, 8만2천 달러로 하락…금리 압박에 주간 손실 예고 - Investing.com 한국어. 총 89건 분석, 핵심 테마는 비트코인, 가격/시장, DeFi입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
-**긴급**: 암호화폐 시장 급락 3가지 이유…다음은? 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 89건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 달러, 암호화폐 관련 (36건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (20건): 달러, 암호화폐, 반등 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🟣 DeFi** (16건): tokenized, investigates, stolen 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 암호화폐 시장 급락 3가지 이유…다음은?
-
-### 주요 이슈
-
-- 비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들
-- 외 11건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Decrypt(15건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 3건 포함
-- 프로모션성 거래소 공지 2건 제외
-
 
 ## 테마별 주요 뉴스
 

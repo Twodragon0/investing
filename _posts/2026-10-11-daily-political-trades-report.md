@@ -23,8 +23,11 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">15</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">14</div><div class="stat-label">SEC 내부자</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">중앙은행</div></div></div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-10-11 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 15건 — SEC 내부자 거래 14건, 중앙은행 1건
+- 1. 잡히지 않는 물가…한은·미 연준 ‘기준금리’ 올릴까 \[10월 경제캘린더\ - 더스쿠프 잡히지 않는 물가…한은·미 연준 ‘기준금리’ 올릴까 [10월 경제캘린더] 더스쿠프
 
 ## 1. SEC 내부자 거래 (Form 4)
 
