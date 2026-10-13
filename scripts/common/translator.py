@@ -714,8 +714,8 @@ def _postprocess_translation(text: str) -> str:
 # (0.25s): that fixture skips deliberate pacing sleeps and records them, so a
 # 2s/4s schedule costs no wall-clock under test and can be asserted directly.
 # A sub-0.25s delay would actually sleep in every test that triggers it.
-_MAX_RETRIES = 2
-_RETRY_BASE_DELAY = 2.0
+_MAX_RETRIES = int(os.getenv("TRANSLATION_MAX_RETRIES", "2"))
+_RETRY_BASE_DELAY = float(os.getenv("TRANSLATION_RETRY_BASE_DELAY", "2.0"))
 
 # The breaker opens on whichever of these comes first, and once open the
 # process stops calling the endpoint at all — not merely stops retrying.
@@ -733,7 +733,7 @@ _RETRY_BASE_DELAY = 2.0
 # endpoint, and retrying *within* that pass did not recover (three separate
 # later invocations were needed). Under rate limiting an immediate retry spends
 # budget and still fails, so giving up fast is strictly better.
-_CIRCUIT_BREAKER_FAILURES = 5
+_CIRCUIT_BREAKER_FAILURES = int(os.getenv("TRANSLATION_CIRCUIT_BREAKER_FAILURES", "5"))
 
 # Wall-clock spent on give-ups before the breaker opens. Worst case per process
 # is this budget plus the one call that crosses it (<= 51s), so ~231s. Against
@@ -742,12 +742,17 @@ _CIRCUIT_BREAKER_FAILURES = 5
 #
 # Observed give-ups per run are 0-6 (seven runs, 2026-09-04), each costing ~6s
 # before the timeout existed, so ordinary traffic is nowhere near this.
-_FAILURE_TIME_BUDGET_S = 180.0
+_FAILURE_TIME_BUDGET_S = float(os.getenv("TRANSLATION_FAILURE_TIME_BUDGET_S", "180.0"))
+
+#: Cooldown in seconds before attempting half-open recovery when the breaker opened.
+#: Mitigates premature permanent lockout caused by transient 429 rate limits in batch passes.
+_BREAKER_COOLDOWN_S = float(os.getenv("TRANSLATION_BREAKER_COOLDOWN", "30.0"))
 
 _consecutive_failures = 0
 #: True once the breaker has opened. Named for the state, not the mechanism:
 #: it suppresses the call itself, not just the retries.
 _breaker_open = False
+_breaker_opened_at: Optional[float] = None
 _failure_time_spent = 0.0
 _failure_total = 0
 _failure_warned = False
@@ -755,6 +760,11 @@ _failure_warned = False
 #: That function is a flush point called once per enrichment pass, not once per
 #: run, so without a watermark it reprints the same total on every pass.
 _failure_reported = 0
+
+#: Pacing lock serializing external Google Translate HTTP requests across threads,
+#: preventing burst requests from multi-worker passes (e.g. enrich_items, fix_post_url_summaries)
+#: that trip the 5 req/s rate limit.
+_translate_request_lock = threading.Lock()
 
 _exception_policy: Optional[tuple] = None
 
@@ -874,19 +884,76 @@ def _ensure_timeout() -> None:
             )
 
 
+_last_request_time = 0.0
+_MIN_REQUEST_INTERVAL = float(os.getenv("TRANSLATION_PACING_INTERVAL", "0.35"))  # seconds
+_rate_limit_until = 0.0
+
+
+def _translate_via_gtx_api(text: str, timeout: float = 10.0) -> Optional[str]:
+    """Fallback translation via Google Translate gtx endpoint when mobile web endpoint hits rate limiting."""
+    try:
+        import json
+        import urllib.parse
+        import urllib.request
+
+        url = (
+            "https://translate.googleapis.com/translate_a/single"
+            f"?client=gtx&sl=en&tl=ko&dt=t&q={urllib.parse.quote(text)}"
+        )
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+                )
+            },
+        )
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            if data and isinstance(data, list) and data[0]:
+                translated = "".join(part[0] for part in data[0] if part and part[0])
+                return translated if translated else None
+    except Exception as exc:
+        logger.debug("gtx fallback translation failed: %s", exc)
+    return None
+
+
 def _translate_once(text: str) -> Optional[str]:
     """One translation attempt. Returns None when the service gave nothing back.
 
     Raises whatever deep-translator raises — classification is the caller's job.
     """
+    global _last_request_time, _rate_limit_until
     from deep_translator import GoogleTranslator
+    from deep_translator import exceptions as dte
 
     # Lazy so this module stays importable without deep-translator, matching
     # the import above.
     _ensure_timeout()
 
     modified, replacements = _apply_term_overrides(text)
-    translated = GoogleTranslator(source="en", target="ko").translate(modified)
+    with _translate_request_lock:
+        now = time.monotonic()
+        if now < _rate_limit_until:
+            time.sleep(_rate_limit_until - now)
+            now = time.monotonic()
+        elapsed = now - _last_request_time
+        if elapsed < _MIN_REQUEST_INTERVAL:
+            time.sleep(_MIN_REQUEST_INTERVAL - elapsed)
+        _last_request_time = time.monotonic()
+        try:
+            translated = GoogleTranslator(source="en", target="ko").translate(modified)
+        except dte.TooManyRequests:
+            # Fallback to gtx API endpoint before giving up to TooManyRequests
+            gtx_res = _translate_via_gtx_api(modified)
+            if gtx_res:
+                translated = gtx_res
+            else:
+                # Shared rate limit backoff: pause all concurrent worker threads to respect the cooldown
+                _rate_limit_until = max(_rate_limit_until, time.monotonic() + 2.5)
+                raise
+
     if not translated:
         return None
     return _postprocess_translation(_restore_terms(translated, replacements))
@@ -901,8 +968,8 @@ def _note_failure(text: str, exc: BaseException, elapsed: float = 0.0) -> None:
     enough to notice; the rest stay at DEBUG so a degraded endpoint cannot
     flood the log.
     """
-    global _consecutive_failures, _breaker_open, _failure_total, _failure_warned
-    global _failure_time_spent
+    global _consecutive_failures, _breaker_open, _breaker_opened_at
+    global _failure_total, _failure_warned, _failure_time_spent
 
     _failure_total += 1
     _consecutive_failures += 1
@@ -919,12 +986,14 @@ def _note_failure(text: str, exc: BaseException, elapsed: float = 0.0) -> None:
 
     if _consecutive_failures >= _CIRCUIT_BREAKER_FAILURES:
         _breaker_open = True
+        _breaker_opened_at = time.monotonic()
         logger.warning(
             "번역 연속 실패 %d회 — 이 프로세스에서 번역 호출을 중단한다. 이후 항목은 원문(영어)으로 남고 다음 런에서 재시도된다.",
             _consecutive_failures,
         )
     elif _failure_time_spent >= _FAILURE_TIME_BUDGET_S:
         _breaker_open = True
+        _breaker_opened_at = time.monotonic()
         logger.warning(
             "번역 실패에 누적 %.0f초를 썼다 (예산 %.0f초) — 이 프로세스에서 번역 호출을 중단한다. "
             "연속 실패가 아니어도 워크플로우 예산을 지키기 위해 멈춘다.",
@@ -935,14 +1004,25 @@ def _note_failure(text: str, exc: BaseException, elapsed: float = 0.0) -> None:
 
 def _translate_with_retry(text: str) -> Optional[str]:
     """Translate with exponential backoff. Returns None when it gave up."""
-    global _consecutive_failures, _failure_time_spent
+    global _consecutive_failures, _breaker_open, _breaker_opened_at, _failure_time_spent, _rate_limit_until
 
     if _breaker_open:
-        # Skip the call outright. Merely dropping the retries is not enough
-        # once each attempt can wait REQUEST_TIMEOUT: the remaining items would
-        # still pay one timeout each, which is the bulk of the cost.
-        logger.debug("Translation breaker open — skipping '%s'", text[:50])
-        return None
+        # Check if cooldown has elapsed for auto-recovery (half-open)
+        if _breaker_opened_at is not None and (time.monotonic() - _breaker_opened_at) >= _BREAKER_COOLDOWN_S:
+            logger.info(
+                "번역 서킷 브레이커 쿨다운(%.1f초) 만료 — 번역 호출을 재개한다 (Half-Open)",
+                _BREAKER_COOLDOWN_S,
+            )
+            _breaker_open = False
+            _consecutive_failures = 0
+            _failure_time_spent = 0.0
+            _breaker_opened_at = None
+        else:
+            # Skip the call outright. Merely dropping the retries is not enough
+            # once each attempt can wait REQUEST_TIMEOUT: the remaining items would
+            # still pay one timeout each, which is the bulk of the cost.
+            logger.debug("Translation breaker open — skipping '%s'", text[:50])
+            return None
 
     try:
         retryable, fatal = _retry_exceptions()
@@ -982,6 +1062,10 @@ def _translate_with_retry(text: str) -> Optional[str]:
 
         if attempt < attempts - 1:
             delay = _RETRY_BASE_DELAY * (2**attempt)
+            if last_exc and (
+                "too many requests" in str(last_exc).lower() or type(last_exc).__name__ == "TooManyRequests"
+            ):
+                _rate_limit_until = max(_rate_limit_until, time.monotonic() + delay)
             logger.debug(
                 "Translation attempt %d/%d failed (%s) — retrying in %.1fs",
                 attempt + 1,

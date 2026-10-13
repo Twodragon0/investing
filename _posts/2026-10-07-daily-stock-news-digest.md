@@ -53,7 +53,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1zRmowNTFQTkFRLWFFRmNWanlIektNQk0xWnZHbEJxX29FQjRrMGI0M3Rsb24zMnRpbEFSeUZZVnRwTG56dUpQUDZxcDVKNVBBY0FoNUpkN3FDSk92QnVteDM3ZEhCWTVkdktF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 오름세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 오름세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 6일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다 0.58% 오른 7044.67에 시작했으며, 코스닥은</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -65,7 +65,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBZckhKZXFqQThmQnRlZVYySjVVWjhPN2pGZVdaWFdLMGo5bkx1XzlSSjlPQ3NaVWQyT1VGVFZTUnJwdU5tRlZXWUllY1lUZ2dDMlZCWjJJdDZvek1LakRsN2EwaHBBeGZIRWoyNA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 연휴 끝 반도체 매물 압박에 6,940선 하락…코스닥, 910선 돌파 - 프리진경제</a>
-<p class="news-desc">코스피, 연휴 끝 반도체 매물 압박에 6,940선 하락…코스닥, 910선 돌파 프리진경제</p>
+<p class="news-desc">6일, 코스피는 전 거래일 대비 62.35포인트 내린 6,941.39로 하락 마감했다. 코스닥은 26.63포인트 상승한 919.92로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 외국인과 기관이 각각 1조 7,767억 원, 18억 원을 순매도하며 지수를 하락 압박했다. 반면 개인은</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -77,7 +77,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE95Ylk3S09LMWZsVUZxQlA2MG85V2ZkaFdRdTNEUWRocE9HOUtYTXJ2Qy0wamxNM2xLV2JmMmpWTUFud1E0OUEzNDVQMUFxc0I2dXFUalJJaGpLY0s2bkhoXy1jR1IzbDVTdnJF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 내림세 장 종료.코스닥 상승 마감 - 한강타임즈</a>
-<p class="news-desc">코스피, 내림세 장 종료.코스닥 상승 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 6일 코스피와 코스닥지수가 각각 내림세와 오름세로 장을 마무리했다.이날 코스피는 전 거래일보다 0.89% 내린 6941.39에 마감했으</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -118,7 +118,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZTdnaWtpNTctMFp6cUNBR2Jic2JEMDVBc2hmc1RhUG02eDFIZ1l0SVFGczl2YlRULXRKblVKNjRzYU5UZ2xFUE9ZaElVMHlsTzZZRDdNb1VjTEM5eng5VEhBbUtLMktROEc3VTF0SjBsNTFGUmdMc0c1bkN0aWJfZU5renh0Rkl2WnBBZUlQOU9UWlRrbjl6TEFCckJpZG5XazljNDNHQzlVZjFFODhNaVZGWEIzTXFGV28xY29IUlEtR1VGOElCSG9TNlF4dTNhUUlQMUR3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">The Retired Investor: The Fed, the Treasury and the bond market - TAPinto</a>
-<p class="news-desc">The Retired Investor: The Fed, the Treasury and the bond market TAPinto</p>
+<p class="news-desc">연준 금리 인상은 인플레이션을 억제하지 못할 수도 있으며, 미국 부채와 채권 수익률이 연준-재무부 조정을 더욱 엄격하게 만들 수 있다는 이야기가 있습니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -159,7 +159,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5pUjJkMDBzZ3EtYno5eFJkTVBUdHdBSFBrRHA0V29MeTUzcFdMSWhyUGZZUWl3aVZiUzNOUWJsZkhzOWRXZ3BweWtKSmdTZm5BODVoYzZiZGltUnpoVGd2cXJxbzZqWTFPR2hnTFgxckxrSzl2RWI1SdIBeEFVX3lxTE5pUjJkMDBzZ3EtYno5eFJkTVBUdHdBSFBrRHA0V29MeTUzcFdMSWhyUGZZUWl3aVZiUzNOUWJsZkhzOWRXZ3BweWtKSmdTZm5BODVoYzZiZGltUnpoVGd2cXJxbzZqWTFPR2hnTFgxckxrSzl2RWI1SQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">글로벌 반도체 업황 기대감에도 삼성전자·SK하이닉스 주가 정체된 이유</a>
-<p class="news-desc">글로벌 반도체 업황 기대감에도 삼성전자·SK하이닉스 주가 정체된 이유 뉴시스</p>
+<p class="news-desc">[서울=뉴시스] 김종민 기자 = 국내 반도체 대장주인 삼성전자와 SK하이닉스 주가가 확실한 반등 모멘텀을 찾지 못한 채 지루한 박스권 흐름을 이어가고 있다</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -171,7 +171,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5KbnVSQkxYSzEteDI0RHczXzFZQjh6NS1UOUF5V0pxZy1vUUR6R1VhbEtOeXNkRlQ4OGhBVnU3NXJpM1hwUm5yUDVGOHJybVlEYzZrVEVJQkdzVklaVHZ0R3B6V080aEgxM1I3emVnLV_SAXRBVV95cUxQQnlKTHlCRG1kVVFMS1JyNXdYeWhSZUJncTNQbVlPaXU0SlBmU0dSZndCS2RvTHA5YnBHTkxOcTlSWGxMeUxNWE9WYVBIT1d3a0FlN2RucXZGMnVxYmFCRU1NS2tDNzBjRU1VQlhIYWlxOVBYSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">외국인 매도에 삼성전자·SK하이닉스 동반 하락…반도체주 약세 - 산경투데이</a>
-<p class="news-desc">외국인 매도에 삼성전자·SK하이닉스 동반 하락…반도체주 약세 산경투데이</p>
+<p class="news-desc">[산경투데이 = 이하나 기자]개천절 연휴를 마치고 문을 연 국내 증시에서 반도체 대형주가 외국인의 대규모 매도 공세에 나란히 하락했다.삼성전자의 3분기 잠정실적 발표와 자사주 매입 종료를 앞둔 경계 심리까지 겹치면서 투자심리가 위축된 모습이다.6일 유가증권시장에서 삼성전자는 전 거래일</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBmN1RXRVRuMWxxaGFLMTJjQ1lJbjNsOWw5QWFFcWpOdXo3NFNjSDhzZWstWll2YUZjUHdWbmRSVWRrMlNsalkwS25XbXhrU256NWNPb0laY1hxbVZLdDZUTndrYXE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자냐 SK하이닉스냐 … 주식 큰손, 반도체 베팅 갈렸다 - 용인신문</a>
-<p class="news-desc">삼성전자냐 SK하이닉스냐 … 주식 큰손, 반도체 베팅 갈렸다 용인신문</p>
+<p class="news-desc">용인신문 | 삼성전자냐, SK하이닉스냐. 개인투자자만 고민하는 문제가 아니다. 수십조 원의 자금을 굴리는 연기금도 두 반도체 대장주를 놓고 전혀 다른 선택을 했다. 한국거래소 자료를 보면 연기금 등은 올해 3분기 SK하이닉스를 무려 1조 5539억 원 순매수했다. 반면 같은 기간 삼성전자는 8437억 원어치를 순매도했다. 같은 반도체 업종, 그것도 국내 증</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -212,7 +212,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://seekingalpha.com/news/4650659-nvidia-backed-neocloud-lambda-is-raising-4b-in-final-round-before-ipo---wsj?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia-backed neocloud Lambda is raising $4B in final round before IPO</a>
-<p class="news-desc">Nvidia-backed Lambda seeks up to $4B in pre-IPO funding at a $14.5B valuation as backlog jumps to $50B.</p>
+<p class="news-desc">엔비디아가 지원하는 네오클라우드 Lambda는 IPO 이전 최종 라운드에서 40억 달러를 모금하고 있습니다. ($40억)</p>
 <span class="source-tag" data-source-type="default">Seeking Alpha</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/06/trade-deficit-hits-105point6-billion-widest-since-just-before-trump-tariffs-enacted-last-year.html" class="news-title" target="_blank" rel="noopener noreferrer">Trade deficit hits $105.6 billion, widest since just before Trump tariffs enacted last year</a>
-<p class="news-desc">That marked a 13.7% jump from July and was ahead of the Dow Jones consensus estimate for $102 billion.</p>
+<p class="news-desc">이는 7월보다 13.7% 증가한 수치이며 다우존스 합의 추정치인 1,020억 달러를 앞지르는 것입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

@@ -144,6 +144,7 @@ if [[ ${#RECENT_POSTS[@]} -gt 0 ]]; then
   # --max-findings 상한이 성립한다.
   run_py scripts/tools/fix_untranslated_body.py --apply --files "${RECENT_POSTS[@]}"
   run_py scripts/fix_untranslated_post_artifacts.py --days 3 --apply
+  run_py scripts/fix_post_url_summaries.py --days 1 --apply
 fi
 
 echo "$LOG_PREFIX clean translation cache"

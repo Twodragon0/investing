@@ -47,6 +47,38 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
 - 2026-10-13 암호화폐 시장 89건 분석 — 핵심 테마: 비트코인, 가격/시장, 이더리움
 - *기사는 여러 테마에 중복 집계될 수 있음*
+**긴급**: 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어 
+외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 89건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
+
+### 테마별 동향
+
+- **🟠 비트코인** (39건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
+- **📈 가격/시장** (25건): 달러, 암호화폐, 블루밍비트 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
+- **🔷 이더리움** (14건): 이더리움, 암호화폐, 달러 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
+
+**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
+
+### 긴급 이슈
+
+- 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어
+- D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온
+- SWI는 이전 FTX 비트코인 광부인 Genesis Digital을 AI로 용도 변경하기 위해 8억 9,400만 달러를 모금했습니다.
+
+### 주요 이슈
+
+- D-BIZ 암호화폐 뉴스] 비트코인, ETF 대규모 유출에도 8만4천 달러선 회복…유가 하락·지정학 혼재 - 데일리비즈온
+- 월가, 규제 내세워 디파이 생태계 장악."개인지갑 이자 싹쓸이" - 코인리더스
+- 리플-지원 Evernorth 조회수 나스닥 보유 4억 7,300만 XRP 가치는 다음보다 훨씬 낮습니다.
+- 외 3건
+
+### 투자자 체크포인트
+
+- **핫 키워드**: 비트코인, AI, 이더리움
+- **주요 출처**: Google News KR(15건), Cointelegraph(15건), CoinDesk(15건)
+- 시장 영향 가능성이 있는 거래소 공지 4건 포함
+- 프로모션성 거래소 공지 1건 제외
+
+
 
 ## 테마별 주요 뉴스
 
@@ -211,7 +243,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 
 ### 🟣 DeFi (15건)
 
-*The Crypto Fear and Greed Index has dropped to 56 from an August peak of 82, as oil, bond yields, and ETF outflows.*
+*암호화 공포 탐욕 지수는 석유, 채권 수익률 및 ETF 유출로 인해 8월 최고치인 82에서 56으로 떨어졌습니다.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -316,7 +348,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 ## 거래소 공지사항
 
 **1. [Community Voice: Share Binance AI Feedback and Share 500 USDC!](https://www.binance.com/en/support/announcement/detail/8fd1fe0094b34442b322c177894666bf)**
-Community Voice: Share Binance AI Feedback and Share 500 USDC.
+커뮤니티 목소리: 바이낸스 AI 피드백 공유 및 500 USDC 공유.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **2. [Meet Binance AI: A Personalized Trading Experience for Every User](https://www.binance.com/en/support/announcement/detail/7219bc2f011b43fbab5f68a93398196d)**

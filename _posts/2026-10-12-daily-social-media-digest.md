@@ -72,7 +72,6 @@ image_alt: "소셜 미디어 동향 - 2026-10-12 - 소셜 미디어 뉴스 요�
 <span class="source-tag" data-source-type="default">이재명 경제정책</span>
 
 **6. [연준이 올해 이자율을 인상할까요? 분열된 경제학자들의 의견 - ABC 뉴스 - 속보, 최신 뉴스 및 비디오](https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3NMLXhhYU1lOVVLWU9sY0k0SDUyQnEwMG9SZ1RzNHZobTIyYk9KWGJlOGhic3FKdlQ2NXlIVDF6SW1oRlNWZlY2NHlNLWlnNGoybzAwLWlkV3V1Q1ZtM21KS2FLTy02NEF6VjY4UmFNc2hYa21mRURlSkJYZWxtc1R3VmRYZFlKNUU3NzZiMkZGNGJZcG1xZUNCN0RQNkRndEVPb9IBqgFBVV95cUxOU1FSZ3pWOURaQUxBS296TzBtRFFGclJXTnpLYWwzZXU1Q01kcVZUczBxUDAwR3FaYmFZdzlXUWM2T0Q3TDVldm9nSVY4OERYRUtkdm5sdndPSU1ETU1yc3BuMEpXLTd2VFFZRTVQcWdMZFdEZ0EzYjhTS200RFBkZy1jbE01WVhVbEgyX1Z2dXc4MWxmbXd6cl9pSlp2TDRldkdkS2hwOVE0Zw?oc=5)**
-Will the Fed raise interest rates this year? Divided economists weigh in ABC News - Breaking News, Latest News and Videos
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **7. [잡히지 않는 물가…한은·미 연준 ‘기준금리’ 올릴까 \[10월 경제캘린더\ - 더스쿠프](https://news.google.com/rss/articles/CBMibkFVX3lxTFBkUVpZeUxyYkJvbzFNbzR2cHdSdnN3VVFtSFhUbjc3STVZeGZqT3VIeEZnQWx5R2J1QlhpR3pwbTlWOVlXTUVFa2dFRjJDaUZISW1XcUdwakY3UlNEWE04Y2MzUDVKYnFabFBxWUpn?oc=5)**

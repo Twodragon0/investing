@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">892.27</div><div class="stat-label">KOSDAQ -0.69%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 - 181건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채, 인플레이션 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 마이크로소프트, 엔비디아 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 국채, 선거 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">[표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0zUUc5OGlRSFM4bGx0X2w2YUlEREtmWVdUZkhfQV9PdFlOSV9kOWFXa3BSTkQzUlJYTUNkSTQxSlFTdnk1c00xS3I3RDM4djhWMVpyc093clJuLTBtcGNaM2dFYVd6aUZ1bWhMa0N5MzZPZw?oc=5">산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 - TopStarNews</a> <span class="p0-desc">[산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 TopStarNews</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">10월 7일 코스피에서 외국인이 2조6,314억원, 기관이 7,101억원을 순매도했다. 개인은 2조6,183억원을 순매수했다.코스닥시장 에서도 외국인이 2,542억원, 기관이 2,098억원을 순매도했다. 개인은 4,871억원을 순매수했다.코스피에서 에이피알은 외국인과 기관의 순매수 상위 종목에 공통으로 포함됐지만 개인의 순매도 상위 종목에 올랐다.SK하이닉스는 외국인과 기관의 순매도 상위 종목인 반면 개인의 순매수 상위 종목이었다.코스닥에서는 주성엔지니어링이 외국인과 기관의 순매도 상위 종목이자 개인의 순매수 상위 종목에 포함됐다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">(서울=연합뉴스) 황철환 곽윤아 기자 = 삼성전자[005930]가 국내 기업 사상 최초로 분기 영업익 100조원 선을 넘어서고도 8일 2% 넘게...</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0zUUc5OGlRSFM4bGx0X2w2YUlEREtmWVdUZkhfQV9PdFlOSV9kOWFXa3BSTkQzUlJYTUNkSTQxSlFTdnk1c00xS3I3RDM4djhWMVpyc093clJuLTBtcGNaM2dFYVd6aUZ1bWhMa0N5MzZPZw?oc=5">산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 - TopStarNews</a> <span class="p0-desc">삼성전자 3분기 영업이익 107조4000억원에도 삼성전자·SK하이닉스가 동반 하락했다. 8개 리포트는 메모리 공급 부족 지속에는 동의했지만 HBM4와 CAPEX가 2027년 사이클을 가를 변수로 봤다.</span></li></ul></div>
 
 
 
@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0cjN5dU5VcFpKOUZmdkltYmU1ZWpoMHZJYmJhRzJNZldmdHJpeTRibkI1MDRoWGJWWDBEVC04ZkhtQ1F6NXg3RklFckpFdEdUc3RZalRQeWFWZEnSAWBBVV95cUxQcWR5TDhRaU4xeGstTktXeGU4R3JTWU5teEN5SUctaXdzX0VpZkVxb3E5OE12VC1haVhqR1ROaF9ld0lMVDZUdHdXWi1INXh3ckx2M0JNNmJnQjIySG9BX04?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시</a>
-<p class="news-desc">[코스피·코스닥 전 거래일(7일) 주요공시] 연합뉴스</p>
+<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시. 주요 키워드: 코스피, 코스닥, 거래일.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1HS3dTNGlsLTdnVERRbWxoa0sySklNdm5ncFVGaFdPdmZ3X1lsYmtYbGZ5cDdSUjF0elV4a0hCSmFWUFdMc09DN1d6cGItRlR0RmRXcW1xdlFzYVo2ZFU2RVVYME92QndYWU1j?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 출발.코스닥 내림세 개장 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 출발.코스닥 내림세 개장 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 8일 코스피와 코스닥지수가 각각 오름세와 내림세로 출발했다.이날 코스피는 전 거래일보다 0.07% 오른 6808.68에 시작했으며, 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5UV1FQdjdQcElyTnptazdkUmF6Q0EzOHUycVU3MnZ6TF9IU2hiXzh1QUxxT3RSWUpMeHZ6UFc5WS0wRHR5U1RIV0hadWhGVmFuQXJxRFhZQlFyeDVWck4tMWFRRmR6ODlpUkM5VFNNOGFxNWfSAXdBVV95cUxONkM1cDZEb1dnMWRWN1hZY3BzaWpRTDQ4Y3o3OHVLbzJTczB5TDBtbTVROUE2dVVaYWhLRHEyZUFnQ29LYXdJbzlobWN0aVRkQWVROVBDOGhhaWhjQ29BS3BDMTZ3aFA5aHVwckt2alFLcC1mbk9nRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자</a>
-<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자 핀포인트뉴스</p>
+<p class="news-desc">▲ 에피소드컴퍼니[317530], 140억원 제3자배정 유상증자▲ 금융위, '회계기준 위반' 금양[001570]에 76억3천만원 과징금 의결▲ BGF[027410] "계열사 케이엔더블유 주식 818억원에 취득…지분율 56.9%"▲ 현대비앤지스틸[004560] "성림첨단산업 주식 185억원에 추가취득"▲ 대성산업[128820] "자회사 대성쎌틱에너시스 주식 380억원에 추가취득"▲ 두나무·네이버파이낸셜 주식교환 또 연기…내년 3월 예정▲ 알파칩스[117670], 주당 1.0주 무상증자 결정▲ LG전자[066570] 3분기 영업익 7천</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNUC1EQ2IxSkxPWTQxRVQ0VG5DbklURTlXNEJqNzVycGxscEg5cU16QnEyRVJaQi13Tk55U0ZXWERqOVJJSWVRM2xRMFBEZkh5UFpTVWh0cERteVdMZVJaZjF2VXR3N2JyTE0tdUNtUDN1SWVxODF3am5kNWVTdnJnUERlVUdyWFgxVFFPbWRiVVFnSVNubkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Will 30-Year US Treasury Yields Climb Higher? - Goldman Sachs</a>
-<p class="news-desc">Will 30-Year US Treasury Yields Climb Higher? Goldman Sachs</p>
+<p class="news-desc">유가, 강력한 GDP 성장, 자본 경쟁으로 인해 장기 채권 수익률이 압박을 받을 것으로 예상됩니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnM2aVMweDBaaGJGVGFFZ09qd3pDd09SZlNVWkpQSzhjQTByQXBXZU1NMjZkelhTMmFsSHh2bk1sc3NzcWh3clphT1dkVWN0Qm5OOTZPSlc0dDlLcmlxNmpsQzBqRjgzbmczNjdkT2RFcmNLN2tpNmVLMlB4MFdEVjBLa1NPRU5R?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">What “Real” Interest Rates Are Telling Us - ETF Database</a>
-<p class="news-desc">What “Real” Interest Rates Are Telling Us ETF Database</p>
+<p class="news-desc">경제와 금융에서 가장 중요한 개념 중 하나는 투자에 대한 "실질" 수익률입니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -160,7 +160,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5yeDRTMExRLVR1ZkplSmlpSmhxdl9WSFN1M0stSU14LWM0UlRQMVFxeTZiOXZwLXMwSVhOS0M5TFV5M2VRNEF4MUNpQ1NlX192SFF5dHJmU2ZEaHBKTkFpLVJFLXBabDdNd01CZ0c5dw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 코스닥 박스권 뚫고 920선…반도체 소부장 앞세워 930선 도전 - 뉴스퀘스트</a>
-<p class="news-desc">[박정식의 국내 주식시황] 코스닥 박스권 뚫고 920선…반도체 소부장 앞세워 930선 도전 뉴스퀘스트</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표】 오늘 국내증시는 미국 국채금리 상승세 진정과 국제유가 약세, 기업 실적 기대감에 힘입어 긍정적인 흐름을 이어갈 가능성이</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMmNydTJJRjhlaHZkMm1FYXBxeTNkcXRnLTA1S2YtNWhicmVhc2txU3pfb0p4NmFfVzRRQUdaRVhaUXROMy15a2VSOWZVV3oyTTF3TWZ4MEg3dkJOcTRBUzBIdEJJcXZMeWdBR0FsMHY1UldtTnV5bVRuWDBhQU16WXlkbmtpVzdCWDl3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">S&P 500 and Nasdaq surge to record highs after AI chipmaker rally</a>
-<p class="news-desc">S&P 500 and Nasdaq surge to record highs after AI chipmaker rally The Guardian</p>
+<p class="news-desc">S&amp;P 500과 Nasdaq은 AI 칩 제조사 주변의 랠리과 미국 국채 수익률 하락 이후 사상 최고치로 마감했습니다. 시장 마감 시 S&amp;P 500은 0.58% 상승하여 역사상 처음으로 7,800을 돌파했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -212,7 +212,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxOaHVVTnVzWW5SdEp1QVpGdUVLcnVVeXVHSHFscmR2OXh3MUEyYmNVaS1NU3dHTXFyVnFSaE5udjJDM0ZTR2dQaU1XV3YtYVRIcThVejZua3VqRVRjTXhrcXkxWHJlTUVQWEFxd2lUa0c2V25FcGxlbHRaRTJHTXVGam1Pa3ZCUWZFYUVWaTljNFRyVWdZVDV5YlJIT29TYWtmOEFORHFDRGpqZjBBRXdsZVZHcWVqNWpYRm9mQ2lma1k1YVE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow, S&P 500 and Nasdaq fall as tech stocks struggle; oil prices ease after Trump signals U.S. won't attack Iran before midterm elections; Treasury yields retreat</a>
-<p class="news-desc">Stock Market Today: Dow, S&P 500 and Nasdaq fall as tech stocks struggle; oil prices ease after Trump signals U.S. won't attack Iran before midterm elections; Treasury yields retreat MarketWatch</p>
+<p class="news-desc">오늘의 주식 시장: 다우, S&amp;P 500 및 나스닥은 기술주 하락으로 하락합니다. 트럼프 신호 이후 유가는 미국이 그렇지 않을 것이라는 신호를 보냈습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -236,7 +236,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/08/iran-war-trump-midterm-election.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump says U.S. will not attack Iran before midterm election</a>
-<p class="news-desc">Trump said talks with Tehran were “productive” as the Iran war pushes oil and gas prices higher and support for the conflict falls.</p>
+<p class="news-desc">트럼프는 이란 전쟁으로 인해 석유 및 가스 가격이 상승하고 분쟁에 대한 지지가 감소함에 따라 테헤란과의 회담이 "생산적"이었다고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -284,7 +284,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://seekingalpha.com/news/4651518-yieldmax-bitcoin-option-income-strategy-etf-announces-weekly-distribution-of-01658?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news" class="news-title" target="_blank" rel="noopener noreferrer">YieldMax Bitcoin Option Income Strategy ETF announces weekly distribution of $0.1658</a>
-<p class="news-desc">YieldMax Bitcoin Option Income Strategy ETF (YBIT) announces weekly distribution of $0.1658, 1.66% higher than the prior week's distribution of $0.1631. The ann</p>
+<p class="news-desc">YieldMax 비트코인 옵션 소득 전략 ETF은 $0.1658의 주간 분배를 발표합니다. ($0.1658)</p>
 <span class="source-tag" data-source-type="default">Seeking Alpha</span>
 </div>
 </div>

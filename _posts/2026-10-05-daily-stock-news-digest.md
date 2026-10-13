@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE05NVVnXzRzSkRQNTVtUDFFRUc4OWNyYTZJY0tveVlHMk1SMmlkWnhwQ1pBZUxkdy1hNlVXRC1uejg5QWFqWGxoTkJoaTVmcmEyN214eVFjbEh0cDF6VlE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">외국인 8.3조 순매도, 추석 뒤 ‘선별매수’…LG전자·한미반도체는 샀다 - 뉴스투데이</a>
-<p class="news-desc">외국인 8.3조 순매도, 추석 뒤 ‘선별매수’…LG전자·한미반도체는 샀다 뉴스투데이</p>
+<p class="news-desc">[뉴스투데이=황수분 기자] 추석 연휴 직후 국내 증시에서 외국인과 기관이 삼성전자와 SK하이닉스를 대거 팔아치운 반면 개인은 두 종목을 집중적으로 사들인 것으로 나타났다. 외국인은 연휴 이후 3거래일 동안 코스피에서 8조원 넘게 순매도했으며, 매도세는 대형 반도체주에</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcU9XXzlBd2pHZEtnY1RXSndVRHNycnF3Ym5GYWh4aFNGcjZZaDRRTmp0SjQ5clBqN2F0YVhDS1hoQmI0OXcyNkFLblZ2cTEtYjljSlZxd3Etd0I1M05fTi1iOVlDaUx2WWNmX1B5TVVzWUR3WER0RWl6Tnc0N0hJNlM1RHdaMmR0ZlZaQV9QVGxOZld1ajYxeC11UEVkTnZGcHVNUGpCUk90NnNjX25Ldzl3Y2xxMjhp?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Is a stock market correction coming? Most Americans think so - USA Today</a>
-<p class="news-desc">Is a stock market correction coming? Most Americans think so USA Today</p>
+<p class="news-desc">주식시장 조정이 다가오고 있는가? 대부분의 미국인들은 그렇게 생각합니다 - USA Today.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5yMkFZd0FucS1naHpFaVd6QWJrckxhTW5iNFRvOXFZRkRSRHhtR0FNTTBHVGVpMWNjMmVfRWg0MjJLQ3E1bnRwTUhGdnU2akVMWExNOTdDYjcyOVdfbUNJWV83cHMtU1dSZmpnN2VUamVCUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"10월 연준·한은 금리 동결할 것…달러-원 1,345~1,370원 전망" - KB Think</a>
-<p class="news-desc">"10월 연준·한은 금리 동결할 것…달러-원 1,345~1,370원 전망" KB Think</p>
+<p class="news-desc">김학성 기자 = 하나은행은 연방준비제도와 한국은행이 이달 기준금리를 동결할 것이라면서 월간 달러-원 환율 범위를 1,345~1,370원으로 제시했다. 3일 금융권에 따르면 하나은행의 서정훈 연구위원과 이유정 연구원은 최근 발간한 월간 외환시장 전망 보고서에서 이같이 분</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE42YzBUZFJTX1U0TkJ4dEdXQ0YxQjg4TTduaUJNRF8yZy1wd3htRzl2bk4xU2lBcW5jbFlob3BUT2xWZ0VPbW4ybVV6Y2JXZE1lUWRfZF8tMjE1aUxFY01DVVU3eFNGbkFBODctRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">연준 10월 금리 인상 기대 후퇴…달러-원 1345~1370원 전망</a>
-<p class="news-desc">연준 10월 금리 인상 기대 후퇴…달러-원 1345~1370원 전망 ER 이코노믹리뷰</p>
+<p class="news-desc">미국 연방준비제도(Fed·연준)의 10월 기준금리 인상에 대한 시장의 기대가 낮아지고 있다. 하나은행은 연준과 한국은행이 이달 기준금리를 동결할 가능성이 높다고 내다봤다. 10월 달러-원 환율은 1,345~1,370원에서 움직일 것으로 전망했다.4일 금융권에 따르면 하나은행 서정훈 연구위원과 이유정 연구원은 최근 발간한 월간 외환시장 전망 보고서에서 이같이 분석했다.◆연준 고위 인사 발언에 10월 인상 기대 약화최근 연준 고위 인사들의 발언은 기준금리 인상 속도를 늦출 수 있다는 신호로 시장에서 해석되고 있다.지난달 29일(현지시간</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -157,7 +157,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQcmNFTWFRNzhSdk9FS2ZjVUV3WDVOTE4yOE5hQlRLTGVsb25OSmxsT2xhbDhmS2xzUEpmcGNKeUZlNkxNdWE0b290YTRtc1VSUkF5TTRienF6Z0prdFpVNnFaM2FoemFQTlRZTzRyN1hYeWtBb3BRa2hhanVaTGZJb3g3cDlTRmc5NXpJeVlENXJCUkFyazZmUWxrOTNkT2JISnU2QXc4aXZhVW1Bd3JGQ3Z1MHgyUXJPTEgxbjR2OEpXQXpvNDQtS2xMRmJSYk9CUFNCck9n?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Nasdaq Composite Inches Up to 26,871.60 as Chip Stocks Recover and Anthropic IPO Report Lifts AI Shares - BBN Times</a>
-<p class="news-desc">Nasdaq Composite Inches Up to 26,871.60 as Chip Stocks Recover and Anthropic IPO Report Lifts AI Shares BBN Times</p>
+<p class="news-desc">기술 중심의 나스닥 복합재는 오후에 반도체 주가가 회복되고 국채 수익률이 2002년 최고치에서 완화되었으며 Anthropic이 11월 중순에 상장할 수 있다는 보고서가 AI 거래를 되살리면서 고르지 못한 세션 후 2026년 10월 1일 목요일에 10.53포인트 상승했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPN3J5TFdNMFkyeDdsb0stZFZ5c2JGOEFjQmxMVEo4dERQWVVRaTZ1UTVEVGM5YzI5SnMzei1iWU9mREFBNG5qanZ6RWlDSUFhcUw1RnV3cm9zMFlnMXpnZS1Oa3lEa3JIUHN1WjY5X1otc2YtMXNPUHJSd0R1SXJEX2djM1NuQ2dUVHlQSG5OUkotUV81TGM5Q2c0N3VMUFZLRHRlQUVBd3VwRDlPV0VZTzBEMGR4V1haMmd0NXNaUndtajdzcnVv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Weak Jobs Lift Nasdaq 100 To Record, Micron Fuels AI Rally - NVIDIA (NASDAQ:NVDA), Carnival (NYSE:CCL)</a>
-<p class="news-desc">Weak Jobs Lift Nasdaq 100 To Record, Micron Fuels AI Rally - NVIDIA (NASDAQ:NVDA), Carnival (NYSE:CCL) Benzinga</p>
+<p class="news-desc">월스트리트 이번 주: 약한 9월 고용 보고서는 나스닥 100을 기록으로 끌어올렸고, 마이크론은 AI 랠리을 확인했으며 FICO는 23% 하락했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -203,7 +203,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/03/trump-jay-clayton-ai-czar.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump taps Director of National Intelligence Jay Clayton as AI czar</a>
-<p class="news-desc">Director of National Intelligence Jay Clayton will lead the administration's AI policy.</p>
+<p class="news-desc">국가정보국(National Intelligence) 국장 제이 클레이튼(Jay Clayton)이 행정부의 AI 정책을 이끌게 됩니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/04/in-ohio-rally-speech-trump-says-he-may-not-help-if-democrats-win.html" class="news-title" target="_blank" rel="noopener noreferrer">In crude Ohio rally speech, Trump says he may not help if Democrats win</a>
-<p class="news-desc">Ohio's is among eight U.S. Senate races rated competitive. The state has turned into a campaign battlefield over data centers and culture war issues.</p>
+<p class="news-desc">오하이오는 경쟁이 치열한 것으로 평가되는 미국 상원 경선 8개 중 하나입니다. 국가는 데이터 센터와 문화 전쟁 문제를 놓고 캠페인 전쟁터로 변했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/03/lula-or-bolsonaro-wall-street-braces-for-two-wildly-different-results-in-brazil-election.html" class="news-title" target="_blank" rel="noopener noreferrer">Lula or Bolsonaro: Wall Street braces for two wildly different results in Brazil election</a>
-<p class="news-desc">With the first round of Brazil's presidential election taking place Sunday, Wall Street is gearing up with starkly different market predictions.</p>
+<p class="news-desc">일요일에 치러지는 브라질 대통령 선거의 첫 번째 라운드에서 월스트리트은 완전히 다른 시장 예측에 대비하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -250,7 +250,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/04/russia-ukraine-war-putin-zelenskyy-donbas-lyman.html" class="news-title" target="_blank" rel="noopener noreferrer">Ukraine’s surprise robot offensive exposes a vulnerability in Putin’s war machine</a>
-<p class="news-desc">Experts say the offensive is not a decisive breakthrough, but demonstrates how Ukraine’s expanding use of robotic systems is reshaping frontline warfare.</p>
+<p class="news-desc">전문가들은 이번 공격이 결정적인 돌파구는 아니지만 우크라이나의 로봇 시스템 사용 확대가 최전선 전투를 어떻게 재편하고 있는지를 보여준다고 말합니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -274,7 +274,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-05 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.marketwatch.com/story/i-dont-want-to-die-on-the-sales-floor-im-67-and-earn-19-50-an-hour-at-a-big-box-store-when-can-i-finally-retire-369abcf9?mod=mw_rss_topstories" class="news-title" target="_blank" rel="noopener noreferrer">‘I don’t want to die on the sales floor’: I’m 67 and earn $19.50 an hour at a big-box store. When can I finally retire?</a>
-<p class="news-desc">“I started taking Social Security at 66 and receive $2,410 a month. I have $214,000 in my 401(k).”</p>
+<p class="news-desc">'나는 매장에서 죽고 싶지 않다': 나는 67세이고 대형마트에서 시간당 19.50달러를 번다. 언제쯤 은퇴할 수 있을까요?. ($19.50) 관련 보도 시.</p>
 <span class="source-tag" data-source-type="finance-media">MarketWatch</span>
 </div>
 </div>

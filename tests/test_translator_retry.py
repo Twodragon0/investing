@@ -222,6 +222,32 @@ class TestCircuitBreaker:
         assert tr._failure_total > tr._CIRCUIT_BREAKER_FAILURES
         assert tr._breaker_open is False, "연속이 아닌 실패는 브레이커를 올려서는 안 된다"
 
+    def test_breaker_recovers_after_cooldown_half_open(self, isolated_cache, monkeypatch):
+        """쿨다운(기본 30초) 경과 후 Half-Open 상태로 전환되어 재시도 성공 시 브레이커가 정상 복구되어야 한다."""
+        with patch("common.translator._translate_once", side_effect=_retryable_exc()):
+            for i in range(tr._CIRCUIT_BREAKER_FAILURES):
+                tr.translate_to_korean(f"fail {i}")
+        assert tr._breaker_open is True
+        assert tr._breaker_opened_at is not None
+
+        # 쿨다운 이전: 스킵
+        clock = {"t": tr._breaker_opened_at + 10.0}
+        monkeypatch.setattr(tr.time, "monotonic", lambda: clock["t"])
+        with patch("common.translator._translate_once", return_value=_KOREAN) as once:
+            res = tr.translate_to_korean("during cooldown")
+            assert res == "during cooldown"
+            assert once.call_count == 0
+
+        # 쿨다운 경과: Half-Open 재시도 허용 및 성공 시 브레이커 리셋
+        clock["t"] = tr._breaker_opened_at + tr._BREAKER_COOLDOWN_S + 1.0
+        with patch("common.translator._translate_once", return_value=_KOREAN) as once:
+            res = tr.translate_to_korean("after cooldown")
+            assert res == _KOREAN
+            assert once.call_count == 1
+        assert tr._breaker_open is False
+        assert tr._consecutive_failures == 0
+        assert tr._breaker_opened_at is None
+
 
 class TestFatalInputErrors:
     def test_input_errors_are_not_retried(self, isolated_cache, sleep_calls):

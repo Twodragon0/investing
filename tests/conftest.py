@@ -378,6 +378,8 @@ def _reset_translator_breaker(monkeypatch):
     for name, value in (
         ("_consecutive_failures", 0),
         ("_breaker_open", False),
+        ("_breaker_opened_at", None),
+        ("_rate_limit_until", 0.0),
         ("_failure_time_spent", 0.0),
         ("_failure_total", 0),
         ("_failure_warned", False),

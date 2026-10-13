@@ -63,7 +63,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxObjRITVdObTV2YmlLQlFxZUxsVTJ1RDBiTzF3SFpmd01DSHRzc0pVUTdPU2lPVS1ib2hJTDVIMU5qZ1lqSnhCV2VDdjZYd196N3k2dk5pY3V0SWU0NWJSZzhQeHo2enlDUWZmN21tQ3lnREo4U3I0UmtmMjdUUzJ3dzcyM19lZnlod3dYVDgwdDM2eTNROXNST2J5Sk5WWjVvMU5hSUFJOHZXZ2thbU9YZ3U0ZkVnSkU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Down but not out. Bitcoin's stair-step bullish trajectory is still intact - CoinDesk</a>
-<p class="news-desc">Down but not out. Bitcoin's stair-step bullish trajectory is still intact CoinDesk</p>
+<p class="news-desc">비트코인은 수요일 약 $84,200까지 떨어졌지만 최근 범위 내에 머물며 더 넓은 강세 계단식 궤적을 그대로 유지했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -75,7 +75,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOeTd5cTlRVVJ5VzJMRllZS0ZrcEl3aThXRXB1MXdXM0t1VjV2dldPcXR1ZDNYbEZ3bGZ3aTBHcktwRDBfcGh4UW96NVk2aGFLRnNxLS0yWUloOW1vaTVOQk1mbndWUjVaSXFoZ1JtOTNPdzNVOWRaRWJ2alREZTZ0amhjVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">PoeLLM Malware Infects 3,400+ Servers to Expand Crypto Mining Botnet - The Hacker News</a>
-<p class="news-desc">PoeLLM Malware Infects 3,400+ Servers to Expand Crypto Mining Botnet The Hacker News</p>
+<p class="news-desc">Canto Incognito는 암호화폐 채굴 및 봇넷 성장을 위해 노출된 AI 및 LLM 인프라를 사용하여 3,400개 이상의 서버를 감염시켰습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNQktvb0FWZG0tUE5saWs2RHh4NUNVSXlUejg2QzdPRG1JMlpZb3VfblFFcnptMjJ3a1lfdWNDZDEtS1pCUnpLWmtLVWNJY05jZExTOVpmSmIzWFFacUw4d09OTnVGeHRKQ0RUbzJEMDVRS1pRMExOZ2U5T1Y5Uzg3LVllM0hURkxHQnpQeGFoeUpyUUY2aEZkc3MtVXBKYVhNZUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Which Cryptocurrency Is Most Likely to 10x by 2030: Bitcoin, Ethereum, XRP, or Solana?</a>
-<p class="news-desc">Which Cryptocurrency Is Most Likely to 10x by 2030: Bitcoin, Ethereum, XRP, or Solana? Yahoo Finance</p>
+<p class="news-desc">2030년까지 10배가 될 가능성이 가장 높은 암호화폐는 비트코인, 이더리움, XRP 또는 솔라나입니까?</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -115,7 +115,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5KS0tJZzNScENyWUFvWXFPS1p0ZTh3bVUwV2dFY3ZPQXNMdGhiQUE0dTJ5S1JtM2xpZFpscVkwa3lkT0xCVTNNazBPbFZBSkxGd2xMRzIzelE1Vm9HQjJsTXF3cVh1R3N4bzdtNE4zbl9idHM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">IBIT, 개장전 2% 하락…비트코인, 8.4만 달러 이탈 - 마켓인</a>
-<p class="news-desc">IBIT, 개장전 2% 하락…비트코인, 8.4만 달러 이탈 마켓인</p>
+<p class="news-desc">블랙록 아이셰어즈 비트코인 트러스트 ETF(IBIT)가 7일(현지시간) 개장 전 거래에서 2% 넘게 밀리고 있다. 비트코인 가격이 8만4000달러를 다시 이탈한데 따른 영향이다.현지시간 이날 오전 8시 7분 개장 전 거래에서 아이셰어즈 비트코인 트러스트 ETF는 전일 대비 2.41% 하락한 47.32달러에서 움직이고 있다. 같은 시각 비트코인 가격도 2....</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -139,7 +139,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE0zWndaaUYtRUtDOFN1ekR6NEZWcUFWamp0c2EyekxNOFhpMkJSSGlnN3A0c2pmOVZNZDV5RW9NSUNZS1Z4dnlyWkRXeVhvU1RSckZGRVd3OGJEUjFwaGxIbkVtNDhXaVNTbFlGTXA0VUdMZTg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 금융단체 "CFTC, 암호화폐 관할 확대?…맡을 사안 아니다" 비판</a>
-<p class="news-desc">美 금융단체 "CFTC, 암호화폐 관할 확대?…맡을 사안 아니다" 비판 디지털투데이</p>
+<p class="news-desc">[디지털투데이 홍진주 기자] 미국 금융개혁단체 베터마켓츠(Better Markets)가 소매 암호화폐 거래 일부를 감독하려는 미국 상품선물거래위원회(CFTC)의 구상에 공개 반대하고 나섰다.6일(현지시간) 블록체인 매체 코인텔레그래프에 따르면, 베터마켓츠는 CFTC가 추진하는 규제 체계가 증권거래위원회(SEC) 감독보다 투자자 보호 수준을 낮출 수 있다고 주장했다.쟁점은 CFTC가 기존 권한을 바탕으로 증거금, 레버리지, 금융 제공이 수반된 소매 암호화폐 거래를 감독하는 새 틀을 검토하고 있다는 점이다. CFTC는 5일 이와 관련한</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -180,7 +180,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1CdVhBSUQwNjZJTEdXTURmaVhodTBoa2JBdWFUSEllRXU0cTlRdTVZTlZrUWg5aTFsR1h3dU1hQktkV3QwZjFuSUd1WUxKYUtTYlkyVWU0SkllUmhGRl82RzBKajZTRTRkWl8xd3lNWTR6WlVK?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">BTIG, 코인베이스 목표가 $240 재확인. 거래량 증가에 주목 - Investing.com 한국어</a>
-<p class="news-desc">BTIG, 코인베이스 목표가 $240 재확인. 거래량 증가에 주목 Investing.com 한국어</p>
+<p class="news-desc">BTIG, 코인베이스 목표가 $240 재확인. 거래량 증가에 주목. 디지털 자산 보도.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -192,7 +192,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380281/morning-minute-okx-raises-at-25b-from-circle-ripple-and-stanchart" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: OKX Raises at $25B From Circle, Ripple, and StanChart</a>
-<p class="news-desc">OKX raises more, $500M+ in crypto longs liquidated after a late evening selloff, and Abstract calls it quits.</p>
+<p class="news-desc">OKX는 늦은 저녁 매도 이후 청산된 암호화폐 공매수로 5억 달러 이상을 모금했고 Abstract는 이를 중단했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -216,7 +216,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YZmptcHhfNXpsSnRSM3lGalhwamk0aVBrLXg1cWVJcE0zU2hTT2MyRjh0SkM4M0F0Rm5KWlh6dHZfLVhvTFBrT1RnckJaaXFZZHR3ckRBcWpqVHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">CFTC proposes new federal regulation for cryptocurrency</a>
-<p class="news-desc">CFTC proposes new federal regulation for cryptocurrency Fox Business</p>
+<p class="news-desc">CFTC Michael Selig 회장은 암호화폐 시장을 위해 기관이 제안한 연방 프레임워크, 새로운 규칙이 소비자에게 의미하는 바, 규제 불확실성이 해외 금융 혁신을 추진할 수 있는지 여부에 대해 논의합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -240,7 +240,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380240/circle-dj-khaled-team-usdc-crypto-twitter-furious" class="news-title" target="_blank" rel="noopener noreferrer">Circle Welcomes DJ Khaled to 'Team USDC' and Crypto Twitter Is Furious</a>
-<p class="news-desc">Nothing in Circle's posts announces a sponsorship, but replies dug up Khaled's 2018 SEC settlement over a crypto fraud he promoted. The internet never forgets.</p>
+<p class="news-desc">Circle의 게시물에는 후원을 알리는 내용이 없지만 DJ Khaled가 홍보한 암호화폐 사기에 대한 2018년 SEC 합의에 대한 답글이 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -266,7 +266,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE4zVTJjdnMyTGUtV3lGZ1pidHRZTHVrZnZMRWFUWXZWV1hYNTZqWWVIcnpvVXBJTG1LQjBsMklMMzBGWUJ5b3h6ZA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">블랙록의 선택은 비트코인이었다…이더리움 팔고 4,000개 넘게 매수 - 코인리더스</a>
-<p class="news-desc">블랙록의 선택은 비트코인이었다…이더리움 팔고 4,000개 넘게 매수 코인리더스</p>
+<p class="news-desc">블랙록(BlackRock),비트코인(BTC),이더리움(ETH)/AI생성이미지 © 세계최대자산운용사블랙록(BlackRock)이암호화폐시장의변동성에도최근거래일나흘동안암호</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -278,7 +278,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380287/bitmine-ethereum-buying-will-stop-tom-lee" class="news-title" target="_blank" rel="noopener noreferrer">Bitmine's Relentless Ethereum Buying Is About to End, Tom Lee Says</a>
-<p class="news-desc">Speaking at Token2049 in Singapore, the chairman said Bitmine is about 100,000 ETH—roughly six to seven weeks—from its 5% cap, setting an end date on a buying spree that made it the world's largest Ethereum treasury.</p>
+<p class="news-desc">Bitmine 회장 Tom Lee는 Token2049에서 회사가 순환 공급량의 5%를 보유하게 되면 이더리움 구매를 중단할 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -290,7 +290,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380225/pudgy-penguin-ethereum-layer-2-abstract-shutting-down" class="news-title" target="_blank" rel="noopener noreferrer">Pudgy Penguins' Ethereum Layer-2 Abstract Is Shutting Down</a>
-<p class="news-desc">Abstract will shut down Dec. 15, saying a chain focused solely on consumer crypto proved unsustainable, and is urging users to bridge their assets off before then.</p>
+<p class="news-desc">요약하자면, Pudgy Penguins의 모회사인 Igloo Inc.가 구축한 이더리움 레이어2 네트워크는 확장에 어려움을 겪은 후 종료됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

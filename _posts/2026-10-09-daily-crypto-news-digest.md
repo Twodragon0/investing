@@ -63,7 +63,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxQS3FpZFdYanVZeGFRZ3owRk40cVZiNEs2Y3dCcUU3ZlZ4cXVMcU1YQmpTZExIVVQxQWdkbWo3dS0yR1FmYzM0VklLZnlBOHZCZkg0WW8xaTFCdUo3RXJyT3Q0NDZFWFNjNzRiLUhBNjB6VEEwSE5YallaUG5RUEZGdnZ4S3BhZWw1dFRacm9fRFRiZlpvczFRVUNKb1NlbHFTNkd4c2tzdWZNQlJMcHFGNWk1OEpRRlNnWmtVSGFMVzdPaXVtdlN6NjNSQXpZeFNJYXMwUWpwY0pNLWVXd0I5dkVfLUpFQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Why some say Michigan should ban bitcoin ATMs as victims lose millions - Detroit Free Press</a>
-<p class="news-desc">Why some say Michigan should ban bitcoin ATMs as victims lose millions Detroit Free Press</p>
+<p class="news-desc">일부 사람들은 피해자가 수백만 달러를 잃을 때 미시간이 비트코인 ATM을 금지해야 한다고 말하는 이유 - Detroit Free Press.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -75,7 +75,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNQktvb0FWZG0tUE5saWs2RHh4NUNVSXlUejg2QzdPRG1JMlpZb3VfblFFcnptMjJ3a1lfdWNDZDEtS1pCUnpLWmtLVWNJY05jZExTOVpmSmIzWFFacUw4d09OTnVGeHRKQ0RUbzJEMDVRS1pRMExOZ2U5T1Y5Uzg3LVllM0hURkxHQnpQeGFoeUpyUUY2aEZkc3MtVXBKYVhNZUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Which Cryptocurrency Is Most Likely to 10x by 2030: Bitcoin, Ethereum, XRP, or Solana?</a>
-<p class="news-desc">Which Cryptocurrency Is Most Likely to 10x by 2030: Bitcoin, Ethereum, XRP, or Solana? Yahoo Finance</p>
+<p class="news-desc">2030년까지 10배가 될 가능성이 가장 높은 암호화폐는 비트코인, 이더리움, XRP 또는 솔라나입니까?</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOeTd5cTlRVVJ5VzJMRllZS0ZrcEl3aThXRXB1MXdXM0t1VjV2dldPcXR1ZDNYbEZ3bGZ3aTBHcktwRDBfcGh4UW96NVk2aGFLRnNxLS0yWUloOW1vaTVOQk1mbndWUjVaSXFoZ1JtOTNPdzNVOWRaRWJ2alREZTZ0amhjVQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">PoeLLM Malware Infects 3,400+ Servers to Expand Crypto Mining Botnet - The Hacker News</a>
-<p class="news-desc">PoeLLM Malware Infects 3,400+ Servers to Expand Crypto Mining Botnet The Hacker News</p>
+<p class="news-desc">Canto Incognito는 암호화폐 채굴 및 봇넷 성장을 위해 노출된 AI 및 LLM 인프라를 사용하여 3,400개 이상의 서버를 감염시켰습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -127,7 +127,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9zNHA3SGlVVnRIUlNtcnNyS0xMd1RIeS1fM2NtRnpjdjBKUUxfNS1hcDNnVHVCYWV3NHo0eG5OTmt3U1BsLXpNQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 8만4,000달러 붕괴에 롱 4억8,720만 달러 청산…8만2,000달러도 무너지나? - 코인리더스</a>
-<p class="news-desc">비트코인 8만4,000달러 붕괴에 롱 4억8,720만 달러 청산…8만2,000달러도 무너지나? 코인리더스</p>
+<p class="news-desc">비트코인8만4,000달러붕괴…롱포지션4억8,720만달러강제청산,8만2,000달러지지선주목 비트코인급락/챗gpt생성이미지 © 비트코인(BTC)이8만4,000달러아래</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -168,7 +168,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380436/decrypt-money-accounts-on-solana-to-power-the-information-exchange" class="news-title" target="_blank" rel="noopener noreferrer">Decrypt Money Accounts on Solana to Power The Information Exchange</a>
-<p class="news-desc">One self-custodial platform to power Earn, Swaps, Predictions and Perps on Decrypt, as it builds out its financial and intelligence market.</p>
+<p class="news-desc">금융 및 인텔리전스 시장을 구축하면서 Decrypt에 적립, 교환, 예측 및 수익을 지원하는 하나의 자체 관리형 플랫폼입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -180,7 +180,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380458/securitize-nvidia-apple-amazon-tokenized-stocks-solana" class="news-title" target="_blank" rel="noopener noreferrer">Securitize Brings Nvidia, Apple and Amazon Onchain With Tokenized Stocks on Solana</a>
-<p class="news-desc">The new Securitize Stocks product launches with 12 names backed one-to-one by real shares—preserving dividends and voting rights—trading first on Solana, with NYSE and OKX-ICE venues planned.</p>
+<p class="news-desc">Securitize는 미국 최대 주식 12개를 암호화폐 거래자에게 제공하고 실제 주식으로 일대일로 뒷받침되는 토큰화된 주식을 출시합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -192,7 +192,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380347/tether-kazakhstan-central-bank-stablecoin-tokenized-assets" class="news-title" target="_blank" rel="noopener noreferrer">Tether Signs Deal With Kazakhstan's Central Bank to Explore a Stablecoin and Tokenized Assets</a>
-<p class="news-desc">Tether, issuer of the USDT stablecoin, will help Kazakhstan's central bank study a tenge-pegged token and put real-world assets on a blockchain.</p>
+<p class="news-desc">USDT 스테이블코인 발행자인 테더은 카자흐스탄 중앙은행이 텡게 고정 토큰을 연구하고 RWA를 블록체인에 배치하는 데 도움을 줄 것입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQVXF4cFpIc0EzaHF0QkJWaXBPUHpFOGljbVdpelNPVHpnMXVOVlpzWlVPbWl6UWdxMm9CWmVwNWdzWUZONDk5djljTk9RSDB6dU43NlJFYW9GWG8zMVZqcDdBdGNWVHR4SGFPWHdvd19QMFVObnNMR05rdDljaE5iNGZFa05VTDBrQ1F1YTROV3FqZGVt?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">‘The Altruists’ Trailer: Julia Garner & Anthony Boyle Become Crypto’s Bonnie & Clyde in Netflix’s $8 Billion FTX Cryptocurrency Fraud Drama - The Playlist</a>
-<p class="news-desc">‘The Altruists’ Trailer: Julia Garner & Anthony Boyle Become Crypto’s Bonnie & Clyde in Netflix’s $8 Billion FTX Cryptocurrency Fraud Drama The Playlist</p>
+<p class="news-desc">'The Altruists' 예고편에는 Netflix의 새로운 FTX 사기 드라마에서 Julia Garner와 Anthony Boyle이 Caroline Ellison과 Sam Bankman-Fried 역으로 출연합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380385/greece-plans-10-crypto-capital-gains-tax-down-from-15-floated-in-june" class="news-title" target="_blank" rel="noopener noreferrer">Greece Plans 10% Crypto Capital Gains Tax, Down From 15% Floated in June</a>
-<p class="news-desc">A draft bill would exempt the first €500 of annual gains, as crypto tax rates across Europe run from Cyprus's 8% to Italy's 33%.</p>
+<p class="news-desc">유럽 ​​전역의 암호화폐 세율이 키프로스의 8%에서 이탈리아의 33%에 달하기 때문에 법안 초안은 연간 이익의 첫 500유로를 면제할 것입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -245,7 +245,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380349/sec-cftc-crypto-rules-fall-short-clarity-french-hill" class="news-title" target="_blank" rel="noopener noreferrer">SEC and CFTC Crypto Rules 'Fall Short' of Clarity, Says Rep. French Hill</a>
-<p class="news-desc">The House Financial Services chairman credited the SEC and CFTC for stepping in after the Clarity Act's collapse but said only "permanent law change" can secure U.S. leadership.</p>
+<p class="news-desc">하원 금융 서비스 회장 프렌치 힐은 Clarity Act를 통한 "영구적인 법률 변경"만이 암호화폐 분야에서 미국의 리더십을 확보할 수 있다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -273,7 +273,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9Dby01Q3BFVmxRTHNtSXBEVVNiSi1qQmlDeG12TV9MdVIyRjR0QVlJSDhZZ0g4VkVvVVUxekFDVDlRQTlueE1rNWJNVXZrVkxfNWMxdEwtcXJLSGYtSHhaeG9EUUNBd19EM1BIUA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">D-BIZ 암호화폐 뉴스] "AI가 몇 달 내 비트코인·이더리움 키 해독 가능"…이더리움 연구원 '벙커 모드' 대비 촉구 - 데일리비즈온</a>
-<p class="news-desc">[D-BIZ 암호화폐 뉴스] "AI가 몇 달 내 비트코인·이더리움 키 해독 가능"…이더리움 연구원 '벙커 모드' 대비 촉구 데일리비즈온</p>
+<p class="news-desc">[미국=데일리비즈온] 인공지능이 비트코인과 이더리움 지갑을 보호하는 암호 체계를 양자컴퓨터보다 훨씬 먼저 무력화할 수 있다는 경고가 나왔다. 이더리움 핵심 연구원</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -285,7 +285,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380402/morning-minute-ethereum-researcher-says-ai-may-break-crypto-encryption-before-quantum" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: AI Could Break Crypto Encryption Before Quantum, Says Ethereum Researcher</a>
-<p class="news-desc">Justin Drake is calling for crypto holders to start calmly planning for “Bunker Mode." But reactions so far haven’t been too calm.</p>
+<p class="news-desc">저스틴 드레이크는 암호화폐 보유자들에게 "벙커 모드"에 대한 차분한 계획을 시작할 것을 촉구하고 있습니다. 하지만 지금까지의 반응은 그다지 차분하지 않았습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -297,7 +297,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380363/ethereum-researcher-ai-break-encryption-before-quantum" class="news-title" target="_blank" rel="noopener noreferrer">Ethereum Researcher Says AI May Break Encryption Before Quantum Does</a>
-<p class="news-desc">Ethereum Foundation researcher Justin Drake urged holders to calmly move funds to unused addresses, warning that AI-driven math could break crypto signatures before quantum computers do.</p>
+<p class="news-desc">이더리움 재단 연구원 Justin Drake는 보유자에게 AI이 암호화폐 서명을 깨뜨릴 수 있다고 경고하면서 사용되지 않은 주소로 자금을 이동할 것을 촉구했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

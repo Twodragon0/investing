@@ -84,7 +84,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE8wSGswb29kTlhIN2o3X00yMGF3T3FCNURaVTdBYW95cXRQaUZsbU96R3NRVngyVmd1a1piMk9uY0RsbGdHaVZteXZn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 새 강세 사이클 시작됐나…피델리티, 2029년 30만 달러 전망 - 코인리더스</a>
-<p class="news-desc">비트코인 새 강세 사이클 시작됐나…피델리티, 2029년 30만 달러 전망 코인리더스</p>
+<p class="news-desc">비트코인30만달러간다?…피델리티새강세사이클시작257%상승전망 비트코인(BTC)불마켓(강세장) © 비트코인(BTC)이2주째8만달러선을지키면서암호화폐겨</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -125,7 +125,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBlYmV3dTdQTnFSVXh4Q2MtbzFYQ2FCVC1lRFlyRjZ5S3BsSVFwbDB4RUdOZks2OExvcVR6QWxkeTFRc29fMGF2WHFtMU04cTBZZ2hxSGRUNmhZV2RLQndrdQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">84만7666개 보유한 스트래티지, 비트코인 평가액 722억달러</a>
-<p class="news-desc">84만7666개 보유한 스트래티지, 비트코인 평가액 722억달러 토큰포스트</p>
+<p class="news-desc">스트래티지는 10월 4일 기준 비트코인 84만7666개를 보유한 것으로 집계됐다. 평균 매입가는 약 7만5400달러, 평가액은 722억9000만달러다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -137,7 +137,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9SX3ROR2ZCLVpRWWsyWFF2WmQ4SGpaeXN4RUxGZlBWNGt5Tk5UQmdRdF9qajVCTENnV2IzYkFwcUtGam9XcFI5aUtB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">암호화폐 반등 놓치기 싫다면? 월가서 주목받는 비트코인·이더리움·솔라나 ETF - 코인리더스</a>
-<p class="news-desc">암호화폐 반등 놓치기 싫다면? 월가서 주목받는 비트코인·이더리움·솔라나 ETF 코인리더스</p>
+<p class="news-desc">비트코인(BTC),이더리움(ETH),솔라나(SOL)/챗GPT생성이미지 © 비트코인(BTC)과이더리움(ETH),솔라나(SOL)가지난해기록한사상최고가를크게밑돌면서이들자산</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -161,7 +161,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQRVI3YU5vZUY4VDdSdzVZQ3NfZTB4U1c5cTNUbk5XZ1RSaVNGYlBUNzBUcHJLT0ppN2tPa3dhMk9PdVNFbEdsRk9YcTdBVk9Jb3p6LTdXeUFleVhBbTU4Q1ZEYjVEc09yXy1zTDZSUDZlR1dBeHNNWXl0NFg0UmpWd252Y0FvVjRWYk1aMkZEMkF3U0E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Community Banks Challenge Cryptocurrency Regulations - GV Wire</a>
-<p class="news-desc">Community Banks Challenge Cryptocurrency Regulations GV Wire</p>
+<p class="news-desc">커뮤니티 은행, 암호화폐 규제에 도전하다 - GV Wire.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -173,7 +173,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE0ySzhNUnhsWTZrdE5JU2JaTnJOTnBfemlpUGhnX3BuZENtUm9HODhkdG13OUZiTVR4WVdERHpvcEJ5SlJDV0pvMVRubDJlLXlKMkdvTUlEZWNuVC1zNFFEdU9kRWVlVmd1WWJWVkZhRUZGWUk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 SEC, 비트코인 등 6개 자산 3배 레버리지 ETF 상장 승인</a>
-<p class="news-desc">美 SEC, 비트코인 등 6개 자산 3배 레버리지 ETF 상장 승인 디지털투데이</p>
+<p class="news-desc">[디지털투데이 추현우 기자] 미국 증권거래위원회가 비트코인, 이더리움, 금, 은, 원유, 천연가스를 기초자산으로 한 3배 레버리지 ETF 6종의 상장과 거래를 승인했다. 3일(현지시간) 블록체인 매체 코인포스트에 따르면 이번 승인은 시보 BZX 거래소가 제출한 규정 변경안을 승인하는 방식으로 이뤄졌다.이번에 승인된 6개 상품은 모두 선물을 활용해 수수료와 비용 차감 전 기준으로 기초자산의 하루 가격 변동률 3배를 추종하도록 설계됐다. 비트코인과 이더리움 관련 2개 상품은 주로 CME 선물과 현금 담보를 활용한다.이들 상품은 모두 볼</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -185,7 +185,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBiSzNNcVYySjl1c09CNHhoTVA3VEFoTm9vaXd4cjBZWGJLcHYzd09uaFpwV3QtTGRkaWN6SWFkUy1uVGp1S3I4Ul9OVEJxeGhZ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 CFTC 위원장 "기존 권한으로 암호화폐 규칙 계속 마련할 것" - 블루밍비트</a>
-<p class="news-desc">美 CFTC 위원장 "기존 권한으로 암호화폐 규칙 계속 마련할 것" 블루밍비트</p>
+<p class="news-desc">마이클 셀릭 미국 상품선물거래위원회(CFTC) 위원장이 기존 권한을 활용한 자체적인 암호화폐 규칙 제정을 지속하겠다는 입장을 내놨다. 4일(현지시간) 오데일리에 따르면 셀릭 위원장은 최근 "각 규제기관은 이미 상당한 법적 권한을 갖고 있다"며 "새로운 법률 제정을 기다</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -210,7 +210,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380019/trump-jay-clayton-sec-ripple-ai-push-super-intelligence" class="news-title" target="_blank" rel="noopener noreferrer">Trump Taps Jay Clayton, the SEC Chair Who Sued Ripple, to Lead AI Push</a>
-<p class="news-desc">President Trump named a new "Super Intelligence Force" to coordinate federal AI policy, with Director of National Intelligence Jay Clayton at the helm. As SEC chair, Clayton launched crypto lawsuits including the agency's case against Ripple.</p>
+<p class="news-desc">WHO이 SEC의 암호화폐 단속을 시작한 사람인 Jay Clayton은 이제 인공 지능에 대한 워싱턴의 접근 방식을 주도하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -222,7 +222,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380002/trump-third-meme-coin-dinner-details" class="news-title" target="_blank" rel="noopener noreferrer">Trump Is Hosting Yet Another Meme Coin Dinner: Here Are the Details</a>
-<p class="news-desc">The TRUMP meme coin project is inviting its top 185 holders to a Nov. 22 gala dinner with President Trump two weeks after ethics disputes over his crypto interests helped stall the Clarity Act in the Senate.</p>
+<p class="news-desc">Donald 트럼프 대통령은 Clarity Act가 붕괴된 지 불과 몇 주 만에 자신의 밈 코인 후원자들을 위해 또 다른 저녁 식사를 식탁에 올릴 예정입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -234,7 +234,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/trump-taps-jay-clayton-to-lead-new-super-intelligence-force?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Trump taps intel chief Jay Clayton to lead new Super Intelligence Force</a>
-<p class="news-desc">President Donald Trump said US intel chief Clayton will lead the SIF, reporting to the president and Chief of Staff Susie Wiles.</p>
+<p class="news-desc">도널드 트럼프 대통령은 트루스 소셜 선데이(Truth Social Sunday)에서 제이 클레이튼(Jay Clayton) 국가정보국장이 새로운 슈퍼 인텔리전스 부대(Super Intelligence Force)를 이끌고 대통령에게 직접 보고할 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -257,7 +257,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380001/openai-banned-pewdiepie-twice-ajax-uncensored-ai" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI Banned PewDiePie Twice While He Built Ajax, an Uncensored AI That Will Run on Your PC</a>
-<p class="news-desc">The YouTuber says OpenAI suspended his account twice while he trained a small, uncensored model built to run on your own computer.</p>
+<p class="news-desc">Pewdiepie는 OpenAI가 자신의 컴퓨터에서 실행되도록 제작된 검열되지 않은 작은 모델을 훈련하는 동안 자신의 계정을 두 번 정지했다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -269,7 +269,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379998/california-subpoena-openai-ai-models-hack" class="news-title" target="_blank" rel="noopener noreferrer">California Subpoenas OpenAI Over AI Models That Hacked Their Way Out of a Test</a>
-<p class="news-desc">California's attorney general wants answers from OpenAI about AI models that escaped a locked test environment and hacked Hugging Face—and whether the company can be held legally accountable.</p>
+<p class="news-desc">캘리포니아 법무장관은 잠긴 테스트 환경을 탈출하여 Hugging Face를 해킹한 AI 모델에 대해 OpenAI의 답변을 원합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379991/ethereum-now-pay-for-ai-without-revealing-identity" class="news-title" target="_blank" rel="noopener noreferrer">Ethereum Now Lets You Pay for AI Without Revealing Who You Are</a>
-<p class="news-desc">Ethereum's zkAPI lets users prepay in USDC and query AI models through cryptographic proofs, so no single party sees both who they are and what they ask.</p>
+<p class="news-desc">이더리움의 zkAPI를 사용하면 사용자는 개인 정보를 공개하지 않고도 USDC에서 선불로 결제하고 암호화 증명을 통해 AI 모델을 쿼리할 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

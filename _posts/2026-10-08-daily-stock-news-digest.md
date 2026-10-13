@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">901.73</div><div class="stat-label">KOSDAQ +0.06%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 - 180건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 금리 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 반도체 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">[표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락 핀포인트뉴스</span></li><li><a href="https://www.sedaily.com/article/20099308">기아 노조원 5000여명 개인정보 유출…산업계로 해킹 공포 번졌다</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">10월 7일 코스피에서 외국인이 2조6,314억원, 기관이 7,101억원을 순매도했다. 개인은 2조6,183억원을 순매수했다.코스닥시장 에서도 외국인이 2,542억원, 기관이 2,098억원을 순매도했다. 개인은 4,871억원을 순매수했다.코스피에서 에이피알은 외국인과 기관의 순매수 상위 종목에 공통으로 포함됐지만 개인의 순매도 상위 종목에 올랐다.SK하이닉스는 외국인과 기관의 순매도 상위 종목인 반면 개인의 순매수 상위 종목이었다.코스닥에서는 주성엔지니어링이 외국인과 기관의 순매도 상위 종목이자 개인의 순매수 상위 종목에 포함됐다.</span></li><li><a href="https://www.sedaily.com/article/20099308">기아 노조원 5000여명 개인정보 유출…산업계로 해킹 공포 번졌다</a></li></ul></div>
 
 
 
@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0cjN5dU5VcFpKOUZmdkltYmU1ZWpoMHZJYmJhRzJNZldmdHJpeTRibkI1MDRoWGJWWDBEVC04ZkhtQ1F6NXg3RklFckpFdEdUc3RZalRQeWFWZEnSAWBBVV95cUxQcWR5TDhRaU4xeGstTktXeGU4R3JTWU5teEN5SUctaXdzX0VpZkVxb3E5OE12VC1haVhqR1ROaF9ld0lMVDZUdHdXWi1INXh3ckx2M0JNNmJnQjIySG9BX04?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시</a>
-<p class="news-desc">[코스피·코스닥 전 거래일(7일) 주요공시] 연합뉴스</p>
+<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시. 주요 키워드: 코스피, 코스닥, 거래일.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1HS3dTNGlsLTdnVERRbWxoa0sySklNdm5ncFVGaFdPdmZ3X1lsYmtYbGZ5cDdSUjF0elV4a0hCSmFWUFdMc09DN1d6cGItRlR0RmRXcW1xdlFzYVo2ZFU2RVVYME92QndYWU1j?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 출발.코스닥 내림세 개장 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 출발.코스닥 내림세 개장 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 8일 코스피와 코스닥지수가 각각 오름세와 내림세로 출발했다.이날 코스피는 전 거래일보다 0.07% 오른 6808.68에 시작했으며, 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5UV1FQdjdQcElyTnptazdkUmF6Q0EzOHUycVU3MnZ6TF9IU2hiXzh1QUxxT3RSWUpMeHZ6UFc5WS0wRHR5U1RIV0hadWhGVmFuQXJxRFhZQlFyeDVWck4tMWFRRmR6ODlpUkM5VFNNOGFxNWfSAXdBVV95cUxONkM1cDZEb1dnMWRWN1hZY3BzaWpRTDQ4Y3o3OHVLbzJTczB5TDBtbTVROUE2dVVaYWhLRHEyZUFnQ29LYXdJbzlobWN0aVRkQWVROVBDOGhhaWhjQ29BS3BDMTZ3aFA5aHVwckt2alFLcC1mbk9nRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자</a>
-<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자 핀포인트뉴스</p>
+<p class="news-desc">▲ 에피소드컴퍼니[317530], 140억원 제3자배정 유상증자▲ 금융위, '회계기준 위반' 금양[001570]에 76억3천만원 과징금 의결▲ BGF[027410] "계열사 케이엔더블유 주식 818억원에 취득…지분율 56.9%"▲ 현대비앤지스틸[004560] "성림첨단산업 주식 185억원에 추가취득"▲ 대성산업[128820] "자회사 대성쎌틱에너시스 주식 380억원에 추가취득"▲ 두나무·네이버파이낸셜 주식교환 또 연기…내년 3월 예정▲ 알파칩스[117670], 주당 1.0주 무상증자 결정▲ LG전자[066570] 3분기 영업익 7천</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnM2aVMweDBaaGJGVGFFZ09qd3pDd09SZlNVWkpQSzhjQTByQXBXZU1NMjZkelhTMmFsSHh2bk1sc3NzcWh3clphT1dkVWN0Qm5OOTZPSlc0dDlLcmlxNmpsQzBqRjgzbmczNjdkT2RFcmNLN2tpNmVLMlB4MFdEVjBLa1NPRU5R?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">What “Real” Interest Rates Are Telling Us - ETF Database</a>
-<p class="news-desc">What “Real” Interest Rates Are Telling Us ETF Database</p>
+<p class="news-desc">경제와 금융에서 가장 중요한 개념 중 하나는 투자에 대한 "실질" 수익률입니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -160,7 +160,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBZckhKZXFqQThmQnRlZVYySjVVWjhPN2pGZVdaWFdLMGo5bkx1XzlSSjlPQ3NaVWQyT1VGVFZTUnJwdU5tRlZXWUllY1lUZ2dDMlZCWjJJdDZvek1LakRsN2EwaHBBeGZIRWoyNA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 연휴 끝 반도체 매물 압박에 6,940선 하락…코스닥, 910선 돌파 - 프리진경제</a>
-<p class="news-desc">코스피, 연휴 끝 반도체 매물 압박에 6,940선 하락…코스닥, 910선 돌파 프리진경제</p>
+<p class="news-desc">6일, 코스피는 전 거래일 대비 62.35포인트 내린 6,941.39로 하락 마감했다. 코스닥은 26.63포인트 상승한 919.92로 장을 마쳤다.수급 동향을 보면, 코스피 시장에서 외국인과 기관이 각각 1조 7,767억 원, 18억 원을 순매도하며 지수를 하락 압박했다. 반면 개인은</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5yeDRTMExRLVR1ZkplSmlpSmhxdl9WSFN1M0stSU14LWM0UlRQMVFxeTZiOXZwLXMwSVhOS0M5TFV5M2VRNEF4MUNpQ1NlX192SFF5dHJmU2ZEaHBKTkFpLVJFLXBabDdNd01CZ0c5dw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 코스닥 박스권 뚫고 920선…반도체 소부장 앞세워 930선 도전 - 뉴스퀘스트</a>
-<p class="news-desc">[박정식의 국내 주식시황] 코스닥 박스권 뚫고 920선…반도체 소부장 앞세워 930선 도전 뉴스퀘스트</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표】 오늘 국내증시는 미국 국채금리 상승세 진정과 국제유가 약세, 기업 실적 기대감에 힘입어 긍정적인 흐름을 이어갈 가능성이</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -184,7 +184,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMmNydTJJRjhlaHZkMm1FYXBxeTNkcXRnLTA1S2YtNWhicmVhc2txU3pfb0p4NmFfVzRRQUdaRVhaUXROMy15a2VSOWZVV3oyTTF3TWZ4MEg3dkJOcTRBUzBIdEJJcXZMeWdBR0FsMHY1UldtTnV5bVRuWDBhQU16WXlkbmtpVzdCWDl3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">S&P 500 and Nasdaq surge to record highs after AI chipmaker rally</a>
-<p class="news-desc">S&P 500 and Nasdaq surge to record highs after AI chipmaker rally The Guardian</p>
+<p class="news-desc">S&amp;P 500과 Nasdaq은 AI 칩 제조사 주변의 랠리과 미국 국채 수익률 하락 이후 사상 최고치로 마감했습니다. 시장 마감 시 S&amp;P 500은 0.58% 상승하여 역사상 처음으로 7,800을 돌파했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic will be 'most ridiculous IPO' of year, analyst says</a>
-<p class="news-desc">Anthropic reportedly plans to list on the Nasdaq before Thanksgiving, and one bearish advisory firm suggests that investors sit this one out.</p>
+<p class="news-desc">Anthropic은 추수감사절 이전에 나스닥에 상장할 계획이며, 한 약세 자문 회사는 투자자들에게 이 상장을 맡길 것을 제안합니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -239,7 +239,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmkyYXVKSHliSDQ0UElWWWNvZlpwRVc1RjhxUzZ2aktUdG96RTJxN3lPOHB5SFZkZjVVcmJuTWJ0ZEZQZHBJRlBPai12cTJwelNNRnIyMzF6UEtRUzduOTdzQ0hzVU9DM2VESWVtNS1LazlhanZCRGs1Y1pzN0p3bk9wRURnUDhLT2NyVmZQN21oMGFaNWpuZlBVU3VQV1doU2VJZmV6NV9SaVNNbFFVak1nVi1STzZHVmdQa1FvZ20wLWhaei1BS1BnX2F1clMyakotcA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Forget SpaceX. Here's the $2 Trillion IPO I'm Waiting For. - The Globe and Mail</a>
-<p class="news-desc">Forget SpaceX. Here's the $2 Trillion IPO I'm Waiting For. The Globe and Mail</p>
+<p class="news-desc">SpaceX는 잊어버리세요. 여기 제가 기다리고 있는 2조 달러의 IPO이 있습니다. - 글로브 앤 메일. ($2T) 잊어버리세요, 관련 보도를 기다리고 있습니다.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>
@@ -273,7 +273,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html" class="news-title" target="_blank" rel="noopener noreferrer">Fed officials see another hike coming, but no sign as to when, minutes show</a>
-<p class="news-desc">The Federal Reserve on Wednesday released minutes from its Sept. 15-16 policy meeting.</p>
+<p class="news-desc">연준은 수요일에 9월 15~16일 정책 회의의 회의록을 공개했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -285,7 +285,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-08 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/08/oil-prices-today-brent-wti-hormuz.html" class="news-title" target="_blank" rel="noopener noreferrer">Oil gains as Middle East hostilities stoke supply worries</a>
-<p class="news-desc">President Donald Trump and his national security team have talked about possibly restarting large-scale U.S. military operations in Iran in the coming weeks, NBC News reported.</p>
+<p class="news-desc">이란이 호르무즈 해협을 통과하는 유조선에 대한 공격을 강화하고 허리케인 이사이아스가 멕시코만에서 미국의 해상 생산을 위협하면서 원유 가격이 목요일 급등했습니다. 국제 벤치마크인 브렌트유 선물은 4% 상승한 배럴당 104.28달러로 마감했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9OcTJ4T24xZ0gxOW5tVDJGbkc5MW5JYTB6Z24wSUpBeTZmRmc4Smx6Q0hTUGVLLS1kTzhNMnhrdmdRTkxtTHl5d3dLekoyMi1GcWN3aXA5VERad0NZMWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 실적이 쏘아올릴 반도체株…'50만 전자·328만 닉스' 현실될까 - 더구루</a>
-<p class="news-desc">삼성전자 실적이 쏘아올릴 반도체株…'50만 전자·328만 닉스' 현실될까 더구루</p>
+<p class="news-desc">[더구루=변수지 기자] 삼성전자가 국내 기업 최초로 분기 영업이익 100조원을 돌파했다. 창사 이래 최대 분기 실적에 삼성전자·SK하이닉스의 추가 상승 기대도 커지고 있다. 10일 산업계에 따르면 삼성전자는 3분기 매출 195조원, 영업이익 107조4000억원의 잠정실적을 지난 8일 발표했다. 매출과 영업이익은 전년 동기 대비 각각 126.6%, 782.5</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5BOTNlajdpNk5VanVGYmx1ZDZBZUpSZGtoWktCQmhzcDVNQ3BtUzBDb3d3MlNndUQyVnFLMThGX3FTZ0RjWDIxM1EyUTJZbU5nM2Z1VFBLRFQxV1o3dFRkdHFzM0tLRHVJT1c1dG9B?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Tech stocks drop after report that OpenAI’s revenue is lower than expected</a>
-<p class="news-desc">Tech stocks drop after report that OpenAI’s revenue is lower than expected CNN</p>
+<p class="news-desc">OpenAI의 연간 수익이 이전에 보고된 것보다 약 200억 달러 적다는 뉴스 보도 이후 목요일 기술주가 하락했습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -105,7 +105,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE53cGg0NFhFckZVTkVXVVRFbzRqanUyRUh4aHlxVzJXbDhmTUJXNGtrNWZseDRUaU1pd3dhUVRrel9sYkd5LVZSdW5HbEhISmVtVWhBU21vbTFXa2VWQUs3OGtMNkRkNTlIVlI5ZNIBbEFVX3lxTE53cGg0NFhFckZVTkVXVVRFbzRqanUyRUh4aHlxVzJXbDhmTUJXNGtrNWZseDRUaU1pd3dhUVRrel9sYkd5LVZSdW5HbEhISmVtVWhBU21vbTFXa2VWQUs3OGtMNkRkNTlIVlI5ZA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한국은행 10월 기준금리 ‘매파적 동결’ 전망…美 추가 긴축은 변수 - 국민일보</a>
-<p class="news-desc">한국은행 10월 기준금리 ‘매파적 동결’ 전망…美 추가 긴축은 변수 국민일보</p>
+<p class="news-desc">오는 22일 한국은행 금융통화위원회를 앞두고 기준금리를 유지하면서도 추가 인상 가능성을 열어둘 것이라는 ‘매파적 동결’ 전망이 나왔다. 앞선 금리 인상이 경제에 미치는 영향을 살펴볼 필요가 있지만, 미국의 추가 긴축 가능성과 국제유가에 따른 물가 위험도 남아</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdmNFVEJGaFByaVNnbUNON1BBd0MwM1JiR2x6SGJvYVJ4Qm9LdXhjbTRzcXpuZlhCQzBIY1hkSmxQTGJqYkc1ckhBR0tGbUYyRk9ybFAwRTZCbVRRS0QtWE03a2RzUEtwbGlYMHItc0xEd2RJTGJCSHI5Y2xUY2dObWxPWmgzN1M4dFM2dTdXNE45WDlJOTFBWEhObXNDOEg2LTh3NllkMGZFNjQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock market today: Dow, S&P 500, Nasdaq rally to cap volatile week as earnings season nears</a>
-<p class="news-desc">Stock market today: Dow, S&P 500, Nasdaq rally to cap volatile week as earnings season nears Yahoo Finance</p>
+<p class="news-desc">금요일 미국 증시는 유가 하락과 기술주 반등으로 상승했습니다. 다우존스 산업평균지수(^DJI)는 0.8% 상승했고, S&amp;P 500(^GSPC)은 0.6% 상승했으며, 기술주 중심의 나스닥 종합지수(^IXIC)는 0.6% 상승했습니다. 세 가지 주요 평균 모두 변동성이 큰 한 주를 마무리하기 위해 주간 상승세를 기록했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOc2ZtTkg1OU1ZeEVqdGdTUjFKR1BSYkwzcWRwWG1wNjE2UFpqa2NYbmxPMXNxM2pURVpLWVVUYm9zUmE2S1QwMEUxZURaejlrb1g1V0dEMF80RnBWOUo4U1VPYzNlM0M5dlBnMkdQVS1ObHA2b1BYTmJLa1RuUk8xSVB4bk5FUnRQblcwTUtLTVFMZGU2Y0o0VEVWLWFBUnRCOWlpUEI0MmF2WGJyTmdhd3lpQlZDZ3JQZXJMd0FYcw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Wall St Week Ahead Bank earnings, CPI headline busy markets week as S&P 500 hovers near records</a>
-<p class="news-desc">Wall St Week Ahead Bank earnings, CPI headline busy markets week as S&P 500 hovers near records Reuters</p>
+<p class="news-desc">월 스트리트 주 앞두고 은행 수익, CPI 헤드라인은 S&amp;P 500이 기록에 가까워지면서 바쁜 시장 주간입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -214,7 +214,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/09/trump-putin-diesel-russia-sanctions-ukraine.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump's diesel agreement with Putin accused of contradicting Russia sanctions law</a>
-<p class="news-desc">Ukraine President Volodymyr Zelenskyy said in a searing statement that the U.S. easing sanctions on Moscow "plays into Russia's hands."</p>
+<p class="news-desc">볼로디미르 젤렌스키 우크라이나 대통령은 성명을 통해 미국이 모스크바에 대한 제재를 완화하는 것은 "러시아의 손에 놀아나는 것"이라고 말했다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -226,7 +226,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/10/putin-trump-iran-war-russia-diesel.html" class="news-title" target="_blank" rel="noopener noreferrer">Putin relayed Iran war proposal to Trump, Kremlin says</a>
-<p class="news-desc">Putin's reported call with Trump regarding the Iran war comes on the heels of a deal for the U.S. to buy Russian diesel amid a surge in fuel prices.</p>
+<p class="news-desc">이란 전쟁과 관련하여 푸틴이 트럼프과 통화한 것으로 알려진 통화는 연료 가격 급등으로 인해 미국이 러시아 디젤을 구매하기로 한 거래 직후에 나왔습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -248,7 +248,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQeURQUU43UzY2MWpoNEJ0Z0l5eWw4ZWR4V0N5cnN6RGE0R0hoOTlhZW5nNFJUOXY4NHJNOUFjRVozc0VvbVFmNHp6dUFOb2QyRXJ6dWwyOVc2dkViMFFnbnE5RUlkT2FDWG9rLWJJNFpSbTR4R0JQcGZLY09XM3YtV0tZaTVFN1R3eXJ5TWZQOVdxWGJFTmVYNDlsOUxtZUxVN1g0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Prediction: This Is What a $5,000 Investment in the Vanguard S&P 500 ETF (VOO) Will Be Worth by 2040</a>
-<p class="news-desc">Prediction: This Is What a $5,000 Investment in the Vanguard S&P 500 ETF (VOO) Will Be Worth by 2040 Yahoo Finance</p>
+<p class="news-desc">예측: Vanguard S&amp;P 500 ETF (VOO)에 대한 5,000달러 투자의 가치는 2040년까지입니다. ($5,000)</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -271,7 +271,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-11 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.investing.com/news/cryptocurrency-news/bitcoin-slips-toward-82000-as-rising-oil-prices-fed-outlook-weigh-4941955" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin steadies near $83,000 as spot ETF outflows top $680 million</a>
-<p class="news-desc">Bitcoin steadies near $83,000 as spot ETF outflows top $680 million. ($83,000)</p>
+<p class="news-desc">비트코인은 현물 ETF이 6억 8천만 달러를 유출하면서 $83,000 근처에서 꾸준히 유지됩니다. ($83,000)</p>
 <span class="source-tag" data-source-type="aggregator">Investing.com</span>
 </div>
 </div>

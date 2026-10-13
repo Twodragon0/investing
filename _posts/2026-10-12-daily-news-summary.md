@@ -119,9 +119,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-12 - 시장 분석 뉴스 요�
 ### 암호화폐 뉴스 (65건)
 
 **대표 헤드라인:**
-- Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers
-- Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI
-- Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09
 
 [상세 보기](https://investing.2twodragon.com/crypto-news/2026/10/12/daily-crypto-news-digest/)
 
@@ -137,9 +134,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-12 - 시장 분석 뉴스 요�
 ### 보안 리포트 (11건)
 
 **주요 보안 이슈:**
-- Coldcard says it’s investigating how phishing link appeared on its X account
-- Ledger confirms unauthorized hardware implant, says losses may exceed $86M
-- Ledger investigates fund losses linked to Southeast Asian reseller, warns users
 
 | 프로젝트 | 피해 규모 | 공격 유형 |
 | --- | --- | --- |
@@ -255,9 +249,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-12 - 시장 분석 뉴스 요�
 
 **해킹** (8건 연관)
 - Locus Finance exploit
-- Set Protocol exploit: Rounding Error
-- MakerDAO ETH-A Liquidation Keeper Bot exploit: Improper Access Control
-- GoldPesa exploit: Incorrect Share Accounting
 
 **금리** (5건 연관)
 - 연준이 올해 이자율을 인상할까요? 분열된 경제학자들의 의견 - ABC 뉴스 - 속보, 최신 뉴스 및 비디오
@@ -266,10 +257,6 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-12 - 시장 분석 뉴스 요�
 - 美금리 뛰고 물가도 3% 위협…한은, '3연속 인상 vs 10월 동결' 기로
 
 **바이낸스** (4건 연관)
-- Binance Alpha Trading Competition: Trade Stable (STABLE) and Share $200K Worth…
-- Binance Earn: Enjoy Up to 5% APR on USDC Flexible Products — Exclusive 5.5%…
-- Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE,…
-- Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09
 
 
 ---

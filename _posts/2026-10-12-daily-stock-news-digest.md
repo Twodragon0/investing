@@ -41,6 +41,43 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 - 2026-10-12 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,340.02(-0.13%).
 - *High hopes for third-quarter earnings are outweighing concerns around interest rates and oil prices — but one expert.*
+- *3분기 실적에 대한 높은 기대가 금리와 유가에 대한 우려보다 더 큽니다. 하지만 한 전문가가 있습니다.*
+**긴급**: Stock Market Crash Hits 54% Of Stocks—Is The S&P 500 Next? 
+외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 114건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
+
+### 테마별 동향
+
+- **🤖 AI/기술** (10건): 반도체, 하이닉스, 삼전닉스 기술 이슈 (10건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
+- **📈 가격/시장** (20건): 반도체, 삼성전자, 소부장 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
+- **📊 매크로/금리** (7건): 실적, 인플레이션, 휴전 매크로 변수 (7건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
+
+**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
+
+### 긴급 이슈
+
+
+### 주요 이슈
+
+- 외 17건
+
+### 투자자 체크포인트
+
+- 한국 기사 42건, 글로벌 기사 72건 수집
+- 한국 지수: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,340.02(-0.13%)
+
+
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:50%"></div></div><span class="theme-count">10건</span></div>
+<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">20건</span></div>
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:35%"></div></div><span class="theme-count">7건</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:40%"></div></div><span class="theme-count">8건</span></div>
+<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:35%"></div></div><span class="theme-count">7건</span></div>
+</div>
+
+*기사는 여러 테마에 중복 집계될 수 있음*
+
+
+---
 
 ## 테마별 주요 뉴스
 
@@ -64,7 +101,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB3dzh1a2NlalJoVmlaRUMzbHoxTVdMbzVvN1F6WHBFcnhsWXE0YzdzRVVBaXJoZm1xbGtNVHg1NHZUVXlPN3NRbVNHSkthbUo1TnRkSkZpb2tOSmZ4UHVYRy1JMS1KckU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 외국인 이탈 가속.반도체 소부장주로 자금 이동 - M이코노미뉴스</a>
-<p class="news-desc">삼성전자·SK하이닉스 외국인 이탈 가속.반도체 소부장주로 자금 이동 M이코노미뉴스</p>
+<p class="news-desc">미국 뉴욕증시가 인공지능(AI) 관련주를 중심으로 사상 최고치를 경신하는 가운데 국내 증시는 반도체 대형주와 소재·부품·장비(소부장)주 간 희비가 엇갈리고 있다. 삼성전자와 SK하이닉스가 사상 최대 실적에도 외국인 매도세에 밀려 약세를 보이는 반면, 코스닥 반도체 소부장주는 강세를 이어가며 국내 증시의 자금 흐름이 변화하고 있다. 11일 한국거래소에 따르면</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -101,7 +138,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV2R4TXVOR0VQX1ltSGVJMFlDNTRLRXE5RjJRVERJazdpbGhsRWVDU2dlVV9wM2R0R1pFdGJpUEZrSEhpNFZlcTJ3OHlsN3BST2Y5c0JFcnQxUDdUZVdLQm1KM1lMZl9lRXI5d3lCN1BMbWJRNlhTTDBEZzJOUXlocXRrX3lfdjZVcm91Y0Q3eW1scU80Z245TWJPUTNhQVNCd29seHpDSmo?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Crash Hits 54% Of Stocks—Is The S&P 500 Next?</a>
-<p class="news-desc">Stock Market Crash Hits 54% Of Stocks—Is The S&P 500 Next? Forbes</p>
+<p class="news-desc">주식 시장 폭락은 주식의 54%를 기록합니다. 다음은 S&amp;P 500입니까? (54% 갱신) 급락 관련 회사입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -113,7 +150,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFA4UkJrM1AzSVhST3VEazB3RTNjV1p6U0RtTVAzOEpQMEF0SFAycWFKbDVJU3RqaGs5cUhsQnZXWDdWUDFHY1FsREROT2loVEdHOXBDQTgwUUM2VzdiQXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'100조 시대' 삼성전자 최대 실적.주가는 하락 - YTN</a>
-<p class="news-desc">'100조 시대' 삼성전자 최대 실적.주가는 하락 YTN</p>
+<p class="news-desc">삼성전자가 최대 실적을 경신하면서국내 기업 최초로분기 영업이익 100조 원을 돌파했습니다. 하지만 사상 최대 호실적에도주가는 오히려 하락했는데이인철 참조은경제연구소장과 관련 내용 짚어봅니다. 어서 오십시오. 삼성전자 3분기 영업이 100조 원을 돌파했습니다. 글로벌 빅테크와도 어깨를 나란히 할 정도인데 역시나 고대역폭메모리, HBM의 힘인가요?</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -125,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5ULVBFRF9rY05tQnpWQ3k5cDBROHNoRDJLenFHdnY1Wklxd3Nqd3BpMXdkb055WnAwNnVSTHJSTTFpZVpfVXFIdE5GdWs5RTAzMzZpazB6QV9TUGZ6ZVpISGl3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 하락에도 KRX 반도체 11.4% 올라…소부장이 끌었다 - 매일신문</a>
-<p class="news-desc">삼성전자·SK하이닉스 하락에도 KRX 반도체 11.4% 올라…소부장이 끌었다 매일신문</p>
+<p class="news-desc">반도체 소재·부품·장비(소부장) 관련 주가가 급등하며 코스닥...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -147,8 +184,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 
 ### 📊 매크로/금리 (7건)
 
-*High hopes for third-quarter earnings are outweighing concerns around interest rates and oil prices — but one expert.*
-
 
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
@@ -156,7 +191,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQREhqRW9yMTk2QWxZb0k1a19pUVZhNFF6WkRVRVVndFVCM05zTDlfdFg2dmlVNlY3bm1ydGswcWsxdWJwOHJWa1dFelhCNC1jTUdHdUE0QzJLUkUzMFZJckVMTWhiSVM1R0k2OGdINEJmSkxRMHFZYThJNWJLd0FwakV2LWJrYkV3Tzdta3R0MEZrYjFHaHRidEJwUzB3LXEzNmZJSC04alY1c2w1emdBcHhTc0xObW54bm0yckpTMVNzUUdNOW9hQ0pzRlNqUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Futures: 6 Stocks Near Buy Points; Big Earnings, Inflation Data Due - Investor's Business Daily</a>
-<p class="news-desc">Futures: 6 Stocks Near Buy Points; Big Earnings, Inflation Data Due Investor's Business Daily</p>
+<p class="news-desc">대만 반도체와 ASML은 칩 거대 기업의 진입이 가까워지면서 수익이 발생합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -168,7 +203,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOc2ZtTkg1OU1ZeEVqdGdTUjFKR1BSYkwzcWRwWG1wNjE2UFpqa2NYbmxPMXNxM2pURVpLWVVUYm9zUmE2S1QwMEUxZURaejlrb1g1V0dEMF80RnBWOUo4U1VPYzNlM0M5dlBnMkdQVS1ObHA2b1BYTmJLa1RuUk8xSVB4bk5FUnRQblcwTUtLTVFMZGU2Y0o0VEVWLWFBUnRCOWlpUEI0MmF2WGJyTmdhd3lpQlZDZ3JQZXJMd0FYcw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Wall St Week Ahead Bank earnings, CPI headline busy markets week as S&P 500 hovers near records</a>
-<p class="news-desc">Wall St Week Ahead Bank earnings, CPI headline busy markets week as S&P 500 hovers near records Reuters</p>
+<p class="news-desc">월 스트리트 주 앞두고 은행 수익, CPI 헤드라인은 S&amp;P 500이 기록에 가까워지면서 바쁜 시장 주간입니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -180,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.marketwatch.com/story/were-about-to-get-a-huge-read-on-whether-earnings-can-keep-propping-up-the-stock-market-459b565b?mod=mw_rss_topstories" class="news-title" target="_blank" rel="noopener noreferrer">We’re about to get a huge read on whether earnings can keep propping up the stock market</a>
-<p class="news-desc">High hopes for third-quarter earnings are outweighing concerns around interest rates and oil prices — but one expert warns markets have gotten “extremely complacent.”</p>
+<p class="news-desc">우리는 수익이 주식 시장을 계속 지탱할 수 있는지에 대해 큰 관심을 갖게 될 것입니다.</p>
 <span class="source-tag" data-source-type="finance-media">MarketWatch</span>
 </div>
 </div>
@@ -195,8 +230,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (8건)
 
-*Zelenskyy said Ukraine would halt strikes on Russian oil refineries if Moscow stopped hitting Ukraine's energy grid.*
-
 
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
@@ -204,7 +237,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/11/trump-saudi-arabia-iran-houthis.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump says he is 'going to look at' joining Saudi Arabia in the fight against Iran-backed Houthis after deadly airport strike</a>
-<p class="news-desc">U.S. military involvement in the fight against the Houthis would stretch resources in the Middle East already committed to fighting Iran, analysts said.</p>
+<p class="news-desc">분석가들은 후티 반군에 대한 전쟁에 미군이 개입하면 이미 이란과 싸우기 위해 투입된 중동의 자원이 늘어날 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -243,8 +276,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 
 ### 🟣 DeFi (7건)
 
-*The probe came after the TV pool of broadcasters ceased coverage after the administration barred CNN, MS NOW and.*
-
 
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
@@ -252,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPY3JyY05BTFdaaUVtQlJmc1A2RG56ZUNseXNLblJmVG5xTmZaOHNxUnhxbGJROUVacWx0SkFGT2NiaXU3dEUzOEVKdVNXWU5FejVYQnNRT2tab09QWDd3Y1NJWEFRbG5BVlEwQnNYWUR2cFVlLWJEUENHTzkxRjVNQUhYem0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Why Economists Think Higher Bond Yields Are Here to Stay</a>
-<p class="news-desc">Why Economists Think Higher Bond Yields Are Here to Stay WSJ</p>
+<p class="news-desc">경제학자들이 더 높은 채권수익률이 계속 유지될 것이라고 생각하는 이유.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -264,7 +295,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/11/doj-investigating-whether-white-house-pool-coverage-halt-violated-law.html" class="news-title" target="_blank" rel="noopener noreferrer">DOJ says it's investigating whether White House TV pool's coverage halt violated antitrust law</a>
-<p class="news-desc">The probe came after the TV pool of broadcasters ceased coverage after the administration barred CNN, MS NOW and Politico from the White House.</p>
+<p class="news-desc">법무부는 성명을 통해 백악관 TV 언론인 풀이 셔먼법을 위반했는지 여부를 조사하고 있다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -276,7 +307,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/11/this-chinese-memory-chip-maker-has-global-potential.html" class="news-title" target="_blank" rel="noopener noreferrer">This Chinese memory chip maker has global potential and is poised to outperform</a>
-<p class="news-desc">The stakes are rising for China's memory chip maker CXMT ahead of its earnings release, expected Oct. 31.</p>
+<p class="news-desc">10월 31일로 예상되는 실적 발표를 앞두고 중국 메모리 칩 제조업체인 CXMT의 지분이 상승하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

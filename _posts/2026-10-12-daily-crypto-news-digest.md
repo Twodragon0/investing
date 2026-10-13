@@ -48,6 +48,38 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
 - 2026-10-12 암호화폐 시장 65건 분석 — 핵심 테마: 비트코인, 가격/시장, DeFi
 - *기사는 여러 테마에 중복 집계될 수 있음*
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1FeXlvVkNtZWFlbHhkdWljVWVTSFlUMHBweFAzb01OMlBYcndKeWdpY3I0dURVTDlVbkt1YkhlQlRWTE1DYk5iYTNkRGJmeE1DaTdtSWIzZDVodmkxWE13Wkx0THFLVU5qSjRuRkJpR2h4bXc?oc=5">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 Investing.com 한국어</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1DYkp2aFJla1VDeVZiNDlyR0o4SVR5VzNOLXpkaFVnQVB4Ykg0Y3phSm9FMVpkal9VekRPZUcySkVJcnlPNHBsUlpIMW40X21ibFNXNk1mSTJLb2FRZ0pUdlNoSjRPTmwxNEZxYw?oc=5">D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온</a> <span class="p0-desc">[미국=데일리비즈온] 암호화폐 역사상 최대 규모의 청산 사태가 발생한 '2025년 10월 10일 급락'이 1년을 맞았다. 시장은 크게 둘로 나뉘었다. 비트코인과</span></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOY2JRN0NzUktSR2lWT2xQdFpucGhMTVhUOXJHd25QY3hMV2dLSU1KTDZtRWlWbzEzWEI3cmZ2eUFZZXpJRkZNOTQzQU5Ja0IzWkRRUUdOMTR0cjlUR1ppUjlhNUJxd3kxZGZEdWxFaXJmUHozeWtHUTdZVjNNVHVTVmY2OWFzNnBZYlViYUlSYWtuTC1XTmc?oc=5">190억 달러 규모의 폭락 사태 이후 1년이 지난 지금, 암호화폐는 새로운 현실에 직면해 있습니다. - Vietnam.vn</a> <span class="p0-desc">1년 전만 해도 암호화폐는 백악관의 지지, 월가의 열광, 그리고 새로운 "황금기"에 대한 기대감에 힘입어 호황을 누렸습니다. 그러다 10월에 역사적인 폭락 사태가 발생했습니다. 단 하루 만에 레버리지 포지션 규모가 190억 달러라는 기록적인 수준으로 급락하면서 업계 전반에 걸친 침체를 촉발했고, 성숙했다고 여겨졌던 시장 구조의 취약성을 여실히 드러냈습니다. 12개월이 지난 지금, 전체 시장의 벤치마크로 여겨지는 비트코인은 사상 최고치보다 30% 이상 낮은 수준에 머물러 있습니다.</span></li></ul></div>
+## 전체 뉴스 요약
+
+**긴급**: 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어 
+외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 65건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
+
+### 테마별 동향
+
+- **🟠 비트코인** (22건): 비트코인, 암호화폐, 달러 관련 (22건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
+- **📈 가격/시장** (15건): 암호화폐, 달러, 반등 가격 변동 (15건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
+- **🟣 DeFi** (12건): tokenized, markets, cftc DeFi 동향 (12건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
+
+**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
+
+### 긴급 이슈
+
+- 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어
+- D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온
+- 190억 달러 규모의 폭락 사태 이후 1년이 지난 지금, 암호화폐는 새로운 현실에 직면해 있습니다. - Vietnam.vn
+
+### 주요 이슈
+
+- 비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들
+- 외 6건
+
+### 투자자 체크포인트
+
+- **핫 키워드**: 비트코인, AI, 이더리움
+- **주요 출처**: Cointelegraph(14건), Decrypt(12건), CoinDesk(10건)
+- 시장 영향 가능성이 있는 거래소 공지 3건 포함
+- 프로모션성 거래소 공지 2건 제외
+
 
 ## 테마별 주요 뉴스
 
@@ -60,7 +92,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFB5SnhBaHl4c0RCWjBBbVdycThITjY5OFByMjVabnpKamoxbUJwV0lkd3ktTnVwanh5OXlKaTE2cS15S19jUVZFNXBSUnVmX0ZlSl9KQ2lyWjFuajJCRVBHZ0JXbTJqdmpjSUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Trades Above $83,000 Amid Pressures on the Cryptocurrency Market - صحيفة مال</a>
-<p class="news-desc">Bitcoin Trades Above $83,000 Amid Pressures on the Cryptocurrency Market صحيفة مال</p>
+<p class="news-desc">비트코인은 암호화폐 시장이 청산에 대한 지속적인 압박과 우려에 직면하고 있음에도 불구하고 일요일에 $83,000 수준 이상으로 거래되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -72,7 +104,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbS1hcXNNbk9MQkZjN1dRQlVWcTVkVUtiQ21KNjBmNS0weWo5enAtcTVKU3M2MUlfbE54ZWVpUEVXVlFsMmEydXZIai1vdTlBVTdUbFduQ0d6bzl5N0lsNjBVYXNTXzVQLXg3OHZ4dnk3MlVsRzdvRVlEMU5qRlNzSUFaZEg5bGhoYldZdEtGbkNFRy1mLXNidk51eGE1QnpRT2hDOHFUc0dQOUJyQ3lCYktCckk1TmNmdk9LQ1ZuNEQ4OWhyUXNuNHlaUEJjUXNDTXMxdWZ4V21fZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">A Year On, Bitcoin Languishes a Third Below its All-Time High. What’s Next For The Cryptocurrency?</a>
-<p class="news-desc">A Year On, Bitcoin Languishes a Third Below its All-Time High. What’s Next For The Cryptocurrency? WSJ</p>
+<p class="news-desc">1년이 지난 지금, 비트코인은 사상 최고치보다 3분의 1 아래로 떨어졌습니다. 암호화폐의 다음 단계는 무엇입니까?.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -113,7 +145,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTFBqNy1sdVFNaEg4S3J5UXRDcGxFRXNTQ01XLUtPLVY0Mlpoc2w2ZGJDNVVtMEp0OC1ObUllbk94U0dXQm9nNDUtVDdR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 다시 반등! 美·이란 긴장 완화에 청산 80% 급감…8만5,000달러 회복 기대 - 코인리더스</a>
-<p class="news-desc">비트코인 다시 반등! 美·이란 긴장 완화에 청산 80% 급감…8만5,000달러 회복 기대 코인리더스</p>
+<p class="news-desc">비트코인8만2,000달러대반등…美·이란긴장완화에청산급감,8만7,000달러회복할까 비트코인(BTC) ©코인리더스 비트코인(BTC)이미국과 이란의군사적충돌</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -125,7 +157,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9ialVvSmhiMXB3OWxPOFNhTUdXa0x0R1hkbkJ6eDVUUklTU1c1Mzd4UVJGaGxIeEtlUldscFZmOUNZaGlUT0hZa1dn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인보다 알트코인이 뜨겁다…암호화폐 시장 반등, 진짜 강세장 시작일까 - 코인리더스</a>
-<p class="news-desc">비트코인보다 알트코인이 뜨겁다…암호화폐 시장 반등, 진짜 강세장 시작일까 코인리더스</p>
+<p class="news-desc">암호화폐 © 암호화폐시장이소폭반등한가운데,비트코인보다중국블록체인테마를중심으로한중소형알트코인에투기적자금이몰리고있다.일부종목이하</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -137,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBQc2VZNF91ckJFa3FCVHo4a0tLeGFCM0tVNnMzZGJZZGdSR3djZWNuVkxUY1l1aUZnLXEtNUVtdHBoQlVJTU9rZVFhbXBWN210TzdOWkZIaWZwODFXYnQ2YVozbEZYUF9fMUc5eUQ1MXl6U2c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들</a>
-<p class="news-desc">비트코인 8만1000달러 하회 후 반등…ETF 유출에 암호화폐 시장 흔들 디지털투데이</p>
+<p class="news-desc">[디지털투데이 AI리포터] 비트코인과 이더리움이 급락 뒤 일부 반등했지만, ETF 자금 유출과 대규모 롱 포지션 청산이 겹치며 10월 초 암호화폐 시장이 약세로 출발했다. 9일(현지시간) 블록체인 매체 디크립트(Decrypt)에 따르면 비트코인은 8일 한때 8만1000달러 아래로 밀렸고, 이더리움은 2400달러선까지 떨어졌다.시가총액 상위 10개 코인은 최근 7일 기준 모두 하락했다. 지캐시는 하루 11%, 니어는 16%, 펌프닷펀은 11%, 베니스 토큰은 10% 내렸다. 도지코인과 체인링크도 주간 기준 두 자릿수 하락률을 기록했다</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -159,8 +191,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 
 ### 🟣 DeFi (12건)
 
-*A proposed rule would expressly fold event contracts tied to sports, politics, culture and weather into the “swap”.*
-
 
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
@@ -168,7 +198,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380635/cftc-draws-line-prediction-markets-and-gambling-new-rules" class="news-title" target="_blank" rel="noopener noreferrer">CFTC Draws the Line Between Prediction Markets and Gambling in New Rules</a>
-<p class="news-desc">A proposed rule would expressly fold event contracts tied to sports, politics, culture and weather into the “swap” definition, while an interim rule excludes casino-style gambling—sharpening the agency’s claim to exclusive jurisdiction.</p>
+<p class="news-desc">CFTC은 금요일에 두 가지 조치를 발표했습니다. 즉, 이벤트 계약을 포함하도록 "스왑" 정의를 확장하는 제안된 규칙입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -180,7 +210,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380630/france-stablecoin-swap-crypto-exit-tax" class="news-title" target="_blank" rel="noopener noreferrer">French Committee Backs Stablecoin Swap Tax and Crypto Exit Tax, Then Rejects the Budget</a>
-<p class="news-desc">A National Assembly committee adopted amendments taxing stablecoin swaps and crypto exits by wealthy holders, then rejected the 2027 budget's revenue section.</p>
+<p class="news-desc">프랑스 국회 위원회는 부유층의 스테이블코인 스왑 및 암호화폐 거래에 세금을 부과하는 개정안을 채택했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -192,7 +222,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380593/dwf-bitgo-141-million-lawsuit-early-token-sales" class="news-title" target="_blank" rel="noopener noreferrer">DWF Labs Subsidiaries Sue BitGo for $141 Million Over Early Token Sales</a>
-<p class="news-desc">The DWF Labs-linked firms allege in London’s High Court that BitGo sold discounted Falcon Finance and ESPORTS tokens roughly two months before their lock-up expired, cratering the value of their remaining holdings.</p>
+<p class="news-desc">암호화폐 시장 제조사인 DWF Labs와 연계된 두 회사가 BitGo를 법정에 제소하여 관리인이 잠긴 토큰을 일찍 버렸다고 주장했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -212,8 +242,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 
 ### 🏦 거래소 (7건)
 
-*Hardware wallet maker Ledger probes losses tied to reseller CryptoBilis, as researchers separately estimate more.*
-
 
 <div class="news-card-item news-sev-medium">
 <div class="news-card-num">1</div>
@@ -221,7 +249,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQZGZ1bU9sS2Fhanp3VW01MU1XTm1uMGhjYnRSRDRRWlZQcEdKWUcxRUVVSXBfVXBjTUd3ME9ZcEM3OWVMeWhHc01VRHR2VWVIYjlraGhBbzZPX0ZfX1pQNHE5dzZteldoY3JwZFZfVm45Y0RoZDlSWEd0bUdQelctODFBcFp4OVhWSzZoM0cwX2tDU3JHUm92MDQtaVVhQkU4Y2VCWG42ZTNOcDQ2S0xYS3Y3Sl9yTnk4cFE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Rockville man found guilty of hacking crypto exchange, stealing more than $50 million - WTOP News</a>
-<p class="news-desc">Rockville man found guilty of hacking crypto exchange, stealing more than $50 million WTOP News</p>
+<p class="news-desc">메릴랜드 주 록빌에 거주하는 36세의 조나단 스팔레타(Jonathan Spalletta)는 해킹을 통해 5천만 달러 이상의 암호화폐 거래소를 사취한 혐의로 배심원단에 의해 유죄 판결을 받았습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -233,7 +261,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/ledger-investigates-fund-losses-linked-to-southeast-asian-reseller-warns-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Ledger investigates fund losses linked to Southeast Asian reseller, warns users</a>
-<p class="news-desc">Hardware wallet maker Ledger probes losses tied to reseller CryptoBilis, as researchers separately estimate more than $72 million to $86 million in suspected crypto thefts.</p>
+<p class="news-desc">WHO 최근 CryptoBilis에서 Ledger 장치를 구입한 고객은 조사관이 동남아시아에서 설명할 수 없는 자금 손실을 조사할 때 예방 조치를 취해야 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -245,7 +273,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/wealthy-investors-crypto-advisers-okx-strategy-buybacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Crypto Biz: Wealthy investors are buying crypto, but their advisers aren’t sold</a>
-<p class="news-desc">Wealthy investors are embracing crypto faster than their advisers, while OKX attracts new funding and Strategy shifts more capital toward preferred stock buybacks.</p>
+<p class="news-desc">OKX가 더 많은 자금을 확보하고 전략이 비트코인보다 STRC 환매를 우선시함에 따라 CoinShares는 부유한 투자자들 사이에서 광범위한 암호화폐 소유권을 발견했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -266,7 +294,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">현재 암호화폐 업계에서 XRP Ledger는 긴급 보안 패치를 방어하고 Saylor는 추가 전략 비트코인 구매를 암시하며 Ledger는 보고된 손실이 8,600만 달러인 가운데 하드웨어 이식을 확인합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -278,7 +306,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/cftc-proposals-aimed-at-separating-prediction-markets-from-casino-gambling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">CFTC proposals aimed at separating prediction markets from casino gambling</a>
-<p class="news-desc">The two measures attempt to set the stage for a potential US Supreme Court battle over federal and state jurisdiction.</p>
+<p class="news-desc">두 가지 CFTC 제안은 스왑과 도박을 차별화하는 것을 목표로 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -290,7 +318,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/celsius-founder-alex-mashinsky-permanently-banned-from-crypto-industry-in-ny-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">New York permanently bars Celsius founder Mashinsky in $35M fraud settlement</a>
-<p class="news-desc">The agreement resolves a 2023 civil fraud lawsuit against the Celsius founder and permanently bars him from the cryptocurrency, securities and commodities industries.</p>
+<p class="news-desc">New York AG Letitia James는 Chelsea 설립자 Alex Mashinsky에 대해 연방 조건에 따라 최대 3,500만 달러의 지불금을 지급하는 영구적인 산업 금지 조치를 취했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -309,11 +337,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 ## 거래소 공지사항
 
 **1. [Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers](https://www.binance.com/en/support/announcement/detail/f99ead6436ba4fb8ad92abc9d2fdce5c)**
-Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **2. [Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI](https://www.binance.com/en/support/announcement/detail/56476c15963b4c0cb113ab0e22613c5c)**
-Binance Alpha Will Remove SUP, CUDIS, PYTHIA, BLUM, KIN, DN, GAIA, STRIKE, CDL, KO, VRA, EPT, SLX (SLIMEX), CAI (2026-10.
 <span class="source-tag" data-source-type="exchange">Binance</span>
 
 **3. [Binance Will Extend the Monitoring Tag to Include BICO & CVC on 2026-10-09](https://www.binance.com/en/support/announcement/detail/0dfee98051814fccb9f18ce49b8425bb)**

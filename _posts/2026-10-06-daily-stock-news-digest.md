@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1WUElWRUZHcWVkdFFhajB3SDJvUXBsNDYtU2wxcTM3clFBM1IyQjZBbHo0dlNwdnlRR2Q1RUdfQmRnRHFUQ1Y5YXNsMjNDMmFtcjZ3ag?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 신뉴스심리지수, 원·달러 환율 설명력 높아졌다</a>
-<p class="news-desc">한은 신뉴스심리지수, 원·달러 환율 설명력 높아졌다 이투데이</p>
+<p class="news-desc">환율 변화 결정계수 0.0314→0.0723…채권금리 상관성 2025년 이후 사실상 동일▲1일 오후 서울 중구 하나은행 딜링룸 전광판에 코스피 지수가 표시되고</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE42YzBUZFJTX1U0TkJ4dEdXQ0YxQjg4TTduaUJNRF8yZy1wd3htRzl2bk4xU2lBcW5jbFlob3BUT2xWZ0VPbW4ybVV6Y2JXZE1lUWRfZF8tMjE1aUxFY01DVVU3eFNGbkFBODctRA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">연준 10월 금리 인상 기대 후퇴…달러-원 1345~1370원 전망</a>
-<p class="news-desc">연준 10월 금리 인상 기대 후퇴…달러-원 1345~1370원 전망 econovill.com</p>
+<p class="news-desc">미국 연방준비제도(Fed·연준)의 10월 기준금리 인상에 대한 시장의 기대가 낮아지고 있다. 하나은행은 연준과 한국은행이 이달 기준금리를 동결할 가능성이 높다고 내다봤다. 10월 달러-원 환율은 1,345~1,370원에서 움직일 것으로 전망했다.4일 금융권에 따르면 하나은행 서정훈 연구위원과 이유정 연구원은 최근 발간한 월간 외환시장 전망 보고서에서 이같이 분석했다.◆연준 고위 인사 발언에 10월 인상 기대 약화최근 연준 고위 인사들의 발언은 기준금리 인상 속도를 늦출 수 있다는 신호로 시장에서 해석되고 있다.지난달 29일(현지시간</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -104,7 +104,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBucU1aMjA3dmh5T2IzUlB4d0hRRmdRWW1vclNTTC1oaGk2dEwtXzI0eFBzVW1OVVNFd29ZS0xuOG1sU0h6VE42a1ExbWZBM3lWQlVkdEI1UlZaNVVmZ1piVHh4WEgzSlI1U0Jmc1BEQ04?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">'반도체 갈아타기' 베팅 국민연금.목표 비중 늘렸다가 주식 평가손 124조 직격탄 - 비즈중앙</a>
-<p class="news-desc">'반도체 갈아타기' 베팅 국민연금.목표 비중 늘렸다가 주식 평가손 124조 직격탄 비즈중앙</p>
+<p class="news-desc">[비즈중앙] 국민의 노후 자금 1600조원을 굴리는 국민연금이 국내 반도체 양대 종목을 상대로 극단적인 엇갈림 매매를 단행한 가운데 무리하게 끌어올린 국내주식 목</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -116,7 +116,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE54YzloOGVMdzhGUVVoWHo2YXJUS2ZBX3Axc0R6NGhScmF3dV84bzdhRlJYTEFzZWNNaUFiRk56d1l0ek5LNXBTVnd2TmNSdUpYSlF2WGtPd21mVjRFZzR3NjVPc0JqSlZF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 ‘삼전닉스’ 6일장 출격…연휴 뒤 반도체株 방향은</a>
-<p class="news-desc">삼성전자·SK하이닉스 ‘삼전닉스’ 6일장 출격…연휴 뒤 반도체株 방향은 cbci.co.kr</p>
+<p class="news-desc">[CBC뉴스] 삼성전자와 SK하이닉스가 개천절 연휴 이후 어떤 주가 흐름을 나타낼지 관심이 모인다. 국내 증시가 오는 6일 다시 문을 여는 가운데 코스피의 핵심 반도체주인 두 종목의 움직임이 주목받고 있다.연휴에 들어가기 전 마지막 거래일인 지난 2일에는 두 종목이 나란히 강하게 치고 나가는 모습은 나타나지 않았다.삼성전자(005930)는 27만6000원으로 거래를 끝냈다. 전 거래일 종가와 동일한 가격으로 상승과 하락 어느 쪽에도 무게를 싣지 않은 채 연휴를 맞았다.SK하이닉스(000660)는 삼성전자보다 조금 앞섰다. 184만1</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -128,7 +128,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1wUHFiRTdOcDZHVjktUXlKMEdJRDNBV0FPREdQMzFDcUoteC1JVEE2NUFYNTRmN2pVa1ZrT3hYYlMzcUJOdDhhWXJsaTRGY0xDMTZta25UWTY0RTdSNUNqUV9lMU9TeElRYlVFSFZwVGNLTVpkR0E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock Market Today: Dow, S&P 500, Nasdaq Rise; Nvidia, Micron, AMD, Intel, More Movers</a>
-<p class="news-desc">Stock Market Today: Dow, S&P 500, Nasdaq Rise; Nvidia, Micron, AMD, Intel, More Movers Barron's</p>
+<p class="news-desc">오늘의 주식 시장: 다우지수, S&amp;P 500, 나스닥 상승; 엔비디아, 마이크론, AMD, 인텔, 더 많은 이사.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -165,7 +165,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcU9XXzlBd2pHZEtnY1RXSndVRHNycnF3Ym5GYWh4aFNGcjZZaDRRTmp0SjQ5clBqN2F0YVhDS1hoQmI0OXcyNkFLblZ2cTEtYjljSlZxd3Etd0I1M05fTi1iOVlDaUx2WWNmX1B5TVVzWUR3WER0RWl6Tnc0N0hJNlM1RHdaMmR0ZlZaQV9QVGxOZld1ajYxeC11UEVkTnZGcHVNUGpCUk90NnNjX25Ldzl3Y2xxMjhp?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Is a stock market correction coming? Most Americans think so - USA Today</a>
-<p class="news-desc">Is a stock market correction coming? Most Americans think so USA Today</p>
+<p class="news-desc">주식시장 조정이 다가오고 있는가? 대부분의 미국인들은 그렇게 생각합니다 - USA Today.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -177,7 +177,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMHNwMURMMFJ3ek5yWWJWRkUwY3h0N0ZPbC1sTDFfYU5mNVFKWjBiajdNc2lBcmFfTGdYaGNSUkl6aWtJSXo4UGtPemFCaFFmRjZJNGtnaUxEVFFWTUc2OE1kQjBrSXZQcG93S0xfdjhYdHY0b3hSd2dmNVVfRUF4VXNta3NlVFdJX24xT09LSFlYWHE2Y1BJdFYxdktCaEVPZmdMZjNhZTUxekRZWmVvWERwWmZYNE5L?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Panmure Liberum forecasts S&P 500 falling to 5,000, warns bull run nearing end</a>
-<p class="news-desc">Panmure Liberum forecasts S&P 500 falling to 5,000, warns bull run nearing end Reuters</p>
+<p class="news-desc">Panmure Liberum은 S&amp;P 500이 5,000으로 하락할 것으로 예측하고 상승장이 거의 끝나갈 것이라고 경고합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -218,7 +218,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/05/trump-bombers-uk-iran.html" class="news-title" target="_blank" rel="noopener noreferrer">'We had a threat': Trump explains U.S. moving long-range bombers from U.K.</a>
-<p class="news-desc">The U.S. Air Force B-1 bombers removed from England have been used in strikes on Iran.</p>
+<p class="news-desc">영국에서 철수한 미 공군 B-1 폭격기가 이란 공격에 사용됐다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -230,7 +230,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html" class="news-title" target="_blank" rel="noopener noreferrer">House Democrat targets candidate prediction market trades after opponent’s Kalshi penalty</a>
-<p class="news-desc">The bill bans federal candidates from trading prediction market contracts related to their own elections and would result in a fine if violated.</p>
+<p class="news-desc">새로운 법안은 연방 후보자가 자신의 선거와 관련된 예측 시장 계약 거래를 금지하고 이를 위반할 경우 벌금을 부과하게 됩니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -254,7 +254,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.marketwatch.com/story/western-digital-and-seagate-shares-bounce-back-as-analysts-downplay-the-toshiba-threat-4979dbff?mod=mw_rss_topstories" class="news-title" target="_blank" rel="noopener noreferrer">Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat</a>
-<p class="news-desc">Even if Toshiba doubles its capacity, analysts say it has a ways to go to catch up with Western Digital and Seagate</p>
+<p class="news-desc">분석가들이 Toshiba의 위협을 경시하자 Western Digital과 Seagate의 주가는 반등했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">MarketWatch</span>
 </div>
 </div>
@@ -278,7 +278,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-06 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxNaXFSZmRJYkdLd2k3X2ROa29lZXJROUh1Y3FUNURTamVHUXphZ1ptNkdidUVCMG1talFnUm9RLW5ZTVRPN09MbnFZTXpHdW4zUUp3ZWVRbllzWWhrc2JyRkZlUVZJd05rNHdwREQzUmJRYXZUYnBnQUZkelBUcC01dWU2NWxkOEF5XzhSRC1fcVVrQlZnU3BPT3dnZHhDdGJJQXNJMGhvc2tSdDFTMUVlOC1pb3FadGJjRGFVVW5JNS1fS2tqT1FwNC0xaldTOWFJUDFwczRiV3k5ZVNUXzZn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic expected to IPO despite market uncertainty, AI slowdown calls - KIMT</a>
-<p class="news-desc">Anthropic expected to IPO despite market uncertainty, AI slowdown calls KIMT</p>
+<p class="news-desc">시장 불확실성에도 불구하고 인류는 IPO을 예상하고 AI 둔화를 호출합니다 - KIMT.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

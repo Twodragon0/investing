@@ -60,7 +60,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNSjlUWkRrdmNiT2l6bkxyR3gzTGNEdF90U1RyRTJXZjZCS1E1cnJmYjBOdW54TEowb1Boc3VtenRtWXExN1M3d2dWc3dLZ1FpaDJrWENNWm5QbjdtS2ppNnFkQU9BY2lOdU1Jbk9KbDZxOGJIbVlmTTduSVVOdFFTeUVfMXd1M2xRZ2JtUXItZ1lXTWFFVDhLZklPMmcwSHZKM191M2dTYUwxT25kelVhcDR3UDZWMG9pSkE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">The VIX of bonds is rising but bitcoin and stocks aren't hearing it yet : Crypto Daily - CoinDesk</a>
-<p class="news-desc">The VIX of bonds is rising but bitcoin and stocks aren't hearing it yet : Crypto Daily CoinDesk</p>
+<p class="news-desc">재무부 채권은 국제 금융에서 선호되는 담보이고 경제의 거의 모든 종류의 차입 비용에 영향을 미치기 때문에 이러한 상품의 변동성이 증가하면 글로벌 금융 긴축을 유발하고 위험 프리미엄을 높이며 광범위한 위험 회피를 유발할 수 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -72,7 +72,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5pRVZJWWVIZXRWWktlNmpSNThiN0hGZmtYVkJRNDg1TTYwd2F3V1BTaEdhekV0OXBCcWVQRFJnWTVpT1d2cF9uUF9SZHB5eXVnVnBXTVlISDZRMmNoZlNkcUF0UDlNQlU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Current price of Bitcoin for October 5, 2026 - Fortune</a>
-<p class="news-desc">Current price of Bitcoin for October 5, 2026 Fortune</p>
+<p class="news-desc">2026년 10월 5일 비트코인의 현재 가격 - Fortune.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -113,7 +113,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPREd0enRFQTFzNjJ3UUJQU3E5d3Y1ZnMzTzRoTy00NVVUdnRRb09YRDIwNXlDcEJVeWZJNi1IWTZGSE9TcUxYTmxveWR5NUJfUVBpN190WkEwMnBhOEJCTF9VZjFpQVBsMjRlMldtTU5vWWZUR1k2SXNoaUgwdjE4bGVGRXF6cE9mdjNuMG1hZ0tkLXdVM1lNZnh2clBGVEowd3EwaDdETHl5bjEtWTF2SQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Prediction: This Cryptocurrency Will Skyrocket in Price in 2027 and Make Some Investors Rich</a>
-<p class="news-desc">Prediction: This Cryptocurrency Will Skyrocket in Price in 2027 and Make Some Investors Rich Yahoo Finance</p>
+<p class="news-desc">이 디파이 알트코인은 8배의 상승여력을 가질 수 있습니다. 암호화폐 투자자들이 이를 구매하려고 애쓰는 것은 당연합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -125,7 +125,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9NQnVKSGY2OTdpVHZvWjNzN2hNcmVvZzBTcFR0Z0xCUU9CWkRCTERReWdnd0swQVNJVGhKdjZSZUV1N3JKMTJKSTNHSGdMbFZ0Q2NlUjFGNmswWmVz?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 8만7000달러 돌파 재도전…'완전 강세 배열' 눈앞 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 8만7000달러 돌파 재도전…'완전 강세 배열' 눈앞 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 암호화폐 시장이 변동성 장세 속에서 한 주를 시작했다. 비트코인(BTC)은 5일 한때 8만7000달러에 육박하며 8개월 만의 최고치 돌파를 시도했지만 달러 강세에 상승폭을 일부 반납했다.기술적으로는 단기·중기&amp;midd</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -137,7 +137,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMjF5dU1hX3A0UTU1VjY0T2hCcm12VFUyRk02YjUyb2ptNWZTbE5ENWF5V1lLdHJRTlpKbU1Ma24tN213RlowNGl3bEdWMkZJeVdOcXlGS2tKMDZ0d1R6N2tKUUdmVnAwMTZKN0hvQnJwM0Z6RzdrOUg1SExLTWxsSDltb3VsdmZp?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">"8만7천달러 벽 또 막혔다"… 비트코인, ETF 약발 한계</a>
-<p class="news-desc">"8만7천달러 벽 또 막혔다"… 비트코인, ETF 약발 한계 글로벌이코노믹</p>
+<p class="news-desc">글로벌 암호화폐 시장 시가총액이 2조 9500억 달러 저항선에 부딪히며 비트코인이 8만 7000달러 돌파 문턱에서 다시 밀려났다. FX스트릿은 5일(현지시각) 비트코인이 단기 고점에서 강한 매도세에 가로막혔으나 8월과 9월 유입된 61억 달러의 ETF 자금이 하단을 지지한다고</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -166,7 +166,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE53ZS1LdW1XaVdTQkZ1TEM1Tm1DOWt6YkxDeDNTYkI5Tzg4djlzM040QTcyRHRkZFB5Nl9FWkxKcklmak00VlJJZjlfejh5djVmV3h2UUo4dGRSbXNoTDFmQzlNWE1zTTU0SlFMd0JxNWstLVk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">SEC, 비트코인·이더 3배 선물 상품 상장 규정 변경 승인</a>
-<p class="news-desc">SEC, 비트코인·이더 3배 선물 상품 상장 규정 변경 승인 디지털투데이</p>
+<p class="news-desc">[디지털투데이 AI리포터] 미국 증권거래위원회가 VS 트러스트의 3배 비트코인 ETF와 3배 이더 ETF 상장 규정 변경안을 승인했다. 4일(현지시간) 블록체인 매체 크립토슬레이트(CryptoSlate)에 따르면 이번 결정으로 볼래틸리티 셰어스가 후원하는 고레버리지 암호화폐 선물 상품은 거래소 규정상 상장 경로를 확보했다.승인 대상은 시보 BZX 거래소가 제출한 상장 제안이다. 명령은 금, 은, 원유, 천연가스 연계 상품을 포함한 6개 펀드를 함께 다뤘다. 다만 이번 승인은 거래소 규정 변경을 허용한 것으로, 등록 효력 발생이나 거</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -178,7 +178,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380157/circle-ripple-and-standard-chartered-back-okx-at-flat-25b-valuation" class="news-title" target="_blank" rel="noopener noreferrer">Circle, Ripple and Standard Chartered Back OKX at Flat $25B Valuation</a>
-<p class="news-desc">A London quantitative hedge fund joins the round too, seven months after the NYSE's owner bought in at exactly the same price.</p>
+<p class="news-desc">Circle Internet Group, 리플 및 Standard Chartered의 투자 계열사인 SC Ventures가 모두 새로운 Cap Table에 등장한 Qube Research &amp; Technologies와 함께 참여했습니다. 거래소는 얼마나 모금되었는지 밝히기를 거부했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -190,7 +190,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380146/morning-minute-the-cftc-reveals-plan-to-regulate-crypto-exchanges" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: The CFTC Reveals Plan to Regulate Crypto Exchanges</a>
-<p class="news-desc">Clear rules of the road are here. So what does it all mean and what is the overall impact?</p>
+<p class="news-desc">도로의 명확한 규칙이 여기에 있습니다. 그렇다면 이 모든 것이 무엇을 의미하며 전반적인 영향은 무엇입니까?</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -217,7 +217,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5ac2VRbW1rXzhtQmxpV0FBLW1lLU1zWHZ1V0U0V3JQNEtYNk42M2FZVGtPWC1LSEVMSWo0ckVKMkNaN1FNYk1JVGMxdXhlS2lDV1dZci1IZjRlaWI2RW9Fa19HWW5xTUpadWwyanBiZzFsdHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">美 SEC·CFTC "비트코인·이더리움·XRP, 원칙적 비증권" 공동 해석</a>
-<p class="news-desc">美 SEC·CFTC "비트코인·이더리움·XRP, 원칙적 비증권" 공동 해석 디지털투데이</p>
+<p class="news-desc">[디지털투데이 홍진주 기자] 미국 상품선물거래위원회(CFTC)와 증권거래위원회(SEC)가 비트코인과 이더리움, XRP를 원칙적으로 증권이 아닌 자산으로 분류하는 공동 해석을 내놨다.6일(이하 현지시간) 블록체인 매체 코인포스트에 따르면, 미국 CFTC 마이클 셀리그 위원장은 5일 뉴욕 포덤대 로스쿨 심포지엄에서 이 같은 내용을 포함한 암호화폐 거래 규칙 구상안을 공개했다.핵심은 개인 대상 암호화폐 거래 가운데 증거금, 레버리지, 대출이 수반되는 거래를 별도 연방 규제 틀로 편입하겠다는 점이다. CFTC는 이런 거래만 취급하는 거래소</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -229,7 +229,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380166/flash-loan-attacks-drained-1-2b-from-defi-between-2020-and-2024-study" class="news-title" target="_blank" rel="noopener noreferrer">Flash Loan Attacks Drained $1.2B From DeFi Between 2020 and 2024: Study</a>
-<p class="news-desc">Attacks grew more sophisticated and less predictable over the period, according to researchers who scanned more than 20 billion transactions.</p>
+<p class="news-desc">WHO이 200억 건 이상의 거래를 검사한 연구원에 따르면 공격은 기간이 지남에 따라 더욱 정교해지고 예측 가능성이 낮아졌습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -270,7 +270,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380192/mistral-ai-drops-le-chonk-massive-ai-model-cat-meme" class="news-title" target="_blank" rel="noopener noreferrer">Mistral AI Drops 'Le Chonk': A Massive AI Model Named After a Cat Meme</a>
-<p class="news-desc">Paris-based Mistral launched Large 4, a model nicknamed after a June internet joke. It tops GPT-6 Astra on one finance test, but trails Claude on others.</p>
+<p class="news-desc">Mistral은 6월 인터넷 농담에서 따온 별명인 Large 4 모델을 출시했습니다. 한 재무 테스트에서는 GPT-6 Astra를 능가하지만 다른 테스트에서는 Claude를 뒤쫓습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -282,7 +282,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380138/crypto-godfather-gets-six-years-for-hiring-sheriffs-deputies-37m-meta-fraud" class="news-title" target="_blank" rel="noopener noreferrer">Crypto 'Godfather' Gets Six Years for Hiring Sheriff's Deputies, $37M Meta Fraud</a>
-<p class="news-desc">Adam Iza used off-duty LA deputies to pull warrants and personal data on his rivals, then moved the proceeds through crypto custodians.</p>
+<p class="news-desc">Adam Iza는 비번인 LA 대리인을 이용해 라이벌에 대한 영장과 개인 데이터를 가져온 다음 수익금을 암호화폐 관리인을 통해 옮겼습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -294,7 +294,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://decrypt.co/380119/florida-woman-claude-diary-anthropic-reported-police" class="news-title" target="_blank" rel="noopener noreferrer">A Florida Woman Used Claude as a Diary. An Anthropic Employee Read It and Reported It to Police</a>
-<p class="news-desc">Investigators say a Bonita Springs woman's Claude "diary" tripped Anthropic's safety filters. A human review team sent it to police, and Anthropic's own terms allow exactly that.</p>
+<p class="news-desc">조사관들은 Bonita Springs 여성의 Claude "일기"가 Anthropic의 안전 필터를 작동시켰다고 말했습니다. 인간 검토 팀이 이를 경찰에 보냈습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

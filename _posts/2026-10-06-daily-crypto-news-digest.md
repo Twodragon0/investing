@@ -63,7 +63,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/daybook-us/2026/10/05/sec-approves-a-3x-fix-for-bitcoin-and-ether-traders-who-miss-the-wild-swings" class="news-title" target="_blank" rel="noopener noreferrer">SEC approves a 3x fix for bitcoin and ether traders who miss the wild swings</a>
-<p class="news-desc">Your day-ahead look for Oct. 5, 2026</p>
+<p class="news-desc">2026년 10월 5일의 하루 일정</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -75,7 +75,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/05/metaplanet-adds-1-000-bitcoin-after-sale-and-repurchase-launches-income-strategy" class="news-title" target="_blank" rel="noopener noreferrer">Metaplanet added 1,000 bitcoin net in the third quarter bringing holdings to 44,000 BTC</a>
-<p class="news-desc">The Japanese firm sold 10,000 BTC before buying 11,000 BTC, demonstrating liquidity as it seeks recurring income from preferred securities.</p>
+<p class="news-desc">일본 회사는 10,000 BTC을 매도한 후 11,000 BTC을 매입하여 우선주에서 반복적인 수익을 추구하면서 유동성을 보여주었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -87,7 +87,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/markets/2026/10/05/u-s-dollar-climbs-to-18-month-high-as-bitcoin-holds-firm-around-usd86-000" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin resilience tested as U.S. dollar climbs to 18-month high</a>
-<p class="news-desc">A stronger dollar and rising bond yields could be headwinds as fiscal concerns in France and political uncertainty in Spain weigh on the euro.</p>
+<p class="news-desc">프랑스의 재정 문제와 스페인의 정치적 불확실성이 유로화를 압박함에 따라 달러 강세와 채권 수익률 상승이 역풍이 될 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -116,7 +116,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/policy/2026/10/05/u-s-cftc-joins-sec-in-proposing-crypto-regulations-though-spot-market-gap-lingers" class="news-title" target="_blank" rel="noopener noreferrer">U.S. CFTC joins SEC in proposing crypto regulations, though spot-market gap lingers</a>
-<p class="news-desc">The derivatives regulator is proposing two rules meant to cover the waterfront of crypto activity and exchanges, as long as it's not simple, direct trading.</p>
+<p class="news-desc">파생 상품 규제 기관은 단순하고 직접적인 거래가 아닌 한 암호화폐 활동 및 교환의 해안가를 포괄하기 위한 두 가지 규칙을 제안하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -128,7 +128,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks" class="news-title" target="_blank" rel="noopener noreferrer">Joint venture of OKX and NYSE parent ICE files for 24/7 tokenized U.S. stock trading</a>
-<p class="news-desc">OKXICE, the joint venture of OKX and ICE, plans to launch tokenized U.S. stocks under SEC's new innovation exemption.</p>
+<p class="news-desc">OKX와 ICE의 합작 회사인 OKXICE는 SEC의 새로운 혁신 면제에 따라 토큰화된 미국 주식을 출시할 계획입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -140,7 +140,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380108/sec-clears-3x-leveraged-bitcoin-ethereum-funds" class="news-title" target="_blank" rel="noopener noreferrer">SEC Clears 3x Leveraged Bitcoin and Ethereum Funds for Trading</a>
-<p class="news-desc">The agency approved a Cboe rule letting six Volatility Shares funds that triple the daily moves of Bitcoin, Ethereum, gold, silver, oil, and natural gas list on a U.S. exchange.</p>
+<p class="news-desc">SEC는 비트코인 및 이더리움의 일일 움직임을 3배로 늘리는 6개의 변동성 주식 펀드를 미국 거래소에 상장하도록 허용하는 Cboe 규칙을 승인했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/markets/2026/10/05/more-than-60-u-s-stocks-including-nvidia-and-tesla-are-headed-onchain-here-s-how-it-works" class="news-title" target="_blank" rel="noopener noreferrer">More than 60 U.S. stocks including Nvidia and Tesla are headed onchain. Here’s how it works</a>
-<p class="news-desc">The planned 24/7 venue will offer dozens of tokenized U.S. stocks, with trades conducted against stablecoins through blockchain-based liquidity pools rather than a traditional order book.</p>
+<p class="news-desc">계획된 연중무휴 장소에서는 수십 개의 토큰화된 미국 주식을 제공할 예정이며, 기존 주문서가 아닌 블록체인 기반 유동성 풀을 통해 스테이블코인에 대해 거래가 수행됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year" class="news-title" target="_blank" rel="noopener noreferrer">Stripe to expand stablecoin cards to over 100 countries by the end of the year</a>
-<p class="news-desc">The payments giant is planning a major global expansion for its stablecoin cards business, and is exploring tokenized deposits and DeFi use cases, new crypto head Henri Stern said.</p>
+<p class="news-desc">결제 대기업은 스테이블코인 카드 사업을 위한 대대적인 글로벌 확장을 계획하고 있으며 토큰화된 예금과 디파이 사용 사례를 탐색하고 있다고 새로운 암호화폐 책임자인 Henri Stern이 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/tech/2026/10/05/ethereum-has-a-25-day-wait-to-start-staking-with-nearly-1-5-million-eth-in-line" class="news-title" target="_blank" rel="noopener noreferrer">Ethereum investors are stuck in a two-week staking exit line. Here's why.</a>
-<p class="news-desc">Ether waiting to enter staking has fallen by more than a quarter since early September, while the exit queue hit its longest of 2026.</p>
+<p class="news-desc">스테이킹에 입장하기 위해 대기 중인 이더리움 수는 9월 초 이후 4분의 1 이상 감소했으며, 출구 대기열은 2026년 최장 기록을 기록했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/markets/2026/10/05/bitcoin-is-about-to-get-a-major-bullish-signal-it-hasn-t-had-in-over-a-year" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin is about to get a major bullish signal it hasn't had in over a year</a>
-<p class="news-desc">Key price averages are on the verge of confirming a major bullish configuration for the first time in over a year.</p>
+<p class="news-desc">주요 가격 평균은 1년여 만에 처음으로 주요 강세 구성을 확인하기 직전입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380067/bitcoin-price-golden-cross-fed-rate" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Just Flashed a Second, Stronger Golden Cross: Here's What That Means</a>
-<p class="news-desc">The Bitcoin rally keeps bumping into the same wall, but a classic bullish signal suggests the trend is built to last.</p>
+<p class="news-desc">비트코인 랠리은 계속해서 같은 벽에 부딪히지만 두 번째로 강한 골든 크로스는 추세가 지속될 것임을 시사합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -245,7 +245,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380050/morning-minute-uptober-off-to-a-green-start" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: Uptober Off to a Green Start</a>
-<p class="news-desc">Crypto majors and alts are rallying to start October. What’s driving the early action and will it continue?</p>
+<p class="news-desc">암호화폐 전공자들과 대체자들이 10월을 시작하기 위해 집결하고 있습니다. 조기 조치를 추진하는 요인은 무엇이며 계속 진행됩니까?</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -267,7 +267,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/business/2026/10/05/kraken-operator-payward-and-singapore-gulf-bank-platform-for-24-7-institutional-crypto-settlement" class="news-title" target="_blank" rel="noopener noreferrer">Kraken operator Payward and Singapore Gulf Bank partner for 24/7 institutional crypto settlement</a>
-<p class="news-desc">The two firms will initially roll out the digital assets settlement service to select institutional clients in Asia and the Gulf region with around-the-clock U.S. dollar settlement.</p>
+<p class="news-desc">이 파트너십을 통해 기관 거래자는 며칠에 걸친 은행 결제 지연과 엄격한 주말 마감 시간을 우회하여 암호화폐 시장에 즉시 현금을 배치할 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -279,7 +279,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380090/cftc-plan-crypto-exchanges-federal-oversight-leverage" class="news-title" target="_blank" rel="noopener noreferrer">CFTC Unveils Plan to Bring Crypto Exchanges Under Federal Oversight</a>
-<p class="news-desc">The CFTC is seeking public comment on a framework that would create a new federal license for crypto exchanges, with leverage offers as the trigger for oversight.</p>
+<p class="news-desc">Clarity Act가 패배한 후 CFTC은 암호화폐 거래소에 연방 정부의 본거지를 제공하기를 원하며 레버리지는 문을 여는 열쇠입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -291,7 +291,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-06 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379935/nextpredict-founder-nobody-was-serving-prediction-markets-enormous-audience" class="news-title" target="_blank" rel="noopener noreferrer">NEXTPredict Founder: 'Nobody Was Serving' Prediction Markets' Enormous Audience</a>
-<p class="news-desc">Reporters from CNBC and CNN are on the program beside the exchanges, two weeks before the midterms put the sector on air.</p>
+<p class="news-desc">CNBC와 CNN의 기자들은 중간고사가 해당 부문을 방송하기 2주 전에 교환소 옆에서 프로그램에 참여하고 있습니다. (NEXTPredict에서 제공)</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

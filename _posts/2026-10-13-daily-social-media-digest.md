@@ -33,6 +33,35 @@ image_alt: "소셜 미디어 동향 - 2026-10-13 - 소셜 미디어 뉴스 요�
 ## 전체 뉴스 요약
 
 오늘 수집된 총 21건 중 텔레그램 0건, 소셜 1건, 정치·경제 20건으로 다양한 이슈가 주요 화제입니다.
+총 21건의 뉴스 중 **매크로/금리** 관련이 16건(76%)으로 압도적입니다. 거시경제 지표와 통화정책이 시장의 주요 변수로 작용하고 있습니다
+
+### 테마별 동향
+
+- **📊 매크로/금리** (16건): 금리, 인상, 신현송 매크로 변수 (16건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
+- **🏛️ 정치/정책** (3건): 이재명, 부동산, 경제 정치 이슈 (3건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
+
+**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
+
+### 주요 이슈
+
+- 국내 재정학회 최고 권위자들, 이재명 정부 '재정 만능주의' 경고… "1997년 외환위기 교훈 삼아야" - 데일리저널
+- 2026 국감] 신현송 "금리인상으로 시간 벌어"…취약차주 '내년 충격' 경고 - 프라임경제
+
+### 투자자 체크포인트
+
+- 소셜 1건, 정치·경제 20건
+
+
+<div class="theme-distribution">
+<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">16건</span></div>
+<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:19%"></div></div><span class="theme-count">3건</span></div>
+</div>
+
+*기사는 여러 테마에 중복 집계될 수 있음*
+
+
+---
+
 
 **핵심 신호 정리**
 - 주요 테마: 다양한 이슈
@@ -51,7 +80,7 @@ image_alt: "소셜 미디어 동향 - 2026-10-13 - 소셜 미디어 뉴스 요�
 ## 정치·경제 동향
 
 **1. [Fed Interest Rate Predictions for the Next 5 Years: 2026–2031 - Norada Real Estate Investments](https://news.google.com/rss/articles/CBMioAFBVV95cUxPTnNLbEdDMDl2NDJPZmxGbXR0YmlhUkloX201TUJrQ3JQcXpVWlN3SENVVnJTOEw4dENwc2lzT3hHUjJiT0o3RGtFdEVTelpRUmdpYUxxU2NpdWlqc0xHZ3JKVGRYRXdsZkFiNjVaYi02UExPZXBBaTM1RTJBal8zMjJRcFJCNnVfaUhQREZyUG9zZDNnZ3A0Ymc0b1RpWkFs?oc=5)**
-Fed Interest Rate Predictions for the Next 5 Years: 2026–2031 Norada Real Estate Investments
+연준 향후 5년간 이자율 예측: 2026~2031년 Norada Real Estate Investments
 <span class="source-tag" data-source-type="default">Fed Policy</span>
 
 **2. [이재명 대통령 지지율 37% 제자리…부동산 부정 61%·경제 첫 '역전' - 뉴스후플러스](https://news.google.com/rss/articles/CBMibkFVX3lxTE1XRXIwb3JUVVpUNEhPaGx4SHllTnlVOExhbEh6ZFJCLXdZTWZWNHd0eHl0TVBmajVFdEFFR1pNWkJILU1rVE0xczdVbE1iTzBFdlRpTVdyZEZSWE00Z0lBX19MNEhPUmloT3l4eW1n?oc=5)**
@@ -101,7 +130,7 @@ Fed Interest Rate Predictions for the Next 5 Years: 2026–2031 Norada Real Esta
 전체의 76%로 압도적 비중을 차지합니다. 주요 출처: 한국은행 금리정책(14건), Fed Policy(1건), 이재명 경제정책(1건).
 
 - [Fed Interest Rate Predictions for the Next 5 Years: 2026–2031 - Norada Real Estate Investments](https://news.google.com/rss/articles/CBMioAFBVV95cUxPTnNLbEdDMDl2NDJPZmxGbXR0YmlhUkloX201TUJrQ3JQcXpVWlN3SENVVnJTOEw4dENwc2lzT3hHUjJiT0o3RGtFdEVTelpRUmdpYUxxU2NpdWlqc0xHZ3JKVGRYRXdsZkFiNjVaYi02UExPZXBBaTM1RTJBal8zMjJRcFJCNnVfaUhQREZyUG9zZDNnZ3A0Ymc0b1RpWkFs?oc=5) — Fed Policy
- > Fed Interest Rate Predictions for the Next 5 Years: 2026–2031 Norada Real Estate Investments
+ > 연준 향후 5년간 이자율 예측: 2026~2031년 Norada Real Estate Investments
 - [“한국은행 총재 자리 요구했다는 그 경제학자…” - 평화나무](https://news.google.com/rss/articles/CBMiakFVX3lxTFB3MTZyU0tQZTZnaGZnYmpBR3g3SmtUTUotY0tWbGt4dFN6bGVaVmpTcXFrMlR4TXpTd0dEcnJNU2g0d19idWQ1aGpraVNiUU80SExNamtvUnZleWh6R0FLd2ZvckUzeVBibGc?oc=5) — 이재명 경제정책
  > “한국은행 총재 자리 요구했다는 그 경제학자…” 평화나무
 - [한은, ‘금리 추가 인상’ 가능성 거듭 시사…시장선 “연내” 전망](https://news.google.com/rss/articles/CBMickFVX3lxTE5JQ2xXb2xzM0VVZ0dLVkU5LVJxMzg4WnY3QWUwZkZJNF9KRWd3c3lZVlgzc01oTXpDLVEyZW1DSUg1TjM5enl2X2xFRkN5blNtdnk5b2RKOF9YMWZkd2x5WXRDRWZteHI0TmF3OHVzYzRBQQ?oc=5) — 한국은행 금리정책

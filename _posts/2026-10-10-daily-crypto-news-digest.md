@@ -63,7 +63,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbS1hcXNNbk9MQkZjN1dRQlVWcTVkVUtiQ21KNjBmNS0weWo5enAtcTVKU3M2MUlfbE54ZWVpUEVXVlFsMmEydXZIai1vdTlBVTdUbFduQ0d6bzl5N0lsNjBVYXNTXzVQLXg3OHZ4dnk3MlVsRzdvRVlEMU5qRlNzSUFaZEg5bGhoYldZdEtGbkNFRy1mLXNidk51eGE1QnpRT2hDOHFUc0dQOUJyQ3lCYktCckk1TmNmdk9LQ1ZuNEQ4OWhyUXNuNHlaUEJjUXNDTXMxdWZ4V21fZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">A Year On, Bitcoin Languishes a Third Below its All-Time High. What’s Next For The Cryptocurrency?</a>
-<p class="news-desc">A Year On, Bitcoin Languishes a Third Below its All-Time High. What’s Next For The Cryptocurrency? WSJ</p>
+<p class="news-desc">1년이 지난 지금, 비트코인은 사상 최고치보다 3분의 1 아래로 떨어졌습니다. 암호화폐의 다음 단계는 무엇입니까?.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -75,7 +75,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxQS3FpZFdYanVZeGFRZ3owRk40cVZiNEs2Y3dCcUU3ZlZ4cXVMcU1YQmpTZExIVVQxQWdkbWo3dS0yR1FmYzM0VklLZnlBOHZCZkg0WW8xaTFCdUo3RXJyT3Q0NDZFWFNjNzRiLUhBNjB6VEEwSE5YallaUG5RUEZGdnZ4S3BhZWw1dFRacm9fRFRiZlpvczFRVUNKb1NlbHFTNkd4c2tzdWZNQlJMcHFGNWk1OEpRRlNnWmtVSGFMVzdPaXVtdlN6NjNSQXpZeFNJYXMwUWpwY0pNLWVXd0I5dkVfLUpFQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Why some say Michigan should ban bitcoin ATMs as victims lose millions - Detroit Free Press</a>
-<p class="news-desc">Why some say Michigan should ban bitcoin ATMs as victims lose millions Detroit Free Press</p>
+<p class="news-desc">일부 사람들은 피해자가 수백만 달러를 잃을 때 미시간이 비트코인 ATM을 금지해야 한다고 말하는 이유 - Detroit Free Press.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -115,7 +115,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOMzQ3bm9hRXhwdGEtLWNMdDRQaWdYZ25ObXB2NlVfdjlJZzUzZ0hIN0NVTjhnSm9MN2Fvb0RFaDNneTNwZ2drcXFoemdZWTJaQ3ZqalNiUTdtR2pLUDNIVmhKTi1BbzFfQzIzbjdnOUV5RjdMM0drS0tsTkdaNzd4NjZpQnRjVEFPcm51V3Ixbk81ejd1NzQ4S0MwWmp4SU80dU9TdGdUaFJUQnRsT3gxc2ZDWTZzRk93WE40VVVGVTPSAdQBQVVfeXFMTnRqT3FNc1R2YmJnczRCNmJ4VV9ha2ZoMmtDRWI0cUVSTnVFeEdTaVQtZjV5VGZNVW5fWUoyMjlJSW5aNzhHRXFONTZHcWxmUm40UXhIUnJZTUR6ZjFyN01JQ3dWZElxbEZQV0N5NTNkNkpKVThROW1iai00cUtYaEFvMU5xTW5TY08tZ0IzZFdkdzcwb2RRQ0RmV2ZrV1V3eGhYZHpUTkY2d1FRUjNHZGYwVmZMbTRNNjFjS1RWSFVSTW9VdDM1cWlWYWF3NW5NaFkxQ1c?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Ohio woman recovers $15,300 lost in cryptocurrency tech-support scam - WHIO TV</a>
-<p class="news-desc">Ohio woman recovers $15,300 lost in cryptocurrency tech-support scam WHIO TV</p>
+<p class="news-desc">오하이오 여성, 암호화폐 기술 지원 사기로 잃어버린 15,300달러 되찾다 - WHIO TV ($15,300)</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -127,7 +127,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOXzJDNzhjMm1DeFNnYk9QdDBWbXRWRXBLaUNacFAyeFRvM3NNb1NPQ3ZuR0hiZm9xNWZfeGotQl9qZ3ZnLVJZNmJ4Sjd0T2RXejZpWHVaT2pRUjN6cmZTc05aX29pZEphMjk4eXNTYTR5QWo4NVA3RnFqay1XNjdTNmtlaXlnQ1lBZkF2NWx4MVFQVmxCQU9na0lPeUd3VDY1ZWktQWFRSGRLdmZid2owU3F4UjRZUFVzakRNbENYXzJJSlpMakpfVGpsODBBR1AtOHVzUXpuMTBTa3hs?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">The XRP Ledger Surpasses Ethereum in a Key Area. What Does This Mean for the XRP Price? - 24/7 Wall St.</a>
-<p class="news-desc">The XRP Ledger Surpasses Ethereum in a Key Area. What Does This Mean for the XRP Price? 24/7 Wall St.</p>
+<p class="news-desc">XRP 원장은 2026년에 토큰화된 상품 유입에서 22억 달러를 기록하여 이더리움의 16억 달러를 제쳤습니다. XRP 가격이 상승할까요?</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -168,7 +168,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/380554/sim-swap-fraudster-who-spent-stolen-crypto-on-gold-grills-and-dubai-trips-jailed" class="news-title" target="_blank" rel="noopener noreferrer">SIM-Swap Fraudster Who Spent Stolen Crypto on Gold Grills and Dubai Trips Jailed</a>
-<p class="news-desc">Ajay Shinjin helped steal nearly $265,000 in crypto after criminals hijacked BT customers' phone numbers in November 2021.</p>
+<p class="news-desc">Ajay Shinjin은 2021년 11월 범죄자들이 BT 고객의 전화번호를 탈취한 후 약 265,000달러에 달하는 암호화폐를 훔치는 데 도움을 주었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -180,7 +180,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380530/nfl-kalshi-supreme-court-prediction-market" class="news-title" target="_blank" rel="noopener noreferrer">NFL Sides With States Against Kalshi in Supreme Court Prediction Market Fight</a>
-<p class="news-desc">The NFL urged the Supreme Court to resolve a circuit split over whether states can regulate sports contracts on prediction markets, arguing they're gambling, not federally regulated swaps.</p>
+<p class="news-desc">NFL은 주정부가 예측 시장에 대한 스포츠 계약을 규제할 수 있는지 여부에 대한 순회 분할을 해결하도록 대법원에 촉구했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -192,7 +192,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380522/solana-defi-firms-orca-and-loopscale-merge-under-new-formation-brand" class="news-title" target="_blank" rel="noopener noreferrer">Solana DeFi Firms Orca and Loopscale Merge Under New Formation Brand</a>
-<p class="news-desc">Solana DEX Orca and lending platform Loopscale will operate as Formation, a New York company aiming to finance AI, energy, robotics and defense assets and eventually reach regulated U.S. markets.</p>
+<p class="news-desc">솔라나 DEX Orca 및 대출 플랫폼 Loopscale은 AI, 에너지 및 로봇 공학 자금 조달을 목표로 하는 뉴욕 회사인 Formation으로 운영될 예정입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/wealthy-investors-crypto-advisers-okx-strategy-buybacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Crypto Biz: Wealthy investors are buying crypto, but their advisers aren’t sold</a>
-<p class="news-desc">Wealthy investors are embracing crypto faster than their advisers, while OKX attracts new funding and Strategy shifts more capital toward preferred stock buybacks.</p>
+<p class="news-desc">OKX가 더 많은 자금을 확보하고 전략이 비트코인보다 STRC 환매를 우선시함에 따라 CoinShares는 부유한 투자자들 사이에서 광범위한 암호화폐 소유권을 발견했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/uk-sanctions-crypto-exchanges-russian-illicit-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">UK sanctions three crypto exchanges tied to Russian illicit funds</a>
-<p class="news-desc">The UK sanctioned crypto exchanges and payment processors, some of which were tied to thousands of Russian entities and the sanctioned HTX exchange.</p>
+<p class="news-desc">영국은 제재를 받은 러시아 기업의 불법 흐름을 억제하기 위한 최근 입찰에서 3개의 암호화폐 플랫폼과 2개의 결제 서비스 제공업체를 제재했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -245,7 +245,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/markets/bitcoin-speculators-btc-exchanges-crypto-liquidation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin speculators move 55K BTC to exchanges amid $1.1B liquidations</a>
-<p class="news-desc">Bitcoin dipped below $81,000, sparking mass crypto liquidations as traders sent BTC to exchanges at a loss.</p>
+<p class="news-desc">비트코인 및 알트코인은 실현되지 않은 손실을 입은 투자자가 BTC을(를) 거래소로 이동함에 따라 24시간 만에 약 11억 달러에 달하는 청산을 합산했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -273,7 +273,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE10YmI5Z1dyTGt3Ri1xTG5zOUk1aHllWS0zLUF0d1psYTFnR0VFSTNTMWRtR0RQbWZ4QVM2LWNpWDJiNW5EblRIYzRtaDNsYktLVzZnVEpELVdNeTFBbTdJR0xjT3BqZEdRbTlBYUE5M1NZaFctNWwzOVdB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme - Chicago Tribune</a>
-<p class="news-desc">Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme Chicago Tribune</p>
+<p class="news-desc">암호화폐 키슈 이누(Kishu Inu)의 창립자는 그와 그의 동료들이 "러그 풀(rug pull)" 계획을 통해 투자자들에게 거의 천만 달러를 횡령한 혐의로 연방 혐의로 시카고에서 기소되었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -285,7 +285,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-10 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcUQ3VnhMTmVxTkRFVFM3Y0RidkJ0WmxLQzlEOUptU0dSQmFzNE9LdHJEbG14YTljNVJ3YlowejRqcnUyV2tiUjlBSERHZlBwVDFzRFV3NzUtZk50V2NyckQ1bEs2UlpQM183dTRSSEx4Sm4wMFIxa3JSN05JbTBhTVhkU0hYMnRfSE1NNVk5VTlvUzBQY1NmamdDOU1KRTZqbWgxdjhGTWUzMVBIdlpoaVpfcVJnWU5ZbDI4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Ohio BCI Returns More Than $15,000 to Victim of Crypto ATM Scam - Ohio Attorney General (.gov)</a>
-<p class="news-desc">Ohio BCI Returns More Than $15,000 to Victim of Crypto ATM Scam Ohio Attorney General (.gov)</p>
+<p class="news-desc">오하이오 BCI, 암호화폐 ATM 사기 피해자에게 15,000달러 이상 반환 - 오하이오 법무장관(.gov) ($15,000)</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

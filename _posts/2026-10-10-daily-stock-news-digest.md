@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">892.27</div><div class="stat-label">KOSDAQ -0.69%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려 - 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 12건 수집</li><li>📊 <strong>매크로/금리</strong>: 트럼프, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 연준 주목</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1lT0hsVGZ6QWFjWVNRSVZIZ05Oa0RwX2lZNXVsMGZQZGZaVnZibVh1bWJoNUlmWEJwRTB4MDRmX08tRW1lRVBoam0xQml3WHZhYmNmS1JyTlhMZnNWYldDbGpQUUUxQm16?oc=5">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 - 녹색경제신문</a> <span class="p0-desc">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 녹색경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQaERIWFRDbDJubUpIVnN3cFF4eVFXV3NaVnZfeS1kOVRiNTBvSnJQNk5iam52OVQxMW5vaVV2Y1FHeTU0Um9SNXZWSThGZU1EOGhQeDlyQ1dMaXpfLWJBeEg1SWsyZmRHeXpFdklIc1VSdFp0YXh3V2FHLUkzb19kV25UVWJHUEFialoyS0NPVUUyeUxfNTR4Ulp3SUltOTc4NS1xMzBIUnBpanhrREdlZ2Z4TQ?oc=5">AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says</a></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">(서울=연합뉴스) 황철환 곽윤아 기자 = 삼성전자[005930]가 국내 기업 사상 최초로 분기 영업익 100조원 선을 넘어서고도 8일 2% 넘게...</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1lT0hsVGZ6QWFjWVNRSVZIZ05Oa0RwX2lZNXVsMGZQZGZaVnZibVh1bWJoNUlmWEJwRTB4MDRmX08tRW1lRVBoam0xQml3WHZhYmNmS1JyTlhMZnNWYldDbGpQUUUxQm16?oc=5">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 - 녹색경제신문</a> <span class="p0-desc">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 녹색경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQaERIWFRDbDJubUpIVnN3cFF4eVFXV3NaVnZfeS1kOVRiNTBvSnJQNk5iam52OVQxMW5vaVV2Y1FHeTU0Um9SNXZWSThGZU1EOGhQeDlyQ1dMaXpfLWJBeEg1SWsyZmRHeXpFdklIc1VSdFp0YXh3V2FHLUkzb19kV25UVWJHUEFialoyS0NPVUUyeUxfNTR4Ulp3SUltOTc4NS1xMzBIUnBpanhrREdlZ2Z4TQ?oc=5">AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says</a></li></ul></div>
 
 
 
@@ -54,7 +54,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0cjN5dU5VcFpKOUZmdkltYmU1ZWpoMHZJYmJhRzJNZldmdHJpeTRibkI1MDRoWGJWWDBEVC04ZkhtQ1F6NXg3RklFckpFdEdUc3RZalRQeWFWZEnSAWBBVV95cUxQcWR5TDhRaU4xeGstTktXeGU4R3JTWU5teEN5SUctaXdzX0VpZkVxb3E5OE12VC1haVhqR1ROaF9ld0lMVDZUdHdXWi1INXh3ckx2M0JNNmJnQjIySG9BX04?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시</a>
-<p class="news-desc">[코스피·코스닥 전 거래일(7일) 주요공시] 연합뉴스</p>
+<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시. 주요 키워드: 코스피, 코스닥, 거래일.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +66,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5UV1FQdjdQcElyTnptazdkUmF6Q0EzOHUycVU3MnZ6TF9IU2hiXzh1QUxxT3RSWUpMeHZ6UFc5WS0wRHR5U1RIV0hadWhGVmFuQXJxRFhZQlFyeDVWck4tMWFRRmR6ODlpUkM5VFNNOGFxNWfSAXdBVV95cUxONkM1cDZEb1dnMWRWN1hZY3BzaWpRTDQ4Y3o3OHVLbzJTczB5TDBtbTVROUE2dVVaYWhLRHEyZUFnQ29LYXdJbzlobWN0aVRkQWVROVBDOGhhaWhjQ29BS3BDMTZ3aFA5aHVwckt2alFLcC1mbk9nRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자</a>
-<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자 핀포인트뉴스</p>
+<p class="news-desc">▲ 에피소드컴퍼니[317530], 140억원 제3자배정 유상증자▲ 금융위, '회계기준 위반' 금양[001570]에 76억3천만원 과징금 의결▲ BGF[027410] "계열사 케이엔더블유 주식 818억원에 취득…지분율 56.9%"▲ 현대비앤지스틸[004560] "성림첨단산업 주식 185억원에 추가취득"▲ 대성산업[128820] "자회사 대성쎌틱에너시스 주식 380억원에 추가취득"▲ 두나무·네이버파이낸셜 주식교환 또 연기…내년 3월 예정▲ 알파칩스[117670], 주당 1.0주 무상증자 결정▲ LG전자[066570] 3분기 영업익 7천</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -78,7 +78,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1HS3dTNGlsLTdnVERRbWxoa0sySklNdm5ncFVGaFdPdmZ3X1lsYmtYbGZ5cDdSUjF0elV4a0hCSmFWUFdMc09DN1d6cGItRlR0RmRXcW1xdlFzYVo2ZFU2RVVYME92QndYWU1j?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피, 상승 출발.코스닥 내림세 개장 - 한강타임즈</a>
-<p class="news-desc">코스피, 상승 출발.코스닥 내림세 개장 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 8일 코스피와 코스닥지수가 각각 오름세와 내림세로 출발했다.이날 코스피는 전 거래일보다 0.07% 오른 6808.68에 시작했으며, 코</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9OcTJ4T24xZ0gxOW5tVDJGbkc5MW5JYTB6Z24wSUpBeTZmRmc4Smx6Q0hTUGVLLS1kTzhNMnhrdmdRTkxtTHl5d3dLekoyMi1GcWN3aXA5VERad0NZMWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자 실적이 쏘아올릴 반도체株…'50만 전자·328만 닉스' 현실될까 - 더구루</a>
-<p class="news-desc">삼성전자 실적이 쏘아올릴 반도체株…'50만 전자·328만 닉스' 현실될까 더구루</p>
+<p class="news-desc">[더구루=변수지 기자] 삼성전자가 국내 기업 최초로 분기 영업이익 100조원을 돌파했다. 창사 이래 최대 분기 실적에 삼성전자·SK하이닉스의 추가 상승 기대도 커지고 있다. 10일 산업계에 따르면 삼성전자는 3분기 매출 195조원, 영업이익 107조4000억원의 잠정실적을 지난 8일 발표했다. 매출과 영업이익은 전년 동기 대비 각각 126.6%, 782.5</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -131,7 +131,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOcDlHaWo4R1pjSjdRelRRRVNPa1RXQ01HUzYxWFBpa0VvYjNzS0RIaTYtUFRjSmN5SW9FT0pQLWpnVU9oQU4yYjRuM1UtbUZuVWNPMUwzZnRrZ3hSVDQydlkyYlUtWHVoS25fNHltbFhFcktUTE1rUkx1VWhyOW9MMVBCZlFTMFVDZEJHZk9RQkxObkJFalBZUnQxNEU0R2VR?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Nasdaq rises after OpenAI revenue report rattles AI stocks</a>
-<p class="news-desc">Nasdaq rises after OpenAI revenue report rattles AI stocks Yahoo Finance</p>
+<p class="news-desc">엔비디아가 지원하는 IPO이 AI 성장에 대한 지속적인 의구심 속에 폐기되었지만 기술주가 금요일 아침에 상승하고 있습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -158,7 +158,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnM2aVMweDBaaGJGVGFFZ09qd3pDd09SZlNVWkpQSzhjQTByQXBXZU1NMjZkelhTMmFsSHh2bk1sc3NzcWh3clphT1dkVWN0Qm5OOTZPSlc0dDlLcmlxNmpsQzBqRjgzbmczNjdkT2RFcmNLN2tpNmVLMlB4MFdEVjBLa1NPRU5R?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">What “Real” Interest Rates Are Telling Us - ETF Database</a>
-<p class="news-desc">What “Real” Interest Rates Are Telling Us ETF Database</p>
+<p class="news-desc">경제와 금융에서 가장 중요한 개념 중 하나는 투자에 대한 "실질" 수익률입니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -170,7 +170,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE53cGg0NFhFckZVTkVXVVRFbzRqanUyRUh4aHlxVzJXbDhmTUJXNGtrNWZseDRUaU1pd3dhUVRrel9sYkd5LVZSdW5HbEhISmVtVWhBU21vbTFXa2VWQUs3OGtMNkRkNTlIVlI5ZNIBbEFVX3lxTE53cGg0NFhFckZVTkVXVVRFbzRqanUyRUh4aHlxVzJXbDhmTUJXNGtrNWZseDRUaU1pd3dhUVRrel9sYkd5LVZSdW5HbEhISmVtVWhBU21vbTFXa2VWQUs3OGtMNkRkNTlIVlI5ZA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한국은행 10월 기준금리 ‘매파적 동결’ 전망…美 추가 긴축은 변수 - 국민일보</a>
-<p class="news-desc">한국은행 10월 기준금리 ‘매파적 동결’ 전망…美 추가 긴축은 변수 국민일보</p>
+<p class="news-desc">오는 22일 한국은행 금융통화위원회를 앞두고 기준금리를 유지하면서도 추가 인상 가능성을 열어둘 것이라는 ‘매파적 동결’ 전망이 나왔다. 앞선 금리 인상이 경제에 미치는 영향을 살펴볼 필요가 있지만, 미국의 추가 긴축 가능성과 국제유가에 따른 물가 위험도 남아</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPN1hvWl9DMFlrdWI3MDJRYjRqb2hyeTI1eWVDSTBucWpWb2xRNTVFdk5PY0pHMWcxQ3djT2hkOHRpNks2cmEwQU5hT1F5SklzN1hTMi1maUJpN0pIaE9iaWlFS3BqcU9IbXRqYnBwaHR2NnF6Ujl1TVhKb2tzVmdRZUVHUmY0WWY3STZYLWcwaXpvQjlNTXhTbmQxdWV3Z3ZKNXcyNjgxaXVPeUdscXc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stock market today: Dow, S&P 500, Nasdaq futures fall as oil rises, reviving inflation worries</a>
-<p class="news-desc">Stock market today: Dow, S&P 500, Nasdaq futures fall as oil rises, reviving inflation worries Yahoo Finance</p>
+<p class="news-desc">시장은 실적 낙관론과 다시 살아나는 인플레이션 우려 사이에서 줄다리기를 하고 있었습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -207,7 +207,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/09/fed-lisa-cook-trump.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump appoints committee to investigate statements by the Fed's Lisa Cook</a>
-<p class="news-desc">Trump tried to fire Cook, a nominee of former President Joe Biden, but the Supreme Court blocked his first attempt.</p>
+<p class="news-desc">트럼프는 Joe 바이든 전 대통령의 지명자인 Cook을 해고하려 했으나 대법원이 그의 첫 번째 시도를 저지했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/09/trump-lisa-cook-fed-firing-committee-explained.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump created a committee to dig into the Fed's Lisa Cook. What is it and what comes next?</a>
-<p class="news-desc">Trump’s bid to fire the Fed's Lisa Cook follows a Supreme Court ruling and could affect Jerome Powell, central bank independence and interest rates.</p>
+<p class="news-desc">트럼프의 연준의 Lisa Cook을 해고하려는 입찰은 대법원 판결을 따르며 제롬 파월, 중앙 은행 독립성 및 이자율에 영향을 미칠 수 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/09/ice-bronx-shooting-mamdani-dhs.html" class="news-title" target="_blank" rel="noopener noreferrer">ICE won't pause enforcement in NY after Bronx shooting, DHS' Mullin says</a>
-<p class="news-desc">New York Gov. Kathy Hochul said she asked Homeland Security Secretary Mullin and President Donald Trump to immediately halt ICE operations in her state.</p>
+<p class="news-desc">Kathy Hochul 뉴욕 주지사는 멀린(Mullin) 국토안보부 장관과 도널드 트럼프 대통령에게 뉴욕주에서 ICE 운영을 즉시 중단할 것을 요청했다고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -264,7 +264,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPSGtJVTlmbEZaX0lLWEJPc1RrN0ZWQ2tEcWFXUHFCb1FYRmw4ZllHNWd6TWd6ck1URUNWVnpqMWhjVmV4Q0tLMXpBUnBzMVRCX1FLQXc4TnFoU1RvcF9YNi1BaDNOZElzc2VCbUVDTFk5TlhadHhLN0NDbGNxMER0c2JoUlk2TG5MalVQbmMyZW5Ua01sbUNKc1piZkJOMXItOGtnbFN3RS04UFgtQlU5MGoybw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Firmus Is Said to Explore Raising $3 Billion After Shelving IPO</a>
-<p class="news-desc">Firmus Is Said to Explore Raising $3 Billion After Shelving IPO Bloomberg.com</p>
+<p class="news-desc">Firmus는 IPO 보류 후 30억 달러 조달을 모색할 예정이라고 합니다. ($3B) Firmus, 관련 보도 탐색.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>
@@ -276,7 +276,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxQTml2VU11dHZLd1dTeEZ4QlZGSng3TnM0TU1Bb1QzZ3prVkpjb1lDdjRXdzZSdV9GSUNFc2h1a3Z4ZmZCemczQnhCR0xpLUJQU3JsVm01enBfRUhTcVQwdzBrY2VDX19WNkk3dDdJSWwxT0xuX3kxWTRuR2txUUZ5QVVNeEpyVjdubDJxQ0JlWnR4TF9jQUZhWlcyd1dfeWIxZ3JOeHFuaEhYZzZKZEt0aEpJU2FDQ1YwV1VJVUd6NDVMTW1rZ1haUWY0YnNGeE40T2FpcjJSY0E1M3plWVdpRURkMVV6WVAxcUszZzd5aWJrczUxU09qatIB_gFBVV95cUxNdG5UeXlrU2sxM2Z3WHFlNDUzOUtUdktoVVZCZGFRLUVIaTQ2eERqcklsUzRsVldwMG1JQnFuSC04Vk9xbzJBVDE1R01QVzYwMHdlX1RvNEFVRmlsNlRKdm9qQWlDemhJSUR5MWZwSkRjS2FRZFJKbFczOFUtNlVLNUE5c3k0VUJwc1FoNnhoVzNQMHJzSS1tVk1fU2QwaDhTU21Gbm9pZHJrWE9TTGVUUW16TVVGbjNKZy1aV2VXNFlRSXd5UzBRR2tiRE1LdHp3RENrdWR1N3E0UzVHM2pFRGNJTjlQREFEV0dlR2FCRmFWVm02NnRHQUJXTXRPQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">IPO Watch: Want to invest in Initial Public Offering? Know this factor before buying shares - The Economic Times</a>
-<p class="news-desc">IPO Watch: Want to invest in Initial Public Offering? Know this factor before buying shares The Economic Times</p>
+<p class="news-desc">IPO 추적기: 호주의 엔비디아 지원을 받는 AI 데이터 센터 운영업체인 Firmus는 시장 변동성과 일반적인 시장 상황을 이유로 10월에 증권 거래소에서 예정된 주식 시장 상장을 철회했습니다.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

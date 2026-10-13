@@ -648,10 +648,20 @@ def _trim_to_sentence(text: str, limit: int = _MAX_DESC_LEN) -> str:
 def synthesize(blurb: Blurb) -> str:
     """Fact-based fallback built from the headline when the link is unusable."""
     try:
-        return generate_synthetic_description(blurb.title, "", None).strip()
+        raw = generate_synthetic_description(blurb.title, "", None).strip()
     except Exception as exc:
         logger.debug("Synthesis failed for %r: %s", blurb.title[:60], exc)
         return ""
+    if not raw:
+        return ""
+    if contains_english_clause(raw):
+        try:
+            translated = translate_to_korean(raw)
+            if translated and not contains_english_clause(translated):
+                return translated
+        except Exception as exc:
+            logger.debug("Synthesis translation failed: %s", exc)
+    return raw
 
 
 def replace_in_post(content: str, old_raw: str, new_text: str, all_copies: bool = False) -> tuple[str, bool]:
