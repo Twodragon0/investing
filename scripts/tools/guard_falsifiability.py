@@ -1131,6 +1131,13 @@ STATIC_CASES: tuple[StaticCase, ...] = (
         "\n    pass  # 방벽 제거",
         "tests/test_guard_falsifiability_worktree.py::test_the_barrier_is_actually_called_before_mutating",
     ),
+    StaticCase(
+        "수집기 워크플로우 git-add-paths 에서 assets/images 누락",
+        ".github/workflows/collect-blockchain.yml",
+        "git-add-paths: '_posts/ _state/ assets/images/'",
+        "git-add-paths: '_posts/ _state/'",
+        "tests/test_workflow_git_add_paths_guard.py::test_collector_workflows_include_image_paths",
+    ),
 )
 
 
