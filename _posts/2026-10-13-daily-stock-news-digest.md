@@ -32,13 +32,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">849.19</div><div class="stat-label">KOSDAQ -4.83%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' - 164건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 신현송 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 마이크로소프트 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 휴전 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9QMmUwZ3NLUUsxdjVuSDk5VVdJWi1VWnZJbmJ4WjRJV1RzQzlqV1VVbEE1V2Fya1RVeVRHWEU1dUhmRHJpcjQxNkZsa1VZSUJubFc3eHRLZGlUZWJ5T2N1ZHlTNmczSVlyQzBZd3BnQVdaWTjSAXdBVV95cUxQWWdsbkZYM1d3SzVnR1pRN0VYYllVa3Z3WTZ3dlh5MmpSLWUyWFZlOHltVWdJVGVzMzhmZWI4a0xDbk82Q0xraTc4YVEwU0hybW1jUDJOb3hnNGxLMnNQWV9DWVZKQ1hacmpSaF9fSmx6enFKcU5Hdw?oc=5">표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락'</a> <span class="p0-desc">외국인 매물이 쏟아지면서 코스피와 코스닥이 동반 급락했다. 12일 한국거래소에 따르면, 코스피에서는 외국인이 2조182억원, 기관이 1,338억원을 순매도했다. 개인은 1조4,857억원을 순매수했다.코스닥에서는 외국인이 145억원, 기관이 2,196억원을 순매도했다. 개인은 2,325억원을 순매수했다.종목별로는 코스피에서 삼성전자가 외국인과 기관의 공통 순매도 상위 종목에 오른 반면, 개인의 순매수 상위 종목에 포함됐다.SK하이닉스는 기관과 개인의 순매수 상위 종목이었으나 외국인의 순매도 상위 종목이었다. 코스닥에서는 원익IPS·브</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OWkxycDlwckFnQS0wc3c5RGlhQVFCQm56UVVRY19pNjQ4UlhYZVpfczlsTVVnYU9QS3NHa3FjcnlFc3E0dE8zV1RBSnBGTnRwUHkwdHQ0ajRFVDJv?oc=5">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 고인원 기자= 중국 메모리 반도체업체 창신메모리테크놀로지(CXMT)가 차세대 D램 기술을 공개하면서 글로벌 반도체 시장이 술렁이고 있다. 기존보다 같은 면적에 더 많은 데이터를 저장할 수 있는 기술을 앞세워 올해 말 서버용 메모리 시장에 본격</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE50bWF5M2VsUmxobXV3Tk5EZG5GS0g2aHBPcVUzdGlEMERRSzcwbnVkU29PbUZ1YkZGZmd4X29UQnhzT0dqQnVKMkF2YjA3SkxNYlZhNThtdmpkcjNPREhhQUd2RkJ1MzJiekZkblROUm_SAXRBVV95cUxQcEl0bzlMS3F2X1lkWGpFU2xoMy1WSXdjWlNTdmdwN3FvQlVITGliNDFBaGtRN3U3WURHOW5FckxGSFNqQk9Wa2JfdE9IMlU3SmJ4NW10cjZ5NnpxMEUtVndtd1pRNGR2cmFJaGtxaEY0clhKWg?oc=5">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자]한글날 연휴 이후 거래를 재개한 국내 증시에서 반도체 대형주가 일제히 급락했다.외국인 투자자들의 대규모 매도세가 이어지면서 삼성전자와 SK하이닉스 모두 4% 넘게 하락한 채 거래를 마쳤다.특히, 삼성전자의 역대급 실적 발표에도 주가 하락세가 이어지면서 반도</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9QMmUwZ3NLUUsxdjVuSDk5VVdJWi1VWnZJbmJ4WjRJV1RzQzlqV1VVbEE1V2Fya1RVeVRHWEU1dUhmRHJpcjQxNkZsa1VZSUJubFc3eHRLZGlUZWJ5T2N1ZHlTNmczSVlyQzBZd3BnQVdaWTjSAXdBVV95cUxQWWdsbkZYM1d3SzVnR1pRN0VYYllVa3Z3WTZ3dlh5MmpSLWUyWFZlOHltVWdJVGVzMzhmZWI4a0xDbk82Q0xraTc4YVEwU0hybW1jUDJOb3hnNGxLMnNQWV9DWVZKQ1hacmpSaF9fSmx6enFKcU5Hdw?oc=5">표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락'</a> <span class="p0-desc">외국인 매물이 쏟아지면서 코스피와 코스닥이 동반 급락했다. 12일 한국거래소에 따르면, 코스피에서는 외국인이 2조182억원, 기관이 1,338억원을 순매도했다. 개인은 1조4,857억원을 순매수했다.코스닥에서는 외국인이 145억원, 기관이 2,196억원을 순매도했다. 개인은 2,325억원을 순매수했다.종목별로는 코스피에서 삼성전자가 외국인과 기관의 공통 순매도 상위 종목에 오른 반면, 개인의 순매수 상위 종목에 포함됐다.SK하이닉스는 기관과 개인의 순매수 상위 종목이었으나 외국인의 순매도 상위 종목이었다. 코스닥에서는 원익IPS·브</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OWkxycDlwckFnQS0wc3c5RGlhQVFCQm56UVVRY19pNjQ4UlhYZVpfczlsTVVnYU9QS3NHa3FjcnlFc3E0dE8zV1RBSnBGTnRwUHkwdHQ0ajRFVDJv?oc=5">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 고인원 기자= 중국 메모리 반도체업체 창신메모리테크놀로지(CXMT)가 차세대 D램 기술을 공개하면서 글로벌 반도체 시장이 술렁이고 있다. 기존보다 같은 면적에 더 많은 데이터를 저장할 수 있는 기술을 앞세워 올해 말 서버용 메모리 시장에 본격</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE50bWF5M2VsUmxobXV3Tk5EZG5GS0g2aHBPcVUzdGlEMERRSzcwbnVkU29PbUZ1YkZGZmd4X29UQnhzT0dqQnVKMkF2YjA3SkxNYlZhNThtdmpkcjNPREhhQUd2RkJ1MzJiekZkblROUm_SAXRBVV95cUxQcEl0bzlMS3F2X1lkWGpFU2xoMy1WSXdjWlNTdmdwN3FvQlVITGliNDFBaGtRN3U3WURHOW5FckxGSFNqQk9Wa2JfdE9IMlU3SmJ4NW10cjZ5NnpxMEUtVndtd1pRNGR2cmFJaGtxaEY0clhKWg?oc=5">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자] 한글날 연휴 이후 거래를 재개한 국내 증시에서 반도체 대형주가 일제히 급락했다.외국인 투자자들의 대규모 매도세가 이어지면서 삼성전자와 SK하이닉스 모두 4% 넘게 하락한 채 거래를 마쳤다.특히, 삼성전자의 역대급 실적 발표에도 주가 하락세가 이어지면서 반도</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
 - KOSPI 6,384.24 (-3.65%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 849.19 (-4.83%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-10-13 주식 시장에서 164건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,384.24(-3.65%), KOSDAQ 849.19(-4.83%), USD/KRW 1,333.99(-0.45%).
 - *'엔비디아칩 독주 저지'…MS "자체 AI칩 내년 백만개 이상 투입", MS "업계 최고 수준의 전력 효율과 메모리 대역폭" 공언 "자체 클라우드 시스템을 위한 주요*
 **긴급**: 표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' 
 외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 164건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
@@ -81,7 +80,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 *기사는 여러 테마에 중복 집계될 수 있음*
 
 
-
 ---
 
 ## 테마별 주요 뉴스
@@ -107,7 +105,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RDVhOHRXVHBJMzVMUnYwZUVUM2FzcTZjc0hOQWdtUVBGdWM3OUE3SEdRakRMOGRIM3ExZXRrQTRZMVpIaGFMc1dSamQ1MTVYdDlvcEJBMExxb05lNGVGMDg1RWVDV2J5RkZnN0RYTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 코스피는 박스권 유지, 코스닥은 박스권 탈출로 반도체 소부장 및 2차전지 섹터 긍정적 - 뉴스퀘스트</a>
-<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표 】[2026년 10월 12일 장전 국내시황]오픈AI의 올해 말 연율 환산 매출이 700억 달러에 도달하거나 이를 넘어설</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표 】[2026년 10월 12일 장전 국내시황] 오픈AI의 올해 말 연율 환산 매출이 700억 달러에 도달하거나 이를 넘어설</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -160,7 +158,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBPaVNxcjEzdzNnV2Myc1RqZHZrb0o3QjZ1N1V0Z2I5b1JEOVNDdEFXUHp2ZEJ0MklweFRZb2pFOU9wTGdSX2l4MVVMOFB3WXRlVUFhYU91SW1FTFA3SmhWTDlkSXpQWXJhOTlyeFF0bE9GTlhLZVVERNIBeEFVX3lxTFBPaVNxcjEzdzNnV2Myc1RqZHZrb0o3QjZ1N1V0Z2I5b1JEOVNDdEFXUHp2ZEJ0MklweFRZb2pFOU9wTGdSX2l4MVVMOFB3WXRlVUFhYU91SW1FTFA3SmhWTDlkSXpQWXJhOTlyeFF0bE9GTlhLZVVERA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">신현송 "금리 연속 인상, 환율 안정 효과도 거둬"</a>
-<p class="news-desc">[서울=뉴시스]김래현 김민수 기자 = 신현송 한국은행 총재가 선제적으로 기준금리 연속 인상에 나선 결과 원·달러 환율을 안정시키는 효과도 거뒀다는 입장을 밝혔다</p>
+<p class="news-desc">[서울=뉴시스] 김래현 김민수 기자 = 신현송 한국은행 총재가 선제적으로 기준금리 연속 인상에 나선 결과 원·달러 환율을 안정시키는 효과도 거뒀다는 입장을 밝혔다</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

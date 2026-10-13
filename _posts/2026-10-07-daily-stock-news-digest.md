@@ -34,12 +34,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 외국인, 하락 부각 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 외국인 주목</li><li>📊 <strong>매크로/금리</strong>: 국채 관련 21건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,941.39 (-0.89%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 919.92 (+2.98%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-07 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,941.39(-0.89%), KOSDAQ 919.92(+2.98%), USD/KRW 1,338.14(-0.24%).
 - KOSPI 6,941.39 (-0.89%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다. KOSDAQ 919.92 (+2.98%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
@@ -171,7 +169,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-07 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5KbnVSQkxYSzEteDI0RHczXzFZQjh6NS1UOUF5V0pxZy1vUUR6R1VhbEtOeXNkRlQ4OGhBVnU3NXJpM1hwUm5yUDVGOHJybVlEYzZrVEVJQkdzVklaVHZ0R3B6V080aEgxM1I3emVnLV_SAXRBVV95cUxQQnlKTHlCRG1kVVFMS1JyNXdYeWhSZUJncTNQbVlPaXU0SlBmU0dSZndCS2RvTHA5YnBHTkxOcTlSWGxMeUxNWE9WYVBIT1d3a0FlN2RucXZGMnVxYmFCRU1NS2tDNzBjRU1VQlhIYWlxOVBYSQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">외국인 매도에 삼성전자·SK하이닉스 동반 하락…반도체주 약세 - 산경투데이</a>
-<p class="news-desc">[산경투데이 = 이하나 기자]개천절 연휴를 마치고 문을 연 국내 증시에서 반도체 대형주가 외국인의 대규모 매도 공세에 나란히 하락했다.삼성전자의 3분기 잠정실적 발표와 자사주 매입 종료를 앞둔 경계 심리까지 겹치면서 투자심리가 위축된 모습이다.6일 유가증권시장에서 삼성전자는 전 거래일</p>
+<p class="news-desc">[산경투데이 = 이하나 기자] 개천절 연휴를 마치고 문을 연 국내 증시에서 반도체 대형주가 외국인의 대규모 매도 공세에 나란히 하락했다.삼성전자의 3분기 잠정실적 발표와 자사주 매입 종료를 앞둔 경계 심리까지 겹치면서 투자심리가 위축된 모습이다.6일 유가증권시장에서 삼성전자는 전 거래일</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>

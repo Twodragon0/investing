@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQc1ZGcEVtQ1NTdFNySEFiS0t0SVlDWXZXOGxoZ241VUprcng0VVpkZmw3cGdRaTVwY0cyNGdhWnpyaWV2dTFVeE1jRnlVT1hKNDQ5NUxzNG9pZTFfM05KWks1VVdPZ3RJSGt4OU5CSGpLWm1ZbXdtZmJDb3lqa0x3dlozNHl5LUVBT0xkdkc0ekFzdVVNTGRaWnZsRGNQMXh1N2pMWUxQS2VYRGh4dGNBMDZ3?oc=5">Pokemon Collector Found Guilty in $55 Million Crypto Hack Case</a></li><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE10YmI5Z1dyTGt3Ri1xTG5zOUk1aHllWS0zLUF0d1psYTFnR0VFSTNTMWRtR0RQbWZ4QVM2LWNpWDJiNW5EblRIYzRtaDNsYktLVzZnVEpELVdNeTFBbTdJR0xjT3BqZEdRbTlBYUE5M1NZaFctNWwzOVdB?oc=5">Crypto coin founder charged in Chicago with scamming investors in ‘rug pull’ scheme - Chicago Tribune</a></li><li><a href="https://decrypt.co/380401/uranium-finance-hacker-who-bought-pokemon-and-magic-cards-convicted-over-50m-theft">Uranium Finance Hacker Who Bought Pokémon and Magic Cards Convicted Over $50M Theft</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
-- 2026-10-09 암호화폐 시장 98건 분석 — 핵심 테마: 비트코인, 가격/시장, DeFi
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
@@ -63,7 +61,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-09 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxQS3FpZFdYanVZeGFRZ3owRk40cVZiNEs2Y3dCcUU3ZlZ4cXVMcU1YQmpTZExIVVQxQWdkbWo3dS0yR1FmYzM0VklLZnlBOHZCZkg0WW8xaTFCdUo3RXJyT3Q0NDZFWFNjNzRiLUhBNjB6VEEwSE5YallaUG5RUEZGdnZ4S3BhZWw1dFRacm9fRFRiZlpvczFRVUNKb1NlbHFTNkd4c2tzdWZNQlJMcHFGNWk1OEpRRlNnWmtVSGFMVzdPaXVtdlN6NjNSQXpZeFNJYXMwUWpwY0pNLWVXd0I5dkVfLUpFQQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Why some say Michigan should ban bitcoin ATMs as victims lose millions - Detroit Free Press</a>
-<p class="news-desc">일부 사람들은 피해자가 수백만 달러를 잃을 때 미시간이 비트코인 ATM을 금지해야 한다고 말하는 이유 - Detroit Free Press.</p>
+<p class="news-desc">일부 사람들은 피경쟁 우위가 수백만 달러를 잃을 때 미시간이 비트코인 ATM을 금지해야 한다고 말하는 이유 - Detroit Free Press.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>

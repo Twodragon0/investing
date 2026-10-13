@@ -32,15 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">892.27</div><div class="stat-label">KOSDAQ -0.69%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려 - 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 12건 수집</li><li>📊 <strong>매크로/금리</strong>: 트럼프, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 연준 주목</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">(서울=연합뉴스) 황철환 곽윤아 기자 = 삼성전자[005930]가 국내 기업 사상 최초로 분기 영업익 100조원 선을 넘어서고도 8일 2% 넘게...</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1lT0hsVGZ6QWFjWVNRSVZIZ05Oa0RwX2lZNXVsMGZQZGZaVnZibVh1bWJoNUlmWEJwRTB4MDRmX08tRW1lRVBoam0xQml3WHZhYmNmS1JyTlhMZnNWYldDbGpQUUUxQm16?oc=5">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 - 녹색경제신문</a> <span class="p0-desc">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 녹색경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQaERIWFRDbDJubUpIVnN3cFF4eVFXV3NaVnZfeS1kOVRiNTBvSnJQNk5iam52OVQxMW5vaVV2Y1FHeTU0Um9SNXZWSThGZU1EOGhQeDlyQ1dMaXpfLWJBeEg1SWsyZmRHeXpFdklIc1VSdFp0YXh3V2FHLUkzb19kV25UVWJHUEFialoyS0NPVUUyeUxfNTR4Ulp3SUltOTc4NS1xMzBIUnBpanhrREdlZ2Z4TQ?oc=5">AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says</a></li></ul></div>
-
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">(서울=연합뉴스) 황철환 곽윤아 기자 = 삼성전자[005930] 가 국내 기업 사상 최초로 분기 영업익 100조원 선을 넘어서고도 8일 2% 넘게...</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1lT0hsVGZ6QWFjWVNRSVZIZ05Oa0RwX2lZNXVsMGZQZGZaVnZibVh1bWJoNUlmWEJwRTB4MDRmX08tRW1lRVBoam0xQml3WHZhYmNmS1JyTlhMZnNWYldDbGpQUUUxQm16?oc=5">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 - 녹색경제신문</a> <span class="p0-desc">한글날 쉬는 사이 美반도체 급락…SOXL 10%↓, 월요일 '삼전·하닉' 또 시험대 녹색경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQaERIWFRDbDJubUpIVnN3cFF4eVFXV3NaVnZfeS1kOVRiNTBvSnJQNk5iam52OVQxMW5vaVV2Y1FHeTU0Um9SNXZWSThGZU1EOGhQeDlyQ1dMaXpfLWJBeEg1SWsyZmRHeXpFdklIc1VSdFp0YXh3V2FHLUkzb19kV25UVWJHUEFialoyS0NPVUUyeUxfNTR4Ulp3SUltOTc4NS1xMzBIUnBpanhrREdlZ2Z4TQ?oc=5">AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says</a></li></ul></div>
 
 
 ## 전체 뉴스 요약
 
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-10 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,341.43(-0.03%).
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요. KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
@@ -54,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0cjN5dU5VcFpKOUZmdkltYmU1ZWpoMHZJYmJhRzJNZldmdHJpeTRibkI1MDRoWGJWWDBEVC04ZkhtQ1F6NXg3RklFckpFdEdUc3RZalRQeWFWZEnSAWBBVV95cUxQcWR5TDhRaU4xeGstTktXeGU4R3JTWU5teEN5SUctaXdzX0VpZkVxb3E5OE12VC1haVhqR1ROaF9ld0lMVDZUdHdXWi1INXh3ckx2M0JNNmJnQjIySG9BX04?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시</a>
-<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시. 주요 키워드: 코스피, 코스닥, 거래일.</p>
+<p class="news-desc">코스피·코스닥 전 거래일(7일) 주요공시.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -66,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-10 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5UV1FQdjdQcElyTnptazdkUmF6Q0EzOHUycVU3MnZ6TF9IU2hiXzh1QUxxT3RSWUpMeHZ6UFc5WS0wRHR5U1RIV0hadWhGVmFuQXJxRFhZQlFyeDVWck4tMWFRRmR6ODlpUkM5VFNNOGFxNWfSAXdBVV95cUxONkM1cDZEb1dnMWRWN1hZY3BzaWpRTDQ4Y3o3OHVLbzJTczB5TDBtbTVROUE2dVVaYWhLRHEyZUFnQ29LYXdJbzlobWN0aVRkQWVROVBDOGhhaWhjQ29BS3BDMTZ3aFA5aHVwckt2alFLcC1mbk9nRQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(7일) 주요공시는.에피소드컴퍼니, 140억원 제3자배정 유상증자</a>
-<p class="news-desc">▲ 에피소드컴퍼니[317530], 140억원 제3자배정 유상증자▲ 금융위, '회계기준 위반' 금양[001570]에 76억3천만원 과징금 의결▲ BGF[027410] "계열사 케이엔더블유 주식 818억원에 취득…지분율 56.9%"▲ 현대비앤지스틸[004560] "성림첨단산업 주식 185억원에 추가취득"▲ 대성산업[128820] "자회사 대성쎌틱에너시스 주식 380억원에 추가취득"▲ 두나무·네이버파이낸셜 주식교환 또 연기…내년 3월 예정▲ 알파칩스[117670], 주당 1.0주 무상증자 결정▲ LG전자[066570] 3분기 영업익 7천</p>
+<p class="news-desc">▲ 에피소드컴퍼니[317530], 140억원 제3자배정 유상증자▲ 금융위, '회계기준 위반' 금양[001570] 에 76억3천만원 과징금 의결▲ BGF[027410] "계열사 케이엔더블유 주식 818억원에 취득…지분율 56.9%"▲ 현대비앤지스틸[004560] "성림첨단산업 주식 185억원에 추가취득"▲ 대성산업[128820] "자회사 대성쎌틱에너시스 주식 380억원에 추가취득"▲ 두나무·네이버파이낸셜 주식교환 또 연기…내년 3월 예정▲ 알파칩스[117670], 주당 1.0주 무상증자 결정▲ LG전자[066570] 3분기 영업익 7천</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-23 | 시총 $2.63T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Zcash</strong> (ZEC): -9.63%</li><li>🔴 <strong>Toncoin</strong> (TON): -6.70%</li><li>🔴 <strong>Monero</strong> (XMR): -6.06%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **15건** 수집
