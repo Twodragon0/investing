@@ -30,7 +30,7 @@ jobs:
         with:
           script: scripts/collect_blockchain.py
           commit-message: 'chore: collect blockchain metrics'
-          git-add-paths: '_posts/ _state/'
+          git-add-paths: '_posts/ _state/ assets/images/'
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
 

@@ -93,7 +93,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB2NTZhRE9yTi03OXgySVNHdVh1dUthd0hCRlR0OWR3ODY3Y3gyQjFCWnpwZW5PUFROelZ4dGJKRk5zQV9YV1BPUDJXVG41dHdCY1lKdzNwSXlJdnJGa2F1ZG9KcjFyRUU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Current price of Bitcoin for October 12, 2026 - Fortune</a>
-<p class="news-desc">Current price of Bitcoin for October 12, 2026 Fortune</p>
+<p class="news-desc">2026년 10월 12일 비트코인의 현재 가격 - Fortune.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -105,7 +105,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbS1hcXNNbk9MQkZjN1dRQlVWcTVkVUtiQ21KNjBmNS0weWo5enAtcTVKU3M2MUlfbE54ZWVpUEVXVlFsMmEydXZIai1vdTlBVTdUbFduQ0d6bzl5N0lsNjBVYXNTXzVQLXg3OHZ4dnk3MlVsRzdvRVlEMU5qRlNzSUFaZEg5bGhoYldZdEtGbkNFRy1mLXNidk51eGE1QnpRT2hDOHFUc0dQOUJyQ3lCYktCckk1TmNmdk9LQ1ZuNEQ4OWhyUXNuNHlaUEJjUXNDTXMxdWZ4V21fZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">A Year On, Bitcoin Languishes a Third Below its All-Time High. What’s Next For The Cryptocurrency?</a>
-<p class="news-desc">A Year On, Bitcoin Languishes a Third Below its All-Time High. What’s Next For The Cryptocurrency? WSJ</p>
+<p class="news-desc">1년이 지난 지금, 비트코인은 사상 최고치보다 3분의 1 아래로 떨어졌습니다. 암호화폐의 다음 단계는 무엇입니까?.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -145,7 +145,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPdzdFb2pZaF9aZ21TdGpvSG1LRTJKVzNubWZPSHFyT2thRFRmZF85NUtPR2dXbjJwZzJtZV83TzhhZEpaTDJXSUl5cUJrWnB1VDlaM3JpandsdVE5ZXZMTEpvQmdScTR2MDJsQmRMbmgwZ0F1cWdnUUNwSzdoV0lOY3pmUUI0cEVOZnlETVdrR0RieVpOd0RHQmh3alFFbjBGVk0wWTRfUFBndnQwc0lKNUtqN0FBSGwzTS1hUDlFRG95SkdhS0RaOW00VXpibTRf?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">CyberLeek Threatens Full GTA 6 Game Leak If Its Cryptocurrency Reaches $30 million Market Cap - Wolf's Gaming Blog</a>
-<p class="news-desc">CyberLeek Threatens Full GTA 6 Game Leak If Its Cryptocurrency Reaches $30 million Market Cap Wolf's Gaming Blog</p>
+<p class="news-desc">CyberLeek은 암호화폐 가격이 3천만 달러에 도달하면 완전한 GTA 6 빌드를 출시하겠다고 위협하고 있습니다. 현재 287만 달러에 불과하므로 암호화폐 과대광고를 늘리기 위한 사기일 가능성이 높습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -157,7 +157,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFAxUzZIN3V2aW5Zd2djTGxySUZucDVuSVRCcFhtM2IweXJ4NFhzUUV1TDdZY1lwcVp5Q1ZaRzU2d08zUEdOTU56SGZPd1hTNDI2WTJ4eWJJTndoOEZyM0R2WXBzVDBXWldLUVRtcw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">베트남, ‘암호화폐’ 시장 규모 동남아 2위…연간 1,220억 달러 - 인사이드비나</a>
-<p class="news-desc">베트남, ‘암호화폐’ 시장 규모 동남아 2위…연간 1,220억 달러 인사이드비나</p>
+<p class="news-desc">베트남의 암호화폐 시장 규모가 동남아에서 두 번째로 큰 것으로 나타났다.블록체인 분석업체 체이널리시스(Chainalysis)의 최신 데이터에 따르면, 2025년</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE4zVEJHWW0wcGFiZVJTQzkxZ2tBY1c0MGxneHJ1ODNiaVNvWmtLNVppYmd6M082Y0FFVUlFXzFpcXdUUEcySHZIODY0MWRNQ3lf?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">시황] 비트코인 8만3000달러 일시 반납…김치 프리미엄 1.13% - 블루밍비트</a>
-<p class="news-desc">[시황] 비트코인 8만3000달러 일시 반납…김치 프리미엄 1.13% 블루밍비트</p>
+<p class="news-desc">비트코인(BTC)이 8만3000달러를 일시 반납했다. BTC 가격은 12일 21시 46분 바이낸스 USDT 마켓을 기준으로 전일 대비 0.22% 내린 8만2929달러에 거래되고 있다. 한편 이날 크라이프라이스에 따르면 비트코인(BTC) 등 주요 가상자산(암호화폐)의 김</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -209,7 +209,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBrY3NBekJPb2h0d0VBUUJqdW1EaVVQWW1KdGlXWXBKVXktNnF2RjhfellGRkV0U1JvOWJWeU9fTWhuOHZsM2tfVVZjX0ZRbmoz?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">디지털엑스, 비트코인·이더리움 153억원어치 매도 계획…"운영경비 충당" - 블루밍비트</a>
-<p class="news-desc">디지털엑스, 비트코인·이더리움 153억원어치 매도 계획…"운영경비 충당" 블루밍비트</p>
+<p class="news-desc">가상자산(암호화폐) 거래소 디지털엑스가 인건비 등 운영경비를 마련하기 위해 약 153억원 규모의 비트코인(BTC)과 이더리움(ETH)을 매도한다. 12일 디지털엑스는 이날 디지털자산 거래소 공동협의체(DAXA·닥사) 홈페이지를 통해 자체 보유 가상자산 매도 계획을 공시</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -221,7 +221,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE82ZnBHRktld0NDTjU5MlpLRVY3Uk9PdnVPcm42empNU0ZiUFlwZFFlWGNSTVZyUmJmdXNqbmZsbHlaMExaYkdMSDd3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인·이더리움 ETF서 12억 달러 이탈, 리플은 13주 이상 자금 유입…엇갈린 암호화폐 시장 - 코인리더스</a>
-<p class="news-desc">비트코인·이더리움 ETF서 12억 달러 이탈, 리플은 13주 이상 자금 유입…엇갈린 암호화폐 시장 코인리더스</p>
+<p class="news-desc">비트코인(BTC),이더리움(ETH),엑스알피(XRP)/챗GPT생성이미지 © 비트코인(BTC)과이더리움(ETH)현물상장지수펀드(ETF)에서지난주12억달러가넘는자금이빠져나</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -252,7 +252,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxQLUlUUC1oQV9OS1psdVVsMmNEbG0yOTVvdXYzUmNhZFFFcU1SbTgwUmk4WFlmOGx1LTk4MDV1ZjQ4YlZObXl3UmNEdldScTZ5NVo5bDBpUUZWNDE2emhKa2ZTMzROeGUyOExLcUNCZjhlY3JpSnV4YUtieFBuNEFwd250TWhvYUJFTENkdFAyQ3Q2WmxhZktSVmw5cm1kSDhaLU11MDdZcGprX05xUEg3eXhHa1o0cDd3a1ZSWmxZVE5LRTRuZ1lTcUhLamZyN2JxYXVYX0VFSDFqbkF5b2xINktGN2gyWjZCMmlJbWdJeE1HNFVv?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Stellar Now Hosts More Tokenized Assets Than the XRP Ledger. Why Is XRP Still Worth Nearly 13 Times More? - 24/7 Wall St.</a>
-<p class="news-desc">Stellar Now Hosts More Tokenized Assets Than the XRP Ledger. Why Is XRP Still Worth Nearly 13 Times More? 24/7 Wall St.</p>
+<p class="news-desc">Stellar는 XRP 원장보다 더 많은 토큰화된 자산 35억 달러를 호스팅하지만 XRP의 가치는 12.8배 더 높습니다. XLM이 지연되는 이유는 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -264,7 +264,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380708/bitcoin-spooked-crypto-fear-greed-drops" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Spooked? Crypto Fear and Greed Index Drops to Pre-Rally August Lows</a>
-<p class="news-desc">The Crypto Fear and Greed Index has dropped to 56 from an August peak of 82, as oil, bond yields, and ETF outflows hit Bitcoin in October.</p>
+<p class="news-desc">10월 석유, 채권 수익률 및 ETF 유출이 비트코인을 기록함에 따라 암호화폐 공포 탐욕 지수는 8월 최고치인 82에서 56으로 떨어졌습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -276,7 +276,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380669/bitcoin-ranges-near-83k-as-traders-look-to-us-inflation-data" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Ranges Near $83K as Traders Look to US Inflation Data</a>
-<p class="news-desc">October rate-hike odds have slumped, but analysts say Treasury yields at two-decade highs are still keeping a lid on risk appetite.</p>
+<p class="news-desc">CoinGecko 데이터에 따르면 비트코인은 월요일에 지난 24시간 동안 0.6% 상승한 83,327달러에 거래되어 상승했습니다. 자산은 지난 주 동안 여전히 2.9% 하락했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -304,7 +304,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/380685/bitmine-adds-32m-in-ethereum-as-tom-lee-says-firm-is-nearly-done-stacking" class="news-title" target="_blank" rel="noopener noreferrer">Bitmine Adds $32M in Ethereum as Tom Lee Says Firm Is Nearly 'Done Stacking'</a>
-<p class="news-desc">The Ethereum treasury firm now holds 6.03 million ETH, 4.9% of supply, as Lee predicts the biggest crypto bull market yet.</p>
+<p class="news-desc">이더리움 재무 회사는 현재 공급량의 4.9%인 603만 ETH을 보유하고 있으며 Lee는 역대 최대 규모의 암호화폐 강세장을 예측했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -316,7 +316,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/xrp-treasury-evernorth-rise-nasdaq-opening?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">XRP treasury Evernorth’s shares rise 5% at Nasdaq opening print</a>
-<p class="news-desc">Evernorth’s share price rose by 5% as investors welcomed the Nasdaq debut of the first pure-play XRP digital asset treasury.</p>
+<p class="news-desc">투자자들이 최초의 순수 플레이 XRP 재무 회사의 나스닥 데뷔를 환영하면서 Evernorth의 주가는 시장 개장 후 약 5% 급등했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">849.19</div><div class="stat-label">KOSDAQ -4.83%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' - 164건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 신현송 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 마이크로소프트 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 휴전 동향 주시</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9QMmUwZ3NLUUsxdjVuSDk5VVdJWi1VWnZJbmJ4WjRJV1RzQzlqV1VVbEE1V2Fya1RVeVRHWEU1dUhmRHJpcjQxNkZsa1VZSUJubFc3eHRLZGlUZWJ5T2N1ZHlTNmczSVlyQzBZd3BnQVdaWTjSAXdBVV95cUxQWWdsbkZYM1d3SzVnR1pRN0VYYllVa3Z3WTZ3dlh5MmpSLWUyWFZlOHltVWdJVGVzMzhmZWI4a0xDbk82Q0xraTc4YVEwU0hybW1jUDJOb3hnNGxLMnNQWV9DWVZKQ1hacmpSaF9fSmx6enFKcU5Hdw?oc=5">표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락'</a> <span class="p0-desc">[표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OWkxycDlwckFnQS0wc3c5RGlhQVFCQm56UVVRY19pNjQ4UlhYZVpfczlsTVVnYU9QS3NHa3FjcnlFc3E0dE8zV1RBSnBGTnRwUHkwdHQ0ajRFVDJv?oc=5">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 - 뉴스핌</a> <span class="p0-desc">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE50bWF5M2VsUmxobXV3Tk5EZG5GS0g2aHBPcVUzdGlEMERRSzcwbnVkU29PbUZ1YkZGZmd4X29UQnhzT0dqQnVKMkF2YjA3SkxNYlZhNThtdmpkcjNPREhhQUd2RkJ1MzJiekZkblROUm_SAXRBVV95cUxQcEl0bzlMS3F2X1lkWGpFU2xoMy1WSXdjWlNTdmdwN3FvQlVITGliNDFBaGtRN3U3WURHOW5FckxGSFNqQk9Wa2JfdE9IMlU3SmJ4NW10cjZ5NnpxMEUtVndtd1pRNGR2cmFJaGtxaEY0clhKWg?oc=5">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ - 산경투데이</a> <span class="p0-desc">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ 산경투데이</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9QMmUwZ3NLUUsxdjVuSDk5VVdJWi1VWnZJbmJ4WjRJV1RzQzlqV1VVbEE1V2Fya1RVeVRHWEU1dUhmRHJpcjQxNkZsa1VZSUJubFc3eHRLZGlUZWJ5T2N1ZHlTNmczSVlyQzBZd3BnQVdaWTjSAXdBVV95cUxQWWdsbkZYM1d3SzVnR1pRN0VYYllVa3Z3WTZ3dlh5MmpSLWUyWFZlOHltVWdJVGVzMzhmZWI4a0xDbk82Q0xraTc4YVEwU0hybW1jUDJOb3hnNGxLMnNQWV9DWVZKQ1hacmpSaF9fSmx6enFKcU5Hdw?oc=5">표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락'</a> <span class="p0-desc">외국인 매물이 쏟아지면서 코스피와 코스닥이 동반 급락했다. 12일 한국거래소에 따르면, 코스피에서는 외국인이 2조182억원, 기관이 1,338억원을 순매도했다. 개인은 1조4,857억원을 순매수했다.코스닥에서는 외국인이 145억원, 기관이 2,196억원을 순매도했다. 개인은 2,325억원을 순매수했다.종목별로는 코스피에서 삼성전자가 외국인과 기관의 공통 순매도 상위 종목에 오른 반면, 개인의 순매수 상위 종목에 포함됐다.SK하이닉스는 기관과 개인의 순매수 상위 종목이었으나 외국인의 순매도 상위 종목이었다. 코스닥에서는 원익IPS·브</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OWkxycDlwckFnQS0wc3c5RGlhQVFCQm56UVVRY19pNjQ4UlhYZVpfczlsTVVnYU9QS3NHa3FjcnlFc3E0dE8zV1RBSnBGTnRwUHkwdHQ0ajRFVDJv?oc=5">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 고인원 기자= 중국 메모리 반도체업체 창신메모리테크놀로지(CXMT)가 차세대 D램 기술을 공개하면서 글로벌 반도체 시장이 술렁이고 있다. 기존보다 같은 면적에 더 많은 데이터를 저장할 수 있는 기술을 앞세워 올해 말 서버용 메모리 시장에 본격</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE50bWF5M2VsUmxobXV3Tk5EZG5GS0g2aHBPcVUzdGlEMERRSzcwbnVkU29PbUZ1YkZGZmd4X29UQnhzT0dqQnVKMkF2YjA3SkxNYlZhNThtdmpkcjNPREhhQUd2RkJ1MzJiekZkblROUm_SAXRBVV95cUxQcEl0bzlMS3F2X1lkWGpFU2xoMy1WSXdjWlNTdmdwN3FvQlVITGliNDFBaGtRN3U3WURHOW5FckxGSFNqQk9Wa2JfdE9IMlU3SmJ4NW10cjZ5NnpxMEUtVndtd1pRNGR2cmFJaGtxaEY0clhKWg?oc=5">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ - 산경투데이</a> <span class="p0-desc">[산경투데이 = 이하나 기자]한글날 연휴 이후 거래를 재개한 국내 증시에서 반도체 대형주가 일제히 급락했다.외국인 투자자들의 대규모 매도세가 이어지면서 삼성전자와 SK하이닉스 모두 4% 넘게 하락한 채 거래를 마쳤다.특히, 삼성전자의 역대급 실적 발표에도 주가 하락세가 이어지면서 반도</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -95,7 +95,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBJTGt6X2trdlI5RlB3Q1NvU1ZaSV9PdXBHM3MxcnZ1enRfSDdxWUpVV0N1YkFEdm5jNHpHb3hkS0x2NTliYmxlci1iVXBBSGZvMENYRkMwWjg1XzFmOGdVa044ejFZMkgzSWRF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 12일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 3.65% 내린 6384.24에 마감했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -107,7 +107,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RDVhOHRXVHBJMzVMUnYwZUVUM2FzcTZjc0hOQWdtUVBGdWM3OUE3SEdRakRMOGRIM3ExZXRrQTRZMVpIaGFMc1dSamQ1MTVYdDlvcEJBMExxb05lNGVGMDg1RWVDV2J5RkZnN0RYTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 코스피는 박스권 유지, 코스닥은 박스권 탈출로 반도체 소부장 및 2차전지 섹터 긍정적 - 뉴스퀘스트</a>
-<p class="news-desc">[박정식의 국내 주식시황] 코스피는 박스권 유지, 코스닥은 박스권 탈출로 반도체 소부장 및 2차전지 섹터 긍정적 뉴스퀘스트</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표 】[2026년 10월 12일 장전 국내시황]오픈AI의 올해 말 연율 환산 매출이 700억 달러에 도달하거나 이를 넘어설</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -119,7 +119,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE8wYng5TWVVaVBYSXFTa1Etd24wT2ljT2U3ZDh1X3V3Ukl3NjFPUXdlSi1TWGhpWlBWNWptelhpMFJ4azN1c2RWLW5JYmVuOXRkTWpVSUktZmtFVEhxVFlya3pxcnZwSXF6YkRN?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 12일 코스피와 코스닥지수가 모두 내림세로 장을 열었다.이날 코스피는 전 거래일보다 0.72% 내린 6578.17에 시작했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -160,7 +160,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBPaVNxcjEzdzNnV2Myc1RqZHZrb0o3QjZ1N1V0Z2I5b1JEOVNDdEFXUHp2ZEJ0MklweFRZb2pFOU9wTGdSX2l4MVVMOFB3WXRlVUFhYU91SW1FTFA3SmhWTDlkSXpQWXJhOTlyeFF0bE9GTlhLZVVERNIBeEFVX3lxTFBPaVNxcjEzdzNnV2Myc1RqZHZrb0o3QjZ1N1V0Z2I5b1JEOVNDdEFXUHp2ZEJ0MklweFRZb2pFOU9wTGdSX2l4MVVMOFB3WXRlVUFhYU91SW1FTFA3SmhWTDlkSXpQWXJhOTlyeFF0bE9GTlhLZVVERA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">신현송 "금리 연속 인상, 환율 안정 효과도 거둬"</a>
-<p class="news-desc">신현송 "금리 연속 인상, 환율 안정 효과도 거둬" 뉴시스</p>
+<p class="news-desc">[서울=뉴시스]김래현 김민수 기자 = 신현송 한국은행 총재가 선제적으로 기준금리 연속 인상에 나선 결과 원·달러 환율을 안정시키는 효과도 거뒀다는 입장을 밝혔다</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -172,7 +172,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9odlNxamJwLXBVYnQ5ckZZTF9XclliemZmMjFNanJmS0U1ZnRBOWxuZnd2QVNRWEV0emxqQlR1bEdocGRfRjJqYzdsMlp4ZWdoNU5hZ0xCNEV5dVpjeEJvLVRqTWpCWC1i?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">환율 2년여 만에 최저…신현송 "원화 더 강해질 여지" - www.ebn.co.kr</a>
-<p class="news-desc">환율 2년여 만에 최저…신현송 "원화 더 강해질 여지" www.ebn.co.kr</p>
+<p class="news-desc">원·달러 환율이 2년여 만에 최저 수준으로 내려온 가운데 신현송 한국은행 총재가 원화의 추가 강세 가능성을 시사했다.최근 환율 하락에도 여전히 예년보다 높은 수준</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB3dzh1a2NlalJoVmlaRUMzbHoxTVdMbzVvN1F6WHBFcnhsWXE0YzdzRVVBaXJoZm1xbGtNVHg1NHZUVXlPN3NRbVNHSkthbUo1TnRkSkZpb2tOSmZ4UHVYRy1JMS1KckU?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 외국인 이탈 가속.반도체 소부장주로 자금 이동 - M이코노미뉴스</a>
-<p class="news-desc">삼성전자·SK하이닉스 외국인 이탈 가속.반도체 소부장주로 자금 이동 M이코노미뉴스</p>
+<p class="news-desc">미국 뉴욕증시가 인공지능(AI) 관련주를 중심으로 사상 최고치를 경신하는 가운데 국내 증시는 반도체 대형주와 소재·부품·장비(소부장)주 간 희비가 엇갈리고 있다. 삼성전자와 SK하이닉스가 사상 최대 실적에도 외국인 매도세에 밀려 약세를 보이는 반면, 코스닥 반도체 소부장주는 강세를 이어가며 국내 증시의 자금 흐름이 변화하고 있다. 11일 한국거래소에 따르면</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFAwcEd0am9adXV6QkxNaTlzdVBLOTUwZFVXLW5UQ3JfNEd1cnhJbGtua3hWX0JHQWpSdUQ2QWdQUDBYTDVMRlpqTWh1WEhYQWJSMWMwbm0xSzVMc2JGdGxxTnkyc0pDTGtUNkhmN2syQ3pnLVQ1?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">반도체 호황에 쏟아진 달러, 원화 환율 상승 막았다</a>
-<p class="news-desc">반도체 호황에 쏟아진 달러, 원화 환율 상승 막았다 부산일보</p>
+<p class="news-desc">미국 금리 인상에도 1330원 대9월 일시적 반등 이후 다시 하락국내 달러 공급 늘어나 억제 효과미 금리 추가 인상 땐 상승 압박반도체 업황 따라 환율 널뛸 듯 ‘1500원 뉴노멀’까지 거론됐던 원달러 환율이 두세 달 만에 1330원대로 내려왔다. 미국의 추가 긴축 우려가 환율을 밀어 올리는 상황에서도 반도체 수출 호조로 유입된 달러가 원화 강세를 뒷받침하고 있다는 분석이 나온다. 12일 서울 외환시장에서 원달러 환율은 오후 3시 30분 기준 1335.1원으로 전 거래일보다 7.7원 내리며 주간거래를 마쳤다.</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -258,7 +258,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQREhqRW9yMTk2QWxZb0k1a19pUVZhNFF6WkRVRVVndFVCM05zTDlfdFg2dmlVNlY3bm1ydGswcWsxdWJwOHJWa1dFelhCNC1jTUdHdUE0QzJLUkUzMFZJckVMTWhiSVM1R0k2OGdINEJmSkxRMHFZYThJNWJLd0FwakV2LWJrYkV3Tzdta3R0MEZrYjFHaHRidEJwUzB3LXEzNmZJSC04alY1c2w1emdBcHhTc0xObW54bm0yckpTMVNzUUdNOW9hQ0pzRlNqUQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Tech Futures Fall, Oil Rises Amid Trump Comments - Investor's Business Daily</a>
-<p class="news-desc">Tech Futures Fall, Oil Rises Amid Trump Comments Investor's Business Daily</p>
+<p class="news-desc">다우존스 선물: 트럼프는 우크라이나와 러시아가 "에너지 휴전"에 합의했다고 주장했습니다. ASML과 엔비디아 칩 제조업체인 Taiwan Semi의 실적이 밝아집니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -270,7 +270,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBicHZfLWpXTUVvR0NQQnI2d1NKOVVqbUl4b29LUlFHSW56TzNJbEhhc1U5REJOZG55bHR5ZHg3eEhMU2NVMXFxU2pxZ2ZuY3JJODgzMF81amY0UWtENW9ZcNIBYEFVX3lxTFBicHZfLWpXTUVvR0NQQnI2d1NKOVVqbUl4b29LUlFHSW56TzNJbEhhc1U5REJOZG55bHR5ZHg3eEhMU2NVMXFxU2pxZ2ZuY3JJODgzMF81amY0UWtENW9ZcA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 "집값 상승 기대 자극 않도록 일관된 정책 필요"</a>
-<p class="news-desc">한은 "집값 상승 기대 자극 않도록 일관된 정책 필요" 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 한지훈 기자 = 한국은행은 12일 "주택가격 상승 기대와 가계대출 증가세를 자극하지 않도록 일관된 정책 기조를 유지해나갈 필요...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -282,7 +282,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmlDQUtHUXY2QVdtTkFMd2h5RUFDRDhjazlSZXFzVkhDeENUMnFTWFZCeDV2QVZxSW9GMHl3aGZWYjNOMk13WWlEemRRcVM0OWZJTXFOSWpVb0dYN0lZM3pHMmgwSDhndWRCYzJ5ejVoSlBpUmkxZzV5a3ZHbkhEdw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">신현송 "최근 환율 안정, 통화정책 기조가 중요하게 작용"</a>
-<p class="news-desc">신현송 "최근 환율 안정, 통화정책 기조가 중요하게 작용" 이데일리</p>
+<p class="news-desc">신현송 한국은행 총재가 최근 원·달러 환율이 안정세를 보이는 배경으로 통화정책 기조를 꼽았다. 반도체 수출 호조에 따른 달러 공급 확대뿐 아니라 한국은행의 잇따른 기준금리 인상 등 통화정책이 환율 안정에 중요한 역할을 했다는 취지다. 신현송 한국은행 총재가 12일...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -310,7 +310,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.marketwatch.com/story/trumps-energy-ceasefire-collides-with-real-world-problems-of-dwindling-fuel-supplies-8ba3993b?mod=mw_rss_topstories" class="news-title" target="_blank" rel="noopener noreferrer">Trump’s ‘energy ceasefire’ collides with real-world problems of dwindling fuel supplies</a>
-<p class="news-desc">Oil markets were struggling on Monday to gauge how President Donald Trump’s new declaration of an “energy ceasefire” between Russia and Ukraine might help mitigate a deepening global oil crisis as the Middle East conflict drags on.</p>
+<p class="news-desc">트럼프의 '에너지 휴전'은 연료 공급 감소라는 현실 문제와 충돌합니다. 해당 관련 통보.</p>
 <span class="source-tag" data-source-type="finance-media">MarketWatch</span>
 </div>
 </div>

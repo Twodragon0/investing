@@ -909,7 +909,7 @@ def _translate_via_gtx_api(text: str, timeout: float = 10.0) -> Optional[str]:
                 )
             },
         )
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:  # nosec B310
             data = json.loads(resp.read().decode("utf-8"))
             if data and isinstance(data, list) and data[0]:
                 translated = "".join(part[0] for part in data[0] if part and part[0])
