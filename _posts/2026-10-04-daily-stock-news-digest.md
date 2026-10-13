@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5veDJod01jU2lCbUx5ZUxDbzFGanNpN1B5QTFDZ1hXYkpGNUJwTW5YbDdabnJnNVprMElhcEdCeElMM1JSaE1JazIzSmFvS24zdl9HTUoyLVZHc0tJ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">마감시황] 코스피, 기관 순매수에 7000선 회복…코스닥은 숨 고르기 - 뉴스핌</a>
-<p class="news-desc">[마감시황] 코스피, 기관 순매수에 7000선 회복…코스닥은 숨 고르기 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 김가희 기자 = 2일 코스피가 기관 순매수에 힘입어 7000선을 회복했다. 반면 코스닥은 전날 4% 넘게 급등한 이후 소폭 하락하며 숨 고르기에 들어갔다.한국거래소에 따르면 이날 코스피는 전 거래일보다 32.39포인트(0.46%) 오른 7003.74에</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

@@ -5,10 +5,28 @@ set -euo pipefail
 export PATH="$HOME/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
 export TZ="Asia/Seoul"
 
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DRY_RUN=false
+for arg in "$@"; do
+  case "$arg" in
+    --dry-run|-n)
+      DRY_RUN=true
+      ;;
+  esac
+done
+
+# Resolve repository root (supports running directly or via ~/.investing-runtime)
+if [[ -n "${INVESTING_REPO_ROOT:-}" && -d "${INVESTING_REPO_ROOT}/.git" ]]; then
+  REPO_ROOT="$INVESTING_REPO_ROOT"
+elif [[ -d "$HOME/investing/.git" ]]; then
+  REPO_ROOT="$HOME/investing"
+elif [[ -d "$HOME/Desktop/investing/.git" ]]; then
+  REPO_ROOT="$HOME/Desktop/investing"
+else
+  REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+fi
 
 # Load local environment variables if available
-for env_file in "$HOME/Desktop/.env" "$HOME/.env" "$REPO_ROOT/.env"; do
+for env_file in "$HOME/Desktop/.env" "$HOME/.env" "$REPO_ROOT/.env" "$HOME/.investing-runtime/.env"; do
   if [[ -f "$env_file" ]]; then
     set -a
     # shellcheck disable=SC1090
@@ -18,7 +36,7 @@ for env_file in "$HOME/Desktop/.env" "$HOME/.env" "$REPO_ROOT/.env"; do
 done
 
 # Rotate log file if exceeds 10MB
-LOG_FILE="$REPO_ROOT/_state/server-morning-autopost.log"
+LOG_FILE="${INVESTING_LOG_FILE:-$REPO_ROOT/_state/server-morning-autopost.log}"
 if [[ -f "$LOG_FILE" ]]; then
   LOG_SIZE=$(wc -c < "$LOG_FILE" 2>/dev/null || echo 0)
   if [[ "$LOG_SIZE" -gt 10485760 ]]; then
@@ -26,7 +44,7 @@ if [[ -f "$LOG_FILE" ]]; then
   fi
 fi
 
-LOCK_DIR="/tmp/investing-morning-0910.lock"
+LOCK_DIR="${INVESTING_LOCK_DIR:-/tmp/investing-morning-0910.lock}"
 LOG_PREFIX="[server-0910]"
 
 if ! mkdir "$LOCK_DIR" 2>/dev/null; then
@@ -42,7 +60,9 @@ if command -v caffeinate >/dev/null 2>&1; then
 fi
 
 run_py() {
-  if [[ -x ".venv/bin/python" ]]; then
+  if [[ -x "$REPO_ROOT/.venv/bin/python" ]]; then
+    "$REPO_ROOT/.venv/bin/python" "$@"
+  elif [[ -x ".venv/bin/python" ]]; then
     .venv/bin/python "$@"
   else
     python3 "$@"
@@ -103,9 +123,11 @@ trap cleanup EXIT
 cd "$REPO_ROOT"
 echo "$LOG_PREFIX start $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
+# Abort lingering rebase or merge state from interrupted runs
+git rebase --abort 2>/dev/null || true
+git merge --abort 2>/dev/null || true
 git fetch origin main
-git checkout main
-git pull --rebase --autostash origin main
+git pull --rebase origin main
 
 TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
 echo "$LOG_PREFIX regenerate daily summary for latest coverage"
@@ -170,6 +192,12 @@ if git diff --quiet -- _posts/ assets/images/ _state/zero-byte-images.txt _state
   exit 0
 fi
 
+if [[ "$DRY_RUN" == "true" ]]; then
+  echo "$LOG_PREFIX [DRY-RUN] content/image changes detected, skipping git commit and git push"
+  send_slack "[Investing] 09:10 일일 점검 완료 [DRY-RUN] (${TODAY_KST})" "• 요약 포스트 및 이미지 갱신/검증 통과\n• [DRY-RUN] 커밋 및 푸시 건너뜀" "info"
+  exit 0
+fi
+
 git add _posts/ assets/images/ _state/zero-byte-images.txt _state/recent-url-quality.txt _state/translation_cache.json
 
 if git diff --staged --quiet; then
@@ -196,7 +224,25 @@ git commit -m "chore: server 09:10 자동 포스팅 및 품질 보정 ${TODAY_KS
   git commit -m "chore: server 09:10 자동 포스팅 및 품질 보정 ${TODAY_KST}"
 }
 
-git push origin main
+MAX_RETRIES=5
+for i in $(seq 1 $MAX_RETRIES); do
+  echo "$LOG_PREFIX push attempt $i/$MAX_RETRIES"
+  if git push origin main 2>&1; then
+    echo "$LOG_PREFIX push succeeded"
+    break
+  fi
+  if [[ "$i" -eq "$MAX_RETRIES" ]]; then
+    echo "$LOG_PREFIX push failed after $MAX_RETRIES attempts" >&2
+    exit 1
+  fi
+  sleep $((i * 3))
+  git fetch origin main
+  git rebase origin main || {
+    git checkout --ours _state/*.json 2>/dev/null || true
+    git add _state/*.json 2>/dev/null || true
+    git rebase --continue 2>/dev/null || { git rebase --abort; exit 1; }
+  }
+done
 
 send_slack "[Investing] 09:10 자동 포스팅 & 보정 완료 (${TODAY_KST})" "• 요약 포스트 및 이미지 갱신 완료\n• 품질 검증 및 Jekyll 렌더링 통과\n• Git 커밋 & 푸시 완료 (main 브랜치)" "success"
 

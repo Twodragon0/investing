@@ -28,7 +28,7 @@ jobs:
         with:
           script: scripts/generate_weekly_digest.py
           commit-message: 'chore: generate weekly digest'
-          git-add-paths: '_posts/'
+          git-add-paths: '_posts/ assets/images/'
 
       - name: Resolve Slack config
         id: slack

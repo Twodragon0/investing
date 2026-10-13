@@ -326,7 +326,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/markets/btc-price-support-holds-ahead-of-us-cpi-data-three-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">BTC price support holds ahead of US CPI data: Three things Bitcoin traders need to know this week</a>
-<p class="news-desc">Bitcoin traders braced for inflation-based volatility after BTC price action preserved key weekly support around $82,500.</p>
+<p class="news-desc">비트코인은 시장이 9월 CPI 및 PPI 데이터를 준비하고 석유가 미국-러시아 디젤 판매 계획을 소화함에 따라 주간 지원을 유지합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

@@ -29,6 +29,7 @@ System Configuration), NIST SSDF(SP 800-218) **PO.3 / PW.4**.
 | `tests/test_delimiter_regex_guard.py` | 13 | 출처 구분자 정규식이 구분자 앞 공백을 **요구**한다(`\s+`, presence) — 열린 꼬리 형태만 대상, 고정 alternation·마크다운 불릿·고정 숫자 리터럴은 면제 | `\s*` 는 복합어 내부 하이픈을 구분자로 오인해 뒤를 전부 삭제 (2026-08-06 4회 반복, main 에 13건 피해) |
 | `tests/test_workflow_permission_gate_guard.py` | 4 | `code-quality.yml` 이 `check_workflow_permissions.py` 를 `--workflows-dir .github/workflows` 로 차단 실행(presence) | 도구 단위 테스트는 green 인데 CI 배선만 끊겨 2026-04-23 수집기 장애 클래스가 재무방비 |
 | `tests/test_collector_noop_commit_whitelist_guard.py` | 6 | `python-collect` 액션의 `NOOP_STATE_PATHS` 에 dedup(`*_seen.json`)·콘텐츠 경로 부재 + 비어있지 않음 + 입력 기본값 `'false'` + 탐지기 양방향 (presence) | 화이트리스트에 dedup 상태가 한 줄 추가되면 그 상태가 커밋되지 않아 다음 실행이 같은 항목을 재발행 — CI green·수집기 성공인 채로 라이브 사이트에 중복 포스트 |
+| `tests/test_workflow_git_add_paths_guard.py` | 4 | `python-collect` 로 포스트(`_posts/`)를 커밋하는 모든 워크플로우의 `git-add-paths` 에 `assets/images/` 포함 강제 | 수집기 추가/수정 시 `assets/images/` 누락으로 OG 이미지가 커밋되지 않아 다음 푸시에서 `check-post-images` 가 깨짐 (2026-10-13 실측 장애 회귀 방지) |
 
 총 **156 케이스**.
 

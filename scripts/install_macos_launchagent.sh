@@ -38,8 +38,13 @@ case "$MODE" in
     ;;
 
   --run|run|--test|test)
-    echo "[launchd] Running $LABEL immediately for testing..."
-    /bin/bash "$REPO_ROOT/scripts/server_morning_autopost.sh"
+    echo "[launchd] Running $LABEL immediately with arguments: ${2:---dry-run}..."
+    /bin/bash "$REPO_ROOT/scripts/server_morning_autopost.sh" "${2:---dry-run}"
+    ;;
+
+  --dry-run|dry-run)
+    echo "[launchd] Running $LABEL dry-run test..."
+    /bin/bash "$REPO_ROOT/scripts/server_morning_autopost.sh" --dry-run
     ;;
 
   --install|install)
@@ -48,7 +53,12 @@ case "$MODE" in
       exit 1
     fi
 
-    mkdir -p "$TARGET_DIR" "$REPO_ROOT/_state"
+    mkdir -p "$TARGET_DIR" "$REPO_ROOT/_state" "$RUNTIME_DIR/bin" "$RUNTIME_DIR/logs" "$RUNTIME_DIR/locks"
+
+    # Sync latest runner script to runtime directory
+    cp "$REPO_ROOT/scripts/server_morning_autopost.sh" "$RUNTIME_DIR/bin/server_morning_autopost.sh"
+    chmod 755 "$RUNTIME_DIR/bin/server_morning_autopost.sh"
+    echo "[launchd] Synced server_morning_autopost.sh to $RUNTIME_DIR/bin/"
 
     # Unload first if loaded
     launchctl bootout "gui/$UID/$LABEL" 2>/dev/null || launchctl unload "$TARGET_PLIST" 2>/dev/null || true
@@ -71,7 +81,7 @@ case "$MODE" in
     ;;
 
   *)
-    echo "Usage: $0 [--install | --uninstall | --status | --run]" >&2
+    echo "Usage: $0 [--install | --uninstall | --status | --dry-run | --run]" >&2
     exit 1
     ;;
 esac

@@ -25,7 +25,7 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 
 ## 전체 뉴스 요약
 
-- 1. Florida Law Is Pressuring Congressional Candidates on Stock Trades — And It’s Causing Major Confusion
+- 1. 플로리다 법은 주식 거래에 대해 의회 후보자들에게 압력을 가하고 있으며 이로 인해 큰 혼란이 야기되고 있습니다.
 
 ## 1. 미국 의회 거래 동향
 

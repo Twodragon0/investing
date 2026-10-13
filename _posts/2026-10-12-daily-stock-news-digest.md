@@ -39,7 +39,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- *High hopes for third-quarter earnings are outweighing concerns around interest rates and oil prices — but one expert.*
+- *3분기 실적에 대한 높은 기대가 금리와 유가에 대한 우려보다 더 큽니다. 하지만 한 전문가가 있습니다.*
 - *3분기 실적에 대한 높은 기대가 금리와 유가에 대한 우려보다 더 큽니다. 하지만 한 전문가가 있습니다.*
 **긴급**: Stock Market Crash Hits 54% Of Stocks—Is The S&P 500 Next? 
 외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 114건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
@@ -248,7 +248,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/11/kyiv-pushes-back-on-trumps-call-for-a-new-ukrainian-president.html" class="news-title" target="_blank" rel="noopener noreferrer">Kyiv pushes back on Trump’s call for a new Ukrainian president as drones hit Russian data hub</a>
-<p class="news-desc">Zelenskyy said Ukraine would halt strikes on Russian oil refineries if Moscow stopped hitting Ukraine's energy grid.</p>
+<p class="news-desc">Zelenskyy는 모스크바가 우크라이나의 에너지 그리드에 대한 공격을 중단하면 우크라이나는 러시아 정유소에 대한 파업을 중단할 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
