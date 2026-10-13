@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-05-31 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</span></li><li><a href="https://news.google.com/read/CBMiogFBVV95cUxONU1lYzVhVnZXM094QUROMFFhOFd0WjQwaElZSDd5V0JRX3Fmc3VNWFN1Zi1iUmpyS0JqYTg3ZGxpZkFEVmZTU0w1OVRRSzFRM01fVTZYbDZ4cXBxTmNERERHR3VhU0w4dWtyX1hYWVNPd0hjZ2FwSjY5VlVXcFhZVVRheHZodVMtRUg3VlR6QVVXakk0eXpNdzFpRWgzc3ZYaHc?hl=en-US&gl=US&ceid=US%3Aen">개인용 제트기, 나이트클럽, 페라리: 이스트 베이의 십대와 미국 최대의 암호화폐 강도 사건</a> <span class="p0-desc">함자 두스트(Hamza Doost)는 키가 6피트 3인치이고 통통한 턱수염이 난 얼굴, 검은 머리, 발목 모니터를 갖고 있습니다. 지난 1년 동안 21세의 이 청년은 이스트베이 교.</span></li><li><a href="https://www.investors.com/news/bitcoin-price-slumps-strategy-buying-power-strc-mstr-stock/">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</a> <span class="p0-desc">비트코인 부진하지만 전략은 매수가 아닙니다. 이유는 다음과 같습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🟠 비트코인, 🔵 규제/정책, 🏦 거래소
+- 2026-05-31 암호화폐 핵심 뉴스: Kalshi는 예측 시장을 넘어 암호화폐의 가장 큰 거래 경로 중 하나로 이동하고 있습니다.. 총 99건 분석, 핵심 테마는 비트코인, 규제/정책, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

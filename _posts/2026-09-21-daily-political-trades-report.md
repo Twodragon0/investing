@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-21 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-09-21 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 2건 — SEC 내부자 거래 1건, 중앙은행 1건
+- 1. ERAS Form 4 Filings - Erasca, Inc. SEC Form 4 - Stock Titan Every Erasca, Inc.
 
 ## 1. SEC 내부자 거래 (Form 4)
 

@@ -17,17 +17,11 @@ image_alt: "일일 뉴스 종합 요약 - 2026-10-11 - 시장 분석 뉴스 요�
 
 ## 전체 뉴스 요약
 
-- 총 **278건** 수집
 - 주요 테마: 💰 금리/유동성, 📋 정책/규제, 💱 환율/달러
 - 암호화폐: 89건. 대표 헤드라인: Spot Trading Tournament Season 4: Trade to Share Up to 400 BNB Token Vouchers.
 - 주식: 146건. 2026-10-11 주식 시장에서 146건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,340.90(-0.07%). 주요 수치: KOSPI 6,625.93(-2.62%).
+- 소셜: 18건. 화제 키워드: Fed Interest Rate Forecast for the Next 5 Years: 2026 to 2031 - Norada Real Estate Investments.
 
-
-> **한눈에 보는 시장 상황**
-> - 총 수집: **278건**
-> - 긴급 알림(P0): **9건**
-> - 중요 뉴스(P1): **2건**
-> - 리스크 레벨: **🔴 높음** (P0 9건, 부정비율 86%)
 
 ## 종합 대시보드
 

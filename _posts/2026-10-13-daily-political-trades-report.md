@@ -14,7 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-13 - 정치인 거래 �
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-13.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-13** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **14건** — 미국 의회 거래 1건, 중앙은행 13건
@@ -25,15 +24,11 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **의회**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **14건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, 중앙은행 13건입니다.
-
-**미국 의회 거래** 동향에서는 Florida Law Is Pressuring Congressional Candidates on Stock Trades — And It’s Causing Major Confusion notus.org 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 기준금리 추가 인상 시사…신현송 "물가 등 고려해 시기 결정" 연합뉴스 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-10-13 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 14건 — 미국 의회 거래 1건, 중앙은행 13건
+- 1. Florida Law Is Pressuring Congressional Candidates on Stock Trades — And It’s Causing Major Confusion
 
 ## 1. 미국 의회 거래 동향
 

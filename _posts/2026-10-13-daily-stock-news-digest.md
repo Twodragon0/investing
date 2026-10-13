@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-13 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' - 164건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 신현송 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 마이크로소프트 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 휴전 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9QMmUwZ3NLUUsxdjVuSDk5VVdJWi1VWnZJbmJ4WjRJV1RzQzlqV1VVbEE1V2Fya1RVeVRHWEU1dUhmRHJpcjQxNkZsa1VZSUJubFc3eHRLZGlUZWJ5T2N1ZHlTNmczSVlyQzBZd3BnQVdaWTjSAXdBVV95cUxQWWdsbkZYM1d3SzVnR1pRN0VYYllVa3Z3WTZ3dlh5MmpSLWUyWFZlOHltVWdJVGVzMzhmZWI4a0xDbk82Q0xraTc4YVEwU0hybW1jUDJOb3hnNGxLMnNQWV9DWVZKQ1hacmpSaF9fSmx6enFKcU5Hdw?oc=5">표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락'</a> <span class="p0-desc">[표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OWkxycDlwckFnQS0wc3c5RGlhQVFCQm56UVVRY19pNjQ4UlhYZVpfczlsTVVnYU9QS3NHa3FjcnlFc3E0dE8zV1RBSnBGTnRwUHkwdHQ0ajRFVDJv?oc=5">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 - 뉴스핌</a> <span class="p0-desc">中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE50bWF5M2VsUmxobXV3Tk5EZG5GS0g2aHBPcVUzdGlEMERRSzcwbnVkU29PbUZ1YkZGZmd4X29UQnhzT0dqQnVKMkF2YjA3SkxNYlZhNThtdmpkcjNPREhhQUd2RkJ1MzJiekZkblROUm_SAXRBVV95cUxQcEl0bzlMS3F2X1lkWGpFU2xoMy1WSXdjWlNTdmdwN3FvQlVITGliNDFBaGtRN3U3WURHOW5FckxGSFNqQk9Wa2JfdE9IMlU3SmJ4NW10cjZ5NnpxMEUtVndtd1pRNGR2cmFJaGtxaEY0clhKWg?oc=5">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ - 산경투데이</a> <span class="p0-desc">코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ 산경투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락' 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 164건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (40건): 하이닉스, 삼성전자, 급락 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (18건): 환율, 신현송, 하락 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (14건): 반도체, 마이크로소프트, 삼성전자 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 표] 10월 12일 매매동향.코스피, 외국인 2조180억원 순매도에 '급락'
-- 中 CXMT, 차세대 D램 기술 공개에 SK하이닉스·마이크론 동반 급락 - 뉴스핌
-- 코스피, 외국인 2조원 매도에 급락…삼성전자·SK하이닉스 4%대↓ - 산경투데이
-
-### 주요 이슈
-
-- Nasdaq Forecast: AI Spending, Big Tech Stocks and Earnings - www.equiti.com
-- Nasdaq falls ahead of earnings, economic data while oil rallies
-- Stock Market Today: S&P 500 Futures Pause Near Record Highs as Oil Rises Ahead o
-- 외 19건
-
-### 투자자 체크포인트
-
-- 한국 기사 67건, 글로벌 기사 97건 수집
-- 한국 지수: KOSPI 6,384.24(-3.65%), KOSDAQ 849.19(-4.83%), USD/KRW 1,333.99(-0.45%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">40건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:45%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:35%"></div></div><span class="theme-count">14건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:40%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:12%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-13.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 6,384.24 (-3.65%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 849.19 (-4.83%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-13 주식 시장에서 164건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,384.24(-3.65%), KOSDAQ 849.19(-4.83%), USD/KRW 1,333.99(-0.45%).
+- *'엔비디아칩 독주 저지'…MS "자체 AI칩 내년 백만개 이상 투입", MS "업계 최고 수준의 전력 효율과 메모리 대역폭" 공언 "자체 클라우드 시스템을 위한 주요*
 
 ## 테마별 주요 뉴스
 

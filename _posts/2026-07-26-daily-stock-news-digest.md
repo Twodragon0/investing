@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-26 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.thestreet.com/">Outdoor giant now closing 91 stores in Chapter 11 bankruptcy</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,690.62 (-5.72%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 748.22 (-5.32%).
+- 2026-07-26 주식 시장에서 83건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,690.62(-5.72%), KOSDAQ 748.22(-5.32%), USD/KRW 1,462.10(-0.84%).
 - *'매그세븐'이 '백세븐'으로 바뀌었습니다.*
 
 ## 테마별 주요 뉴스
