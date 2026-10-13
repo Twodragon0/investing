@@ -293,7 +293,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/business/2026/09/17/sec-opens-door-to-tokenized-u-s-stock-trading-here-s-who-could-benefit" class="news-title" target="_blank" rel="noopener noreferrer">SEC opens door to tokenized U.S. stock trading. Here’s who could benefit</a>
-<p class="news-desc">The five-year experiment gives DeFi-style trading venues, tokenization firms and liquidity providers a new U.S. pathway while leaving synthetic stock tokens outside the framework.</p>
+<p class="news-desc">5년간의 실험은 디파이 스타일의 거래 장소, 토큰화 회사 및 유동성 공급자에게 합성 주식 토큰을 프레임워크 외부에 남겨두고 새로운 미국 경로를 제공합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -305,7 +305,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/policy/2026/09/17/u-s-sec-begins-prepping-for-round-the-clock-trading-that-crypto-treats-as-the-norm" class="news-title" target="_blank" rel="noopener noreferrer">U.S. SEC begins prepping for around-the-clock trading that crypto treats as the norm</a>
-<p class="news-desc">The U.S. Securities and Exchange Commission dug into plans for around-the-clock trading in an event on the same morning it approved tokenized securities.</p>
+<p class="news-desc">미국 증권거래위원회(SEC)는 토큰화된 증권을 승인한 당일 오전 행사에서 24시간 거래 계획을 세웠다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>

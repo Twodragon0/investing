@@ -242,7 +242,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/17/trump-kennedy-center-demolish-beatty.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump photo seems to reference Kennedy Center demolition amid legal battle over closure</a>
-<p class="news-desc">President Donald Trump wants his name on the Kennedy Center. But a judge has ruled it cannot be placed there without authorization by Congress.</p>
+<p class="news-desc">도널드 트럼프 대통령은 케네디 센터에 자신의 이름을 남기고 싶어합니다. 그러나 판사는 의회의 승인 없이는 그곳에 배치할 수 없다고 판결했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

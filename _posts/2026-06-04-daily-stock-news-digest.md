@@ -289,7 +289,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investors.com/news/heavy-machinery-stocks-surge-trump-tariffs/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">Bellwether Stock Deere가 주요 수준 위로 급등했습니다. 트럼프는 이유입니다.</a>
-<p class="news-desc">Bellwether Stock Deere가 주요 수준 위로 급등했습니다. 트럼프는 왜.광고 관련 공지입니다.</p>
+<p class="news-desc">트럼프 관세는 중장비 주식을 다시 자극했습니다. 이번에는 좋은 방법으로. Bellwether Deere 주식이 중요한 움직임을 보였습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
