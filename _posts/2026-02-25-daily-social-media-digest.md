@@ -24,7 +24,6 @@ permalink: "/social-media/2026/02/25/daily-social-media-digest/"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li>트럼프 신규 관세 발표로 글로벌 증시 하락 — IT 종목 중심 매도세 확대</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 오늘 수집된 총 48건 중 텔레그램 20건, 소셜 1건, 정치·경제 27건으로 정치/정책 및 비트코인 이슈가 주요 화제입니다.

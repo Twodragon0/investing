@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-11 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com">Will the Stock Market Crash if the Federal Reserve Raises Interest Rates? Soaring Bond Yields Portend Trouble.</a></li><li><a href="https://www.newspim.com">개장시황] 매수 사이드카 발동…코스피·코스닥 급반등 - 뉴스핌</a> <span class="p0-desc">회사가 2분기 실적을 보고하고 연간 매출 가이던스를 상향 조정한 후, Eli Lilly(LLY) CFO Lucas Montarce는 제약 대기업이 GLP-1 카테고리에서 보고 있는 확장 기회, 특히 경구용 체중 감량 약물의 시장 출시에 대해 간략하게 설명합니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE95bERIM2JIQWRwTFpiR0E5bHlqQ2Zva2E3RDE2ZWtvLVAwM0ZkdnVNbl9VTlR6YjcwVjhyTkI2OWhiR05rVlZNekt6VHgwWkl4bXlNUVJwRmdybWtlM1pJbG8xZ3lZZ3piRWpwb3BlWXfSAXRBVV95cUxPSzFtT29OX0JlcGJ5OVhhVEl6aENOMTM0VWRyVjBXc0dLS1E1bEZtUm80cWd0UHVKamVhMXc2VWZPNzZ3eDhUZjVNbVJCNzBhZzBUNUlRTVdtNTlLcE1tempoSy1DQ3RZZk1hT2V5U3IzOUM4Vg?oc=5">반도체주 훈풍에 증시 급반등…코스피·코스닥 매수 사이드카 - 산경투데이</a> <span class="p0-desc">반도체주 훈풍에 증시 급반등…코스피·코스닥 매수 사이드카 산경투데이</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,730.82 (-4.52%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 951.63 (-1.67%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-06-11 주식 시장에서 202건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,730.82(-4.52%), KOSDAQ 951.63(-1.67%), USD/KRW 1,520.04(-0.47%).
 - *일시적인 문제가 발생했습니다.*
 
 ## 테마별 주요 뉴스
