@@ -192,7 +192,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘날 암호화폐 분야에서 Standard Chartered는 스테이블코인 전망을 수정하고 Kraken의 모회사는 유럽 은행으로 이전하고 Ledger는 아시아에서 변조된 하드웨어 지갑을 조사합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/vaneck-labels-metaplanet-compensation-bad?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">VanEck criticizes Metaplanet over executive dilution despite compensation cuts</a>
-<p class="news-desc">VanEck said Metaplanet’s executive equity exposure remains well above its digital asset treasury peers, even after the company cut its potential share pool by 41%.</p>
+<p class="news-desc">VanEck는 Metaplanet의 임원 보상 구조를 비판하면서 자사의 지분 계획과 임원 노출이 다른 주요 디지털 자산 재무보다 훨씬 높다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/policy/2026/09/18/ecb-president-christine-lagarde-intervened-to-block-binance-s-eu-mica-license-wsj" class="news-title" target="_blank" rel="noopener noreferrer">ECB President Christine Lagarde intervened to block Binance’s EU MiCA license: WSJ</a>
-<p class="news-desc">Although the ECB holds no formal licensing authority under MiCA, high-level intervention led Greece to stall an application that regulators had previously deemed complete, the Journal said.</p>
+<p class="news-desc">프로세스에 정통한 사람들을 인용한 월스트리트저널 보고서에 따르면 유럽중앙은행 총재 크리스틴 라가르드은 암호화폐 거래소 바이낸스가 그리스에서 암호화폐 자산 시장(MiCA) 라이선스를 획득하는 것을 막기 위해 개인적으로 개입했다고 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -285,7 +285,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/coinbase-files-to-bring-single-stock-perpetual-futures-to-us-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase files to bring single-stock perpetual futures to US market</a>
-<p class="news-desc">Coinbase wants to bring 24/5 perpetual futures trading to individual US stocks, with its proposed contracts now awaiting regulatory approval.</p>
+<p class="news-desc">코인베이스는 올해 초 적격 미국 외 거래자를 대상으로 유사한 계약을 시작한 후 미국에서 단일 주식 무기한 선물을 상장하기 위해 제출했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -297,7 +297,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-20 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Binance launches 24/7 FX perps with weekend pricing system</a>
-<p class="news-desc">Binance is joining a growing number of crypto exchanges offering around-the-clock exposure to foreign exchange markets through perpetual futures.</p>
+<p class="news-desc">바이낸스는 암호화폐 거래소가 전통적인 금융 시장으로 확장됨에 따라 USD/BRL부터 시작하여 연중무휴 외환 영구 선물을 출시합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

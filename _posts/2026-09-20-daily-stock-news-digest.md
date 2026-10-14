@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/09/18/tokenization-is-set-to-change-stock-trading-these-stocks-could-get-a-boost.html" class="news-title" target="_blank" rel="noopener noreferrer">Tokenization is set to change stock trading. These stocks could get a boost</a>
-<p class="news-desc">Digital exchanges are rocketing upward in Friday morning trading after regulatory changes that follow the failure of the Clarity Act in Congress.</p>
+<p class="news-desc">의회의 명확성법(Clarity Act) 실패에 따른 규제 변경 이후 금요일 오전 거래에서 디지털 거래소가 급증하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://finance.yahoo.com/economy/policy/articles/dont-quit-keep-job-expert-161500293.html" class="news-title" target="_blank" rel="noopener noreferrer">‘Don't quit. Keep your job': Expert says Social Security will 'go away' — and the thing to protect isn't your 401(k)</a>
-<p class="news-desc">But maybe this isn’t such a bad thing, as older Americans increasingly face loneliness, social isolation and a lack of purpose.</p>
+<p class="news-desc">그러나 노인 미국인들이 점점 더 외로움, 사회적 고립, 목적 부족에 직면하고 있기 때문에 이것이 그렇게 나쁜 것은 아닐 수도 있습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

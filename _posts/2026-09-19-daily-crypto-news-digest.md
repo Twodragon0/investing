@@ -183,7 +183,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/378604/treasury-sanctions-crypto-exchange-behind-irans-bitcoin-tolls-on-hormuz-ships" class="news-title" target="_blank" rel="noopener noreferrer">Treasury Sanctions Crypto Exchange Behind Iran's Bitcoin Tolls on Hormuz Ships</a>
-<p class="news-desc">OFAC says hundreds of millions of dollars in Bitcoin moved through BitBank to the Revolutionary Guards in two months.</p>
+<p class="news-desc">OFAC는 비트코인에 수억 달러가 두 달 만에 BitBank를 통해 혁명수비대에 전달되었다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -195,7 +195,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/binance-cites-speculation-report-ecb-chief-mica-intervention?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment</a>
-<p class="news-desc">Binance declined to address reports of ECB intervention in its Greek MiCA bid, saying it remains committed to securing authorization in Europe.</p>
+<p class="news-desc">바이낸스는 보고된 ECB의 그리스 MiCA 입찰 참여에 대한 "추측에 대해서는 언급하지 않을 것"이며 EU 승인을 계속 유지하겠다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -250,7 +250,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://decrypt.co/378638/cftc-crypto-rules-white-house-congress-clarity-act" class="news-title" target="_blank" rel="noopener noreferrer">CFTC Kicks Off Crypto Rulemaking, Bypassing a Stalled Congress</a>
-<p class="news-desc">The agency submitted a prerule on crypto asset transactions and markets to the White House for review, signaling it will build a derivatives framework on its own authority after the Clarity Act's collapse.</p>
+<p class="news-desc">CFTC은 의회가 Clarity에 대해 보류하는 동안 검토를 위해 암호화 자산 거래 및 시장에 대한 사전 규칙을 백악관에 제출했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -302,7 +302,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Binance launches 24/7 FX perps with weekend pricing system</a>
-<p class="news-desc">Binance is joining a growing number of crypto exchanges offering around-the-clock exposure to foreign exchange markets through perpetual futures.</p>
+<p class="news-desc">바이낸스는 암호화폐 거래소가 전통적인 금융 시장으로 확장됨에 따라 USD/BRL부터 시작하여 연중무휴 외환 영구 선물을 출시합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

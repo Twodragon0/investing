@@ -257,7 +257,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/20/tariffs-fuel-prices-and-interest-rates-squeeze-us-companies.html" class="news-title" target="_blank" rel="noopener noreferrer">‘It's awful’: How tariffs, soaring fuel costs and higher interest rates are squeezing American companies</a>
-<p class="news-desc">Tariffs, fuel prices and interest rates are squeezing American companies, particularly manufacturers, auto suppliers, retailers and transportation businesses.</p>
+<p class="news-desc">관세, 연료 가격, 이자율이 미국 기업, 특히 제조업체, 자동차 공급업체, 소매업체 및 운송업체를 압박하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -269,7 +269,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/20/bessent-he-lifeng-trump-xi-summit.html" class="news-title" target="_blank" rel="noopener noreferrer">Bessent meets China Vice Premier He Lifeng ahead of Trump-Xi summit</a>
-<p class="news-desc">Scott Bessent and China’s He Lifeng are holding talks on trade, AI and critical minerals ahead of Trump and Xi’s Sept. 24 summit.</p>
+<p class="news-desc">스캇 재무장관 베센트은 9월 24일 트럼프-시진핑 정상회담을 앞두고 허리펑 중국 부총리와의 회담이 "성공적"이었다고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -281,7 +281,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/20/nvidia-ceo-jensen-huang-emerges-as-trumps-top-ally-in-ai-debate.html" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia CEO Jensen Huang emerges as Trump's top ally in AI safety debate</a>
-<p class="news-desc">Jensen Huang's position as the leader of the world's most valuable company, has earned him Trump's ear on the most important topics in AI.</p>
+<p class="news-desc">젠슨 황은 세계에서 가장 가치 있는 회사의 리더로서의 지위로 인해 AI의 가장 중요한 주제에 대해 트럼프의 귀를 기울였습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

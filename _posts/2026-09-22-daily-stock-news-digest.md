@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investors.com/news/critical-metals-crml-stock-rare-earth-us-denmark-greenland-trump-xi/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">Greenland Deal Fuels Critical Metals; Rare Earth Stocks Hinge On Trump-Xi</a>
-<p class="news-desc">Rare earth stock Critical Metals surged on news of the security agreement that may give the U.S. more reason to boost Greenland's mining projects.</p>
+<p class="news-desc">희토류 주식 Critical Metals는 미국이 그린란드의 광산 프로젝트를 강화할 더 많은 이유를 제공할 수 있는 안보 협정 소식에 급등했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>
@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-22 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/economy/policy/articles/trump-demands-1-rates-because-153000828.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump demands 1% rates because the US has the ‘Best Credit in the World’ — the Fed hiked rates anyway. So who’s right?</a>
-<p class="news-desc">The resilience of the U.S. economy has opened the door for the Federal Reserve to tackle stubborn inflation, raising its federal funds rate for the first time since 2023.</p>
+<p class="news-desc">미국 경제의 탄력성은 연준이 완고한 인플레이션을 해결할 수 있는 문을 열어 2023년 이후 처음으로 연방기금 금리를 인상했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

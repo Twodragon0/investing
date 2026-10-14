@@ -272,7 +272,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/378695/holding-anything-but-bitcoin-losing-bet" class="news-title" target="_blank" rel="noopener noreferrer">Why Holding Anything But Bitcoin Has Been a Losing Bet for Two Years</a>
-<p class="news-desc">A Glassnode and Bybit report frames the divergence as the defining feature of this cycle, with froth pooling in the market's riskiest corners even as Bitcoin does the heavy lifting.</p>
+<p class="news-desc">2년 동안 비트코인은 28% 상승한 반면 중위주 알트코인은 74% 하락했고 이더리움은 대략 횡보했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -284,7 +284,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/vaneck-labels-metaplanet-compensation-bad?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">VanEck criticizes Metaplanet over executive dilution despite compensation cuts</a>
-<p class="news-desc">VanEck said Metaplanet’s executive equity exposure remains well above its digital asset treasury peers, even after the company cut its potential share pool by 41%.</p>
+<p class="news-desc">VanEck는 Metaplanet의 임원 보상 구조를 비판하면서 자사의 지분 계획과 임원 노출이 다른 주요 디지털 자산 재무보다 훨씬 높다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -296,7 +296,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-21 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘날 암호화폐 분야에서 Standard Chartered는 스테이블코인 전망을 수정하고 Kraken의 모회사는 유럽 은행으로 이전하고 Ledger는 아시아에서 변조된 하드웨어 지갑을 조사합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

@@ -182,7 +182,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/crypto-biz-clarity-act-coinbase-sec-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Crypto Biz: CLARITY Act setback puts Coinbase in the spotlight</a>
-<p class="news-desc">Coinbase draws scrutiny after the CLARITY Act stalls, while the SEC moves ahead with tokenized stocks and crypto firms push deeper into payments.</p>
+<p class="news-desc">코인베이스는 SEC이 토큰화된 주식을 발전시키고 암호화폐 회사가 결제 분야로 확장함에 따라 CLARITY Act가 중단된 후 다시 주목을 받게 됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/markets/near-price-surge-intents-zcash-privacy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">NEAR jumps nearly 80% in a week as Intents volume nears $30B</a>
-<p class="news-desc">Near expanded privacy features for traders as NEAR Intents recorded $29.3 billion in cumulative volume, including swaps involving Zcash.</p>
+<p class="news-desc">NEAR는 기밀 거래가 확대되고 NEAR Intents의 누적 거래량이 300억 달러에 도달함에 따라 일주일 만에 거의 80% 증가했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -288,7 +288,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/eurosystem-central-bank-money-tokenized-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">ECB launches Pontes to settle tokenized assets without stablecoins</a>
-<p class="news-desc">Pontes will expand its services and operating hours gradually, with full implementation expected by 2028 and more participants set to join.</p>
+<p class="news-desc">ECB은 중앙 은행 자금으로 도매 토큰화된 자산 거래를 결제하기 위해 Pontes를 출시했으며 2028년까지 완전한 구현이 예상됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -300,7 +300,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/378737/strategys-bitcoin-pile-nears-june-record-after-76m-purchase" class="news-title" target="_blank" rel="noopener noreferrer">Strategy's Bitcoin Pile Nears June Record After $76M Purchase</a>
-<p class="news-desc">The Bitcoin treasury firm’s holdings bottomed at 840,447 BTC in August. They have since climbed 5,553 BTC, to within 0.2% of the high.</p>
+<p class="news-desc">비트코인 재무 회사의 보유 지분은 8월에 840,447 BTC으로 바닥을 쳤습니다. 이후 그들은 5,553 BTC 상승하여 최고치의 0.2% 이내까지 올랐습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
