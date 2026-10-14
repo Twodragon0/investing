@@ -35,48 +35,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-12 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV2R4TXVOR0VQX1ltSGVJMFlDNTRLRXE5RjJRVERJazdpbGhsRWVDU2dlVV9wM2R0R1pFdGJpUEZrSEhpNFZlcTJ3OHlsN3BST2Y5c0JFcnQxUDdUZVdLQm1KM1lMZl9lRXI5d3lCN1BMbWJRNlhTTDBEZzJOUXlocXRrX3lfdjZVcm91Y0Q3eW1scU80Z245TWJPUTNhQVNCd29seHpDSmo?oc=5">Stock Market Crash Hits 54% Of Stocks—Is The S&P 500 Next?</a></li><li><a href="https://www.marketwatch.com/story/the-bull-market-is-turning-4-years-old-but-yields-could-crash-the-party-1305fe6c?mod=mw_rss_topstories">The bull market is turning 4 years old — but yields could crash the party</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- *3분기 실적에 대한 높은 기대가 금리와 유가에 대한 우려보다 더 큽니다. 하지만 한 전문가가 있습니다.*
-- *3분기 실적에 대한 높은 기대가 금리와 유가에 대한 우려보다 더 큽니다. 하지만 한 전문가가 있습니다.*
-**긴급**: Stock Market Crash Hits 54% Of Stocks—Is The S&P 500 Next? 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 114건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **🤖 AI/기술** (10건): 반도체, 하이닉스, 삼전닉스 기술 이슈 (10건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📈 가격/시장** (20건): 반도체, 삼성전자, 소부장 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (7건): 실적, 인플레이션, 휴전 매크로 변수 (7건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-
-### 주요 이슈
-
-- 외 17건
-
-### 투자자 체크포인트
-
-- 한국 기사 42건, 글로벌 기사 72건 수집
-- 한국 지수: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,340.02(-0.13%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:50%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:35%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:40%"></div></div><span class="theme-count">8건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:35%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
+- 2026-10-12 주식 시장에서 114건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,340.02(-0.13%).
+- KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요. KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
 

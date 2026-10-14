@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-14 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 26조 청산 악몽 덮치나…비트코인 4% 폭증 뒤 '해킹 경보' - 97건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>📈 <strong>가격/시장</strong>: 달러, $84K 관련 26건</li><li>🏦 <strong>거래소</strong>: 15건 수집</li><li>🟣 <strong>DeFi</strong>: 12건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZ3lVSFJDTGNHVXZFNUk3M1Q5Qm9kZzF0N3dVYWRha01fYzF4MUhMX2Faa3QxTzNjelZfTjNGMEc3V2Q1S3NRUmdkeHIwaHY0QndrWFBybkNZanNScEl0TVhnV3hNc3Z4aG1XZFlQU3VWdFdwNGNWZFNWdl9CamlsWjRFNjZxM204?oc=5">26조 청산 악몽 덮치나…비트코인 4% 폭증 뒤 '해킹 경보'</a> <span class="p0-desc">26조 청산 악몽 덮치나…비트코인 4% 폭증 뒤 '해킹 경보' 글로벌이코노믹</span></li><li><a href="https://decrypt.co/380867/bitcoin-whale-every-crash-2020-moves-377m">비트코인 고래 2020년 이후 매 폭락 동안 3억7천7백만 달러를 옮겼습니다.</a> <span class="p0-desc">2020년 3월에 당시 약 4천만 달러 가치인 4,581 BTC을 받은 지갑이 오늘 약 3억 7700만 달러 가치가 되었을 때 보관함을 옮겼습니다.</span></li><li><a href="https://decrypt.co/380833/ai-powered-playstation-crack-could-let-you-play-gta-6-on-pc-at-launch">AI Powered PlayStation Crack을 사용하면 출시 시 PC에서 GTA 6을 플레이할 수 있습니다.</a> <span class="p0-desc">AnyPS5는 모든 PS5 게임을 PC에서 기본적으로 실행할 수 있도록 노력하고 있으며 게이머들은 이것이 Grand Theft Auto의 다음 버전에서도 작동할 수 있기를 바라고.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 26조 청산 악몽 덮치나…비트코인 4% 폭증 뒤 '해킹 경보' 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 97건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (48건): 비트코인, 달러, 뉴스핌 관련 (48건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (26건): 달러, $84K 가격 변동 (26건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏦 거래소** (15건): binance, blur, shut 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 26조 청산 악몽 덮치나…비트코인 4% 폭증 뒤 '해킹 경보'
-- 비트코인 고래 2020년 이후 매 폭락 동안 3억7천7백만 달러를 옮겼습니다.
-- AI Powered PlayStation Crack을 사용하면 출시 시 PC에서 GTA 6을 플레이할 수 있습니다.
-
-### 주요 이슈
-
-- 코인 시황] 비트코인, 8만4000달러 반짝 회복 후 다시 하락…ETF 자금 이탈에 발목 - 뉴스핌
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- SEC의 리더십 부족이 암호화폐 규칙 제정을 어떻게 촉진할 수 있는지
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Cointelegraph(15건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 2건 포함
-- 프로모션성 거래소 공지 3건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-14.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **97건** 수집
+- 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-10-14 암호화폐 핵심 뉴스: 비트코인, 기술주 급락에 위험자산 선호 위축…8만4,000달러 아래서 정체 By Investing.com - Investing.com 한국어. 총 97건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

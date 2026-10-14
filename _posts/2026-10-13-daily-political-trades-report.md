@@ -23,9 +23,11 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **의회**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
-- 1. 플로리다 법은 주식 거래에 대해 의회 후보자들에게 압력을 가하고 있으며 이로 인해 큰 혼란이 야기되고 있습니다.
+- 2026-10-13 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 14건 — 미국 의회 거래 1건, 중앙은행 13건
+- 1. Florida Law Is Pressuring Congressional Candidates on Stock Trades — And It’s Causing Major Confusion
 
 ## 1. 미국 의회 거래 동향
 

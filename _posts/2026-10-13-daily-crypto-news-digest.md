@@ -42,41 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-13 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어 - 89건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 주목</li><li>🔷 <strong>이더리움</strong>: 이더리움, 암호화폐 이슈 부각</li><li>🟣 <strong>DeFi</strong>: XRP 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1FeXlvVkNtZWFlbHhkdWljVWVTSFlUMHBweFAzb01OMlBYcndKeWdpY3I0dURVTDlVbkt1YkhlQlRWTE1DYk5iYTNkRGJmeE1DaTdtSWIzZDVodmkxWE13Wkx0THFLVU5qSjRuRkJpR2h4bXc?oc=5">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 Investing.com 한국어 [코인 시황] 비트코인, 8만4000달러 반짝 회복 후 다시 하락…ETF.</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1DYkp2aFJla1VDeVZiNDlyR0o4SVR5VzNOLXpkaFVnQVB4Ykg0Y3phSm9FMVpkal9VekRPZUcySkVJcnlPNHBsUlpIMW40X21ibFNXNk1mSTJLb2FRZ0pUdlNoSjRPTmwxNEZxYw?oc=5">D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온</a> <span class="p0-desc">[D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' 데일리비즈온</span></li><li><a href="https://www.coindesk.com/business/2026/10/12/swi-raises-usd894-million-to-repurpose-former-ftx-bitcoin-miner-genesis-digital-to-ai">SWI raises $894 million to repurpose former FTX bitcoin miner Genesis Digital to AI</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔷 이더리움
+- 2026-10-13 암호화폐 시장 89건 분석 — 핵심 테마: 비트코인, 가격/시장, 이더리움
 - *기사는 여러 테마에 중복 집계될 수 있음*
-**긴급**: 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 89건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (39건): 비트코인, 암호화폐, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (25건): 달러, 암호화폐, 블루밍비트 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🔷 이더리움** (14건): 이더리움, 암호화폐, 달러 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어
-- D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온
-- SWI는 이전 FTX 비트코인 광부인 Genesis Digital을 AI로 용도 변경하기 위해 8억 9,400만 달러를 모금했습니다.
-
-### 주요 이슈
-
-- D-BIZ 암호화폐 뉴스] 비트코인, ETF 대규모 유출에도 8만4천 달러선 회복…유가 하락·지정학 혼재 - 데일리비즈온
-- 월가, 규제 내세워 디파이 생태계 장악."개인지갑 이자 싹쓸이" - 코인리더스
-- 리플-지원 Evernorth 조회수 나스닥 보유 4억 7,300만 XRP 가치는 다음보다 훨씬 낮습니다.
-- 외 3건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Google News KR(15건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 4건 포함
-- 프로모션성 거래소 공지 1건 제외
-
 
 ## 테마별 주요 뉴스
 
