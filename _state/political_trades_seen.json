@@ -1,36 +1,5 @@
 {
   "seen": {
-    "03b122bbfd83d93db36269f9": "2026-09-14T15:59:27",
-    "f8ad0f1874696ca6bd87a137": "2026-09-14T15:59:27",
-    "2b1c3743142f9c62808ced14": "2026-09-14T15:59:27",
-    "34ed7b0ed7396cb3fc1a1b6f": "2026-09-14T15:59:27",
-    "f05cfe653eb5e545e771142e": "2026-09-14T15:59:27",
-    "56e65e00bce8a1413f88983b": "2026-09-14T15:59:27",
-    "512861a032d7172891a8328e": "2026-09-14T15:59:27",
-    "3ced0863adf6cd1d9fa730e5": "2026-09-14T15:59:27",
-    "61c62017135ca603c133632a": "2026-09-14T15:59:27",
-    "640e35d4f22d8e2130cc1314": "2026-09-14T15:59:27",
-    "66eacffaae30dacee66168d0": "2026-09-14T15:59:27",
-    "78b9ca911fd266b487bf207f": "2026-09-14T15:59:27",
-    "e408679dd3090a72252273e9": "2026-09-14T15:59:27",
-    "e601e68958787d418a6b0596": "2026-09-14T15:59:27",
-    "5e5b25e7ecf5f9081126179a": "2026-09-14T15:59:27",
-    "e1ca091b133a58616b9e809b": "2026-09-14T15:59:27",
-    "86da11dc74fc3a6b4912c47e": "2026-09-14T15:59:27",
-    "945221840e0c791841dce9a4": "2026-09-14T15:59:27",
-    "598d5bf1df2d373d71d742ca": "2026-09-14T15:59:27",
-    "ad5db51cd9adadc2e91c78d7": "2026-09-14T15:59:27",
-    "9a33699472fe32a29b015f27": "2026-09-14T15:59:27",
-    "99e78ab09283d67665e32a71": "2026-09-14T15:59:27",
-    "12f22539bb8ca0c988302a39": "2026-09-14T15:59:27",
-    "48d345cb78f53f1707c5e816": "2026-09-14T15:59:27",
-    "5b71aa4ef9f131326f7b6e6d": "2026-09-14T15:59:27",
-    "2b2b74a09c0eff4405dddb66": "2026-09-14T15:59:27",
-    "700c4c2c2b4804fd52213dd7": "2026-09-14T15:59:27",
-    "c3fef7dc0168b74feb07966b": "2026-09-14T15:59:27",
-    "0a81cfe9f567b9107b85def1": "2026-09-14T15:59:27",
-    "b626bec45d30b42c83fd52d8": "2026-09-14T15:59:27",
-    "36932cb6229166ff05be992f": "2026-09-14T15:59:27",
     "05bbc3acd1247fde149f26e8": "2026-09-16T00:39:55",
     "ca55cded395733055e4791c9": "2026-09-16T00:39:55",
     "8cbcad94164fdce769481718": "2026-09-16T00:39:55",
@@ -576,7 +545,33 @@
     "2bfd2da775013663ce0cfa7c": "2026-10-13T17:04:53",
     "cf7a0e3eedb96e763d7d415d": "2026-10-13T17:04:53",
     "f10b07271f249eeb2a8fe4cd": "2026-10-13T17:04:53",
-    "e986e507fa2e605a8410fd77": "2026-10-13T17:04:53"
+    "e986e507fa2e605a8410fd77": "2026-10-13T17:04:53",
+    "3130f8ee2e4d7324724cc137": "2026-10-15T00:44:41",
+    "2a5aa17302e7d07cd0c89ed0": "2026-10-15T00:44:41",
+    "e8a14a4869232dcbc4126378": "2026-10-15T00:44:41",
+    "60d5aa49ca39666661152f51": "2026-10-15T00:44:41",
+    "596b99f49b1d5432c63cbb69": "2026-10-15T00:44:41",
+    "432f6906eae81db7d97ecf88": "2026-10-15T00:44:41",
+    "6be1ebc917e0cc6520c5e257": "2026-10-15T00:44:41",
+    "e602b75678fde9a55b66537d": "2026-10-15T00:44:41",
+    "b50bc8da109cf3c18ae1ca44": "2026-10-15T00:44:41",
+    "d6ef56ddd25313ceb677a127": "2026-10-15T00:44:41",
+    "3a2fbb42036fd0cf0030eaa8": "2026-10-15T00:44:41",
+    "7b996ffa248ed3a51b247e98": "2026-10-15T00:44:41",
+    "c58cde05a03a1177d82459d0": "2026-10-15T00:44:41",
+    "8bd28b404386512d66be0ed0": "2026-10-15T00:44:41",
+    "bb29fe65660fef17880b549f": "2026-10-15T00:44:41",
+    "b18f07b6014cbdc280d0c880": "2026-10-15T00:44:41",
+    "ddc2b2a315471cea68ab3016": "2026-10-15T00:44:41",
+    "62ed13998519888e1d04e4f1": "2026-10-15T00:44:41",
+    "a0f51f75d9f604075de9cc37": "2026-10-15T00:44:41",
+    "8e079e510d803964f8bfeb9a": "2026-10-15T00:44:41",
+    "aa3ee109ebb54629a887c89e": "2026-10-15T00:44:41",
+    "bdfeef9e5b1f8930c8437942": "2026-10-15T00:44:41",
+    "0e9d181feccde224725eea33": "2026-10-15T00:44:41",
+    "0f49323124370fd6100df697": "2026-10-15T00:44:41",
+    "c3ed602cc791b7fb8b2f938e": "2026-10-15T00:44:41",
+    "3342ed6837f3ca50d23a61aa": "2026-10-15T00:44:41"
   },
   "titles": [
     [
@@ -20214,6 +20209,110 @@
     [
       "정치인 거래정책 리포트 20261014",
       "2026-10-14"
+    ],
+    [
+      "politifact iowa 124 republican congresswoman millermeeks says she doesnt own individual stocks true the daily iowan",
+      "2026-10-15"
+    ],
+    [
+      "checking i do regarding stock trades is an issue in floridas 7th congressional district florida phoenix",
+      "2026-10-15"
+    ],
+    [
+      "across 17 transactions silver lake sold 996 dell technologies dell shares stock titan",
+      "2026-10-15"
+    ],
+    [
+      "a 36614share conversion accompanies silver lakes stock sales in dell technologies dell stock titan",
+      "2026-10-15"
+    ],
+    [
+      "insiders sell 50454 shares and convert 67641 at dell technologies dell stock titan",
+      "2026-10-15"
+    ],
+    [
+      "two planned share sales by coreweave crwv cfo total 22579 shares stock titan",
+      "2026-10-15"
+    ],
+    [
+      "a ceo agrees to deliver up to 500000 shares or cash at his option in a palo alto networks panw deal stock titan",
+      "2026-10-15"
+    ],
+    [
+      "planned share sales accompany a 182370share option exercise at coinshares plc cshr stock titan",
+      "2026-10-15"
+    ],
+    [
+      "for no consideration danaher dhrs executive committee chairman waives a stock award stock titan",
+      "2026-10-15"
+    ],
+    [
+      "risk chief exercises options at 890 and sells 52953 shares in stonex snex stock titan",
+      "2026-10-15"
+    ],
+    [
+      "the ceo of billiontoone blln exercises options at 280 he and his spouse sell 19334 shares stock titan",
+      "2026-10-15"
+    ],
+    [
+      "five below five officer graham poliner had 457 shares delivered or withheld at 21473 each stock titan",
+      "2026-10-15"
+    ],
+    [
+      "a 100000share gift accompanies trust sales reported by everpure p director john colgrove stock titan",
+      "2026-10-15"
+    ],
+    [
+      "eplus plus cfos trust sells 5000 shares under a preset trading plan stock titan",
+      "2026-10-15"
+    ],
+    [
+      "an automatic trading plan triggers an 11907share sale at california resources corp crc stock titan",
+      "2026-10-15"
+    ],
+    [
+      "palantir pltr director sells at 205 a share under a trading plan stock titan",
+      "2026-10-15"
+    ],
+    [
+      "새 비서실장에 임광현 국세청장민생경제 집중 의지 동행미디어 시대",
+      "2026-10-15"
+    ],
+    [
+      "신현송 ai 호황 중동 전쟁 모두 물가 압박금리 인상 기조 유지 시사",
+      "2026-10-15"
+    ],
+    [
+      "씨티모건스탠리 한국은행 기준금리10월은 동결 11월 인상 전망 파이낸셜포스트",
+      "2026-10-15"
+    ],
+    [
+      "신현송 첫 국감 통화정책 흔들림 없이기준금리 30 추가 인상 시기 저울질 issue on 이슈온",
+      "2026-10-15"
+    ],
+    [
+      "물가 잡자니 이자 부담한은 추가 금리인상 시점 고심",
+      "2026-10-15"
+    ],
+    [
+      "the fed faces a politically fraught rate decision on the eve of an election for the third time in a row",
+      "2026-10-15"
+    ],
+    [
+      "what to expect at the next fed meeting now that ratehike odds are rising",
+      "2026-10-15"
+    ],
+    [
+      "feds bowman says theres time to wait and see before any more action",
+      "2026-10-15"
+    ],
+    [
+      "feds barkin says cpi ran too hot keeps october decision open fxstreet",
+      "2026-10-15"
+    ],
+    [
+      "정치인 거래정책 리포트 20261015",
+      "2026-10-15"
     ]
   ],
   "seen_urls": {}
