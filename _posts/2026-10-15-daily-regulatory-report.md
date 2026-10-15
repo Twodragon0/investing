@@ -29,35 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-15 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 핀테크핫이슈] 금융권 국감 '해킹·ETF' 공방…디지털자산 제도화 막바지 - 14건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 금융위원회, 알림마당 이슈 부각</li><li>🟠 <strong>비트코인</strong>: 핀테크핫이슈, 디지털자산 주목</li><li>🏦 <strong>거래소</strong>: 웹사이트까지, 블루밍비트 동향 주시</li><li>🔴 <strong>보안/해킹</strong>: 핀테크핫이슈, 디지털자산 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9MNFZ6QjJZR19aclNfbHJ0VmpUVTFUWUtkRWt4d1RwSzk2Z1N1MlpoQTc2NlJNVkVRRUdyS3oxc083Ym5DNjRBOHZFTnRQMXZxVlp2aVEwRUdwV1NUZlpZTUd5XzVOQl9uNDVDR0xGNHpzM2s?oc=5">핀테크핫이슈] 금융권 국감 '해킹·ETF' 공방…디지털자산 제도화 막바지</a> <span class="p0-desc">핀테크핫이슈] 금융권 국감 '해킹·ETF' 공방…디지털자산 제도화 막바지. 증시 제도 변경 관련 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPNC1JVndXWW1mcVZyZVpZZ0xKajRwZGFKS0JSb0VLbzkwQjRFN1J1RGZoUzZNY2t0YmVTNDNfVjFPcV9HeW9NY2t6ZGVJWUd6b3ROaENrWUxOYnNzZjQxUFB3UnA3V25WbWZBbkdYQjVLWnZJQzdIRkxLalNpYUlWXzhuSjBRd2tDVkpQdWI1aTRpRlVlcXNrT2M4RGJ6aEc2LUYtcUFIUTg3d1ZjaTM3TVRCOWRkSkk?oc=5">유럽에서 CFD 시장 점유율이 6.7%로 하락, 암호화폐와 주식에 추월됨: ESMA - Finance Magnates</a> <span class="p0-desc">유럽에서 CFD 시장 점유율이 6.7%로 하락하고 암호화폐 및 주식이 추월함: ESMA - Finance Magnates. (6.7% 변경) 급락 관련 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 핀테크핫이슈] 금융권 국감 '해킹·ETF' 공방…디지털자산 제도화 막바지 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 14건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (10건): 금융위원회, 알림마당, 불법 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🟠 비트코인** (1건): 핀테크핫이슈, 디지털자산, 금융권 관련 (1건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (1건): 웹사이트까지, 블루밍비트, 가상자산 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 핀테크핫이슈] 금융권 국감 '해킹·ETF' 공방…디지털자산 제도화 막바지
-- 유럽에서 CFD 시장 점유율이 6.7%로 하락, 암호화폐와 주식에 추월됨: ESMA - Finance Magnates
-
-### 주요 이슈
-
-- 불법 가상자산 거래소 27곳 접속 차단…금융당국, 웹사이트까지 규제 확대 - 블루밍비트
-- 불법 가상자산업체 웹사이트 27곳 국내 접속 차단…앱 이어 규제 강화 - 포커스경제
-- Zumo, '영국 암호화폐 규제 추적기' 출시 - CoinGeek
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 6건, 유럽 5건, 아시아 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 14건
 - **한국**: 6건

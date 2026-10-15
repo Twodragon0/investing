@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-18 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 코스피, 코스닥, 선물 부각 169건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 국채, 연준 이슈 부각</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,977.94 (+2.42%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 864.65 (+0.38%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-18 주식 시장에서 169건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,977.94(+2.42%), KOSDAQ 864.65(+0.38%), USD/KRW 1,413.12(-0.24%).
 - *[CBC뉴스] 국내 주식시장이 17일 휴장에 들어간다.*
 
 ## 테마별 주요 뉴스

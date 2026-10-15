@@ -14,7 +14,6 @@ description: "폴리티팩트 아이오와 | 공화당 의원 Miller-Meeks는 �
 image_alt: "정치인 거래·정책 리포트 - 2026-10-15 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-15.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-15** 정치권 핵심 이슈: **폴리티팩트 아이오와 | 공화당 의원 Miller-Meeks는 자신이 개별 주식을 소유하지 않는다고 말했습니다. 진실. - 데일리 아이오완**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **25건** (미국 의회 거래 2건, SEC 내부자 거래 14건, 한국 정치인 1건, 중앙은행 8건)을 종합 정리합니다
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-15 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(8회), **의회**(4회), **내부자**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **25건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 14건, 한국 정치인 1건, 중앙은행 8건입니다.
-
-**미국 의회 거래** 동향에서는 Politifact Iowa | Republican congresswoman Miller-Meeks says she doesn’t own individual stocks. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 신현송 "AI 호황, 중동 전쟁 모두 물가 압박"…금리 인상 기조 유지 시사 조선일보 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 새 비서실장에 임광현 국세청장…민생경제 집중 의지 동행미디어 시대 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-10-15 정치권 핵심 이슈: 폴리티팩트 아이오와 | 공화당 의원 Miller-Meeks는 자신이 개별 주식을 소유하지 않는다고 말했습니다. 진실. - 데일리 아이오완. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 25건 (미국 의회 거래 2건, SEC 내부자…
+- 1. 폴리티팩트 아이오와 \| 공화당 의원 Miller-Meeks는 자신이 개별 주식을 소유하지 않는다고 말했습니다. 진실. - 데일리 아이오완 폴리티팩트 아이오와 | 공화당 의원 Miller-Meeks는 자신이 개별 주식을 소유하지 않는다고 말했습니다.
 
 ## 1. 미국 의회 거래 동향
 

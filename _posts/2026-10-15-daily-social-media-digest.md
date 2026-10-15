@@ -30,43 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-10-15 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 미국의 9월 인플레이션은 3.6%를 기록할 것인가? 연준 금리 결정에 CPI 데이터가 중요한 이유 | 힌두스탄 타임즈 - 힌두스탄 타임즈 - 27건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 인상, 동결 관련 5건</li><li>🟠 <strong>비트코인</strong>: 고래 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxQRWJxM1hpVXE0ZHpIY3U2YzVhejZTeGl6RkI4OGVHVjlpT3pQWjJEeUhnQmRybkotbENHcHUwNmEtSXdQYWlHR2N4U1BEYVFOMURZaENISHhHZzNJYWJKbGRUdG0tNGlmLUJTclI0SWlYUWpzUWplVGtUV1dISlpxcTlUakliaUp4c1EzZUd5NnNiUDJCN1RmU3VoVHlTaWNwRXhJQS1HX25sLXF4TXltdFl3Y3FDdGp1VEhCelB1MzBuRWwtZFZ3cVFrY1U5UXR4WlF0RXBRSnZpd3U4Mkp1dUpySzDSAeoBQVVfeXFMTTBkRzktUGRYelBvUXpFYmtwWVlneDljR0xOTDBKWTNKWUpxRmtUbnp4d3FmOEFOYkVYdklMeFhEZ25yUUhiRjFaTHZ5Sm9tdHRUR1hkNHZRQ1FiRVhlVU9ER1IwTVJvZjY1TlVGeThJeFV0V1AxN0lCSC1oZXZ5R2YzMFlDLTMtOEZKVURTSFJ0NHVqOFV5dVJ5UUVoTm5vektIaDlMWEd2cGgyZklUbGhwLWN3dGc2TnR4bll1XzZXNFJ6VnYwMk9WTkc1eU0wQV83bXlDY3RrRnNkRFJlQ0xZQmtxeW1JNXNn?oc=5">미국의 9월 인플레이션은 3.6%를 기록할 것인가? 연준 금리 결정에 CPI 데이터가 중요한 이유 | 힌두스탄 타임즈 - 힌두스탄 타임즈</a> <span class="p0-desc">미국의 9월 인플레이션은 3.6%를 기록할 것인가? 연준 금리 결정에 CPI 데이터가 중요한 이유</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 미국의 9월 인플레이션은 3.6%를 기록할 것인가? 연준 금리 결정에 CPI 데이터가 중요한 이유 | 힌두스탄 타임즈 - 힌두스탄 타임즈 
-총 27건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 27건 중 텔레그램 0건, 소셜 3건, 정치·경제 24건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (15건): 연준, 인플레이션, 금리 매크로 변수 (15건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🏛️ 정치/정책** (6건): 트럼프, 이재명 정치 이슈 (6건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📈 가격/시장** (5건): 인상, 동결, 마켓프리뷰 가격 변동 (5건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 미국의 9월 인플레이션은 3.6%를 기록할 것인가? 연준 금리 결정에 CPI 데이터가 중요한 이유 | 힌두스탄 타임즈 - 힌두스탄 타임즈
-
-### 투자자 체크포인트
-
-- 소셜 3건, 정치·경제 24건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:40%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:33%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:7%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">🔷 이더리움</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:7%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-10-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-10-15.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 
