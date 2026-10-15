@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-13 | 시총 $2.76T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Cardano</strong> (ADA): -4.69%</li><li>🔴 <strong>Stellar</strong> (XLM): -3.80%</li><li>🔴 <strong>XRP</strong> (XRP): -3.31%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집
