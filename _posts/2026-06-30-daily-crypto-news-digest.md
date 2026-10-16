@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-30 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.digitaltoday.co.kr">비트코인, 6월 18.5% 급락 후 7월 반등 시험대…7만5000달러 전망도</a> <span class="p0-desc">비트코인, 6월 18.5% 급락 후 7월 반등 시험대…7만5000달러 전망도 디지털투데이</span></li><li><a href="https://www.coindesk.com/tech/2026/06/29/private-keys-not-smart-contracts-caused-40-of-crypto-s-usd16-billion-hack-losses-here-s-whats-being-done">스마트 계약이 아닌 개인 키로 인해 암호화폐 해킹 손실 160억 달러 중 40%가 발생했습니다. 현재 진행 중인 작업은 다음과 같습니다.</a> <span class="p0-desc">Pharos의 공동 창립자이자 CEO인 Wish Wu는 업계가 개인 키 취약성 문제를 균등하게 해결하는 방향으로 움직이고 있다고 말했습니다.</span></li><li><a href="https://www.coindesk.com/business/2026/06/29/ukraine-transfers-usd8-3-million-in-seized-crypto-amid-potential-plans-for-strategic-reserve">우크라이나, 전략적 예비금에 대한 잠재적 계획 속에서 압수된 암호화폐 830만 달러 송금</a> <span class="p0-desc">해당 자금은 고액 자산을 통한 데이터 도용으로 인한 수익금을 세탁한 혐의로 국제 해커 집단을 조사하던 중 압수됐다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **88건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-06-30 암호화폐 핵심 뉴스: 암호화폐 국경 간 전송이 증가할 것인가?. 총 88건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
