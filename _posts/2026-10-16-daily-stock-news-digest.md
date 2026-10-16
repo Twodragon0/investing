@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 - 194건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 주목</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 하이닉스, 반도체 관련 17건</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XV3ZmR1pSQXQ4NGdaeFUzMTFGQ0JFY19vQlpkZ1pvUzNhRjZOdUV6Z2U5R2FHRGNfei1iWEJTRlJrQ1VWUlJmMkVHdFMtd0k4NEhPOEI2VlNhdWtn?oc=5">특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ - 뉴스핌</a> <span class="p0-desc">[특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ 뉴스핌</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 
-외 P0 긴급 이슈 14건이 추가 감지되었습니다. 총 194건의 뉴스 중 P1 주요 이슈도 29건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (53건): 코스피, 하이닉스, 삼성전자 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (31건): 인플레이션, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (17건): 하이닉스, 반도체, 엔비디아 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락
-- 삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌
-- 특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ - 뉴스핌
-
-### 주요 이슈
-
-- "삼성전자 7만원, 하이닉스 20만원"…'역대급 실적'에도 어두운 전망, 왜
-- The Stock Market Is Echoing a Warning From the Dot-Com Bubble, and History Says
-- 나스닥은 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다.
-- 외 26건
-
-### 투자자 체크포인트
-
-- 한국 기사 71건, 글로벌 기사 123건 수집
-- 한국 지수: KOSPI 5,554.22(-7.57%), KOSDAQ 760.82(-7.65%), USD/KRW 1,343.68(+0.15%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">53건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:58%"></div></div><span class="theme-count">31건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:32%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:11%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:6%"></div></div><span class="theme-count">3건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-16.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,554.22 (-7.57%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 760.82 (-7.65%).
+- 2026-10-16 주식 시장에서 194건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,554.22(-7.57%), KOSDAQ 760.82(-7.65%), USD/KRW 1,343.68(+0.15%).
+- *The exchange comes as U.S.*
 
 ## 테마별 주요 뉴스
 

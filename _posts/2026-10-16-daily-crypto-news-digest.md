@@ -40,34 +40,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (22회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 달러, 코인리더스 중심 121건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 증권 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 달러, 인플레이션 관련 16건</li><li>📈 <strong>가격/시장</strong>: 달러, 코인리더스 동향 주시</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 121건의 뉴스에서 **비트코인**(41건), **거래소**(28건)과 **매크로/금리**(16건) 순으로 많은 보도가 집중되고 있습니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (41건): 비트코인, 달러, 코인리더스 관련 (41건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (28건): 증권 관련 지표와 수급 흐름을 함께 확인하세요.
-- **📊 매크로/금리** (16건): 달러, 인플레이션, 솔라나 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 주요 이슈
-
-- 영국, RU 자금 세탁에 대한 Cryptomus 제재 - Krebs on Security
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- Mastercard brings stablecoin balances into traditional banking and card payments
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Cointelegraph(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📊 매크로/금리
+- 2026-10-16 암호화폐 시장 121건 분석 — 핵심 테마: 비트코인, 거래소, 매크로/금리
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

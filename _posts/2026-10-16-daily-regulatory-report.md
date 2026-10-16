@@ -29,34 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-16 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 유럽에서 CFD 시장 점유율이 6.7%로 하락, 암호화폐와 주식에 추월됨: ESMA - Finance Magnates - 15건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 규제, 금융위원회 주목</li><li>🏦 <strong>거래소</strong>: 1건 수집</li><li>🔴 <strong>보안/해킹</strong>: 1건 수집</li><li>📈 <strong>가격/시장</strong>: 금융위원회, 알림마당 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPNC1JVndXWW1mcVZyZVpZZ0xKajRwZGFKS0JSb0VLbzkwQjRFN1J1RGZoUzZNY2t0YmVTNDNfVjFPcV9HeW9NY2t6ZGVJWUd6b3ROaENrWUxOYnNzZjQxUFB3UnA3V25WbWZBbkdYQjVLWnZJQzdIRkxLalNpYUlWXzhuSjBRd2tDVkpQdWI1aTRpRlVlcXNrT2M4RGJ6aEc2LUYtcUFIUTg3d1ZjaTM3TVRCOWRkSkk?oc=5">유럽에서 CFD 시장 점유율이 6.7%로 하락, 암호화폐와 주식에 추월됨: ESMA - Finance Magnates</a> <span class="p0-desc">유럽에서 CFD 시장 점유율이 6.7%로 하락하고 암호화폐 및 주식이 추월함: ESMA - Finance Magnates. (6.7% 변경) 급락 관련 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 유럽에서 CFD 시장 점유율이 6.7%로 하락, 암호화폐와 주식에 추월됨: ESMA - Finance Magnates 
-총 15건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (10건): 규제, 금융위원회, 알림마당 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (1건): modernization, crowdfunding, committee 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **🔴 보안/해킹** (1건): association, conference, structure 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 유럽에서 CFD 시장 점유율이 6.7%로 하락, 암호화폐와 주식에 추월됨: ESMA - Finance Magnates
-
-### 주요 이슈
-
-- SEC Small Business Advisory Committee to Discuss IPO Modernization and Regulatio
-- 불법 가상자산업체 웹사이트 27곳 국내 접속 차단…앱 이어 규제 강화 - 포커스경제
-- Zumo, '영국 암호화폐 규제 추적기' 출시 - CoinGeek
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 5건, 유럽 5건, 미국 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 15건
 - **한국**: 5건

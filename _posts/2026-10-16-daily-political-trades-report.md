@@ -14,7 +14,6 @@ description: "정치인 거래·정책 동향 27건 수집. 의회 거래 1건, 
 image_alt: "정치인 거래·정책 리포트 - 2026-10-16 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-16.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-16** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **27건** — 미국 의회 거래 1건, SEC 내부자 거래 15건, 한국 정치인 1건, 중앙은행 10건
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-16 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(8회), **SEC(미국증권거래위원회)**(4회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **27건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, SEC 내부자 거래 15건, 한국 정치인 1건, 중앙은행 10건입니다.
-
-**미국 의회 거래** 동향에서는 Ad targeting Moskowitz cites up to $8 million in stock trades, but actual earnings remain unclear WPLG Local 10 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 ECB faces tough decision in October as equities begin to wilt under high interest rates EUbusiness.com 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 김종인 "임광현 발탁이 의외?…강훈식도 정치문제 하나도 해결 못 했다" 위키트리 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-10-16 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 27건 — 미국 의회 거래 1건, SEC 내부자 거래 15건, 한국 정치인 1건, 중앙은행 10건
+- 1. Ad targeting Moskowitz cites up to $8 million in stock trades, but actual earnings remain unclear - WPLG Local 10
 
 ## 1. 미국 의회 거래 동향
 

@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Ledger, 9천만 달러 규모의 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지 - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 36건 수집</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, CPI 관련 14건</li><li>📈 <strong>가격/시장</strong>: 달러, 인플레이션 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQURPMXU4YzZLQ1ZPQ3dLRHMyZ0JwZEZYZjZXVzZQRWpjMENONHd4ZmRSeE91eVBPS1VFQWI2eUl0OFhrMHZGNlFCVUp4QTFQMmpERjNDdUptV1Y0QnBjX3RQbU9nMVZodE5DVTFVaVB1eFV3M1Z0WnVDR2xwaFRaSXVxRUROUk1XTDNSa2J5aU1wUTVCZTF1N0w1QmRZU3dBY0k0OHZIQUVnS2x3Rkh6WUhtM0pQUFJmOWdPbmFlTVRKWE9BN1piem5xdWtHejZXcVE?oc=5">Ledger, 9천만 달러 규모의 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지</a> <span class="p0-desc">Ledger, 9천만 달러 규모 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지 PYMNTS.com</span></li><li><a href="https://decrypt.co/380894/character-ai-bankruptcy-disney-users-grief-resources">Character.AI Disney가 2,000만 달러를 입찰하여 파산 신청을 하고 사용자는 애도 자원을 얻습니다.</a> <span class="p0-desc">한때 10억 달러 가치로 평가되었던 이 챗봇 앱은 새 모델 출시 2주 만에 델라웨어 법원에서 판매될 예정입니다. 아무도 사지 않으면 문을 닫습니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **118건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📊 매크로/금리
+- 2026-10-15 암호화폐 핵심 뉴스: 개혁 기부자 벤 델로(Ben Delo)가 설립한 암호화폐 거래소, 2천만 파운드 소송. 총 118건 분석, 핵심 테마는 비트코인, 거래소, 매크로/금리입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
