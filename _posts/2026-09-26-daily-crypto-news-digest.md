@@ -278,7 +278,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/strategy-seeks-shareholder-approval-daily-preferred-stock-dividends?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Strategy seeks shareholder approval for daily preferred stock dividends</a>
-<p class="news-desc">Strategy’s proposal would move STRC and its three other preferred stocks to daily dividend payments, following a similar move by Bitcoin treasury firm Strive.</p>
+<p class="news-desc">전략은 우선주 라인업에 일일 지급금을 도입할 계획이며, STRC는 11월에 새로운 일정을 먼저 채택할 것으로 예상됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -290,7 +290,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/policy/2026/09/24/u-s-federal-reserve-moves-on-proposals-to-implement-genius-act-for-stablecoins" class="news-title" target="_blank" rel="noopener noreferrer">U.S. Federal Reserve moves on proposals to implement GENIUS Act for stablecoins</a>
-<p class="news-desc">The Fed proposed rules on putting last year's GENIUS Act into place with regulations, including those governing stablecoin yield programs.</p>
+<p class="news-desc">연준은 스테이블코인 수확량 프로그램을 관리하는 규정을 포함하여 작년의 GENIUS Act를 규정과 함께 시행하는 규칙을 제안했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -302,7 +302,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://bitcoinmagazine.com/news/strategy-proposes-daily-dividends" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Treasury Strategy Proposes Daily Dividends For Preferred Stocks</a>
-<p class="news-desc">Bitcoin Magazine Bitcoin Treasury Strategy Proposes Daily Dividends For Preferred Stocks Strategy stockholders are being asked to attend a meeting to approve daily dividends on STRF, STRC, STRK, and STRD.</p>
+<p class="news-desc">전략 주주들은 STRF, STRC, STRK 및 STRD에 대한 일일 배당금을 승인하기 위한 회의에 참석하라는 요청을 받고 있습니다.</p>
 <span class="source-tag" data-source-type="default">Bitcoin Magazine</span>
 </div>
 </div>

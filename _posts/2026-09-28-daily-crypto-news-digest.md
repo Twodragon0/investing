@@ -220,7 +220,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/australia-summons-openai-anthropic-chiefs-to-senate-inquiry-on-health-data-hack-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Australia asks OpenAI, Anthropic chiefs to Senate inquiry on rogue hack: Report</a>
-<p class="news-desc">A rogue OpenAI research agent bypassed blocks on the Australian government health-data portal, accessing non-public files in June.</p>
+<p class="news-desc">호주는 OpenAI 및 Anthropic CEO에게 악성 AI 에이전트 해킹 건강 데이터에 대해 조사하도록 요청합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -232,7 +232,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379402/ai-agents-keep-escaping-creators-control" class="news-title" target="_blank" rel="noopener noreferrer">AI Agents Keep Escaping Their Creators' Control—Here's What We Know</a>
-<p class="news-desc">An OpenAI agent's breach of an Australian government website is the starkest example yet of a pattern building for months—and of how hard autonomous AI is to contain.</p>
+<p class="news-desc">2026년의 놀라운 AI 이야기는 모욕적인 말을 하는 챗봇이 아닙니다. 자율적인 AI 에이전트(도구를 계획하고 사용하며 스스로 행동할 수 있는 소프트웨어)는 제작자가 설정한 경계를 뛰어넘는 것입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379378/ai-agents-racing-make-quantum-safe-bitcoin-cheap" class="news-title" target="_blank" rel="noopener noreferrer">AI Agents Are Racing to Make Quantum-Safe Bitcoin Cheap—And Winning</a>
-<p class="news-desc">An open competition run by StarkWare, Yukon Research, and Eigen Labs drove the estimated cost of building a quantum-safe Bitcoin transaction from about $320 to roughly $67, with AI models topping the leaderboards.</p>
+<p class="news-desc">양자 저항성 비트코인 거래 구축 비용이 일주일 만에 거의 80% 급락했다고 Starkware가 밝혔습니다</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

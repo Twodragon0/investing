@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/28/trump-steel-plant-iowa.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump announces plan for $15 billion steel plant, would be largest in U.S. history</a>
-<p class="news-desc">Trump's announcement with Mesabi Metallics comes as Americans' souring views of the economy are poised to shape the upcoming midterm election.</p>
+<p class="news-desc">트럼프의 메사비 메탈릭스(Mesabi Metallics) 발표는 경제에 대한 미국인들의 냉담한 견해가 다가오는 중간 선거를 결정할 준비가 되어 있는 가운데 나온 것입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

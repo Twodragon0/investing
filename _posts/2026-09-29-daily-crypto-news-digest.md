@@ -291,7 +291,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379412/morning-minute-sec-clears-token-buybacks-for-crypto-networks" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: SEC Clears Token Buybacks for Crypto Networks</a>
-<p class="news-desc">The Gary Gensler era is long gone and now the SEC is providing clarity on what crypto protocols can and can’t do with their tokens.</p>
+<p class="news-desc">Gary Gensler 시대는 오래 전에 지나갔고 이제 SEC은 암호화 프로토콜이 토큰으로 무엇을 할 수 있고 할 수 없는지에 대한 명확성을 제공하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -303,7 +303,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-29 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security" class="news-title" target="_blank" rel="noopener noreferrer">SEC Staff Says Token Buybacks Don't Make Crypto a Security—If the Network Works</a>
-<p class="news-desc">New SEC staff guidance says announcing a token buyback on a functional network isn't a promise that turns the token into a security, a shift one attorney says makes securities laws look "opt-in."</p>
+<p class="news-desc">자체 토큰을 다시 구매하려는 암호화폐 프로젝트는 한 가지 큰 조건과 함께 SEC 직원으로부터 승인을 받았습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

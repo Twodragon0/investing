@@ -223,7 +223,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379391/bitcoin-etfs-notch-seven-day-winning-streak-as-2026-flows-turn-green" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin ETFs Notch Seven-Day Winning Streak as 2026 Flows Turn Green</a>
-<p class="news-desc">Bitcoin ETFs have drawn nearly $3 billion over seven straight sessions, erasing post-Clarity Act losses and pushing 2026 flows back into positive territory.</p>
+<p class="news-desc">비트코인 ETF는 7일 연속 거의 30억 달러를 유치하여 Clarity Act 이후 손실을 없애고 2026년 자금 흐름을 다시 녹색으로 만들었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379383/how-crypto-stopped-waiting-congress-learned-love-regulators" class="news-title" target="_blank" rel="noopener noreferrer">How Crypto Stopped Waiting for Congress and Learned to Love the Regulators</a>
-<p class="news-desc">After the Clarity Act failed in the Senate, the SEC, CFTC, and the Fed moved within days to write crypto's rules themselves. Will it be enough?</p>
+<p class="news-desc">상원에서 명확성법(Clarity Act)이 실패하자 규제 당국은 며칠 내에 암호화폐 규칙을 직접 작성했습니다. 충분할까요?</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379319/bitcoin-slows-billion-options-expiry-xrp-solana" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Rally Slows as $15.6 Billion Options Expiry Hits—XRP and Solana Keep Climbing</a>
-<p class="news-desc">Pullback or reversal? Here's what the charts suggest for BTC.</p>
+<p class="news-desc">비트코인 랠리은 오늘 둔화되었지만 XRP 및 솔라나가 더 나은 성과를 거두면서 더 넓은 암호화폐 시장 전반의 정서는 대부분 높게 유지되었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

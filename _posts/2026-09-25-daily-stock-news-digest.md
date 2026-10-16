@@ -218,7 +218,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/crypto/articles/strive-ceo-bitcoin-could-infinity-015100441.html" class="news-title" target="_blank" rel="noopener noreferrer">Strive CEO: Bitcoin Could ‘Go to Infinity' as Dollar Debt Crisis Breaks</a>
-<p class="news-desc">Strive's Matt Cole says Bitcoin could go to infinity against a dollar he expects to break under a mounting US debt crisis.</p>
+<p class="news-desc">Strive의 Matt Cole은 미국의 부채 위기가 커지면서 비트코인이 1달러 대비 무한대가 될 수 있다고 말합니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

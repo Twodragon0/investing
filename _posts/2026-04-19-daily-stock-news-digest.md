@@ -162,7 +162,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://finance.yahoo.com/markets/commodities/articles/big-short-investor-michael-burry-121500216.html" class="news-title" target="_blank" rel="noopener noreferrer">Big Short 투자자 Michael Burry는 트럼프의 이란 전쟁 결정이 외교 정책이 아닌 다른 것에 의해 주도되고 있다고 말했습니다.</a>
-<p class="news-desc">다음 재정적 단계는 무엇입니까? 모기지, 대출, 보험, 투자 등에 관해 현명한 결정을 내리는 데 도움이 되는 전문가의 조언, 최신 뉴스 및 무료 도구를 받아보세요.</p>
+<p class="news-desc">휘발유 가격과 은퇴 계좌가 동일한 헤드라인에 반응하는 것처럼 느껴져서는 안 되지만 최근에는 그렇습니다. 전직 헤지펀드 투자자 마이클 버리(Michael Burry)는 주식시장이 미국의 이란 전쟁에만 반응하는 것이 아니라 미국의 전쟁 속도도 결정하고 있다고 주장한다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

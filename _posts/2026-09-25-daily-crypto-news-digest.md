@@ -167,7 +167,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘날 암호화폐 업계에서 스테이블코인 송금은 84%의 비용 절감을 제공하고, 솔라나는 상하이 이벤트를 연기하며 OpenAI 연구 모델은 허가 없이 테스트넷 Ether를 소비합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -179,7 +179,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/new-york-polymarket-illegal-gambling-operation-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">New York sues Polymarket over alleged illegal gambling business</a>
-<p class="news-desc">The action filed by state lawmakers followed a similar lawsuit against prediction markets company Kalshi in July that alleged the platform was running an illegal gambling operation.</p>
+<p class="news-desc">스포츠 이벤트 계약에 대해 Polymarket을 상대로 한 뉴욕 소송은 예측 시장 산업을 독점적으로 감독하려는 연방 공무원에게 또 다른 도전을 제공합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -191,7 +191,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/ibm-banks-swift-ledger-tokenized-deposit-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">IBM opens beta Swift ledger link for 24/7 tokenized deposits</a>
-<p class="news-desc">IBM’s beta link lets banks instruct tokenized deposit transfers on Swift’s ledger using existing payment messages and compliance processes.</p>
+<p class="news-desc">IBM의 베타 Swift 원장 링크를 통해 은행은 24시간 내내 토큰화된 예금 이체를 지시하고 기존 시스템을 통해 최종 결제를 수행할 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -234,7 +234,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/sofi-moves-25b-card-program-to-stablecoin-settlement-with-mastercard?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">SoFi tie-up shows stablecoins can provide alternative blockchain settlement rail</a>
-<p class="news-desc">SoFi dives deeper into payments as it moves its entire card program to blockchain-based settlement using its SoFiUSD stablecoin, with more than $25 billion in expected annualized volume.</p>
+<p class="news-desc">SoFi는 연간 250억 달러 이상의 거래량을 블록체인 기반 결제로 처리할 것으로 예상되는 프로그램을 이동하면서 SoFiUSD 스테이블코인을 사용하여 마스터카드 카드 거래 결제를 시작했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -246,7 +246,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/eu-eba-crypto-lending-defi-mica-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">EU banking watchdog calls for crypto lending rules under MiCA</a>
-<p class="news-desc">The EBA outlined potential rules for crypto lending and firms providing access to DeFi protocols as part of the European Commission’s MiCA review.</p>
+<p class="news-desc">EBA는 유럽위원회에 레버리지 한도 및 적합성 테스트를 포함하여 암호화폐 대출 및 디파이 액세스를 MiCA에 도입하는 것을 고려할 것을 촉구했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -289,7 +289,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/crypto-treasury-firms-below-nav-sequans-bitcoin-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Crypto treasury model loses its edge as stock premiums fade: DWF</a>
-<p class="news-desc">Most DATs now trade below the value of their crypto holdings, weakening a financing model that once helped companies expand their balance sheets.</p>
+<p class="news-desc">DWF는 Sequans가 남은 비트코인을 매도하고 전략을 종료함에 따라 암호화폐 재무 붐을 주도한 프리미엄이 사라졌다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -301,7 +301,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/sequans-exits-bitcoin-treasury-strategy-after-selling-remaining-314-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Sequans exits Bitcoin treasury strategy after selling remaining 314 BTC</a>
-<p class="news-desc">The France-based semiconductor company has fully unwound a Bitcoin treasury that once held more than 3,200 BTC as more firms scale back crypto holdings.</p>
+<p class="news-desc">프랑스에 본사를 둔 반도체 회사인 Sequans는 남은 314 BTC을 매각하여 한때 3,200 BTC 이상을 보유했던 비트코인 재무부 정리를 완료했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

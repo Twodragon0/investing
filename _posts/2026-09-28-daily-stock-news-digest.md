@@ -262,7 +262,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/09/26/audemars-piguet-and-royal-pop-defy-luxury-watch-slump-and-tariffs.html" class="news-title" target="_blank" rel="noopener noreferrer">Audemars Piguet says its Royal Pop collaboration with Swatch is breaking sales records, despite luxury watch slump and tariffs</a>
-<p class="news-desc">Swiss luxury watchmaker Audemars Piguet says its sales and engagement are breaking records after its risky, eye-catching Royal Pop collaboration with Swatch.</p>
+<p class="news-desc">스위스 명품 시계 제조사인 오데마 피게(Audemars Piguet)는 위험하고 시선을 사로잡는 로열 팝(Royal Pop)과 스와치(Swatch)의 협업 이후 자사의 판매 및 참여가 기록을 깨고 있다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
