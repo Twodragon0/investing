@@ -23,6 +23,7 @@ on:
       - Security Scan
       - Code Quality
       - Guard Falsifiability
+      - Lighthouse CI
     types: [completed]
 
 permissions:
