@@ -156,7 +156,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTG9TMW5xNVlWX1Z1M2tfVmlrX09EZkoxQjFSTFBoWjRBVkE5WTlHYnM2T0hGM3hqSjVHdjZxUHR4ZXhiYmRGYlhyQ3U0ZnR6UEVIUVFSVGt5cUNMQWxQZTVsY0cyUEhjaVdaZl9sY05OdzNkeEk0VHNJb0hZUzZaSGd6TUxyOXfSAYwBQVVfeXFMTkpIcEhpSzBodHBTMk9lMjdSZnVSTnY0M0xzSEhYVmVJbC11ZTF3U1lIekRJWnVQZWRoQVlpRm1DcnFDaWtlWnBGU3czWnRPLVlMaHZsdkdPNEk2cTdOclVSOXN3NzdzY0FmaXhDbVFxaWRZUDh3SE56YjRKWjlFQlE1YmNJSi1fVlVSaTM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">기술 대패 속에서 투자자들이 채권의 안전으로 도망가면서 국채 수익률이 하락</a>
-<p class="news-desc">기술 대패 속에서 투자자들이 채권의 안전으로 도망가면서 국채 수익률이 하락. 주요 키워드: 기술, 대패, 속에서.</p>
+<p class="news-desc">기술 대패 속에서 투자자들이 채권의 안전으로 도망가면서 국채 수익률이 하락.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>

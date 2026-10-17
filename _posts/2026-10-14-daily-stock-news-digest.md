@@ -105,7 +105,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPNS1RajNzSWN1YnRqbW1WTWNSaUJJczRvV3JDMFFZNElEOW5RT2l4c1NhcEZwSmtSd3RYajlVV3dFUFNaZzlsaC1uUlBWNXIwdF9zUGZqZXVyN3B3NVZ4RGh1b2JMWXhvSkpES2F2dldheGc2S2xCaXFCMjRZTldKWUduZ2lqUDlzcXgwNk1mbXlDbHdFekJ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유 - 외교협회</a>
-<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유. 주요 키워드: 재무부, 노력에, 미국.</p>
+<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -158,7 +158,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RDVhOHRXVHBJMzVMUnYwZUVUM2FzcTZjc0hOQWdtUVBGdWM3OUE3SEdRakRMOGRIM3ExZXRrQTRZMVpIaGFMc1dSamQ1MTVYdDlvcEJBMExxb05lNGVGMDg1RWVDV2J5RkZnN0RYTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 코스피는 박스권 유지, 코스닥은 박스권 탈출로 반도체 소부장 및 2차전지 섹터 긍정적 - 뉴스퀘스트</a>
-<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표 】[2026년 10월 12일 장전 국내시황]오픈AI의 올해 말 연율 환산 매출이 700억 달러에 도달하거나 이를 넘어설</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표 】[2026년 10월 12일 장전 국내시황] 오픈AI의 올해 말 연율 환산 매출이 700억 달러에 도달하거나 이를 넘어설</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>

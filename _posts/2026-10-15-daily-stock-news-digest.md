@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9rY2ZrYlRROFM1ZUZTY2JmaEwyRTJnUUhfbEJNNWd5UkQ5WjkyODVLd3NndlZIa1plMVNqT25YRzh4S1BiaXI5bUdqZWt1UGpDZzBudE9BUlNlOWPSAWBBVV95cUxNRlpnWkx0NV9tYWpiVkZTVjZNdmh5LVhrbzd6X2FDZ0VmNmJJYXh4d3c3bVBQM044TEFIbTdnQ1NtV2hpNmdlUTlqeWJjQnpDSkZleHBYVlEzZ1RsRXQ2ajg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(13일) 주요공시</a>
-<p class="news-desc">코스피·코스닥 전 거래일(13일) 주요공시. 주요 키워드: 코스피, 코스닥, 거래일.</p>
+<p class="news-desc">코스피·코스닥 전 거래일(13일) 주요공시.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPNS1RajNzSWN1YnRqbW1WTWNSaUJJczRvV3JDMFFZNElEOW5RT2l4c1NhcEZwSmtSd3RYajlVV3dFUFNaZzlsaC1uUlBWNXIwdF9zUGZqZXVyN3B3NVZ4RGh1b2JMWXhvSkpES2F2dldheGc2S2xCaXFCMjRZTldKWUduZ2lqUDlzcXgwNk1mbXlDbHdFekJ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유 - 외교협회</a>
-<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유. 주요 키워드: 재무부, 노력에, 미국.</p>
+<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -270,7 +270,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkNncVkwQU9JeFhSRFFWQ1FhcW5SUk5hY1hQMkpocmdCRlZ5b04zOGJnZ184T1lONDh1cUQwZFY3RVJxUmJzZDhpUWZ0RlhsUGluV3hoVG1TV2JWNEZtUS12R1Z0VURRQmt3SjkyUU44UkZTcmF1RnFaTm9POE9LYW5TWjY3el9jNzQwV1lOVkhaOGFDTE9Wc1NrM0RYTzJ5UFM4eF92UWV3LW03SHJ1U1I5cHF4eDNFS1liNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">나스닥은 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다.</a>
-<p class="news-desc">나스닥은 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다. 주요 키워드: 나스닥, 제조업체, 은행.</p>
+<p class="news-desc">나스닥은 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -282,7 +282,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFA5LXlOZnZiVWJqSnQ2TzM5RmJkamRlQ0dDeFQ3QjVMOVB6TFFUaENwSGJsOEk5enQwRVRPSUN6cGlDNldmXzdTX3ZLYmpiZFJaWW9WbFF1RUZYRjhuMk5NZ0lWa0JtREEyM2ZXV3R3cU9KWDVwYk9UbA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">S&P 500은 뜨거운 인플레이션 보고서 이후 수익률이 상승함에 따라 하락합니다: 실시간 업데이트</a>
-<p class="news-desc">S&amp;P 500은 뜨거운 인플레이션 보고서 이후 수익률이 상승함에 따라 하락합니다: 실시간 업데이트. 주요 키워드: 뜨거운, 인플레이션, 보고서.</p>
+<p class="news-desc">S&amp;P 500은 뜨거운 인플레이션 보고서 이후 수익률이 상승함에 따라 하락합니다: 실시간 업데이트.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>

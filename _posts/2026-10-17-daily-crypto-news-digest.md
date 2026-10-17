@@ -316,7 +316,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다</a>
-<p class="news-desc">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다. 주요 키워드: 암호화폐, 일은, 다음.</p>
+<p class="news-desc">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
