@@ -71,7 +71,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9TZUNQYnJnamstRklFSnhfcTRIcDB2R05ZQ3ZUUjZPMjhkR182b0FTUkJtR1I5aG5fbFVtR2I4UVZRNUZhZHd6cC1VeE9tVnVhcmRmVGZycjQ5Uml6?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 8만달러선 위태…美 물가 충격에 4억8300만달러 강제 청산 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 8만달러선 위태…美 물가 충격에 4억8300만달러 강제 청산 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 미국의 물가 상승세가 다시 가팔라지면서 비트코인 가격이 15일 8만달러선까지 밀렸다. 미 연방준비제도(Fed·연준)의 이달 기준금리 인상 가능성이 다시 부각되자 위험자산 회피 심리가 확산됐고, 암호화폐 선물시장에서는</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -126,7 +126,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/ledger-new-hardware-device-asia-wallet-tampering?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Ledger’s answer to wallet tampering costs $849 and ships next year</a>
-<p class="news-desc">Ledger’s new Atom combines crypto wallet security with everyday apps and is expected to ship in summer 2027 as the company investigates tampered wallets sold in Asia.</p>
+<p class="news-desc">Ledger는 공인 아시아 리셀러가 판매한 손상된 지갑을 확인한 지 며칠 만에 변조 방지 기능을 갖춘 새로운 암호화 보안 장치인 Atom을 출시했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -138,7 +138,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/bitget-liquid-exploits-push-crypto-hacks-near-12b-q3?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitget, Liquid exploits push Q3 crypto hacks toward $1.2B</a>
-<p class="news-desc">Compromised suppliers, developer tools and infrastructure components outside security audits drove about 77% of the quarter’s total losses, according to Hacken.</p>
+<p class="news-desc">3분기 암호화폐 해킹은 이전 분기보다 55% 증가했으며 손실의 77%는 보안 감사 이외의 공급업체, 개발자 도구 및 기타 인프라 구성 요소가 손상되어 발생했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -167,7 +167,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9UREFNTjhBMS10T3NleXdvNG9yanBma0xDRU1rZXAtQjFQWUtzaXJSZlBSV0gxc1I4bmx1dERDaWZhNlhRb2hUdm1R?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인(BTC) 2.60% 하락한 8만538달러…CPI 쇼크에 위험회피 - 코인리더스</a>
-<p class="news-desc">비트코인(BTC) 2.60% 하락한 8만538달러…CPI 쇼크에 위험회피 코인리더스</p>
+<p class="news-desc">Bitcoin(BTC)/코인리더스자료사진©비트코인(BTC)이미국소비자물가지수(CPI)상승률이시장예상을웃돌면서하락세를보이고있다.레버리지롱포지션청산까지겹</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -179,7 +179,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBuQU41VjE0MFNtcWx4MlNBQVVVUkFDTF9sQS1KU05XWEYtSWd0RFN0NlZGQWJaX1N6UWRSWll5R2FkTjNzTXlHd3poSWdLbUR5Y3RFNmNCZEVDR1lx?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 8만4000달러 눈앞…美 금리 인상 우려 완화에 반등 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 8만4000달러 눈앞…美 금리 인상 우려 완화에 반등 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 비트코인이 미국 연방준비제도(Fed·연준)의 추가 금리 인상 우려가 완화되면서 8만4000달러선에 바짝 다가섰다. 달러화가 약세로 돌아서고 아시아 증시가 반등하면서 암호화폐 시장에도 매수세가 유입됐다. 다만 중동 분쟁</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -191,7 +191,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFA0bXZyNGtpRzdlSzJDaGxVNEI2RDNTSWZIcU9vRnlvbEw2R3dBbmxTY19uVFdhSzEycGlBbmVudGR4ZVFaeVZpQnkwTFJfYk9YSWFRWE8zZC0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인 8만1000달러 밑으로…물가·AI주 매도세 겹쳐</a>
-<p class="news-desc">비트코인 8만1000달러 밑으로…물가·AI주 매도세 겹쳐 토큰포스트</p>
+<p class="news-desc">미국 9월 소비자물가 상승률이 시장 예상치를 웃돌고 AI주 매도세가 강해지면서 비트코인이 8만1000달러 아래로 밀렸다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -220,7 +220,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5tUmRKVG41TDhqZHlYYkdLNlphYi1hYktTTUJSdEtHa1ZBNkdvYTBraUw4RjZQOEZCQTU1b2V3d0x0b3NSS1p4QkFNVWdnTkhGcUZLSVdickQwVTd1UkNtNA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">세일러 “비트코인 수천개 매도에도 가격 부정 영향 없어”</a>
-<p class="news-desc">세일러 “비트코인 수천개 매도에도 가격 부정 영향 없어” 토큰포스트</p>
+<p class="news-desc">마이클 세일러는 스트래티지가 주주와 신용 투자자의 이익에 부합하면 비트코인을 매매할 수 있어야 한다고 말했다. 처음 32개를 팔았을 때와 달리 이후 수천개 매도는 시장이 소화했다고 설명했다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -232,7 +232,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE4tS09DaktpUFNodkJiVUdKa0V4YnJPRmhpV1N2R3ZhNExlU3doNkVTN1lxZmhSRXYwMVEwdENuamNmSHRXd1U4RnI0MWQ3MndF?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">러시아, 개인 간 암호화폐 거래 금지…내년 7월 적용 - 블루밍비트</a>
-<p class="news-desc">러시아, 개인 간 암호화폐 거래 금지…내년 7월 적용 블루밍비트</p>
+<p class="news-desc">러시아가 내년 7월부터 개인 간 암호화폐 직거래를 전면 금지한다. 15일(현지시간) 코인텔레그래프에 따르면 러시아 중앙은행인 러시아은행은 이날 개인 간 암호화폐 직거래를 2027년 7월 1일까지만 허용하며 이후 전면 금지한다고 밝혔다. 러시아은행은 개인이 암호화폐를 셀</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE5aeThvZ0h6bV9VZ1hBbGVHWVBjSjZlVk15cU9FWms1dkJKTUUzRTRka1lEX0VpNUVRczY2WHVzY18xLVdtN1A5Z1Vn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">카르다노(ADA), 5달러까지 뛴다."비트코인(BTC) 29만 5,000달러 찍으면 가능" - 코인리더스</a>
-<p class="news-desc">카르다노(ADA), 5달러까지 뛴다."비트코인(BTC) 29만 5,000달러 찍으면 가능" 코인리더스</p>
+<p class="news-desc">카르다노(ADA)/AI생성이미지 비트코인(Bitcoin,BTC)이29만5,000달러까지오르는강세장에서카르다노(Cardano,ADA)가5달러에도달할수있다는전망이나왔다.매체가</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -266,7 +266,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 
 ### 🔵 규제/정책 (13건)
 
-*Need to know what happened in crypto today?*
+*오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까?*
 
 
 <div class="news-card-item news-sev-medium">
@@ -287,7 +287,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다</a>
-<p class="news-desc">Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.</p>
+<p class="news-desc">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다. 주요 키워드: 암호화폐, 일은, 다음.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -299,7 +299,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/bo-hines-donald-trump-crypto-advisor-nxum-tether-conflict?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Ex-Trump crypto adviser profited after helping pass stablecoin bill: WSJ</a>
-<p class="news-desc">The Wall Street Journal reported that a company co-founded by Bo Hines benefited from the passage of the GENIUS stablecoin bill.</p>
+<p class="news-desc">Wall Street Journal은 전 백악관 암호화폐 고문인 Bo Hines의 회사 Nxum이 GENIUS 법이 의회를 통과하는 동안 테더과의 630만 달러 거래로 이익을 얻었다고 보고했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

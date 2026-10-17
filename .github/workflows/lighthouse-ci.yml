@@ -10,6 +10,8 @@ on:
       - 'pages/**'
       - 'sw.js'
       - 'manifest.json'
+  schedule:
+    - cron: '0 15 * * 0'
   workflow_dispatch:
 
 permissions:
@@ -49,6 +51,8 @@ jobs:
           urls: |
             http://localhost:8080/
             http://localhost:8080/reports/
+            http://localhost:8080/crypto/
+            http://localhost:8080/market-analysis/
           configPath: .lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true

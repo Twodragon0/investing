@@ -25,7 +25,7 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-16 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 1. Ad targeting Moskowitz cites up to $8 million in stock trades, but actual earnings remain unclear - WPLG Local 10
+- 1. Moskowitz를 타겟팅하는 광고에서는 주식 거래가 최대 800만 달러에 달한다고 언급하지만 실제 수익은 불분명합니다 - WPLG Local 10
 
 ## 1. 미국 의회 거래 동향
 

@@ -40,7 +40,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="stat-item"><div class="stat-value">비트코인</div><div class="stat-label">핫 키워드 (26회)</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Ledger, 9천만 달러 규모의 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지 - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 36건 수집</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, CPI 관련 14건</li><li>📈 <strong>가격/시장</strong>: 달러, 인플레이션 이슈 부각</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQURPMXU4YzZLQ1ZPQ3dLRHMyZ0JwZEZYZjZXVzZQRWpjMENONHd4ZmRSeE91eVBPS1VFQWI2eUl0OFhrMHZGNlFCVUp4QTFQMmpERjNDdUptV1Y0QnBjX3RQbU9nMVZodE5DVTFVaVB1eFV3M1Z0WnVDR2xwaFRaSXVxRUROUk1XTDNSa2J5aU1wUTVCZTF1N0w1QmRZU3dBY0k0OHZIQUVnS2x3Rkh6WUhtM0pQUFJmOWdPbmFlTVRKWE9BN1piem5xdWtHejZXcVE?oc=5">Ledger, 9천만 달러 규모의 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지</a> <span class="p0-desc">Ledger, 9천만 달러 규모 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지 PYMNTS.com</span></li><li><a href="https://decrypt.co/380894/character-ai-bankruptcy-disney-users-grief-resources">Character.AI Disney가 2,000만 달러를 입찰하여 파산 신청을 하고 사용자는 애도 자원을 얻습니다.</a> <span class="p0-desc">한때 10억 달러 가치로 평가되었던 이 챗봇 앱은 새 모델 출시 2주 만에 델라웨어 법원에서 판매될 예정입니다. 아무도 사지 않으면 문을 닫습니다.</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQURPMXU4YzZLQ1ZPQ3dLRHMyZ0JwZEZYZjZXVzZQRWpjMENONHd4ZmRSeE91eVBPS1VFQWI2eUl0OFhrMHZGNlFCVUp4QTFQMmpERjNDdUptV1Y0QnBjX3RQbU9nMVZodE5DVTFVaVB1eFV3M1Z0WnVDR2xwaFRaSXVxRUROUk1XTDNSa2J5aU1wUTVCZTF1N0w1QmRZU3dBY0k0OHZIQUVnS2x3Rkh6WUhtM0pQUFJmOWdPbmFlTVRKWE9BN1piem5xdWtHejZXcVE?oc=5">Ledger, 9천만 달러 규모의 암호화폐 지갑 해킹 조사 중 동남아시아 리셀러 정지</a> <span class="p0-desc">Ledger는 조사가 진행되는 동안 동남아시아와 홍콩의 리셀러 및 유통업체에 암호화폐 하드웨어 지갑 판매를 중단할 것을 요청했습니다.</span></li><li><a href="https://decrypt.co/380894/character-ai-bankruptcy-disney-users-grief-resources">Character.AI Disney가 2,000만 달러를 입찰하여 파산 신청을 하고 사용자는 애도 자원을 얻습니다.</a> <span class="p0-desc">한때 10억 달러 가치로 평가되었던 이 챗봇 앱은 새 모델 출시 2주 만에 델라웨어 법원에서 판매될 예정입니다. 아무도 사지 않으면 문을 닫습니다.</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -60,7 +60,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxQdkZHd1V3aGszWWt3X2xsbmMtZGpIXzhTVFZXRUR2RVVUMzkwV1p6YzZVQV8wNGI0LXAtdTM5RTJSZkwzRlF0X0FBWTlCVlNTM0tSWGtxU2dhb3BDNUhDbXhoQm5LUGlpZ1VIanFvTm5iR1QyQXdZMGRRbGRLR3kxQ24tTnBxcV9TTl9HcGlqSG1yLTlyV0dTd1Z4YUhpeGs0RDRuOGpyTWUzc0ltUEFEbE9BVmZPakxlQVZoVXhGUG9uaERkeXQ4OUtnSC10bzNYUFMtS190M1ExM1I4WWVHd1FoWmdPZmx1UHY2LUx4TWlteTN2QUhBcTNuWQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Michael Saylor는 자신의 회사가 같은 주에 85% 적은 금액을 매입했음에도 불구하고 라이벌의 2억 8천만 달러 비트코인 매수를 응원했습니다. - 연중무휴 월 스트리트</a>
-<p class="news-desc">Michael Saylor는 자신의 회사가 같은 주에 85% 적은 금액을 매입했음에도 불구하고 라이벌의 2억 8천만 달러 비트코인 매수를 응원했습니다. 연중무휴 월스트리트</p>
+<p class="news-desc">Michael Saylor는 자신의 회사와 직접 경쟁하는 회사로부터 비트코인 구매를 공개적으로 응원했으며, 같은 주에 그의 회사는 비트코인 이외의 제품에 훨씬 더 많은 돈을 썼습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -84,7 +84,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBuQU41VjE0MFNtcWx4MlNBQVVVUkFDTF9sQS1KU05XWEYtSWd0RFN0NlZGQWJaX1N6UWRSWll5R2FkTjNzTXlHd3poSWdLbUR5Y3RFNmNCZEVDR1lx?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 8만4000달러 눈앞…美 금리 인상 우려 완화에 반등 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 8만4000달러 눈앞…美 금리 인상 우려 완화에 반등 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 비트코인이 미국 연방준비제도(Fed·연준)의 추가 금리 인상 우려가 완화되면서 8만4000달러선에 바짝 다가섰다. 달러화가 약세로 돌아서고 아시아 증시가 반등하면서 암호화폐 시장에도 매수세가 유입됐다. 다만 중동 분쟁</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -170,7 +170,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9ucmNadHBGZ2c1OFRYTlZpbndxeExGQ0Jyb2MySFZwLTgyajFGOTRHSzZja1ZlWGxBVXBTNkhVMFZUTUhCejZ3Xzdn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인(BTC), CPI 앞 ETF 1억 7,600만달러 베팅."물가 약하면 8만 5,000달러" - 코인리더스</a>
-<p class="news-desc">비트코인(BTC), CPI 앞 ETF 1억 7,600만달러 베팅."물가 약하면 8만 5,000달러" 코인리더스</p>
+<p class="news-desc">비트코인(BTC),달러(USD) 9월소비자물가지수(CPI)발표를코앞에두고비트코인(Bitcoin,BTC)이8만3,000달러지지선위에서숨을죽이고있다. 10월14일(현지시간)</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -237,7 +237,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5pZ2YxMUk2Q1FCcVREOFFsbUQtbTVyUlpFeWVlZlhLeHFyUUZDRzc0bEUweHJJelVWbXhLSzJtNXlvX2JHa19lN253Z0xHNm1FbjBUU3NuazE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">스트라이브, 비트코인 2822개 2억3500만달러에 추가 매입</a>
-<p class="news-desc">스트라이브, 비트코인 2822개 2억3500만달러에 추가 매입 토큰포스트</p>
+<p class="news-desc">비트코인 재무기업 스트라이브가 비트코인 2822개를 추가 매입했다. 매입액은 2억3500만달러(약 3151억원)로 전해졌다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -280,7 +280,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다. 주요 키워드: 암호화폐, 일은, 다음.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

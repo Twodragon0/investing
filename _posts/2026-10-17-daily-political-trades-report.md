@@ -14,7 +14,6 @@ description: "펠로시의 마지막 빅 베팅. 오늘 이 주식 은 가격에
 image_alt: "정치인 거래·정책 리포트 - 2026-10-17 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-17.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-17** 정치권 핵심 이슈: **펠로시의 마지막 빅 베팅. 오늘 이 주식 은 가격에 올인(HWZlL7uBE7) - Unisba Media**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **35건** (미국 의회 거래 1건, SEC 내부자 거래 15건, 중앙은행 19건)을 종합 정리합니다

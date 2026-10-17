@@ -24,7 +24,7 @@ TARGETS = [
         "forbid": [r"\|\s*리포트\s*\|\s*수집 건수\s*\|\s*링크\s*\|"],
     },
     {
-        "glob": "*daily-market-report*.md",
+        "glob": "*daily-crypto-market-report*.md",
         "must_table": True,
         "must_details": False,
         "forbid": [],

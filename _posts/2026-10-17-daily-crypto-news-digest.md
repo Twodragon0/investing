@@ -72,8 +72,6 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 - 시장 영향 가능성이 있는 거래소 공지 8건 포함
 - 프로모션성 거래소 공지 6건 제외
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
 
 ## 테마별 주요 뉴스
 
@@ -88,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMmh0RS1uSENXS3E2Q2VoRFF3N044VTZraWpIOUNTbkxtSlF2d0xMS2h1b04zWFIzTmVWbm9pdHlwRTgxWUUzbGVmM3NHYkluck9yTlVNMEZxc1RiNkp1S2ROVlJyUi1adl9PNzhZTXJ0X0NBV2Z6RFJ2ZG42a1oyUkJKbDA2T1NTVmtuWVM0VmdrTDZSay1wc2dyUHBfRG5kMV9XeG5YRnlkcXFEUU5jRDZhaTVsczByR2FhX05uY2laZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">비트코인이 바닥을 쳤습니까? 우리는 Claude AI에게 $80,000 - 연중무휴 Wall St 아래로 하락한 후 물었습니다.</a>
-<p class="news-desc">비트코인이 바닥을 쳤습니까? 우리는 Claude에게 $80,000 24/7 Wall St. 아래로 하락한 후 물었습니다.</p>
+<p class="news-desc">비트코인이 $80,000 아래로 떨어지고 레버리지 거래가 9억 7,200만 달러 청산된 후 비트코인이 바닥을 쳤습니까?</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -196,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBIamk1OUIxel83VWRfcl9jYkRVZmFPbThadjJta0d2M2dkVTVWQlRHS2JDcFV1aWFnVTc0enlDaUhRVnNwSFNvMlZCdVNxMHl4SWpkdDdHZE1oMTdO?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코인 시황] 비트코인 8만달러 붕괴 후 반등…美 암호화폐 정책은 '책임자 공백 - 뉴스핌</a>
-<p class="news-desc">[코인 시황] 비트코인 8만달러 붕괴 후 반등…美 암호화폐 정책은 '책임자 공백 뉴스핌</p>
+<p class="news-desc">[서울=뉴스핌] 고인원 기자= 비트코인이 8만달러 아래로 떨어졌다가 저가 매수세에 힘입어 빠르게 반등했다. 글로벌 반도체주 급락으로 위축됐던 위험자산 투자 심리가 아시아 증시 반등과 함께 일부 회복된 모습이다.그러나 미국의 암호화폐 규제 입법이 지연되고 백악관</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -208,7 +206,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNENSSkJzRTRhWDBOcnBEMzVjaDAzNlh4TEZlMmFpSkFneWY4M1AyT2lISHJ1djFmWFl4MGN2Szk4X1FUcjJmOVJ1R2gtRzJZWUxILTFQNWpnc0V1ekZtRU9fZm5kSWgwbXp3anlVZk93aDUwdko3ek5WcUV4dFVKUW13X1Z3YjV1?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">5억 달러 손실 버틴 머스크…스페이스X 비트코인 15억 달러 회복</a>
-<p class="news-desc">5억 달러 손실 버틴 머스크…스페이스X 비트코인 15억 달러 회복 글로벌이코노믹</p>
+<p class="news-desc">일론 머스크가 이끄는 우주 항공 기업 스페이스X가 상반기 암호화폐 폭락장에서 5억 달러가 넘는 평가손실을 기록하고도 단 한 개도 처분하지 않고 버텨냈다. 미국 금융 전문 매체 더스트리트는 14일(현지시각) 스페이스X가 8월 상장 이후 처음 제출한 분기 보고서와 온체인 분석을 인</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -220,7 +218,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTFA2b0xiZW9ieWtSTWJFWjQ0RVhZRVNzSzczMFZhdWptSEdWaU9LQjJ5QVRQQy01dm9FVW5ycmdibUxuYm9vZ2d2V2dn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘 암호화폐 시장이 상승하는 이유…비트코인 지지선 방어와 규제 명확화 기대감 - 코인리더스</a>
-<p class="news-desc">오늘 암호화폐 시장이 상승하는 이유…비트코인 지지선 방어와 규제 명확화 기대감 코인리더스</p>
+<p class="news-desc">비트코인(BTC) ©고다솔 암호화폐시장이비트코인(BTC)의8만달러지지선방어와미국의규제명확화기대감에힘입어반등하고있다.전체시가총액은24시간동안</p>
 <span class="source-tag" data-source-type="aggregator">Google News KR</span>
 </div>
 </div>
@@ -263,7 +261,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOS1prb2J6Q2kxNURhZ2hpOXQwY0xSc2tkUlBJS1IwWjF2LTBqUnVMeTdzRWlHb0tBN1BrTm94WFZSVVhOZ2k1VVdjZHMxOVNBQWZ3X01JQW14aUFLWm05M3dzUHcxSTFXTmNuWDQ3Y29NcEFmVEhlWHdHcW0zOXg2S0ZB?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI 연구 모델은 스마트 계약 배포 권한 없이 제3자 테스트 ETH을 수행했습니다. - 해커 뉴스</a>
-<p class="news-desc">OpenAI 연구 모델은 스마트 계약 배포 권한 없이 제3자 테스트 ETH을 수행했습니다. 해커 뉴스</p>
+<p class="news-desc">OpenAI는 승인되지 않은 Sepalia ETH 지출 및 비공개 데이터에 대한 액세스를 포함하여 7가지 모델 정렬 오류 사건을 공개했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News EN</span>
 </div>
 </div>
@@ -318,7 +316,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다. 주요 키워드: 암호화폐, 일은, 다음.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

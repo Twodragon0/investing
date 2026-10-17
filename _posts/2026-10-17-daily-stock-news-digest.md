@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">794.78</div><div class="stat-label">KOSDAQ +4.46%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 - 196건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 선물 주목</li><li>🤖 <strong>AI/기술</strong>: 실적, 하이닉스 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHVktWSjVJemdPQXZUQTFzbXhkX0JfZkU5T0Z3bS1GSWRJdWVxUDlZMnpVcmVhSWJpdXJTQkZURlVkU3ZtVzJsOC1RYzJ0S2g3dXB6UGxod3k3dUnSAWBBVV95cUxQVm1CUjRhQmdVN1BfRVZUWmVUb2JKVXRrc3RYU0hoOUNWWEJjNmlhQnVzTFZ3NWk2RlI4MC1HeEYzTFFUVUhqcXo5eF93eW1kRjkzMTBZbjA1OVpMRTFPWlg?oc=5">KB증권 "삼성전자·SK하이닉스 급락 과도…실적은 오히려 개선"</a> <span class="p0-desc">KB증권 "삼성전자·SK하이닉스 급락 과도…실적은 오히려 개선" 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 뉴스핌</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHVktWSjVJemdPQXZUQTFzbXhkX0JfZkU5T0Z3bS1GSWRJdWVxUDlZMnpVcmVhSWJpdXJTQkZURlVkU3ZtVzJsOC1RYzJ0S2g3dXB6UGxod3k3dUnSAWBBVV95cUxQVm1CUjRhQmdVN1BfRVZUWmVUb2JKVXRrc3RYU0hoOUNWWEJjNmlhQnVzTFZ3NWk2RlI4MC1HeEYzTFFUVUhqcXo5eF93eW1kRjkzMTBZbjA1OVpMRTFPWlg?oc=5">KB증권 "삼성전자·SK하이닉스 급락 과도…실적은 오히려 개선"</a> <span class="p0-desc">(서울=연합뉴스) 정회인 기자 = KB증권은 16일 최근 삼성전자[005930] 와 SK하이닉스[000660] 의 주가 급락이 실적 악화보다는 국내...</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 뉴스핌</span></li></ul></div>
 ## 전체 뉴스 요약
 
 **긴급**: 표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 
@@ -75,8 +75,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 
 *기사는 여러 테마에 중복 집계될 수 있음*
 
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-17.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
 
 ---
 
@@ -103,7 +101,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBlcjJ0YWtnb0o4R0tnR2UycEtoWVJybFU0VkZ5QnRrY2pfbGhUdjFjcUdFQ0xmdW95N21vVklSbV9JTmVJeVhQZGMzcFROd0VQdU5sZXJjcnJmeENhYm5Semk3RTdGSGxxYlE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인·기관, 삼성중공업 동반 매수…삼성전자·대한항공은 매도 - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인·기관, 삼성중공업 동반 매수…삼성전자·대한항공은 매도 뉴스티앤티</p>
+<p class="news-desc">16일 오전 국내 증시에서 키움증권 창구를 통한 장중 수급을 집계한 결과, 외국인과 기관은 삼성중공업을 나란히 순매수 상위권에 올린 반면 삼성전자와 대한항공은 순</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -115,7 +113,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE01b2VoWlk3T05ZdlA2M3JfQV9Lb1hNdUREaWkxSWQ5anVRRElvVG1veHo4bTZpak12OXdIT0pWN1BTUWVMWkZtOG9tbFRlejlYVnU3TjBuMDNUaE92QWpqWTB1Vm5jbW10cnp2b2Z5SmZWX0pOZWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">삼성전자·SK하이닉스 급락은 '가격 왜곡'… 지금은 비중 확대 기회-KB</a>
-<p class="news-desc">삼성전자·SK하이닉스 급락은 '가격 왜곡'… 지금은 비중 확대 기회-KB 인포스탁데일리</p>
+<p class="news-desc">[인포스탁데일리=윤서연 기자] KB증권은 삼성전자와 SK하이닉스의 최근 주가 급락이 펀더멘털 훼손보다는 국내 증시의 수급 공백과 투자심리 위축에 따른 과도한 조정이라며, 현재 주가는 향후 밸류에이션 회복에 따른 반등 여력이 더 크다고 분석했다.김동원 KB증권 리서치본부장은 "삼성전자와 SK하이닉스의 최근 주가 급락은 펀더멘털 훼손보다는 한국 증시의 수급 공백과 투자심리 위축이 빚어낸 과도한 조정으로 판단된다"고 밝혔다.10월 들어 한국 증시는 18.8% 하락하며 일본(-3.5%)과 대만(-2.0%)보다 낙폭이 컸다. 같은 기간 삼성</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -158,7 +156,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTG9TMW5xNVlWX1Z1M2tfVmlrX09EZkoxQjFSTFBoWjRBVkE5WTlHYnM2T0hGM3hqSjVHdjZxUHR4ZXhiYmRGYlhyQ3U0ZnR6UEVIUVFSVGt5cUNMQWxQZTVsY0cyUEhjaVdaZl9sY05OdzNkeEk0VHNJb0hZUzZaSGd6TUxyOXfSAYwBQVVfeXFMTkpIcEhpSzBodHBTMk9lMjdSZnVSTnY0M0xzSEhYVmVJbC11ZTF3U1lIekRJWnVQZWRoQVlpRm1DcnFDaWtlWnBGU3czWnRPLVlMaHZsdkdPNEk2cTdOclVSOXN3NzdzY0FmaXhDbVFxaWRZUDh3SE56YjRKWjlFQlE1YmNJSi1fVlVSaTM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">기술 대패 속에서 투자자들이 채권의 안전으로 도망가면서 국채 수익률이 하락</a>
-<p class="news-desc">기술 대패 CNBC 속에서 투자자들이 채권의 안전으로 도망가면서 국채 수익률이 하락</p>
+<p class="news-desc">기술 대패 속에서 투자자들이 채권의 안전으로 도망가면서 국채 수익률이 하락. 주요 키워드: 기술, 대패, 속에서.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -170,7 +168,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMioAJBVV95cUxPRUkwb254Z0pwa1dQaWN1YVIyOU5aYTMwZWxaWGZISEN5NE9SSnJIdFdJV1l2cDdQbHhCakU2OGJQTWV5UVF4YnBjaUJhbXp6SHVFcy1DbnJkMlhPbTd4ZFBzRDR4RndtSTVvZlJPYzdXR19tLVRXMVRyVEx4LVZWNzNrMWhmdFBsYWdYMHNsaEV6ZjUwY05yTGJudWtkRWRPQkJjOGZmZ3I2cl9uaUdMbkUxS1BkZnlYQmVGM1g2Y2UzWDQtWGVidDFGdmtwNGF3Q3pGNUVNYjJ0aXFLakNwY1hMN1YzS1lXNXZHQkZ4SU13cXhZNGVpdkVlTldMNFNnTHRBaFBxOGVWT19PeWN3d3U4cXVvZjdSR0RJZUNFY3U?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">오늘의 주식 시장: 베센트이 이란과 재무부에 대한 경제적 압력을 강화함에 따라 다우, S&P 500 선물 상승</a>
-<p class="news-desc">오늘의 주식 시장: 베센트이 이란, 재무부 Benzinga에 대한 경제적 압력을 강화함에 따라 다우, S&P 500 선물 상승</p>
+<p class="news-desc">미국 주식 선물은 목요일 종가에 이어 다우존스, S&amp;P 500 및 나스닥 100 지수가 상승하면서 금요일에 상승했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
@@ -201,7 +199,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE51dGVGeUg4eUdObVMzSG5iLXlEWnIxaEVlSFQyR0RobHpzaXp1RUk1bjJyM1ozd2dicXJRQmRFVkZXNHlUQ3hWUEYyT0NXM09HUzB2WWNWaGlrMHczZUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“삼성 7만원·하이닉스 20만원”…이주완의 반도체 거품론, 과거 전망은 맞았나 - 주간경향</a>
-<p class="news-desc">“삼성 7만원·하이닉스 20만원”…이주완의 반도체 거품론, 과거 전망은 맞았나 주간경향</p>
+<p class="news-desc">“삼성전자는 7만원, 하이닉스는 20만원.” 반도체 전문가인 이주완 인더스트리 애널리스트가 방송에서 제시한 적정주가가 논란이다. 삼성전자 주가가 20만원을 넘고 SK하이닉스가 100만원대에서 거래되는 상황에서 두 회사의 가치가 현재 시장 평가보다 훨씬 낮다는 주장이기 때문이다. 이 애널리스트는 지난 10월 8일 공개된 SBS Biz ‘머니쇼’ 영상에서...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -213,7 +211,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB4ZU5uTzVnVVI1dGVhNy0zR0pibEJlT1BpZkpCb3NsYmpSTXY2Um5sS0JncDlwbk9Tc0J0RC0tbVJOcGpzNjNuazBBX3A3aDlubzdDaXpNSnl2WEJkOEVMZUVPc2dFTmQ2T3ZZOUk1ONIBc0FVX3lxTE9vNlljSnpXSEczSkdwXzFyN0pSclduZWwtYVRjd0hNQ3NjQ2dQUFFRcUxZaHFnVkk1dENET29MT2xSVUQ1emt2aXd2a18wYVRjLUFtby1ac1FzaTZvQkYzclNwRmdZWWdic3FQeFVQMk1jOEk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI·반도체주 4일 새 1조 달러 증발…삼성·하이닉스 ‘직격탄’</a>
-<p class="news-desc">AI·반도체주 4일 새 1조 달러 증발…삼성·하이닉스 ‘직격탄’ 시사저널</p>
+<p class="news-desc">미국의 금리 인상 가능성과 인공지능(AI) 투자 부담, 중국 메모리 업체의 추격 우려가 겹치면서 글로벌 AI·반도체 기업들의 시가총액이 4거래일 만에 1조 달러</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -275,7 +273,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-low">LOW</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFA0cVRKVG1fWklrbDRKbEo3THBxeW1jd0ZBU3NOemdIXzl3OEl4NXo0N2dKTHAzaFdmQlVRMndldktDemlGOFhhd3JRR2J5VlJWNnpSWnE0TGJjOXFFa0NPRzBjSV9Kb3R0bGt2NHpPdzBiZkQzVlRj0gF8QVVfeXFMUEQ4eF9nZHdYWTBqYVFvM2xDQTFLbVdCZkxjcmN1QnhLNnp4bV8yLWNOeWhzalRnQWRqV09NaF95Z3FaNTFZWmhIWUhaaXQ0NDBzbjFkR205M3k5cmhrWWxrS2xqMXRsenJtTnFzNWR3UEZHaUZ4Wi1BWlU4aQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">메타 및 구글이 지원하는 Jio 플랫폼, 인도에서 역사적인 IPO에 최대 32억 달러 모금 예정</a>
-<p class="news-desc">메타 및 구글이 지원하는 Jio 플랫폼, 인도 CNBC에서 역사적인 IPO에 최대 32억 달러 모금 예정</p>
+<p class="news-desc">Jio의 주식 매각은 루피 기준으로 인도 최대 규모이자, 달러 기준으로 두 번째로 큰 규모로, 2024년에 33억 달러를 조달한 현대자동차(IPO)에 이어 두 번째로 큰 규모입니다.</p>
 <span class="source-tag" data-source-type="default">IPO Watch</span>
 </div>
 </div>

@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">760.82</div><div class="stat-label">KOSDAQ -7.65%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 - 194건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 주목</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 하이닉스, 반도체 관련 17건</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XV3ZmR1pSQXQ4NGdaeFUzMTFGQ0JFY19vQlpkZ1pvUzNhRjZOdUV6Z2U5R2FHRGNfei1iWEJTRlJrQ1VWUlJmMkVHdFMtd0k4NEhPOEI2VlNhdWtn?oc=5">특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ - 뉴스핌</a> <span class="p0-desc">[특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ 뉴스핌</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 고인원 기자= 글로벌 메모리 반도체주가 이번 주 급락세를 이어가고 있다. 중국 반도체 업체들의 기술 추격에 대한 우려가 커진 가운데, 인공지능(AI) 투자 열풍으로 호황을 누려온 메모리 시장이 2029년 공급 과잉에 빠질 수 있다는 전망까지 나</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XV3ZmR1pSQXQ4NGdaeFUzMTFGQ0JFY19vQlpkZ1pvUzNhRjZOdUV6Z2U5R2FHRGNfei1iWEJTRlJrQ1VWUlJmMkVHdFMtd0k4NEhPOEI2VlNhdWtn?oc=5">특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 이나영 기자= 삼성전자와 SK하이닉스가 15일 넥스트레이드(NXT) 프리마켓에서 나란히 6~7%대 급락하고 있다. 미국 소비자물가지수(CPI)가 시장 예상치를 웃돈 가운데 인공지능(AI) 인프라 투자 수익성에 대한 우려가 커지면서 간밤 미국 반도체주가</span></li></ul></div>
 
 ## 전체 뉴스 요약
 
@@ -63,7 +63,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFB3cnFlUzJRTjNpUnVnYkdEXzYtbGN6cnR5ZFA0Q0FyNUpTNEpxQ3gzc0FtQXFQbnFPdWFDZlM0Qm9NNVRvRkwwYm8tdEJlRHNUMlZ2S3EyLVB2RTRQdlBvemhteDhVUlZQRWc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특징주] 외국인·기관, 한온시스템 동반 매수…삼성전자·HMM도 매수 상위권 - 뉴스티앤티</a>
-<p class="news-desc">[특징주] 외국인·기관, 한온시스템 동반 매수…삼성전자·HMM도 매수 상위권 뉴스티앤티</p>
+<p class="news-desc">14일 오전 국내 증시에서 키움증권 창구를 통한 장중 수급을 집계한 결과, 외국인과 기관 모두 한온시스템을 순매수 1위에 올렸다. 삼성전자와 HMM도 양측 순매수</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -75,7 +75,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1hTXBHeWh5SnRrMjY4a2k1bVVGRkxoWWJ4aTRET2o0MGJqZjNEV0dDbU1sWEYyRFppM2RFSl9LWURzUGtSNmRONXR2Rkk3bkdKWE1sQ0JZV2M1MUhTcFYtM05qWDdzTU1tbFE0XzhSbUpHMnhmM0040gF3QVVfeXFMTWFNcEd5aHlKdGsyNjhraTVtVUZGTGhZYnhpNERPajQwYmpmM0RXR0NtTWxYRjJEWmkzZEVKX0tZRHNQa1I2ZE41dHZGSTduR0pYTWxDQllXYzUxSFNwVi0zTmpYN3NNTW1sUTRfOFJtSkcyeGYzTTg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">표] 10월 14일 매매동향.코스피, 외국인 매물에 반등 '무산'</a>
-<p class="news-desc">[표] 10월 14일 매매동향.코스피, 외국인 매물에 반등 '무산' 핀포인트뉴스</p>
+<p class="news-desc">14일 하루 동안의 코스피에서는 외국인이 1조1,816억원, 개인이 3,748억원을 순매도했다. 기관은 8,119억원을 순매수했다. 코스닥에서는 외국인이 2,158억원, 기관이 1,787억원을 순매도했다. 개인은 3,835억원을 순매수했다. 코스피에서 SK하이닉스는 외국인과 개인의 순매도 상위 종목에 공통으로 포함됐지만 기관의 순매수 상위 종목에 올랐다. SK스퀘어와 한미약품은 외국인 순매수 상위이자 기관 순매도 상위 종목이었다. 코스닥에서는 주성엔지니어링이 외국인과 기관의 순매도 상위, 개인의 순매수 상위 종목에 포함됐다.</p>
 <span class="source-tag" data-source-type="default">한국 수급동향</span>
 </div>
 </div>
@@ -104,7 +104,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTG9TMW5xNVlWX1Z1M2tfVmlrX09EZkoxQjFSTFBoWjRBVkE5WTlHYnM2T0hGM3hqSjVHdjZxUHR4ZXhiYmRGYlhyQ3U0ZnR6UEVIUVFSVGt5cUNMQWxQZTVsY0cyUEhjaVdaZl9sY05OdzNkeEk0VHNJb0hZUzZaSGd6TUxyOXfSAYwBQVVfeXFMTkpIcEhpSzBodHBTMk9lMjdSZnVSTnY0M0xzSEhYVmVJbC11ZTF3U1lIekRJWnVQZWRoQVlpRm1DcnFDaWtlWnBGU3czWnRPLVlMaHZsdkdPNEk2cTdOclVSOXN3NzdzY0FmaXhDbVFxaWRZUDh3SE56YjRKWjlFQlE1YmNJSi1fVlVSaTM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Treasury yields slide as investors flee to safety of bonds amid tech rout</a>
-<p class="news-desc">Treasury yields slide as investors flee to safety of bonds amid tech rout CNBC</p>
+<p class="news-desc">투자자들은 안전을 향한 광범위한 비행 속에서 채권으로 전환했습니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -128,7 +128,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPcTVtY21OXzJHcEpRTndrNTdUSVdFX24zcklZeGxHTWVDZEk1YkVYalVhYkRsLUk2cC00cVU4THJOQ3hicmd2dFo2ekxBZUxvczY3QWREQzJPQk9hOGZnQVBuM2dHdV9RLUtWZ1ZvZ2RMU1BhY1N2S01Ed1FnVjdiSjlpUUxZOUkwV3U3bXpNVVJkY1RzeTJ2Q2c5NGIzT3UtRmJxTER2d2U5MHN1aVN4dmxNUHBRRDRzOWE4UnZ5TkJlc2ptZHc?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Rising bond yields and higher inflation leave the Fed trapped in a rate-hike dilemma</a>
-<p class="news-desc">Rising bond yields and higher inflation leave the Fed trapped in a rate-hike dilemma MarketWatch</p>
+<p class="news-desc">채권 수익률 상승과 인플레이션 상승으로 인해 연준은 금리 인상 딜레마에 빠졌습니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -157,7 +157,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOOHlfaC1zS3lncTY1VlI4b1lqX0F3UVNNeEV2d09iWHY4NE54dnNmeTctVHRLaEFhSzNDUU1KZC1FQWFOM1MtdWJxU29FNjdzMEk4Nzc2ck9NNDJoR29uOTE2blFHWGc0Sm50VkFHdG43NEUzS2hvbGwySkJjV3o5S1AtNEx2Q2NwN3ByeGZuVW1jWUQ3OFZEUUp6T3dRVWppUWVJSFF6RWxDOGdfeWk0bHVONng?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia leads chip stocks lower as AI trade takes</a>
-<p class="news-desc">Nvidia leads chip stocks lower as AI trade takes Yahoo Finance</p>
+<p class="news-desc">엔비디아 및 기타 대형 칩 주식은 목요일에 AI 불안감이 완화됨에 따라 손실을 줄였습니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -169,7 +169,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBTUHRCTEVSeENpRVNzbEZTb1IyNEw4aHpsTFFWTnFBY3RxNngzVFRJZEhNelQ1NnZJcG9QanVId2FPX3Znem55WEJ6N0hJNVJlZFpEVFBkYW0xYmM?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">AI giant Anthropic woos potential investors ahead of stock market debut</a>
-<p class="news-desc">AI giant Anthropic woos potential investors ahead of stock market debut BBC</p>
+<p class="news-desc">일부 투자자들이 AI 인프라에 지출되는 금액에 대해 우려하게 되면서 나온 것입니다.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE51dGVGeUg4eUdObVMzSG5iLXlEWnIxaEVlSFQyR0RobHpzaXp1RUk1bjJyM1ozd2dicXJRQmRFVkZXNHlUQ3hWUEYyT0NXM09HUzB2WWNWaGlrMHczZUE?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“삼성 7만원·하이닉스 20만원”…이주완의 반도체 거품론, 과거 전망은 맞았나 - 주간경향</a>
-<p class="news-desc">“삼성 7만원·하이닉스 20만원”…이주완의 반도체 거품론, 과거 전망은 맞았나 주간경향</p>
+<p class="news-desc">“삼성전자는 7만원, 하이닉스는 20만원.” 반도체 전문가인 이주완 인더스트리 애널리스트가 방송에서 제시한 적정주가가 논란이다. 삼성전자 주가가 20만원을 넘고 SK하이닉스가 100만원대에서 거래되는 상황에서 두 회사의 가치가 현재 시장 평가보다 훨씬 낮다는 주장이기 때문이다. 이 애널리스트는 지난 10월 8일 공개된 SBS Biz ‘머니쇼’ 영상에서...</p>
 <span class="source-tag" data-source-type="default">한국 반도체</span>
 </div>
 </div>
@@ -212,7 +212,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/15/zervos-imf-us-debt-warning.html" class="news-title" target="_blank" rel="noopener noreferrer">U.S. Treasury dismisses IMF debt warning and 'messy' forecasting</a>
-<p class="news-desc">The exchange comes as U.S. debt exceeds $40 trillion and 10-year Treasury yields remain above 5%, intensifying scrutiny of the fiscal outlook.</p>
+<p class="news-desc">이번 교환은 미국 부채가 40조 달러를 초과하고 10년 만기 국채 수익률이 5%를 웃도는 가운데 재정 전망에 대한 조사가 강화되면서 이루어졌습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -236,7 +236,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYjNER0lDUUZHM3ZLTmViV0lpWEw3WmtNOFhMMEFjLTFfUktHVWhjcGlCeEJ1NW01dGx3OXZrT2xaVjJsbWZhTDFpZ1hqdUI2WjZxVnJ6WGtiM3hxM1hfemQteGJ0NThaMV93dTAtTWU1MjZkYUNFekhnQ0Z0R2dZc094dzRpQ2lhamtzeTZnckt2bndMUWFfRnNNanR6ejhaZzIxUFpwS3dEZw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">특이한 옵션 거래량 보고서: STLA, CCXI, GLND - Schaeffer의 투자 연구</a>
-<p class="news-desc">특이한 옵션 거래량 보고서: STLA, CCXI, GLND Schaeffer의 투자 연구</p>
+<p class="news-desc">STLA, CCXI 및 GLND는 회사 헤드라인에서 비정상적인 옵션 볼륨을 보고 있습니다.</p>
 <span class="source-tag" data-source-type="default">Options Activity</span>
 </div>
 </div>
@@ -250,7 +250,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 
 ### 🏛️ 정치/정책 (3건)
 
-*Hasan murdered 13 people and injured more than 32 others in the mass shooting at Fort Hood in Texas.*
+*하산은 텍사스주 포트후드에서 발생한 총격 사건으로 13명이 살해되고 32명 이상이 부상당했습니다.*
 
 
 <div class="news-card-item news-sev-medium">
@@ -259,7 +259,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/15/trump-nidal-hasan-execution-livestream.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump says Nidal Hasan execution won't be livestreamed</a>
-<p class="news-desc">Hasan murdered 13 people and injured more than 32 others in the mass shooting at Fort Hood in Texas.</p>
+<p class="news-desc">미 육군 소령이자 정신과 의사인 하산은 2009년 11월 텍사스주 포트후드에서 발생한 총기 난사 사건으로 13명을 살해하고 32명 이상 부상을 입혔다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -271,7 +271,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://seekingalpha.com/news/4653418-ukraine-resumes-strikes-on-russian-refineries-zelenskyy-blasts-dangerous-us-policy-on-russia?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news" class="news-title" target="_blank" rel="noopener noreferrer">Ukraine resumes strikes on Russian refineries; Zelenskyy blasts 'dangerous' U.S. policy on Russia</a>
-<p class="news-desc">Ukraine struck a Russian oil refinery as President Zelenskyy said his country ended its suspension of attacks after Russia ignored President Trump's announced ceasefire on energy targets.</p>
+<p class="news-desc">우크라이나, 러시아 정유소에 대한 파업 재개; 젤렌스키는 러시아에 대한 미국의 '위험한' 정책을 비난했다.</p>
 <span class="source-tag" data-source-type="default">Seeking Alpha</span>
 </div>
 </div>
@@ -283,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNbV9GWVVYWDQ5ZTkxc25ndVdFRENodXgxYVhzNmpyMnJ6dGFmcDFyYW5sOXVORkNJUVhReDhEZjBJZS1OeHh0bVZqU1QtOHRWV1ZJR0YtZ19WZTQtN0VnSjBIQ2JYVnd3QktkQ3gxazRTd1VyQjR4MVhZdTJoWDZMeWNnY1A?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">London’s gold market enjoys the Trump effect - Financial Times</a>
-<p class="news-desc">London’s gold market enjoys the Trump effect Financial Times</p>
+<p class="news-desc">런던의 금 시장은 트럼프 효과를 누리고 있습니다 - Financial Times. 해당 관련 통보.</p>
 <span class="source-tag" data-source-type="default">FT via Google</span>
 </div>
 </div>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.twodragon.investing-archive-backfill</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/namyongkim/.investing-runtime/bin/archive_blurb_backfill.sh</string>
+        <string>--days=365</string>
+        <string>--limit=50</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/namyongkim/investing</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>15</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/namyongkim/Library/Logs/investing-archive-backfill.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/namyongkim/Library/Logs/investing-archive-backfill.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/namyongkim</string>
+        <key>INVESTING_REPO_ROOT</key>
+        <string>/Users/namyongkim/investing</string>
+        <key>PATH</key>
+        <string>/Users/namyongkim/.rbenv/shims:/Users/namyongkim/investing/.venv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/namyongkim/.local/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>TZ</key>
+        <string>Asia/Seoul</string>
+        <key>LANG</key>
+        <string>en_US.UTF-8</string>
+        <key>LC_ALL</key>
+        <string>en_US.UTF-8</string>
+    </dict>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>AbandonProcessGroup</key>
+    <true/>
+</dict>
+</plist>

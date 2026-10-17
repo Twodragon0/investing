@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE10ZkdDeUtHNFJwZlVzYl9HVkYyajFzZHJyUDgzQk5NeVlOMU83a1JSOFM1VFVDTUcxa3VKX0xIUjM5VVZ3S01HY29aVVlvdjZXOVpjQTl4d2xydk9jTzlIU9IBYEFVX3lxTE10ZkdDeUtHNFJwZlVzYl9HVkYyajFzZHJyUDgzQk5NeVlOMU83a1JSOFM1VFVDTUcxa3VKX0xIUjM5VVZ3S01HY29aVVlvdjZXOVpjQTl4d2xydk9jTzlIUw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 연이틀 급락세…장초반 3~4%대 하락</a>
-<p class="news-desc">코스피·코스닥, 연이틀 급락세…장초반 3~4%대 하락 연합뉴스</p>
+<p class="news-desc">반도체 노이즈·원화 강세 속 외국인, 6거래일 연속 '팔자' 지속'투톱' 삼전닉스 4∼5% 급락에 코스피 6,000선으로 '뚝'코스닥은 장중 낙폭 다소 줄여 1∼2%↓ (서울=연합뉴스) 이진욱 기자 = 13일 서울 중구 하나은행 본점 딜링룸 전광판에 코스피 및 국제유가가 표시돼 있다. 이날 코스피는 장 초반 2∼3%대로 하락하며 5거래일 연속 하락세를 이어가고 있다. 오전 9시 1분 현재 코스피는 전날보다 185.78포인트(2.91%) 내린 6,198.46이다. 이후 하락률이 4%대까지 확대됐다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAzeDcwTTVNeGZnTlpGbE5MWWpNQ2N6UTNpbTIwMTVsQkJEZ1UxMkZUV0xQX3hOMnlXNnJzb05qbDVNNWNsMFZQM2xLak5vbXBNNVA4VTJNOGtHUmFDZTRHSXNaSkJfd0w4RHQ4?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 출발 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 출발 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 13일 코스피와 코스닥지수가 모두 내림세로 장을 열었다.이날 코스피는 전 거래일보다 3.10% 내린 6186.08에 시작했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkczVudWZrdlJZaXhiMm1zSEJibmZzVElCUGNja0UtSkhkTHpJMnlMUEpnV2RYZ1FrM1JXVDZzWkI3TFhmekcyUHNQckE0UEJta0E?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">“코스피 6000 붕괴를 기회로” 초고수가 고른 종목은 [주식 초고수는 지금</a>
-<p class="news-desc">“코스피 6000 붕괴를 기회로” 초고수가 고른 종목은 [주식 초고수는 지금] 매일경제</p>
+<p class="news-desc">수익률 상위 1% 오전 매매동향SK스퀘어, 삼성SDI, 삼전우 사고삼전닉스 본주와 삼성전기 팔아 주식 투자 수익률 상위 1% 초고수는 13일 오전 SK스퀘어를 가장 많이 사들이고 삼성전자를 가장 많이 팔아치운 것으로 나타났다. 13일 미래에셋증권에 따르면 최근 1개월간 주식 투자 수익률 상위 1% 고객이 이날 오전 9시 30분까지 가장 많이 순매수한 종목은 SK스퀘어다. 삼성SDI와 삼성증권, 삼성전자우, 에스티아이가 뒤를 이었다. SK스퀘어는 SK하이닉스의 지분 약 20%를 보유한 모회사다.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -105,7 +105,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPNS1RajNzSWN1YnRqbW1WTWNSaUJJczRvV3JDMFFZNElEOW5RT2l4c1NhcEZwSmtSd3RYajlVV3dFUFNaZzlsaC1uUlBWNXIwdF9zUGZqZXVyN3B3NVZ4RGh1b2JMWXhvSkpES2F2dldheGc2S2xCaXFCMjRZTldKWUduZ2lqUDlzcXgwNk1mbXlDbHdFekJ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유 - 외교협회</a>
-<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유 외교 관계위원회</p>
+<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유. 주요 키워드: 재무부, 노력에, 미국.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -129,7 +129,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tNXdZX0V6S1BEZTNQcGI1V19SWFg1Um1oajhmSHdTbWg2X2ZseHU5bzVHRnFvWXcwOEdtSHgzc2N1c0VyUUMzWURERXI5cktVdzZDWjZodUZrN2FkMGp3S0tSM2c0eGdk?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">매일 금리·환율 브리핑] 10월 13일, 원/달러 환율 10.0원 상승 - 데일리팝</a>
-<p class="news-desc">[매일 금리·환율 브리핑] 10월 13일, 원/달러 환율 10.0원 상승 데일리팝</p>
+<p class="news-desc">10월 13일 15:30 기준 원/달러 환율이 전일 대비 10.0원 상승한 1345.10원을 기록했다.시장금리 (10월 13일 15:30 기준)· 국고채 3년: 3.857% (전일 -6bp / 주간 -8bp)· 국고채 5년: 4.030% (전일 -7bp / 주간 -10bp)· 회사채 3년(AA-): 4.556% (전일 -5bp / 주간 -8bp)· CD 91일: 3.240% (전일 +0bp / 주간 +3bp)· 콜금리(1일): 3.050% (전일 +2bp / 주간 +0bp)※ 콜금리(1일)는 익일 지연 반영으로 10월 12일 기준입</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>
@@ -158,7 +158,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFB6RDVhOHRXVHBJMzVMUnYwZUVUM2FzcTZjc0hOQWdtUVBGdWM3OUE3SEdRakRMOGRIM3ExZXRrQTRZMVpIaGFMc1dSamQ1MTVYdDlvcEJBMExxb05lNGVGMDg1RWVDV2J5RkZnN0RYTQ?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">박정식의 국내 주식시황] 코스피는 박스권 유지, 코스닥은 박스권 탈출로 반도체 소부장 및 2차전지 섹터 긍정적 - 뉴스퀘스트</a>
-<p class="news-desc">[박정식의 국내 주식시황] 코스피는 박스권 유지, 코스닥은 박스권 탈출로 반도체 소부장 및 2차전지 섹터 긍정적 뉴스퀘스트</p>
+<p class="news-desc">【뉴스퀘스트=박정식 주식디자인연구소 대표 】[2026년 10월 12일 장전 국내시황]오픈AI의 올해 말 연율 환산 매출이 700억 달러에 도달하거나 이를 넘어설</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -274,7 +274,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBicHZfLWpXTUVvR0NQQnI2d1NKOVVqbUl4b29LUlFHSW56TzNJbEhhc1U5REJOZG55bHR5ZHg3eEhMU2NVMXFxU2pxZ2ZuY3JJODgzMF81amY0UWtENW9ZcNIBYEFVX3lxTFBicHZfLWpXTUVvR0NQQnI2d1NKOVVqbUl4b29LUlFHSW56TzNJbEhhc1U5REJOZG55bHR5ZHg3eEhMU2NVMXFxU2pxZ2ZuY3JJODgzMF81amY0UWtENW9ZcA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">한은 "집값 상승 기대 자극 않도록 일관된 정책 필요"</a>
-<p class="news-desc">한은 "집값 상승 기대 자극 않도록 일관된 정책 필요" 연합뉴스</p>
+<p class="news-desc">(서울=연합뉴스) 한지훈 기자 = 한국은행은 12일 "주택가격 상승 기대와 가계대출 증가세를 자극하지 않도록 일관된 정책 기조를 유지해나갈 필요...</p>
 <span class="source-tag" data-source-type="default">한국 금리/환율</span>
 </div>
 </div>

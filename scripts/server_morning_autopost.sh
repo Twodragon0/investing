@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Ensure robust PATH for macOS (rbenv first for ruby/bundle, Apple Silicon Homebrew, local bin)
+# Ensure robust HOME and PATH for macOS (launchd, cron, terminal)
+export HOME="${HOME:-/Users/namyongkim}"
 export PATH="$HOME/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
 export TZ="Asia/Seoul"
 
@@ -127,7 +128,7 @@ echo "$LOG_PREFIX start $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 git rebase --abort 2>/dev/null || true
 git merge --abort 2>/dev/null || true
 git fetch origin main
-git pull --rebase origin main
+git pull --rebase --autostash origin main
 
 TODAY_KST="$(TZ=Asia/Seoul date +%Y-%m-%d)"
 echo "$LOG_PREFIX regenerate daily summary for latest coverage"
@@ -180,7 +181,7 @@ run_py scripts/backfill_post_summaries.py --clean-images-only --zero-image-repor
 run_py scripts/check_recent_post_urls.py --days 2 --limit 60 --report _state/recent-url-quality.txt
 
 if command -v bundle >/dev/null 2>&1; then
-  bundle exec jekyll build
+  bundle exec jekyll build --limit_posts 50
   run_py scripts/verify_rendered_posts.py
 else
   echo "$LOG_PREFIX bundle not found, skip render verification"

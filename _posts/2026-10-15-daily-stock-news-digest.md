@@ -32,7 +32,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">823.88</div><div class="stat-label">KOSDAQ -1.57%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피 3% 급락 출발…5거래일째 하락 - 진일보 - 191건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 44건</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 국채 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
-<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1NT2RHRkdIQkVxaVNYREVnZnpGZUIzMW9HdXNHbFhTLXowSDlRXzl4UGlhbXNGSHVERWFnNzZsM2dublBkaEVibndRQlBaQmhUbExxcHJ4c3oxR0Q4T0RnVC0wNm1FcDdkenRKRXFJcw?oc=5">코스피 3% 급락 출발…5거래일째 하락 - 진일보</a> <span class="p0-desc">코스피 3% 급락 출발…5거래일째 하락 진일보</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFA1RlVfaHpJUUhpVlFadnJwZkxiN0ktalZlZWNNaGhxYS14S0hBYjNQNXY0SE1SSmtEUWFmNF9qcGYtMW5EdEJZRXdjczU1WmpLMEtYX1FLOVNKaWdjTHc?oc=5">中 메모리 반도체 추격에 삼성닉스 급락…AI 투자 거품 우려 확산 - 더구루</a> <span class="p0-desc">中 메모리 반도체 추격에 삼성닉스 급락…AI 투자 거품 우려 확산 더구루</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1QQVQ2YnZNRWdHS2tEUDV6UWR1SV9zU0Q4N2FEaFQ4S0lQRDJRSVVkOUdwZExQa3BXNWxSZGNRb0hZdGZCendBZjdHWWNWRC1vc04tWVNvUnNMdVlIZjB3dUJteXh5RVVy?oc=5">‘중국발 반도체 쇼크’로 SK하이닉스 8%대, 삼성전자 6%대 급락… 매도 사이드카 발동 - 주간동아</a> <span class="p0-desc">‘중국발 반도체 쇼크’로 SK하이닉스 8%대, 삼성전자 6%대 급락… 매도 사이드카 발동 주간동아</span></li></ul></div>
+<div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1NT2RHRkdIQkVxaVNYREVnZnpGZUIzMW9HdXNHbFhTLXowSDlRXzl4UGlhbXNGSHVERWFnNzZsM2dublBkaEVibndRQlBaQmhUbExxcHJ4c3oxR0Q4T0RnVC0wNm1FcDdkenRKRXFJcw?oc=5">코스피 3% 급락 출발…5거래일째 하락 - 진일보</a> <span class="p0-desc">코스피 3% 급락 출발…5거래일째 하락 진일보</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFA1RlVfaHpJUUhpVlFadnJwZkxiN0ktalZlZWNNaGhxYS14S0hBYjNQNXY0SE1SSmtEUWFmNF9qcGYtMW5EdEJZRXdjczU1WmpLMEtYX1FLOVNKaWdjTHc?oc=5">中 메모리 반도체 추격에 삼성닉스 급락…AI 투자 거품 우려 확산 - 더구루</a> <span class="p0-desc">[더구루=홍성환 기자] 중국 반도체 기업의 부상과 금리 상승, 반도체·AI주의 과도한 기업가치 부담 등이 맞물리면서 AI 투자 심리가 약해지고 있다는 분석이 나온다. 블룸버그 통신은 13일(이하 현지시간) "반도체 종목의 매도세가 심화되면서 최근 몇 년간 가장 강력한 투자 테마였던 AI 분야의 지속 가능성에 대한 의구심이 일고 있다"며 &amp;</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1QQVQ2YnZNRWdHS2tEUDV6UWR1SV9zU0Q4N2FEaFQ4S0lQRDJRSVVkOUdwZExQa3BXNWxSZGNRb0hZdGZCendBZjdHWWNWRC1vc04tWVNvUnNMdVlIZjB3dUJteXh5RVVy?oc=5">‘중국발 반도체 쇼크’로 SK하이닉스 8%대, 삼성전자 6%대 급락… 매도 사이드카 발동 - 주간동아</a> <span class="p0-desc">중국발(發) 메모리 충격으로 삼성전자와 SK하이닉스가 급락하면서 코스피 6000 선이 위협받고 있다.</span></li></ul></div>
 
 
 ## 전체 뉴스 요약
@@ -52,7 +52,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9rY2ZrYlRROFM1ZUZTY2JmaEwyRTJnUUhfbEJNNWd5UkQ5WjkyODVLd3NndlZIa1plMVNqT25YRzh4S1BiaXI5bUdqZWt1UGpDZzBudE9BUlNlOWPSAWBBVV95cUxNRlpnWkx0NV9tYWpiVkZTVjZNdmh5LVhrbzd6X2FDZ0VmNmJJYXh4d3c3bVBQM044TEFIbTdnQ1NtV2hpNmdlUTlqeWJjQnpDSkZleHBYVlEzZ1RsRXQ2ajg?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥 전 거래일(13일) 주요공시</a>
-<p class="news-desc">[코스피·코스닥 전 거래일(13일) 주요공시] 연합뉴스</p>
+<p class="news-desc">코스피·코스닥 전 거래일(13일) 주요공시. 주요 키워드: 코스피, 코스닥, 거래일.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -64,7 +64,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBnNGw3ZndoR3d1MDhhOGdPN2NnemVOSVVXNlVhaVBpcDZGeHo3b0J1RzZjU1VjWk1QbzRVRTJ4aUVFc21VR1pwSm82WVFrdWdUcUF6d1g2SkYtQnhkdFgxdzlTdGJ2czN4UTY0?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피·코스닥, 내림세로 장 마감 - 한강타임즈</a>
-<p class="news-desc">코스피·코스닥, 내림세로 장 마감 한강타임즈</p>
+<p class="news-desc">한강타임즈 김광호 기자 = 14일 코스피와 코스닥지수가 모두 내림세로 장을 마쳤다.이날 코스피는 전 거래일보다 0.44% 내린 6008.81에 마감했으며, 코스닥</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -76,7 +76,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vclBsQXhTU1BQM3RkSmhQOVduOUVQNnl6SGxjZWxGMTVwMjlRT3R4RmtySTcxV0lMNFRnOW9oZWwxdGNZUjFoTWVKNVpiT0pZNHZzakxn?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">코스피 6008.81 마감…시총 상위 모두 떨어졌는데 상승한 '이 주식' - 위키트리</a>
-<p class="news-desc">코스피 6008.81 마감…시총 상위 모두 떨어졌는데 상승한 '이 주식' 위키트리</p>
+<p class="news-desc">외국인 1조 원대 매도세에 코스피·코스닥 동반 하락,장 후반 외국인 자금 이탈로 상승분 반납한 증시</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks KR</span>
 </div>
 </div>
@@ -117,7 +117,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPNS1RajNzSWN1YnRqbW1WTWNSaUJJczRvV3JDMFFZNElEOW5RT2l4c1NhcEZwSmtSd3RYajlVV3dFUFNaZzlsaC1uUlBWNXIwdF9zUGZqZXVyN3B3NVZ4RGh1b2JMWXhvSkpES2F2dldheGc2S2xCaXFCMjRZTldKWUduZ2lqUDlzcXgwNk1mbXlDbHdFekJ3?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유 - 외교협회</a>
-<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유 외교 관계위원회</p>
+<p class="news-desc">재무부의 노력에도 불구하고 미국의 차입 비용이 계속 상승하는 이유. 주요 키워드: 재무부, 노력에, 미국.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -258,7 +258,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQYVdqSFBIc21LUE9ZSUlUQUJvdzZvejBNSG95M0xYTVBTZ0JiRTBtSXBPVVdRSExDR1FRdUVnbnRUVmxqS2htN2t2c1IySHQ0VTVHRHpyYjIwbVZ2a0VxRFNUUkJ4VTI3NGdBbVZmY1AwWF81eTcxRjZodHZxa0JXdDRSRzUtTjA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">치솟는 채권수익률이 미국, 프랑스 등 거대 경제에 압력을 가하는 방법 - The Christian Science Monitor</a>
-<p class="news-desc">치솟는 채권수익률이 미국, 프랑스 등 거대 경제에 어떻게 압력을 가하는가 The Christian Science Monitor</p>
+<p class="news-desc">지루하고 오래된 유대 관계도 때로는 흥미로울 수 있습니다. 7월부터 유난히 거침없어졌습니다. 10년 만기 미국 재무부 채권 금리가 지난 20년 동안 볼 수 없었던 수준으로 1%포인트나 올랐습니다.</p>
 <span class="source-tag" data-source-type="default">Fed/Bond</span>
 </div>
 </div>
@@ -270,7 +270,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkNncVkwQU9JeFhSRFFWQ1FhcW5SUk5hY1hQMkpocmdCRlZ5b04zOGJnZ184T1lONDh1cUQwZFY3RVJxUmJzZDhpUWZ0RlhsUGluV3hoVG1TV2JWNEZtUS12R1Z0VURRQmt3SjkyUU44UkZTcmF1RnFaTm9POE9LYW5TWjY3el9jNzQwV1lOVkhaOGFDTE9Wc1NrM0RYTzJ5UFM4eF92UWV3LW03SHJ1U1I5cHF4eDNFS1liNw?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">나스닥은 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다.</a>
-<p class="news-desc">나스닥은 Reuters에서 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다.</p>
+<p class="news-desc">나스닥은 칩 제조업체가 하락하고 은행 수익이 증가하면서 종료됩니다. 주요 키워드: 나스닥, 제조업체, 은행.</p>
 <span class="source-tag" data-source-type="default">NASDAQ/Tech</span>
 </div>
 </div>
@@ -282,7 +282,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFA5LXlOZnZiVWJqSnQ2TzM5RmJkamRlQ0dDeFQ3QjVMOVB6TFFUaENwSGJsOEk5enQwRVRPSUN6cGlDNldmXzdTX3ZLYmpiZFJaWW9WbFF1RUZYRjhuMk5NZ0lWa0JtREEyM2ZXV3R3cU9KWDVwYk9UbA?oc=5" class="news-title" target="_blank" rel="noopener noreferrer">S&P 500은 뜨거운 인플레이션 보고서 이후 수익률이 상승함에 따라 하락합니다: 실시간 업데이트</a>
-<p class="news-desc">S&P 500은 뜨거운 인플레이션 보고서 이후 수익률이 상승하면서 하락합니다: 실시간 업데이트 CNBC</p>
+<p class="news-desc">S&amp;P 500은 뜨거운 인플레이션 보고서 이후 수익률이 상승함에 따라 하락합니다: 실시간 업데이트. 주요 키워드: 뜨거운, 인플레이션, 보고서.</p>
 <span class="source-tag" data-source-type="aggregator">Google News Stocks EN</span>
 </div>
 </div>
