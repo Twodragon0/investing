@@ -25,27 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-10-17 - 시�
 - 주요 출처: WorldMonitor/Al Jazeera (14건), WorldMonitor/CNBC (6건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 낮음</strong><ul><li>지정학적 리스크가 비교적 안정적이나, 돌발 이벤트 가능성은 상존합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(14건), **지정학/안보**(4건), **정책/법률**(1건) 중심으로 전개되고 있습니다.
-
-안보 이슈(4건)와 금융시장 뉴스(1건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-**테마 집중도**: 상위 2개 테마가 전체의 90%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (4건)
-
-- 이스라엘 스파이웨어가 알자지라 직원을 대상으로 '제로 클릭' 해킹을 사용한 방법
-- 이스라엘이 상업 상품을 중단함에 따라 식량 경제성이 가자지구를 괴롭힐 것을 우려
-- 이란이 호르무즈 공격을 확대함에 따라 브렌트유 가격은 110달러에 이르렀고, 우크라이나는 러시아 정유소를 공격하겠다고 다짐했습니다.
-
-### 투자자 체크포인트
-
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/Al Jazeera (14건), WorldMonitor/CNBC (6건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">안보 이슈</div></div></div>
 

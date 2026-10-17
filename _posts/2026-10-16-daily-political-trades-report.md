@@ -23,9 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-16 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(8회), **SEC(미국증권거래위원회)**(4회)</div>
 
 
+
 ## 전체 뉴스 요약
 
-- 1. Moskowitz를 타겟팅하는 광고에서는 주식 거래가 최대 800만 달러에 달한다고 언급하지만 실제 수익은 불분명합니다 - WPLG Local 10
+- 2026-10-16 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 27건 — 미국 의회 거래 1건, SEC 내부자 거래 15건, 한국 정치인 1건, 중앙은행 10건
+- 1. Ad targeting Moskowitz cites up to $8 million in stock trades, but actual earnings remain unclear - WPLG Local 10
 
 ## 1. 미국 의회 거래 동향
 

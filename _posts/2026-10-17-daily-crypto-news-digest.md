@@ -41,37 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다. - 122건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 증권 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러 관련 24건</li><li>🤖 <strong>AI/기술</strong>: 15건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.coindesk.com/business/2026/10/16/scammer-gets-scammed-in-ledger-spy-chip-exploit-loses-almost-usd5-million-in-bitcoin">사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다.</a> <span class="p0-desc">Chainalytic은 가짜 온라인 작업을 통해 사람들을 속인 사기꾼 WHO이 손상된 하드웨어 지갑의 가장 큰 피해자 중 하나가 되었다고 밝혔습니다</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다. 
-총 122건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (44건): 비트코인, 달러, 암호화폐 관련 (44건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (25건): 증권 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **📈 가격/시장** (24건): 달러, 한국어, 암호화폐 가격 변동 (24건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다.
-
-### 주요 이슈
-
-- 워싱턴 DFI, 암호화폐 키오스크 운영자와 250만 달러 합의에 도달 - JD Supra
-- 오늘 암호화폐 시장이 상승하는 이유…비트코인 지지선 방어와 규제 명확화 기대감 - 코인리더스
-- 태국, 첫 암호화폐 ETF 출발 시동…코인셰어스 "초기 유입 제한적일 것"
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
+- 총 **122건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-17 암호화폐 핵심 뉴스: OpenAI 에이전트에 이더리움 자금이 부족하여 소유하지 않은 지갑에서 가져갔습니다. - CoinDesk. 총 122건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
