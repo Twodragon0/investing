@@ -34,12 +34,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-26 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 국채, 채권, 수익률 부각 147건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 국채, 채권 관련 24건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li><li>📈 <strong>가격/시장</strong>: 국채 관련 22건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,080.92 (+0.90%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 844.48 (+1.21%).
-- 2026-09-26 주식 시장에서 147건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,080.92(+0.90%), KOSDAQ 844.48(+1.21%), USD/KRW 1,357.34(-0.71%).
 - *[시민의소리=취재팀] 미국 연방준비제도가 기준금리를 3.75~4.00%로 올린 데 이어 추가 인상 가능성까지 열어두면서 세계 금융시장이 다시 고금리 충격에 빠졌다.미국 10년물 국채금리는 24일 장중.*
 
 ## 테마별 주요 뉴스
