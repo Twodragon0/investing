@@ -103,7 +103,9 @@ def _submit_batch(urls: list[str], key: str) -> bool:
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:  # fixed https IndexNow endpoint  # nosec B310
+        with urllib.request.urlopen(
+            req, timeout=REQUEST_TIMEOUT
+        ) as resp:  # fixed https IndexNow endpoint  # nosec B310
             status = resp.status
             if status in (200, 202):
                 logger.info("IndexNow accepted %d URL(s) — HTTP %d", len(urls), status)

@@ -147,7 +147,9 @@ def _load_sitemap_urls() -> list[str]:
     else:
         logger.info("Local sitemap not found — downloading from %s", SITEMAP_URL)
         try:
-            with urllib.request.urlopen(SITEMAP_URL, timeout=REQUEST_TIMEOUT) as resp:  # fixed https constant  # nosec B310
+            with urllib.request.urlopen(
+                SITEMAP_URL, timeout=REQUEST_TIMEOUT
+            ) as resp:  # fixed https constant  # nosec B310
                 content = resp.read()
         except Exception as exc:
             logger.error("Failed to download sitemap: %s", exc)
