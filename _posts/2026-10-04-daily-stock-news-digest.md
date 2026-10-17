@@ -205,7 +205,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/03/novig-credits-sydney-sweeney-backed-campaign-for-platforms-surge-in-growth.html" class="news-title" target="_blank" rel="noopener noreferrer">Novig credits Sydney Sweeney-backed campaign for platform’s surge in growth</a>
-<p class="news-desc">Novig's "Just Sports" campaign drew backlash from some female athletes but also brought in a rush of trading volume.</p>
+<p class="news-desc">Novig의 "Just Sports" 캠페인은 일부 여성 운동선수들의 반발을 불러일으켰지만 동시에 거래량이 급증했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -261,7 +261,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/03/us-vistra-loan-nuclear-power.html" class="news-title" target="_blank" rel="noopener noreferrer">U.S. to lend $4.2 billion to Vistra to boost nuclear power output, source says</a>
-<p class="news-desc">U.S. Energy Secretary Chris Wright will announce the loan on Monday at Vistra's nuclear plant along Lake Erie in Ohio, a source told Reuters.</p>
+<p class="news-desc">한 소식통은 Reuters 통신에 크리스 라이트 미국 에너지 장관이 월요일 오하이오주 이리호에 있는 비스트라 원자력 발전소에서 대출금을 발표할 것이라고 전했다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

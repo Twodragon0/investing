@@ -215,7 +215,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-03 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/02/applied-aerospace-investors-need-to-watch-shares-of-this-spacex-supplier.html" class="news-title" target="_blank" rel="noopener noreferrer">This SpaceX supplier has a front-row seat to major shifts in warfare and rocket use</a>
-<p class="news-desc">Although this recent IPO is trading below its offer price, its supplier relationships with both SpaceX and Anduril bode well for future revenue growth.</p>
+<p class="news-desc">최근 IPO이 제안 가격 이하로 거래되고 있지만 SpaceX 및 Anduril과의 공급업체 관계는 향후 수익 성장에 좋은 징조입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

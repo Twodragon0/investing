@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379605/anthropic-lost-42-billion-last-year-wants-ipo-2-trillion" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic Lost $42 Billion Last Year. It Wants to Go Public at $2 Trillion</a>
-<p class="news-desc">The company's IPO prospectus shows revenue up twelvefold, a $518 billion spending plan, and a risk section warning that its own AI could pose existential risks to humanity.</p>
+<p class="news-desc">회사의 IPO 투자 설명서에는 매출이 12배 증가하고 5,180억 달러의 지출 계획이 있으며 자체 AI이 인류에 실존적 위험을 초래할 수 있다고 경고하는 위험 섹션이 나와 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-01 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379584/openai-ai-agents-computers-devday-2026-everything-announced" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI Gave AI Agents Their Own Computers at DevDay 2026. Here's Everything It Announced</a>
-<p class="news-desc">OpenAI's DevDay launched dots, always-on AI agents with their own computers, plus a cheaper GPT-6.1 Sol and a $500 speed tier. Here's every announcement, explained for people who don't speak AI.</p>
+<p class="news-desc">OpenAI의 DevDay는 자체 컴퓨터를 갖춘 항상 켜져 있는 AI 에이전트와 더 저렴한 GPT-6.1 SOL 및 $500 속도 등급을 출시했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

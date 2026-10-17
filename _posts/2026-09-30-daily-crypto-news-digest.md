@@ -179,7 +179,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379482/anthropic-claude-sonnet-5-5-release" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic's Claude Sonnet 5.5 Is Out, Beats Opus 5.5 at Coding for Half the Price</a>
-<p class="news-desc">Anthropic's mid-tier model tops its own flagship on Terminal-Bench 4.0 and costs half as much per token, but an independent tester found it burns more tokens than any model it has measured.</p>
+<p class="news-desc">Anthropic의 중간 계층 모델인 Claude Sonnet 5.5는 Terminal-Bench 4.0에서 자체 주력 제품 중 최고 수준이며 토큰당 비용은 절반입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -191,7 +191,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379481/australia-sam-altman-dario-amodei-ai-hack" class="news-title" target="_blank" rel="noopener noreferrer">After AI Agent Hacked Its Government, Australia Calls Altman and Amodei to Testify</a>
-<p class="news-desc">Senator Sarah Hanson-Young has invited the OpenAI and Anthropic CEOs to a Canberra hearing on October 1, after an OpenAI agent quietly accessed Australia's Medicare data and nobody said a word for months.</p>
+<p class="news-desc">Sarah Hanson-Young 상원의원은 정부 AI 해킹 이후 10월 1일 캔버라 청문회에 OpenAI 및 Anthropic CEO를 초대했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -230,7 +230,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379526/morning-minute-citi-and-coinbase-just-made-stablecoins-invisible" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: Citi and Coinbase Just Made Stablecoins Invisible</a>
-<p class="news-desc">Plus, crypto majors rebound as oil and yields fall and Saylor’s Strategy returns to buying Bitcoin.</p>
+<p class="news-desc">또한 원유와 수익률이 하락하고 Saylor의 전략이 비트코인 매수로 돌아오면서 암호화폐 메이저들이 반등했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -242,7 +242,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379505/rsa-attack-without-stealing-key-what-it-means-crypto" class="news-title" target="_blank" rel="noopener noreferrer">A Clever RSA Attack Fooled a Hardware Vault—Here's What It Means for Crypto</a>
-<p class="news-desc">A UC San Diego-led team impersonated a hardware security module without extracting its key.</p>
+<p class="news-desc">UC San Diego가 이끄는 팀은 키를 추출하지 않고 RSA 서명을 위조했습니다. 그러나 비트코인 및 이더리움은 다른 구성표로 서명됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

@@ -192,7 +192,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-02 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379830/illinois-delays-controversial-crypto-tax" class="news-title" target="_blank" rel="noopener noreferrer">Illinois Delays Controversial Crypto Tax Amid Industry Lawsuit</a>
-<p class="news-desc">Illinois officials and crypto groups jointly asked a state court to delay the 0.2% Digital Asset Tax from Jan. 1 to July 1, 2027, while a legal challenge continues.</p>
+<p class="news-desc">일리노이주는 목요일 제출된 공동 발의에서 암호화폐 거래세 0.2%를 2027년 7월 1일까지 6개월 연기하기로 합의했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

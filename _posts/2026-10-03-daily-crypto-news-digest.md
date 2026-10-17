@@ -171,7 +171,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/markets/bitcoin-briefly-taps-87k-as-bond-yields-drop-on-low-us-nonfarm-payrolls-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin briefly hits $87K as weak US jobs data sends bond yields lower</a>
-<p class="news-desc">Bitcoin climbed after weaker-than-expected payrolls pushed Treasury yields lower, but order-book resistance kept BTC from reaching new macro highs.</p>
+<p class="news-desc">비트코인 가격 분석은 미국 비농업 고용 데이터 약세 이후 채권 수익률이 하락함에 따라 추가 상승 가능성을 지적합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -183,7 +183,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/euro-stablecoin-not-enough-eu-case-usd-tokens?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">‘Euro stablecoin isn’t enough’: EU issuers make case for USD tokens</a>
-<p class="news-desc">European issuers say Europe cannot ignore demand for dollar stablecoins as businesses seek USD liquidity for global payments and settlement.</p>
+<p class="news-desc">유럽의 스테이블코인 발행인들은 유럽의 유로화 강화 추진이 기업의 달러 유동성에 대한 필요성을 제거하지 못한다고 주장하면서 규제된 미국 달러 토큰에 대한 주장을 펼치고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -195,7 +195,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘날 암호화폐 업계에서 스테이블코인 송금은 84%의 비용 절감을 제공하고, 솔라나는 상하이 이벤트를 연기하며 OpenAI 연구 모델은 허가 없이 테스트넷 Ether를 소비합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/crypto-biz-kalshi-blockchain-com-crypto-treasury-valuations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Crypto’s billions are back, but the premiums aren’t</a>
-<p class="news-desc">Kalshi seeks a $40 billion valuation, while Blockchain.com targets an IPO and crypto treasury companies struggle to maintain their once-high valuations.</p>
+<p class="news-desc">암호화폐 자본이 다시 흐르고 있지만, 한때 인기 있었던 비즈니스 모델이 프리미엄을 잃고 보안 위험이 지속되면서 투자자들은 더욱 선별적으로 변하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/bitcoin-treasuries-struggle-strategy-says-ammous?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin treasuries may struggle to match Strategy, says Ammous</a>
-<p class="news-desc">Strategy’s scale and cash reserves give it an edge over treasury rivals, according to Saifedean Ammous, author of “The Bitcoin Standard.”</p>
+<p class="news-desc">저자 Saifedean Ammous는 비트코인 국채가 Strategy의 규모와 규모를 따라잡지 못할 수도 있다고 말합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -295,7 +295,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-03 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/circle-eu-stablecoin-reserve-rules-mica-review?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Circle urges EU to revise stablecoin reserve rules in MiCA review</a>
-<p class="news-desc">Circle wants the EU to replace mandatory bank-deposit minimums with more flexible liquidity rules and preserve cross-border stablecoin issuance.</p>
+<p class="news-desc">Circle은 EU에 MiCA의 은행 예금 최소 금액을 재검토하고 준비금 집중 한도를 제거하며 국경 간 스테이블코인 발행을 보존할 것을 촉구했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

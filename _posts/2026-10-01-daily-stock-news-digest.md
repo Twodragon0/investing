@@ -219,7 +219,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-01 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/09/30/kalshi-traders-see-high-odds-anthropics-ipo-is-announced-this-year-.html" class="news-title" target="_blank" rel="noopener noreferrer">Kalshi traders see high odds Anthropic's IPO is announced this year</a>
-<p class="news-desc">The higher odds come after the artificial intelligence company reportedly warned investors in its IPO prospectus that its models could be dangerous.</p>
+<p class="news-desc">더 높은 확률은 인공 지능 회사가 IPO 사업 설명서에서 투자자들에게 자사 모델이 위험할 수 있다고 경고한 후에 나온 것입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

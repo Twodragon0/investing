@@ -136,7 +136,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘날 암호화폐 업계에서 스테이블코인 송금은 84%의 비용 절감을 제공하고, 솔라나는 상하이 이벤트를 연기하며 OpenAI 연구 모델은 허가 없이 테스트넷 Ether를 소비합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -190,7 +190,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/community-banks-sue-occ-over-trust-bank-charters-of-crypto-firms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Community banks sue OCC over trust bank charters of crypto firms</a>
-<p class="news-desc">Community banking group’s lawsuit claims OCC has overstepped its mandate from Congress.</p>
+<p class="news-desc">커뮤니티 뱅킹 그룹, 암호화폐 회사의 신탁 은행 헌장에 대해 OCC를 고소</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/crypto-biz-kalshi-blockchain-com-crypto-treasury-valuations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Crypto’s billions are back, but the premiums aren’t</a>
-<p class="news-desc">Kalshi seeks a $40 billion valuation, while Blockchain.com targets an IPO and crypto treasury companies struggle to maintain their once-high valuations.</p>
+<p class="news-desc">암호화폐 자본이 다시 흐르고 있지만, 한때 인기 있었던 비즈니스 모델이 프리미엄을 잃고 보안 위험이 지속되면서 투자자들은 더욱 선별적으로 변하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -231,7 +231,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/markets/bitcoin-briefly-taps-87k-as-bond-yields-drop-on-low-us-nonfarm-payrolls-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin briefly hits $87K as weak US jobs data sends bond yields lower</a>
-<p class="news-desc">Bitcoin climbed after weaker-than-expected payrolls pushed Treasury yields lower, but order-book resistance kept BTC from reaching new macro highs.</p>
+<p class="news-desc">비트코인 가격 분석은 미국 비농업 고용 데이터 약세 이후 채권 수익률이 하락함에 따라 추가 상승 가능성을 지적합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -243,7 +243,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/bitcoin-treasuries-struggle-strategy-says-ammous?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin treasuries may struggle to match Strategy, says Ammous</a>
-<p class="news-desc">Strategy’s scale and cash reserves give it an edge over treasury rivals, according to Saifedean Ammous, author of “The Bitcoin Standard.”</p>
+<p class="news-desc">저자 Saifedean Ammous는 비트코인 국채가 Strategy의 규모와 규모를 따라잡지 못할 수도 있다고 말합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -267,7 +267,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/blast-to-wind-down-ethereum-l2-after-costs-outpace-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Blast to wind down Ethereum L2 after costs outpace revenue</a>
-<p class="news-desc">Once among Ethereum’s largest layer-2 networks by total value locked, Blast is urging users to move their assets to mainnet ahead of the shutdown.</p>
+<p class="news-desc">Blast 사용자는 이더리움 브리지 계약과의 직접적인 상호 작용으로 인출이 전환되기 전에 10월 26일까지 네트워크 인터페이스를 통해 인출해야 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -279,7 +279,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/03/crypto-job-postings-triple-to-over-1-200-in-september-but-applications-fall" class="news-title" target="_blank" rel="noopener noreferrer">Crypto job postings triple to over 1,200 in September, but applications fall</a>
-<p class="news-desc">Finance, engineering and trading led hiring demand, while Bitcoin, Ethereum and Solana were the most frequently requested blockchain skills.</p>
+<p class="news-desc">업계가 침체된 2026년 상반기에서 등장하면서 암호화폐 회사들은 7월과 9월 사이에 채용 공고가 3배 이상 증가하면서 다시 채용 모드에 돌입했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -291,7 +291,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/tech/2026/10/02/once-a-usd2-billion-ethereum-layer-2-blast-is-shutting-down-after-assets-plunge-98" class="news-title" target="_blank" rel="noopener noreferrer">Once a $2 billion Ethereum layer-2, Blast is shutting down after assets plunge 98%</a>
-<p class="news-desc">Once home to more than $2 billion in crypto assets, Blast is shutting down as activity fades, costs rise, and bigger platforms like Coinbase and Robinhood build networks of their own.</p>
+<p class="news-desc">한때 20억 달러 이상의 암호화폐 자산을 보유한 Blast는 활동이 줄어들고 비용이 상승하며 코인베이스 및 Robinhood와 같은 대규모 플랫폼이 자체 네트워크를 구축함에 따라 폐쇄됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
