@@ -25,29 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-10-18 - 시�
 - 주요 출처: WorldMonitor/Al Jazeera (15건), WorldMonitor/CNBC (5건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 보통</strong><ul><li>안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(11건), **지정학/안보**(7건), **금융시장**(2건) 중심으로 전개되고 있습니다.
-
-안보 이슈(7건)와 금융시장 뉴스(2건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-**테마 집중도**: 상위 2개 테마가 전체의 90%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (7건)
-
-- EU는 러시아와의 전쟁에서 우크라이나를 구출할 것인가?
-- 예루살렘에 있는 미국 대사관은 이스라엘을 위한 것인가, 아니면 미국을 위한 것인가?
-- 이스라엘 무인기 공격, 휴전에도 불구하고 가자지구 팔레스타인인 6명 사망
-- 트럼프는 러시아 제재 면제로 초당적 반발에 직면
-
-### 투자자 체크포인트
-
-- **안전자산**: 금·달러·미국채로의 자금 이동 가속 여부 확인
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/Al Jazeera (15건), WorldMonitor/CNBC (5건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">7</div><div class="stat-label">안보 이슈</div></div></div>
 

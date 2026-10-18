@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-18 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 - 블루밍비트 - 112건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 증권 주목</li><li>📈 <strong>가격/시장</strong>: 달러, 코인리더스 관련 25건</li><li>📊 <strong>매크로/금리</strong>: 지수, 국채 관련 10건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE8wRV9EN0k1Z1FiV0kyMzA5YndlU1Zra1Y5MVNOUU1ESWgxeUNPMDZSUllIaTNoUVdPVDl5UDdFSGsxXzdPeWpQWWdLUENmdkpu?oc=5">AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 - 블루밍비트</a> <span class="p0-desc">AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 블루밍비트</span></li><li><a href="https://www.coindesk.com/business/2026/10/16/scammer-gets-scammed-in-ledger-spy-chip-exploit-loses-almost-usd5-million-in-bitcoin">사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다.</a> <span class="p0-desc">Chainalytic은 가짜 온라인 작업을 통해 사람들을 속인 사기꾼 WHO이 손상된 하드웨어 지갑의 가장 큰 피해자 중 하나가 되었다고 밝혔습니다</span></li><li><a href="https://bitcoinmagazine.com/news/scammer-lost-bitcoin-to-ledger-thieves">시적 정의: 사기꾼은 원장 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다.</a> <span class="p0-desc">비트코인 Magazine Poetic Justice: 사기꾼은 Ledger 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다. Chainalytic은 지난 주 Ledger.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 - 블루밍비트 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 112건의 뉴스 중 P1 주요 이슈도 11건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (39건): 비트코인, 달러, 블루밍비트 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (25건): 증권 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **📈 가격/시장** (25건): 달러, 코인리더스, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 - 블루밍비트
-- 사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다.
-- 시적 정의: 사기꾼은 원장 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다.
-
-### 주요 이슈
-
-- 연방 판사는 Gemini와 CFTC의 2025년 합의 삭제 입찰을 거부했습니다.
-- 코인 시황] 비트코인 8만달러 붕괴 후 반등…美 암호화폐 정책은 '책임자 공백 - 뉴스핌
-- 비트코인, 호르무즈 해협 긴장에 8만 달러 사수 여부는?…ETF 자금 이탈까지 겹쳤다 - CBC뉴스
-- 외 8건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **112건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-18 암호화폐 핵심 뉴스: 갱단이 암호화폐를 훔치려고 집에 급습한 뒤 '석화'된 남자. 총 112건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

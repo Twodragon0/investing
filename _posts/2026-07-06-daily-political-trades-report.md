@@ -21,8 +21,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-07-06 - 정치인 거래 �
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">1</div><div class="stat-label">중앙은행</div></div></div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-07-06 정치권 핵심 이슈: 고용 식은 미국, 물가 뜨거운 한국…복잡해진 한은 셈법 - 비즈워치. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 1건 (중앙은행 1건)을 종합 정리합니다
+- 1. 고용 식은 미국, 물가 뜨거운 한국…복잡해진 한은 셈법 - 비즈워치 고용 식은 미국, 물가 뜨거운 한국…복잡해진 한은 셈법 비즈워치
 
 ## 1. 중앙은행 정책 동향
 

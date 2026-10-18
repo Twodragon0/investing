@@ -18,10 +18,9 @@ image_alt: "시장 심리 및 리스크 지표 (2026-10-17) - 시장 분석 뉴�
 
 ## 전체 뉴스 요약
 
+- 2026-10-17 기준 시장 지표 공포탐욕 19.1(extreme fear), VIX 18.88. 9개 소스 수집.
 - 국채 금리 관련 뉴스 (보완):
 
-
-<div class="stat-grid"><div class="stat-item"><div class="stat-value">19.1</div><div class="stat-label">공포탐욕 (extreme fear)</div></div><div class="stat-item"><div class="stat-value">18.88</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">101.89</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,180.10</div><div class="stat-label">금</div></div></div>
 
 ## 1. 시장 심리 지표
 
