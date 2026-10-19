@@ -42,12 +42,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-17 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 이더리움 중심 105건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인 동향 주시</li><li>📈 <strong>가격/시장</strong>: 32건 수집</li><li>🏦 <strong>거래소</strong>: 15건 수집</li><li>🔵 <strong>규제/정책</strong>: BTC 이슈 부각</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **105건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-06-17 암호화폐 핵심 뉴스: 블랙록의 새로운 비트코인 ETF을 통해 기관은 변동성에서 수익을 얻을 수 있습니다. 문제가 있습니다.. 총 105건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

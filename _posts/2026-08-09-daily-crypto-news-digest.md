@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-09 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMipAFBVV95cUxORkFjbUdaSldLTGFUUVV2RkRLTzdiX2dkVTVJelV4a3RWaXd6RzkySWZuSDJJVkVVTjJXMkFKZ01oZGNEczBvUTNUVk53YnlhRUVFb3YwY19MQWYtS2xZQmFTWnNHVFNpRFRTekVFRzhvaEhUbjliUjdpcFFRUkdBcHM0NGFmOHB1MWZfUUYtN2UzQjNPNHpVcUNCUWFDc2w4c0tUMw?hl=en-US&gl=US&ceid=US%3Aen">캐나다 기업의 콜드월렛이 1억 4천만 달러 규모의 비트코인 해킹으로 인해 손상된 방법</a> <span class="p0-desc">Coinkite의 1억 4천만 달러 규모의 비트코인 해킹에서 발생한 일, 콜드 지갑의 작동 방식, 그리고 WHO이 돈을 잃었을 경우 다시 돌려받을 수 있는 방법은 다음과 같습니다.</span></li><li><a href="https://www.bloomberg.com/news/features/2026-08-06/bitcoin-btc-faithful-tested-as-hackers-drain-funds-stashed-offline-msi84uao">안전하다고 추정되는 비트코인 도구 해킹, 헌신적인 신앙 시도</a> <span class="p0-desc">안전하다고 추정되는 비트코인 도구를 해킹하여 헌신적인 신앙을 시험합니다.</span></li><li><a href="https://cointelegraph.com/news/bybit-us-court-trace-funds-north-korea-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">미국 법원, 15억 달러 규모의 북한 해킹 자금 추적에 대한 Bybit의 제안을 지지</a> <span class="p0-desc">신속한 검색을 통해 거래소는 미국에서 운영되는 플랫폼의 계정 ID, 잔액 및 거래 내역을 찾을 수 있습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **101건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔴 보안/해킹
-- 2026-08-09 암호화폐 핵심 뉴스: 캐나다 기업의 콜드월렛이 1억 4천만 달러 규모의 비트코인 해킹으로 인해 손상된 방법. 총 101건 분석, 핵심 테마는 비트코인, 가격/시장, 보안/해킹입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
