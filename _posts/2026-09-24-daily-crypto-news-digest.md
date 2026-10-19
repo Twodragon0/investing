@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379093/15-6-billion-bitcoin-options-expire-friday-what-means" class="news-title" target="_blank" rel="noopener noreferrer">$15.6 Billion in Bitcoin Options Expire Friday—Here's What It Means</a>
-<p class="news-desc">Deribit's strike-by-strike data shows a book stacked with calls, and one price level drawing hedging pressure from both sides at once.</p>
+<p class="news-desc">비트코인 약 156억 달러 규모 옵션이 금요일 초 Deribit에서 만료됩니다. 지금까지 책이 쌓여 있는 모습은 이렇습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379080/nyse-taps-blockchain-com-to-reach-crypto-investors-with-tokenized-stocks-etfs" class="news-title" target="_blank" rel="noopener noreferrer">NYSE Taps Blockchain.com to Reach Crypto Investors With Tokenized Stocks</a>
-<p class="news-desc">Blockchain.com and NYSE Group signed a preliminary agreement to give the crypto exchange's users access to tokenized U.S. stocks and ETFs, pending regulatory approval.</p>
+<p class="news-desc">Blockchain.com과 NYSE 그룹은 규제 승인을 기다리는 동안 암호화폐 거래소 사용자에게 토큰화된 미국 주식 및 ETF에 대한 액세스 권한을 제공하는 예비 계약에 서명했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -290,7 +290,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/379091/borrow-against-bitcoin-fixed-rate-coinbase-morpho" class="news-title" target="_blank" rel="noopener noreferrer">Borrow Against Your Bitcoin at a Fixed Rate: Coinbase Expands Morpho Loans</a>
-<p class="news-desc">The product lets users lock in their rate and repayment date when borrowing USDC against Bitcoin, marking the first enterprise-scale deployment of Morpho Midnight and a shift away from on-chain lending's variable-rate norm.</p>
+<p class="news-desc">코인베이스는 Morpho가 제공하는 고정 금리 대출을 출시하여 사용자가 이자율이 고정된 상태에서 비트코인에 대해 USDC을(를) 빌릴 수 있도록 했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -302,7 +302,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/379081/canada-six-biggest-banks-shared-digital-dollar-network" class="news-title" target="_blank" rel="noopener noreferrer">Canada's Six Biggest Banks Team Up on a Shared Digital-Dollar Network</a>
-<p class="news-desc">RBC, TD, BMO, Scotiabank, CIBC and National Bank are jointly exploring a Canadian-dollar tokenized deposit system, starting with transfers between the banks themselves.</p>
+<p class="news-desc">RBC, TD, BMO, Scotiabank, CIBC 및 National Bank는 캐나다 달러 토큰화 예금 시스템을 공동으로 탐색하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

@@ -132,7 +132,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/25/trump-xi-china-trade-greer.html" class="news-title" target="_blank" rel="noopener noreferrer">Details on U.S.-China trade negotiations coming Monday, USTR Greer says</a>
-<p class="news-desc">Top White House trade official Jamieson Greer said the two days of talks between President Trump and Chinese leader Xi brought some trade matter agreements.</p>
+<p class="news-desc">백악관 무역 고위 관리 제이미슨 그리어는 트럼프 대통령과 시진핑 중국 지도자 간의 이틀간의 회담을 통해 일부 무역 문제 합의가 이루어졌다고 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

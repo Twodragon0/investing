@@ -284,7 +284,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/22/kalshi-asks-cftc-to-allow-margin-trading-on-its-platform-letting-users-buy-with-borrowed-funds.html" class="news-title" target="_blank" rel="noopener noreferrer">Kalshi asks CFTC to allow margin trading on its platform, letting users buy with borrowed funds</a>
-<p class="news-desc">It's the latest move by the company as it and other event contract exchanges seek to gain greater participation by institutional traders.</p>
+<p class="news-desc">예측 시장 플랫폼Kalshi는 주식과 선물에 대해 이미 월스트리트에 널리 퍼져 있는 관행인 이벤트 계약에 대한 레버리지를 제공하기 위한 승인을 얻기 위해 화요일에 연방 규제 기관에 제출했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -296,7 +296,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-23 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/22/circle-lands-100-million-from-binance-to-ramp-up-global-usdc-expansion-.html" class="news-title" target="_blank" rel="noopener noreferrer">Circle lands $100 million from Binance to ramp up global USDC expansion</a>
-<p class="news-desc">Binance will invest $100 million in stablecoin issuer Circle and agreed to promote the stablecoin issuer's flagship USDC on its platform.</p>
+<p class="news-desc">바이낸스는 Circle에 1억 달러를 투자할 예정이며 플랫폼에서 스테이블코인 발행자의 주력 제품인 USDC을 홍보하는 데 동의했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

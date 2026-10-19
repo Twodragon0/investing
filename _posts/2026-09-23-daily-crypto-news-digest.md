@@ -223,7 +223,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/escb-new-stablecoin-liquidity-rules-bank-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">ECB, EU cenbanks seek changes in MiCA’s minimum bank deposit for stablecoins</a>
-<p class="news-desc">The ECB and EU central banks want to replace MiCA’s stablecoin bank-deposit requirements with liquidity thresholds, warning that sudden withdrawals could strain lenders.</p>
+<p class="news-desc">ECB 및 EU 중앙은행은 은행 자금 조달에 대한 잠재적 위험을 언급하면서 스테이블코인 준비금에 대한 1일 및 5일 유동성 기준을 제안했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Here’s what happened in crypto today</a>
-<p class="news-desc">오늘 암호화폐 업계에서 무슨 일이 일어났는지 알고 싶으십니까? 다음은 비트코인 가격, 블록체인, 디파이, Web3 및 암호화폐 규제에 영향을 미치는 일일 동향 및 이벤트에 대한 최신 뉴스입니다.</p>
+<p class="news-desc">오늘날 암호화폐 분야에서 Metaplanet은 미국 자본 시장으로 확장하는 데 더 가까워지고 있으며 World Liberty의 USD1 스테이블코인은 시가총액 4억 달러를 잃었고 Qubic은 해킹 후 네트워크를 중단했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-23 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/ecb-money-tokenized-securities-pontes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">ECB to put its own money into tokenized securities via new Pontes DLT</a>
-<p class="news-desc">The ECB aims to gain firsthand DLT market experience by buying tokenized public-sector securities and settling the trades through Pontes.</p>
+<p class="news-desc">ECB은 자체 자금의 일부를 토큰화된 공공 부문 증권에 투자하고 Pontes를 통해 구매를 결제할 계획입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

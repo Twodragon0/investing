@@ -243,7 +243,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-24 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump-Xi summit puts AI safety talks on the table but neither side wants to slow down</a>
-<p class="news-desc">Recent weeks have seen AI safety fears reach new heights. That will be a key focus for the U.S. and Chinese leaders, analysts told CNBC.</p>
+<p class="news-desc">최근 몇 주 동안 AI 안전에 대한 두려움이 새로운 수준에 이르렀습니다. 분석가들은 이것이 미국과 중국 지도자들의 핵심 초점이 될 것이라고 CNBC에 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
