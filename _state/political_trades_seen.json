@@ -1,32 +1,5 @@
 {
   "seen": {
-    "ec6575672edd1a91eaab6d8e": "2026-09-19T00:30:15",
-    "8c253a61c97f3403e8ad2aef": "2026-09-19T00:30:15",
-    "fff9c68fef65b1a4a8335876": "2026-09-19T00:30:15",
-    "e5cbdabd0cd5e1e7578d21e8": "2026-09-19T00:30:15",
-    "c734bedffb7b9ddf2999629c": "2026-09-19T00:30:15",
-    "3ee605069a4335f54bf9737d": "2026-09-19T00:30:15",
-    "2cb77dee0e447a18b0e0b55d": "2026-09-19T00:30:15",
-    "e3f7907636017a554375e766": "2026-09-19T00:30:15",
-    "6744fbf4ba69ba0a51b77f23": "2026-09-19T00:30:15",
-    "6ba9bf4f2dd5fe30099bd700": "2026-09-19T00:30:15",
-    "1467b5ef06cf52d3f5afe96b": "2026-09-19T00:30:15",
-    "6d10b7a117aef36147b0df34": "2026-09-19T00:30:15",
-    "61da0a891fe28f3581a19fc1": "2026-09-19T00:30:15",
-    "2656ef47854c8c678005d2d7": "2026-09-19T00:30:15",
-    "6c18c395aa02ebbaacf17082": "2026-09-19T00:30:15",
-    "3c4b10d5096ae980df030ca0": "2026-09-19T00:30:15",
-    "d331fe4c81cf15e857b81ed6": "2026-09-19T00:30:15",
-    "33cb9786cd7b6b98b5a9b360": "2026-09-19T00:30:15",
-    "03205d095966a3cd4347627d": "2026-09-19T00:30:15",
-    "42f5a2dd904f21c9a138cf57": "2026-09-19T00:30:15",
-    "9a4baf47475b7880d62f60c4": "2026-09-19T00:30:15",
-    "fb37d5f72f68a3c1a1c19247": "2026-09-19T00:30:15",
-    "fc18f98d488eb2dfbbc46086": "2026-09-19T00:30:15",
-    "0e88a43051b09fcae5e87e23": "2026-09-19T00:30:15",
-    "60508366856f928b1ad4df5a": "2026-09-19T00:30:15",
-    "ff0e5d797feec1b6f60801a6": "2026-09-19T00:30:15",
-    "34fd9bc7284542dd4e668fed": "2026-09-19T00:30:15",
     "93b137184b94c97e25ae0573": "2026-09-20T00:15:36",
     "8b3250f3ebfa4b525d432541": "2026-09-20T00:15:36",
     "f489eede17ccd65fc7a21a3f": "2026-09-20T00:15:36",
@@ -570,77 +543,43 @@
     "d2975d38eacaaad77f3cffa6": "2026-10-19T00:22:38",
     "e579bdb82e3dfdcdc816d0af": "2026-10-19T00:22:38",
     "c93b2e8e31984f33912cf2cb": "2026-10-19T00:22:38",
-    "366cb114726fa6978c3243e2": "2026-10-19T00:22:38"
+    "366cb114726fa6978c3243e2": "2026-10-19T00:22:38",
+    "42ffa3379997872aaa7fec99": "2026-10-19T16:36:36",
+    "7443aa022b1a8526c0b49b34": "2026-10-19T16:36:36",
+    "625d47d3697fcd346419071d": "2026-10-19T16:36:36",
+    "feae5d651e62a37a8ae23be1": "2026-10-19T16:36:36",
+    "35c5e1126dd34e45262c8b22": "2026-10-19T16:36:36",
+    "42761ac324f72d1717a69029": "2026-10-19T16:36:36",
+    "0dcd229e77a1129ac5132e4c": "2026-10-19T16:36:36",
+    "3a12448b600ea84d17daef74": "2026-10-19T16:36:36",
+    "8f07e94b0488e4ecbedd3bbe": "2026-10-19T16:36:36",
+    "e4f9bca687321f23b14f55d1": "2026-10-19T16:36:36",
+    "2d8e9deef0d4ac814f871c89": "2026-10-19T16:36:36",
+    "af7b9b5046785b1bc11fe948": "2026-10-19T16:36:36",
+    "de6ae46c1d4075a97638b45d": "2026-10-19T16:36:36",
+    "5d826c91f80c404cdaf1ac75": "2026-10-19T16:36:36",
+    "adcb14b0c251d3f753a3cf32": "2026-10-19T16:36:36",
+    "c88c376deb3197da395589a8": "2026-10-19T16:36:36",
+    "cfcf3646a2142800b75d62d2": "2026-10-19T16:36:36",
+    "ea18c1e4900ed3173e4f6936": "2026-10-19T16:36:36",
+    "2aab310cc502e065bf9420fe": "2026-10-19T16:36:36",
+    "dbaf60c6a39f052f56b51b0d": "2026-10-19T16:36:36",
+    "58fb89f285c4863cc9c17507": "2026-10-19T16:36:36",
+    "66f540765c9b4bcd3a626cbe": "2026-10-19T16:36:36",
+    "f4ee07c234906f3150f86232": "2026-10-19T16:36:36",
+    "170b0b4d902ba5a167ec5d09": "2026-10-19T16:36:36",
+    "e101f97a7b963a77f03afb73": "2026-10-19T16:36:36",
+    "bbebae11b60fbf32379b6a8b": "2026-10-19T16:36:36",
+    "ba437ac3be7e56621d7fa11d": "2026-10-19T16:36:36",
+    "27b2fe197fd34f03700ef021": "2026-10-19T16:36:36",
+    "8859bff112545b0f8583cb52": "2026-10-19T16:36:36",
+    "1be53cbf51a46d0072aadf5f": "2026-10-19T16:36:36",
+    "4d694236b1e8018e3a7cf905": "2026-10-19T16:36:36",
+    "2fde7923af48705d9b693685": "2026-10-19T16:36:36",
+    "3d2990e68ab8b6691a8ce256": "2026-10-19T16:36:36",
+    "a3f4ed747ed1fb1f76e73174": "2026-10-19T16:36:36"
   },
   "titles": [
-    [
-      "india us trade deal decision on agreed 18 us tariffs expected within 34 days sources say the hindu",
-      ""
-    ],
-    [
-      "정치인 거래정책 리포트 20260218",
-      ""
-    ],
-    [
-      "maine gov janet mills discloses more than 170000 in stocks the portland press herald",
-      ""
-    ],
-    [
-      "jpm insider trading 6 executives sell 56m in jpmorgan chase stock feb 19 meyka",
-      ""
-    ],
-    [
-      "wcn insider trading 11 executives buy waste connections stock feb 19 meyka",
-      ""
-    ],
-    [
-      "jpm insider trading 6 executives sell 56m in jpmorgan chase stock feb 19 meyka",
-      ""
-    ],
-    [
-      "미 fed 회의록 금리 상향 조정 언급에한은 금통위 동결 무게 중앙일보",
-      ""
-    ],
-    [
-      "美fomc 신중론에 달러 강세한은 금리결정 변수 확대 뉴시스",
-      ""
-    ],
-    [
-      "환율 불안에 금리 인하 제동한은 이번에도 동결 유력 mtcokr",
-      ""
-    ],
-    [
-      "경제인사이드 불확실성에 발목 잡힌 한은 다음주 6연속 동결 전망 천지일보",
-      ""
-    ],
-    [
-      "한은 2월 금리동결 가닥성장률 상향 여부 주목 대한경제",
-      ""
-    ],
-    [
-      "전문가 10명 중 9명 2월도 기준금리 동결 예상연말까지 변동 없을 것 금통위폴 이투데이",
-      ""
-    ],
-    [
-      "fed officials split on where interest rates should go minutes say cnbc",
-      ""
-    ],
-    [
-      "us fed meeting minutes 5 key takeaways from jerome powellled fomcs decision to hold interest rate steady in january msn",
-      ""
-    ],
-    [
-      "federal reserve officials discussed interest rate hike scenarios at their last meeting nbc news",
-      ""
-    ],
-    [
-      "fed minutes show no rush to restart rate cuts and even possibility of hikes the new york times",
-      ""
-    ],
-    [
-      "fed dissent grows as some officials weigh return to interest rate hikes amid stubborn inflation fox business",
-      ""
-    ],
     [
       "fomc minutes reveal split on rate cuts hikes 조선일보",
       ""
@@ -20640,6 +20579,142 @@
     [
       "정치인 거래정책 리포트 20261019",
       "2026-10-19"
+    ],
+    [
+      "pdf solutions pdfs evp kimon michaels receives a threeyear 71000unit target stock award stock titan",
+      "2026-10-20"
+    ],
+    [
+      "a 71share gift leaves wilson bank holding co wbhc director with 16624 shares stock titan",
+      "2026-10-20"
+    ],
+    [
+      "an officers family trust proposes selling 16000 shares of mara holdings mara stock titan",
+      "2026-10-20"
+    ],
+    [
+      "pdf solutions pdfs ctos 20000share target award could yield no shares after three years stock titan",
+      "2026-10-20"
+    ],
+    [
+      "a ceo stock award at pdf solutions pdfs targets 71000 shares but may yield none stock titan",
+      "2026-10-20"
+    ],
+    [
+      "after distributing shares to members falcons beyond fbyd holder retains 616m shares stock titan",
+      "2026-10-20"
+    ],
+    [
+      "ceo wes cummins buys 55803 applied digital apld shares on october 16 stock titan",
+      "2026-10-20"
+    ],
+    [
+      "after selling 8500 shares buckle bke director bill l fairfield holds 44408 shares directly stock titan",
+      "2026-10-20"
+    ],
+    [
+      "stockprice goals govern pdf solutions pdfs cfos 70000unit target award with 0 to 100 earned stock titan",
+      "2026-10-20"
+    ],
+    [
+      "purchases of 8545 and 8800 depositary shares under a trading plan are reported by agora api ceo bin zhao stock titan",
+      "2026-10-20"
+    ],
+    [
+      "a director proposes selling 19500 northwest natural nwn shares around october 19 2026 stock titan",
+      "2026-10-20"
+    ],
+    [
+      "under a trading plan globale online glbe president nir debbi sold shares on october 15 stock titan",
+      "2026-10-20"
+    ],
+    [
+      "at 1886 a share applied digital apld president jason gechen zhang buys stock stock titan",
+      "2026-10-20"
+    ],
+    [
+      "a director sold 7260 nebius group nbis shares in 19 transactions under a preset trading plan stock titan",
+      "2026-10-20"
+    ],
+    [
+      "at 01829 a share fingermotion fngr cfo buys 13500 shares stock titan",
+      "2026-10-20"
+    ],
+    [
+      "congress reacts to executive order exempting russia from economic sanctions delaware public media",
+      "2026-10-20"
+    ],
+    [
+      "수수료 더 걷고 현금 보상 거래 유도신한투자증권 고객 뒷전 논란 daily ntn",
+      "2026-10-20"
+    ],
+    [
+      "李대통령 주식시장 저평가조만간 정상화 조치 부동산 충격 대비 주간조선",
+      "2026-10-20"
+    ],
+    [
+      "李 대통령 부동산 집값 잡으려 세금 올렸다 사실 아냐 남도일보",
+      "2026-10-20"
+    ],
+    [
+      "ecb rate decision on october 29 what it means for your crypto portfolio cryptoticker",
+      "2026-10-20"
+    ],
+    [
+      "gold edges up as oil retreat lends support fed decision in focus",
+      "2026-10-20"
+    ],
+    [
+      "gold steady ahead of fed meeting lower oil prices limit downside",
+      "2026-10-20"
+    ],
+    [
+      "why bofa still sees an october fed rate hike",
+      "2026-10-20"
+    ],
+    [
+      "한은 10월 기준금리 동결 전망 우세 전문가 인상 종료는 아냐 한양경제",
+      "2026-10-20"
+    ],
+    [
+      "한국은행 금리 결정 앞두고 국고채 금리 반등3년물 연 3877 마감 베타뉴스",
+      "2026-10-20"
+    ],
+    [
+      "집중취재 백투백 인상 후 첫 금통위매파적 동결 무게 관전 포인트는 매일경제 마켓",
+      "2026-10-20"
+    ],
+    [
+      "10월 동결 유력에도350까지 열린 기준금리 상단 뉴스토마토",
+      "2026-10-20"
+    ],
+    [
+      "한은 22일 기준금리 동결 전망연 300 유지에 무게 press9",
+      "2026-10-20"
+    ],
+    [
+      "한국은행 금리 결정 앞두고 국고채 금리 일제히 상승 진일보 124 전남일보",
+      "2026-10-20"
+    ],
+    [
+      "끈적한 물가 금통위 금리 동결 전망한은 추가 인상 가를 변수는 아주경제",
+      "2026-10-20"
+    ],
+    [
+      "10월 넘기고 11월에전문가들 금리 인상 숨고르기 전망",
+      "2026-10-20"
+    ],
+    [
+      "한은 22일 기준금리 결정숨고르기 전망",
+      "2026-10-20"
+    ],
+    [
+      "국고채 금리 금통위 앞두고 일제히 상승3년물 연 3877종합",
+      "2026-10-20"
+    ],
+    [
+      "정치인 거래정책 리포트 20261020",
+      "2026-10-20"
     ]
   ],
   "seen_urls": {}
