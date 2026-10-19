@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-18 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 - 블루밍비트 - 112건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 이슈 부각</li><li>🏦 <strong>거래소</strong>: 증권 주목</li><li>📈 <strong>가격/시장</strong>: 달러, 코인리더스 관련 25건</li><li>📊 <strong>매크로/금리</strong>: 지수, 국채 관련 10건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE8wRV9EN0k1Z1FiV0kyMzA5YndlU1Zra1Y5MVNOUU1ESWgxeUNPMDZSUllIaTNoUVdPVDl5UDdFSGsxXzdPeWpQWWdLUENmdkpu?oc=5">AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 - 블루밍비트</a> <span class="p0-desc">AI주 급락·유가 110달러…비트코인 8만1000달러대 약세 블루밍비트</span></li><li><a href="https://www.coindesk.com/business/2026/10/16/scammer-gets-scammed-in-ledger-spy-chip-exploit-loses-almost-usd5-million-in-bitcoin">사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다.</a> <span class="p0-desc">Chainalytic은 가짜 온라인 작업을 통해 사람들을 속인 사기꾼 WHO이 손상된 하드웨어 지갑의 가장 큰 피해자 중 하나가 되었다고 밝혔습니다</span></li><li><a href="https://bitcoinmagazine.com/news/scammer-lost-bitcoin-to-ledger-thieves">시적 정의: 사기꾼은 원장 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다.</a> <span class="p0-desc">비트코인 Magazine Poetic Justice: 사기꾼은 Ledger 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다. Chainalytic은 지난 주 Ledger.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **112건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-18 암호화폐 핵심 뉴스: 갱단이 암호화폐를 훔치려고 집에 급습한 뒤 '석화'된 남자. 총 112건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

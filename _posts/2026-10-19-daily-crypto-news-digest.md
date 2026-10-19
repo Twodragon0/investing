@@ -41,39 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-19 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 바빌론, 래핑 없이 네이티브 BTC로 에이브 V4 대출 추진…긴급 중단 땐 인출 막힐 수도 - 위키트리 - 81건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 증권 이슈 부각</li><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 주목</li><li>📈 <strong>가격/시장</strong>: 14건 수집</li><li>🟣 <strong>DeFi</strong>: 증권 관련 8건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvQXZGcV96LTdxWFNFaUdFX3h6TUFmUlRNQ3kyTExQTkRSU3BkT2FlcEhDS1RaLTdnQ2pGbWxOVWUzemg0OFFMUjV2amlKeUQtTk9VY29R?oc=5">바빌론, 래핑 없이 네이티브 BTC로 에이브 V4 대출 추진…긴급 중단 땐 인출 막힐 수도 - 위키트리</a> <span class="p0-desc">바빌론, 래핑 없이 네이티브 BTC로 에이브 V4 대출 추진…긴급 중단 땐 인출 막힐 수도 위키트리</span></li><li><a href="https://bitcoinmagazine.com/news/scammer-lost-bitcoin-to-ledger-thieves">시적 정의: 사기꾼은 원장 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다.</a> <span class="p0-desc">비트코인 Magazine Poetic Justice: 사기꾼은 Ledger 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다. Chainalytic은 지난 주 Ledger.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 바빌론, 래핑 없이 네이티브 BTC로 에이브 V4 대출 추진…긴급 중단 땐 인출 막힐 수도 - 위키트리 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 81건의 뉴스 중 P1 주요 이슈도 5건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (23건): 증권 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **🟠 비트코인** (22건): 비트코인, 코인리더스, 암호화폐 관련 (22건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (14건): binance, support, velodrome 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 바빌론, 래핑 없이 네이티브 BTC로 에이브 V4 대출 추진…긴급 중단 땐 인출 막힐 수도 - 위키트리
-- 시적 정의: 사기꾼은 원장 도둑의 표적이 된 후 비트코인에 500만 달러를 잃었습니다.
-
-### 주요 이슈
-
-- 비트코인, ETF 자금 유출에 투자심리 위축…8만1,000달러선 유지 - Investing.com 한국어
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 2건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Binance(35건), CoinDesk(15건), Google News KR(12건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-19.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **81건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 📈 가격/시장
+- 2026-10-19 암호화폐 핵심 뉴스: 월스트리트의 가장 큰 결제 회사가 2027년에 Stellar를 준비하고 있습니다. XLM이 이더리움보다 더 나은 구매입니까? - 연중무휴 월 스. 총 81건 분석, 핵심 테마는 거래소, 비트코인, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

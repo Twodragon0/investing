@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-06-15 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.futunn.com">다음 주 '슈퍼중앙은행 주간': 월러의 데뷔를 특징으로 하는 연준 금리 결정, 일본은행 금리 인상 가능성, 중국 5월 경제 데이터 - 富途牛牛</a> <span class="p0-desc">富途资讯，您的一站式财经new闻화시场分析平台。我们提供全球金融이 도시의 상점은 새로운 것을 제공하며, 새로운 것을 제공합니다.</span></li><li><a href="https://www.moneycontrol.com">다랄TheStreet 위크 아헤</a> <span class="p0-desc">Dalal Street Week Ahead: 연준 금리 결정, 주목해야 할 10가지 주요 요인 중 유가</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 14건 중 텔레그램 0건, 소셜 0건, 정치·경제 14건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 14건 중 텔레그램 0건, 소셜 0건, 정치·경제 14건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
