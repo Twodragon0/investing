@@ -14,7 +14,6 @@ description: "PDF 솔루션(PDFS) Kimon Michaels EVP는 3년간 71,000단위 목
 image_alt: "정치인 거래·정책 리포트 - 2026-10-20 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-20.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-20** 정치권 핵심 이슈: **PDF 솔루션(PDFS) Kimon Michaels EVP는 3년간 71,000단위 목표주식을 받았습니다. - Stock Titan**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **33건** (SEC 내부자 거래 15건, 트럼프 정책 1건, 한국 정치인 3건, 중앙은행 14건)을 종합 정리합니다
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-20 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(6회), **의회**(2회), **행정명령**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **33건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 트럼프 정책 1건, 한국 정치인 3건, 중앙은행 14건입니다.
-
-**트럼프 정책** 관련으로는 Congress reacts to executive order exempting Russia from economic sanctions Delaware Public Media 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 ECB rate decision on October 29: what it means for your crypto portfolio CryptoTicker 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 수수료 더 걷고, 현금 보상 거래 유도…신한투자증권 '고객 뒷전' 논란 Daily NTN 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-10-20 정치권 핵심 이슈: PDF 솔루션(PDFS) Kimon Michaels EVP는 3년간 71,000단위 목표주식을 받았습니다. - Stock Titan. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 33건 (SEC 내부자 거래 15건, 트럼프 정책…
+- 1. 의회는 러시아의 경제 제재를 면제하는 행정 명령에 반응합니다 - Delaware Public Media 의회는 러시아의 경제 제재를 면제하는 행정 명령에 반응합니다.
 
 ## 1. 트럼프 행정명령/정책
 

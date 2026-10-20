@@ -53,10 +53,11 @@ image_alt: "주간 투자 다이제스트 - 2026년 10월 19일 - 시장 분석 
 - 2026-10-19 [암호화폐 시장 종합 리포트 - 2026-10-19 | 시총 $2.71T (-4.4%)](/market-analysis/2026/10/19/daily-crypto-market-report/) -- 현재가 $1,082.96, 24시간 -5.27% 하락, 7일 -13.65%. 시가총액 $18.33B
 - 2026-10-19 [암호화폐 시장 종합 리포트 - 2026-10-19 | 시총 $2.71T (-4.4%)](/market-analysis/2026/10/19/daily-crypto-market-report/) -- Top 20 코인 중 2개 상승, 18개 하락으로 전반적 매도 압력이 나타나고 있습니다. 최고 상승은 Monero(XMR) +6.96%, 최대 하락은 Zcash(ZEC) -5.27%입니다.
 - 2026-10-19 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-10-19](/market-analysis/2026/10/19/daily-worldmonitor-briefing/) -- 2026-10-19 글로벌 핵심 이슈: Russia’s war on Ukraine ‘must be brought to an end’, Zelenskyy says (지정학/안보). WorldMonitor 연계 소스…
-- 2026-10-19 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-10-19](/market-analysis/2026/10/19/daily-worldmonitor-briefing/) -- 오늘의 글로벌 리스크 스냅샷 총 수집: 20건 핵심 테마: 사회/기타, 지정학/안보, 정책/법률 집중 출처: WorldMonitor/Al Jazeera
-- 2026-10-19 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-10-19](/market-analysis/2026/10/19/daily-worldmonitor-briefing/) -- 원문 링크 탐색 가이드 20건의 원문을 출처별로 정리했습니다. 시장 영향이 높은 이슈를 우선 확인하세요.
-- 2026-10-19 [주요 경제 캘린더 및 실적 일정 (2026-10-19)](/market-analysis/2026/10/19/fmp-economic-calendar/) -- 2026-10-19 오늘 일정 핵심: 주요 경제 이벤트 CPI분/분. 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 20건(고·중간 중요도), 대형주 실적 20건, IPO 일정 11건을…
-- 2026-10-19 [주요 경제 캘린더 및 실적 일정 (2026-10-19)](/market-analysis/2026/10/19/fmp-economic-calendar/) -- Anthropic Says Revenue Jumped 45% to $16.8 Billion in Third Quarter
+<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+<li>총 수집: N/A</li>
+<li>핵심 테마: N/A</li>
+<li>집중 출처: N/A</li>
+</ul></div>
 
 ## 암호화폐 뉴스 (8건)
 

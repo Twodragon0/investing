@@ -29,43 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-10-20 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 - 경제타임스 - 23건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 기준금리, 전망 주목</li><li>📈 <strong>가격/시장</strong>: 기준금리, 전망 주목</li><li>🏛️ <strong>정치/정책</strong>: 스페셜타임스, 청년정책 관련 1건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFB1aTVPVkdYM25BajFHNnYyOWJaNmxNMnhxV3dBbDdvYkRUZEZWRUIyQnB3ZFpIN2lMYlFrTWwtOGQxblFwVV9fWlNRYkVRV3JuWUxNR3JQc2g?oc=5">코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 - 경제타임스</a> <span class="p0-desc">코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 경제타임스</span></li><li><a href="https://news.google.com/rss/articles/CBMiigpBVV95cUxPQ0hsZDJxajV2N1R5bzRuRW11SWlxZkphV0FiZ3k0aU1CSm1wek10ZTNXTzVVWlFqLW1aY2xXUlcyQUI2dGNqQU1VWHg0Z3duX3VGNGFiR1JDWDhJM3dOeVhxbGFZVk4tWlVjUUNrdGd4ZjVTT2dBb0s5MXBCSmRGUzZhSG5kT2hpUlJTZ0l1TmhaWjJ2SktWbllWRWZYRFRHRGt4Zmt2ZXNiUjJJTlhmc0hYNEota1E0V2E3bWQ1Qkh6RlhtbHFNTExZYktRaXJfODhSNHhBOTNPUWpzY0YyWUFtVk80aG41N0x5SExZRVppVEd2VjJuRHBrc1NhN2xNVXFLM1NsSktzdWRUSXFRdUVpSkJVLXN1LW42MExGcmpHODFuNmkwZ2hockhXU1dheWJXMjRKa3Z3SC1UaWhiN2lYekcteWJXd09yNFRxQ1VvMFh1NWpmajJwc3ozT2JFRkl3S2V0V0JyTzBrOTNFZHdIaW5WX0tBRFp4UzN4YXQ0SXNtZ2VqZGE2Vk8xaXF1MlBoSGFxOTM2VC1MdXdJc2lySk43bTA0U0VLT0duTi1uZERpR0FRLXZHVGhVaU4xTTdzTVBJS0hkQTlhd0VjOF92SGhoZkR6V3FCeXpFd3lHX193NU1qaGJqdk9JOGp4YlBsUTZkZWo4RnpHSVhldTA5ODNia19RQXZlRGw1c204aHJDbmcta1pLX2tGNUxMOUVqUnBoRUkwbmtDaVFCMEdTZkhEWmNUNnJPbHdPbnVKRjJDOFV1SFNVOF9MRi02eGZMdzJLejdXN1dXaF9PTl82UDRTemJpNzByQWxWNGlhQVhHQ2FmV0FIRWpNaDlkNjJPUUtfNFk5cklzT2lQTHhpa01LVUthVlo3c3dIVXk3N1dxQ3V6QTVOSkJXcGtHSmdkTEtUXzlxSGdnUkxfdWtSTmhsX1pnMGdlTVdlZC1EOE82SWFQaEVEQVZBVFY4UjVIVjFmOXdKQXZ6cTA1YUs1cEpzY3hDbkJGdERNY2RmcnRzbG1SVC1jMG9nbml6NFFOV1NwT3EwU3I2Rzd5dXBlX09HVjdrYlJnTmN1X05NbXdZT2dyOEh0eXhNQi1MODk0b1N6M0wyaEtHcHV1VzRROTZxTTExdjhCUmVPZWc5SEFRRDhYb3N2U0ZFOFVHVUdaY0NCMEV1TE9xMU16eHdWM0YxRWYzblE4WEJST3ZyUWlFLVJIemQwemd6OW5LZnhka2xpdkFENmhCLXNfanRDOGZtM3ptc1Z1SGhjTjFiY0doM05vamdjUXpUc1M3bEJhZFhtZklVRzNnOV9SdjBjWGZXMXpiMEpwbnVJWDVrM0Z3czEyZkd0M05PbGVnbzlFUzdVT3NKQklvMkdad2dvd3NaNmJROHFSMlhfMmE3T21tWHZ0U0tDX0p0cWUweWZmRHB3Wnp5Q0IzUlZsRUJXZU1aRWJnejR4OXBnMmdWUHRqei00T0JHeUtRa25nYWd1U1ltNWdEbWxJVnBUZjZCbUtqSk5iRTVhSFBpeXpvalpwWWQySXBzYTlsRE5WazduWURTY3VveWhKWVFpMm81U1pmVzB4bFhsUDcyRkRhaU1CU3RqMmVUN2VDWlBOb3pWTkp5cnhZUW5ERXFTTE1wT2JnR1dFRWRHTkh6Nmczb05LYWo0WE9kSDJjUExubXBReGJDdi1WVnlrYzU5UVBRVndoVmtsdkE?oc=5">연준 인플레이션이 3년 최고치에 도달함에 따라 금리 결정 예정 - ABC7 로스앤젤레스</a> <span class="p0-desc">연준 인플레이션이 3년 최고치에 도달함에 따라 금리 결정 예정 ABC7 Los Angeles</span></li><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBzX0MyT3g0cnVOVWdLZ1RLaHhydktQZjNpVWZSYXY4NGNCeDdyeVVRcHZqNEFQeW1tZ2xwTHlBbnc2MnlwZE9HV25XSDZTM2l5am45WW5NdU9rcHREODVBTTBKbEZJT3F3Snd5YkVrTQ?oc=5">한국은행 금리 결정 앞두고 국고채 금리 일제히 상승 - 진일보 | 전남일보</a> <span class="p0-desc">한국은행 금리 결정 앞두고 국고채 금리 일제히 상승 진일보 | 전남일보</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 - 경제타임스 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 23건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 23건 중 텔레그램 0건, 소셜 0건, 정치·경제 23건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (16건): 기준금리, 전망, 동결 매크로 변수 (16건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (18건): 기준금리, 전망, 코스피 가격 변동 (18건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (1건): 스페셜타임스, 청년정책, 프랑스 정치 이슈 (1건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 - 경제타임스
-- 연준 인플레이션이 3년 최고치에 도달함에 따라 금리 결정 예정 - ABC7 로스앤젤레스
-- 한국은행 금리 결정 앞두고 국고채 금리 일제히 상승 - 진일보 | 전남일보
-
-### 투자자 체크포인트
-
-- 정치·경제 23건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:89%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:6%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-10-20.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-10-20.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

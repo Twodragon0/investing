@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-19 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(8회), **의회**(2회), **SEC(미국증권거래위원회)**(2회), **연준**(2회), **관세**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-10-19 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 16건 — SEC 내부자 거래 1건, 트럼프 정책 6건, 중앙은행 9건
 - 1. Congress reacts to executive order exempting Russia from economic sanctions - NPR
 
 ## 1. 트럼프 행정명령/정책
