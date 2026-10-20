@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-16 | 시총 $2.72T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Canton</strong> (CC): -6.84%</li><li>🔴 <strong>Toncoin</strong> (TON): -6.48%</li><li>🔴 <strong>Stellar</strong> (XLM): -5.81%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **10건** 수집

@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-23 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPVU84Ukp5c3BKWWhwTjAwUm1GakFUSnJVQVVNRjNLNnRGWU5EN19Ndk9wM05iU19rSmdtZGlyMlRIUFVfQU9JWklwZXdlRzNacUtUUTdtRkl6b0pRZHk2SGRrdFdIM0dRYTBTQzd1aUJ0a1N4MTM2V1paRk1qYUJtcktIcklJUUl4RlNPSUJfeVhDMEx0QndwVw?oc=5">Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Almost 70 Years' Worth of History. - The Motley Fool</a></li><li><a href="https://www.sedaily.com/article/20094090">추석 앞두고 달러 매도 쏟아져…원·달러 환율 22.8원 급락 [김혜란의 FX</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,017.91 (+0.15%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 834.38 (-0.23%).
-- 2026-09-23 주식 시장에서 207건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,017.91(+0.15%), KOSDAQ 834.38(-0.23%), USD/KRW 1,357.43(-1.26%).
 - *한강타임즈 김광호 기자 = 22일 코스피와 코스닥지수가 모두 오름세로 장을 열었다.이날 코스피는 전 거래일보다*
 
 ## 테마별 주요 뉴스
