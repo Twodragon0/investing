@@ -14,7 +14,6 @@ description: "Peter A. Feld 이사는 BILL Holdings(BILL)에서 2,611주와 5,22
 image_alt: "정치인 거래·정책 리포트 - 2026-10-21 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-21.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-21** 정치권 핵심 이슈: **Peter A. Feld 이사는 BILL Holdings(BILL)에서 2,611주와 5,220주를 보유하고 있습니다. - Stock Titan**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **37건** (SEC 내부자 거래 15건, 트럼프 정책 8건, 한국 정치인 2건, 중앙은행 12건)을 종합 정리합니다
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-21 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(12회), **SEC(미국증권거래위원회)**(12회), **연준**(6회), **관세**(2회), **행정명령**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **37건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 15건, 트럼프 정책 8건, 한국 정치인 2건, 중앙은행 12건입니다.
-
-**트럼프 정책** 관련으로는 트럼프 “러시아 신규 제재 시행 유예” 행정명령 뉴스앤포스트 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 Bond market turmoil complicates ECB rate decision The Irish Times 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 수수료 더 걷고, 현금 보상 거래 유도…신한투자증권 '고객 뒷전' 논란 www.intn.co.kr 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-10-21 정치권 핵심 이슈: Peter A. Feld 이사는 BILL Holdings(BILL)에서 2,611주와 5,220주를 보유하고 있습니다. - Stock Titan. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 37건 (SEC 내부자 거래 15건,…
+- 1. 트럼프 “러시아 신규 제재 시행 유예” 행정명령 - 뉴스앤포스트 트럼프 “러시아 신규 제재 시행 유예” 행정명령 뉴스앤포스트
 
 ## 1. 트럼프 행정명령/정책
 

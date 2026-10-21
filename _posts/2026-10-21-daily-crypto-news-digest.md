@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-21 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 - CoinDesk - 125건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>🏦 <strong>거래소</strong>: 마이크로소프트 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러, ETF 관련 31건</li><li>🟣 <strong>DeFi</strong>: 스테이블코인, 마이크로소프트 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSk01aTlYa0ZkczA2QVhqcFJEMm15Wm5lNUhvRWZiUzgzQmNJRWlNVFd0RUd2MEZlQmlRVF85eWtfdkVKOHJ0RTc5RFp1ckt0SHA3SkVRWUkxcnVhbEtmT1NsRG1rbVBjcDlycE1IUGJpTUxoNWhJRW1PZjVIdjc3MDl3d2ZfSzhHSkJYZ1g3NnZLSkRlUDhTVUliUXR3cllGNmlQVW9Dell5OG1zWG5hMDF5UXdVRE9FSVprOHJnRmw3dDlyd3ZCNjhGeFJObDRmek5V?oc=5">블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 - CoinDesk</a> <span class="p0-desc">블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 CoinDesk</span></li><li><a href="https://cointelegraph.com/news/drift-exploiter-eth-tornado-cash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">드리프트 착취자는 Tornado Cash에 6100만 달러 ETH를 보내고 1억 9400만 ​​달러를 보유합니다.</a> <span class="p0-desc">4월 1일 해킹으로 인해 약 2억 9,500만 달러의 손실이 발생했으며 나중에 Mandiant 조사에서 북한 위협 그룹의 소행으로 밝혀졌습니다.</span></li><li><a href="https://www.coindesk.com/markets/2026/10/20/blackrock-seeks-to-shield-bitcoin-investors-from-losses-after-rival-fund-weathers-50-crash">블랙록은 경쟁 펀드가 50% 하락한 후 손실로부터 비트코인 투자자를 보호하려고 합니다. 폭락</a> <span class="p0-desc">블랙록이 제안한 펀드는 비트코인의 매도 기간 동안 투자자들이 급격한 손실을 피하는 데 도움이 된 Calamos의 유사한 제품을 따릅니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 - CoinDesk 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 125건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (54건): 비트코인, 달러, ETF 관련 (54건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (39건): 마이크로소프트 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-- **📈 가격/시장** (31건): 달러, ETF, 약세 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 - CoinDesk
-- 드리프트 착취자는 Tornado Cash에 6100만 달러 ETH를 보내고 1억 9400만 ​​달러를 보유합니다.
-- 블랙록은 경쟁 펀드가 50% 하락한 후 손실로부터 비트코인 투자자를 보호하려고 합니다. 폭락
-
-### 주요 이슈
-
-- 연준 FOMC 금리 동결 유력 속 비트코인·XRP '고래'는 쓸어 담았다
-- 스위스 FINMA, 개인도 살 수 있는 첫 비트코인 ETF 승인…분산투자 규제는 면제 - 위키트리
-- 08:35 가상자산] 비트코인, 美 현물 ETF 자금 유출에 약세 - 신아일보
-- 외 17건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Binance(35건), Google News EN(15건), Google News KR(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-21.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **125건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-21 암호화폐 핵심 뉴스: 500달러 있어? 2027년에 Hand Over Fist를 구매할 암호화폐 1개 - The Motley Fool. 총 125건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

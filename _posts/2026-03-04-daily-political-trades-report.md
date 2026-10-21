@@ -22,9 +22,11 @@ permalink: "/political-trades/2026/03/04/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **insider**(30회), **sec(미국증권거래위원회)**(2회), **fed(연방준비제도)**(2회), **disclosure**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 트럼프 정책: 1건. 행정명령 및 관세 정책 변화는 반도체·자동차·에너지 섹터의 변동성을 확대시킵니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. Florida Senate moves to mandate dual citizenship disclosures, cement gold as legal tender - Florida’s Voice 플로리다 상원, 이중국적 공개 의무화 및 금(Gold)을 법정 화폐로 인정하는 법안…
 
 ## 미국 의회 거래 동향

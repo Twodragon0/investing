@@ -28,28 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-21 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 15건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 11건 수집</li><li>🏦 <strong>거래소</strong>: 규제 주목</li><li>🟠 <strong>비트코인</strong>: 4건 수집</li><li>🟣 <strong>DeFi</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 15건의 뉴스 중 **규제/정책** 관련이 11건(73%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (11건): 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (3건): 규제 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🟠 비트코인** (4건): youhodler, register, bingx 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- EU 규정: ESMA, MiCA 등록에 BingX 및 YouHodler 법인 추가
-- EU 규정: ESMA, MiCA 등록에 BingX 및 YouHodler 법인 추가 - The Coin Republic
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 5건, 아시아 4건, 미국 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 15건
 - **유럽**: 5건
