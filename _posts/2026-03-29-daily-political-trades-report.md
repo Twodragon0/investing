@@ -24,12 +24,9 @@ image_alt: "정치인 거래·정책 리포트 - 2026-03-29 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(4회), **연준**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 0건(0%), 매도 신호 1건(100%). 매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다.
-- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
-- 1. Susan Collins Violated a Federal Transparency Law She Helped Write NOTUS is a newsroom like no other: a mix of veteran reporters and editors working with…
 
 ## 미국 의회 거래 동향
 
