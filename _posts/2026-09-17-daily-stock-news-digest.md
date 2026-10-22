@@ -274,7 +274,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/16/open-ai-investors-new-funding-round.html" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI investors have approached the company about a new funding round</a>
-<p class="news-desc">OpenAI is gearing up for what is widely expected to be a blockbuster IPO next year, after it confidentially filed its prospectus in June.</p>
+<p class="news-desc">OpenAI는 6월에 사업설명서를 비밀리에 제출한 후 내년에 블록버스터가 될 것으로 널리 예상되는 작업을 준비하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

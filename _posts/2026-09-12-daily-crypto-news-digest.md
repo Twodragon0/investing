@@ -290,7 +290,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/377959/blockstream-refuses-ransom-for-return-of-47m-in-bitcoin-from-liquid-hack-it-is-theft" class="news-title" target="_blank" rel="noopener noreferrer">Blockstream Refuses Ransom for Return of $47M in Bitcoin from Liquid Hack: 'It Is Theft'</a>
-<p class="news-desc">With 598.5 BTC still outstanding, the company says it will go to law enforcement should the funds not be returned.</p>
+<p class="news-desc">Blockstream은 Liquid Network에서 아직 누락된 4,700만 달러의 비트코인 ​​반환 비용 지불을 거부했으며 WHO이 가져간 사람들과의 협상 기간을 포기했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -302,7 +302,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/377947/eu-regulator-says-prediction-markets-are-rife-with-inside-trading" class="news-title" target="_blank" rel="noopener noreferrer">EU Regulator Says Prediction Markets Are 'Rife With Inside Trading'</a>
-<p class="news-desc">ESMA also asks why Kalshi and Polymarket block some EU countries but not others, and notes VPNs get around the blocks.</p>
+<p class="news-desc">예측 시장은 "내부 거래로 가득 차 있다"고 유럽 증권 시장 당국은 해당 부문의 자체 장을 지정하는 위험 모니터에서 말했습니다. 세 가지 에피소드가 나열되어 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

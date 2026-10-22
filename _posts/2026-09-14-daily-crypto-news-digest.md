@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/anthropic-chief-urges-slowdown-in-ai-development-to-safer-pace?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic chief urges slowdown in AI development to safer pace</a>
-<p class="news-desc">OpenAI CEO Sam Altman agrees with safety concerns regarding AI development, says no initial share sale this year.</p>
+<p class="news-desc">AI 개발 속도 저하 제안으로 초기 합의 도출</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

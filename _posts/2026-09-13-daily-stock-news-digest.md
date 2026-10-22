@@ -231,7 +231,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-13 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/11/9/11-anniversary-air-travel.html" class="news-title" target="_blank" rel="noopener noreferrer">25 years after 9/11, the U.S. starts rolling back travel restrictions, from liquids to gate access</a>
-<p class="news-desc">Years after 9/11, the U.S. government is walking back some security screenings as threats and technology evolve.</p>
+<p class="news-desc">9/11 테러 이후 몇 년 후, 미국 정부는 위협과 기술이 발전함에 따라 일부 보안 검사를 철회하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

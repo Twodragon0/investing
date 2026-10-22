@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/378134/strategy-buys-139-million-strc-bitcoin-frozen" class="news-title" target="_blank" rel="noopener noreferrer">Strategy Buys Back $139 Million of STRC, Bitcoin Stack Frozen for Second Week</a>
-<p class="news-desc">The Bitcoin treasury firm slowed its preferred-stock buyback from last week's $176 million pace and left its 845,050 BTC untouched, per a Monday SEC filing.</p>
+<p class="news-desc">비트코인 재무 회사 Strategy는 지난주의 1억 7,600만 달러 속도에서 우선주 매입 속도를 늦추고 비트코인 보유 자산을 그대로 유지했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

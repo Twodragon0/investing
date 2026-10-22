@@ -169,7 +169,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/09/12/ripple-stablecoin-chief-sees-usd13-trillion-corporate-treasury-opportunity-for-rlusd" class="news-title" target="_blank" rel="noopener noreferrer">Ripple stablecoin chief sees $13 trillion corporate treasury opportunity for RLUSD</a>
-<p class="news-desc">Payments and capital markets are driving growth for Ripple's $2.4 billion digital dollar as it looks to bring RLUSD to Europe under MiCA, the firm's Jack McDonald said.</p>
+<p class="news-desc">MiCA 하에서 RLUSD를 유럽에 도입할 것으로 예상되면서 지불 및 자본 시장이 리플의 24억 달러 디지털 달러의 성장을 주도하고 있다고 이 회사의 Jack McDonald가 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -181,7 +181,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/markets/2026/09/11/hotter-cpi-complicates-fed-hold-as-warsh-s-preferred-inflation-gauge-tells-different-story" class="news-title" target="_blank" rel="noopener noreferrer">With Fed rate hike all but assured, here's how markets might react</a>
-<p class="news-desc">Traders could look past an expected Fed hike and weigh what higher rates are signaling about the economy.</p>
+<p class="news-desc">거래자들은 예상되는 연준 인상을 지나서 더 높은 금리가 경제에 대해 어떤 신호를 보내는지 가늠할 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -193,7 +193,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/business/2026/09/11/metaplanet-cuts-executive-reward-pool-by-41-extinguishes-usd220-million-in-value" class="news-title" target="_blank" rel="noopener noreferrer">Metaplanet cuts executive reward pool by 41%, extinguishes $220 million in value</a>
-<p class="news-desc">The bitcoin treasury firm cut the potential Series 10 share pool to 188.2 million.</p>
+<p class="news-desc">비트코인 재무 회사는 잠재적인 시리즈 10 주식 풀을 1억 8,820만주로 줄였습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/news-analysis/2026/09/11/the-legal-drama-of-imprisoned-sam-bankman-fried-is-waiting-on-its-last-act" class="news-title" target="_blank" rel="noopener noreferrer">The legal drama of imprisoned Sam Bankman-Fried is waiting on its last act</a>
-<p class="news-desc">The fallen leader of the former top exchange FTX is looking for answers from the U.S. Supreme Court.</p>
+<p class="news-desc">전 최고 거래소 FTX의 몰락한 리더가 미국 대법원의 답변을 찾고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/nvidia-considers-10b-investment-in-anthropic-record-ipo-reuters?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia considers $10B investment in potential record Anthropic IPO: Reuters</a>
-<p class="news-desc">Anthropic is said to be seeking to raise as much as $100 billion in the offering, which could value the AI company at about $2 trillion.</p>
+<p class="news-desc">엔비디아는 기록적인 2조 달러 규모의 인류학 IPO에 100억 달러를 투자할 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -297,7 +297,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/metaplanet-executive-stock-pool-hong-kong-subsidiary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Metaplanet cuts Series 10 stock pool by 41%, plans Hong Kong subsidiary</a>
-<p class="news-desc">Metaplanet will cut 131.3 million potential shares and form a $1 million Hong Kong subsidiary for trading in Bitcoin, equities and credit products.</p>
+<p class="news-desc">Metaplanet은 Series 10 권리와 관련된 잠재적 주식 1억 3,130만 주를 삭감하고 2억 2천만 달러 이상의 보증 가치를 소멸하고 홍콩 자회사를 설립할 예정입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

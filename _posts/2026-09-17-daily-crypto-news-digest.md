@@ -235,7 +235,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/coinbase-clarity-act-exposure-saxo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Coinbase faces greater fallout from CLARITY Act setback: Saxo</a>
-<p class="news-desc">A strategist at the Danish bank said Coinbase has more at stake in the CLARITY setback because its trading business is directly exposed to US market-structure rules.</p>
+<p class="news-desc">Saxo는 미국 시장 구조 규칙이 암호화폐 거래소에 더 중요한 반면 Circle과 Strategy는 서로 다른 요인에 의해 좌우된다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/italy-government-email-breach-revolut-data-leak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Italy investigates government email breach linked to Revolut data leak</a>
-<p class="news-desc">Italy is probing the Revolut-linked breach after its cyber agency reported more than 650 cases involving abused or illicit certified email accounts.</p>
+<p class="news-desc">이탈리아 사이버범죄 경찰은 정부 이메일 계정이 Revolut 고객 데이터를 획득하는 데 사용된 것으로 알려진 후 컴퓨터 사기 혐의를 조사하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -299,7 +299,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-17 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/markets/bitcoin-awaits-fed-rate-decision-below-76k-as-analysis-discounts-dovish-surprise-odds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin awaits Fed rate decision below $76K as analysis discounts ‘dovish surprise’ odds</a>
-<p class="news-desc">Bitcoin price support materialized around $68,000 as markets saw a 93% chance of the Fed hiking rates by 0.25% on Wednesday.</p>
+<p class="news-desc">비트코인은 도널드 트럼프 미국 대통령의 금리 인하 요구에도 불구하고 정책이 긴축되는 것으로 분석되면서 76,000달러 미만의 연준 금리 발표에 가까워졌습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

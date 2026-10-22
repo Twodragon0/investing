@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.investors.com/news/trump-urges-federal-reserve-to-cut-rates-market-bets-warsh-hike/?src=A00220&yptr=yahoo" class="news-title" target="_blank" rel="noopener noreferrer">Trump Urges Federal Reserve To Cut Rates As Market Bets On Warsh Hike</a>
-<p class="news-desc">President Donald Trump again called on the Federal Reserve to lower interest rates, even as the market expects the first Warsh rate hike.</p>
+<p class="news-desc">시장이 첫 번째 워시 금리 인상을 기대하고 있음에도 불구하고 도널드 트럼프 대통령은 연준에 금리를 낮출 것을 다시 한 번 촉구했습니다.</p>
 <span class="source-tag" data-source-type="aggregator">Yahoo Finance</span>
 </div>
 </div>

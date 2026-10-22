@@ -271,7 +271,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-15 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/09/14/anthropic-walks-tightrope-to-nasdaq-pushing-slowdown-and-pursuing-ipo.html" class="news-title" target="_blank" rel="noopener noreferrer">What Amodei's AI slowdown could mean for Anthropic's imminent IPO</a>
-<p class="news-desc">As Anthropic meets with prospective investors ahead of its potentially historic market debut, CEO Dario Amodei is pushing for a slowdown in AI.</p>
+<p class="news-desc">Anthropic이 잠재적으로 역사적인 시장 데뷔를 앞두고 잠재 투자자를 만나는 동안 CEO Dario Amodei는 AI의 경기 둔화를 추진하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
