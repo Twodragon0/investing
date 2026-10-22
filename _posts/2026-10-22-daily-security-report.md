@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-10-22 - 보안 뉴스 요약 �
 
 블록체인 보안 14건 분석. 주목 사건: **[Security] Drift exploiter sends $109M in Ether to Tornado C** / 보안 뉴스 헤드라인: 단계별 화면을 비교하며 이해하는 블록 체인 정보 보안 - Calgary Roughnecks.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Drift exploiter sends $109M in Ether to Tornado Cash in 2 days 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 14건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (13건): security, exploit, accounting 보안 이슈 (13건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (3건): exploit, infrastructure, accounting 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **📈 가격/시장** (1건): manipulation, papertrade, exploit 가격 변동 (1건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Drift exploiter sends $109M in Ether to Tornado Cash in 2 days
-- [보안] 드리프트 악용자는 Tornado Cash에 6100만 달러 ETH를 보내고 1억 9400만 ​​달러를 보유합니다.
-- [보안] AlpsCon AI Trade Hub 악용: 잘못된 주식 계산
-
-### 투자자 체크포인트
-
-- 보안 사건 11건, 보안 뉴스 3건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 14건

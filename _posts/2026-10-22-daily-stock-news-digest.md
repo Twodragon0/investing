@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-22 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 개장시황] 코스피·코스닥 1%대 상승 출발…급락 딛고 반등 시도 - 뉴스핌 - 195건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 엔비디아 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 연준 관련 17건</li><li>🏦 <strong>거래소</strong>: IPO, 무역 관련 12건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nbmY4cU9scXZncS14TFg3dWZWN21tQS16UktNazZTRFZEWWx0QjlWZ0dySlhTbXpiSENmODJNMV8xWTctZGNxb0dXd2xudUVhc0FqOFpobWt2b2JJ?oc=5">개장시황] 코스피·코스닥 1%대 상승 출발…급락 딛고 반등 시도 - 뉴스핌</a> <span class="p0-desc">[개장시황] 코스피·코스닥 1%대 상승 출발…급락 딛고 반등 시도 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ibXhuRV9tRzFwRE1IMlpweEl2c1pQMFI4eEQwNkU4S1cyc2czUXBZUGNsdUdYZ2w3ZGNmUnF6bUlqbm5vcV9fSnBWZ2FQd3cx?oc=5">코스피 급반등에 매수 사이드카 발동…삼성전자·SK하이닉스 7%대 급등 - 블루밍비트</a> <span class="p0-desc">코스피 급반등에 매수 사이드카 발동…삼성전자·SK하이닉스 7%대 급등 블루밍비트</span></li><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBSM3RucjM3MDhmODl1SlhnVHpDVVpPeUlacXBjZkpEdlJPWFZWaERDeXJmMG90ZTJWNGtGTFJIQ0tacmNwZm5JRnY5SzZCbHpCRGpaTFY1SE1sUS1GeHVwMzkxMjc?oc=5">코스피 하루 만에 3.73% 급락…환율은 1320원대로, 금융시장 '엇갈린 신호' - 지이코노미</a> <span class="p0-desc">코스피 하루 만에 3.73% 급락…환율은 1320원대로, 금융시장 '엇갈린 신호' 지이코노미</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 개장시황] 코스피·코스닥 1%대 상승 출발…급락 딛고 반등 시도 - 뉴스핌 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 195건의 뉴스 중 P1 주요 이슈도 42건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (36건): 삼성전자, 하이닉스, 코스피 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (26건): 반도체, 엔비디아, 실적 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (17건): 환율, 연준, 인플레이션 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 개장시황] 코스피·코스닥 1%대 상승 출발…급락 딛고 반등 시도 - 뉴스핌
-- 코스피 급반등에 매수 사이드카 발동…삼성전자·SK하이닉스 7%대 급등 - 블루밍비트
-- 코스피 하루 만에 3.73% 급락…환율은 1320원대로, 금융시장 '엇갈린 신호' - 지이코노미
-
-### 주요 이슈
-
-- 연준 분은 Kevin Warsh의 FOMC 배트로서 올해 또 다른 금리 인상 가능성이 있음을 보여줍니다.
-- 오늘 주식 시장: Dow, S&P 500, 나스닥 기술 상승으로 상승, SpaceX 주가 급등
-- 다우지수는 실적 낙관론이 시장을 안정시키면서 500포인트 상승했습니다: 라이브 업데이트
-- 외 39건
-
-### 투자자 체크포인트
-
-- 한국 기사 67건, 글로벌 기사 128건 수집
-- 한국 지수: KOSPI 5,735.66(+3.29%), KOSDAQ 792.76(+1.38%), USD/KRW 1,327.38(+0.11%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">36건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:72%"></div></div><span class="theme-count">26건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:47%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:33%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:39%"></div></div><span class="theme-count">14건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-22.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,735.66 (+3.29%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 792.76 (+1.38%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-22 주식 시장에서 195건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,735.66(+3.29%), KOSDAQ 792.76(+1.38%), USD/KRW 1,327.38(+0.11%).
+- *오늘 주식 시장: Dow, S&P 500, 나스닥 기술 상승으로 상승, SpaceX 주식 급등 Yahoo Finance 주식 시장 오늘: 나스닥, S&P 500 실적 폭주가 계속되면서 상승; SpaceX.*
 
 ## 테마별 주요 뉴스
 

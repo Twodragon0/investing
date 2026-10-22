@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-21 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피·코스닥 급락, 투자자들 불안감 증폭하는 이유는? - 185건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 주목</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 관련 13건</li><li>🤖 <strong>AI/기술</strong>: 삼성전자, 하이닉스 관련 14건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9EWGwxblU1TGJ4cUlPOWl1QUhLS0w1SUZmdEJtdVJOdlJZMnNaNU1TMVJVaVZ1Nm5kd21QUUZjWUozVGxvYjJXUllLWmswYTI2T3d2emZDaG91ZHFxdnRqTGJEeFdSVExJ?oc=5">코스피·코스닥 급락, 투자자들 불안감 증폭하는 이유는?</a> <span class="p0-desc">코스피·코스닥 급락, 투자자들 불안감 증폭하는 이유는? 공감신문</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFA0RzBfVFlETkV3QWVLQkl5aEFfaXJZT3hZTURRdmNVcFNCaGNudGxWakhZSDJjelBlYk9NVDdLeUhQSDkyWW96Y0xjQU9qVmc4TGEwd1R0YnJUYS0xeWFfQTJzN21qVDVWaG1SRGVESnnSAXRBVV95cUxNTzFBSV9zUHBRTDliOFJOdUpGTENxSF9JZTBQLVdtc1czaXlkVzlLa092djRZcUJaTk1nWk0wZ1JUM2o1UGVZREhlOFNFRUV3cXE1OVUtQndkckk3eUh4SzU4bEt1V3VaQVhMU0xZLUFGZ0I0ZQ?oc=5">삼성전자 3%·SK하이닉스 4.2% 급락…반도체 투톱 동반 약세 - 산경투데이</a> <span class="p0-desc">삼성전자 3%·SK하이닉스 4.2% 급락…반도체 투톱 동반 약세 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE11a2tRVHZRdlE2blYzUzE5WFh5NFZlYTdmdmhfQm5MczhDeUZnekZxMlZjeFB2SmxNNTVMQzNyU2NYeHZCUE5zN2ZmT0RMNzdyZ1JNQktLcTllM25qRDJWbW1OV2ZlU2dvM2VpNQ?oc=5">또 주저앉은 코스피. 삼성전자·SK하이닉스 일제 급락 > 뉴스 - 지데일리</a> <span class="p0-desc">또 주저앉은 코스피. 삼성전자·SK하이닉스 일제 급락 > 뉴스 지데일리</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,552.74 (-3.73%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 781.97 (-3.33%).
+- 2026-10-21 주식 시장에서 185건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,552.74(-3.73%), KOSDAQ 781.97(-3.33%), USD/KRW 1,326.10(-0.34%).
 - *DIP 홀딩, 2026년 CairoScene의 UAE 첫 IPO에서 20% 지분 유동화*
 
 ## 테마별 주요 뉴스

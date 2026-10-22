@@ -28,27 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-22 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제 관련 11건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 규제 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 2건 수집</li><li>🏦 <strong>거래소</strong>: 규제 관련 1건</li><li>📈 <strong>가격/시장</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 11건의 뉴스 중 **규제/정책** 관련이 8건(73%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (8건): 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🟣 DeFi** (2건): requiring, operating, commodity 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🏦 거래소** (1건): 규제, SEC 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- EU 규정: ESMA, MiCA 등록에 BingX 및 YouHodler 법인 추가
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 5건, 아시아 4건, 유럽 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 11건
 - **미국**: 5건
