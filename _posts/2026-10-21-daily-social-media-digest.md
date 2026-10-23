@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-10-21 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcWFWT0xQU0JnS3JRcWR2VlNwUlFXamJ4dGJOMi1lZmdWSU5yU0lSbVFsdGxFLTBiZnAzR3ozMm1UcHY5ZHdzakJ4Q1BzRXFHYjdYUnpXRzVIbTJ2cVl2VkFQNE16Yl9XSXFFV210bDI2NkhNX1MyZ25ybU9XSHJEWDU2czhSdjdwUzNqSklWcmNKaGtTLWlrTVpWQnFtZlN5cVVOcVJZczRHVFREdW1DMWZoMkt4bXlt?oc=5">연준 금리 결정: 경제학자 100명 중 94명이 10월 일시 중단, 12월 인상 예상</a> <span class="p0-desc">연준 금리 결정: 경제학자 100명 중 94명이 10월 일시 중단, 12월 인상이 CryptoRank 예상</span></li><li><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFB1aTVPVkdYM25BajFHNnYyOWJaNmxNMnhxV3dBbDdvYkRUZEZWRUIyQnB3ZFpIN2lMYlFrTWwtOGQxblFwVV9fWlNRYkVRV3JuWUxNR3JQc2g?oc=5">코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 - 경제타임스</a> <span class="p0-desc">코스피, 3% 급락 뒤 5500선 회복…외국인·기관 1조 매수 경제타임스</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 18건 중 텔레그램 0건, 소셜 0건, 정치·경제 18건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 18건 중 텔레그램 0건, 소셜 0건, 정치·경제 18건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
