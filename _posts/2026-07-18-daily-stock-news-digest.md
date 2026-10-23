@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-18 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1jOGRtck9rbzgtSmdIV09sTWJXQUZWTF9kTzYzcVNORXI4RTFORVJfSGIwNTBNUW5nN2t0bEpleXpNMWdsT1ZicU9GTGN6cjJ2QVVaRGRjREtaZ2lIbmZOQmEwTWxvY1RQcFV4ZVJZWm3SAXRBVV95cUxNWXdUZFg5ZmVkZUYtVGs3anh5UTJXNGxXbkdOd0pCLXM3RzVPSjRGbjhZcFF4T1g4XzJwczZEekVueDdYVFN6OUpuWGpGT2xkYi0tTjBNLTJXcy1fUXVYLVg5cTdMZXlkZFdJOXpkNHl3Tm5mWQ?oc=5">코스피·코스닥 동반 급락…양 시장 매도 사이드카 발동 - 산경투데이</a> <span class="p0-desc">코스피·코스닥 동반 급락…양 시장 매도 사이드카 발동 산경투데이</span></li><li><a href="https://www.yna.co.kr">코스피, 6%대 급락 6,800대 후퇴…하루 만에 7,000선 내줘</a> <span class="p0-desc">코스피, 6%대 급락 6,800대 후퇴…하루 만에 7,000선 내줘 연합뉴스</span></li><li><a href="https://www.ytn.co.kr">삼성전자·SK하이닉스 급락.증시를 덮친 진짜 이유 [이슈톺] - YTN</a> <span class="p0-desc">배우 배윤경이 새 드라마 '써닝야구단‘에 합류한다. 오늘(6일) YTN Star 취재에 따르면, 배윤경은 '써닝야구단‘ 출연을 확정했다. '써닝야구단'은 사회인 야구를 나가기 위해 고군분투하는 유부남들의 이야기...</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,820.60 (-6.37%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 791.84 (-4.53%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-07-18 주식 시장에서 200건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,820.60(-6.37%), KOSDAQ 791.84(-4.53%), USD/KRW 1,489.90(+0.82%).
 - *한강타임즈 김광호 기자 = IBK기업은행 2026년 하반기 정기인사 실시◇부행장 승진▲금융소비자보호그룹 정은지 ▲AX전략그룹 이동운 ▲글로벌사업그룹 정광석◇부행장 전보▲경영전략그룹 정성진 ▲CIB그룹 백창열.*
 
 ## 테마별 주요 뉴스

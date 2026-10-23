@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-23 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인 10만달러보다 7만달러 먼저 가나? 중국 증시 급락에 경고등 - 코인리더스 - 120건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 이슈 부각</li><li>🏦 <strong>거래소</strong>: 25건 수집</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 코인리더스 관련 34건</li><li>🟣 <strong>DeFi</strong>: 디파이 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTFA2NlY2UFBnLUUydXk5Slp2aXkwRnZkbV9xTFR6T28tb1d4bzcwQUhaaEtJS3g0Z2NObVh1eDhGSV94TkpjcFdzeVBB?oc=5">비트코인 10만달러보다 7만달러 먼저 가나? 중국 증시 급락에 경고등 - 코인리더스</a> <span class="p0-desc">비트코인 10만달러보다 7만달러 먼저 가나? 중국 증시 급락에 경고등 코인리더스 비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 Investing.com 한국어 [코인.</span></li><li><a href="https://decrypt.co/381578/ken-griffin-ai-bubble-gpus-airline-seats">Ken Griffin은 AI이 '거의 확실하다'고 말하며 GPU를 항공사 좌석과 비교합니다.</a> <span class="p0-desc">Citadel의 창립자는 투자자들이 AI 거품에 거의 확실하게 빠져 있다고 말하며 칩 과잉으로 인해 폭락 가격이 빈 항공사 좌석처럼 가격에 영향을 미칠 수 있다고 경고하지만 생존자.</span></li><li><a href="https://bitcoinmagazine.com/videos/spacex-tesla-merger-passive-flows-hack-could-bring-more-btc-exposure-to-sp-500">SpaceX-테슬라 합병: 패시브 흐름 '해킹', BTC이 S&P 500에 더 많이 노출될 수 있음</a> <span class="p0-desc">비트코인 Magazine SpaceX-테슬라 합병: 패시브 흐름 '해킹', 더 많은 결과를 가져올 수 있음 BTC S&P 500에 대한 노출 Sean Hagan은 패시브 인덱스 흐.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인 10만달러보다 7만달러 먼저 가나? 중국 증시 급락에 경고등 - 코인리더스 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 120건의 뉴스 중 P1 주요 이슈도 21건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (40건): 비트코인, 코인리더스, BTC 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (25건): binance, coinbase, bstocks 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **📈 가격/시장** (34건): 암호화폐, 코인리더스, 달러 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인 10만달러보다 7만달러 먼저 가나? 중국 증시 급락에 경고등 - 코인리더스
-- Ken Griffin은 AI이 '거의 확실하다'고 말하며 GPU를 항공사 좌석과 비교합니다.
-- SpaceX-테슬라 합병: 패시브 흐름 '해킹', BTC이 S&P 500에 더 많이 노출될 수 있음
-
-### 주요 이슈
-
-- CPI | 한국, 네이버-두나무 거래 중단으로 독점 금지 규제 고려
-- 비트코인 합의에 따라 오레곤에서 ATM 서비스 폐쇄
-- 아일랜드 중앙은행, 자금 보호 실패로 인해 코인베이스 아일랜드에 360만 달러 벌금 부과 - CoinDesk
-- 외 18건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(35건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-23.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **120건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-23 암호화폐 핵심 뉴스: 이 암호화폐는 잠재적인 백만장자 메이커입니까? - The Motley Fool. 총 120건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
