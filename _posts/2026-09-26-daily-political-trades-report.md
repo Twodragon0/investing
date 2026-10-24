@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-26 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(4회), **연준**(2회), **의회**(1회), **SEC(미국증권거래위원회)**(1회), **공시**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-09-26 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 18건 — 미국 의회 거래 1건, SEC 내부자 거래 15건, 중앙은행 2건
 - 1. ‘I don’t do it’: Gluesenkamp Perez’s filings show Amazon, Tesla and Apple stock missing from her early reports - Seattle Red Representative Marie…
 
 ## 1. 미국 의회 거래 동향

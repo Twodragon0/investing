@@ -35,8 +35,6 @@ image_alt: "Crypto trading journal visual board for March 14, 2026"
 
 ## 전체 뉴스 요약
 
-- 큰 방향 추종보다는 레인지 대응이 효율적인 세션이었습니다. BTC는 박스 상단 돌파를 기다리기보다 상하단 재시험을 기준으로 짧게 대응했고, SOL은 거래량이 붙을 때만 참여했습니다.
-
 
 ## 오늘의 시장 환경
 
