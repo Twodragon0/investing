@@ -28,30 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-24 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 디파이 관련 13건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 9건 수집</li><li>🟣 <strong>DeFi</strong>: 디파이 주목</li><li>🏦 <strong>거래소</strong>: 거래소, 가상자산거래소 동향 주시</li><li>📈 <strong>가격/시장</strong>: 가상자산, 과세 이슈 부각</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 13건의 뉴스 중 **규제/정책** 관련이 9건(69%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (9건): fca, consultations, guidance 규제 움직임 (9건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🟣 DeFi** (3건): 디파이 DeFi 동향 (3건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🏦 거래소** (3건): 거래소, 가상자산거래소, 네이버파이낸셜 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- 네이버파이낸셜·두나무 결합에 새 변수…금융위, 거래소 지배구조 규제 검토 - 토요경제
-- FCA consults on DeFi guidance for firms - Digital Watch Observatory
-- UK FCA proposes updates to crypto perimeter guidance - Linklaters
-- 외 1건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 6건, 유럽 5건, 미국 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 13건
 - **한국**: 6건

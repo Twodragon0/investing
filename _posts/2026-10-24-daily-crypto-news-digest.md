@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 - Investing.com 한국어 - 117건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>🏦 <strong>거래소</strong>: ETF 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 관련 29건</li><li>🔷 <strong>이더리움</strong>: 이더리움, 달러 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBWSjRJRjFwclBUN2dsZVNodHI4bE1vVmxtaVdVWF9ZUzRZZk1XSWFwOGpEV0xrUDZOTjRmdWoySVdfZ1J3MlBscVI5Y1FUWTFPVGRwMEN3N0pENGJRaDdyV0c1dWUzSVptQmpXYnpNZmktTWM?oc=5">비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 - Investing.com 한국어</a> <span class="p0-desc">비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 Investing.com 한국어</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9OaGZIUFdaQkVCQjVvNXRJZ3hjVHNkNUpoLXJabEZjZm8zREc3alFTNUNWSTJ6WHVJNkxzQ0RkRjFlclBEaWZlQzg0aW15S0dFTi1Ka2xNQzBvSXAxb09EMTFNQ1VLZkxIa2tZbE03UGVIZ28?oc=5">비트코인 8만2천 달러 안팎 보합…기술주 급락·유가 상승에 위험선호 위축 - Investing.com 한국어</a> <span class="p0-desc">비트코인 8만2천 달러 안팎 보합…기술주 급락·유가 상승에 위험선호 위축 Investing.com 한국어</span></li><li><a href="https://www.coindesk.com/markets/2026/10/23/india-s-largest-exchange-denies-hack-after-blockchain-sleuths-pointed-to-usd16-million-in-suspicious-outflows">India's largest exchange denies hack after sleuths pointed to $16 million in suspicious outflows</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 - Investing.com 한국어 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 117건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (43건): 비트코인, 달러, 암호화폐 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (23건): ETF, 증권 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **📈 가격/시장** (29건): 달러, 암호화폐, 코인리더스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 - Investing.com 한국어
-- 비트코인 8만2천 달러 안팎 보합…기술주 급락·유가 상승에 위험선호 위축 - Investing.com 한국어
-- India's largest exchange denies hack after sleuths pointed to $16 million in suspicious outflows
-
-### 주요 이슈
-
-- On Meidas Defense: cryptocurrency, sanctions, and Trump quid pro quo - Citation
-- "프랭클린템플턴, 배당금 비트코인 재투자 ETF 2종 나스닥 상장 예정" - 블루밍비트
-- 미국 ETF 히든 챔피언] (70) 비트코인 폭락해도 통행료 수입 BCDF - 뉴스핌
-- 외 7건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Decrypt(15건), CoinDesk(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-24 암호화폐 시장 117건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

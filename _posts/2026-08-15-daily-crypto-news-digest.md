@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-15 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQdEdqR2NCcDBycUxybG8wQ1BydkJZWGstQmh3eC0wU09xOVNnWGN1blZDTWRlSFNnVTV1THRnelBTTFVocEVtbkwwM2NmeUNuTC1PNk1ZM0hmSTIxY2ZWSEJmV1hsSmNXVzlFUmppR25mY1dDTzFaV2NZMEFQX0E2S2V1bXBwTDRqLXBxQ3prNnZjbkI3VVRlb1Q1amZVUQ?oc=5">'Jewelbug' APT, 국가 스파이 활동과 암호화폐 절도의 균형 유지 - Dark Reading</a> <span class="p0-desc">연구원들은 고용된 해커가 동일한 웹 패널에서 사이버 스파이 활동과 재정적 동기를 지닌 강도 행위를 수행하는 것을 발견했습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTI1UTV6amtTMk93WDBnc2lRUHBpTGI5OTF5LVhVVXd3ckZZdnhlVnNlUnRzdXNEMHZoSjBvLXR3TC1POWVXekU3bHVDVUMyNXM0WGwwTEVPd1N2eXFWVGdCVTh5RmdtNXVpTlR0U09iZDFlWHBsd1UtVVEyN0lKX2pKLVVLdG9XaG8yYUo5d3JaV19ieTRPdlQzRDZrSmY4Zl9YZ3pxQ0NkNGVZS3U2SG5sY1ctSVY0enZMT1pnejVHTlZLUjAwbXQtdzlNbDU2eDUzQmFn?oc=5">비트코인(BTC), 주식, 금, 채권 등 모든 시장에서 공포감이 사라지고 있다: 크립토 데일리 - CoinDesk</a> <span class="p0-desc">뉴스를 살펴보면 우려할 만한 이유가 많다: 미국과 이란 간의 지속되는 긴장 고조 위험, 증가하는 국가 부채 및 채권 수익률 상승 등이 그중 일부다. 암호화폐는 규제 실망, 수요 부.</span></li><li><a href="https://cointelegraph.com/news/crypto-biz-bitcoin-self-custody-etf-inflows-strategy-riot-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto Biz: 비트코인의 $116M 자기 양육권 모닝콜</a> <span class="p0-desc">1억 1600만 달러 규모의 비트코인 지갑 익스플로잇으로 인해 ETF 유입이 반등하고 Strategy가 BTC에 더 많은 관심을 기울이고 채굴자들이 AI 거래에서 수십억 달러를 추.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **100건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-08-15 암호화폐 핵심 뉴스: XRP 가격: 비트코인 및 더 넓은 암호화폐 시장에서 여러 역풍이 뭉치게 됩니다.. 총 100건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
