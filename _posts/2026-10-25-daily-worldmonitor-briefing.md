@@ -25,28 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-10-25 - 시�
 - 주요 출처: WorldMonitor/CNBC (15건), WorldMonitor/Al Jazeera (5건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 보통</strong><ul><li>안보·에너지 이슈가 산발적으로 발생하고 있어, 관련 섹터 변동성에 유의가 필요합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(10건), **지정학/안보**(4건), **금융시장**(3건) 중심으로 전개되고 있습니다.
-
-안보 이슈(4건)와 금융시장 뉴스(3건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-에너지 이슈 **1건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-### 고중요도 이슈 (4건)
-
-- 트럼프는 대규모 AI 증축을 추진하고 있습니다. 그의 유권자들은 그에 따른 결과를 경계하고 있습니다.
-- 미국 중간선거를 앞두고 이란 위협 경고가 강화되자 미국 대사관이 보안을 강화했다.
-- 트럼프, 러시아-우크라이나 지역 휴전 협정에 대해 멜라니아 칭찬
-
-### 투자자 체크포인트
-
-- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/CNBC (15건), WorldMonitor/Al Jazeera (5건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">4</div><div class="stat-label">안보 이슈</div></div></div>
 
