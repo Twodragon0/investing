@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-21 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSk01aTlYa0ZkczA2QVhqcFJEMm15Wm5lNUhvRWZiUzgzQmNJRWlNVFd0RUd2MEZlQmlRVF85eWtfdkVKOHJ0RTc5RFp1ckt0SHA3SkVRWUkxcnVhbEtmT1NsRG1rbVBjcDlycE1IUGJpTUxoNWhJRW1PZjVIdjc3MDl3d2ZfSzhHSkJYZ1g3NnZLSkRlUDhTVUliUXR3cllGNmlQVW9Dell5OG1zWG5hMDF5UXdVRE9FSVprOHJnRmw3dDlyd3ZCNjhGeFJObDRmek5V?oc=5">블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 - CoinDesk</a> <span class="p0-desc">블랙록, 경쟁 펀드의 50% 폭락 이후 비트코인 투자자 손실 방어에 나서 CoinDesk</span></li><li><a href="https://cointelegraph.com/news/drift-exploiter-eth-tornado-cash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">드리프트 착취자는 Tornado Cash에 6100만 달러 ETH를 보내고 1억 9400만 ​​달러를 보유합니다.</a> <span class="p0-desc">4월 1일 해킹으로 인해 약 2억 9,500만 달러의 손실이 발생했으며 나중에 Mandiant 조사에서 북한 위협 그룹의 소행으로 밝혀졌습니다.</span></li><li><a href="https://www.coindesk.com/markets/2026/10/20/blackrock-seeks-to-shield-bitcoin-investors-from-losses-after-rival-fund-weathers-50-crash">블랙록은 경쟁 펀드가 50% 하락한 후 손실로부터 비트코인 투자자를 보호하려고 합니다. 폭락</a> <span class="p0-desc">블랙록이 제안한 펀드는 비트코인의 매도 기간 동안 투자자들이 급격한 손실을 피하는 데 도움이 된 Calamos의 유사한 제품을 따릅니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **125건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-10-21 암호화폐 핵심 뉴스: 500달러 있어? 2027년에 Hand Over Fist를 구매할 암호화폐 1개 - The Motley Fool. 총 125건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

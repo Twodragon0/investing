@@ -19,7 +19,6 @@ image_alt: "DeFi 수익률 리포트 - 2026-07-30 - DeFi 뉴스 요약 이미지
 
 ## 전체 뉴스 요약
 
-- 2026-07-30 기준 TVL $1M↑·APY 0.1%↑ 풀 1748개. 최고 APY 프로토콜: aerodrome-slipstream (30933.5%). 스테이블코인·ETH·BTC 카테고리별 수익률 분석.
 - TVL $1M↑ 스테이블코인 풀 10개 (USDC·USDT·DAI 등), APY 기준 정렬. 최고 수익: royco-v2 1000.0%.
 
 
