@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-25 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, 주말 변곡점…폭락 우려 - 114건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 관련 40건</li><li>🏦 <strong>거래소</strong>: 21건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 관련 26건</li><li>🟣 <strong>DeFi</strong>: 스테이블코인, 증권 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5UaDd6OF9kT1BWVVdtelFpdEhRREtXTXBDY1VWeWtMMzMzcGlFeC0yWmRla1NWX3dRRDVOa3dxTFRKVVhPTGN2UXVmWUprVGx0MDNCdmJtdjM4RVVBQmZ4UVdvZDJKSnRjZFBrNC1HcDBGYUJyRTg5RHVlQUhhR28?oc=5">비트코인, 주말 변곡점…폭락 우려</a> <span class="p0-desc">비트코인, 주말 변곡점…폭락 우려 BeInCrypto</span></li><li><a href="https://cointelegraph.com/news/initia-halts-blockchain-exploit-drained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Initia halts blockchain after exploit reportedly drains over $2.6M</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **114건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-25 암호화폐 핵심 뉴스: 비트코인, 고래 지갑 출금 급증·기관 활동에 $84,000 회복 주목 - Investing.com 한국어. 총 114건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

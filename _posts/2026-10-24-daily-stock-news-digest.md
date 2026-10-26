@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-24 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaMkgxUWNleWxSUlFmVFRGXy1GcUNJSHdIb3hNMTFpMW9UOVpaYU0yME5vQTFsb21XSUhsZWJPaERDRDljbzZmazRmMS1ZM3k2MEIwcUthcEFSQQ?oc=5">포토] "내 주식 어쩌나"…코스피·코스닥 3퍼센트 넘게 급락</a> <span class="p0-desc">[포토] "내 주식 어쩌나"…코스피·코스닥 3퍼센트 넘게 급락 한국경제</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFA4SjdDbkIwaThqR25scjlVaFJkYWswc2tuQTU4MTd4Uk1jOHZLQ3VzZ1lhMmtEYTRpWFMzV0VZSjBTZWtmc204ckFzSjZmcXd5bG1tTTNsVlYweHlsQ2QzTnI2ajU5TTBDckhJbg?oc=5">코스피, 장중 4% 급락 딛고 5,550선 사수.코스닥은 하락 - 프리진경제</a> <span class="p0-desc">코스피, 장중 4% 급락 딛고 5,550선 사수.코스닥은 하락 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1XYm9JVXhoQS03Tl9ZVFA0RHZ6VGNZampIRDBLSkNENl9PbDBob3kwODRxM0dicTIwT19lakt4Z0RkR04xSzQtaTREVkliWERiMHF6UExIb1F3dE1tOENON1U4am05NDNLeTY2ag?oc=5">반등이 무색해진 증시…코스피·코스닥, 외인·기관 매도에 3%대 동반 급락 - 프리진경제</a> <span class="p0-desc">반등이 무색해진 증시…코스피·코스닥, 외인·기관 매도에 3%대 동반 급락 프리진경제</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,550.30 (+0.34%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 751.69 (-1.64%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-24 주식 시장에서 191건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,550.30(+0.34%), KOSDAQ 751.69(-1.64%), USD/KRW 1,325.88(+0.06%).
 - *[외환] 한은 금리 동결 소화하고 하락 전환…1.40원↓ 연합인포맥스*
 
 ## 테마별 주요 뉴스

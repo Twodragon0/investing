@@ -43,9 +43,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBWSjRJRjFwclBUN2dsZVNodHI4bE1vVmxtaVdVWF9ZUzRZZk1XSWFwOGpEV0xrUDZOTjRmdWoySVdfZ1J3MlBscVI5Y1FUWTFPVGRwMEN3N0pENGJRaDdyV0c1dWUzSVptQmpXYnpNZmktTWM?oc=5">비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 - Investing.com 한국어</a> <span class="p0-desc">비트코인, AI 주식 급락·유가 상승에 8만2천 달러로 후퇴 Investing.com 한국어</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9OaGZIUFdaQkVCQjVvNXRJZ3hjVHNkNUpoLXJabEZjZm8zREc3alFTNUNWSTJ6WHVJNkxzQ0RkRjFlclBEaWZlQzg0aW15S0dFTi1Ka2xNQzBvSXAxb09EMTFNQ1VLZkxIa2tZbE03UGVIZ28?oc=5">비트코인 8만2천 달러 안팎 보합…기술주 급락·유가 상승에 위험선호 위축 - Investing.com 한국어</a> <span class="p0-desc">비트코인 8만2천 달러 안팎 보합…기술주 급락·유가 상승에 위험선호 위축 Investing.com 한국어</span></li><li><a href="https://www.coindesk.com/markets/2026/10/23/india-s-largest-exchange-denies-hack-after-blockchain-sleuths-pointed-to-usd16-million-in-suspicious-outflows">India's largest exchange denies hack after sleuths pointed to $16 million in suspicious outflows</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-24 암호화폐 시장 117건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

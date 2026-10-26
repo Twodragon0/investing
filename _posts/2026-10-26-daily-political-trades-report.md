@@ -14,7 +14,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-26 - 정치인 거래 �
 description: "정치인 거래 리포트: 정치인 거래·정책 리포트. 입법 동향과 의원 포트폴리오 변화를 추적합니다 - Investing Dragon 자동 수집 분석 리포트."
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-10-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-10-26.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-10-26** 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 **16건** — SEC 내부자 거래 4건, 중앙은행 12건
@@ -25,13 +24,11 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(14회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **16건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 4건, 중앙은행 12건입니다.
-
-**중앙은행 정책**에서는 "금리 낮춘다더니 할인은 더 줄였다?"…국감서 뭇매 맞은 은행 '꼼수' 뭐길래[금알못] 뉴시스 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-10-26 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 16건 — SEC 내부자 거래 4건, 중앙은행 12건
+- 1. Palo Alto Networks, Inc. $PANW Shares Sold by Middleton & Co. Inc. MA - MarketBeat Palo Alto Networks, Inc.
 
 ## 1. SEC 내부자 거래 (Form 4)
 

@@ -41,38 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-26 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, 주말 급락 후 8만400달러 안팎서 안정…연준 결정 주목 - Investing.com 한국어 - 77건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 19건 수집</li><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>📈 <strong>가격/시장</strong>: 달러 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 증권 관련 9건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1DSU85RFBZTWVPc1lUMmdfdEphV1NUeHFBYmE5a2ZtVTBSUFZ1ZWZKd1BLcjVnQklBVnpfUEJ5dnlsWTBOYVZ5ejFxYXpHbHhqbkY2MnVRemI0dlJlZ0t6UUtxM3NhUHZDQjJHRk5VYWxCWVU?oc=5">비트코인, 주말 급락 후 8만400달러 안팎서 안정…연준 결정 주목 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 주말 급락 후 8만400달러 안팎서 안정…연준 결정 주목 Investing.com 한국어</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 비트코인, 주말 급락 후 8만400달러 안팎서 안정…연준 결정 주목 - Investing.com 한국어 
-총 77건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (19건): 배분 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🟠 비트코인** (18건): 비트코인, 달러, 코인리더스 관련 (18건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **📈 가격/시장** (12건): 달러, 배분 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-
-### 주요 이슈
-
-- 이번주 지켜볼 주식 3종…실적 시즌, 암호화폐 영향
-- Netanyahu Says Israel Mulls Crypto Ahead of Possible Sanctions
-- Nearly $6M secured in settlement for crypto scheme targeting Haitians - Times Un
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, 이더리움
-- **주요 출처**: Binance(35건), Google News EN(13건), Google News KR(12건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-26.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **77건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 📈 가격/시장
+- 2026-10-26 암호화폐 핵심 뉴스: 비트코인, 주말 급락 후 8만400달러 안팎서 안정…연준 결정 주목 - Investing.com 한국어. 총 77건 분석, 핵심 테마는 거래소, 비트코인, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
