@@ -220,7 +220,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/policy/2026/10/26/south-korea-weighs-fourth-delay-on-its-crypto-gains-tax-pushing-it-to-2029" class="news-title" target="_blank" rel="noopener noreferrer">South Korea weighs fourth delay on its crypto gains tax, pushing it to 2029</a>
-<p class="news-desc">Officials are concerned users of domestic exchanges would bear the tax burden because the U.S. won’t share crypto trading data until 2029.</p>
+<p class="news-desc">관계자들은 미국이 2029년까지 OECD CARF에 따라 암호화폐 거래 데이터를 공유하지 않기 때문에 국내 거래소 사용자들이 세금 부담을 떠맡게 될 것이라고 우려하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -263,7 +263,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/markets/2026/10/26/bitcoin-holds-near-usd80-000-as-oil-retreats-and-the-fed-decision-looms" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin holds near $80,000 as oil retreats and the Fed decision looms</a>
-<p class="news-desc">Bitcoin was little changed near $80,400 since midnight UTC while the DeFi index was the only CoinDesk index to gain, with the Fed due to decide on Wednesday.</p>
+<p class="news-desc">비트코인은 UTC 자정 이후 $80,400 근처에서 거의 변하지 않은 반면 디파이 지수는 상승한 유일한 CoinDesk 지수였으며 연준은 수요일에 결정될 예정입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -275,7 +275,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/markets/2026/10/26/fed-ecb-and-boj-interest-rate-decisions-coinbase-earnings-crypto-week-ahead" class="news-title" target="_blank" rel="noopener noreferrer">Fed, ECB and BOJ interest-rate decisions, Coinbase earnings: Crypto Week Ahead</a>
-<p class="news-desc">Your look at what's coming in the week starting Oct. 26.</p>
+<p class="news-desc">10월 26일부터 시작되는 주에 어떤 일이 일어날지 살펴보세요.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -305,7 +305,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/policy/2026/10/26/canada-opens-consultation-on-draft-stablecoin-rules-maintains-ban-on-yields" class="news-title" target="_blank" rel="noopener noreferrer">Canada opens consultation on draft stablecoin rules, maintains ban on yields</a>
-<p class="news-desc">Under the draft rules, non-bank stablecoin issuers must back tokens 1:1 with reserves held at qualified Canadian institutions and settle redemptions within three business days.</p>
+<p class="news-desc">초안 규칙에 따라 비은행 스테이블코인 발행자는 자격을 갖춘 캐나다 기관에 보유하고 있는 준비금과 토큰을 1:1로 백업하고 영업일 기준 3일 이내에 상환을 완료해야 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -317,7 +317,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-27 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/26/ai-giant-anthropic-files-for-blockbuster-ipo" class="news-title" target="_blank" rel="noopener noreferrer">AI giant Anthropic files for blockbuster IPO</a>
-<p class="news-desc">The maker of Claude reported $16.3 billion in first-half revenue and an $80.7 billion net loss as it aims to price its offering in mid-November.</p>
+<p class="news-desc">Anthropic은 11월에 AI 거대 대중을 확보하는 것을 목표로 월요일 아침에 IPO을 신청했습니다. 사업설명서에는 2026년 상반기 매출이 163억 달러, 순손실이 807억 달러로 나타났습니다. 주식수와 가격대는 공개되지 않습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>

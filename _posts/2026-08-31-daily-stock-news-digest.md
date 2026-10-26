@@ -188,7 +188,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/08/30/mike-moore-ag-social-media-settlement-big-tobacco.html" class="news-title" target="_blank" rel="noopener noreferrer">그는 Big Tobacco를 이겼습니다. 동일한 플레이북이 메타 및 소셜 미디어에 적용되나요?</a>
-<p class="news-desc">Mike Moore가 Big Tobacco를 이겼습니다. 동일한 플레이북이 메타 및 소셜 미디어에 적용되나요?</p>
+<p class="news-desc">마이크 무어(Mike Moore)가 빅 토바코(Big Tobacco)를 이겼습니다. 동일한 플레이북이 메타 및 소셜 미디어에 적용되나요?</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
