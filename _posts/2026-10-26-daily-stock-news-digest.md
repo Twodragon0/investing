@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-26 - 주식 뉴스 요약 이�
 
 - KOSPI 5,550.30 (+0.34%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 751.69 (-1.64%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-10-26 주식 시장에서 115건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,550.30(+0.34%), KOSDAQ 751.69(-1.64%), USD/KRW 1,323.66(-0.11%).
 - *The nine months between Election Day and June 30 have seen the S&P 500 deliver an average return of 15.5% going back.*
 
 ## 테마별 주요 뉴스

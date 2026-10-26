@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-09 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VlYyczJENTRKdGdpNzdjNVRTM0VvXzRqVXNmYXRzZFVRSVk5WmFtRHdGNDB3NS1OS1hJY1JaRkpuckxRZkxfRXExZUZ4OHNDNGd1NnFtWE1WaGFkR1p5S0FjWWJQN1M2akgzTGJndEpORk3SAXdBVV95cUxPRmxtZmFjNFFXQzF5OW5qRUV5aTk5NmJIVDQ1eUtTMlNna2dsMHZvRVZzb2g2aHpHVnctcVMtOG0tRUZEbUZjNFVVbHZnVjNkNldOaFRGcmVRSHpaVXNjNEhrX1NqNjV5Z1EzcUJ6TGdXTVMxZ1A2VQ?oc=5">표] 10월 7일 매매동향.외국인·기관, 주성엔지니어링 동반 '순매도' 에 주가 급락</a> <span class="p0-desc">10월 7일 코스피에서 외국인이 2조6,314억원, 기관이 7,101억원을 순매도했다. 개인은 2조6,183억원을 순매수했다.코스닥시장 에서도 외국인이 2,542억원, 기관이 2,098억원을 순매도했다. 개인은 4,871억원을 순매수했다.코스피에서 에이피알은 외국인과 기관의 순매수 상위 종목에 공통으로 포함됐지만 개인의 순매도 상위 종목에 올랐다.SK하이닉스는 외국인과 기관의 순매도 상위 종목인 반면 개인의 순매수 상위 종목이었다.코스닥에서는 주성엔지니어링이 외국인과 기관의 순매도 상위 종목이자 개인의 순매수 상위 종목에 포함됐다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUdIBYEFVX3lxTE5hR0xOeW9TU2gxd2FLZzgyenJwWmhuTGZocEJVUzN5OHVDV2hhS3RmRWtvcVZvZEMxUmlxYXB4UFdHSmluOU1HQ1pzTDhpTVlCN203cWhUem1GbUUxd0QyUQ?oc=5">삼성전자, 역대 최대 실적에도 2%대 급락…SK하이닉스도 내려</a> <span class="p0-desc">(서울=연합뉴스) 황철환 곽윤아 기자 = 삼성전자[005930] 가 국내 기업 사상 최초로 분기 영업익 100조원 선을 넘어서고도 8일 2% 넘게...</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE0zUUc5OGlRSFM4bGx0X2w2YUlEREtmWVdUZkhfQV9PdFlOSV9kOWFXa3BSTkQzUlJYTUNkSTQxSlFTdnk1c00xS3I3RDM4djhWMVpyc093clJuLTBtcGNaM2dFYVd6aUZ1bWhMa0N5MzZPZw?oc=5">산업분석] 삼성전자·SK하이닉스 급락…메모리 공급부족은 안 끝났다 - TopStarNews</a> <span class="p0-desc">삼성전자 3분기 영업이익 107조4000억원에도 삼성전자·SK하이닉스가 동반 하락했다. 8개 리포트는 메모리 공급 부족 지속에는 동의했지만 HBM4와 CAPEX가 2027년 사이클을 가를 변수로 봤다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-09 주식 시장에서 181건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,625.93(-2.62%), KOSDAQ 892.27(-0.69%), USD/KRW 1,342.17(+0.20%).
 - KOSPI 6,625.93 (-2.62%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요. KOSDAQ 892.27 (-0.69%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
 
 ## 테마별 주요 뉴스
