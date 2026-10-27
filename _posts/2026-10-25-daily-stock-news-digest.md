@@ -153,7 +153,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/24/trump-ai-data-centers-voter-backlash-midterms.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump is pushing a massive AI buildout. His own voters are wary of what comes with it</a>
-<p class="news-desc">A new CNBC survey finds broad voter opposition to nearby AI data centers, creating a political challenge for Trump and Republicans ahead of the midterm election.</p>
+<p class="news-desc">새로운 CNBC 조사에 따르면 인근 AI 데이터 센터에 대한 광범위한 유권자 반대가 발견되어 중간 선거를 앞두고 트럼프과 공화당원에게 정치적 도전을 불러일으켰습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -165,7 +165,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/24/iran-threats-us-embassies-middle-east.html" class="news-title" target="_blank" rel="noopener noreferrer">American embassies tighten security as Iran threat warnings intensify ahead of U.S. midterm elections</a>
-<p class="news-desc">A memo from DNI director Jay Clayton said Iran is in the "advanced stages" of planning attacks against Americans.</p>
+<p class="news-desc">DNI 국장 제이 클레이튼은 메모에서 이란이 미국인에 대한 공격을 계획하는 '고급 단계'에 있다고 밝혔다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -177,7 +177,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/23/america-by-the-numbers-how-voters-feel-about-the-economy-inflation-ai-and-trump.html" class="news-title" target="_blank" rel="noopener noreferrer">America by the numbers: How voters feel about the economy, inflation, AI and Trump</a>
-<p class="news-desc">With the U.S. midterm elections looming, Americans are nearly as gloomy about the economy as they were when the nation was emerging from the pandemic.</p>
+<p class="news-desc">미국 중간선거가 다가오면서 미국인들은 국가가 팬데믹에서 벗어날 때와 마찬가지로 경제에 대해 거의 우울해하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -246,7 +246,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/24/stock-picking-could-hurt-investors-warns-former-hedge-fund-manager.html" class="news-title" target="_blank" rel="noopener noreferrer">Retail investors are not more sophisticated than 30 years ago, says former hedge fund manager</a>
-<p class="news-desc">Retail investors trying to beat the market by buying individual stocks and complex exchange-traded funds may be better off with broad market index funds.</p>
+<p class="news-desc">개별 주식과 복잡한 ETF를 매수하여 시장을 이기려는 개인 투자자는 광범위한 시장 인덱스 펀드를 이용하는 것이 더 나을 수 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -258,7 +258,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/23/ai-turmoil-neoclouds-struggle-credit-risks-jump-solidigm-pulls-ipo.html" class="news-title" target="_blank" rel="noopener noreferrer">Turmoil hits AI buildout as neoclouds face pressure, credit risks mount and Solidigm pulls IPO</a>
-<p class="news-desc">Stock slumps, pulled IPOs and rising spreads on credit default swaps this week sets stage for hyperscaler earnings.</p>
+<p class="news-desc">이번 주 주가 폭락, IPO 철회, 신용디폴트스왑 스프레드 상승이 하이퍼스케일러 수익의 무대를 마련했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

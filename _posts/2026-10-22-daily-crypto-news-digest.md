@@ -117,7 +117,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/certik-warning-crypto-emudhra-flaw-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Big Tech’s eMudhra fixes may leave crypto bots exposed, CertiK warns</a>
-<p class="news-desc">CertiK says crypto trading bots and exchange applications may remain exposed to the eMudhra certificate flaw because browser fixes may not protect all software.</p>
+<p class="news-desc">CertiK는 eMudhra 인증서 결함으로 인해 공격자가 암호화 서비스를 가장하고 거래를 조작하며 사용자 자금을 위험에 빠뜨릴 수 있다고 경고합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -129,7 +129,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/france-liability-crypto-exchange-defi-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">France proposes liability for crypto exchanges offering DeFi access</a>
-<p class="news-desc">French authorities want crypto exchanges to conduct checks on DeFi protocols and face liability for certain customer losses under proposed changes to EU crypto rules.</p>
+<p class="news-desc">프랑스 당국은 새로운 디파이 액세스 보호 조치, 자발적 지갑 인증 및 주요 암호화폐 서비스 제공업체에 대한 광범위한 ESMA 감독을 제안합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -141,7 +141,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/16/bybit-will-look-for-big-broker-partnerships-to-take-on-robinhood-in-the-u-s" class="news-title" target="_blank" rel="noopener noreferrer">Bybit will look for big broker partnerships to take on Robinhood in the U.S.</a>
-<p class="news-desc">When it comes to the U.S., Bybit will look to work with with someone like Interactive Brokers (IB), for example, said CEO Ben Zhou.</p>
+<p class="news-desc">CEO Ben Zhou는 미국의 경우 Bybit는 예를 들어 Interactive Brokers(IB)와 같은 회사와 협력할 것을 모색할 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -236,7 +236,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/cardano-foundation-urges-eu-against-expanding-mica-rules-to-defi-and-staking?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Cardano Foundation urges EU against expanding MiCA rules to DeFi and staking</a>
-<p class="news-desc">The foundation called for regulation based on financial risks rather than technology, warning that overlapping rules could create uncertainty for crypto businesses across the EU.</p>
+<p class="news-desc">카르다노 재단은 EU 규제 기관이 암호화폐 감독에 대한 변경을 고려함에 따라 비수탁형 스테이킹은 중개 서비스와 다르게 취급되어야 한다고 말합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -248,7 +248,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/uk-fca-consultations-defi-crypto-laws?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">UK financial watchdog opens consultations for DeFi guidance, crypto laws</a>
-<p class="news-desc">The UK Financial Conduct Authority consultations came just weeks after the agency opened applications for companies under its new crypto regulatory regime.</p>
+<p class="news-desc">영국 금융행위감독청(Financial Conduct Authority)은 분산 금융 및 디지털 자산 규칙과 관련된 두 가지 협의를 시작합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -291,7 +291,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/381538/musk-spacex-tesla-merger-bitcoin-treasury-behemoth" class="news-title" target="_blank" rel="noopener noreferrer">Musk’s SpaceX-Tesla Merger Would Create a Bitcoin Treasury Behemoth</a>
-<p class="news-desc">Musk said both boards formed committees to weigh a tie-up that would combine Tesla’s 11,509 BTC and SpaceX’s 18,712 BTC—roughly $2.5 billion worth—onto a single balance sheet.</p>
+<p class="news-desc">일론 머스크의 유동 SpaceX-테슬라 합병으로 두 회사의 총 30,221 BTC 가치가 약 25억 달러에 달하게 됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -303,7 +303,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-22 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/chainlink-cardano-and-other-blockchain-groups-push-sec-for-clearer-crypto-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Chainlink, Cardano, other blockchain groups push SEC for clearer crypto rules</a>
-<p class="news-desc">Six major blockchain organizations urged the SEC to formally recognize digital commodities as non-securities in its proposed regulatory framework.</p>
+<p class="news-desc">SEC에 보낸 공동 서한에서는 규제 기관이 제안된 암호화폐 규칙을 평가함에 따라 디지털 자산, 스테이킹 및 2차 시장 거래를 보다 명확하게 처리할 것을 요구합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

@@ -115,7 +115,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/nasdaq-companies-object-tokenized-stock-listings-okx-ice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report</a>
-<p class="news-desc">As of Friday, 22 companies had filed objections as part of the joint venture’s proposed tokenized stock platform under the SEC’s innovation exemption.</p>
+<p class="news-desc">Wells Fargo, Arm Holdings 및 Intuit도 OKX 거래소와 NYSE 모회사 ICE 간의 합작 투자에 반대하는 6개 회사 중 하나인 것으로 알려졌습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -127,7 +127,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/bybit-first-full-dubai-spot-trading-license?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bybit secures first full Dubai license for spot trading services</a>
-<p class="news-desc">Bybit’s new VARA licence authorizes spot trading services in Dubai, but the exchange must complete additional regulatory requirements before launching.</p>
+<p class="news-desc">Bybit는 VARA로부터 최초의 전체 두바이 현물 거래 라이센스를 확보했지만 서비스를 시작하기 전에 추가 요구 사항을 완료해야 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -139,7 +139,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/24/wells-fargo-cisco-marvell-among-latest-firms-objecting-to-okxice-s-tokenized-stock-plan" class="news-title" target="_blank" rel="noopener noreferrer">Wells Fargo, Cisco, Marvell among latest firms objecting to OKXICE's tokenized stock plan</a>
-<p class="news-desc">Six more companies have objected to listing tokenized versions of their stock on the venue, Reuters reported, bringing the total to 22.</p>
+<p class="news-desc">6개 회사가 토큰화된 버전의 주식을 행사장에 상장하는 것을 반대해 총 22개 회사가 됐다고 Reuters가 보도했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -232,7 +232,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/cysic-exploiter-eth-tornado-cash-white-hat-offer?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Cysic dangles a 10% bounty, hacker pours loot into Tornado Cash</a>
-<p class="news-desc">The attacker moved $744,000 in ETH and BNB to Tornado Cash after exploiting Cysic’s bridge to mint 10 million tokens on BNB Smart Chain.</p>
+<p class="news-desc">Cysic 브릿지 공격자는 재단이 Ether 수익금을 회수하기 위해 10% 포상금을 제안한 후 ETH에 약 $744,000와 BNB를 Tornado Cash로 옮겼습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -244,7 +244,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/hsbc-launches-redcoin-hong-kong-dollar-stablecoin-payme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">HSBC launches Hong Kong dollar stablecoin for retail payments</a>
-<p class="news-desc">HSBC is rolling out RedCoin wallets to PayMe users, with plans to support tokenized investment subscriptions and expand into institutional uses.</p>
+<p class="news-desc">HSBC는 PayMe를 통한 결제를 위한 홍콩 달러 스테이블코인인 RedCoin을 출시하고 토큰화된 투자 및 기관 용도로 확장할 계획입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

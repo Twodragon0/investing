@@ -62,7 +62,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/nasdaq-companies-object-tokenized-stock-listings-okx-ice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report</a>
-<p class="news-desc">As of Friday, 22 companies had filed objections as part of the joint venture’s proposed tokenized stock platform under the SEC’s innovation exemption.</p>
+<p class="news-desc">Wells Fargo, Arm Holdings 및 Intuit도 OKX 거래소와 NYSE 모회사 ICE 간의 합작 투자에 반대하는 6개 회사 중 하나인 것으로 알려졌습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -74,7 +74,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/381784/wells-fargo-cisco-intuit-more-companies-object-tokenized-stocks" class="news-title" target="_blank" rel="noopener noreferrer">Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks</a>
-<p class="news-desc">Twenty-two companies have now objected to having their shares traded on the planned OKX-ICE tokenized stock venue, after Wells Fargo, Cisco, Marvell, Arm, Moderna. and Intuit joined the list.</p>
+<p class="news-desc">OKX와 ICE가 계획하고 있는 토큰화된 주식 장소에서 자신의 주식이 거래되는 것을 원하지 않는 회사의 목록은 계속 늘어나고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -86,7 +86,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/24/wells-fargo-cisco-marvell-among-latest-firms-objecting-to-okxice-s-tokenized-stock-plan" class="news-title" target="_blank" rel="noopener noreferrer">Wells Fargo, Cisco, Marvell among latest firms objecting to OKXICE's tokenized stock plan</a>
-<p class="news-desc">Six more companies have objected to listing tokenized versions of their stock on the venue, Reuters reported, bringing the total to 22.</p>
+<p class="news-desc">6개 회사가 토큰화된 버전의 주식을 행사장에 상장하는 것을 반대해 총 22개 회사가 됐다고 Reuters가 보도했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -218,7 +218,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker" class="news-title" target="_blank" rel="noopener noreferrer">Why McDonalds, Microsoft and Google saying no to tokenized stocks isn't a dealbreaker</a>
-<p class="news-desc">Some of the world's biggest companies objected to being listed on the first tokenized securities trading venue under the SEC's innovation exemption. But the early pushback may say more about issuer caution than about rejection of tokenization itself.</p>
+<p class="news-desc">세계 최대 기업 중 일부는 SEC의 혁신 면제에 따라 최초의 토큰화된 증권 거래 장소에 상장되는 것을 반대했습니다. 그러나 초기 반발은 토큰화 자체 거부보다는 발행자의 주의에 대해 더 많은 것을 말해 줄 수 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -230,7 +230,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.coindesk.com/business/2026/10/24/bitcoin-s-wealthy-holders-turning-to-loans-and-yield-as-investment-habits-mature-xapo-ceo" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin’s wealthy holders turning to loans and yield as investment habits mature: Xapo CEO</a>
-<p class="news-desc">Borrowing against bitcoin and earning income to build their BTC holdings are becoming priorities for long-term investors, Xapo Bank CEO Seamus Rocca told CoinDesk.</p>
+<p class="news-desc">Xapo Bank CEO Seamus Rocca는 CoinDesk에 비트코인에 대해 차입하고 BTC 보유 자산을 구축하기 위한 수입을 얻는 것이 장기 투자자의 우선순위가 되고 있다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>

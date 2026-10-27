@@ -125,7 +125,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.coindesk.com/markets/2026/10/23/india-s-largest-exchange-denies-hack-after-blockchain-sleuths-pointed-to-usd16-million-in-suspicious-outflows" class="news-title" target="_blank" rel="noopener noreferrer">India's largest exchange denies hack after sleuths pointed to $16 million in suspicious outflows</a>
-<p class="news-desc">CoinDCX denies its active wallets were hacked after sleuths flagged $16 million in outflows from addresses linked to the India-based exchange.</p>
+<p class="news-desc">CoinDCX는 수사관들이 인도 기반 거래소에 연결된 주소에서 1,600만 달러의 유출을 신고한 후 활성 지갑이 해킹당했다는 사실을 부인했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">CoinDesk</span>
 </div>
 </div>
@@ -233,7 +233,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/381700/bitcoin-etfs-bleed-october-turns-red-again" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin ETFs Bleed $636 Million as October Turns Red Again</a>
-<p class="news-desc">Spot Bitcoin ETFs lost $635.6 million on Thursday, their biggest outflow of the month, pushing October flows back to a loss of about $176 million as Ethereum and Solana funds also bled.</p>
+<p class="news-desc">미국 현물 비트코인 ETF는 목요일에 6억 3,560만 달러를 잃어 3일간의 10억 7천만 달러 연속 유입 중 거의 60%를 소진했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -245,7 +245,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/381681/ethereum-delays-glamsterdam-testnet-fork-over-gas-security-flaws" class="news-title" target="_blank" rel="noopener noreferrer">Ethereum Delays Glamsterdam Testnet Fork Over Gas Security Flaws</a>
-<p class="news-desc">The Hoodi testnet fork is off after ChainSecurity found gas changes that could let contracts lock in failures, citing 13 real-world cases.</p>
+<p class="news-desc">Hoodi 테스트넷 포크는 ChainSecurity가 13가지 실제 사례를 인용하여 계약이 실패할 수 있는 가스 변경을 발견한 후 꺼졌습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -287,7 +287,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/381665/heatbits-899-water-heater-element-mines-bitcoin-while-it-heats-your-tank" class="news-title" target="_blank" rel="noopener noreferrer">Heatbit's $899 Water Heater Element Mines Bitcoin While It Heats Your Tank</a>
-<p class="news-desc">The Bitwater element swaps a tank's resistance wire for 20 mining chips, and Heatbit says it uses the same electricity to heat the water.</p>
+<p class="news-desc">Bitwater 요소는 탱크의 저항선을 20개의 채굴 칩으로 교체하며 Heatbit은 동일한 전기를 사용하여 물을 가열한다고 말합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -299,7 +299,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-24 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/381644/chatgpt-messi-chess-board-wrong-loses-in-four-moves" class="news-title" target="_blank" rel="noopener noreferrer">ChatGPT Teaches Messi Chess—On a Board It Set Up Wrong, With an Opening That Loses in Four Moves</a>
-<p class="news-desc">Lionel Messi’s ChatGPT ad has the AI teaching him chess on a board with kings and queens swapped, then suggesting an opening that loses in four moves on that board.</p>
+<p class="news-desc">Lionel Messi의 ChatGPT 광고에는 AI이 킹과 퀸이 바뀌는 보드에서 그에게 체스를 가르치는 내용이 있는데, 이는 4전에서 패하는 오프닝을 암시합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

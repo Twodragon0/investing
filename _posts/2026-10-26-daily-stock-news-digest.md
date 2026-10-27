@@ -259,7 +259,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-26 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/25/wonder-ipo-texas-automation.html" class="news-title" target="_blank" rel="noopener noreferrer">Marc Lore’s Wonder bets on Texas, automation and user-built restaurants as it mulls IPO</a>
-<p class="news-desc">Wonder is leaning into automation and user-built restaurants as founder Marc Lore prepares the startup for a potential IPO.</p>
+<p class="news-desc">Wonder는 창립자 Marc Lore가 잠재적인 IPO에 대비하여 스타트업을 준비함에 따라 자동화 및 사용자 구축 레스토랑에 관심을 기울이고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
