@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-27 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: U.S. Treasury yields are little changed as investors look ahead to the Fed's rate decision - 163건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>🤖 <strong>AI/기술</strong>: IPO, 반도체 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 환율 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 관련 16건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPdnVMeHR0cjdhVXpVQk9hZWdUUkVoMjAwX3g5OG5iWWprMW5XeEJoaC1CaTlDUVZSZ1ZjZnE4SFpsLWlCMXFXWE1lNnRoNzBKU1NqM2J1QmNUSVNhRzB4MUJxdXpMR0dQRUpNeGFOdDJ6Z25fcjA2QmVvczUxQko5RHc0d0tycDdIZGxIaGlqM3Z3OWhKeEhGMUxB0gGfAUFVX3lxTFA4SUxwS3ZmSEZwWmtRM0VkOUtZQUlSN0djS0JYRkxhMnF1VFhpVzdRWU91b1BoTjBhUm5HVkt4OHhMNElOR0JHYXpGTm5Md0NRa0lmTC1MRzNmWlAwb1lzX2hYbWgzSExzS0pZRXNfd01LNktjbVZBYTJwa2t2d0M5NUxqd2ZMVXJIam9lRHJrN09hcmlyVEpUYVptZzM0VQ?oc=5">U.S. Treasury yields are little changed as investors look ahead to the Fed's rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OcEI2VDlSbWY2ZVB3T0cxWUxscW1LRURUUW0wbEY3M2g0WTlXQ0JqeXIwc2taRmpMMjVkSTBIaXhRYmliNFlUNGVzTXZpSWNjdkJr?oc=5">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉</a> <span class="p0-desc">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 뉴닉</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFA1WjM3akVNRlJ6ZmtUQVRWal9BeU5obGNNU0JNTkxDcnJxd3BrZndGd2l5bHR2dHRTTkt5LWNyaXlYRF9rNk9Wb1FnLV82RXVGZGtNTnZYeWZ6S2RPekZZU05IYUdncEZvLWxYT3RTS0vSAXRBVV95cUxPbmM3S1YzU3JjSG9OR1pLanVFSkZWekZOamlhSExqNHdBWUVzZjJtV2pBajlRdXJ1OUt5Wk96YlZnQXdfamRRak1zX1RnMm9KaGY0WnN6c0xtNWN1OVU3czc2UW5Kc0dLaVV1MWZLNVQxOGU3TQ?oc=5">코스피, 외국인 매도에 5,500선 붕괴…코스닥도 2%대 급락 - 산경투데이</a> <span class="p0-desc">코스피, 외국인 매도에 5,500선 붕괴…코스닥도 2%대 급락 산경투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: U.S. Treasury yields are little changed as investors look ahead to the Fed's rate decision 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 163건의 뉴스 중 P1 주요 이슈도 36건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (33건): 코스피, 코스닥, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (29건): IPO, 반도체, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (12건): 연준, 환율, 실적 매크로 변수 (12건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 투자자들이 연준의 금리 결정을 앞두고 있기 때문에 미국 국채 수익률은 거의 변하지 않습니다.
-- 코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉
-- 코스피, 외국인 매도에 5,500선 붕괴…코스닥도 2%대 급락 - 산경투데이
-
-### 주요 이슈
-
-- IPO: 인류의 안전에 대한 의문이 소용돌이치면서 Anthropic은 주식 시장에 데뷔할 예정입니다.
-- CoreWeave Rout, 나머지 주식 시장에 경고 신호 전송
-- Anthropic의 IPO 서류 제출이 AI 주식을 추진함에 따라 Wall St는 한 달 중 가장 좋은 날을 맞이합니다.
-- 외 33건
-
-### 투자자 체크포인트
-
-- 한국 기사 60건, 글로벌 기사 103건 수집
-- 한국 지수: KOSPI 5,469.47(-1.00%), KOSDAQ 727.21(-3.12%), USD/KRW 1,325.84(+0.16%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">33건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:88%"></div></div><span class="theme-count">29건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:36%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:48%"></div></div><span class="theme-count">16건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:42%"></div></div><span class="theme-count">14건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-27.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,469.47 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 727.21 (-3.12%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-27 주식 시장에서 163건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,469.47(-1.00%), KOSDAQ 727.21(-3.12%), USD/KRW 1,325.84(+0.16%).
+- *오늘의 주식 시장: Dow, S&P 500 및 나스닥는 IPO에 대한 인류학 파일로 상승합니다.*
 
 ## 테마별 주요 뉴스
 

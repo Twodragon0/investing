@@ -16,27 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 11건 분석. 주목 사건: **[Security] PHP flaw shows AI ‘vulnerability apocalypse’ is o** / 보안 뉴스 헤드라인: October 2026 Becomes DeFi's Costliest Month as Hackers Laund.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] PHP flaw shows AI ‘vulnerability apocalypse’ is on schedule: Immunefi CEO 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 11건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (11건): security, exploit, wallet 보안 이슈 (11건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (4건): exploit, compromised, governance 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🟣 DeFi** (3건): exploit, validation, malicious DeFi 동향 (3건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-### 긴급 이슈
-
-- [Security] PHP flaw shows AI ‘vulnerability apocalypse’ is on schedule: Immunefi CEO
-- [Security] Yapeswap exploit: Malicious Proposal
-- [Security] X100 exploit: Flashloan Governance Attack
-
-### 투자자 체크포인트
-
-- 보안 사건 10건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 11건

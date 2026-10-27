@@ -28,26 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-27 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 6건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 3건 수집</li><li>📈 <strong>가격/시장</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 6건의 뉴스 중 **규제/정책** 관련이 3건(50%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (3건): basketball, professional, cryptonomist 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **📈 가격/시장** (1건): minister, conference, financial 가격 변동 (1건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- FCA는 구속력 없는 암호화 지침에서 개인 지갑 수표를 제안합니다 - CryptoSlate
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 2건, 아시아 2건, 한국 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 6건
 - **미국**: 2건

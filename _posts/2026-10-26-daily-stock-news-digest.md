@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-26 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffe. - 115건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 관련 18건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li><li>📊 <strong>매크로/금리</strong>: 금리, 연준 관련 13건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 하이닉스 관련 6건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQaDJOdlM4U0pmUGcybzY4a1d3ck5pMVU5cHE3Wl94Y2V0MVdza19SMlZQZm42RDJZTEsxSEkwUkdnNnhJRWVrVmNlTjRyRjZMcG5NdUdJWHMwOXpFYklHeXpaQXRLUnNhR0lLLWlCTVZsMkI5X2plSUFTRHZhSS1KUmdET2J1VmZjV0h5ZXVsMFNvdFYxa2VqMg?oc=5">Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Warren Buffett's Advice. - The Motley Fool</a></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNaW9NZFpvd292NzhoTHBaRFZOZEZvR3lsSWhCMmtUS3F1OTJUelZsbzkyX1llbFNLdk5SVlNzM09RRXMxMzd6dVlTTUhLcFZ0Z0UxZ3NlNlpreW41d1c2ckh1SWdSQlcyR1hueVhtejBTaHNlMFdjdFNMQ2NNaENMOU1iOVpya0JQZUpqVHJQVUlycjVIaFRjQ0ZoeThiUHpKem0tZThCSUpXV0NJYjdGMGVIbw?oc=5">Zero-Day Option Traders Are Betting Against Big S&P 500 Swings</a></li><li><a href="https://www.cnbc.com/2026/10/23/trump-mortgage-executive-order-costs.html">Trump's executive order targets mortgage insurance, refinance costs. What it means for borrowers</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,550.30 (+0.34%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 751.69 (-1.64%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-26 주식 시장에서 115건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,550.30(+0.34%), KOSDAQ 751.69(-1.64%), USD/KRW 1,323.66(-0.11%).
 - *The nine months between Election Day and June 30 have seen the S&P 500 deliver an average return of 15.5% going back.*
 
 ## 테마별 주요 뉴스

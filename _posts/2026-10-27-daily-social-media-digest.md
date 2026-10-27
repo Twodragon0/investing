@@ -29,48 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-10-27 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 금은 연준 금리 결정에 초점을 맞춰 $4,000 이상으로 유지됩니다. - 32건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 기준금리, 한국은행 관련 22건</li><li>📈 <strong>가격/시장</strong>: 기준금리, 한국은행 주목</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 대통령 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 마이크로소프트, 실적 관련 2건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNLTRVUHViYXZZWTg4WHdFSXgxV1ZMS2FqdHgtUUxQSlJxN0JzbG5ZNXdOVTJFMUR2VmEtaU9MUGl5T2VXUHg0YmliUFdIOEIzVjhYdHNmUmo2aXVtMll3eGp6WkJCTVRtUl9SQmd0NmFTZXBma1VrVDNXZDVSc3V4M3hrVlFFeU9iV3VmNDhGM2FVQnRvZnA1bFBpSjRfZmRYeGJDX2ZWVEk4OXhE?oc=5">금은 연준 금리 결정에 초점을 맞춰 $4,000 이상으로 유지됩니다.</a> <span class="p0-desc">금은 연준 금리 결정에 초점을 맞춰 $4,000 이상 유지 Bloomberg.com</span></li><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2d6MkVDNmZVaEJuTkdpbEZxLUpVOUVLa09EWnYxcFNtNi1qczNXSlh4M3I2TUltcUFJVTZfSjJXNTlMMHBWdXd0XzZVeFlLZU80VlBMR0hSVzgxZHpCNmIxaE9uakRQeElPbGo0U19WdllHM3JRTlhWYUhxNi1YLTJhV0VTVDNjMWN6eVo3UTRIN0dqaFhfS2E4cFVpMU1PZEHSAacBQVVfeXFMTi1ZQzR6UnlaRWp0TU96TDRabDc1VkJPS013RnBsUTZBNFE0RWR5ZkVCTTBfVjJrV3M3LVhlUFFNWnVaXzR0YVA2bUM4OFlraGJ2MzczVU1wYnhVcGIycFhtYXdvdGhSY2ZoS2lvNFRhdU5VUy0ySGU4NFpncUFZclZVYlRfam1SSVJIcFBKQlBIWll5alBoNEJvU2x6cU90OFd4azdudEE?oc=5">FOMC 회의에서는 인플레이션 상승에 따라 연준 금리 결정에 초점을 맞췄습니다. - Coinpedia</a> <span class="p0-desc">FOMC 회의에서는 인플레이션 상승에 따라 연준 금리 결정에 초점을 맞췄습니다. Coinpedia</span></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPdnVMeHR0cjdhVXpVQk9hZWdUUkVoMjAwX3g5OG5iWWprMW5XeEJoaC1CaTlDUVZSZ1ZjZnE4SFpsLWlCMXFXWE1lNnRoNzBKU1NqM2J1QmNUSVNhRzB4MUJxdXpMR0dQRUpNeGFOdDJ6Z25fcjA2QmVvczUxQko5RHc0d0tycDdIZGxIaGlqM3Z3OWhKeEhGMUxB0gGfAUFVX3lxTFA4SUxwS3ZmSEZwWmtRM0VkOUtZQUlSN0djS0JYRkxhMnF1VFhpVzdRWU91b1BoTjBhUm5HVkt4OHhMNElOR0JHYXpGTm5Md0NRa0lmTC1MRzNmWlAwb1lzX2hYbWgzSExzS0pZRXNfd01LNktjbVZBYTJwa2t2d0M5NUxqd2ZMVXJIam9lRHJrN09hcmlyVEpUYVptZzM0VQ?oc=5">투자자들이 연준의 금리 결정을 앞두고 있기 때문에 미국 국채 수익률은 거의 변하지 않습니다.</a> <span class="p0-desc">투자자들이 연준의 금리 결정을 기대하고 있기 때문에 미국 국채 수익률은 거의 변하지 않습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 금은 연준 금리 결정에 초점을 맞춰 $4,000 이상으로 유지됩니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 32건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 32건 중 텔레그램 0건, 소셜 0건, 정치·경제 32건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (22건): 기준금리, 한국은행, 동결 매크로 변수 (22건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (12건): 기준금리, 한국은행, 코스피 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🏛️ 정치/정책** (7건): 이재명, 대통령, 피해 정치 이슈 (7건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 금은 연준 금리 결정에 초점을 맞춰 $4,000 이상으로 유지됩니다.
-- FOMC 회의에서는 인플레이션 상승에 따라 연준 금리 결정에 초점을 맞췄습니다. - Coinpedia
-- 투자자들이 연준의 금리 결정을 앞두고 있기 때문에 미국 국채 수익률은 거의 변하지 않습니다.
-
-### 주요 이슈
-
-- 연준 이번 주에 최신 금리 변동을 발표합니다. 경제학자들이 기대하는 바는 다음과 같습니다.
-
-### 투자자 체크포인트
-
-- 정치·경제 32건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:55%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:32%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-10-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-10-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
