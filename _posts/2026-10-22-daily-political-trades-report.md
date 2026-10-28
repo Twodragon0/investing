@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-22 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(12회), **트럼프**(10회), **관세**(10회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-10-22 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 25건 — SEC 내부자 거래 2건, 트럼프 정책 5건, 중앙은행 18건
-- 1. US food importer sues Trump administration over 50% tariffs on Canadian goods
 
 ## 1. 트럼프 행정명령/정책
 
