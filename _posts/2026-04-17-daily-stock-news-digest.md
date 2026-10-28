@@ -49,10 +49,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-04-17 - 주식 뉴스 요약 이�
 </div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,226.05 (+2.21%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 1,162.97 (+0.91%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-04-17 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,226.05(+2.21%), KOSDAQ 1,162.97(+0.91%), USD/KRW 1,479.44(+0.30%).
 - *임시 뉴스 :: 최신 뉴스, 실시간 Aktienkurse und -Charts, Chartanalyse, News aus Wirtschaft, Börse, Politik, Sport, Wissenschaft.*
 
 ## 테마별 주요 뉴스

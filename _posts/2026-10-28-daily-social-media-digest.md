@@ -29,48 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-10-28 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 코스피 4% 급등에 '매수 사이드카' 발동 - 위키트리 - 35건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 금리, 한국은행 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코스피, 매수 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 대통령, 이재명 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 머니투데이방송, 반도체 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5GTVVhWFBDTlBqQlBOYXVMQWlseGR2MVZ5THNyYXRmRldMM3hSYm05RDZxR0xzblJFT042MFJVWDdwelFVYlN5eW5wMXUwTVkxSlM4dXNR?oc=5">코스피 4% 급등에 '매수 사이드카' 발동 - 위키트리</a> <span class="p0-desc">코스피 4% 급등에 '매수 사이드카' 발동 위키트리</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPaG1tSHVQcExLZDQ0WVowWlpXN1ZZYmk0NERNYnJESVVmYkxNSk5rTVJpNElxTzlwdm9hSE9SVGEtd3VHOUt4MjQ0QVV4OENlcHNnMEh1WUl6QXR1?oc=5">외국인 7000억 순매수…코스피 '매수 사이드카' 5700선 회복 - 뉴스핌</a> <span class="p0-desc">외국인 7000억 순매수…코스피 '매수 사이드카' 5700선 회복 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNLU4zMm5XSUY0SUZuRXpRQjZFeGNWVkpuXzZZdURhZFNCa0NZVGVXSWNSam5kZmpZdjRWMFBfU2tmejhrN01Ybzc0VExBVUNyV3ZJWGNhN0toTjR3c2hKa2YyaUZJZEZuN09UVWYxbGF4VVh3QkZzOTdUUWNXUnJsMFhKWlpnc1JYbWxHZmFxWWZWRGFKLUZjRzl5UVY2QUxSMnFYQUxOR1RMajdybWRDM3VUZUxTRUc1bG5FY1haaXNLRlJzMjltb3BuOHg0Zw?oc=5">연준 중간고사 며칠 전 이자율 결정 | 미국의 아침 - NewsNation</a> <span class="p0-desc">연준 중간고사 며칠 전 이자율 결정 | 미국의 아침 NewsNation</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피 4% 급등에 '매수 사이드카' 발동 - 위키트리 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 35건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 35건 중 텔레그램 0건, 소셜 0건, 정치·경제 35건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (25건): 금리, 한국은행, 분기 매크로 변수 (25건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **📈 가격/시장** (15건): 코스피, 매수, 한국은행 가격 변동 (15건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (7건): 대통령, 이재명, 정부 정치 이슈 (7건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피 4% 급등에 '매수 사이드카' 발동 - 위키트리
-- 외국인 7000억 순매수…코스피 '매수 사이드카' 5700선 회복 - 뉴스핌
-- 연준 중간고사 며칠 전 이자율 결정 | 미국의 아침 - NewsNation
-
-### 주요 이슈
-
-- 10월 FOMC ‘숨 고르기’ 전망, 12월 관건 - 스트레이트뉴스
-
-### 투자자 체크포인트
-
-- 정치·경제 35건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">25건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:60%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:28%"></div></div><span class="theme-count">7건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:4%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-10-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-10-28.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

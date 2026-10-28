@@ -42,9 +42,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-27 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: PHP flaw shows AI ‘vulnerability apocalypse’ is on schedule: Immunefi CEO - 105건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 동향 주시</li><li>📈 <strong>가격/시장</strong>: 코인리더스, 암호화폐 관련 32건</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 연준, 국채 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/php-flaw-ai-vulnerability-apocalypse-immunefi-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">PHP flaw shows AI ‘vulnerability apocalypse’ is on schedule: Immunefi CEO</a></li><li><a href="https://cointelegraph.com/magazine/ai-agents-help-rescue-eths-glamsterdam-fork-steal-my-bitcoin-site-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">AI agents help rescue ETH’s Glamsterdam fork, ‘Steal My Bitcoin’ site: Hodler’s Digest</a></li><li><a href="https://bitcoinmagazine.com/videos/php-hack-how-bitcoin-will-respond-to-the-cyber-pandemic">PHP Hack: How Bitcoin Will Respond to the “Cyber Pandemic”</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-10-27 암호화폐 시장 105건 분석 — 핵심 테마: 비트코인, 가격/시장, 거래소
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

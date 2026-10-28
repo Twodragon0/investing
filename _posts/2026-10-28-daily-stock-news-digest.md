@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-28 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉 - 197건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스닥, 코스피 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 연준 관련 29건</li><li>🤖 <strong>AI/기술</strong>: 반도체, IPO 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OcEI2VDlSbWY2ZVB3T0cxWUxscW1LRURUUW0wbEY3M2g0WTlXQ0JqeXIwc2taRmpMMjVkSTBIaXhRYmliNFlUNGVzTXZpSWNjdkJr?oc=5">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉</a> <span class="p0-desc">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 뉴닉</span></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPdnVMeHR0cjdhVXpVQk9hZWdUUkVoMjAwX3g5OG5iWWprMW5XeEJoaC1CaTlDUVZSZ1ZjZnE4SFpsLWlCMXFXWE1lNnRoNzBKU1NqM2J1QmNUSVNhRzB4MUJxdXpMR0dQRUpNeGFOdDJ6Z25fcjA2QmVvczUxQko5RHc0d0tycDdIZGxIaGlqM3Z3OWhKeEhGMUxB0gGfAUFVX3lxTFA4SUxwS3ZmSEZwWmtRM0VkOUtZQUlSN0djS0JYRkxhMnF1VFhpVzdRWU91b1BoTjBhUm5HVkt4OHhMNElOR0JHYXpGTm5Md0NRa0lmTC1MRzNmWlAwb1lzX2hYbWgzSExzS0pZRXNfd01LNktjbVZBYTJwa2t2d0M5NUxqd2ZMVXJIam9lRHJrN09hcmlyVEpUYVptZzM0VQ?oc=5">U.S. Treasury yields are little changed as investors look ahead to the Fed's rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE52bEpMSmgwNnNhQUpvcEc3Ymo3N2JYTTVYSmNHQ29XV0VGRGc0eEUyTUtsZE5YbW0wUlczTGEzYmxFNUw0WWFZRWdlTWRtUGgxUHdPRll4dS1JSjdVTnZPZ29uUG4?oc=5">'미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 - 베타뉴스</a> <span class="p0-desc">'미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 베타뉴스</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 197건의 뉴스 중 P1 주요 이슈도 38건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (43건): 코스닥, 코스피, 급등 가격 변동 (43건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (29건): 환율, 연준, 금리 매크로 변수 (29건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (35건): 반도체, IPO 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉
-- 투자자들이 연준의 금리 결정을 앞두고 있기 때문에 미국 국채 수익률은 거의 변하지 않습니다.
-- '미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 - 베타뉴스
-
-### 주요 이슈
-
-- 반도체 훈풍] 반도체주, 앤트로픽 IPO 소식에 급등…삼성전자·SK하이닉스 동반 강세 - CBC뉴스
-- SK하이닉스 주가 장중 6%대 올라, 앤트로픽 훈풍과 실적 발표 기대감
-- 오늘 주식 시장: 반도체 주식이 기술을 주도하면서 Dow, S&P 500, 나스닥 상승
-- 외 35건
-
-### 투자자 체크포인트
-
-- 한국 기사 67건, 글로벌 기사 130건 수집
-- 한국 지수: KOSPI 5,638.34(+2.58%), KOSDAQ 743.83(+1.57%), USD/KRW 1,326.55(+0.12%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">43건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:67%"></div></div><span class="theme-count">29건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:81%"></div></div><span class="theme-count">35건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:40%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:19%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-28.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-28.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,638.34 (+2.58%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 743.83 (+1.57%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-28 주식 시장에서 197건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,638.34(+2.58%), KOSDAQ 743.83(+1.57%), USD/KRW 1,326.55(+0.12%).
+- *분석 - 채권 투자자들은 연준에 대해 덜 생각하고 AI에 대해 더 많이 생각하고 있습니다.*
 
 ## 테마별 주요 뉴스
 
