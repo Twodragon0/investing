@@ -254,7 +254,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/29/nvidia-jensen-huang-chinese-intelligence-asset.html" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia responds to report Jensen Huang was target of Chinese asset, says diversion allegations were 'investigated and debunked'</a>
-<p class="news-desc">Nvidia disputed a New York Times report that U.S. intelligence agencies surveilled a person close to CEO Jensen Huang over concerns she could be a Chinese spy.</p>
+<p class="news-desc">엔비디아는(는) 미국 정보 기관이 CEO 젠슨 황과 가까운 사람을 중국 스파이일 수 있다는 우려로 감시했다는 New York Times 보도에 대해 이의를 제기했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -266,7 +266,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-30 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/29/general-motors-nasdaq-listing.html" class="news-title" target="_blank" rel="noopener noreferrer">GM is shifting gears to the Nasdaq, trying to draft behind Walmart’s lead</a>
-<p class="news-desc">GM plans to move its stock listing to Nasdaq on Nov. 17, opening the door to possible Nasdaq-100 inclusion and an improved valuation.</p>
+<p class="news-desc">GM은 11월 17일에 주식 상장을 나스닥로 이전하여 나스닥-100 포함 가능성과 향상된 가치 평가의 문을 열 계획입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

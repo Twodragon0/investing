@@ -214,7 +214,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/10/28/biotech-ipo-market-investor-risks.html" class="news-title" target="_blank" rel="noopener noreferrer">Biotechs buck a sluggish IPO market, but investors should tread warily</a>
-<p class="news-desc">While a number of IPOs have been pulled or delayed in 2026, the biotech sector has bucked the trend, with 26 companies debuting in U.S. markets.</p>
+<p class="news-desc">생명공학은 부진한 IPO 시장을 극복하지만 투자자들은 조심스럽게 대처해야 합니다. 2026년 10월 28일 수요일 1:47 PM EDT업데이트됨 2026년 10월 28일 수요일 3:29 PM EDT</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -226,7 +226,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-29 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/28/anthropic-ipo-stocks-funds-etfs-exposure.html" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic is about to go public. Here are the proxies that could benefit</a>
-<p class="news-desc">Stocks with exposure to the AI company could win as traders buzz over the hot new IPO.</p>
+<p class="news-desc">AI 회사에 노출된 주식은 트레이더들이 인기 있는 새로운 IPO에 대해 떠들썩해지면서 승리할 수 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

@@ -250,7 +250,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382138/justin-suns-htx-agrees-to-leave-uk-in-settlement-with-financial-watchdog" class="news-title" target="_blank" rel="noopener noreferrer">Justin Sun's HTX Agrees to Leave UK in Settlement With Financial Watchdog</a>
-<p class="news-desc">The FCA says the Justin Sun-linked exchange will no longer target UK consumers, ending its first case against a crypto firm over marketing.</p>
+<p class="news-desc">FCA는 저스틴 선(Justin Sun)과 연계된 거래소가 더 이상 영국 소비자를 대상으로 하지 않을 것이며 마케팅을 둘러싼 암호화폐 회사에 대한 첫 번째 소송이 종료될 것이라고 밝혔습니다</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -262,7 +262,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382124/utah-files-felony-charges-against-kalshi-co-founders-over-sports-bets" class="news-title" target="_blank" rel="noopener noreferrer">Utah Files Felony Charges Against Kalshi, Co-Founders Over Sports Bets</a>
-<p class="news-desc">The state says an undercover agent placed a dozen sports wagers on Kalshi, a day after the CFTC sued Utah to block its enforcement actions.</p>
+<p class="news-desc">주 정부는 CFTC이 집행 조치를 차단하기 위해 유타를 고소한 지 하루 만에 비밀 요원이 Kalshi에 12개의 스포츠 베팅을 했다고 밝혔습니다</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -274,7 +274,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/french-senate-adopts-bill-automatic-crypto-tax-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">French Senate adopts bill for automatic sharing of crypto tax data</a>
-<p class="news-desc">The French Senate adopted a bill authorizing the automatic exchange of crypto-asset tax information between international tax authorities, pending completion of the legislative process.</p>
+<p class="news-desc">프랑스 상원은 OECD가 지원하는 암호화폐 세금 보고 프레임워크를 기반으로 암호화폐 세금 정보의 자동 교환을 승인하려는 법안을 채택했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -302,7 +302,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382145/walmart-blocks-stock-okx-ice-tokenized-trading-venue" class="news-title" target="_blank" rel="noopener noreferrer">Walmart Blocks Its Stock From OKX-ICE Tokenized Trading Venue</a>
-<p class="news-desc">Walmart, Eli Lilly, Cigna, Carniva,l and Arcos Dorados objected to trading of their shares on the planned OKX-ICE tokenized stock venue, bringing the total to 38.</p>
+<p class="news-desc">Walmart와 Eli Lilly는 계획된 OKX-ICE 토큰화 증권 거래소에서 자신들의 주식을 거래하는 것에 반대하여 총 38주가 되었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -314,7 +314,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-30 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382116/bitcoin-treasury-datavault-ai-stock-crashes-cant-access-btc" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Treasury Datavault AI Says It Can’t Access Its BTC, Stock Tanks</a>
-<p class="news-desc">Datavault AI says it has been unable to withdraw its Bitcoin from Biconomy since June and will restate four financial reports tied to a $150 million Scilex deal.</p>
+<p class="news-desc">Datavault AI은 6월 이후 Biconomy에서 비트코인을 철회할 수 없었으며 4개의 재무 보고서를 다시 작성할 것이라고 밝혔습니다</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
