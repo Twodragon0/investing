@@ -1,27 +1,5 @@
 {
   "seen": {
-    "de55417c556530b7173756cf": "2026-09-29T16:04:46",
-    "ff624e2dfc31c91f3fbd6099": "2026-09-29T16:04:46",
-    "d35e1a3998c7f5d8f45fe7ca": "2026-09-29T16:04:46",
-    "4d7a014e3c614832fdf694ee": "2026-09-29T16:04:46",
-    "d85eed53e105d415efa5f696": "2026-09-29T16:04:46",
-    "c8367d54b5281723c3ee8622": "2026-09-29T16:04:46",
-    "7552e34e54fdc13387ee82d3": "2026-09-29T16:04:46",
-    "0b953b60dbba3d00a755c5d8": "2026-09-29T16:04:46",
-    "e5c9c9f4894f43b96dc91d9a": "2026-09-29T16:04:46",
-    "4902ae65e433751f540c5a77": "2026-09-29T16:04:46",
-    "97aea18cff941e89a0cb060c": "2026-09-29T16:04:46",
-    "afabfe240a207173b67fac81": "2026-09-29T16:04:46",
-    "74e661496be00918314c7658": "2026-09-29T16:04:46",
-    "e587016ebae4d6186d81fd15": "2026-09-29T16:04:46",
-    "6ebd14b56516aeded8e63934": "2026-09-29T16:04:46",
-    "3afb461e6739a67768def2a9": "2026-09-29T16:04:46",
-    "2db980c41fd228fae058f35d": "2026-09-29T16:04:46",
-    "63f3d689a9a798cd781cdccc": "2026-09-29T16:04:46",
-    "2089a0e535da231fed956c26": "2026-09-29T16:04:46",
-    "4c50e7fb0a0f11cfc79d0665": "2026-09-29T16:04:46",
-    "6be78439672f6c10c58e8886": "2026-09-29T16:04:46",
-    "c6a8b4d25d576738b1f83b83": "2026-09-29T16:04:46",
     "86021de63fcdbb4523943b01": "2026-09-30T16:12:54",
     "4bd5d98fc0d33423687b9806": "2026-09-30T16:12:54",
     "21846d782894c38febb4b013": "2026-09-30T16:12:54",
@@ -709,7 +687,63 @@
     "42849d8d5ffd3ec32829d170": "2026-10-28T16:13:46",
     "7a5613927967ba624424b09b": "2026-10-28T16:13:46",
     "76da6854b13f159dd59335ce": "2026-10-28T16:13:46",
-    "a7a3abf8a02972ab9e329de2": "2026-10-28T16:13:46"
+    "a7a3abf8a02972ab9e329de2": "2026-10-28T16:13:46",
+    "e82550c1062b3049caf58ebf": "2026-10-29T16:20:18",
+    "e191216b932443be0c183591": "2026-10-29T16:20:18",
+    "3a5e1cc9d02582c820e6e016": "2026-10-29T16:20:18",
+    "a361b9f0e9e3b476ea34e825": "2026-10-29T16:20:18",
+    "444fcbf0557abf95f7f06514": "2026-10-29T16:20:18",
+    "438b62b214ac06b4a2bedf28": "2026-10-29T16:20:18",
+    "df8351ca81d5d933331695d0": "2026-10-29T16:20:18",
+    "128ced6e34a709d6fed2bfb0": "2026-10-29T16:20:18",
+    "601a3fc85c1c75d8201101d2": "2026-10-29T16:20:18",
+    "aa21b113cb07b8248a7844ff": "2026-10-29T16:20:18",
+    "c375e5d82028b0fa5a8873d1": "2026-10-29T16:20:18",
+    "f57f4ebe74be60f0693800d7": "2026-10-29T16:20:18",
+    "0d8d3217a673e2a22c31261f": "2026-10-29T16:20:18",
+    "9a5217a4f7ce07b21f13b639": "2026-10-29T16:20:18",
+    "fb32c628f13e7fc2c7752a2a": "2026-10-29T16:20:18",
+    "e75dd1ed779360ab618edd2e": "2026-10-29T16:20:18",
+    "bf156ab7db9d8ba6c801d497": "2026-10-29T16:20:18",
+    "86f69f3ee5278f3edb55ac5e": "2026-10-29T16:20:18",
+    "a2b797fd0a4d0229f9c356a2": "2026-10-29T16:20:18",
+    "493c7a7d4a7cdf00afe8373f": "2026-10-29T16:20:18",
+    "d2a545e203c938a49610358a": "2026-10-29T16:20:18",
+    "2664173c030977a5a275907c": "2026-10-29T16:20:18",
+    "8092574aa6b7c07ae69b04ee": "2026-10-29T16:20:18",
+    "0d5c35fb8598ed41bc4fd46f": "2026-10-29T16:20:18",
+    "be751c1831798c6d2b9bf79a": "2026-10-29T16:20:18",
+    "94de4804119350ddb690be7a": "2026-10-29T16:20:18",
+    "4d587f52874371dfd267783b": "2026-10-29T16:20:18",
+    "343eb90415b371ae6abdbd7f": "2026-10-29T16:20:18",
+    "76aadeb0d61ae00b34112d43": "2026-10-29T16:20:18",
+    "a0cb405dfbf61e561eeac05a": "2026-10-29T16:20:18",
+    "5144eace6cc6287abdfb8806": "2026-10-29T16:20:18",
+    "d7a62b4abe2abf8e1a761c99": "2026-10-29T16:20:18",
+    "6a72c8b2e73608cf03ae6997": "2026-10-29T16:20:18",
+    "a29209b17d9a71af8224dc27": "2026-10-29T16:20:18",
+    "d311200874c93bec07b998db": "2026-10-29T16:20:18",
+    "4e0f21ea33e2357c2e73ca08": "2026-10-29T16:20:18",
+    "ba53e5d7173e3ba284a04279": "2026-10-29T16:20:18",
+    "f22372ac0537657ccfbe30b2": "2026-10-29T16:20:18",
+    "4e5a0f3afcb436a2a03cb6c8": "2026-10-29T16:20:18",
+    "9ae2fcd9ea69d381a0a5107d": "2026-10-29T16:20:18",
+    "2c39ebb3b7d705c77214b2ce": "2026-10-29T16:20:18",
+    "be219d9d5049b30e44e0db8f": "2026-10-29T16:20:18",
+    "793387c65da011eab99d14de": "2026-10-29T16:20:18",
+    "796bf7bf7b983c20bc7dcb2b": "2026-10-29T16:20:18",
+    "06595128f313aa5404f84960": "2026-10-29T16:20:18",
+    "f340dcc36add3e8ac8db2fca": "2026-10-29T16:20:18",
+    "26b4a6b0efe50229df779030": "2026-10-29T16:20:18",
+    "f3ed7a2a4c61067952fd2b92": "2026-10-29T16:20:18",
+    "7d0d23f5ea831635cc8b5694": "2026-10-29T16:20:18",
+    "75b6b9aa0682f599735e9213": "2026-10-29T16:20:18",
+    "99d942f91d9d988c136759b8": "2026-10-29T16:20:18",
+    "c8c08767b6850a8feb84856f": "2026-10-29T16:20:18",
+    "8f2d0f27375db4127679f584": "2026-10-29T16:20:18",
+    "ab006ae718d557fcac618c19": "2026-10-29T16:20:18",
+    "40eabe8739f26ed83735df24": "2026-10-29T16:20:18",
+    "6d23529ccaab25dfed9294b9": "2026-10-29T16:20:18"
   },
   "titles": [
     [
@@ -20711,6 +20745,230 @@
     [
       "정치인 거래정책 리포트 20261029",
       "2026-10-29"
+    ],
+    [
+      "which politicians trade stocks the most heres how to check yonkers times",
+      "2026-10-30"
+    ],
+    [
+      "sec form 4 filed by boise cascade llc quantisnow",
+      "2026-10-30"
+    ],
+    [
+      "through dividend reinvestment a shore bancshares shbi director buys 338 shares stock titan",
+      "2026-10-30"
+    ],
+    [
+      "director daniel j leonard buys 125 shares of oak valley bancorp ovly at 3437 each stock titan",
+      "2026-10-30"
+    ],
+    [
+      "both issuershare positions reach zero as cloopen raasy cancels shares in its merger stock titan",
+      "2026-10-30"
+    ],
+    [
+      "merger takes cloopen raasy private as its cto disposes of options and stock awards stock titan",
+      "2026-10-30"
+    ],
+    [
+      "a director buys 400 shares at 14837 each in bank first corp bfc stock titan",
+      "2026-10-30"
+    ],
+    [
+      "7415 stock units awarded by wolfspeed wolf vest in full on october 27 2027 stock titan",
+      "2026-10-30"
+    ],
+    [
+      "ceolinked yy tz bought 3000 and 9549 depositary shares in agora api stock titan",
+      "2026-10-30"
+    ],
+    [
+      "employeetrust shares were canceled for cash as cloopen raasy became privately held stock titan",
+      "2026-10-30"
+    ],
+    [
+      "director michele norsa sells 8000 ermenegildo zegna zgn shares retaining 158348 shares directly stock titan",
+      "2026-10-30"
+    ],
+    [
+      "cloopen raasy directors 120000 vested stock units canceled for 0494 each in merger stock titan",
+      "2026-10-30"
+    ],
+    [
+      "a directors family trust disposes of 36666 cloopen raasy depositary shares in a merger leaving zero stock titan",
+      "2026-10-30"
+    ],
+    [
+      "an executive forfeited 13571 unvested stock awards on leaving united bankshares ubsi stock titan",
+      "2026-10-30"
+    ],
+    [
+      "director zhao disposes of 2372 depositary shares in cloopen raasy merger leaving no direct holdings stock titan",
+      "2026-10-30"
+    ],
+    [
+      "an officer proposes selling 820 shares of republic bancorp rbcaa stock titan",
+      "2026-10-30"
+    ],
+    [
+      "trump administration issues executive order targeting housing and mortgage costs cooley finsights",
+      "2026-10-30"
+    ],
+    [
+      "trump delays robotics machinery tariffs in favor of more talks",
+      "2026-10-30"
+    ],
+    [
+      "trump says imported robotics pose national security risks but does not impose tariffs",
+      "2026-10-30"
+    ],
+    [
+      "trump opts for trade talks over tariffs for robotics industrial machinery yahoo",
+      "2026-10-30"
+    ],
+    [
+      "it is too soon to hold a funeral for us tariffs financial times",
+      "2026-10-30"
+    ],
+    [
+      "bryan adams releases new trump protest song lake ontario the hollywood reporter",
+      "2026-10-30"
+    ],
+    [
+      "us treasury european bond yields fall after fed decision ahead of ecb meeting",
+      "2026-10-30"
+    ],
+    [
+      "ecb president lagarde resigns at a time of mounting challenges for europe",
+      "2026-10-30"
+    ],
+    [
+      "euro remains under pressure ahead of ecb rate decision fxstreet",
+      "2026-10-30"
+    ],
+    [
+      "dax starts slightly higher ahead of ecb rate decision vonovia slides",
+      "2026-10-30"
+    ],
+    [
+      "ecb rate decision can 100 gas prices trigger a december rate hike equiti global",
+      "2026-10-30"
+    ],
+    [
+      "ecb president lagarde to step down next year tradingview",
+      "2026-10-30"
+    ],
+    [
+      "ecb president christine lagarde to step down on february 7 2027 the economic times",
+      "2026-10-30"
+    ],
+    [
+      "euro steady against dollar after ecb leaves rates unchanged",
+      "2026-10-30"
+    ],
+    [
+      "ecb press conference lagarde speaks on policy outlook after leaving key rates unchanged fxstreet",
+      "2026-10-30"
+    ],
+    [
+      "내년 첫 기준금리 결정 1월 14일한은 금통위 연 8회 개최",
+      "2026-10-30"
+    ],
+    [
+      "美연준 금리 동결 회의 횟수 줄여 시장에선 물가 대응 의지 안 보여",
+      "2026-10-30"
+    ],
+    [
+      "내년 첫 금리 결정 1월 14일금통위 일정 확정 연합뉴스tv",
+      "2026-10-30"
+    ],
+    [
+      "美 연준 금리 동결에도 한은은 인상 무게11월 금통위 촉각 대한경제",
+      "2026-10-30"
+    ],
+    [
+      "금리 동결 미 연준 12월 인상 가능성에 주목한국은행 향방은 매일경제 마켓",
+      "2026-10-30"
+    ],
+    [
+      "한국은행 내년 첫 기준금리 결정은 1월 14일",
+      "2026-10-30"
+    ],
+    [
+      "한은 내년 금통위 일정 공개첫 금리 결정은 1월 14일",
+      "2026-10-30"
+    ],
+    [
+      "연준 기준금리 동결 숨 고르기 한은은 11월 인상 무게 매일신문",
+      "2026-10-30"
+    ],
+    [
+      "한은 내년 첫 기준금리 결정 1월 14일금통위 연 8차례 개최",
+      "2026-10-30"
+    ],
+    [
+      "美 연준 금리 동결에도 한은 추가 인상 압박11월 금통위 촉각 산경투데이",
+      "2026-10-30"
+    ],
+    [
+      "fed는 동결 한은 11월 결정은강한 성장에 추가 인상 가능성",
+      "2026-10-30"
+    ],
+    [
+      "내년 첫 기준금리 결정은 1월 14일미일 보다 먼저 새해 첫 판단",
+      "2026-10-30"
+    ],
+    [
+      "한은 2027년 금통위 일정 발표1월 14일 첫 기준금리 결정",
+      "2026-10-30"
+    ],
+    [
+      "美 연준 금리 동결 후 커진 12월 인상 가능성한국은행은 이코리아",
+      "2026-10-30"
+    ],
+    [
+      "한국은행 내년 금통위 24차례 개최기준금리 결정회의 8회 파이낸셜포스트",
+      "2026-10-30"
+    ],
+    [
+      "federal reserve makes interest rate decision ahead of midterms",
+      "2026-10-30"
+    ],
+    [
+      "did the fed just make a huge mistake",
+      "2026-10-30"
+    ],
+    [
+      "fed leaves rates steady as governor lisa cook dissents axios",
+      "2026-10-30"
+    ],
+    [
+      "gold edges lower after fed holds rates with limited guidance",
+      "2026-10-30"
+    ],
+    [
+      "federal reserve holds interest rates steady as midterm elections loom abc news breaking news latest news and videos",
+      "2026-10-30"
+    ],
+    [
+      "the feds decision to hold interest rates steady helps warsh deny tehran a say over monetary policy fortune",
+      "2026-10-30"
+    ],
+    [
+      "what is happening with us interest rates",
+      "2026-10-30"
+    ],
+    [
+      "federal reserve holds interest rates steady the washington post",
+      "2026-10-30"
+    ],
+    [
+      "trumptargeted lisa cook dissents as fed puts rates on hold politico",
+      "2026-10-30"
+    ],
+    [
+      "정치인 거래정책 리포트 20261030",
+      "2026-10-30"
     ]
   ],
   "seen_urls": {}
