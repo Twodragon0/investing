@@ -29,36 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-29 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문 - 17건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 규제, 가상자산 동향 주시</li><li>🔴 <strong>보안/해킹</strong>: 금융당국, 긴급점검 관련 2건</li><li>📊 <strong>매크로/금리</strong>: 스테이블코인 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtVmVEYkxQZ003Z3VVc3R4eDl3Y0U1c0hmS2lZWVBhR0w5SkFkckhHZTNjbktrUEVzYnVacG1NVW5uNlhfRHVzYXVVY2ZfajJoZXhMa0V0SURPTnAtak9wNmF3?oc=5">금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문</a> <span class="p0-desc">금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼". 디지털 자산 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBvN2RjMjRwMjN5UmgwcjNsWTE3amxqM1piSFoweU5KNGtxTFB3V2ZYbWl1MGNXdWkwekxjcEVnT21OR2dPakdjdkZMVlFPQUpjWHlLTUlZRnhHZE9vcVU1VHFaSGNIbjB0NGZkZC11VExGT25UenfSAXtBVV95cUxNUEhNejY4QzFoNEtMTjZtTWg4UHJKOWZZOXgtb3g4MFpsNWd2Q3BpRVVONkpGaUNPcXJsdnhpbXZjdGRiNFVGd0diTUFPRHU1dVM3N2pmazcySFdLQXRqVEs2SDBpN194OVdjR25naHd3NEd2cFNrRDh6Vm8?oc=5">금융당국, 빗썸 해킹 긴급점검…소비자 피해 발생시 전액배상 등 감독 - 머니투데이</a> <span class="p0-desc">금융당국, 빗썸 해킹 긴급점검…소비자 피해 발생시 전액배상 등 감독.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 17건의 뉴스 중 P1 주요 이슈도 4건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (7건): 규제, 가상자산 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🔴 보안/해킹** (2건): 금융당국, 긴급점검, 해킹 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **📊 매크로/금리** (2건): 스테이블코인, FOMC, 원화코인 매크로 변수 (2건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문
-- 금융당국, 빗썸 해킹 긴급점검…소비자 피해 발생시 전액배상 등 감독 - 머니투데이
-
-### 주요 이슈
-
-- Federal Reserve issues FOMC statement
-- 세계 20위권 밖… 韓 가상자산 시장 발목 잡은 규제 불확실성
-- 가상자산 시장, 제도권 금융으로 재편…한국은 규제 공백 속 경쟁력 시험대 - 시사매거진
-- 외 1건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 8건, 미국 5건, 아시아 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 17건
 - **한국**: 8건

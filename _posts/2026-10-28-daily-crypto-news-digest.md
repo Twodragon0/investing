@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-28 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인 지갑이 자금을 공격자에게 리디렉션하는 심각한 결함을 수정합니다. - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 연준 관련 43건</li><li>🏦 <strong>거래소</strong>: 기관 동향 주시</li><li>📈 <strong>가격/시장</strong>: 연준, 달러 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 11건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/381844/bitcoin-wallet-flaw-trick-users-paying-attackers">비트코인 지갑이 자금을 공격자에게 리디렉션하는 심각한 결함을 수정합니다.</a> <span class="p0-desc">확인된 악용으로 인해 악성 서버가 Electrum의 보류 중인 트랜잭션을 대체하여 사용자를 속여 비트코인을(를) 공격자 주소로 리디렉션하게 되었습니다.</span></li><li><a href="https://bitcoinmagazine.com/videos/bitcoin-security-expert-jameson-lopp-cyberattacks-on-exponential-path">비트코인 보안 전문가 Jameson Lopp: "지수" 경로의 사이버 공격</a> <span class="p0-desc">비트코인 잡지 비트코인 보안 전문가 Jameson Lopp: "지수" 경로의 사이버 공격 비트코인 핵심은 AI이 버그 사냥을 자동화함에 따라 보안을 업데이트합니다. Jameson.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **118건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-28 암호화폐 핵심 뉴스: 캐나다인, 람보르기니, BMW, 보석류에 훔친 암호화폐 지출 후 '엄청나게 미안' - CBC. 총 118건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -23,8 +23,10 @@ description: "정치인 거래·정책 리포트 — 미국 의회 내부자 거
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(7회), **SEC(미국증권거래위원회)**(6회), **의회**(4회), **내부자**(3회), **공시**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-09-20 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 7건 — 미국 의회 거래 2건, SEC 내부자 거래 5건
 - 1. 'A huge problem': Trump has traded more stocks than all of Congress combined - Fortune President Donald Trump has made more securities trades since…
 
 ## 1. 미국 의회 거래 동향

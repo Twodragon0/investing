@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-17 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.coindesk.com/business/2026/10/16/scammer-gets-scammed-in-ledger-spy-chip-exploit-loses-almost-usd5-million-in-bitcoin">사기꾼은 Ledger 스파이 칩 악용으로 사기를 당하고 비트코인에 거의 500만 달러의 손실을 입었습니다.</a> <span class="p0-desc">Chainalytic은 가짜 온라인 작업을 통해 사람들을 속인 사기꾼 WHO이 손상된 하드웨어 지갑의 가장 큰 피해자 중 하나가 되었다고 밝혔습니다</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **122건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-17 암호화폐 핵심 뉴스: OpenAI 에이전트에 이더리움 자금이 부족하여 소유하지 않은 지갑에서 가져갔습니다. - CoinDesk. 총 122건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
