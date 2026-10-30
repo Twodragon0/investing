@@ -29,36 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-30 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문 - 24건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 12건 수집</li><li>🏦 <strong>거래소</strong>: 10건 수집</li><li>🔴 <strong>보안/해킹</strong>: 빗썸, 해킹 주목</li><li>🟣 <strong>DeFi</strong>: 2건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtVmVEYkxQZ003Z3VVc3R4eDl3Y0U1c0hmS2lZWVBhR0w5SkFkckhHZTNjbktrUEVzYnVacG1NVW5uNlhfRHVzYXVVY2ZfajJoZXhMa0V0SURPTnAtak9wNmF3?oc=5">금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문</a> <span class="p0-desc">금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼". 디지털 자산 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE52Vnd6Wks0ajBOUGQ2U2tvazdLQU42NjRDWjdhbWRIQ0xxTVpqV3l0WTZBdXJ5ZlM1OW92YjYxT0Z2ckpENm1FSWl6TjkzY0E1a3VxYWZ5US1lQUZxNnhDcEFJbw?oc=5">금융권 해킹, 가상자산 유출로 번졌다…프라뱅 1억원 피해 - 포쓰저널</a> <span class="p0-desc">금융권 해킹, 가상자산 유출로 번졌다…프라뱅 1억원 피해. (1억) 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 24건의 뉴스 중 P1 주요 이슈도 6건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (12건): 가상자산 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (10건): htx, fca, settles 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **🔴 보안/해킹** (4건): 빗썸, 해킹, 금융당국 보안 이슈 (4건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 금융당국, 가상자산업권 해킹 긴급점검.빗썸 "결제 등 정보유출은 확인 안 돼" - 매일신문
-- 금융권 해킹, 가상자산 유출로 번졌다…프라뱅 1억원 피해 - 포쓰저널
-
-### 주요 이슈
-
-- 연준 이사회는 노바스코샤 은행의 신청 승인을 발표했습니다.
-- 연준은 FOMC 문을 발행합니다.
-- 빗썸 해킹에 금융당국 조사…가상자산 거래소 보안 규제 공백 논란 - 뉴스토마토
-- 외 3건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 8건, 미국 7건, 한국 7건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 24건
 - **유럽**: 8건

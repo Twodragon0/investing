@@ -16,31 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-10-30 - 보안 뉴스 요약 �
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Chainalysis traces North Korean crypto cash-outs **.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] zkLink Nova exploit: Cross-Chain Message Spoofing 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 12건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): security, exploit, malicious 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🔷 이더리움** (4건): exploit, malicious, proposal 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🏦 거래소** (2건): breach, discloses, coinbase 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-
-### 긴급 이슈
-
-- [Security] zkLink Nova exploit: Cross-Chain Message Spoofing
-- [Security] Hifi Finance exploit: Malicious Proposal
-- [보안] Fence Finance 악용: 잘못된 주식 회계
-
-### 주요 이슈
-
-- [Security] Chainalysis traces North Korean crypto cash-outs through Garantex
-
-### 투자자 체크포인트
-
-- 보안 사건 12건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건

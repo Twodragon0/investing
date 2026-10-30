@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-30 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 삼성전자 "30조원 분기 배당"… 기대 못 미쳐 주가는 4% 급락 - 186건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 채권 관련 30건</li><li>📈 <strong>가격/시장</strong>: 삼성전자, 코스피 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 마이크로소프트 동향 주시</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPak5IbGFNZkJfVzQ3LVZwbUtNbHpDaFN3T3JZZ0dnVUtLaWYxU1JaWHZ0QS1nU0FQNkRmQ2JjdkpoT000VjdtU1I5NjltZmlVanF6ZFNLVDQwR25ISnV0QUpocVpibnIxMk9JVFJuSy1SZTY3cHNmcUhiUWwwUFc3X2prMA?oc=5">삼성전자 "30조원 분기 배당"… 기대 못 미쳐 주가는 4% 급락</a> <span class="p0-desc">삼성전자 "30조원 분기 배당"… 기대 못 미쳐 주가는 4% 급락 조선일보</span></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcW1scWNicHp0c1c1SXJsYXVocnQ5azdULU1TcnZsOVZwS3FkVkJOWTIzYmhxc1E1dzljakIwQ1BiODRyS2plVjVuT3BfNW9TUmVna00xOXJiT3FTZm10dVhkQlhmbkNwNHFjZHhUeEM2aXRRaXNaR18zX1FGdFQtX19SU0hkRlZVZHFFRmVHS1RiZ01vUlhZd3R0b0ozd29BNENjVFRzOU8?oc=5">Fed’s Interest Rate Decision: October 28, 2026 - Advisor Perspectives</a></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQUTk5LWxXVS1MZXhuQ2I0WEpKbjRzTkJTZVRlby13UnBtUS1JTVMzSzZSQmxWU3FhTHJKbGVDa2VZMjc4cm5vUW9fNmJDZU11N3RMZlEta29FSFZ6UkxPRXNqRmpTZDFvM1Bvd211Y0ZLaXJibFJIY2htSklDOWtrRlFDSGlXdnNQdnFtSFNmaXdGa2U0Xy13?oc=5">The S&P 500 Is Approaching a Valuation Not Seen Since the Peak of the Dot-Com Bubble, and History Suggests a Crash Could Follow - The Motley Fool</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 삼성전자 "30조원 분기 배당"… 기대 못 미쳐 주가는 4% 급락 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 186건의 뉴스 중 P1 주요 이슈도 38건 확인됩니다.
-
-### 테마별 동향
-
-- **📊 매크로/금리** (30건): 연준, 채권, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **📈 가격/시장** (34건): 삼성전자, 코스피, 코스닥 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (15건): 반도체, 마이크로소프트, IPO 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 삼성전자 "30조원 분기 배당"… 기대 못 미쳐 주가는 4% 급락
-- Fed’s Interest Rate Decision: October 28, 2026 - Advisor Perspectives
-- The S&P 500 Is Approaching a Valuation Not Seen Since the Peak of the Dot-Com Bubble, and History Su
-
-### 주요 이슈
-
-- U.S. Stocks Fall After Alphabet Earnings Spark More AI Jitters
-- US tech stocks fall after earnings fuel AI spending concerns - Financial Times
-- Investors Look Beyond AI - ETF Database
-- 외 35건
-
-### 투자자 체크포인트
-
-- 한국 기사 61건, 글로벌 기사 125건 수집
-- 한국 지수: KOSPI 5,937.66(-1.01%), KOSDAQ 753.23(-2.02%), USD/KRW 1,338.91(-0.14%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:88%"></div></div><span class="theme-count">30건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:100%"></div></div><span class="theme-count">34건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:44%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:18%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🟣 DeFi</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:38%"></div></div><span class="theme-count">13건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-30.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-30.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,937.66 (-1.01%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 753.23 (-2.02%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-30 주식 시장에서 186건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,937.66(-1.01%), KOSDAQ 753.23(-2.02%), USD/KRW 1,338.91(-0.14%).
+- *[경제 오딧세이] 한국은행, 기준금리 동결.11월의 선택은?*
 
 ## 테마별 주요 뉴스
 

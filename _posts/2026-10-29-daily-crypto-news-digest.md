@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-29 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 코인 시황] 비트코인 8만1000달러 회복…연준 금리 결정 앞두고 암호화폐 반등 - 뉴스핌 - 113건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 관련 40건</li><li>🏦 <strong>거래소</strong>: 26건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, BTC 주목</li><li>📊 <strong>매크로/금리</strong>: 국채, 연준 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBNcDctaEZnRThqSnloWEUycWJIU3VXQ2Z6eml3dTRIX0Zlay1BOE15Q2l3b0ZYRldpX3o1anoxejIxbEc3ZGI2YXJMNG1KV0llSDg0UzdfRy1BNVF4?oc=5">코인 시황] 비트코인 8만1000달러 회복…연준 금리 결정 앞두고 암호화폐 반등 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 8만1000달러 회복…연준 금리 결정 앞두고 암호화폐 반등 뉴스핌</span></li><li><a href="https://decrypt.co/382044/fed-rate-decision-what-markets-bitcoin-traders-expect">연준 금리 결정: 시장과 비트코인 거래자가 기대할 수 있는 것</a> <span class="p0-desc">연준은 오늘 오후 2시에 결정됩니다. ET와 트레이더들은 보유세가 거의 확실하다고 보고 있습니다. 비트코인 및 주식 시장에 대한 의미는 다음과 같습니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **113건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-29 암호화폐 핵심 뉴스: 국제 암호화폐 로맨스 사기 혐의로 6명 기소 - FOX 5 DC. 총 113건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
