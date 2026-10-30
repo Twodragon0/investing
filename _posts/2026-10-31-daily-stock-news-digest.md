@@ -278,7 +278,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-31 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/10/30/stocks-making-the-biggest-moves-midday-intc-lite-sndk-twlo-coin.html" class="news-title" target="_blank" rel="noopener noreferrer">정오에 가장 큰 변동을 보이는 주식: 인텔, Lumentum, Sandisk, Twilio, 코인베이스 등</a>
-<p class="news-desc">다음은 정오 거래에서 헤드라인을 장식하는 회사 중 일부입니다.</p>
+<p class="news-desc">정오에 가장 큰 움직임을 보이는 주식: 인텔, Lumentum, Sandisk, Twilio, 코인베이스 등 2026년 10월 30일 금요일 게시12:51 PM EDT업데이트 2시간 전</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
