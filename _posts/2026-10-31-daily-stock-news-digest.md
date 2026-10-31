@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-31 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 금리 - 177건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 33건</li><li>📊 <strong>매크로/금리</strong>: 채권, 연준 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, IPO 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO, 마이크로소프트 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMihAJBVV95cUxOaDlWS0VRSklaemMzd3V4dllmTlZRbTQtOVV6WlA2SjlkcTI2LTl4RU1PTk93OHpIelZWUWczX1RfS0xCRHVnN0FlWUZBOFUtc2dWdjE1OXFaekxLWjR0b243b1VWRENCeko4OVFnSXBEVFhCeUhGVFQxMFZVby1CY3dNMG1ZR3JEd0dRWGgyblV2UjIxQkwxZXNjakpHV0dBWUtoeXJlUUpJR2pkaVFlRGEtMEZqd1M2UXlwT1RfRWlxbzhYQU1WdUxXWkh0MHZNa1J6QVl2SFliSVIzVmgwSjBoZ1V1RlZjUGloa2xIWmVBeURVSHNLcFNtM21LMXY2RHNTOQ?oc=5">What the Fed's interest rate decision means for your bank accounts, loans, credit cards, and investments</a></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE11ZDR6XzY1am54RXZPSDRXMkotYVZURVotN3prTnliY3I0T1NFcWluUXliOWVBM1RpcVNWS3hEODFEZ2hWdHQzY2xRODlBTktuYnlyamFMTzFvWFY5X0UtOEQ4VDJYTDdmTnpXQ1VGcm5ndw?oc=5">증시 시황] 코스피 3.48% 급락…삼성전자·SK하이닉스에 'AI 쇼크' - 톱스타뉴스</a> <span class="p0-desc">[증시 시황] 코스피 3.48% 급락…삼성전자·SK하이닉스에 'AI 쇼크' 톱스타뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xa1V0VjF0NnNXdm1SdEdKZXBGVGhiQkpQaHM2OHFndnRqaU1NZVJEOUdzX20yUG92MVNoRk00LWczbkNUMFd6M3RQMjhuZDVhN252d2J1cFIyRVV3ZGlZYw?oc=5">"구글 쇼크에 코스피 급락"…삼성·하이닉스 동반 추락 [영상PICK] - 메트로신문</a> <span class="p0-desc">"구글 쇼크에 코스피 급락"…삼성·하이닉스 동반 추락 [영상PICK] 메트로신문</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: What the Fed's interest rate decision means for your bank accounts, loans, credit cards, and inve. 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 177건의 뉴스 중 P1 주요 이슈도 36건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (33건): 코스피, 코스닥, 삼성전자 가격 변동 (33건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (23건): 채권, 연준, 선물 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (17건): 반도체, IPO 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 연준의 이자율 결정이 귀하의 은행 계좌, 대출, 신용 카드 및 투자에 미치는 영향
-- 증시 시황] 코스피 3.48% 급락…삼성전자·SK하이닉스에 'AI 쇼크' - 톱스타뉴스
-- "구글 쇼크에 코스피 급락"…삼성·하이닉스 동반 추락 [영상PICK] - 메트로신문
-
-### 주요 이슈
-
-- 기술주 매도세 심화, 원유 상승: 시장 마감
-- 주가 반토막 났던 ‘삼전닉스’… 3분기 실적 호재에 반등 기대감 - 동아일보
-- 오늘 주식 시장: 나스닥 선물 급락, S&P 500 선물 하락은 아마존, 인텔 e
-- 외 33건
-
-### 투자자 체크포인트
-
-- 한국 기사 61건, 글로벌 기사 116건 수집
-- 한국 지수: KOSPI 5,730.74(-3.58%), KOSDAQ 724.38(-3.92%), USD/KRW 1,334.53(-0.30%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">33건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:70%"></div></div><span class="theme-count">23건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:52%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:30%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:24%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-10-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-10-31.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,730.74 (-3.58%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 724.38 (-3.92%).
+- 2026-10-31 주식 시장에서 177건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,730.74(-3.58%), KOSDAQ 724.38(-3.92%), USD/KRW 1,334.53(-0.30%).
+- *연준의 금리 보류는 채권 수익률을 다른 방향으로 보냅니다*
 
 ## 테마별 주요 뉴스
 

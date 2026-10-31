@@ -42,9 +42,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-30 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 코인 시황] 비트코인 8만달러 일시 붕괴…기술주 급락·연준 매파 기조에 위험자산 매도 확산 - 뉴스핌 - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 32건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, 연준 주목</li><li>🔵 <strong>규제/정책</strong>: 20건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE41X0NEbWJRd3NVR0hTbnFMUVVCakE5TWwzajVNYVFMa2QxZUhUZjlvTjJFdVhWaFFiOThxcFl6QzdxT2JzZlZRUk1lRGxlT003aHZoYmZGSG9TZVFx?oc=5">코인 시황] 비트코인 8만달러 일시 붕괴…기술주 급락·연준 매파 기조에 위험자산 매도 확산 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 8만달러 일시 붕괴…기술주 급락·연준 매파 기조에 위험자산 매도 확산 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTFBNcDctaEZnRThqSnloWEUycWJIU3VXQ2Z6eml3dTRIX0Zlay1BOE15Q2l3b0ZYRldpX3o1anoxejIxbEc3ZGI2YXJMNG1KV0llSDg0UzdfRy1BNVF4?oc=5">코인 시황] 비트코인 8만1000달러 회복…연준 금리 결정 앞두고 암호화폐 반등 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 8만1000달러 회복…연준 금리 결정 앞두고 암호화폐 반등 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOWjNxX1VmUG5ma0Vad0tza2prZG5NZmoyRkJBY2NkMW9PcmI1VFhuSkx5cFR6TFJxRHlidTBJWmlFZ1JqSEdLblJsMmM3QlNuVk9SZFJoRldfNTdlVkMxYmZuZEQ0UDhNeGtMdEZoY1JYYlVrei00QXlzNTNFQjF0RFFYbDhldC10MF9UZXpUSUtrUkZEVW5PSmVMVlp6My1HNjhwTWlUME9LTTVicnlXYVBSV3Y4ZTJtRVBaaXFVVHhDckkwM09wVg?oc=5">오늘의 암호화폐: 비트코인·이더리움·XRP, 연준 금리 결정 앞두고 반등 - www.tmgm.com</a> <span class="p0-desc">오늘의 암호화폐: 비트코인·이더리움·XRP, 연준 금리 결정 앞두고 반등 www.tmgm.com</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-10-30 암호화폐 시장 118건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-31 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Binance, 사상 최대 63억 달러 해킹에 출금 중단…암호화폐 하락 - Investing.com 한국어 - 121건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 67건 수집</li><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 암호화폐, 바이낸스 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5vR192bkJuOXVtLUNrU2t4UTQzTUhGc19UVzZPMGVsRUg2LVlwRXFteHFZdFFBdXFBZi1DdV9uS0c0LUlyWlNSVjZzdnJmS0JYR05HT2NBSkxQdm9CaVhVT2ZwZHVVNG5felphSGN2N0NZQm8?oc=5">Binance, 사상 최대 63억 달러 해킹에 출금 중단…암호화폐 하락 - Investing.com 한국어</a> <span class="p0-desc">Binance, 사상 최대 63억 달러 해킹에 출금 중단…암호화폐 하락 Investing.com 한국어 바이낸스 해킹에 스테이블코인 동결 조치…서클 시간외서 5%↓ 연합인포맥스 세.</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56TlQwdnJTd2hlRlpRd3ViaXVndFJCZTNxOTRQX3Bqc2pNQmtLSTNUX0RsTUhnWWw5ekNCTzNZdHZqRDh0T2NTTWk3bTVFM1RfbEY0bzU5WENWUWJDQm5XZkQ3VDBieWc?oc=5">바이낸스 해킹설에 비트코인 등 주요 암호화폐 급락 - M이코노미뉴스</a> <span class="p0-desc">바이낸스 해킹설에 비트코인 등 주요 암호화폐 급락 M이코노미뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9tdC16RDJvOEh6eXQ0d3FsVzY5N3FsVVIzWTdQcGg4Q0wyMkdZeEdmRUk1UzYwMEcwUFBOZzQ4Y214TF9MQ0NGc1FXQ0pXekoyM1pEcnJob0l1Zng1RGRGU3RLX281TGtRRFd2MA?oc=5">'수십억 달러 해킹' 정황에 암호화폐 시장 출렁…비트코인 3.7% 급락 - 메디컬투데이</a> <span class="p0-desc">'수십억 달러 해킹' 정황에 암호화폐 시장 출렁…비트코인 3.7% 급락 메디컬투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Binance, 사상 최대 63억 달러 해킹에 출금 중단…암호화폐 하락 - Investing.com 한국어 
-외 P0 긴급 이슈 40건이 추가 감지되었습니다. 총 121건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (67건): $6.3B 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **🟠 비트코인** (44건): 비트코인, 암호화폐, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🔴 보안/해킹** (56건): 암호화폐, 바이낸스, 달러 보안 이슈 (56건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 바이낸스 해킹설에 비트코인 등 주요 암호화폐 급락 - M이코노미뉴스
-- '수십억 달러 해킹' 정황에 암호화폐 시장 출렁…비트코인 3.7% 급락 - 메디컬투데이
-
-### 주요 이슈
-
-- 코인베이스 수익: 점진적인 개선, 그러나 취약한 암호화폐 거래량은 여전히 ​​문제임 - Morningstar
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 4M 비트코인 $85K 이상 구매 시 한도 회복 가능: Glassnode
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Binance(35건), Google News EN(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-10-31.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-10-31.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **121건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 🔴 보안/해킹
+- 2026-10-31 암호화폐 핵심 뉴스: Binance, 사상 최대 63억 달러 해킹에 출금 중단…암호화폐 하락 - Investing.com 한국어. 총 121건 분석, 핵심 테마는 거래소, 비트코인, 보안/해킹입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

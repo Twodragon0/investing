@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-12 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9xeDN4OUVqcFJaVWc1cF9MYmlMWmhMMmI5SUgtaEF6X0N5MVpfVU9CSkZuc0lRMVcxRzdKV3JsREkwTjRHSEJLbTZGRFA2eE82RVRKN2Y0Y29rTDdLUTFMdNIBeEFVX3lxTE9hbDBnRWEyRGV3ZS1DZmd4QWphd1Jmc2FuWmtDUTJsNk1jLWVwRmk1UE0tZ0dNY0cxZ0h6WGRkdmh5R3RST0hkbndLS2RHdzRBc09XcHhzT09UTVNIcVVLQ2VmbWJsX1NOZ3pZa21jalhWMkdrMlg3VQ?oc=5">美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁]</a> <span class="p0-desc">美 반도체 급락 속 삼성전자 1%↓…SK하이닉스는 3% 올라[핫스탁] 뉴시스</span></li><li><a href="https://www.2news.co.kr">삼성전자·SK하이닉스 주가 급락, 반등 흐름 꺾였나 - 2news.co.kr</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 급락, 반등 흐름 꺾였나 2news.co.kr</span></li><li><a href="https://biz.chosun.com">AI 확장 ‘건전성’에 커지는 의문… 코스피 급락 출발 - 조선비즈 - Chosunbiz</a> <span class="p0-desc">AI 확장 ‘건전성’에 커지는 의문… 코스피 급락 출발</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 7,763.95 (+0.43%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 996.93 (+4.76%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-06-12 주식 시장에서 180건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,763.95(+0.43%), KOSDAQ 996.93(+4.76%), USD/KRW 1,525.61(+0.33%).
 - *미국 및 글로벌 주식 투자자를 위한 통찰력 있는 분석 및 논평*
 
 ## 테마별 주요 뉴스

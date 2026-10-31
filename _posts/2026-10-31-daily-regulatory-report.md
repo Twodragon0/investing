@@ -28,30 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-10-31 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 거래소 관련 18건 수집</strong><ul><li>🏦 <strong>거래소</strong>: 9건 수집</li><li>🔵 <strong>규제/정책</strong>: 7건 수집</li><li>🟣 <strong>DeFi</strong>: 2건 수집</li><li>🏛️ <strong>정치/정책</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 18건의 뉴스 중 **거래소** 관련이 9건(50%)으로 압도적입니다. 거래소 상장/운영 관련 변동이 주목받고 있습니다
-
-### 테마별 동향
-
-- **🏦 거래소** (9건): htx, fca, promotions 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🔵 규제/정책** (7건): fca, htx, promotions 규제 움직임 (7건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🟣 DeFi** (2건): llc, settlement, licensing DeFi 동향 (2건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 연준 이사회는 노바스코샤 은행의 신청 승인을 발표했습니다.
-- 빗썸 해킹에 금융당국 조사…가상자산 거래소 보안 규제 공백 논란 - 뉴스토마토
-- FCA Secures HTX UK Exit in Crypto Promotions Settlement - Fincrime Central
-- 외 1건
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 7건, 미국 6건, 아시아 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 18건
 - **유럽**: 7건

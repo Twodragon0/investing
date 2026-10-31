@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-06 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.ft.com/content/06bb85c7-ab3c-4cc2-bdcf-679976b6e901?syn-25a6b1a6=1">비트코인은 전략 판매 후 하락하여 암호화폐 거래자들을 불안하게 합니다.</a> <span class="p0-desc">비트코인은 전략 판매 이후 암호화폐 거래자들을 불안하게 만들었습니다. 급락 관련 보도.</span></li><li><a href="https://news.google.com/read/CBMilwFBVV95cUxOY1RiV1lRczhNLTJxUmI0Sl8zcTZERWE2S0o0Nm9jdnVXX0x1TVlzS010bmtXWVdZLWhNVWEtdE1yenp1R0FNdHRlcHQxM3V0aGx3YmV6dUQ2Q0tLRWF5OUZIVE1HaG9sNUdpN2dkMTB4anhTZzQzQV9hX2xnTGl0RFltWGdrd3ZSVW1TUFJWbjdPVFU1WDhB?hl=en-US&gl=US&ceid=US%3Aen">비트코인 폭락은 기업 재무 보유자로부터 620억 달러를 손실했습니다. MicroStrategy 모델이 깨졌습니까?</a> <span class="p0-desc">2026년 6월 암호화폐 대패로 인해 비트코인을 재무 자산으로 보유하고 있는 공개 기업의 총 시가 총액 620억 달러가 손실되었습니다. MicroStrategy, 테슬라 및 Mar.</span></li><li><a href="https://www.newspim.com">코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 일시 6만2000달러 붕괴…ETF 유출·강제청산에 암호화폐 시장 급락 뉴스핌</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-06 암호화폐 핵심 뉴스: 비트코인은 내러티브가 사라지고 유동성이 순환하면서 몇 달 만에 가장 힘든 한 주를 보내고 있습니다.. 총 103건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
