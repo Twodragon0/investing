@@ -42,12 +42,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-27 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐: 비트코인, 랠리 중심 106건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 랠리 동향 주시</li><li>📈 <strong>가격/시장</strong>: 랠리 관련 43건</li><li>🏦 <strong>거래소</strong>: 미래에셋 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 인플레이션 동향 주시</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **106건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-08-27 암호화폐 핵심 뉴스: 비트코인 가격 상승폭 확대, 암호화폐 랠리 속도가 빨라짐에 따라 잠시 $81,000를 돌파. 총 106건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
