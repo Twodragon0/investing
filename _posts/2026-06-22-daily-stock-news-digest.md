@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-22 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="http://www.fool.com/">Market Crash: The Financial Stocks I'd Buy Without Losing Sleep</a></li><li><a href="https://www.investing.com/news/economy-news/bolivia-crisis-begins-to-ease-after-lawmakers-back-state-of-emergency-4751671">Bolivia crisis begins to ease after lawmakers back state of emergency</a></li><li><a href="https://www.cnbc.com/2026/06/20/cheap-airline-fares-summer-travel.html">The budget airline model in the U.S. is running out of runway</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 9,052.42 (-0.13%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 966.59 (-3.43%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-06-22 주식 시장에서 131건의 뉴스를 분석했습니다. 한국 시장: KOSPI 9,052.42(-0.13%), KOSDAQ 966.59(-3.43%), USD/KRW 1,529.89(-0.43%).
 - *워시는 금리 인상 위협이 충분하기를 바랄 수도 있습니다.*
 
 ## 테마별 주요 뉴스

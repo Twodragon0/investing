@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-08-30 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQbFRHdTVQbVRjbzliQUpPb0FQVTVXWFpaU19oYWpzR1lPU1hfLW42cHVDcVhzNWgxeXNzR1hlRl9MdFl0X1VGWnRPTFRzNllYRWVSMUlhTkFHLUVGZ0hkdVBtOURxMGsxdHN4LWlBZy0xcVI3bWtqdkU3d3JYcG9NRmQtU0VFbG50aUNpczUwRDNSelFCVFRZeHl4Ui1qWFVBMDJRUk5hWDdZNFJxNi1xZjdfWlRaN3M?oc=5">The Fed Chair Says AI Is Moving Faster Than Even Its Believers Predicted - 24/7 Wall St.</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 14건 중 텔레그램 0건, 소셜 0건, 정치·경제 14건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 14건 중 텔레그램 0건, 소셜 0건, 정치·경제 14건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향

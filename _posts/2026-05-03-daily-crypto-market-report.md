@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-03 | 시총 $2.69T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Monero</strong> (XMR): +2.49%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +1.91%</li><li>🔴 <strong>Bitcoin Cash</strong> (BCH): -1.56%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집
