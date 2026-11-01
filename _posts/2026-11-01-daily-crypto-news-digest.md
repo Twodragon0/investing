@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-01 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 사상 최대 규모인 8조4000억원어치 암호화폐 털렸다.北소행 의심 - 119건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 65건 수집</li><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 동향 주시</li><li>🔴 <strong>보안/해킹</strong>: 암호화폐 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 바이낸스, 달러 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOc2VxeHl6c1lvcFZvbFVNSVdOa0s2ZWh3NkpDZEIwY2x5aFVIMGRMMFJfNkF2MGhNX1BtUHEtdllaLUdNVDVNa0tnQUVWeTJKY0ZXNnNqNzlFVmxJLWl3dkU1eGFGazdiLU1FdklzWEhiNkdOQzBJZzU5RndmWVZ6UFRucWpQOUFndHFKMEFJdXNMSVJzSDVkTmV4TlFDZw?oc=5">사상 최대 규모인 8조4000억원어치 암호화폐 털렸다.北소행 의심</a> <span class="p0-desc">사상 최대 규모인 8조4000억원어치 암호화폐 털렸다.北소행 의심 조선일보 비트코인 7만7000달러 붕괴…바이낸스 63억 달러 해킹 충격 뉴스핌 비트코인, Binance 해킹.</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE54eXF4S1VxdGdmd29iOEdjR0dqSWdTX3pMaE92TFY3NThqUzZISG9hbFpidXluc2k4MkVQUmNQWDVQR2ZlbjJlOUtpZlVKM3ltVjFuMkJzRWs2cWZYQ3fSAWNBVV95cUxOR2JQaFZKd0F1WDYtdC1jTFRNMS1mbjk1MENUMkRhTk9yZDdnVS1fNDh6UGhmQ1VUV1hiOFplZDBXektpUWNGbjRUY2F6WnBtZlZ2SE1ZSEVhbEswZ0Y2ZWNtSkk?oc=5">Why North Korea's 'elite' hackers are the prime suspect in major Binance hack</a></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56TlQwdnJTd2hlRlpRd3ViaXVndFJCZTNxOTRQX3Bqc2pNQmtLSTNUX0RsTUhnWWw5ekNCTzNZdHZqRDh0T2NTTWk3bTVFM1RfbEY0bzU5WENWUWJDQm5XZkQ3VDBieWc?oc=5">바이낸스 해킹설에 비트코인 등 주요 암호화폐 급락 - M이코노미뉴스</a> <span class="p0-desc">바이낸스 해킹설에 비트코인 등 주요 암호화폐 급락 M이코노미뉴스</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 사상 최대 규모인 8조4000억원어치 암호화폐 털렸다.北소행 의심 
-외 P0 긴급 이슈 45건이 추가 감지되었습니다. 총 119건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (65건): binance, hack, largest 관련 지표와 수급 흐름을 함께 확인하세요.
-- **🟠 비트코인** (43건): 비트코인, 암호화폐, 바이낸스 관련 (43건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🔴 보안/해킹** (60건): 암호화폐, 바이낸스 보안 이슈 (60건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Why North Korea's 'elite' hackers are the prime suspect in major Binance hack
-- 바이낸스 해킹설에 비트코인 등 주요 암호화폐 급락 - M이코노미뉴스
-
-### 주요 이슈
-
-- 이슈&논란] 머스크 "AI가 언젠가 자신을 위해 암호화폐 훔칠 것"…바이낸스 해킹사건 후 '경고' - 뉴스스페이스
-- iShares 비트코인 Trust ETF, 오늘 왜 하락하나? - Investing.com 한국어
-- Crypto Biz: 비트코인의 양자 위협이 경제적 문제로 대두되고 있습니다.
-- 외 7건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News EN(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-01.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-01.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **119건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 🔴 보안/해킹
+- 2026-11-01 암호화폐 핵심 뉴스: 사상 최대 규모인 8조4000억원어치 암호화폐 털렸다.北소행 의심. 총 119건 분석, 핵심 테마는 거래소, 비트코인, 보안/해킹입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

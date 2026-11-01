@@ -32,12 +32,13 @@ image_alt: "소셜 미디어 동향 - 2026-07-09 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://intellectia.ai">연준 2026년 7월 금리 결정: 시장 분석 - Intellectia AI</a> <span class="p0-desc">Intellectia의 AI 투자 통찰력으로 투자 포트폴리오를 변화시키세요. 실시간 시장 데이터, AI 중심 지침을 얻고 더 현명한 결정을 내립니다.</span></li><li><a href="https://www.thefairnews.co.kr">심층분석] 외국인·기관 순매도 폭탄에 코스피 4.9% 급락…매도세 집중되며 7600선 턱걸이</a> <span class="p0-desc">[심층분석] 외국인·기관 순매도 폭탄에 코스피 4.9% 급락…매도세 집중되며 7600선 턱걸이 thefairnews.co.kr</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 19건 중 텔레그램 0건, 소셜 1건, 정치·경제 18건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 1건, 정치·경제 18건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

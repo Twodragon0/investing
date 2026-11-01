@@ -28,21 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-01 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 거래소 관련 7건 수집</strong><ul><li>🏦 <strong>거래소</strong>: 2건 수집</li><li>🔵 <strong>규제/정책</strong>: 1건 수집</li><li>🏛️ <strong>정치/정책</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 7건의 뉴스에서 **거래소**(2건)과 **규제/정책**(1건)이 동시에 부각되고 있습니다. 규제 당국의 움직임이 거래소 운영에 직접적인 영향을 미치고 있어 주의가 필요합니다
-
-### 테마별 동향
-
-- **🏦 거래소** (2건): ltd, restricting, promotions 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🔵 규제/정책** (1건): restricting, promotions, financial 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏛️ 정치/정책** (1건): esrs, sustainability, undertakings 정치 이슈 (1건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 2건, 한국 2건, 아시아 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 7건
 - **미국**: 2건

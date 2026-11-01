@@ -29,9 +29,11 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-07-21 | 시총 $2.31T (+
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🔴 <strong>Canton</strong> (CC): -3.29%</li><li>🟢 <strong>Chainlink</strong> (LINK): +2.49%</li><li>🟢 <strong>Solana</strong> (SOL): +2.28%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
+- 2026-07-21 비트코인 $65,093 (24h +1.0%) · 공포·탐욕 지수 29/100 (Fear) · BTC 도미넌스 56.5%. 상위 30개 코인의 시세 및 모멘텀을 정리합니다.
 
 ## 시장 인사이트
 

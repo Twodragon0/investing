@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-19 | DOGE -5.4% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Dogecoin</strong> (DOGE): -5.43%</li><li>🔴 <strong>Cardano</strong> (ADA): -5.11%</li><li>🔴 <strong>Chainlink</strong> (LINK): -4.07%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **11건** 수집
