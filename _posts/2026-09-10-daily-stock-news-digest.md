@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-10 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1MQXJIN2tvLWFYQl91VFdvNW1QcEpsRkxuaDZtUGo4Z2ZEeUFaa3VkOWhvMmtHN2I5d2dPNXFCVU9aWDg3RlQ1MUZpWlRveW5FTXJMVmZ5SUtDRFBSV193ZmJ5N2szN003?oc=5">한 달 새 33% 뛴 반도체 ETF.7월 급락 딛고 다시 수익률 주도 - 녹색경제신문</a> <span class="p0-desc">[녹색경제신문 = 나희재 기자] 국내 반도체 상장지수펀드(ETF)가 지난 7월 급락 충격을 딛고 한 달 만에 수익률 상위권을 휩쓸었다. 삼성전자와 SK하이닉스 등 대형 메모리주뿐만 아니라 전공정 장비와 소재·부품·장비(소부장) 기업까지 주가 반등이 확산하면서 반도체 ETF 전반의 수익률을 끌어올렸다. 특히 8월 반도체 수출이 역대 최대치를 새로 쓴 데 이어 HBM4 공급 확대와 글로벌 빅테크의 인공지능(AI) 인프라 투자 지속 기대가 맞물리면서 지난달까지 시장을 짓눌렀던 ‘AI 투자 피크아웃’ 우려도 빠르게 후퇴하는 모습이다.9일</span></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOODJCcHFNM1pjZ05QaUNidjlaQlJNdlJ0ekJqR29EV2ZTSGFKZzRJTE5QbGEyWllRQ0FiX281U0xMVGdKYTlwS0tSX1FiTjZYOFd6bXpoRldycXRpaUhqakdZNXhxYnlqWUh5RXdoS0FiczdVMzVaN0VzVU4tUTh2U2RrOXhOa3ZLdk9ReVJ2M3hRck94SWJtSV9Dd0RWeWs?oc=5">If a Stock Market Crash Is Coming, History Says This Is the Smartest Move to Make</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,051.64 (+1.40%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 830.37 (+2.28%).
-- 2026-09-10 주식 시장에서 196건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,051.64(+1.40%), KOSDAQ 830.37(+2.28%), USD/KRW 1,339.64(-0.06%).
 - *오는 14일부터 국내 주식시장에서 정규장 종료 이후에도 오후 8시까지 코스피·코스닥 종목을 실시간으로 사고팔 수 있게 된다.*
 
 ## 테마별 주요 뉴스

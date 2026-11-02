@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-10 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/373030/malaysia-seizes-over-75000-crypto-mining-rigs-in-power-theft-crackdown">말레이시아, 전력 도난 단속으로 75,000개 이상의 암호화폐 채굴 장비 압수</a> <span class="p0-desc">2022년 이후 3,000회 이상의 급습으로 629명이 체포되었으며, 당국은 국가 전력망에서 전력을 빨아들이는 광부를 표적으로 삼았습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **81건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-07-10 암호화폐 핵심 뉴스: 비트코인의 양자 딜레마: 더 큰 블록인가, 아니면 STARK 증명인가?. 총 81건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

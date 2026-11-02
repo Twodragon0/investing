@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-29 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(26회), **SEC(미국증권거래위원회)**(16회), **트럼프**(12회), **관세**(10회), **행정명령**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-10-29 정치권 핵심 이슈: Accenture PLC (ACN) 주식 움직였습니다 하락 4.41%에 10월27일: 변동 원인 - TradingKey. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 46건 (SEC 내부자 거래 20건, 트럼프 정책 9건, 중앙은행…
 - 1. Understanding Trump's tariff reversals - Peterson Institute for International Economics
 
 ## 1. 트럼프 행정명령/정책
