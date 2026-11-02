@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-16 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 고인원 기자= 글로벌 메모리 반도체주가 이번 주 급락세를 이어가고 있다. 중국 반도체 업체들의 기술 추격에 대한 우려가 커진 가운데, 인공지능(AI) 투자 열풍으로 호황을 누려온 메모리 시장이 2029년 공급 과잉에 빠질 수 있다는 전망까지 나</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5XV3ZmR1pSQXQ4NGdaeFUzMTFGQ0JFY19vQlpkZ1pvUzNhRjZOdUV6Z2U5R2FHRGNfei1iWEJTRlJrQ1VWUlJmMkVHdFMtd0k4NEhPOEI2VlNhdWtn?oc=5">특징주] 美 반도체주 급락 여파…프리마켓서 삼성전자 6%·SK하이닉스 7%대↓ - 뉴스핌</a> <span class="p0-desc">[서울=뉴스핌] 이나영 기자= 삼성전자와 SK하이닉스가 15일 넥스트레이드(NXT) 프리마켓에서 나란히 6~7%대 급락하고 있다. 미국 소비자물가지수(CPI)가 시장 예상치를 웃돈 가운데 인공지능(AI) 인프라 투자 수익성에 대한 우려가 커지면서 간밤 미국 반도체주가</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,554.22 (-7.57%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 760.82 (-7.65%).
+- 2026-10-16 주식 시장에서 194건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,554.22(-7.57%), KOSDAQ 760.82(-7.65%), USD/KRW 1,343.68(+0.15%).
 - *The exchange comes as U.S.*
 
 ## 테마별 주요 뉴스

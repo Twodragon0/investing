@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-02 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: Halloween 'carnage' on Wall Street as tech share price slump sparks fears of stock market crash -. - 124건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 삼성전자 관련 22건</li><li>🏛️ <strong>정치/정책</strong>: 선거, 트럼프 주목</li><li>📊 <strong>매크로/금리</strong>: 채권, 국채 관련 5건</li><li>🤖 <strong>AI/기술</strong>: 하이닉스, 반도체 관련 6건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQb3k0a3B6bzJMdXBKWTZFa255ZjdMRVhwRW1JU2FaVVQ3cmpRQ0lDUkVxazd2WktuV2dkR3k2RldDbXBlMC1HYl9KMHphT3BpQzduVUJHYXFxV2wxYkRvSzcweUh4WWhQb3B1a0Y1T1JSbEltZUdHMTZCb0dQMzRmYks0cW1ieTdHbHdVejJLamtJVVFKNTNaa2tvTEhURmxpa2dHU0I4aGE2RWluOXVOckVQRGF0dkhKczhyRkwwNnZUeEdiU00tZkFlTllWQWNfZUxmd1pYcC02dW5lTFVQaEV30gHnAUFVX3lxTE5IbWpZWFZlb1VYMFVRSXgwcGttbkE2OTROT3pIanJseGlCckhmamsxQlUwZXFlTVNfeURFbC1IX2djamIzRWltTTZqdm9kOW1penFSalk4OTltaUVWdzNpUzlnTFhwWjhIZzQ3SzRKcVAweko2YWZKWnhRaE5Pd3VhVk55QkpvRWlZNEVmOXFzdjBXR1h0czQ1TTR2bnpGNEVMdFN0eHl3cFk2SXB5MnpFcEd5UXBYVG11eV94ZVNhOVN5RWk5dEozcDJfb3I0NktMZEhIVUtUaXRiRVpURHdYYlNsSFZoWQ?oc=5">Halloween 'carnage' on Wall Street as tech share price slump sparks fears of stock market crash - This is Money</a></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE8zb2p0NnJyZ2dNaHNKNkhldU80NnB6VWZnTldhaVQ0b0pXX1RJd3FXR0RSTzdzaXl6c2ZjZ3A3Q0d3eW42ZHJSVEVZUVhPZWR2YWlHT3ZqaG9qSjV6d3dELVhNVENoYUJf?oc=5">美반도체 7.2% 급락·SOXL 25% 폭락…외국인 1.6조 매도한 삼성·하이닉스, 월요일 추가 충격 우려 - 녹색경제신문</a> <span class="p0-desc">美반도체 7.2% 급락·SOXL 25% 폭락…외국인 1.6조 매도한 삼성·하이닉스, 월요일 추가 충격 우려 녹색경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBrMkVxSUF4Z21kdTRXVXhCSlYyV3RYWjNsNjlfS0lNVUdEdmhjTDJpYThPVFBxUE0zWnN1OHQxazBuZlN3RWN2eUJIOEpDcml5UEdSUUxvU1E0OHRFRjgxMFl2NEtWVVhVdjlSS2k0d2pmZw?oc=5">삼성전자·SK하이닉스 최대 실적에도 주가 급락…AI 투자 거품 터지면 반도체주 어디까지 떨어질까 - 톱스타뉴스</a> <span class="p0-desc">삼성전자·SK하이닉스 최대 실적에도 주가 급락…AI 투자 거품 터지면 반도체주 어디까지 떨어질까 톱스타뉴스</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Halloween 'carnage' on Wall Street as tech share price slump sparks fears of stock market crash -. 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 124건의 뉴스 중 P1 주요 이슈도 23건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (22건): 하이닉스, 삼성전자, 순매수 가격 변동 (22건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🏛️ 정치/정책** (13건): 선거, 트럼프 정치 이슈 (13건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **📊 매크로/금리** (5건): 채권, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 월스트리트의 할로윈 '대학살'은 기술 주가 폭락으로 인해 주식 시장에 대한 두려움이 촉발됨 폭락 - 목
-- 美반도체 7.2% 급락·SOXL 25% 폭락…외국인 1.6조 매도한 삼성·하이닉스, 월요일 추가 충격 우려 - 녹색경제신문
-- 삼성전자·SK하이닉스 최대 실적에도 주가 급락…AI 투자 거품 터지면 반도체주 어디까지 떨어질까 - 톱스타뉴스
-
-### 주요 이슈
-
-- 기술 매각으로 인해 하위 수익 보고서 이후 미국 시장이 거의 1조 달러 하락했습니다.
-- S&P 500 수익 성장은 AI 지출이 추진력을 잃으면서 둔화될 것이라고 골드만삭스은 말합니다.
-- 10일중 8일 주가 같은 방향 삼전닉스…3분기 실적 땐 엇갈려 - 매일경제 마켓
-- 외 20건
-
-### 투자자 체크포인트
-
-- 한국 기사 43건, 글로벌 기사 81건 수집
-- 한국 지수: KOSPI 5,730.74(-3.58%), KOSDAQ 724.38(-3.92%), USD/KRW 1,333.44(-0.38%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:59%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:23%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:27%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🔴 보안/해킹</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:23%"></div></div><span class="theme-count">5건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-02.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-02.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,730.74 (-3.58%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 724.38 (-3.92%).
+- 2026-11-02 주식 시장에서 124건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,730.74(-3.58%), KOSDAQ 724.38(-3.92%), USD/KRW 1,333.44(-0.38%).
+- *월스트리트의 할로윈 '대학살'은 기술 주가 폭락으로 인해 주식 시장에 대한 두려움이 촉발됨 폭락 이것이 돈이다*
 
 ## 테마별 주요 뉴스
 

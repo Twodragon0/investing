@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-28 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **관세**(24회), **트럼프**(18회), **연준**(18회), **SEC(미국증권거래위원회)**(8회), **의회**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-10-28 정치권 핵심 이슈: 의회 거래: Richard Blumenthal 상원의원이 방금 새로운 주식 거래를 공개했습니다. - Quiver Quantitative. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 46건 (미국 의회 거래 1건, SEC 내부자 거래…
+- 1. 의회 거래: Richard Blumenthal 상원의원이 방금 새로운 주식 거래를 공개했습니다. - Quiver Quantitative 의회 거래: Richard Blumenthal 상원의원이 방금 새로운 주식 거래를 공개했습니다.
 
 ## 1. 미국 의회 거래 동향
 

@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-31 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMihAJBVV95cUxOaDlWS0VRSklaemMzd3V4dllmTlZRbTQtOVV6WlA2SjlkcTI2LTl4RU1PTk93OHpIelZWUWczX1RfS0xCRHVnN0FlWUZBOFUtc2dWdjE1OXFaekxLWjR0b243b1VWRENCeko4OVFnSXBEVFhCeUhGVFQxMFZVby1CY3dNMG1ZR3JEd0dRWGgyblV2UjIxQkwxZXNjakpHV0dBWUtoeXJlUUpJR2pkaVFlRGEtMEZqd1M2UXlwT1RfRWlxbzhYQU1WdUxXWkh0MHZNa1J6QVl2SFliSVIzVmgwSjBoZ1V1RlZjUGloa2xIWmVBeURVSHNLcFNtM21LMXY2RHNTOQ?oc=5">What the Fed's interest rate decision means for your bank accounts, loans, credit cards, and investments</a></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE11ZDR6XzY1am54RXZPSDRXMkotYVZURVotN3prTnliY3I0T1NFcWluUXliOWVBM1RpcVNWS3hEODFEZ2hWdHQzY2xRODlBTktuYnlyamFMTzFvWFY5X0UtOEQ4VDJYTDdmTnpXQ1VGcm5ndw?oc=5">증시 시황] 코스피 3.48% 급락…삼성전자·SK하이닉스에 'AI 쇼크' - 톱스타뉴스</a> <span class="p0-desc">[증시 시황] 코스피 3.48% 급락…삼성전자·SK하이닉스에 'AI 쇼크' 톱스타뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xa1V0VjF0NnNXdm1SdEdKZXBGVGhiQkpQaHM2OHFndnRqaU1NZVJEOUdzX20yUG92MVNoRk00LWczbkNUMFd6M3RQMjhuZDVhN252d2J1cFIyRVV3ZGlZYw?oc=5">"구글 쇼크에 코스피 급락"…삼성·하이닉스 동반 추락 [영상PICK] - 메트로신문</a> <span class="p0-desc">"구글 쇼크에 코스피 급락"…삼성·하이닉스 동반 추락 [영상PICK] 메트로신문</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,730.74 (-3.58%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 724.38 (-3.92%).
+- 2026-10-31 주식 시장에서 177건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,730.74(-3.58%), KOSDAQ 724.38(-3.92%), USD/KRW 1,334.53(-0.30%).
 - *연준의 금리 보류는 채권 수익률을 다른 방향으로 보냅니다*
 
 ## 테마별 주요 뉴스

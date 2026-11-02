@@ -28,22 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-02 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 3건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 2건 수집</li><li>🏦 <strong>거래소</strong>: 1건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 3건의 뉴스 중 **규제/정책** 관련이 2건(67%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (2건): authorisation, undertakings, tradingview 규제 움직임 (2건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (1건): undertakings, tradingview, promotions 이슈에 대한 시장 반응을 모니터링할 필요가 있습니다.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 2건, 한국 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 3건
 - **유럽**: 2건

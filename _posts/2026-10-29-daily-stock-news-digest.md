@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-29 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE42MVNvb0VDLTJhRFUyX2hRSDhBTGJSSUJEeWdvc056cldGOUpjcHFsQXlsUG9ybE9sX1BlcW1RYl9yS2xzRjlsX3hnWkdwM0w0b1NQcl94QUJ3WHU5RE1Rb9IBYEFVX3lxTE42MVNvb0VDLTJhRFUyX2hRSDhBTGJSSUJEeWdvc056cldGOUpjcHFsQXlsUG9ybE9sX1BlcW1RYl9yS2xzRjlsX3hnWkdwM0w0b1NQcl94QUJ3WHU5RE1Rbw?oc=5">원/달러 환율, 미 금리 결정 경계감 속 1,320원대 보합권</a> <span class="p0-desc">원/달러 환율, 미 금리 결정 경계감 속 1,320원대 보합권 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE52bEpMSmgwNnNhQUpvcEc3Ymo3N2JYTTVYSmNHQ29XV0VGRGc0eEUyTUtsZE5YbW0wUlczTGEzYmxFNUw0WWFZRWdlTWRtUGgxUHdPRll4dS1JSjdVTnZPZ29uUG4?oc=5">'미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 - 베타뉴스</a> <span class="p0-desc">'미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 베타뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMihAJBVV95cUxOaDlWS0VRSklaemMzd3V4dllmTlZRbTQtOVV6WlA2SjlkcTI2LTl4RU1PTk93OHpIelZWUWczX1RfS0xCRHVnN0FlWUZBOFUtc2dWdjE1OXFaekxLWjR0b243b1VWRENCeko4OVFnSXBEVFhCeUhGVFQxMFZVby1CY3dNMG1ZR3JEd0dRWGgyblV2UjIxQkwxZXNjakpHV0dBWUtoeXJlUUpJR2pkaVFlRGEtMEZqd1M2UXlwT1RfRWlxbzhYQU1WdUxXWkh0MHZNa1J6QVl2SFliSVIzVmgwSjBoZ1V1RlZjUGloa2xIWmVBeURVSHNLcFNtM21LMXY2RHNTOQ?oc=5">What the Fed's interest rate decision means for your bank accounts, loans, credit cards, and investments</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,865.31 (-2.22%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 744.41 (-3.17%).
+- 2026-10-29 주식 시장에서 183건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,865.31(-2.22%), KOSDAQ 744.41(-3.17%), USD/KRW 1,332.00(-0.66%).
 - *[경제 오딧세이] 한국은행, 기준금리 동결.11월의 선택은?*
 
 ## 테마별 주요 뉴스
