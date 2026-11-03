@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-15 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1NT2RHRkdIQkVxaVNYREVnZnpGZUIzMW9HdXNHbFhTLXowSDlRXzl4UGlhbXNGSHVERWFnNzZsM2dublBkaEVibndRQlBaQmhUbExxcHJ4c3oxR0Q4T0RnVC0wNm1FcDdkenRKRXFJcw?oc=5">코스피 3% 급락 출발…5거래일째 하락 - 진일보</a> <span class="p0-desc">코스피 3% 급락 출발…5거래일째 하락 진일보</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFA1RlVfaHpJUUhpVlFadnJwZkxiN0ktalZlZWNNaGhxYS14S0hBYjNQNXY0SE1SSmtEUWFmNF9qcGYtMW5EdEJZRXdjczU1WmpLMEtYX1FLOVNKaWdjTHc?oc=5">中 메모리 반도체 추격에 삼성닉스 급락…AI 투자 거품 우려 확산 - 더구루</a> <span class="p0-desc">[더구루=홍성환 기자] 중국 반도체 기업의 부상과 금리 상승, 반도체·AI주의 과도한 기업가치 부담 등이 맞물리면서 AI 투자 심리가 약해지고 있다는 분석이 나온다. 블룸버그 통신은 13일(이하 현지시간) "반도체 종목의 매도세가 심화되면서 최근 몇 년간 가장 강력한 투자 테마였던 AI 분야의 지속 가능성에 대한 의구심이 일고 있다"며 &amp;</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1QQVQ2YnZNRWdHS2tEUDV6UWR1SV9zU0Q4N2FEaFQ4S0lQRDJRSVVkOUdwZExQa3BXNWxSZGNRb0hZdGZCendBZjdHWWNWRC1vc04tWVNvUnNMdVlIZjB3dUJteXh5RVVy?oc=5">‘중국발 반도체 쇼크’로 SK하이닉스 8%대, 삼성전자 6%대 급락… 매도 사이드카 발동 - 주간동아</a> <span class="p0-desc">중국발(發) 메모리 충격으로 삼성전자와 SK하이닉스가 급락하면서 코스피 6000 선이 위협받고 있다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,008.81 (-0.44%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 823.88 (-1.57%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-15 주식 시장에서 191건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,008.81(-0.44%), KOSDAQ 823.88(-1.57%), USD/KRW 1,342.98(+0.27%).
 - *Anthropic, AI 연구실 재정이 기술 무역 CNBC의 중심이 되면서 새로운 수익 수치 공개*
 
 ## 테마별 주요 뉴스

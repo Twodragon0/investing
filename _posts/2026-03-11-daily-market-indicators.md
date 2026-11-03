@@ -18,6 +18,7 @@ permalink: "/market-analysis/2026/03/11/daily-market-indicators/"
 
 ## 전체 뉴스 요약
 
+- 2026-03-11 기준 시장 심리·리스크 지표를 7개 소스에서 수집했습니다.
 - 국채 금리 관련 뉴스 (보완):
 
 

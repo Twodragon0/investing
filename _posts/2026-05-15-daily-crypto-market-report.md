@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-15 | 시총 $2.78T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Canton</strong> (CC): +9.17%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +7.89%</li><li>🟢 <strong>Zcash</strong> (ZEC): +2.82%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

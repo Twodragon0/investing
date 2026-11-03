@@ -14,7 +14,6 @@ description: "내궁내정] 미국 국회의원들 보유주식 ETF, 따라 사�
 image_alt: "정치인 거래·정책 리포트 - 2026-11-03 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-11-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-11-03.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-11-03** 정치권 핵심 이슈: **내궁내정] 미국 국회의원들 보유주식 ETF, 따라 사볼까…민주당 vs 공화당 상품, 수익은 누가 승리? - 뉴스스페이스**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **30건** (미국 의회 거래 2건, SEC 내부자 거래 21건, 트럼프 정책 7건)을 종합 정리합니다
@@ -25,15 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-03 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(12회), **트럼프**(8회), **관세**(2회), **내부자**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **30건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 2건, SEC 내부자 거래 21건, 트럼프 정책 7건입니다.
-
-**트럼프 정책** 관련으로는 Trump to Rely on Executive Actions for Tariffs as Democrats Target Trade Laws Ahead of 2026 US Midterms Pragativadi 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 [내궁내정] 미국 국회의원들 보유주식 ETF, 따라 사볼까…민주당 vs 공화당 상품, 수익은 누가 승리? 뉴스스페이스 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
----
+- 2026-11-03 정치권 핵심 이슈: 내궁내정] 미국 국회의원들 보유주식 ETF, 따라 사볼까…민주당 vs 공화당 상품, 수익은 누가 승리? - 뉴스스페이스. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 30건 (미국 의회 거래 2건, SEC 내부자 거래 21건, 트럼프…
+- 1. 내궁내정\ 미국 국회의원들 보유주식 ETF, 따라 사볼까…민주당 vs 공화당 상품, 수익은 누가 승리? - 뉴스스페이스 [내궁내정] 미국 국회의원들 보유주식 ETF, 따라 사볼까…민주당 vs 공화당 상품, 수익은 누가 승리? 뉴스스페이스
 
 ## 1. 미국 의회 거래 동향
 

@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-14 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com">Will the Stock Market Crash in 2026? History Says It May Happen as This Event Draws Near.</a></li><li><a href="https://news.einfomax.co.kr">"AI 파티 끝났나"…월가가 본 SK하이닉스 13% 급락 이유</a> <span class="p0-desc">"AI 파티 끝났나"…월가가 본 SK하이닉스 13% 급락 이유 연합인포맥스</span></li><li><a href="https://www.eroun.net">이로운분석]삼성전자·SK하이닉스 동반 폭락…코스피도 7000선 무너져 - 이로운넷</a> <span class="p0-desc">[이로운분석] 삼성전자·SK하이닉스 동반 폭락…코스피도 7000선 무너져 이로운넷</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,806.93 (-8.95%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 799.36 (-4.55%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-07-14 주식 시장에서 163건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,806.93(-8.95%), KOSDAQ 799.36(-4.55%), USD/KRW 1,495.79(-0.21%).
 - *한강타임즈 김광호 기자 = 하나은행 인사◇지점장▲영도 전병탁◇부장▲IT제휴개발부 박도영 ▲IT기획부 정재안◇지점장▲의정부금융센터 강영길 ▲정관 강일모 ▲가천대 강효신 ▲양산 김경철 ▲반월기업센터.*
 
 ## 테마별 주요 뉴스

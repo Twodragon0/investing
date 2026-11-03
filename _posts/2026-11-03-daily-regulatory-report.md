@@ -29,34 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-03 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 금융위, 바이낸스 해킹에 국내 거래소 긴급 점검…출금 제한 확대 검토 - 블루밍비트 - 12건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 금융위, 바이낸스 이슈 부각</li><li>🏦 <strong>거래소</strong>: 바이낸스, 금융위 주목</li><li>🔴 <strong>보안/해킹</strong>: 바이낸스, 금융위 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmbjBEb0thX1ZXTHdwMERnWkVhdEdON3R2emJEaE9QXzRicnYwMFdiSlBIalFZNlZNT1NZRGRpdDd6S05QUWwyMFlKelNXTXV6?oc=5">금융위, 바이낸스 해킹에 국내 거래소 긴급 점검…출금 제한 확대 검토 - 블루밍비트</a> <span class="p0-desc">금융위, 바이낸스 해킹에 국내 거래소 긴급 점검…출금 제한 확대 검토.</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9ySzVrelgwa2RUWkVQb1BuRGdTOF9mTzZRNTE4cy0wd0FHN3pKVFVrN3VzSGE1WjZ0ZmNERlNLWEljeG15MmVTaE4wOV9Kb0F1MEtkbTlMZ1dKTGZDX3FYV3Uzakx1dGV0VU1KRA?oc=5">'바이낸스 해킹' 금융위, 거래소 긴급 소집…콜드월렛 확대 주문 - 뉴시안</a> <span class="p0-desc">'바이낸스 해킹' 금융위, 거래소 긴급 소집…콜드월렛 확대 주문.</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5BQklwUGJlWXhhMDRtWkhVd1NVemhSblo5a0pMR2FhMHZXSm5uaXgxRzA3eG5nUTJhTmlDTTNjZlgzZnlpUGM5T0ZaTDhvN0RL?oc=5">금융위, 바이낸스 해킹에 가상자산업계 긴급 점검…보안체계 강화 주문 - 블루밍비트</a> <span class="p0-desc">금융위, 바이낸스 해킹에 가상자산업계 긴급 점검…보안체계 강화 주문. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 금융위, 바이낸스 해킹에 국내 거래소 긴급 점검…출금 제한 확대 검토 - 블루밍비트 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 12건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (11건): 금융위, 바이낸스, 블루밍비트 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (5건): 바이낸스, 금융위, 거래소 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **🔴 보안/해킹** (5건): 바이낸스, 금융위, 해킹 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 금융위, 바이낸스 해킹에 국내 거래소 긴급 점검…출금 제한 확대 검토 - 블루밍비트
-- '바이낸스 해킹' 금융위, 거래소 긴급 소집…콜드월렛 확대 주문 - 뉴시안
-- 금융위, 바이낸스 해킹에 가상자산업계 긴급 점검…보안체계 강화 주문 - 블루밍비트
-
-### 주요 이슈
-
-- 현장] “결제할 지갑도 없다”…韓 AI 에이전트, 규제 공백에 발 묶였다 - 뉴시안
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 9건, 유럽 2건, 미국 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 12건
 - **한국**: 9건

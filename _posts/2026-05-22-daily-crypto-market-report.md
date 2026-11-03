@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-22 | 시총 $2.67T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +11.46%</li><li>🟢 <strong>Canton</strong> (CC): +4.09%</li><li>🟢 <strong>Stellar</strong> (XLM): +2.93%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집

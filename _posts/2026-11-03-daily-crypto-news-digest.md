@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-03 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FBI는 60억 달러 규모의 암호화폐 해킹에 북한 책임이 있다고 밝혔습니다 - 104건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 51건 수집</li><li>🟠 <strong>비트코인</strong>: 비트코인, 바이낸스 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 해킹 관련 35건</li><li>📈 <strong>가격/시장</strong>: 바이낸스, 암호화폐 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPZjBKNHBsSy1EQlN4NnM4QXQ0OXNDeFlzUnY1bVVtYVB3RU9ZSk5vOGU0MzFkLWFlMXIzYS1hNnpzOHNjX3BLa1JjMTZIUUppT0JVVk9QeUR6X3pkSXVCOU53VmhtYXRQV0dQX05WclZGYlgwSWlTZnpUYUVFVzVKZko2UDdXeGRXOWllT3FNTHMxNGJTMlgyNy1BcnVYaDIzaWRUNFZpUG9EQ3JSZEHSAbMBQVVfeXFMTXBHdjctTGNMSU5XZUVxTGFsZFBlN1A3Y0pDRHp5dDItMk9aZW9DcXA4b3RTWXpQbnc2U0VJRk1QRjk0T21iMzJoV0hXQlBkWlBFS2hKeFRhVXZ5ODc0ZVhULUJzMGxmLXFxaGtIZlVSV1I2a3NDcjJTSVJTU25UZ1kySGtJaVZheGxqRVAyVWNLTGlBWlZpMVV2LW5DV29yUVF6YjVvazF5NGhhMzRLRTY5T0U?oc=5">FBI는 60억 달러 규모의 암호화폐 해킹에 북한 책임이 있다고 밝혔습니다</a> <span class="p0-desc">60억 달러 바이낸스 암호화폐 해킹에 북한 책임, FBI에 따르면 Fox Business 바이낸스 정상 거래 재개로 36억 4천만 달러 유출 보고 New York Times 바이낸.</span></li><li><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxPN3Nib1c2OXNTZmMtQ0p2QkFFcW5zVHBHUVplbGo3SXotV2pJUnlWTzFxaFVLaUhWMXp3ZGU5QnloMklIalVHY3U0YmthTExvelNUNWlQajlyMm01N3FnRUgtQkFwaHIzc1JQQVgyb1FYQjBJRHlyNkhXZXNheW53N1FBaW5aU0c3M210OVJVT1ZMdnZURktYaS1WTXEwcEh1U2Q5ZnpyRkc3bks4TGpvV2xQLXNXTVhTeE0xTF84TDJ0WVdRUkIydEFDdHAxUXBUS0JHZ3U2cnZtaVpEN3c?oc=5">미화 63억 달러 규모의 바이낸스 해킹은 역대 최대 규모의 강도 사건입니다. 이는 암호화폐 사용자들에게 경종을 울리는 일입니다 - The Conversation</a> <span class="p0-desc">미화 63억 달러 규모의 바이낸스 해킹은 역대 최대 규모의 강도 사건입니다. 이는 암호화폐 사용자들에게 경종을 울리는 일이 될 것입니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxORGM4N3dlS0JDWEFoTUhrREw5S19EQ0w3RWpPRFVOUmFGY1lUNXVQenVsX2hISjdtdzhweDJldjlOSlZJT0ktNEIzV1JBVDRNczVNOGJ3Q2hfVklsRnpCWF9ERW81NEE1RkxWdmRuTXpPRldxYzFySnB0ZnZUZFp3SGdpU254c3cxNllVZFk4VWM0MVB3OC1hRHJRZG9oUQ?oc=5">바이낸스 사용자는 암호화폐 해킹 후 수십억 달러를 인출합니다 - 정보화 시대 | ACS</a> <span class="p0-desc">바이낸스 사용자는 암호화폐 해킹 이후 수십억 달러를 인출합니다. 정보 시대</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: FBI는 60억 달러 규모의 암호화폐 해킹에 북한 책임이 있다고 밝혔습니다 
-외 P0 긴급 이슈 23건이 추가 감지되었습니다. 총 104건의 뉴스 중 P1 주요 이슈도 9건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (51건): binance, hack, outflows 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🟠 비트코인** (42건): 비트코인, 바이낸스, 연간 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🔴 보안/해킹** (35건): 해킹, 바이낸스 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 미화 63억 달러 규모의 바이낸스 해킹은 역대 최대 규모의 강도 사건입니다. 이는 암호화폐 사용자들에게 경종을 울리는 일입니다 - The Conversation
-- 바이낸스 사용자는 암호화폐 해킹 후 수십억 달러를 인출합니다 - 정보화 시대 | ACS
-
-### 주요 이슈
-
-- 블록체인 매출, 올해 -30% 경고.비트코인(BTC) 하락 메울 카드는 '예측시장' - 코인리더스
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 홍콩은 연중무휴 24시간 토큰화된 결제를 실시하고 스테이블코인 시험을 계획하고 있습니다.
-- 외 6건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-03.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-03.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **104건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 🔴 보안/해킹
+- 2026-11-03 암호화폐 핵심 뉴스: FBI는 60억 달러 규모의 암호화폐 해킹에 북한 책임이 있다고 밝혔습니다. 총 104건 분석, 핵심 테마는 거래소, 비트코인, 보안/해킹입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
