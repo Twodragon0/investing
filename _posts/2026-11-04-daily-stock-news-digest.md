@@ -265,7 +265,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-04 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/03/stocks-making-the-biggest-moves-midday-aapl-pltr-nvda-coin-be.html" class="news-title" target="_blank" rel="noopener noreferrer">정오에 가장 큰 변동을 보이는 주식: 애플, Palantir, 엔비디아, 코인베이스, Bloom Energy 등</a>
-<p class="news-desc">다음은 정오 거래에서 헤드라인을 장식하는 회사 중 일부입니다.</p>
+<p class="news-desc">정오에 가장 큰 움직임을 보이는 주식: 애플, Palantir, 엔비디아, 코인베이스, Bloom Energy 등 2026년 11월 3일 화요일 게시됨 오후 12:55 EST업데이트 4시간 전</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
