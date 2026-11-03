@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-04 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **의회**(2회), **트럼프**(1회), **SEC(미국증권거래위원회)**(1회), **관세**(1회), **내부자**(1회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-08-04 정치권 핵심 이슈: Congressman Who Spent Millions on Magnificent Seven Stocks Just Bought Another T. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 3건 (미국 의회 거래 1건, SEC…
 - 1. Congressman Who Spent Millions on Magnificent Seven Stocks Just Bought Another Tech Giant 하원의원 WHO 7개 주식에 수백만 달러를 지출하고 또 다른 거대 기술 기업을 인수했습니다 Benzinga
 
 ## 1. 미국 의회 거래 동향
