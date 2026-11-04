@@ -38,12 +38,10 @@ permalink: "/crypto-news/2026/03/08/daily-crypto-news-digest/"
 <div class="alert-box alert-urgent"><strong>긴급 알림</strong><ul><li><a href="https://news.google.com/read/CBMihAFBVV95cUxOMHlwVS1HcWxja2NQcEk0alJlWkpGaXAwU2pJN3paRU40SThodEc2QUd6Q2l6cVZiMzJrZl9ySFJVa3hhdTVLR0hOMG5LQVdRQVI1NmVRS0hNQ3VhNklsa29kY0s2T2xIRWtCb1RIaGJHdHM4TE5BUGlWNlA5cGstY21mU2o?hl=en-US&gl=US&ceid=US%3Aen">비트코인의 50%에 가까운 고통스러운 폭락은 보유자를 위험에 빠뜨리고 캐나다 투자자들에게 경각심을 불러일으킵니다.</a> <span class="p0-desc">시장 급락 소식입니다. 50%의 하락폭을 기록했습니다. 하락 원인과 향후 반등 가능성을 면밀히 분석해야 합니다.</span></li><li><a href="https://news.google.com/read/CBMizwFBVV95cUxPUWlxSDc2Tm91QTI2RlNfSWR6aFZMNlc3bmZwZGN3SkdSblMzSzdNb1ZoSHZsN24yUDltNVVoMl96a3hXdGpWSnh4Wmt3Q1o2SFAybXE2VlJoZWo0SHlWSXpfdHlnMlp6bDV5ZVlSQllZSFlJWThsS2FTNmhNNkpIa0hWak1jWmYxX1JJVjc2X25mQ0lDcllveHJsQXBuUHA2YnpSTGpoOGdhLUpnMEtfVks2TG5XUTQtN05ZZlk2aEFnNVJteDVRZ1VGbDFvTjA?hl=en-US&gl=US&ceid=US%3Aen">John Daghita(일명 "John/Lick"), 미국 보안관과 관련된 암호화폐 절도 혐의로 체포됨 &#124; TRM 블로그</a> <span class="p0-desc">암호화폐 시장 관련 소식입니다. 디지털 자산 가격은 거시경제 환경과 규제 동향에 연동됩니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE53ZGNQb052dVFpR1hKQmtEbHFoNU1oX3ZtZ3hybE82eUh2UUxDcjhZb2lTZmtGNmFDSmg4b3lKdG9SSFlVSEhjSFlsQ1RvZG5BQTg0UzVKcEZMVnlQdnRCd084NDJfTEE1Y1E?oc=5">비트코인, 미국 고용 쇼크·ETF 순유출에 4% 급락 - 뉴스웨이</a> <span class="p0-desc">시장이 4% 급락하며 투매 양상이 나타났습니다. 패닉 매도 시 비이성적 가격 형성 가능성에 주의가 필요합니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **93건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
-- 2026-03-08 암호화폐 시장에서 93건의 뉴스를 분석했습니다. 오늘은 비트코인, 가격/시장, 규제/정책 관련 소식이 주목됩니다.
 - *총 93건 수집 (기사는 여러 테마에 중복 집계될 수 있음)*
 
 ## 테마별 주요 뉴스
