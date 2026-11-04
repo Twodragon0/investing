@@ -29,30 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-04 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 바이낸스 8조 해킹에…금융위, 거래소 긴급 출금제한 허용 검토 - 11건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 금융위, 바이낸스 주목</li><li>🏦 <strong>거래소</strong>: 바이낸스, 금융위 주목</li><li>🔴 <strong>보안/해킹</strong>: 바이낸스, 금융위 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1FNlRsRVJBVUNtTzRaV2g0ZlgxSDdJYmduOENhcFJZaVhQM29Qckx4cXF4VFU0TWlPanRwMUtzazlXUTRwT2pQY0pMLWFGSXhpRXlCa2ttLTVua2ZPQmY4RGI0SDgtSUZ1Nmhwcm94MnY1cnM3?oc=5">바이낸스 8조 해킹에…금융위, 거래소 긴급 출금제한 허용 검토</a> <span class="p0-desc">바이낸스 8조 해킹에…금융위, 거래소 긴급 출금제한 허용 검토. (8조)</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9ySzVrelgwa2RUWkVQb1BuRGdTOF9mTzZRNTE4cy0wd0FHN3pKVFVrN3VzSGE1WjZ0ZmNERlNLWEljeG15MmVTaE4wOV9Kb0F1MEtkbTlMZ1dKTGZDX3FYV3Uzakx1dGV0VU1KRA?oc=5">'바이낸스 해킹' 금융위, 거래소 긴급 소집…콜드월렛 확대 주문 - 뉴시안</a> <span class="p0-desc">'바이낸스 해킹' 금융위, 거래소 긴급 소집…콜드월렛 확대 주문.</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE04cnhMOVlvTG1NVFQ1RzBhUmtlN0FzZjl0SjBrR3RVV0Vxa0hxNDFDdlRCWGVxanVTR1lJbWtFY3RFRGUwMEhxSV9DRVdUcVFsb0hVWFpmVXNtZ9IBVEFVX3lxTE9kdTZINHNYN050bUVJZVNVTk5ZNjlueF9wWmw3ekJ4VTRFejlpMURiTjJsT1c2dW9ISk1OcXE5cm9oOV95YnFPajN4cnlVUWVOWmtkVw?oc=5">바이낸스, 8조원대 가상자산 해킹…금융위, 국내 거래소 긴급 점검 - 세계뉴스</a> <span class="p0-desc">바이낸스, 8조원대 가상자산 해킹…금융위, 국내 거래소 긴급 점검. (8조) 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 바이낸스 8조 해킹에…금융위, 거래소 긴급 출금제한 허용 검토 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 11건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (11건): 금융위, 바이낸스, 신속 규제 움직임 (11건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (6건): 바이낸스, 금융위, 거래소 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **🔴 보안/해킹** (5건): 바이낸스, 금융위, 해킹 보안 이슈 (5건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 바이낸스 8조 해킹에…금융위, 거래소 긴급 출금제한 허용 검토
-- '바이낸스 해킹' 금융위, 거래소 긴급 소집…콜드월렛 확대 주문 - 뉴시안
-- 바이낸스, 8조원대 가상자산 해킹…금융위, 국내 거래소 긴급 점검 - 세계뉴스
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 7건, 미국 2건, 아시아 1건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 11건
 - **한국**: 7건

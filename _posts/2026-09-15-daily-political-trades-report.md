@@ -23,8 +23,11 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(20회), **SEC(미국증권거래위원회)**(4회), **내부자**(4회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-09-15 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 30건 — SEC 내부자 거래 16건, 중앙은행 14건
+- 1. Smurfit Westrock (NYSE: SW) insider granted new stock awards Insider Mayer Saverio receives 403 dividend-equivalent RSUs and 119 shares at $0, lifting…
 
 ## 1. SEC 내부자 거래 (Form 4)
 

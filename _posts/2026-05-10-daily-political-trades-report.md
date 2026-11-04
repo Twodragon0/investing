@@ -23,9 +23,12 @@ description: "정치인 거래 리포트: 정치인 거래·정책 리포트. �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(10회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 거래 패턴: 매수 신호 0건(0%), 매도 신호 1건(100%). 매도 비중이 높아, 리스크 회피 또는 차익 실현 움직임이 감지됩니다.
+- 2026-05-10 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 총 8건 — SEC 내부자 거래 7건, 중앙은행 1건.
+- 1. 내부자 Jeffrey Kay는 SHF Holdings(SHFS) 시리즈 B를 선호하고 보증합니다. - Stock Titan Stock Titan의 AI 기반 도구를 사용하여 거래 수준을 높이세요.
 
 ## SEC 내부자 거래 (Form 4)
 

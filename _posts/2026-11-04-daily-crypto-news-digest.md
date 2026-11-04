@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-04 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 해커, BTCPay 서버 결함을 악용해 암호화폐 훔쳐 - Infosecurity Magazine - 118건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 선물 동향 주시</li><li>🟠 <strong>비트코인</strong>: 비트코인, 중간선거 동향 주시</li><li>🔴 <strong>보안/해킹</strong>: 38건 수집</li><li>📈 <strong>가격/시장</strong>: 중간선거, 달러 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxObEpvZTJESmtzMW9TVV9TSTl2bkhjdGRYLWh0SF9PaW5nYlpZTVZqRXVTN1NybEg0VGU4ZGRfYjR0aWpZdjdtQS1VN21SSW5KWlZpT2dQS0YybmptdGlNTEVnclY1dmgwUlc1VGE2cWcyQkRVaGFVSlp4WVlvVTFVUzZGMA?oc=5">해커, BTCPay 서버 결함을 악용해 암호화폐 훔쳐 - Infosecurity Magazine</a> <span class="p0-desc">해커들은 BTCPay 서버 결함을 악용하여 암호화폐를 훔칩니다. Infosecurity Magazine</span></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBNbXJ4bVF3dTZWUlNXdHRhaS1haHA0TmVPcG9jZ1ZrZ2RRalYwMjVlQ2FxSUo4TmNXRXBLWk5YRmNtUFlJdTVXdWZzVS1fVGY0R0xITXl0ZDFkS2NLVkR3cTE2QkFnZEpVZnA4bFZTMXYxVHhpbTA0VFY4RndPSmc?oc=5">역사상 최대 규모의 암호화폐 절도 배후에 있는 김정은 해커 - El Mundo America</a> <span class="p0-desc">역사상 최대 규모의 암호화폐 절도 배후에 있는 김정은 해커들 El Mundo America</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE1aam5NNHV5RHJHZHlKRktBWjE4dFo0YWZBVEtmdmtuMmFtbzhnXzRkbUZldjBUamM0MmVGTXhab1IxWE41dUlORkNBSE56b1VWM2dfa0pMTG1EQ3hSekVNbk5lUQ?oc=5">비트코인 ETF, 美 중간선거·해킹 악재에 2거래일간 10억 달러 유출 - 더구루</a> <span class="p0-desc">비트코인 ETF, 美 중간선거·해킹 악재에 2거래일간 10억 달러 유출 더구루</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 해커, BTCPay 서버 결함을 악용해 암호화폐 훔쳐 - Infosecurity Magazine 
-외 P0 긴급 이슈 21건이 추가 감지되었습니다. 총 118건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (52건): 선물 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **🟠 비트코인** (36건): 비트코인, 중간선거, 달러 관련 (36건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🔴 보안/해킹** (38건): binance, hackers, hack 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 해커, BTCPay 서버 결함을 악용해 암호화폐 훔쳐 - Infosecurity Magazine
-- 역사상 최대 규모의 암호화폐 절도 배후에 있는 김정은 해커 - El Mundo America
-- 비트코인 ETF, 美 중간선거·해킹 악재에 2거래일간 10억 달러 유출 - 더구루
-
-### 주요 이슈
-
-- 미국 중간 선거가 암호화폐 규제의 다음 단계를 형성할 수 있습니다 - The American Bazaar
-- Anthropic의 AI 사용 비용이 점점 저렴해지고 있습니다. 그것이 사업에 문제가 되고 있다
-- CrowdStrike, AI 에이전트 'Kill Switch' 출시, Fiddler AI 인수 계획
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-04.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-04.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **118건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 🔴 보안/해킹
+- 2026-11-04 암호화폐 핵심 뉴스: 암호화폐 채굴 위해 미국 대학 컴퓨터 해킹 혐의로 기소된 캐나다 남성 - 13WHAM-TV. 총 118건 분석, 핵심 테마는 거래소, 비트코인, 보안/해킹입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
