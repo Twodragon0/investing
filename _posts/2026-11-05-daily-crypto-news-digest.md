@@ -263,7 +263,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/trump-linked-tokens-lead-crypto-losses-after-democrats-sweep-in-the-us-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Trump-linked tokens lead crypto losses after Democrats sweep in the US midterms</a>
-<p class="news-desc">The official Trump and World Liberty Financial tokens were the two biggest losers among the top 100 cryptocurrencies on Wednesday even as Bitcoin and Ether rallied.</p>
+<p class="news-desc">트럼프과 WLFI는 민주당 중간 선거 이후 상위 100개 암호화폐 토큰 중 손실을 주도한 반면 비트코인과 Ether는 이익을 기록했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -275,7 +275,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin hits $80.5K as US stocks rally on midterm election results</a>
-<p class="news-desc">Bitcoin climbed toward $80,500 as risk assets rallied on Democrats’ midterm election gains and oil prices fell.</p>
+<p class="news-desc">비트코인은 미국 중간 선거 결과에 힘입어 $80,000에 가까운 빠른 상승세를 보이며 미국 주식에 합류했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -327,7 +327,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-05 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/markets/crypto-market-recovery-grayscale-binance-hack-temporary-setback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says</a>
-<p class="news-desc">Zach Pandl highlighted institutional custody safeguards as crypto markets recovered some losses following the record $6.3 billion Binance hack.</p>
+<p class="news-desc">그레이스케일은 바이낸스의 63억 달러 규모의 해킹으로 인해 일시적으로 시장 신뢰가 훼손될 수 있지만 궁극적으로는 거래소 보안 관행이 강화될 수 있다고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
