@@ -1,28 +1,5 @@
 {
   "seen": {
-    "b8b0a6a92bee806385dd2334": "2026-10-06T16:08:27",
-    "1f97448cc569614b2d82d374": "2026-10-06T16:08:27",
-    "efcfc9c6e4c4ddb595a5e4a7": "2026-10-06T16:08:27",
-    "b035f9ed1821c8ab28cdebcb": "2026-10-06T16:08:27",
-    "848d71d4f0aa655c44d37746": "2026-10-06T16:08:27",
-    "3073d43e8b26538548aeb616": "2026-10-06T16:08:27",
-    "03d12a599749f2cc95f64760": "2026-10-06T16:08:27",
-    "a438f3fdcea91c025305edef": "2026-10-06T16:08:27",
-    "f878114a29d1824c3e207f07": "2026-10-06T16:08:27",
-    "55ef4586b28e4cd8f210e883": "2026-10-06T16:08:27",
-    "7a2a8df70ff778b558f55a47": "2026-10-06T16:08:27",
-    "86963bcfd7faa7f3a8a19bba": "2026-10-06T16:08:27",
-    "45842fc81fba8cbd68f7ad62": "2026-10-06T16:08:27",
-    "1e2cbeb6f6d8d9c730485a29": "2026-10-06T16:08:27",
-    "7b3e45ef73bfcd2ab159439c": "2026-10-06T16:08:27",
-    "e4ce28c47f06615a59646f62": "2026-10-06T16:08:27",
-    "1dd7f1c78b9da179ee90aa66": "2026-10-06T16:08:27",
-    "5a6a0a04558926a6ff5521ff": "2026-10-06T16:08:27",
-    "fd72b862eb22023c071f5b81": "2026-10-06T16:08:27",
-    "ea9c4e6ed63a153cc4fe6076": "2026-10-06T16:08:27",
-    "82012d932d1dec2a6263f4f5": "2026-10-06T16:08:27",
-    "a653531f14441b23df8430df": "2026-10-06T16:08:27",
-    "16a6b7ec761855bf02e99671": "2026-10-06T16:08:27",
     "1ade6132057e82d31dbd5957": "2026-10-07T16:47:50",
     "f2e9c5f4eddff968675a34b5": "2026-10-07T16:47:50",
     "c8fb3603f5dfe7b9fccc9b50": "2026-10-07T16:47:50",
@@ -865,7 +842,53 @@
     "bf9fa6bca73b9e5565fc487c": "2026-11-04T17:30:14",
     "87c3330521dc8092c4d9e40e": "2026-11-04T17:30:14",
     "b118ed7d9feb86ea3524c8e9": "2026-11-04T17:30:14",
-    "a37a50323dd1ae42b8d8d551": "2026-11-04T17:30:14"
+    "a37a50323dd1ae42b8d8d551": "2026-11-04T17:30:14",
+    "a9ba822105a367d95448df38": "2026-11-05T17:34:27",
+    "93a44d005a359de9cb9adefa": "2026-11-05T17:34:27",
+    "969f64be19449227cde1f16a": "2026-11-05T17:34:27",
+    "1698f1a5fde85f1b55383395": "2026-11-05T17:34:27",
+    "0d0365a0e83fdc9eaf599a3f": "2026-11-05T17:34:27",
+    "c88ccbe4df123e1391736d4f": "2026-11-05T17:34:27",
+    "3250db0f43b4c3f664cc886d": "2026-11-05T17:34:27",
+    "2d3f4fc960f2ef126bc9af97": "2026-11-05T17:34:27",
+    "7f1a070c16a7817ba0f8e11d": "2026-11-05T17:34:27",
+    "761d48a98466123efcbf950d": "2026-11-05T17:34:27",
+    "c57dbe1352d293c341a8debe": "2026-11-05T17:34:27",
+    "c3d5eece94c55e1e098e1e48": "2026-11-05T17:34:27",
+    "22dc17bdf562b4b70872f97d": "2026-11-05T17:34:27",
+    "a569aa119f8a6c9815743939": "2026-11-05T17:34:27",
+    "c9bcebc7708e1601a0335b20": "2026-11-05T17:34:27",
+    "322c69671aa8bb8679fd1eda": "2026-11-05T17:34:27",
+    "8eb7c9ed29ac3b0599e4f20d": "2026-11-05T17:34:27",
+    "2b706ba3858ec3f057dac47c": "2026-11-05T17:34:27",
+    "5b2d690a4186c2cead6ba58b": "2026-11-05T17:34:27",
+    "8be7e75dbaaf73ee4e5ffc4a": "2026-11-05T17:34:27",
+    "252dfb64442a809769530da1": "2026-11-05T17:34:27",
+    "7a8cbc45983a57373a620443": "2026-11-05T17:34:27",
+    "c564f17fa2d8270e5dc901b4": "2026-11-05T17:34:27",
+    "e5b00636f50431714b606032": "2026-11-05T17:34:27",
+    "cfb3e6fb0efcc1c51725dff8": "2026-11-05T17:34:27",
+    "a041e9e6cfe94a3fa542f3e4": "2026-11-05T17:34:27",
+    "3d3f51dd3fecd116aa1163fc": "2026-11-05T17:34:27",
+    "0553d09882e2a77108051469": "2026-11-05T17:34:27",
+    "dbdef26ae556d52329e61591": "2026-11-05T17:34:27",
+    "04fbcc2fcba85e927841cfbb": "2026-11-05T17:34:27",
+    "08cdc58c64f2410f58274f20": "2026-11-05T17:34:27",
+    "498177a9a80d0a31485a3c2e": "2026-11-05T17:34:27",
+    "af656979af3ff0193fc40f92": "2026-11-05T17:34:27",
+    "942bc066ffebe9a8a386d720": "2026-11-05T17:34:27",
+    "61148b23de42ef7ab8ed192e": "2026-11-05T17:34:27",
+    "f68cc87ece618ce57f2a7405": "2026-11-05T17:34:27",
+    "67623ee63ac5321a47d58b5f": "2026-11-05T17:34:27",
+    "3d515cfd822888454671b065": "2026-11-05T17:34:27",
+    "a52ae40c802941602a770f93": "2026-11-05T17:34:27",
+    "8b4fe61ef32ae50c2e3bb710": "2026-11-05T17:34:27",
+    "70fa36e629327ee7565d4cec": "2026-11-05T17:34:27",
+    "3803cb80ad33948b65770d72": "2026-11-05T17:34:27",
+    "b6369fb75c7fae332ef242fd": "2026-11-05T17:34:27",
+    "b625c82bda3a79df54166125": "2026-11-05T17:34:27",
+    "6416c137756c4ee8db24f646": "2026-11-05T17:34:27",
+    "2c94da039ccacac4ccf99527": "2026-11-05T17:34:27"
   },
   "titles": [
     [
@@ -20867,6 +20890,190 @@
     [
       "정치인 거래정책 리포트 20261105",
       "2026-11-05"
+    ],
+    [
+      "선거 이긴 민주당 주식은 졌다etf 수익률 공화당 의원들에 크게 밀려",
+      "2026-11-06"
+    ],
+    [
+      "congress stock trades in 2026 10 members ranked by purchase performance",
+      "2026-11-06"
+    ],
+    [
+      "8 top nancy pelosi stocks to buy 124 investing us news money",
+      "2026-11-06"
+    ],
+    [
+      "a 10 owner sells dutch bros bros shares across five automatic trades stock titan",
+      "2026-11-06"
+    ],
+    [
+      "at 280 per share billiontoone blln ceo exercises options on 25001 shares alongside planned sales stock titan",
+      "2026-11-06"
+    ],
+    [
+      "14000 crowdstrike crwd shares were sold under a trading plan adopted june 25 2026 stock titan",
+      "2026-11-06"
+    ],
+    [
+      "a director exercised options and sold 3142 monopar therapeutics mnpr shares under a trading plan stock titan",
+      "2026-11-06"
+    ],
+    [
+      "billiontoone blln executive sells 2834 shares under a prearranged trading plan stock titan",
+      "2026-11-06"
+    ],
+    [
+      "after exercising options mirum pharmaceuticals mirm ceo sells 20000 shares at 90 each stock titan",
+      "2026-11-06"
+    ],
+    [
+      "five planned sales totaled 5773 shares for penguin solutions peng executive joseph gates clark stock titan",
+      "2026-11-06"
+    ],
+    [
+      "a family trust sold 17909 samsara iot shares under a preset trading plan stock titan",
+      "2026-11-06"
+    ],
+    [
+      "under a trading plan morningstar morn chairman sells 21404 shares stock titan",
+      "2026-11-06"
+    ],
+    [
+      "honda motor hmc director kokubu received 66 shares quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "at 060 a share john a moore buys 7100 scientific industries scnd shares stock titan",
+      "2026-11-06"
+    ],
+    [
+      "chh cfo oaksmith sold 2000 shares for 241k at an average 12035 quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "at 065 a share scientific industries scnd chair buys 51200 shares stock titan",
+      "2026-11-06"
+    ],
+    [
+      "mediaalpha max executive yi sold 420000 shares for 635m at an average 1512 under a 10b51 plan quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "after exercising options city holding chco executive sells all 512 shares stock titan",
+      "2026-11-06"
+    ],
+    [
+      "vir general counsel de verneuil sold 419k of shares form 4 quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "a 6000unit gift leaves copt defense properties cdp coo holding 50529 units stock titan",
+      "2026-11-06"
+    ],
+    [
+      "abacus global management abx 10 owner mcnealy disposed of 28027 shares at 847 quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "a founder sells 1500 cloudastructure csai shares leaving 667 held directly stock titan",
+      "2026-11-06"
+    ],
+    [
+      "bros 10 owner dm trust aggregator sold 694m of shares form 4 quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "director john m fowler proposes selling 1575 stonex group snex shares stock titan",
+      "2026-11-06"
+    ],
+    [
+      "natera ntra chair rabinowitz sold 748 shares for 299k at an average 40002 under a 10b51 plan quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "malibu boats mbuu director taylor received 4562 shares quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "vor biopharma vor executive sokolove gave up 1917 shares at 1925 to cover taxes or an exercise price quantisnow",
+      "2026-11-06"
+    ],
+    [
+      "the democrats just took back the house and senate heres what that could mean for crypto regulation in 2027 the globe and mail",
+      "2026-11-06"
+    ],
+    [
+      "2026 us midterm elections what the results mean for business edelman",
+      "2026-11-06"
+    ],
+    [
+      "heres what the democratic election rout could mean for the us economy",
+      "2026-11-06"
+    ],
+    [
+      "republicans lose midterms whats next for trump and the economy goldbroker",
+      "2026-11-06"
+    ],
+    [
+      "wall street cheers the blue wave but the economy still runs through trump the boston globe",
+      "2026-11-06"
+    ],
+    [
+      "opinion 124 trump has been thumped that doesnt make him any less dangerous",
+      "2026-11-06"
+    ],
+    [
+      "us midterm rout unlikely to change trumps trade policy supplychainbrain",
+      "2026-11-06"
+    ],
+    [
+      "experts react democrats just swept the us midterms heres what it means for the world atlantic council",
+      "2026-11-06"
+    ],
+    [
+      "analysis 124 trumps favorite economic policy was among tuesdays biggest losers the washington post",
+      "2026-11-06"
+    ],
+    [
+      "voters have sent a message to trump on tariffs but the white house still holds significant power the conversation",
+      "2026-11-06"
+    ],
+    [
+      "us midterm results a victory for canadians hopeful of tariff relief",
+      "2026-11-06"
+    ],
+    [
+      "what can trump doand not dowith congress in the hands of democrats global news",
+      "2026-11-06"
+    ],
+    [
+      "trumps midterm loss leaves canada to weigh a trade deal or wait",
+      "2026-11-06"
+    ],
+    [
+      "us trade pressure on south korea continues posttrump defeat",
+      "2026-11-06"
+    ],
+    [
+      "democrats election victory raises canadas hopes of us tariff relief morningstar",
+      "2026-11-06"
+    ],
+    [
+      "what can trump do without congress executive orders tariffs and the veto but not new laws nacionale",
+      "2026-11-06"
+    ],
+    [
+      "fed interest rates can move crypto before a decision and cuts may not lift bitcoin the cryptonomist",
+      "2026-11-06"
+    ],
+    [
+      "how fed interest rates affect crypto the defiant",
+      "2026-11-06"
+    ],
+    [
+      "정치인 거래정책 리포트 20261106",
+      "2026-11-06"
     ]
   ],
   "seen_urls": {}
