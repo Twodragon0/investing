@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-10-31 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xcF96Q2t4YkpxM0NUNkgtb0hZMy1CR3hkUDhuUUl3T2R5VUo1eXJia2s3emhPU0RvenBGT3dtX1U4aGVsTGZrS2ZCTjNCVi11M3BlZURDelR6dw?oc=5">美 AI 투자 우려 속 코스피 3%대 급락…삼성닉스 동반 부진[fn오전시황</a> <span class="p0-desc">美 AI 투자 우려 속 코스피 3%대 급락…삼성닉스 동반 부진[fn오전시황] 파이낸셜뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOR0hLUjN3TllXcDVjaXRBaUwxOW1QcnJLRkc3ZGR3SnR1U283WVdPeWozMmw2eFlLa3ZVb011TlEtMHI0RjV6eWE0T2ZXcXRNQVR5eEIzbVhRektfTHkzLWNLbVc5U0RQaXUyRnFSZ2VCUmZNOFlpcTQyWXc5S21zRWxpb2FBSS1FSkpiVnc0VnV5S2o50gGaAUFVX3lxTE1DUFpkcUswb2dYdVhleE1XejZfZVdTSHJsbUhOelF3Z1B4UUpGdWhqUGQzTmxvTmhGbFFQZ1VNdmhNenprZE1Hbjh6bW9RUTFGN0lfYkZMZ3g4YUh1VlM2eUhGNHNpVUN5ZG12R2RrSnpxTDRKTVR6Y29oMUhHNVdMZ1N1UzFLUjF3LUNnc0pvUFNQZXA1T1JnQ0E?oc=5">연준은 중간고사에 앞서 금리를 결정합니다.</a></li><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5HTy1FRHJET2ZsWjdodm1pYU11UnkxQnJwU09YdjVUQV9xaEJfc2V6blhkdHJNV3ZLTGtaZ3lYZ2pYTElPQXVLMFl5T2IwVkhaWUo4Y2hrZGxfMXJ3d1NaYXhTSHBXM3RnS2NJMzA1cUppWGxRelEta1pR0gF_QVVfeXFMTXBjUk5HbWZHZHBtbFdrTDU0c2FpdUxrQmtCakJZTUxQUWdCYXcydWFfVmFDdnViazVkRmxhOHNuR1ZNdmdpSUFZUEt4OXphUlR2bjNqejg4UkpZZ3VNWU9DZ0RTMnUzd1lPUEphVTZXV2ktV3BUYXBJNDZrVVRZaw?oc=5">연준 금리 결정과 Warsh 기자 회견에서 얻은 5가지 주요 시사점은 다음과 같습니다.</a> <span class="p0-desc">연준 금리 결정과 Warsh 기자 회견 CNBC에서 얻은 5가지 주요 시사점은 다음과 같습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

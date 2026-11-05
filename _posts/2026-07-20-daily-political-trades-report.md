@@ -21,11 +21,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-07-20 - 정치인 거래 �
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">중앙은행</div></div></div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-07-20 정치권 핵심 이슈: 3% 기준금리 결정할 ‘수요 압력’.한은이 보는 위험 신호 [머니+] - 에너지경제신문. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 3건 (중앙은행 3건)을 종합 정리합니다
-- 1. 3% 기준금리 결정할 ‘수요 압력’.한은이 보는 위험 신호 \[머니+\ - 에너지경제신문 3% 기준금리 결정할 ‘수요 압력’.한은이 보는 위험 신호 [머니+] 에너지경제신문
 
 ## 1. 중앙은행 정책 동향
 

@@ -27,7 +27,6 @@ permalink: "/market-analysis/2026/03/04/daily-crypto-market-report/"
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -5.18%</li><li>🔴 <strong>Cardano</strong> (ADA): -4.13%</li><li>🔴 <strong>Dogecoin</strong> (DOGE): -3.23%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
