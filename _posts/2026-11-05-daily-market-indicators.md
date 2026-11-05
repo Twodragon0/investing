@@ -16,6 +16,12 @@ image_alt: "시장 심리 및 리스크 지표 (2026-11-05) - 시장 분석 뉴�
 
 **2026-11-05** 기준 시장 지표 공포탐욕 27.9(fear), VIX 16.78. 8개 소스 수집.
 
+## 전체 뉴스 요약
+
+- 2026-11-05 기준 시장 지표 공포탐욕 27.9(fear), VIX 16.78. 8개 소스 수집.
+- Put/Call 비율 관련 뉴스:
+
+
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">27.9</div><div class="stat-label">공포탐욕 (fear)</div></div><div class="stat-item"><div class="stat-value">16.78</div><div class="stat-label">VIX</div></div><div class="stat-item"><div class="stat-value">101.52</div><div class="stat-label">DXY</div></div><div class="stat-item"><div class="stat-value">4,073.90</div><div class="stat-label">금</div></div></div>
 
 ## 1. 시장 심리 지표

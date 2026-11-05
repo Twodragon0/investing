@@ -29,33 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-05 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다 - 조세금융신문 - 11건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 금융위원회, 망분리 주목</li><li>🔴 <strong>보안/해킹</strong>: 해킹 주목</li><li>🏦 <strong>거래소</strong>: 선물 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9TT29LbG1VQUVibUlwS1FSdjhET0lGam0weXY5ZFNVeEg2UHl2UTZXcGJRZEw5ODBYeWNQRlN1T2Z6eC0tSEZBV2k2ZGV0WncyV3ludzIzbFh6TjF5NHBBaGNuNA?oc=5">해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다 - 조세금융신문</a> <span class="p0-desc">해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE00Y1pnMmVUdW9rMGNVNUNNdkRiZmJNMm9hUlJMU0V4SkRRUlRRM25kN2lKWlBlNUFSZzNLTnIzLXBmLW5QZ01xUXl1Q0dlc1ljeTdlMkdnakhyYndPekV0WXZqdDktbkRacEhWbTQtekJLamc?oc=5">바이낸스發 디지털자산 시장 '해킹 비상'.고강도 규제 나오나</a> <span class="p0-desc">바이낸스發 디지털자산 시장 '해킹 비상'.고강도 규제 나오나. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다 - 조세금융신문 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 11건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (8건): 금융위원회, 망분리, 규제 규제 움직임 (8건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🔴 보안/해킹** (3건): 해킹, 선물, 주식 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🏦 거래소** (1건): 선물, 주식 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다 - 조세금융신문
-- 바이낸스發 디지털자산 시장 '해킹 비상'.고강도 규제 나오나
-
-### 주요 이슈
-
-- "AI 공격은 AI로 방어"…금융위, 망분리 규제 전면해제 TF 이달 가동 - 뉴스핌
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 4건, 한국 4건, 아시아 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 11건
 - **미국**: 4건

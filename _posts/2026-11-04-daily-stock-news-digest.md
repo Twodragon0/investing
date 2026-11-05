@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-04 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피 3%대 급락 5600선 후퇴…코스닥도 4%대 하락 - 이슈밸리 - 174건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 삼성전자 관련 45건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 애플 관련 18건</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 환율 관련 9건</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5JX0xCTndlOUVPS3lZdWRQTFdCcXRvcTVKQXdLMFo4bWYxVnNBblByLWRwbE90cFB6Y09XZjhkeGRrSzRHb1lEQTZaX0ZXUTFscW1rdzdjZjVadzdKeGVtandtcWhVdDdwNWc3U3d3?oc=5">코스피 3%대 급락 5600선 후퇴…코스닥도 4%대 하락 - 이슈밸리</a> <span class="p0-desc">코스피 3%대 급락 5600선 후퇴…코스닥도 4%대 하락 이슈밸리</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE43LURLTDRMUWVQZnJod09YazktU3BaakZfQjg1aTljR01DYlJMN081RXdMRWNUemhDNnM2bHFCSkNaZHVraUt6RFJkWG9YVlV5RjZTUm9XMnVKNWE2NTdYcHlGZ1BydUtLek81T2tXQ0ZTMW8?oc=5">속보] 코스피 3.6% 급락 5,648 마감…코스닥 4.1%↓ - 스페셜타임스</a> <span class="p0-desc">[속보] 코스피 3.6% 급락 5,648 마감…코스닥 4.1%↓ 스페셜타임스</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1T2NSRFpfcTk1alpTXzk0a1VESEJPVUc4dGNOZmVMVGdWaEpacWVJWTA0ZHVVdkdCUDlMVlE3NW5mamJkcmwxOFBjcm44SExxM0hQV0xESmhCckh2Nk5xaWFOQXpXREk4?oc=5">​​​​​​​외국인 1.5조 매도에 코스피 3.6% 급락…美반도체 반등에도 삼성·하이닉스 수급 불안 - 녹색경제신문</a> <span class="p0-desc">​​​​​​​외국인 1.5조 매도에 코스피 3.6% 급락…美반도체 반등에도 삼성·하이닉스 수급 불안 녹색경제신문</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,648.79 (-4.12%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 704.39 (-4.19%).
+- 2026-11-04 주식 시장에서 174건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,648.79(-4.12%), KOSDAQ 704.39(-4.19%), USD/KRW 1,344.10(-0.09%).
 - *나스닥-100은 AI의 우려가 MarketWatch 증가함에 따라 올해 세 번째 조정으로 떨어졌습니다.*
 
 ## 테마별 주요 뉴스

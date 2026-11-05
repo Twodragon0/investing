@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-05 - 보안 뉴스 요약 �
 
 블록체인 보안 18건 분석. 주목 사건: **[Security] Binance hack may be ‘temporary setback’ for crypt** / 보안 뉴스 헤드라인: 해커는 BTCPay 서버 결함을 악용하여 핫 지갑에서 비트코인 및 라이트코인을 훔칩니다. - 해커 뉴스.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says 
-외 P0 긴급 이슈 16건이 추가 감지되었습니다. 총 18건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (18건): security, exploit, binance 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🏦 거래소** (7건): 솔라나, $6.3B 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **🔷 이더리움** (5건): exploit, infrastructure, withdrawal 생태계 동향 (5건) — 가스비·TVL 변화를 함께 확인하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says
-- [Security] ZachXBT identifies French bank as alleged victim of $133M crypto theft
-- [보안] 바이낸스는 가짜 취업 면접에 대한 63억 달러 규모의 해킹을 추적하고 AI 도구는 손상되었습니다.
-
-### 투자자 체크포인트
-
-- 보안 사건 16건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 18건
