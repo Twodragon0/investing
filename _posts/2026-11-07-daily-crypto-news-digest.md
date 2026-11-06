@@ -142,7 +142,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382716/anthropic-ipo-valuation-could-fall-to-1-trillion-after-ai-stock-rout-report" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic IPO Valuation Could Be Slashed in Half to $1T After AI Stock Rout: Report</a>
-<p class="news-desc">Investors told The Wall Street Journal that the $1.5 trillion target now looks too high, as prediction markets bet on a December listing.</p>
+<p class="news-desc">주요 투자자들은 AI 주식의 급격한 매도 이후 Anthropic의 초기 공모가 1조 5천억 달러의 예상 가치로 진행될 수 있는지 점점 더 의심하고 있다고 Wall Street Journal이 목요일에 보도했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -154,7 +154,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/382711/3-1b-in-stolen-binance-crypto-has-yet-to-be-laundered-elliptic" class="news-title" target="_blank" rel="noopener noreferrer">$3.1B in Stolen Binance Crypto Has Yet to Be Laundered: Elliptic</a>
-<p class="news-desc">The attackers have used more than 20,000 wallets on 16 blockchains so far, but the bulk of the stolen ETH and Bitcoin hasn't moved.</p>
+<p class="news-desc">공격자는 지금까지 16개 블록체인에서 20,000개 이상의 지갑을 사용했지만 도난당한 ETH 및 비트코인의 대부분은 이동되지 않았습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -166,7 +166,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/russia-finalizes-crypto-trading-rules-november-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Russia finalizes crypto trading rules ahead of Nov. 17 rollout</a>
-<p class="news-desc">The rules allow retail investors to trade BTC, ETH and USDT through regulated intermediaries, with Moscow Exchange planning to launch crypto trading in December.</p>
+<p class="news-desc">러시아 중앙은행은 11월 17일부터 공개 거래를 위해 세 가지 암호화폐를 승인했으며 자격을 갖춘 투자자는 구매 한도가 면제됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -315,7 +315,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-07 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/zcash-nu7-upgrade-15m-sprout-funds-unspendable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Zcash NU7 upgrade goes live, leaves 12,224 ZEC stranded in Sprout pool</a>
-<p class="news-desc">Zcash’s NU7 upgrade has rendered about $15 million in legacy Sprout funds unspendable, although a future network upgrade could potentially restore access.</p>
+<p class="news-desc">Zcash의 NU7 업그레이드가 시작되어 Sprout 자금 중 1,500만 달러를 사용할 수 없게 되었으며 목표 차단 시간은 25초로 단축되었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
