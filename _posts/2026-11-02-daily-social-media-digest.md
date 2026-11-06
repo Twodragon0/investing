@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-11-02 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSmFRSU9ibkVRU0gzcWF6NWI1UjQwTnBlY2owNE9fSTlva2d4T21GYmZlZjhTQTZMckdjZERHMUpick96MElia1VRdnZ6YVE2NTI0SHFoVEV5NU9HMTVQQjZOY0QzZUt3WnBYYWlWUWhFOVpEOXpraVhqaVZPRTA4SUVwaDZfYVNVd3JOS0tjajZHMjdHaXNFSER4d3JkVlZBLXlYMHMtQ2hMMkw4TG9fc2Z6M0JIUTdQ?oc=5">President Trump says they're looking into Binance hack as calls grow for crypto rules</a></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPbUVDM0hOS2pBZ2owQWFjektBYWFUUS0tY1NKVkhlN0xVaXlhR0tfOXhEc2JyeFA5ZlpycGpnTFQ0VzdCZFhDUTZYbklNMlNFYVBJZGY3TEE3TzZpVEU5NXY4Qjg3dEhPM19uZlZiUjFaY3NXSmtJQ1o1NlRoTTdBaDIwLTI2dGU3ak10SkVMUVpMazVOUlVXNktQMlhET3M?oc=5">연준 금리 결정 발표 - 대통령기도팀</a> <span class="p0-desc">연준 금리 결정 발표 대통령 기도단</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 13건 중 텔레그램 0건, 소셜 0건, 정치·경제 13건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 13건 중 텔레그램 0건, 소셜 0건, 정치·경제 13건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
