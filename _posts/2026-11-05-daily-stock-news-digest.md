@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-05 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: If a Stock Market Crash Is Coming, Warren Buffett's 7-Word Investing Advice Has Never Been Wrong - 169건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 하이닉스 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 의회 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 하이닉스, 삼성전자 관련 9건</li><li>📊 <strong>매크로/금리</strong>: 환율, 주식 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNSXpDeGpqWVhwcTNvTGNoWTFCSXlyMXh6U2hqV3g0UHhWelNfX1FOTjdvc1Z0T0VCMWNnLXIxTjZybUEtbkdUWmp0SE9Gb2pGaEZISXB3WXNNTkRFSERJOGVQaXZVOTliUVYzRW1VMXpMSWhfSEFGNEZGYk55U1p3Q0xWd2x2eVNUUVE2NjAzeG8ybFM4eUprUmp5MVN4Zw?oc=5">If a Stock Market Crash Is Coming, Warren Buffett's 7-Word Investing Advice Has Never Been Wrong</a></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE05UU9CVW12Z0g0anFJWkZsWmI0dWN5RHF4QlBWSmZfUW1HVmVzeV9iMElzekdLNHFCalo5NkVGSDVxSmU3d2Ytby03QldZRFdIaWF2QVNFckhQb3FtNW5PZ3BZMnkwMFRTS2VIWVFvRWprMmNKNzZr?oc=5">반도체포커스] 삼성전자·SK하이닉스, "현재 주가는 이미 과거 폭락 수준"…3가지 HBM으로 초격차 벌린다 - 이코노미트리뷴</a> <span class="p0-desc">[반도체포커스] 삼성전자·SK하이닉스, "현재 주가는 이미 과거 폭락 수준"…3가지 HBM으로 초격차 벌린다 이코노미트리뷴</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1T2NSRFpfcTk1alpTXzk0a1VESEJPVUc4dGNOZmVMVGdWaEpacWVJWTA0ZHVVdkdCUDlMVlE3NW5mamJkcmwxOFBjcm44SExxM0hQV0xESmhCckh2Nk5xaWFOQXpXREk4?oc=5">​​​​​​​외국인 1.5조 매도에 코스피 3.6% 급락…美반도체 반등에도 삼성·하이닉스 수급 불안 - 녹색경제신문</a> <span class="p0-desc">​​​​​​​외국인 1.5조 매도에 코스피 3.6% 급락…美반도체 반등에도 삼성·하이닉스 수급 불안 녹색경제신문</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,683.80 (+0.61%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 714.95 (+1.64%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-11-05 주식 시장에서 169건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,683.80(+0.61%), KOSDAQ 714.95(+1.64%), USD/KRW 1,341.04(-0.20%).
 - *나스닥-100은 AI의 우려가 MarketWatch 증가함에 따라 올해 세 번째 조정으로 떨어졌습니다.*
 
 ## 테마별 주요 뉴스

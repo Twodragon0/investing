@@ -29,35 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-06 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋 - 15건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 망분리 동향 주시</li><li>🔴 <strong>보안/해킹</strong>: 해킹, 망분리 관련 4건</li><li>📈 <strong>가격/시장</strong>: 망분리, 금융위 관련 5건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE13RG5GV25aRzNtSUNjOW1aSUc0UElQVms3anNPc0ZmZmtpMUYtX0luZEFVMUFZWnJmS0NrbXpSck1QQkVjZEtLanNtNm9jbS02Mm1QUDVjS1dhUjJNaVNPQUp1Q0NHVWtFMGhnaG1wcXVsdw?oc=5">"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋</a> <span class="p0-desc">"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련. 디지털 자산 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9TT29LbG1VQUVibUlwS1FSdjhET0lGam0weXY5ZFNVeEg2UHl2UTZXcGJRZEw5ODBYeWNQRlN1T2Z6eC0tSEZBV2k2ZGV0WncyV3ludzIzbFh6TjF5NHBBaGNuNA?oc=5">해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다 - 조세금융신문</a> <span class="p0-desc">해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE00Y1pnMmVUdW9rMGNVNUNNdkRiZmJNMm9hUlJMU0V4SkRRUlRRM25kN2lKWlBlNUFSZzNLTnIzLXBmLW5QZ01xUXl1Q0dlc1ljeTdlMkdnakhyYndPekV0WXZqdDktbkRacEhWbTQtekJLamc?oc=5">바이낸스發 디지털자산 시장 '해킹 비상'.고강도 규제 나오나</a> <span class="p0-desc">바이낸스發 디지털자산 시장 '해킹 비상'.고강도 규제 나오나. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 15건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (10건): 망분리, 금융위 규제 움직임 (10건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🔴 보안/해킹** (4건): 해킹, 망분리, 가상자산사업자 보안 이슈 (4건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **📈 가격/시장** (5건): 망분리, 금융위 가격 변동 (5건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋
-- 해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다 - 조세금융신문
-- 바이낸스發 디지털자산 시장 '해킹 비상'.고강도 규제 나오나
-
-### 주요 이슈
-
-- CFTC 공정한 액세스 요구 사항 해석 문제
-- "AI 공격은 AI로 방어"…금융위, 망분리 규제 전면해제 TF 이달 가동 - 뉴스핌
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 6건, 한국 5건, 아시아 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 15건
 - **미국**: 6건

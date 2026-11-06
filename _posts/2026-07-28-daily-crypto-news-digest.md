@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-28 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://global.morningstar.com/en-nd/markets/crypto-winter-or-big-crash-where-bitcoin-price-goes-now">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가</a> <span class="p0-desc">Crypto Winter 또는 Big 폭락? 비트코인 가격은 지금 어디로 가는가. 급락 관련 보도.</span></li><li><a href="https://news.google.com/read/CBMitAFBVV95cUxOVy0yNVNadHNXSU03Z0ZfYUxqcHBJYXhKblp6T3RvaGxvMmp4TWlwVHhoYXVxMmUtek51RW1RdHNWNThMaHR1dGNNT3NhdmlNaWdLcXBXMFY0NnRtVjdyNW5USGo3YnBxQ0FPbDBpeWtxVmpQVTZyX2JzaDNrMjg5ZklxR3lIX2hxcjNRd09oNmNJS01xN0VOOUgyMU1FYkVIeFdVbGZCRmRiSF9EcVRxajhzRzk?hl=en-US&gl=US&ceid=US%3Aen">비트코인은 호르무즈의 적대 행위가 중단되면서 확고한 입장을 유지하고 연준은 금리 결정을 준비합니다: 오늘의 암호화폐 시장</a> <span class="p0-desc">브렌트유는 미국과 이란이 호르무즈 해협 파업을 중단하고 주식과 디파이 토큰을 끌어올린 후 7% 급락했으며 수요일 비트코인은 중추적인 연준 결정을 앞두고 65,000달러 가까이 보유.</span></li><li><a href="https://kr.investing.com">비트코인, 미·이란 교전 중단에 6만5000달러 회복…유가는 5% 급락 By Bloomingbit - Investing.com 한국어</a> <span class="p0-desc">비트코인, 미·이란 교전 중단에 6만5000달러 회복…유가는 5% 급락 By Bloomingbit Investing.com 한국어</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **87건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-07-28 암호화폐 핵심 뉴스: 모두가 비트코인 투자 붐을 예상했습니다. 왜 결코 오지 않았습니까?. 총 87건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
