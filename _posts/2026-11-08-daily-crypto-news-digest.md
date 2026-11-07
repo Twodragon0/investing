@@ -167,7 +167,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/interview/trm-labs-binance-hack-interview?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Binance hack is ‘cyber war,’ TRM Labs executive says</a>
-<p class="news-desc">TRM Labs executive Ari Redbord called for governments to take offensive action against North Korean hackers following the record $6.3 billion Binance theft.</p>
+<p class="news-desc">TRM Labs의 Ari Redbord는 63억 6천만 달러 규모의 바이낸스 해킹이 암호화폐가 자금 동결에 더 낫다는 것을 보여주지만 북한은 돈을 지불하는 동안 계속 공격할 것이라고 말했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -263,7 +263,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-08 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382756/greece-passes-crypto-tax-law-staking-defi" class="news-title" target="_blank" rel="noopener noreferrer">Greece Passes Crypto Tax Law With 10% Gains Levy, 15% on Staking and DeFi</a>
-<p class="news-desc">Greece has approved a crypto tax framework with a €500 ($557) annual gains threshold and new rules for staking and DeFi income, but lawmakers left important questions about token swaps unresolved.</p>
+<p class="news-desc">그리스는 연간 이득 기준액이 500유로(557달러)이고 스테이킹 및 디파이 소득에 대한 새로운 규칙이 포함된 암호화폐 세금 체계를 승인했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
