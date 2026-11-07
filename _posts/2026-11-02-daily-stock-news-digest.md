@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-02 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxQb3k0a3B6bzJMdXBKWTZFa255ZjdMRVhwRW1JU2FaVVQ3cmpRQ0lDUkVxazd2WktuV2dkR3k2RldDbXBlMC1HYl9KMHphT3BpQzduVUJHYXFxV2wxYkRvSzcweUh4WWhQb3B1a0Y1T1JSbEltZUdHMTZCb0dQMzRmYks0cW1ieTdHbHdVejJLamtJVVFKNTNaa2tvTEhURmxpa2dHU0I4aGE2RWluOXVOckVQRGF0dkhKczhyRkwwNnZUeEdiU00tZkFlTllWQWNfZUxmd1pYcC02dW5lTFVQaEV30gHnAUFVX3lxTE5IbWpZWFZlb1VYMFVRSXgwcGttbkE2OTROT3pIanJseGlCckhmamsxQlUwZXFlTVNfeURFbC1IX2djamIzRWltTTZqdm9kOW1penFSalk4OTltaUVWdzNpUzlnTFhwWjhIZzQ3SzRKcVAweko2YWZKWnhRaE5Pd3VhVk55QkpvRWlZNEVmOXFzdjBXR1h0czQ1TTR2bnpGNEVMdFN0eHl3cFk2SXB5MnpFcEd5UXBYVG11eV94ZVNhOVN5RWk5dEozcDJfb3I0NktMZEhIVUtUaXRiRVpURHdYYlNsSFZoWQ?oc=5">Halloween 'carnage' on Wall Street as tech share price slump sparks fears of stock market crash - This is Money</a></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE8zb2p0NnJyZ2dNaHNKNkhldU80NnB6VWZnTldhaVQ0b0pXX1RJd3FXR0RSTzdzaXl6c2ZjZ3A3Q0d3eW42ZHJSVEVZUVhPZWR2YWlHT3ZqaG9qSjV6d3dELVhNVENoYUJf?oc=5">美반도체 7.2% 급락·SOXL 25% 폭락…외국인 1.6조 매도한 삼성·하이닉스, 월요일 추가 충격 우려 - 녹색경제신문</a> <span class="p0-desc">美반도체 7.2% 급락·SOXL 25% 폭락…외국인 1.6조 매도한 삼성·하이닉스, 월요일 추가 충격 우려 녹색경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBrMkVxSUF4Z21kdTRXVXhCSlYyV3RYWjNsNjlfS0lNVUdEdmhjTDJpYThPVFBxUE0zWnN1OHQxazBuZlN3RWN2eUJIOEpDcml5UEdSUUxvU1E0OHRFRjgxMFl2NEtWVVhVdjlSS2k0d2pmZw?oc=5">삼성전자·SK하이닉스 최대 실적에도 주가 급락…AI 투자 거품 터지면 반도체주 어디까지 떨어질까 - 톱스타뉴스</a> <span class="p0-desc">삼성전자·SK하이닉스 최대 실적에도 주가 급락…AI 투자 거품 터지면 반도체주 어디까지 떨어질까 톱스타뉴스</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,730.74 (-3.58%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 724.38 (-3.92%).
-- 2026-11-02 주식 시장에서 124건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,730.74(-3.58%), KOSDAQ 724.38(-3.92%), USD/KRW 1,333.44(-0.38%).
 - *월스트리트의 할로윈 '대학살'은 기술 주가 폭락으로 인해 주식 시장에 대한 두려움이 촉발됨 폭락 이것이 돈이다*
 
 ## 테마별 주요 뉴스

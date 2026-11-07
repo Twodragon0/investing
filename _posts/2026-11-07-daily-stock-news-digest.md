@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-07 - 주식 뉴스 요약 이�
 
 - KOSPI 5,059.69 (-5.27%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 644.27 (-4.39%).
-- 2026-11-07 주식 시장에서 202건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,059.69(-5.27%), KOSDAQ 644.27(-4.39%), USD/KRW 1,362.06(+0.45%).
 - *Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expected to hold steady.*
 
 ## 테마별 주요 뉴스

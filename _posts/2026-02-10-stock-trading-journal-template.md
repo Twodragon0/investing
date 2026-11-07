@@ -36,8 +36,6 @@ permalink: "/stock-journal/2026/02/10/stock-trading-journal-template/"
 
 ## 전체 뉴스 요약
 
-- 주식 트레이딩 일지 작성 가이드입니다. 이 템플릿을 참고하여 일일 매매 기록을 작성하세요.
-
 
 ## 오늘의 시장 환경
 
