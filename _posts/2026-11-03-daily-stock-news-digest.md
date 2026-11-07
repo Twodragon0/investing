@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-03 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5pWVc5cG9IRlZlOExUbHl3a0xzMWNJSEJGQTNqTDBFRnQyZzQ0TFpkakJhRlg2ZURwOXhqdFJya1RNalV2YzlINmZHZm9mb3FCTVdCakFhUVB3TmlLRDFwQ9IBeEFVX3lxTE1jbS1hRmtvN3E2aEJ3SkVrLTd0Y3NOOFJwUGZZaFM3cnM5MkR1WnhVZ2ZoQ2lyRmJBT1FEeEUwbldvc0ZGOC1rZWFNSnBkTW9vZnJ3YkNMLXRoSnA4VHNHWlZsRmR0czV5MW1vNFNZelFody1NVy1wZA?oc=5">美 반도체주 급락 여파…삼성전자·SK하이닉스 프리마켓서 동반 약세</a> <span class="p0-desc">美 반도체주 급락 여파…삼성전자·SK하이닉스 프리마켓서 동반 약세 뉴시스</span></li><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5td0g1Vm5ldDlJSjM0N0VvTlJ3OGR3Wm1BcV9xSndHMDlOQ241RFVDTW5IUmdBZ2poUi1qNjdDaWcwY2V1eEs5cTJMQ1BaVmFDVGhDRGJsUmhLRmpQSDJpcFd3alpBdkttMHNoZExIUkJpSGNzYXFJSEJMb9IBgAFBVV95cUxQZDY2OHFuMG5RY1hXd1NqTmNYai1MWmQtREdPeFRlMmtkeDVmVTB5d1g5U0xvUmJ0UnhsWVdrSHEtTUdDdmZUQWFPc0RxUHRRNDVWYmZSYWlScTJFR204RzlNS1NBWUZtajRfWWk0cm43VnV0VUp2dUtRYVZSQ3hRZQ?oc=5">'AI 수익성 우려'에 美 반도체주 또 급락 … 삼성전자·SK하이닉스 프리마켓서 3~4% 동반 약세</a> <span class="p0-desc">'AI 수익성 우려'에 美 반도체주 또 급락 … 삼성전자·SK하이닉스 프리마켓서 3~4% 동반 약세 뉴데일리</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWF9vZ1dhN2VWV1pVVHlvSHk2QkdDcUUxdlo3SF9mMkxHdjRpOXFaQ1Z1eGk0NFFnNWp2REE2UTFIQ1VBY3hRNldjMUdlRUV0V2Q0eXctOEtRSTNlSWFmZDRIZUlfM1puNzRoSHlnalIwQmIycjZfUkxPRjJvejhqbW14bDJPUGJS0gGcAUFVX3lxTE1OMjlST1lSTk51SUxsenlzUG5PejdTMV9QRzF2RXF4REZGazAteVZMb3hvU3Y1Y1ZlWWRENWQ5ekl0OVU4Q0tVWTBZYUtsUHlKNldER0wtdkR4Tmd1dGVCTEtfaDJodDhZYUFka2xpVTJtQWg5OGU2YVB2U1B0YmIxNmlKa0Vld0JBVlNSN3dJejlzSDhtdnZubFJMMg?oc=5">특징주] ‘인텔 쇼크’에 삼성전자·SK하이닉스 프리마켓서 3%대 급락 - Chosunbiz</a> <span class="p0-desc">[특징주] ‘인텔 쇼크’에 삼성전자·SK하이닉스 프리마켓서 3%대 급락 Chosunbiz</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,859.08 (+3.41%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 734.36 (+2.17%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-11-03 주식 시장에서 165건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,859.08(+3.41%), KOSDAQ 734.36(+2.17%), USD/KRW 1,344.75(+0.85%).
 - *S&P 500이 종료됩니다.*
 
 ## 테마별 주요 뉴스

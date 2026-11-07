@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-07 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Hackers exploit outdated BTCPay Server instances to steal cryptocurrency - MSSP Alert - 122건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 30건 수집</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 달러 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 규제 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQN0twZDhIcU1qd0I3YkVsRlJVMnE1QllTS1ZYYXcwUkhTbEJvOUJMMTJCTG42SURwbGxzX2Q5bGZ2ZllOak5JMHNmaFF6MTk3UVA4ZVpyQjJad1FoZnI2elZsMUpXZk5BbmFwNGM3aTJJLUgyZExnb2dDQURzTDNnTG0yYm12RjZEMUV4UlZmNFMxcGI5RUdMUU82SkVCNW9JNFBEQVlLMA?oc=5">Hackers exploit outdated BTCPay Server instances to steal cryptocurrency - MSSP Alert</a></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQaVY1d3g3bDZPRVAyWUt2ZzhidzVWTFdBaGVtR0pnZDZJSExMbVNMdUI3cXdjbzM1X2Zzel9mZVg3TkxHMXVJT0EtRHlaMFM5MWlHQkI0UmZnQ3dHc2J5MjFzZDEtbU5oclRNTjI0VVVUOUtCQmRBcGVPNllOT05KQ3RmQmFVdnlhTHh6UDNaZEhfY0tKd0gxNUUxanZ3QTR1Rm5JMUtJT2o4cEVaNlRWNlJoRklpaTktbGRFTUVyYw?oc=5">Ex-FBI agent pleads guilty in $2.5M cryptocurrency theft scheme after asking ChatGPT how to flee to Portugal - FOX 5 DC</a></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE41SEJuTklUS3NTU2lLUGxXZmpLZTFaODl4UFhGTTFlaXpTdTFjdDdXS3lieV9Vd2NaY1QtWTl1SV9XTkNaTHZ6UVJpZlhwcGlzWWRIa0ZWa1ZkNEZs?oc=5">코인 시황] 비트코인 일시 7만6000달러 붕괴…美 기술주 폭락에 암호화폐 시장도 급락 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 일시 7만6000달러 붕괴…美 기술주 폭락에 암호화폐 시장도 급락 뉴스핌</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Hackers exploit outdated BTCPay Server instances to steal cryptocurrency - MSSP Alert 
-외 P0 긴급 이슈 9건이 추가 감지되었습니다. 총 122건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (50건): 비트코인, 달러, 암호화폐 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (30건): binance, elliptic, hackers 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **📈 가격/시장** (30건): 암호화폐, 달러, 급락 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Hackers exploit outdated BTCPay Server instances to steal cryptocurrency - MSSP Alert
-- Ex-FBI agent pleads guilty in $2.5M cryptocurrency theft scheme after asking ChatGPT how to flee to
-- 코인 시황] 비트코인 일시 7만6000달러 붕괴…美 기술주 폭락에 암호화폐 시장도 급락 - 뉴스핌
-
-### 주요 이슈
-
-- 미국 규제 불확실성과 고용 호조에 비트코인 7만6천 달러 아래로 - Investing.com 한국어
-- 트럼프 친암호화폐 정책에 '제동'…美 민주당, SEC 규제 강화·이해충돌 조사 추진 - 코인리더스
-- 美 민주당 압승에 데이터센터 규제 강화 우려.비트코인 채굴·전력·반도체 기업 타격 전망 - 더구루
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-07.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-07.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-07 암호화폐 시장 122건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

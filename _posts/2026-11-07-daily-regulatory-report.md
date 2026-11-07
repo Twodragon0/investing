@@ -29,34 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-07 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋 - 13건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 망분리, 추진 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 해킹, 금융당국 관련 4건</li><li>🏦 <strong>거래소</strong>: 2건 수집</li><li>📈 <strong>가격/시장</strong>: 망분리, 추진 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE13RG5GV25aRzNtSUNjOW1aSUc0UElQVms3anNPc0ZmZmtpMUYtX0luZEFVMUFZWnJmS0NrbXpSck1QQkVjZEtLanNtNm9jbS02Mm1QUDVjS1dhUjJNaVNPQUp1Q0NHVWtFMGhnaG1wcXVsdw?oc=5">"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋</a> <span class="p0-desc">"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련. 디지털 자산 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE93T21scUR6YV9KVDdGc245UlJEV2tpZGtJUFg1LUxsQzhUbTN4VEFzVTFCOXZ3bnZfWElpbUE3MVZmY0xyMlNmZXVodUFXWGF5TkRJLVh3YnNTMm5xb1hjZm5mSHNRQkhUbHc?oc=5">금융권 해킹에 ‘비상등’…금융당국, 580개사 전수점검·망분리 규제 전면해제 추진 - Daily NTN</a> <span class="p0-desc">금융권 해킹에 ‘비상등’…금융당국, 580개사 전수점검·망분리 규제 전면해제 추진.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 13건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (11건): 망분리, 추진 규제 움직임 (11건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🔴 보안/해킹** (4건): 해킹, 금융당국, 망분리 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🏦 거래소** (2건): 규제 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋
-- 금융권 해킹에 ‘비상등’…금융당국, 580개사 전수점검·망분리 규제 전면해제 추진 - Daily NTN
-
-### 주요 이슈
-
-- 금융위, 망분리 규제 전면해제 추진…“AI는 AI로 막는다”
-- International, Seventh Meeting of the Japan-EU Joint Financial Regulatory Forum
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 5건, 미국 3건, 아시아 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 13건
 - **한국**: 5건

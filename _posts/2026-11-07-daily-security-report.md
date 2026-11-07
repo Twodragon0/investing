@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-07 - 보안 뉴스 요약 �
 
 블록체인 보안 19건 분석. 주목 사건: **[Security] What Democrats’ US midterm sweep means for the CL** / 보안 뉴스 헤드라인: Binance hack triggers smaller DeFi run than $292M Kelp explo.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Binance hackers had 8-week intrusion window before $6.3B exploit: SEAL 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 19건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (19건): security, exploit, binance 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🏦 거래소** (7건): binance, exchanges, exploit 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **🔷 이더리움** (5건): exploit, binance, polymarket 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Binance hackers had 8-week intrusion window before $6.3B exploit: SEAL
-- [보안] 연준, OCC는 전문가들이 보안 위험을 지적함에 따라 바이낸스 해킹 후 미국 은행을 확인합니다.
-- [보안] TENDRIL 익스플로잇: 스왑 로직 결함
-
-### 투자자 체크포인트
-
-- 보안 사건 18건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 19건

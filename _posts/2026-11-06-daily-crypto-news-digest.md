@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-06 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인, $80,500 회복…미국 선거 후 위험 선호 심리 개선 - Investing.com 한국어 - 122건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 관련 45건</li><li>🏦 <strong>거래소</strong>: 34건 수집</li><li>📈 <strong>가격/시장</strong>: 코인리더스, BTC 이슈 부각</li><li>🔴 <strong>보안/해킹</strong>: 19건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFA1VXNkay15bk9HS1pBelpxVkk3WGZaX0d2bFN0TFJHTDc4NVowSzlIamxSc01MbTN6eUppOC00MlhGZktCOG1Vd2JwNWZGc1RRTXc5aUFadzRCR2EzaWhpa2JsWFdBOGdtcExUNmx4MG9Yc0U?oc=5">비트코인, $80,500 회복…미국 선거 후 위험 선호 심리 개선 - Investing.com 한국어</a> <span class="p0-desc">비트코인, $80,500 회복…미국 선거 후 위험 선호 심리 개선 Investing.com 한국어 [코인 데스크] 비트코인, 美 민주당 압승 전망에도 7만8000달러 회복…선거 불.</span></li><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTFBZMktjcTAwWHAtZE9zcTI4SFk1cUduVFNIZmZ2c3dfQ05FUTZiZzNtOEIzX1lVRUpwcFpKMlpBUmg4MXNzVm9Ma3pR?oc=5">기요사키 "비트코인(BTC) 다음 폭락 기다리는 중".저점매수 공략 선언 - 코인리더스</a> <span class="p0-desc">기요사키 "비트코인(BTC) 다음 폭락 기다리는 중".저점매수 공략 선언 코인리더스</span></li><li><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxPNjVkUmVIdUdnOTB3UXdmSGpfSVlHR1VCNWVUMTNVcEZreUQyU0NVNUk1aVpwT2RfSjdDbk83M2pfRHJ6V1l5dG90SVVnbkFUTTh6SWQxRmxYZkZMQWZOM0oxaEVKQklNNlp4U2ZvSE50Z2J1RFgxMjd0a2lnVER6NkVrTHhSbWljeGhMbDlxcXh6SWxpZXFSRE1GQ0lwRkVnUXVOSHVPSTdDRmREUzNfOWZtdGp3LWplZW9yR3gtSlRfZG9qNHZTVjJNUURDekNhTm9GSGtyWTJkRTdOYkNkUV84MA?oc=5">사이버 보안 전문가가 바이낸스 암호화폐 해킹의 영향에 대해 논의합니다 - 5newsonline.com</a> <span class="p0-desc">사이버 보안 전문가가 바이낸스 암호화폐 해킹의 영향에 대해 논의합니다 5newsonline.com</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **122건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-06 암호화폐 핵심 뉴스: 비트코인, $80,500 회복…미국 선거 후 위험 선호 심리 개선 - Investing.com 한국어. 총 122건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

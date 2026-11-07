@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-18 | 시총 $2.69T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +11.90%</li><li>🟢 <strong>UNUS SED LEO</strong> (LEO): +2.36%</li><li>🟢 <strong>Canton</strong> (CC): +2.33%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집
