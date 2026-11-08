@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-29 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE44VEtFOUdmTTd5RTZKLVZhTk9QMHRYZGU5TWxWVkNmN1YwaWJ0TmFpcXFDZ0Jtemh6eXJxQ0N5dUhIeFpUZnpPdktpMWdzU0ZwZmN5SmhlemMwM2JjYVE?oc=5">증시 레이더] 코스피 1.79%↓ 6,788선⋯삼성전자·SK하이닉스 동반 급락 - 포커스온경제</a> <span class="p0-desc">[증시 레이더] 코스피 1.79%↓ 6,788선⋯삼성전자·SK하이닉스 동반 급락 포커스온경제</span></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE0yTDdwdHVLUGNVS1cySndYQ1lIN0RHWDNMaVZ4Vm9IdHl1SjZIM3VMSFpqclFhVTVubVphVktDVGxFQU1WcnNaWVhvSFlKdUtPTkhiMEZvcHYwbk5GeXNmVGxueGJqc0g3c3NZRkE0NDN3Uk9hSnR30gF3QVVfeXFMTTJMN3B0dUtQY1VLVzJKd1hDWUg3REdYM0xpVnhWb0h0eXVKNkgzdUxIWmpyUWFVNW5tWmFWS0NUbEVBTVZyc1pZWG9IWUp1S09OSGIwRm9wdjBuTkZ5c2ZUbG54YmpzSDdzc1lGQTQ0M3dST2FKdHc?oc=5">코스피 지수선물 옵션] 삼성전자·SK하이닉스 급락…선물 시장도 반도체 충격</a> <span class="p0-desc">28일 국내 주식선물 시장에서 삼성전자와 SK하이닉스 등 반도체 대형주가 큰 폭으로 하락했다. 반면 금융과 자동차, 전력기기, 일부 소비재 종목은 상승하면서 업종별 차별화가 뚜렷하게 나타났다. 한국거래소에 따르면 이날 삼성전자 선물과 SK하이닉스 선물은 나란히 하락했다. SK스퀘어도 약세를 나타냈다. 반도체 관련주에서는 한미반도체와 주성엔지니어링, 이수페타시스가 하락했다. 삼성전기는 상승세를 보이며 반도체 대형주와 다른 흐름을 나타냈다. 삼성SDS도 상승했고 LG이노텍 역시 강세를 기록했다. 2차전지주는 혼조세였다.</span></li><li><a href="https://www.cnbc.com/2026/08/28/gta-6-preview-netflix.html">'Grand Theft Auto 6' preview signals blockbuster demand, analysts say</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,788.88 (-1.79%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 838.41 (+0.09%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-08-29 주식 시장에서 211건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,788.88(-1.79%), KOSDAQ 838.41(+0.09%), USD/KRW 1,379.86(-0.08%).
 - *28일 키움증권 창구를 통한 장중 수급 집계 결과, 외국인은 삼성전자와 모아데이타 등을 중심으로 매수에 나선 반면 기관은 SK텔레콤과 NAVER 등을 순매수하고*
 
 ## 테마별 주요 뉴스

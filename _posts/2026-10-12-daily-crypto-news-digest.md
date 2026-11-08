@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-12 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1FeXlvVkNtZWFlbHhkdWljVWVTSFlUMHBweFAzb01OMlBYcndKeWdpY3I0dURVTDlVbkt1YkhlQlRWTE1DYk5iYTNkRGJmeE1DaTdtSWIzZDVodmkxWE13Wkx0THFLVU5qSjRuRkJpR2h4bXc?oc=5">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 - Investing.com 한국어</a> <span class="p0-desc">비트코인, 190억 달러 암호화폐 폭락 1년 후 8만3천 달러 이상서 고전 Investing.com 한국어</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1DYkp2aFJla1VDeVZiNDlyR0o4SVR5VzNOLXpkaFVnQVB4Ykg0Y3phSm9FMVpkal9VekRPZUcySkVJcnlPNHBsUlpIMW40X21ibFNXNk1mSTJLb2FRZ0pUdlNoSjRPTmwxNEZxYw?oc=5">D-BIZ 암호화폐 뉴스] 10·10 급락 후…비트코인·이더리움 유동성 '회복' 알트코인은 '침체' - 데일리비즈온</a> <span class="p0-desc">[미국=데일리비즈온] 암호화폐 역사상 최대 규모의 청산 사태가 발생한 '2025년 10월 10일 급락'이 1년을 맞았다. 시장은 크게 둘로 나뉘었다. 비트코인과</span></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOY2JRN0NzUktSR2lWT2xQdFpucGhMTVhUOXJHd25QY3hMV2dLSU1KTDZtRWlWbzEzWEI3cmZ2eUFZZXpJRkZNOTQzQU5Ja0IzWkRRUUdOMTR0cjlUR1ppUjlhNUJxd3kxZGZEdWxFaXJmUHozeWtHUTdZVjNNVHVTVmY2OWFzNnBZYlViYUlSYWtuTC1XTmc?oc=5">190억 달러 규모의 폭락 사태 이후 1년이 지난 지금, 암호화폐는 새로운 현실에 직면해 있습니다. - Vietnam.vn</a> <span class="p0-desc">1년 전만 해도 암호화폐는 백악관의 지지, 월가의 열광, 그리고 새로운 "황금기"에 대한 기대감에 힘입어 호황을 누렸습니다. 그러다 10월에 역사적인 폭락 사태가 발생했습니다. 단 하루 만에 레버리지 포지션 규모가 190억 달러라는 기록적인 수준으로 급락하면서 업계 전반에 걸친 침체를 촉발했고, 성숙했다고 여겨졌던 시장 구조의 취약성을 여실히 드러냈습니다. 12개월이 지난 지금, 전체 시장의 벤치마크로 여겨지는 비트코인은 사상 최고치보다 30% 이상 낮은 수준에 머물러 있습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🟣 DeFi
-- 2026-10-12 암호화폐 시장 65건 분석 — 핵심 테마: 비트코인, 가격/시장, DeFi
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

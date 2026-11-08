@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-19 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(29회), **SEC(미국증권거래위원회)**(9회), **연준**(7회), **의회**(5회), **관세**(5회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-08-19 정치권 핵심 이슈: 코니 찬(Connie Chan)은 의회 주식 거래를 금지하고 싶어합니다. 그녀의 최고 후원자들은 그것으로 유명합니다 - The San Franc. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 27건 (미국 의회 거래 4건, SEC…
 - 1. 코니 찬(Connie Chan)은 의회 주식 거래를 금지하고 싶어합니다. 그녀의 최고 후원자들은 그것으로 유명합니다 - The San Francisco Standard 주 상원의원 Scott Wiener는 Connie Chan이 Nancy Pelosi 의원과 Ro Khanna…
 
 ## 1. 미국 의회 거래 동향

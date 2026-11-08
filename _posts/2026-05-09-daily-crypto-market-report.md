@@ -27,7 +27,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-09 | 시총 $2.76T (+
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Solana</strong> (SOL): +4.50%</li><li>🟢 <strong>Chainlink</strong> (LINK): +4.44%</li><li>🔴 <strong>Toncoin</strong> (TON): -4.26%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **15건** 수집
