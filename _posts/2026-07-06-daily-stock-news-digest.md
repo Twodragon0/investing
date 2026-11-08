@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-06 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="http://www.fool.com/">If a Stock Market Crash Is Coming, This ETF Could Be the Smartest Buy Right Now</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,088.34 (+5.76%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 868.41 (+0.19%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-07-06 주식 시장에서 133건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,088.34(+5.76%), KOSDAQ 868.41(+0.19%), USD/KRW 1,529.16(-0.51%).
 - *OpenAI IPO 지연 보고서가 AI 우려로 심화됨에 따라 전 세계 기술주 하락 qz.com*
 
 ## 테마별 주요 뉴스

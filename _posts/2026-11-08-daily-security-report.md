@@ -16,32 +16,6 @@ description: "블록체인 보안 리포트 — 사이버 보안 위협과 취�
 
 블록체인 보안 20건 분석. 주목 사건: **[Security] Here’s what happened in crypto today** / 보안 뉴스 헤드라인: Binance hack triggers smaller DeFi run than $292M Kelp explo.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Binance hack is ‘cyber war,’ TRM Labs executive says 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 20건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (20건): security, exploit, binance 보안 이슈 (20건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🏦 거래소** (7건): binance, exploit, hack 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🟣 DeFi** (5건): 디파이 DeFi 동향 (5건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Binance hack is ‘cyber war,’ TRM Labs executive says
-- [Security] Binance hackers had 8-week intrusion window before $6.3B exploit: SEAL
-- [보안] TENDRIL 익스플로잇: 스왑 로직 결함
-
-### 주요 이슈
-
-
-### 투자자 체크포인트
-
-- 보안 사건 18건, 보안 뉴스 2건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 20건

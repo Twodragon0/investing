@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 대표 브리핑 이미지"
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -5.44%</li><li>🔴 <strong>Stellar</strong> (XLM): -4.91%</li><li>🔴 <strong>Cardano</strong> (ADA): -4.23%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **12건** 수집

@@ -14,7 +14,6 @@ description: "엔비디아·AMD 경영진도 매도…AI 내부자들 ‘고점 
 image_alt: "정치인 거래·정책 리포트 - 2026-11-08 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-11-08.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-11-08.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-11-08** 정치권 핵심 이슈: **엔비디아·AMD 경영진도 매도…AI 내부자들 ‘고점 탈출’ 74억 달러 - 조세일보**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **35건** (SEC 내부자 거래 19건, 트럼프 정책 15건, 중앙은행 1건)을 종합 정리합니다
@@ -25,15 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-08 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(22회), **관세**(12회), **SEC(미국증권거래위원회)**(10회), **의회**(2회), **연준**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **35건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 19건, 트럼프 정책 15건, 중앙은행 1건입니다.
-
-**트럼프 정책** 관련으로는 Trump administration moves closer to allowing crypto in 401(k) retirement plans The Block 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 US October CPI Expected Up 0.3% Month-on-Month; A Week That Will Shape the Fed's Rate Decision BigGo Finance 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-11-08 정치권 핵심 이슈: 엔비디아·AMD 경영진도 매도…AI 내부자들 ‘고점 탈출’ 74억 달러 - 조세일보. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 35건 (SEC 내부자 거래 19건, 트럼프 정책 15건, 중앙은행 1건)을 종합 정리합니다
+- 1. Trump administration moves closer to allowing crypto in 401(k) retirement plans
 
 ## 1. 트럼프 행정명령/정책
 

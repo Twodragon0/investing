@@ -29,32 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-08 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋 - 9건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 규제 이슈 부각</li><li>🏦 <strong>거래소</strong>: 3건 수집</li><li>🔴 <strong>보안/해킹</strong>: 규제, 가상자산사업자 관련 2건</li><li>📈 <strong>가격/시장</strong>: 3건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE13RG5GV25aRzNtSUNjOW1aSUc0UElQVms3anNPc0ZmZmtpMUYtX0luZEFVMUFZWnJmS0NrbXpSck1QQkVjZEtLanNtNm9jbS02Mm1QUDVjS1dhUjJNaVNPQUp1Q0NHVWtFMGhnaG1wcXVsdw?oc=5">"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋</a> <span class="p0-desc">"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋 
-총 9건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (7건): 규제 규제 움직임 (7건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (3건): 규제 관련 지표와 수급 흐름을 함께 확인하세요.
-- **🔴 보안/해킹** (2건): 규제, 가상자산사업자, 가이드라인 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- "가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보".금융당국, 11월 가이드라인 마련 - 디지털애셋
-
-### 주요 이슈
-
-- 일본-EU 공동 금융 규제 포럼 제7차 국제 회의
-
-### 투자자 체크포인트
-
-- **주요 지역**: 아시아 4건, 한국 3건, 유럽 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 9건
 - **아시아**: 4건

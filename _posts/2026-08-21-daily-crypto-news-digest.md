@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-21 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.fool.com/investing/2026/08/19/looking-to-diversify-your-portfolio-heres-1-crypto/">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다.</a> <span class="p0-desc">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다. 급락 관련 보도.</span></li><li><a href="https://decrypt.co/375976/maya-protocol-halts-network-bitcoin-exploit">Six-Bug Exploit Halts Maya Protocol After $1.4 Million in Bitcoin Stolen</a></li><li><a href="https://www.coindesk.com/markets/2026/08/20/bearish-crypto-bets-lose-record-usd2-7-billion-as-bitcoin-surges-toward-usd70-000">약세 암호화폐 베팅은 비트코인이 $71,000를 넘어서면서 기록적인 $30억 손실을 입었습니다.</a> <span class="p0-desc">암호화폐에 베팅한 거래자들은 하루에 27억 4천만 달러의 손실을 입었습니다. 이는 시장 역사상 가장 큰 청산 이벤트로 남아 있는 2025년 10월 폭락의 단기 손실보다 더 많은 것.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **107건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- 2026-08-21 암호화폐 핵심 뉴스: 비트코인은 트럼프로 이틀 만에 12% 급등, 암호화폐 경영진이 Clarity Act를 위한 최후의 노력을 주도함. 총 107건 분석, 핵심 테마는 비트코인, 가격/시장, 정치/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
