@@ -145,7 +145,7 @@ jobs:
       - name: Generate coverage comment
         id: coverage_comment
         if: github.event_name == 'pull_request'
-        uses: py-cov-action/python-coverage-comment-action@a05be3d2e8a6272d3ef5fb2840ab20368bb2eb71  # v4.3
+        uses: py-cov-action/python-coverage-comment-action@e5fb2218463c3377f3504b0c5b5646ed53da7a2f  # v4.5
         with:
           GITHUB_TOKEN: ${{ github.token }}
           ACTIVITY: process_pr
@@ -171,7 +171,7 @@ jobs:
       # `save_coverage_data_files` 는 `contents: write` 를 요구한다(잡 상단에 있음).
       - name: Save coverage data on push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: py-cov-action/python-coverage-comment-action@a05be3d2e8a6272d3ef5fb2840ab20368bb2eb71  # v4.3
+        uses: py-cov-action/python-coverage-comment-action@e5fb2218463c3377f3504b0c5b5646ed53da7a2f  # v4.5
         with:
           GITHUB_TOKEN: ${{ github.token }}
           ACTIVITY: save_coverage_data_files
