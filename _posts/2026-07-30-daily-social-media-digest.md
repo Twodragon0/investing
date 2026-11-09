@@ -32,12 +32,13 @@ image_alt: "소셜 미디어 동향 - 2026-07-30 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com">연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우 폭락, 유가 상승 — 실시간 업데이트</a> <span class="p0-desc">연준 오늘 회의: FOMC, Warsh 가중치 이자율 결정; 다우지수 하락, 유가 상승</span></li><li><a href="https://www.reuters.com">금은 달러화에 따라 하락하고 연준 금리 결정을 앞두고 수익률은 상승한다고 Warsh는 말했습니다.</a> <span class="p0-desc">금은 달러로 하락하고 연준 금리 결정을 앞두고 수익률이 상승한다고 Warsh는 말했습니다. Reuters</span></li><li><a href="https://www.businessinsider.com">연준 회의 업데이트: FOMC의 이자율 결정은 몇 달 만에 가장 가까운 결정입니다 - Business Insider</a> <span class="p0-desc">Business Insider tells the global tech, finance, stock market, media, economy, lifestyle, real estate, AI and innovative stories you want to know.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 36건 중 텔레그램 0건, 소셜 1건, 정치·경제 35건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 36건 중 텔레그램 0건, 소셜 1건, 정치·경제 35건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

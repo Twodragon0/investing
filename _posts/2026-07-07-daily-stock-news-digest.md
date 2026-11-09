@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-07 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9HWjFOVHAtUGg1M21LZjJBQlZqYzg3R2t6ZmRKNUV3ZjhSb0JCU0wwai1wVm82cDFVbDZEMENTMlRjWWQxdENyYXZlaGVWSTAyYmowNlRIek1uek9idWhrYWxVbEhmS0tR?oc=5">코스피 8000선 턱걸이 마감, 코스닥은 2%대 급락 - 2news.co.kr</a> <span class="p0-desc">코스피 8000선 턱걸이 마감, 코스닥은 2%대 급락 2news.co.kr</span></li><li><a href="https://moneywise.com/">Robert Kiyosaki says the ‘everything bubble’ is about to pop in the ‘worst crash in history.’ Protect yourself now</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,051.33 (-0.46%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 847.07 (-2.46%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-07-07 주식 시장에서 157건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,051.33(-0.46%), KOSDAQ 847.07(-2.46%), USD/KRW 1,529.10(-0.07%).
 - *스페셜타임스, 인터넷뉴스, 뉴스, 미디어, 인터넷신문, 신문, 언론*
 
 ## 테마별 주요 뉴스

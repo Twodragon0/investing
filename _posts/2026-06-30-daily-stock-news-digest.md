@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-30 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.gokorea.kr">코스피 급락, 코스닥은 상승… 명암 엇갈린 주식시장</a> <span class="p0-desc">코스피 급락, 코스닥은 상승… 명암 엇갈린 주식시장 공감신문</span></li><li><a href="https://www.specialtimes.co.kr">삼성전자·SK하이닉스 주가 급락… 외국인 매도세 집중, 반도체 시장 흔들 - 스페셜타임스</a> <span class="p0-desc">스페셜타임스, 인터넷뉴스, 뉴스, 미디어, 인터넷신문, 신문, 언론</span></li><li><a href="https://www.marketwatch.com/story/theres-a-trump-account-hack-that-can-unlock-decades-of-wealth-building-for-your-kid-b84188b6?mod=mw_rss_topstories">There’s a ‘Trump account’ hack that can unlock decades of wealth-building for your kid</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,394.65 (-0.20%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 920.57 (+8.13%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-06-30 주식 시장에서 167건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,394.65(-0.20%), KOSDAQ 920.57(+8.13%), USD/KRW 1,541.86(+0.45%).
 - *미국 대법원은 트럼프 행정부의 Lisa Cook 주지사 해임 추진을 거부하고, 주지사의 해임 가능성에 대해 소송이 진행 중인 가운데 대통령에게는 그렇게 할 권한이 없다고 판결했습니다.*
 
 ## 테마별 주요 뉴스

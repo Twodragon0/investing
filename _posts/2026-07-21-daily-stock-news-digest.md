@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-21 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ra1lvclpvQzV6WExOYkZEb1M2aTBlWWtZWkNZZ0VpZE5ZNE85aFhUeEZNZFd1RUVhR3p1WXM1NXhmMFM2VFBqeVVzbDluZWw1?oc=5">코스피·코스닥 매도 사이드카… 7월 10조 사들인 개미 ‘비명’ - 문화일보</a> <span class="p0-desc">코스피·코스닥 매도 사이드카… 7월 10조 사들인 개미 ‘비명’ 문화일보</span></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE95RHJtRnJTbnctLURNa3RDN1o4cTFULTNmU0NhNEp0a0Nnd1llNUNxd1VGV3pWV2JhRzBITHBYUVFiaTFXb2NjaFFxaGJwM0ItOTNOcFNFUkpoWFUwSW9XSjBxMWlMWXRHM28yRDRsZmJwUHZ5WEE?oc=5">0720마감체크] 반도체 피크아웃 우려·중동 악재에 코스피·코스닥 급락</a> <span class="p0-desc">[0720마감체크] 반도체 피크아웃 우려·중동 악재에 코스피·코스닥 급락 인포스탁데일리</span></li><li><a href="https://www.gokorea.kr">코스피·코스닥 동반 급락…매도 사이드카 발동 속 시장 변동성 최고조</a> <span class="p0-desc">코스피·코스닥 동반 급락…매도 사이드카 발동 속 시장 변동성 최고조 공감신문</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,516.27 (-4.46%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 749.64 (-5.33%).
+- 2026-07-21 주식 시장에서 178건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,516.27(-4.46%), KOSDAQ 749.64(-5.33%), USD/KRW 1,477.38(-0.68%).
 - *Investorideas.com에서 2025년 최고의 투자 아이디어를 살펴보세요.*
 
 ## 테마별 주요 뉴스

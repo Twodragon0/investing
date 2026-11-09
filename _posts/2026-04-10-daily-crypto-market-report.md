@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-10 | ZEC +12.0% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Zcash</strong> (ZEC): +12.05%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +5.96%</li><li>🟢 <strong>Monero</strong> (XMR): +5.36%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집

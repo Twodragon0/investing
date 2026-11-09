@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-09 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다. - 96건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 국채, 애플 주목</li><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 주목</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 국채, 인하 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPQlhVMklhbzMtMjg0SnRkR0J6Wm0xSEstaE80bkFJUENCeTYya05SUERKTkhPV1dpSF9oZTRoaFN5WExhcUdfeWs1WHQ3amlTcnQ3Y09Ea2dJdGJvSk9ack8xR2hKa0JUT0w0QVgxejVyWlpSRkdyZ0F3ZUZnTkdxd2Q1TzVtMmJybVRlbkRTODgzd9IBlwFBVV95cUxQNmVPZS1PeUhwQUJqNjJ3U1BaY2JNU255VUpVNWJjRTVhcjEybVF0ams3X2RNSXdBQURxaHlmSG1BYVRUZHd0Y1dKVDVYRTRqR2k0Mks5Vk55WjU5MEZtdXRTOThuaEJlQTc5Sm1yWWMwN09nazZ1Um02T2gtdUwyN0dDY2hTUjc4UnB0cnUzdWtudnFMNlBV?oc=5">바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다.</a> <span class="p0-desc">바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다. Fox Business</span></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNNUFFVnFlVHByMEdjYWhxM0l4MEpCY2dMU3ZKZlM5NnJ4N2gyVzNxaUZXWVQxQVlScVRCS3htTS11Y3Jpdzg0N19KeGNlSFFHU2g2bVZiUHNCT3hVVWRBT2NZMTc4aXptckZITGdqdS1BTWtYTEUzWTNRSHpqdzBTeVV6cVU?oc=5">3 알트코인, 암호화폐 폭락 반전</a> <span class="p0-desc">3 알트코인, 암호화폐 폭락 반전 BeInCrypto</span></li><li><a href="https://cointelegraph.com/interview/trm-labs-binance-hack-interview?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">바이낸스 해킹은 '사이버 전쟁'이라고 TRM Labs 임원은 말합니다.</a> <span class="p0-desc">TRM Labs의 Ari Redbord 임원은 기록적인 63억 달러 규모의 바이낸스 절도 사건 이후 정부가 북한 해커에 대해 공격적인 조치를 취할 것을 촉구했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다. 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 96건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (33건): 국채, 애플 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🟠 비트코인** (24건): 비트코인, 달러 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (18건): 달러, 암호화폐, BTC 가격 변동 (18건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 3 알트코인, 암호화폐 폭락 반전
-- 바이낸스 해킹은 '사이버 전쟁'이라고 TRM Labs 임원은 말합니다.
-
-### 주요 이슈
-
-- Hyperliquid 재무 회사가 미국 선물 중개인이 되고 싶어하는 이유
-- 비트코인 ETF는 기술 대패 테스트로 4억 3천만 달러의 손실을 입었습니다. 월스트리트 구매자
-- 미국, 암호화폐 사기 혐의와 관련된 45개 추가 표적 Empire Prince Group 제재
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, 이더리움, ETF
-- **주요 출처**: Binance(35건), Cointelegraph(15건), Decrypt(13건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-09.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **96건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 📈 가격/시장
+- 2026-11-09 암호화폐 핵심 뉴스: 바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다.. 총 96건 분석, 핵심 테마는 거래소, 비트코인, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

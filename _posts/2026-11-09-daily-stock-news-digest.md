@@ -32,45 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-09 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">644.27</div><div class="stat-label">KOSDAQ -4.39%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 삼성전자, 외국인, 하이닉스 부각 132건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 외국인 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 외국인, 반도체 관련 12건</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 132건의 뉴스에서 **가격/시장**(19건)과 **AI/기술**(12건)이 동시에 부각되고 있습니다. AI 관련 기술 발전이 시장에서 새로운 투자 테마로 주목받고 있습니다
-
-### 테마별 동향
-
-- **📈 가격/시장** (19건): 삼성전자, 외국인, 하이닉스 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (12건): 외국인, 반도체, 하이닉스 기술 이슈 (12건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (4건): 연준, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 주요 이슈
-
-- 주식시장에서 격동의 한 주를 보낸 후 경고 신호가 넘쳐납니다 - The Boston Globe
-- 미국 시장 콜: S&P 500 수익 급증으로 가치 평가 급락 - Yardeni QuickTakes
-- 美 데이터센터 규제發 '블루 쇼크' … 외국인 7.6조 탈출에 '삼전닉스' 와르르
-- 외 18건
-
-### 투자자 체크포인트
-
-- 한국 기사 48건, 글로벌 기사 84건 수집
-- 한국 지수: KOSPI 5,059.69(-5.27%), KOSDAQ 644.27(-4.39%), USD/KRW 1,363.65(+0.57%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:63%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:21%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:21%"></div></div><span class="theme-count">4건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:11%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-09.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-09.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,059.69 (-5.27%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 644.27 (-4.39%).
+- 2026-11-09 주식 시장에서 132건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,059.69(-5.27%), KOSDAQ 644.27(-4.39%), USD/KRW 1,363.65(+0.57%).
+- *약세장이 다가오더라도 S&P 500에 계속 투자하는 이유는 다음과 같습니다.*
 
 ## 테마별 주요 뉴스
 
