@@ -29,44 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-11-10 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: CPI Inflation Data: How the October Report Affects the Fed’s Next Rate Decision - 17건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 기준금리, 반도체 관련 12건</li><li>🤖 <strong>AI/기술</strong>: 반도체, 내년 주목</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 매일산업뉴스 동향 주시</li><li>📈 <strong>가격/시장</strong>: 기준금리, 반도체 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQb0dpUnNRSjlyNnVNVFJOSjlnLXBPOWFjdGVVNlVuZnM4ckJzRllBSEVPWkdxWTV5Ujl5MHMwa3piNmQtU3lta0xaTE1xNVJfdmdrVzFuS3MxRnBSbWZjSGNoMnA2THJ2NVBHUmVDM2s4UFJnNVNFb3pxcjRmMl9CdFMwRzVYc2l5RTJxSHpwLU8?oc=5">CPI Inflation Data: How the October Report Affects the Fed’s Next Rate Decision</a></li><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9ibWtNSThKY3ZUNTVWRTRKeG1IdHYwVjdRdmF1Q3dTdVl6V0tzSkJNTWduTEtXODc5Q1liS2l4Y040ejNGZVRCSlV6OWRNSWtBSUtLZU02bGc0cFJsb0hSSzM5UTNuZHMyanFBLV9qUnNjcmFJ?oc=5">증시 급락 속 금리전망 설왕설래.'피벗 시기상조론'부터 '반도체 급락효과론'까지 - 파이낸셜포스트</a> <span class="p0-desc">증시 급락 속 금리전망 설왕설래.'피벗 시기상조론'부터 '반도체 급락효과론'까지 파이낸셜포스트</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: CPI Inflation Data: How the October Report Affects the Fed’s Next Rate Decision 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 17건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 17건 중 텔레그램 0건, 소셜 0건, 정치·경제 17건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (12건): 기준금리, 반도체, 내년 매크로 변수 (12건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (3건): 반도체, 내년, 씨티 기술 이슈 (3건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **🏛️ 정치/정책** (3건): 이재명, 매일산업뉴스, 트럼프 정치 이슈 (3건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- CPI Inflation Data: How the October Report Affects the Fed’s Next Rate Decision
-- 증시 급락 속 금리전망 설왕설래.'피벗 시기상조론'부터 '반도체 급락효과론'까지 - 파이낸셜포스트
-
-### 투자자 체크포인트
-
-- 정치·경제 17건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:25%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:25%"></div></div><span class="theme-count">3건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:100%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:8%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-11-10.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-11-10.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 2건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 

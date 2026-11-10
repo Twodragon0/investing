@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-27 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPdnVMeHR0cjdhVXpVQk9hZWdUUkVoMjAwX3g5OG5iWWprMW5XeEJoaC1CaTlDUVZSZ1ZjZnE4SFpsLWlCMXFXWE1lNnRoNzBKU1NqM2J1QmNUSVNhRzB4MUJxdXpMR0dQRUpNeGFOdDJ6Z25fcjA2QmVvczUxQko5RHc0d0tycDdIZGxIaGlqM3Z3OWhKeEhGMUxB0gGfAUFVX3lxTFA4SUxwS3ZmSEZwWmtRM0VkOUtZQUlSN0djS0JYRkxhMnF1VFhpVzdRWU91b1BoTjBhUm5HVkt4OHhMNElOR0JHYXpGTm5Md0NRa0lmTC1MRzNmWlAwb1lzX2hYbWgzSExzS0pZRXNfd01LNktjbVZBYTJwa2t2d0M5NUxqd2ZMVXJIam9lRHJrN09hcmlyVEpUYVptZzM0VQ?oc=5">U.S. Treasury yields are little changed as investors look ahead to the Fed's rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OcEI2VDlSbWY2ZVB3T0cxWUxscW1LRURUUW0wbEY3M2g0WTlXQ0JqeXIwc2taRmpMMjVkSTBIaXhRYmliNFlUNGVzTXZpSWNjdkJr?oc=5">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉</a> <span class="p0-desc">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 뉴닉</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFA1WjM3akVNRlJ6ZmtUQVRWal9BeU5obGNNU0JNTkxDcnJxd3BrZndGd2l5bHR2dHRTTkt5LWNyaXlYRF9rNk9Wb1FnLV82RXVGZGtNTnZYeWZ6S2RPekZZU05IYUdncEZvLWxYT3RTS0vSAXRBVV95cUxPbmM3S1YzU3JjSG9OR1pLanVFSkZWekZOamlhSExqNHdBWUVzZjJtV2pBajlRdXJ1OUt5Wk96YlZnQXdfamRRak1zX1RnMm9KaGY0WnN6c0xtNWN1OVU3czc2UW5Kc0dLaVV1MWZLNVQxOGU3TQ?oc=5">코스피, 외국인 매도에 5,500선 붕괴…코스닥도 2%대 급락 - 산경투데이</a> <span class="p0-desc">코스피, 외국인 매도에 5,500선 붕괴…코스닥도 2%대 급락 산경투데이</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,469.47 (-1.00%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 727.21 (-3.12%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-27 주식 시장에서 163건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,469.47(-1.00%), KOSDAQ 727.21(-3.12%), USD/KRW 1,325.84(+0.16%).
 - *오늘의 주식 시장: Dow, S&P 500 및 나스닥는 IPO에 대한 인류학 파일로 상승합니다.*
 
 ## 테마별 주요 뉴스
