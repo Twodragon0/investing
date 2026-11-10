@@ -21,11 +21,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-02 - 정치인 거래 �
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">총 수집 건수</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">SEC 내부자</div></div></div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-08-02 정치권 핵심 이슈: Paysign(PAYS) 이사는 2027년 - Stock Titan 가득 20,000주의 주식 보조금을 받습니다.. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 3건 (SEC 내부자 거래 3건)을 종합 정리합니다
-- 1. Paysign(PAYS) 이사는 2027년 - Stock Titan 가득 20,000주의 주식 보조금을 받습니다. Stock Titan의 AI 기반 도구로 거래 수준을 높이세요.
 
 ## 1. SEC 내부자 거래 (Form 4)
 

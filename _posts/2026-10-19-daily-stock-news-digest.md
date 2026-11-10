@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-19 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE81cnBLdXdOc0hka1pzbm1xXzFmbjRydW9XTlJDdGdfLVNwaVBTYjJER29kV1JscFZJVWEtdkpKTVZLMGsxZjdZSGY4bWhHUF9FWUpoZzZ2LTNYLUhpUHhHTjlsSQ?oc=5">코스피 겨우 반등했는데 美반도체 3.8% 또 급락…월요일 '삼전닉스' 다시 시험대 - 녹색경제신문</a> <span class="p0-desc">코스피 겨우 반등했는데 美반도체 3.8% 또 급락…월요일 '삼전닉스' 다시 시험대 녹색경제신문</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,668.05 (+2.05%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 794.78 (+4.46%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-19 주식 시장에서 132건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,668.05(+2.05%), KOSDAQ 794.78(+4.46%), USD/KRW 1,334.20(-0.52%).
 - *오늘, 10월 16일 주식 시장: AI 소프트웨어 평가가 역전되면서 기술주 급락 Yahoo Finance*
 
 ## 테마별 주요 뉴스
