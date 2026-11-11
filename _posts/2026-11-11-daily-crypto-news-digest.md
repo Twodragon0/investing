@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-11 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 사이버 범죄자가 감옥에서 £2m 암호화폐 절도 입찰을 조직했습니다. - 120건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 주목</li><li>🏦 <strong>거래소</strong>: 28건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, 코인리더스 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, CPI 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IYlRJTDRGamJSVExZWERYaUF2M1VGcnRUWFVCMGRpRkEwR2IwM0Z2Z09YUGI5RncxN3V4VzR4OGhfRDVWWm5Zc2t6YVZpVzhDMWpsNFpzeGtJQ1E?oc=5">사이버 범죄자가 감옥에서 £2m 암호화폐 절도 입찰을 조직했습니다.</a> <span class="p0-desc">사이버 범죄 조직 BBC에서 £2m 암호화폐 절도 입찰 시도</span></li><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE10QUxtcWRfaHkxX0lvYWFoR20wLXRfWTgzeVZfdFRuRU1jNFJKNFY0NG0wNlhxOXlHTXl3THBHREpIZUdGRHNVeGl3?oc=5">암호화폐 시장 또 급락…연준 긴축 우려와 비트코인 청산 여파 - 코인리더스</a> <span class="p0-desc">암호화폐 시장 또 급락…연준 긴축 우려와 비트코인 청산 여파 코인리더스</span></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9yWDN4NjdvazhiQ1YyWG1ScDhBMEhBUzVBUHZXbWdGTXdTZGZCaTJySWp5V0h6bEp3Sy10T3d0dVI3TG9rZ0FZeGo3WE1QTE9kY251ZTlFU2RjM3EwSXVBZE9pLWplaWs2ZlJGcFpXOTB2Um1KV2c?oc=5">비트코인 IPO 전 29% 급락…앤트로픽 데뷔도 반복?</a> <span class="p0-desc">비트코인 IPO 전 29% 급락…앤트로픽 데뷔도 반복? BeInCrypto</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 사이버 범죄자가 감옥에서 £2m 암호화폐 절도 입찰을 조직했습니다. 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 120건의 뉴스 중 P1 주요 이슈도 17건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (46건): 비트코인, 코인리더스, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (28건): binance, expose, flaw 관련 불확실성이 커지고 있어 리스크 관리에 유의하세요.
-- **📈 가격/시장** (26건): 달러, 코인리더스, 암호화폐 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 사이버 범죄자가 감옥에서 £2m 암호화폐 절도 입찰을 조직했습니다.
-- 암호화폐 시장 또 급락…연준 긴축 우려와 비트코인 청산 여파 - 코인리더스
-- 비트코인 IPO 전 29% 급락…앤트로픽 데뷔도 반복?
-
-### 주요 이슈
-
-- 한국 공정거래위원회, 네이버-두나무 테이크오버에 대한 독점금지 우려 고려
-- 블랙록(BLK) IBIT 7거래일 연속 순유출.비트코인 ETF 이탈, 언제 멈추나 - 코인리더스
-- 예상 웃돈 미국 물가·규제 불확실성에 비트코인 7만4천 달러대로 하락 - Investing.com 한국어
-- 외 14건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Binance(35건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-11.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-11.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **120건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-11 암호화폐 핵심 뉴스: XRP은 30일 동안 22% 하락했습니다. XRP은 11월 말 이전에 백업되나요? - 연중무휴 월 스트리트. 총 120건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
