@@ -155,7 +155,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383040/okx-ice-tokenized-stock-venue-sets-launch-crypto-companies-big-tech-opts-out" class="news-title" target="_blank" rel="noopener noreferrer">OKX-ICE Tokenized Stock Venue Sets Launch, Turning to Crypto Companies After Big Tech Opts Out</a>
-<p class="news-desc">OKXICE will open its tokenized securities venue Nov. 23 with more than 70 assets, led by crypto companies like Coinbase, Circle, Robinhood and Strategy, after 67 companies objected to having their shares listed.</p>
+<p class="news-desc">미국 기업의 거부 이후 OKX와 ICE의 토큰화된 스톡 장소는 암호화폐 자체 공개 기업이라는 출시 라인업을 찾았습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -167,7 +167,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383001/morning-minute-what-anthropics-1-4-trillion-ipo-means-for-crypto" class="news-title" target="_blank" rel="noopener noreferrer">Morning Minute: What Anthropic’s $1.4 Trillion IPO Means for Crypto</a>
-<p class="news-desc">Hint: if it plays out similarly to the SpaceX IPO, it means the Bitcoin bottom is very close.</p>
+<p class="news-desc">힌트: SpaceX IPO과 유사하게 진행된다면 비트코인 바닥이 매우 가깝다는 의미입니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -207,7 +207,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383000/kraken-parent-payward-brings-200-uk-and-eu-stocks-onchain-as-xstocks" class="news-title" target="_blank" rel="noopener noreferrer">Kraken Parent Payward Brings 200 UK and EU Stocks Onchain as xStocks</a>
-<p class="news-desc">The expansion takes xStocks past 1,500 tokenized assets, though the new UK tokens still can't be bought by investors in the UK.</p>
+<p class="news-desc">확장으로 인해 xStocks는 토큰화된 자산 1,500개를 넘어섰지만, 새로운 영국 토큰은 여전히 ​​영국 투자자가 구매할 수 없습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -219,7 +219,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/382982/bitcoin-miner-hive-eyes-45-million-ai-data-center" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin Miner HIVE Eyes $45 Million in Annual Revenue From AI Deal</a>
-<p class="news-desc">The Bitcoin miner says its Boden facility could generate $45 million annually, but a June letter of intent remains nonbinding as executives negotiate financing and customer protections for the project.</p>
+<p class="news-desc">비트코인 채굴업체 HIVE는 Boden 시설이 연간 4,500만 달러를 창출할 수 있다고 밝혔지만 6월 의향서는 아직 구속력이 없습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -315,7 +315,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin hovers near $74K as stocks rise despite US bond yield rebound</a>
-<p class="news-desc">Bitcoin traded in a narrow range as investors bought the dip in tech stocks and US bond yields climbed on high CPI inflation data.</p>
+<p class="news-desc">비트코인 가격 조치는 높은 미국 CPI 인플레이션으로 인해 미국 채권 수익률이 급등하는 가운데 기술주 반등을 방지합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -327,7 +327,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/ecb-warns-legislative-delays-digital-euro-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">ECB warns legislative delays could postpone digital euro launch</a>
-<p class="news-desc">ECB Executive Board member Piero Cipollone warned EU lawmakers that delays in finalizing digital euro legislation could push back its potential 2029 rollout.</p>
+<p class="news-desc">ECB은 EU 국회의원들이 연말 기한을 앞두고 있어 입법 지연으로 인해 디지털 유로의 잠재적인 2029년 출시가 연기될 수 있다고 경고했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
