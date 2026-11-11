@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-05 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZXpDX29iOWZfM0JZd3hobEU3SVFHamNBUlZoUGkxS3dLZzRhbE9yTjRCMFFRSklaZlNPdlZfdUd2a0pUY1FtcEEwenJqN05ZelFuNHVRTE1SZm92TkdzZWtONjVZdmFTaTNrczYxRUdGc2xleWhIY1NESVFKS0E0RHBYQ3VZcTB2azJMU2dtazZJY0M2WEc0N1RPX2VZdTJmLWk4OHgtajbSAa4BQVVfeXFMTnJkR0RtM2s0VzB3Wi1NZ3RqNWJHRVZuVnVmbnotZVdhczRjZ3VZRWY1YjdlRVhyTU9LbUF2Q3ZfOE5OWmozMXhXR21EMElQRmtsQWhxbjNUUU11QTFoVUU1NUM4TWloVEhrcUFVVXZod016QVl2a1VteGs1MWh4QzFuMTVrNlJUUDY2U29QNkM3aE81WkVaR2xuNkNMTHZ2S2YwbExvM3k0T2lCQktB?oc=5">N Korea fires multiple missiles, denies US claims on Binance hack - Al Jazeera</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBYX19RYUxGZWxBWUhSamdHeFAxc0JxSFVEeERIb0k0ekV5Wko0d0d1eGpINVh5NTdwZTZOSl83MnY2NlVYdjhNMmlwell6a1hGR1JBYUluTFZqUFhsT3N0LWxIcWxEdmtubE82NGl2dXk5bEk?oc=5">비트코인·이더리움·솔라나, 중간선거 때마다 최대 50% 급락… 오늘 미국 선거 - Investing.com 한국어</a> <span class="p0-desc">비트코인·이더리움·솔라나, 중간선거 때마다 최대 50% 급락… 오늘 미국 선거 Investing.com 한국어</span></li><li><a href="https://cointelegraph.com/markets/crypto-market-recovery-grayscale-binance-hack-temporary-setback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-11-05 암호화폐 시장 121건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

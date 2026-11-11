@@ -34,12 +34,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-09 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 삼성전자, 외국인, 하이닉스 부각 132건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 외국인 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 외국인, 반도체 관련 12건</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,059.69 (-5.27%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 644.27 (-4.39%).
-- 2026-11-09 주식 시장에서 132건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,059.69(-5.27%), KOSDAQ 644.27(-4.39%), USD/KRW 1,363.65(+0.57%).
 - *약세장이 다가오더라도 S&P 500에 계속 투자하는 이유는 다음과 같습니다.*
 
 ## 테마별 주요 뉴스

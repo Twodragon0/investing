@@ -34,11 +34,9 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-10 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com">Will the Stock Market Crash if the Federal Reserve Raises Interest Rates? Soaring Bond Yields Portend Trouble.</a></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Xd1EwMzNaWGZFTnFYLUJQZHVzZXdVWFE5LWVfaWsxWklaX0lZRVRFclV4VmpoSUc2bmdpZWdDbEdQalp0ZHV0LWNyS05WbWIzOVNRdFVfUEdaZmhXWHBqRNIBYEFVX3lxTE9Xd1EwMzNaWGZFTnFYLUJQZHVzZXdVWFE5LWVfaWsxWklaX0lZRVRFclV4VmpoSUc2bmdpZWdDbEdQalp0ZHV0LWNyS05WbWIzOVNRdFVfUEdaZmhXWHBqRA?oc=5">반도체발 급락에 코스피·코스닥, 잇단 서킷브레이커(종합2보)</a> <span class="p0-desc">반도체발 급락에 코스피·코스닥, 잇단 서킷브레이커(종합2보) 연합뉴스</span></li><li><a href="https://www.newspim.com">개장시황] 매수 사이드카 발동…코스피·코스닥 급반등 - 뉴스핌</a> <span class="p0-desc">[개장시황] 매수 사이드카 발동…코스피·코스닥 급반등 뉴스핌</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSDAQ 967.81 (+6.19%).
-- 2026-06-10 주식 시장에서 206건의 뉴스를 분석했습니다. 한국 시장: KOSDAQ 967.81(+6.19%), USD/KRW 1,528.70(+0.12%).
 - *거대 IPO이 가까워짐에 따라 SpaceX의 수익성이 매우 높은 AI 컴퓨팅 거래의 시기와 조건이 우려를 더하고 있습니다.*
 
 ## 테마별 주요 뉴스
