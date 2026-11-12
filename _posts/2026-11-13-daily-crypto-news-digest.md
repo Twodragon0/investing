@@ -165,7 +165,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/eu-defi-riskier-platforms-coinbase-exec?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">EU DeFi proposals could push users to riskier platforms, says Coinbase exec</a>
-<p class="news-desc">Coinbase’s EU policy chief says applying suitability tests beyond crypto lending and borrowing could limit access and fragment liquidity.</p>
+<p class="news-desc">코인베이스 경영진은 제안된 EU 디파이 규칙으로 인해 규제된 암호화폐 플랫폼이 서비스를 제공하지 못하게 되어 사용자에게 더 적은 보호를 제공할 수 있다고 경고했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -273,7 +273,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-13 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/markets/bitcoin-price-drops-71k-stocks-nvidia-huang-resignation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin slides toward $71K as Nvidia stock tumbles after Huang steps down</a>
-<p class="news-desc">Bitcoin fell to its lowest leve since Aug. 20 as tech stocks slid following the resignation of Nvidia CEO Jensen Huang.</p>
+<p class="news-desc">비트코인은 엔비디아 CEO 젠슨 황의 사임으로 새로운 기술주 매도가 촉발되면서 $71,000에 가까운 11주 최저치를 기록했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
