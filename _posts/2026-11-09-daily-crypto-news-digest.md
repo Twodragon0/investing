@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-09 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPQlhVMklhbzMtMjg0SnRkR0J6Wm0xSEstaE80bkFJUENCeTYya05SUERKTkhPV1dpSF9oZTRoaFN5WExhcUdfeWs1WHQ3amlTcnQ3Y09Ea2dJdGJvSk9ack8xR2hKa0JUT0w0QVgxejVyWlpSRkdyZ0F3ZUZnTkdxd2Q1TzVtMmJybVRlbkRTODgzd9IBlwFBVV95cUxQNmVPZS1PeUhwQUJqNjJ3U1BaY2JNU255VUpVNWJjRTVhcjEybVF0ams3X2RNSXdBQURxaHlmSG1BYVRUZHd0Y1dKVDVYRTRqR2k0Mks5Vk55WjU5MEZtdXRTOThuaEJlQTc5Sm1yWWMwN09nazZ1Um02T2gtdUwyN0dDY2hTUjc4UnB0cnUzdWtudnFMNlBV?oc=5">바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다.</a> <span class="p0-desc">바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다. Fox Business</span></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNNUFFVnFlVHByMEdjYWhxM0l4MEpCY2dMU3ZKZlM5NnJ4N2gyVzNxaUZXWVQxQVlScVRCS3htTS11Y3Jpdzg0N19KeGNlSFFHU2g2bVZiUHNCT3hVVWRBT2NZMTc4aXptckZITGdqdS1BTWtYTEUzWTNRSHpqdzBTeVV6cVU?oc=5">3 알트코인, 암호화폐 폭락 반전</a> <span class="p0-desc">3 알트코인, 암호화폐 폭락 반전 BeInCrypto</span></li><li><a href="https://cointelegraph.com/interview/trm-labs-binance-hack-interview?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">바이낸스 해킹은 '사이버 전쟁'이라고 TRM Labs 임원은 말합니다.</a> <span class="p0-desc">TRM Labs의 Ari Redbord 임원은 기록적인 63억 달러 규모의 바이낸스 절도 사건 이후 정부가 북한 해커에 대해 공격적인 조치를 취할 것을 촉구했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **96건** 수집
 - 주요 테마: 🏦 거래소, 🟠 비트코인, 📈 가격/시장
-- 2026-11-09 암호화폐 핵심 뉴스: 바이낸스는 63억 달러 규모의 암호화폐 해킹 이후 새로운 CFO을 명명했습니다.. 총 96건 분석, 핵심 테마는 거래소, 비트코인, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

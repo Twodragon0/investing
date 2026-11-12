@@ -32,13 +32,12 @@ image_alt: "소셜 미디어 동향 - 2026-08-22 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUYjhZaWpDdkVPUVY2eEo2THpzNHNZUEtoQUJYRGNrR09TY0hESllWbzFxR2lKaEp5UkFCZ3d1UGNWYmkwRzV1QWhCMEM1SE5HeWFFeGFB?oc=5">이상렬의 시시각각] 이재명 정부 경제팀의 세 가지 오류</a> <span class="p0-desc">뜨거운 여름이었다. 그러나 폭염보다 국민들을 더 힘들게 만든 건 경제 실정(失政)이었다. 부동산은 수도권 매매·전세·월세 시장이 모두 급등하는 전례 없는 대란을 겪고 있고, 주가는.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 38건 중 텔레그램 0건, 소셜 1건, 정치·경제 37건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 38건 중 텔레그램 0건, 소셜 1건, 정치·경제 37건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 1건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
