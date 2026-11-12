@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-12 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 마감시황] 코스피 2.6%·코스닥 5.6%↑…코스닥 연속 매수 사이드카 - 뉴스핌 - 203건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 반도체 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1kM2VzcjR3U1BtSW9jV0JjMk9tdzNpUFdKaG1QblVBSzhra2dER2N2a2dVeWJobFpiYVFhSGpkdU9pckhXTE4zSzFDRVJpQjdISG5pYzZUQS13ZVlC?oc=5">마감시황] 코스피 2.6%·코스닥 5.6%↑…코스닥 연속 매수 사이드카 - 뉴스핌</a> <span class="p0-desc">[마감시황] 코스피 2.6%·코스닥 5.6%↑…코스닥 연속 매수 사이드카 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5tRjhidnZOcHV5Qjc2bTRTbEQ3QWVwamVFdEtWV3FqVTBpQ0ppc2Q2eFp6T2dvLVQ0bjBHVlVIM2JNSTktZHladzQ0Y242bG9wMkhBamtqa3NlOWRiWTM4U9IBYEFVX3lxTE5tRjhidnZOcHV5Qjc2bTRTbEQ3QWVwamVFdEtWV3FqVTBpQ0ppc2Q2eFp6T2dvLVQ0bjBHVlVIM2JNSTktZHladzQ0Y242bG9wMkhBamtqa3NlOWRiWTM4Uw?oc=5">코스피·코스닥 5%대 급등…양 시장 동시 매수 사이드카</a> <span class="p0-desc">코스피·코스닥 5%대 급등…양 시장 동시 매수 사이드카 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBTTTBKaEkzQmFFT2tpbF9DWFc4ZVVOcTNEdDNOWlhPR0RUWUFPX0cxblBLemhJbndiRUZvRzJBZTNmNHNpczVPaHIwSVFfMFM2?oc=5">오늘은 장초반 급등… 코스피·코스닥 ‘매수 사이드카’ - 문화일보</a> <span class="p0-desc">오늘은 장초반 급등… 코스피·코스닥 ‘매수 사이드카’ 문화일보</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 마감시황] 코스피 2.6%·코스닥 5.6%↑…코스닥 연속 매수 사이드카 - 뉴스핌 
-외 P0 긴급 이슈 4건이 추가 감지되었습니다. 총 203건의 뉴스 중 P1 주요 이슈도 37건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (49건): 코스피, 코스닥, 매수 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (20건): 연준, 인플레이션, 국채 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🤖 AI/기술** (39건): 엔비디아, 반도체, 실적 기술 이슈 (39건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 마감시황] 코스피 2.6%·코스닥 5.6%↑…코스닥 연속 매수 사이드카 - 뉴스핌
-- 코스피·코스닥 5%대 급등…양 시장 동시 매수 사이드카
-- 오늘은 장초반 급등… 코스피·코스닥 ‘매수 사이드카’ - 문화일보
-
-### 주요 이슈
-
-- 나스닥 CoreWeave 수익 후 점프
-- Ed Yardeni, 12월 50포인트 연준 인상 지지 - iShares 1-3년 국채
-- '반도체 저승사자' 모간스탠리 또 경고…'30만 전자·160만 닉스' 전망 - 뉴스핌
-- 외 34건
-
-### 투자자 체크포인트
-
-- 한국 기사 76건, 글로벌 기사 127건 수집
-- 한국 지수: KOSPI 5,375.36(+2.38%), KOSDAQ 705.10(+5.39%), USD/KRW 1,338.35(-0.29%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">49건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:41%"></div></div><span class="theme-count">20건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:80%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:37%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:14%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-12.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-12.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,375.36 (+2.38%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 705.10 (+5.39%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-11-12 주식 시장에서 203건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,375.36(+2.38%), KOSDAQ 705.10(+5.39%), USD/KRW 1,338.35(-0.29%).
+- *시장이 연준 인상을 볼 때 미국 국채 선물은 후퇴합니다.*
 
 ## 테마별 주요 뉴스
 
