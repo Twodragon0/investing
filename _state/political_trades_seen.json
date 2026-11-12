@@ -1,28 +1,5 @@
 {
   "seen": {
-    "2911546fa031b76b293e7106": "2026-10-13T17:04:53",
-    "428b4e78e580ec8ce20ad93f": "2026-10-13T17:04:53",
-    "c430774c8a559f01055d977a": "2026-10-13T17:04:53",
-    "32d041d433d9b69d9da9f6bd": "2026-10-13T17:04:53",
-    "9acc8922c8e21cd0fa9cacf9": "2026-10-13T17:04:53",
-    "d9899f2de1fc4624c68c1720": "2026-10-13T17:04:53",
-    "eb993efb5752133ffd18f83c": "2026-10-13T17:04:53",
-    "f491d764cf08c804a7092448": "2026-10-13T17:04:53",
-    "47bf15d39ea701dd3633dcdb": "2026-10-13T17:04:53",
-    "effec0e7ca775ad760c70bac": "2026-10-13T17:04:53",
-    "fe232ac03e14f5f426cca2b8": "2026-10-13T17:04:53",
-    "25d5194c61e6ce11860363bc": "2026-10-13T17:04:53",
-    "ccb137ec621edd02fb33b546": "2026-10-13T17:04:53",
-    "597d755e6f4e8db5beb31071": "2026-10-13T17:04:53",
-    "6af3772de411ca0e957e8f51": "2026-10-13T17:04:53",
-    "1d79f9896d491fabd3f11899": "2026-10-13T17:04:53",
-    "ec51b9db1e36e392fb37314d": "2026-10-13T17:04:53",
-    "7fac858cf6de5884a185bfd3": "2026-10-13T17:04:53",
-    "569ad37aac2a66c4a0a0a157": "2026-10-13T17:04:53",
-    "2bfd2da775013663ce0cfa7c": "2026-10-13T17:04:53",
-    "cf7a0e3eedb96e763d7d415d": "2026-10-13T17:04:53",
-    "f10b07271f249eeb2a8fe4cd": "2026-10-13T17:04:53",
-    "e986e507fa2e605a8410fd77": "2026-10-13T17:04:53",
     "3130f8ee2e4d7324724cc137": "2026-10-15T00:44:41",
     "2a5aa17302e7d07cd0c89ed0": "2026-10-15T00:44:41",
     "e8a14a4869232dcbc4126378": "2026-10-15T00:44:41",
@@ -982,7 +959,56 @@
     "f396baf7e8485aa20d3ef164": "2026-11-11T17:22:09",
     "a82a682ad081d622136b5614": "2026-11-11T17:22:09",
     "7cbfeef3e60146978c2e5d84": "2026-11-11T17:22:09",
-    "0003b680a3d11a04008f59c1": "2026-11-11T17:22:09"
+    "0003b680a3d11a04008f59c1": "2026-11-11T17:22:09",
+    "e24f57ce97d24433c8c422a4": "2026-11-12T17:43:16",
+    "80335075a6a87e9c9cb15cf9": "2026-11-12T17:43:16",
+    "b45227da4a4d2c31a9dfda6e": "2026-11-12T17:43:16",
+    "961ad68848ea0ee38dece601": "2026-11-12T17:43:16",
+    "31d19bfc0c9c9bec971267d2": "2026-11-12T17:43:16",
+    "676504270df9803761dec14f": "2026-11-12T17:43:16",
+    "3a0c75367d899f4c2ebf70b6": "2026-11-12T17:43:16",
+    "0c9046b0328f9b12494b4ee2": "2026-11-12T17:43:16",
+    "93121ebe307ac747358a2668": "2026-11-12T17:43:16",
+    "c8da04e7dc0fe45d7038c1ac": "2026-11-12T17:43:16",
+    "b0e1ff4c16e4a66d7d953035": "2026-11-12T17:43:16",
+    "7882bf8f483402dedda98ac7": "2026-11-12T17:43:16",
+    "94386b5d396a52680600d6fc": "2026-11-12T17:43:16",
+    "b38c1d0fb95492d1a839401b": "2026-11-12T17:43:16",
+    "4e205b5d7b8cf08dcec24fd6": "2026-11-12T17:43:16",
+    "20663c9a11d7409f47f0ca87": "2026-11-12T17:43:16",
+    "d41c5929e504010e0f4106ba": "2026-11-12T17:43:16",
+    "9373043565402541a071ef0e": "2026-11-12T17:43:16",
+    "4745e7b556192d394fd06e15": "2026-11-12T17:43:16",
+    "3a914bd4fc6995c60e329725": "2026-11-12T17:43:16",
+    "b4b7925b62e05142634445b8": "2026-11-12T17:43:16",
+    "d78a41ee391cfe926cfa8eb9": "2026-11-12T17:43:16",
+    "a18233a775fbd1d57d9484ac": "2026-11-12T17:43:16",
+    "314322824c70c1e5b8c7c256": "2026-11-12T17:43:16",
+    "87a3d53499fc50f596bdb004": "2026-11-12T17:43:16",
+    "6d772e655aefb9f31107983b": "2026-11-12T17:43:16",
+    "aab2fe615be7e0aff3debf01": "2026-11-12T17:43:16",
+    "a58ffe00d695df702e05b5f2": "2026-11-12T17:43:16",
+    "28cde3aefbe53d1a6717627e": "2026-11-12T17:43:16",
+    "5f94ccf4360f3ccc8063d456": "2026-11-12T17:43:16",
+    "83f4a339f09f8dc179097e54": "2026-11-12T17:43:16",
+    "5d64a3e9bce399d68d8f83e4": "2026-11-12T17:43:16",
+    "fb761e53495eac92f1d2b46b": "2026-11-12T17:43:16",
+    "900770628bff7988cac69e85": "2026-11-12T17:43:16",
+    "8e30ff2e136c8078307d8561": "2026-11-12T17:43:16",
+    "2cb21c9b91559f348836b930": "2026-11-12T17:43:16",
+    "08ac7ee67a8620900d5250b6": "2026-11-12T17:43:16",
+    "59788dcb25178097c38daf61": "2026-11-12T17:43:16",
+    "f59c176d08c95ec81933dfd8": "2026-11-12T17:43:16",
+    "7e007f688ce8fbe24dfb866c": "2026-11-12T17:43:16",
+    "e3c82ea33a27f2c5e8b16139": "2026-11-12T17:43:16",
+    "dd17305ed162a842e11dc142": "2026-11-12T17:43:16",
+    "888cffeb36c26c1a9ab19285": "2026-11-12T17:43:16",
+    "75584707570d6888a37cf5c3": "2026-11-12T17:43:16",
+    "7271a0b60d1584726eba1b6f": "2026-11-12T17:43:16",
+    "2d1bafa7c82c5bc705366a94": "2026-11-12T17:43:16",
+    "f6c27b5b2dc8f3828d2fc82e": "2026-11-12T17:43:16",
+    "5845cef02fdf602c6b953eb2": "2026-11-12T17:43:16",
+    "a103e6522d158800920fb2f6": "2026-11-12T17:43:16"
   },
   "titles": [
     [
@@ -20984,6 +21010,202 @@
     [
       "정치인 거래정책 리포트 20261112",
       "2026-11-12"
+    ],
+    [
+      "markray corp 내부자 거래 및 지분 구조 simply wall st",
+      "2026-11-13"
+    ],
+    [
+      "rgs former regis director proposes to sell 400 shares quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "after selling 8000 shares click holdings clik ceo buys 40000 on november 11 stock titan",
+      "2026-11-13"
+    ],
+    [
+      "ceo douglas worman sells cna financial cna shares at an average 4807 each stock titan",
+      "2026-11-13"
+    ],
+    [
+      "under a trading plan gary loeb sells 400 intuitive surgical isrg shares at 45815 each stock titan",
+      "2026-11-13"
+    ],
+    [
+      "after selling 2000 shares labcorp lh executive caveney holds 34562 directly stock titan",
+      "2026-11-13"
+    ],
+    [
+      "openlane opln legal chief exercises options at 1381 and 1823 then sells the shares stock titan",
+      "2026-11-13"
+    ],
+    [
+      "regional management rm director basswood capital management llc bought 10421 shares for 359k at 3446 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "openlane opln evp richer sells at 3544 after exercising options at 1381 per share stock titan",
+      "2026-11-13"
+    ],
+    [
+      "mach natural resources mnr executive ward bought 110000 shares for 101m at an average 917 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "investors title itic director parker bought 500 shares for 133k at 26600 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "amdocs dox director morali bought 134 shares for 5536 at 4131 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "bread financial holdings bfh director fawcett bought 10000 preferred stock for 226k at an average 2260 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "klx energy services holdings klxe executive bouthillette bought 30000 shares for 306k at 102 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "phio pharmaceuticals phio director deming bought 12000 shares for 101k at an average 084 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "comstock holding companies chci director hirsh bought 1400 shares for 239k at 1708 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "exagen xgn 10 owner chernett bought 71315 shares for 373k at 523 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "target hospitality th ceo archer bought 27500 shares for 313k at 1137 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "biodesix bdsx 10 owner schuler bought 100000 shares for 1m at 1002 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "neostellar capital nslr director mazur bought 5000 shares for 305k at 610 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "aquestive therapeutics aqst director daly bought 28025 shares for 993k at an average 354 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "mp materials mp cfo corbett bought 5476 shares for 199k at an average 3625 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "click holdings clik ceo chan bought 40000 shares for 286k at an average 071 quantisnow",
+      "2026-11-13"
+    ],
+    [
+      "economic sanctions state power and cuba a rothbardian critique of us interventionism oped eurasia review",
+      "2026-11-13"
+    ],
+    [
+      "building an anticorruption agenda to restore faith in american government center for american progress",
+      "2026-11-13"
+    ],
+    [
+      "cfpb submits servicing final rule for review american banker",
+      "2026-11-13"
+    ],
+    [
+      "is political gridlock actually good for bitcoin the answer might surprise you the globe and mail",
+      "2026-11-13"
+    ],
+    [
+      "us government to keep considering strategic bitcoin buys budget burden and congress hurdles key",
+      "2026-11-13"
+    ],
+    [
+      "trump eyes gold revaluation and treasury fund to buy bitcoin without new spending coinpedia",
+      "2026-11-13"
+    ],
+    [
+      "trump threatens double tariffs on mexico if it does not halt migrants the detroit news",
+      "2026-11-13"
+    ],
+    [
+      "american importers are one step closer to receiving 166 billion in universal tariff refunds fortune",
+      "2026-11-13"
+    ],
+    [
+      "trump trade chief greer speaks with squawk box as tariff threats rise",
+      "2026-11-13"
+    ],
+    [
+      "manufacturing advocates make case for tariffs following midterm results manufacturing dive",
+      "2026-11-13"
+    ],
+    [
+      "trump threatens to double tariffs on mexico over migrants",
+      "2026-11-13"
+    ],
+    [
+      "ftc urged to probe companies not sharing tariff refunds with consumers usa today",
+      "2026-11-13"
+    ],
+    [
+      "carney warns trumps white house will drive trade decisions for years despite democrats midterm wins yahoo finance canada",
+      "2026-11-13"
+    ],
+    [
+      "trump threatens to double tariffs on mexico if it fails to stop migrant caravan katu",
+      "2026-11-13"
+    ],
+    [
+      "even this blue wave probably wont wash tariffs away the washington post",
+      "2026-11-13"
+    ],
+    [
+      "what trump cases might soon return to the supreme court scotusblog",
+      "2026-11-13"
+    ],
+    [
+      "美 연준 빅스텝 경고에 물가 지표까지 부합국채금리 급등 한국은행 26일 결정 주목 시사프리즘",
+      "2026-11-13"
+    ],
+    [
+      "feds hammack says more restrictive rates are needed",
+      "2026-11-13"
+    ],
+    [
+      "wall street thinks the fed made a mistake and now more hikes are coming",
+      "2026-11-13"
+    ],
+    [
+      "the fed has to raise rates how fast to go has officials divided",
+      "2026-11-13"
+    ],
+    [
+      "why goldman sachs is changing its fed interestrate forecast",
+      "2026-11-13"
+    ],
+    [
+      "feds waller and logan signal readiness to hike higher and faster with 50 bps on the table for december kitco",
+      "2026-11-13"
+    ],
+    [
+      "bank of america raises fed interest rate warning after october cpi surprise",
+      "2026-11-13"
+    ],
+    [
+      "the fed will not raise interest rates by 50 basis points goldman sachss robin brooks",
+      "2026-11-13"
+    ],
+    [
+      "feds waller opens door to halfpoint rate hike in december the hill",
+      "2026-11-13"
+    ],
+    [
+      "정치인 거래정책 리포트 20261113",
+      "2026-11-13"
     ]
   ],
   "seen_urls": {}
