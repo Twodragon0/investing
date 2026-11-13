@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-12 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 암호화폐 시장 또 급락…연준 긴축 우려와 비트코인 청산 여파 - 코인리더스 - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 암호화폐 주목</li><li>🏦 <strong>거래소</strong>: 33건 수집</li><li>🟣 <strong>DeFi</strong>: 25건 수집</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 하락 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE10QUxtcWRfaHkxX0lvYWFoR20wLXRfWTgzeVZfdFRuRU1jNFJKNFY0NG0wNlhxOXlHTXl3THBHREpIZUdGRHNVeGl3?oc=5">암호화폐 시장 또 급락…연준 긴축 우려와 비트코인 청산 여파 - 코인리더스</a> <span class="p0-desc">암호화폐 시장 또 급락…연준 긴축 우려와 비트코인 청산 여파 코인리더스</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IYlRJTDRGamJSVExZWERYaUF2M1VGcnRUWFVCMGRpRkEwR2IwM0Z2Z09YUGI5RncxN3V4VzR4OGhfRDVWWm5Zc2t6YVZpVzhDMWpsNFpzeGtJQ1E?oc=5">사이버 범죄자가 감옥에서 £2m 암호화폐 절도 입찰을 조직했습니다.</a> <span class="p0-desc">사이버 범죄 조직 BBC에서 £2m 암호화폐 절도 입찰 시도</span></li><li><a href="https://decrypt.co/383044/bitcoin-core-patches-bug-could-have-stalled-btc-mining">A High-Severity Bug Could Have Stalled Bitcoin Mining—Bitcoin Core Has a Fix</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **118건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🟣 DeFi
+- 2026-11-12 암호화폐 핵심 뉴스: 뜨거운 CPI 데이터에 금리 인상 전망 강화…비트코인 $74k 아래로 하락 - Investing.com 한국어. 총 118건 분석, 핵심 테마는 비트코인, 거래소, DeFi입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

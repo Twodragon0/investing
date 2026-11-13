@@ -29,33 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-13 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 해킹 의심만 돼도 코인 입출금 차단…가상자산거래소 보안 규제 강화 - MTN 머니투데이방송 - 12건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 금융위, 부위원장 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 부위원장, 금융위 관련 3건</li><li>🔴 <strong>보안/해킹</strong>: 가상자산거래소, 입출금 주목</li><li>🏦 <strong>거래소</strong>: 강화, 가상자산거래소 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDWDNGblphMkQ5S3htZUI5NWhSYzZnSy1wTDdtcklXcHdnejNtRUktbmlQZlVxN2dGUWt6RnlSc3NpSkZaM0xZd2dPT1BzbWMtTmhhcnF1VzM0VHF5d2M4?oc=5">해킹 의심만 돼도 코인 입출금 차단…가상자산거래소 보안 규제 강화 - MTN 머니투데이방송</a> <span class="p0-desc">해킹 의심만 돼도 코인 입출금 차단…가상자산거래소 보안 규제 강화. 디지털 자산 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1ucnhlMVJxZXZ5T2NienRNbXNLeUFnbEotTVFqTW1rS0JRTTZlRXh3UFFibHYySHZCWWpKa3M2NjVqVkFuQ1NUQ20tLTEtX2tkTk5Ta2NGV2hLNVNlTC15VElqTnpuZXJUby1QdHpVZw?oc=5">가상자산거래소, 해킹 의심만으로 입출금 차단 가능해진다…보안 규제 강화 - 이코노미사이언스</a> <span class="p0-desc">가상자산거래소, 해킹 의심만으로 입출금 차단 가능해진다…보안 규제 강화. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 해킹 의심만 돼도 코인 입출금 차단…가상자산거래소 보안 규제 강화 - MTN 머니투데이방송 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 12건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (8건): 금융위, 부위원장, 규제 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏛️ 정치/정책** (3건): 부위원장, 금융위, 국회 정치 이슈 (3건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🔴 보안/해킹** (2건): 가상자산거래소, 입출금, 해킹 보안 이슈 (2건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- 해킹 의심만 돼도 코인 입출금 차단…가상자산거래소 보안 규제 강화 - MTN 머니투데이방송
-- 가상자산거래소, 해킹 의심만으로 입출금 차단 가능해진다…보안 규제 강화 - 이코노미사이언스
-
-### 주요 이슈
-
-- 금융위 "디지털자산법안, 유형별 진입 규제 정비… 법인 참여는 단계적으로" - 플래텀(Platum)
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 7건, 아시아 3건, 미국 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 12건
 - **한국**: 7건

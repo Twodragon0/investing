@@ -38,6 +38,7 @@ permalink: "/social-media/2026/03/10/daily-social-media-digest/"
 </div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 43건 중 텔레그램 0건, 소셜 0건, 정치·경제 23건으로 매크로/금리 및 정치/정책 이슈가 주요 화제입니다.

@@ -16,33 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-13 - 보안 뉴스 요약 �
 
 블록체인 보안 18건 분석. 주목 사건: **[Security] Crypto hack losses equal 57 cents per $1 earned o** / 보안 뉴스 헤드라인: 북한 해킹 얼마나 뛰어나길래 블록체인 가상자산까지 털었나 - 한국일보.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente 
-외 P0 긴급 이슈 13건이 추가 감지되었습니다. 총 18건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (18건): security, exploit, hack 보안 이슈 (18건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟣 DeFi** (4건): exploit, strategies, happened DeFi 동향 (4건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🔷 이더리움** (3건): exploit, validation, spoofing 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente
-- [Security] Binance CSO unwittingly foreshadowed $6.3B hack tactic months before attack
-- [Security] Initia confirms second exploit in 3 weeks, $3.27M stolen in latest attack
-
-### 주요 이슈
-
-- [보안] 오늘 암호화폐에서 일어난 일은 다음과 같습니다
-
-### 투자자 체크포인트
-
-- 보안 사건 17건, 보안 뉴스 1건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 18건

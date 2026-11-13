@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-08 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9lRDhnWTRldF83ajVCdEQ0Z1VySG4tMjIyNlQ4OEthUXlhSEtEM3VwUVlRX0g0NHJ5eW12bW9lbnBHQzBPRVROWVdsam91dXhSZnVPZk9NUVlNNmJUMTREN1I5dXFEY0RYWGd2dA?oc=5">美 'AI 규제·데이터센터 둔화' 악재 덮친 증시…코스피 5,000선 턱걸이·코스닥 5%대 폭락 - 프리진경제</a> <span class="p0-desc">美 'AI 규제·데이터센터 둔화' 악재 덮친 증시…코스피 5,000선 턱걸이·코스닥 5%대 폭락 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9MUmR1bWhZaTQxQ1BnNDZIdmpOZy1JOUlHVzlyNGQwRkJqd01rXzhQSkxPSjJRLXowWnBrRy1uY1VBbmJNTWNqd25rMWZRa3hjY0pFUXhSc2hpZThBaExKSzBjWXZXQU9wWjFiMng4b0F2UQ?oc=5">삼성전자·SK하이닉스 주가 13~19% 폭락…미국 민주당 AI 규제 놓고 충돌, 반도체 호황 끝나나 - 톱스타뉴스</a> <span class="p0-desc">삼성전자·SK하이닉스 주가 13~19% 폭락…미국 민주당 AI 규제 놓고 충돌, 반도체 호황 끝나나 톱스타뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zNDhGdTBwZmhta0Rtby1uX2E4RmdjbFMxUjIxRnFKTzlZa0Mxa01jN0RPaDVGNlFCZjljd283dTR4SVZJUmFnNXVwLXA5cjZ5c3NFWnFJMXNRTWpDenloTl9JWWpWd1A4?oc=5">美반도체 4% 반등에도 SOXL 주간 40% 폭락…외국인 2.8조 매도한 '삼전닉스', 월요일 분수령 - 녹색경제신문</a> <span class="p0-desc">美반도체 4% 반등에도 SOXL 주간 40% 폭락…외국인 2.8조 매도한 '삼전닉스', 월요일 분수령 녹색경제신문</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,059.69 (-5.27%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 644.27 (-4.39%).
+- 2026-11-08 주식 시장에서 177건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,059.69(-5.27%), KOSDAQ 644.27(-4.39%), USD/KRW 1,356.34(+0.03%).
 - *10월 고용 보고서가 예상보다*
 
 ## 테마별 주요 뉴스

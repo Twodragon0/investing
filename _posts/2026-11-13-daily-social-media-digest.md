@@ -29,46 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-11-13 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 2027년 10월 회의에서 금리 결정 포기 - 21건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 빅스텝 동향 주시</li><li>🏛️ <strong>정치/정책</strong>: 이재명, 빚내서 동향 주시</li><li>🔵 <strong>규제/정책</strong>: 빚내서, 최경환 주목</li><li>📈 <strong>가격/시장</strong>: 빅스텝, 인상 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPWkZiVk1uU2k5a1RQRGUxdFBJMEcxSVhtWEJfR0s3Q3E3T185OXRrZHRZMDVsQlhTdVpIbVlfQnNPem4zbGlTMDR6elFDRlM3RzhETUhCVzlTTDJvWmtfQzctcUFhRXZsVmxpVjBQUXpXTkRUTThQNVJwQV9YX19qaTZGVGswRGF1N2d0dktsZW5DVHlFWVNENmtQaERZYm5ZTmREdm8tMzVjX3ZCQUdqbTFCbWktdw?oc=5">연준 2027년 10월 회의에서 금리 결정 포기</a> <span class="p0-desc">연준 2027년 10월 회의에서 금리 결정 포기 WSJ</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 연준 2027년 10월 회의에서 금리 결정 포기 
-총 21건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
+오늘 수집된 총 21건 중 텔레그램 0건, 소셜 0건, 정치·경제 21건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (15건): 연준, 빅스텝, 인상 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (5건): 이재명, 빚내서, 최경환 정치 이슈 (5건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🔵 규제/정책** (1건): 빚내서, 최경환, 이재명 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 연준 2027년 10월 회의에서 금리 결정 포기
-
-### 주요 이슈
-
-- Bank of America는 10월 CPI 서프라이즈 이후 연준 금리 경고를 인상했습니다.
-
-### 투자자 체크포인트
-
-- 정치·경제 21건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:33%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:7%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:53%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-11-13.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-11-13.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
