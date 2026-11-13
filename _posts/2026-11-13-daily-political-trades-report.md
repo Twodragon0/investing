@@ -14,8 +14,6 @@ description: "Markray Corp. 내부자 거래 및 지분 구조 - Simply Wall St.
 image_alt: "정치인 거래·정책 리포트 - 2026-11-13 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-
-
 **2026-11-13** 정치권 핵심 이슈: **Markray Corp. 내부자 거래 및 지분 구조 - Simply Wall St**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **48건** (SEC 내부자 거래 23건, 트럼프 정책 16건, 중앙은행 9건)을 종합 정리합니다
 
 ## 한눈에 보기
@@ -27,7 +25,6 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-13 - 정치인 거래 �
 
 ## 전체 뉴스 요약
 
-- 2026-11-13 정치권 핵심 이슈: Markray Corp. 내부자 거래 및 지분 구조 - Simply Wall St. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 48건 (SEC 내부자 거래 23건, 트럼프 정책 16건, 중앙은행 9건)을 종합 정리합니다
 - 1. Economic Sanctions, State Power, And Cuba: A Rothbardian Critique Of U.S. Interventionism - OpEd - Eurasia Review
 
 ## 1. 트럼프 행정명령/정책

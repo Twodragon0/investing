@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-16 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://finance.yahoo.com/markets/stocks/articles/why-us-boomers-seriously-prepare-121500467.html">Why US boomers seriously need to prepare for a stock market crash before it’s too late — 3 red flags and what to do now</a></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/ultimate-crash-peter-schiff-calls-114500834.html">'Ultimate crash': Peter Schiff calls US stocks a 'ticking time bomb' — but is he right? Protect your wealth now</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,977.94 (+2.42%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 864.65 (+0.38%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-08-16 주식 시장에서 180건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,977.94(+2.42%), KOSDAQ 864.65(+0.38%), USD/KRW 1,412.00(-0.43%).
 - *완화된 인플레이션과 강력한 AI 수익은 나스닥 100을 뒷받침하는 반면, 30,600을 돌파하면 35,000 목표를 향한 길을 열 수 있습니다.*
 
 ## 테마별 주요 뉴스

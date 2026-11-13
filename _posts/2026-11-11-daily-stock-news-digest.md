@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-11 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1OQXR0NVFEZF9xVUthNm42dGNsR0xuT1RuYXJoRnpuSG9mMU9sQy1FQ21nNWFCa0NnUl9pWW9CelBmbkw5NmtCeVA1dllZWVFRQ3VFQlFoZVoyTWvSAWBBVV95cUxOcVk5RklyakctNzJvcTlLaElDUEFhcm9vTGxyd0NYMjhYVGZCaW1yQWpOYWNDYm1ZNXpIY3J1cTY1aERmMXhfNHdtV1ZnRWNHc2hGMHdGSnBDcWJsdUxmSjY?oc=5">'블루쓰나미' 충격딛고 4~5%↑…코스피·코스닥, 매수 사이드카</a> <span class="p0-desc">'블루쓰나미' 충격딛고 4~5%↑…코스피·코스닥, 매수 사이드카 연합뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBTTTBKaEkzQmFFT2tpbF9DWFc4ZVVOcTNEdDNOWlhPR0RUWUFPX0cxblBLemhJbndiRUZvRzJBZTNmNHNpczVPaHIwSVFfMFM2?oc=5">오늘은 장초반 급등… 코스피·코스닥 ‘매수 사이드카’ - 문화일보</a> <span class="p0-desc">오늘은 장초반 급등… 코스피·코스닥 ‘매수 사이드카’ 문화일보</span></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1UUFZreHM3N3lOaUlsQ002REt1ekR1XzFSdk5ock5CX3A4OUVSSXFQeTI0b2lDMHFfeXdrUmtxU3V4VWpxdGtvOTFSUGtWMGY4dUFpSjJUa1JxR19nSlpReXZuMjRKUlhPcTRiRXNrTHYyQlN5cVHSAXtBVV95cUxOUzJJQ0F0Y0s5ZVhWUTdVaG9IczJpY0tWZ1dtcFF5YXNoNHNYalQwMjlwRzJSaHV1RWhWRXV5VHBhemplRl9nTzU2cVdtT1locF9LaVBCRTVOQ3gxdFo2Z1hMNzhzazdNTG1jaUJwclo5VWxXd0FVY3FOazA?oc=5">美증시 훈풍에 코스피·코스닥 '들썩'…장초반 매수 사이드카 - 머니투데이</a> <span class="p0-desc">美증시 훈풍에 코스피·코스닥 '들썩'…장초반 매수 사이드카</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,239.13 (+4.19%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 667.61 (+4.24%).
-- 2026-11-11 주식 시장에서 191건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,239.13(+4.19%), KOSDAQ 667.61(+4.24%), USD/KRW 1,342.50(-0.01%).
 - *비트코인은 미국 CPI이 매파적 기대를 다시 불러일으키면서 붕괴합니다.*
 
 ## 테마별 주요 뉴스

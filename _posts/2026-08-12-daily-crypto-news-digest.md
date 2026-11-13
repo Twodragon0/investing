@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-12 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/coldcard-losses-how-investigators-trace-stolen-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Coldcard 해킹 손실: 조사관이 도난당한 비트코인을 추적하는 방법</a> <span class="p0-desc">조사관들이 피해자 보고서와 다양한 추정치를 산출하는 온체인 분석에 의존하기 때문에 Coldcard 해킹은 아직 확실한 손실 수치를 가지고 있지 않습니다.</span></li><li><a href="https://decrypt.co/375330/ravencoin-crashes-critical-exploit-threatens-rollback">네트워크 롤백을 위협하는 심각한 악용으로 인해 Ravencoin이 20% 충돌합니다.</a> <span class="p0-desc">Ravencoin의 해시 파워 대부분을 제어하는 ​​2개의 채굴 풀은 이미 금요일의 첫 번째 불량 블록 이전부터 체인을 재구축하고 있습니다. 강제 롤백이 취소되는 내용은 다음과 같.</span></li><li><a href="https://bitcoinmagazine.com/news/btcpay-server-offers-bitcoin-bounty">BTCPay 서버는 지갑 악용 후 도난당한 자금을 복구하기 위해 3 비트코인 포상금을 제공합니다</a> <span class="p0-desc">비트코인 Magazine BTCPay 서버는 지갑 악용 후 도난당한 자금을 복구하기 위해 3 비트코인 현상금을 제공합니다. 오픈 소스 결제 프로세서는 반환된 모든 자금의 10%에.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **98건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
-- 2026-08-12 암호화폐 핵심 뉴스: XRP, ETH 가격 뉴스: 거래자가 $70,000를 노리면서 리플에 연결된 토큰 리드가 감소합니다. 비트코인. 총 98건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
