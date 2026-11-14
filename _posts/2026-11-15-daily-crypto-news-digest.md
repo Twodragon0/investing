@@ -276,7 +276,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-15 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/microsoft-365-outage-resolved-cyberattack-ruled-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Microsoft confirms global outage resolved, rules out cyberattack</a>
-<p class="news-desc">Microsoft attributed the outage to a network capacity upgrade issue, confirming that the disruption was unrelated to cyberattacks or AI agents.</p>
+<p class="news-desc">마이크로소프트은 24시간 이상 지속된 글로벌 중단 이후 Outlook, Teams 및 기타 마이크로소프트 365 서비스를 복원하여 사이버 공격을 원인으로 배제했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
