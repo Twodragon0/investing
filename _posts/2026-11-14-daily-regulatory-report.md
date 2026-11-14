@@ -29,33 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-14 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 해킹 의심만으로 가상자산 입출금 차단 허용 - 세이프타임즈 - 18건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 금융위, 규제 이슈 부각</li><li>🏦 <strong>거래소</strong>: 가상자산, 거래소 관련 5건</li><li>🏛️ <strong>정치/정책</strong>: 법인, 디지털자산기본법 관련 2건</li><li>🔴 <strong>보안/해킹</strong>: 세이프타임즈, 가상자산 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1VN0JXM1BMdzl2MWhuN1ZwUElXOUFXa2pwZTJTQ3daaUVnY1BnY3lWNUVuQWs5Tk5rNnBGY0RTV0FfSmQweXdXYkVyS0hKRnhfanowaHhrY04tSnVjUUhhZDBLTVYtRFlCUUZFY3BWVdIBc0FVX3lxTFB6WTNXaEFoUnZNRlpYcS1xZXlReG5sd2lCbDFCVmViTEx4b0NpUjl5U25IcU5SdllSTjVGQWs0SG50SXV2U3RJOTZIZTRrcEtVamZ6UWZ4RXktU0hUbFFTNVptUjdjQ3dFanluR053cHhycEk?oc=5">해킹 의심만으로 가상자산 입출금 차단 허용 - 세이프타임즈</a> <span class="p0-desc">해킹 의심만으로 가상자산 입출금 차단 허용. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 해킹 의심만으로 가상자산 입출금 차단 허용 - 세이프타임즈 
-총 18건의 뉴스 중 P1 주요 이슈도 2건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (11건): 금융위, 규제, 블루밍비트 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏦 거래소** (5건): 가상자산, 거래소, 강화 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🏛️ 정치/정책** (2건): 법인, 디지털자산기본법, 디지털자산법 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 해킹 의심만으로 가상자산 입출금 차단 허용 - 세이프타임즈
-
-### 주요 이슈
-
-- 가상자산거래소 보안 규제 강화…금융회사 수준 의무 부과 추진 - https://www.thedailyeconomy.kr/
-- 금융위 "디지털자산법안, 유형별 진입 규제 정비… 법인 참여는 단계적으로" - 플래텀(Platum)
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 10건, 미국 6건, 아시아 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 18건
 - **한국**: 10건

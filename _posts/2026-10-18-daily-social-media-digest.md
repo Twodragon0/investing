@@ -32,12 +32,13 @@ image_alt: "소셜 미디어 동향 - 2026-10-18 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOWG1TSFJvUk1SVTFSN1pNX0NvU2ZjSlNrb0E3aHRzNTlRZkJ3Z2FCZUd3aW56bXJEbERUc3ktcXloS3RXQWtoNTlvMDdHTW5wY0REcy1TMUl5clExUnRKeFBVWG0xM2pqbmNLdkNmcENYWUZocU1zNXE4eTI2VlhrZjVwUHlnaGUwZVZZMGsyTmJXd18wUU5laXVrVmpELWFheWZ3dHliSGk4RDh3SVJDNmhJc2ZIMVE?oc=5">연준 이번 달 금리 결정은 시장이 생각하는 것보다 더 가까운 결정입니다</a> <span class="p0-desc">연준 이번 달 금리 결정은 시장이 생각하는 것보다 더 긴밀한 결정입니다 MarketWatch</span></li><li><a href="https://news.google.com/rss/articles/CBMiggpBVV95cUxObnhuWFJsOEJlVnFFMGlJTHJNZUotNnRQc0pxcEFfV2tabWtrSXYzTV9BaE5vdUFINndqLXNPelZha01Qb3NWYlhfZWY3V3ZuS1hyNXhhYU40eFFaak50SXBuLURJY0N4RFk3amZtd3NTVEVlOTJkQlZJaDF4cS1JQzFDYWR5SjdZS3NmTE5BZTdockVOdmdKOV9WX0JuY192cDFjc1ZkaEFyeDNScW5zMG1xQnBqRVBJNWIxb2hHamhnMTc4UENzd0ZTcktHUXBjal83Njd0SUI5X2oyeFczbEY5WkVkb3JVQTNkQXVXclhiYmtGeVYxNTdYSFhKZFR5N3JYRnI0UzlzX0loZGJlNC1kdXhkbTZRWjFQVGtTTW9hckxIUk1ZejRPVk9DSFVGYmNEeElrNjJuMnpMLTRfNTJVZ2gzdzZWZE1PTW9XaXUyY2luZzgzNDUwVmdaU1ZBX0IwamJsdnd0YWJJYUhucFJSY2JZZUhPZWpQdFllQU9XaGlNckZPdEpNbk9ZOFJ2TkZVektxQy1jemo3SVJySXBnNlZKc2JiY1U4bmFsb3lrOHVuM0tIRVh3QVM0VDRlcTZEbzZRMDN4a3dFbGdGakxxRGFXRWx6ektwTDFsUU9sZk0zTktvc0pqVXVBcHEtdi1ZQnFhaGxweVRBaUJXSzhxWEUxZTBkZWt6WEZ1VFVwa25XSUFfRmFZS3pCR2pGWm40OGN4MGoyYjc1ZHUyRHVEbzd2cVJaUlRsbTFRcnJIWEpVSjNjUUVROFRwQVBJdVNyNVBLWUpZaHc1cTdIdXAyYWNTWEJ2bG9DTGw1SnB1ZndVMmlnTm1mRVFfelJqc3l3V3o5U2FCZGVvZktITERya1FWSlhzNTAwZHB0RWd4Z0VPRlUya2Z3ZjVyOHl2RmJ2UUJaM2tmaWVkSUVZaHd0eFRfNTlKdnFuTzZyTUFwS2t5SDd4aF9feVM1S0NqNG5YNG5JSkhKd09QQkNYREVMNGNacGFRdFNCUm9xMTkwUDBSUnJuZ2J2MjBkS0lLQzBjandWVV95d0cxcEdoVzVaXzl5UXpGdkRSb3h4eVFra3FNZUVIdTVxanlMY2dqbnJKYmhwS1Z4Rk5nWFQtSWFJV1FLUjAwM2g0VDBuTlpjWFA2WnpxTF9jWVV0dUYxbWtkMDNad2xYZkg4aVJVSndFeXFjV0J6cDMtQmh1M0V3MkVQSTVTRWk3MktHc2ZhaUlRdmFWa19HMmZDMXlTZDFsWXFXQklyZHVHTFFtSG5vSVVSUTJwbWtpaC1SY0trUlpvazFvbVJvSkRBMnMwYUFMSlhrdzJYZkl3SXotNm5CQ19KLVh1WUlCdERlRnBYUjlBQUwzQ1hXWVRHc3JDOVJYNkt5TTlyNEtQempVWGlHaGtYQjczdEJTSG92eXlFOHMzSE8yWFB3Tm1vRXFDYnd6VHdpWGdUbVFzVlcyTm40cGQ3SURSNTZaOC1NUTExcjhvamlMZEZtZWpRZEpZTElTMzJyV3BZZ3J0Rld5Y3FpMlZ1alMyQ1pUVmMxQzBQb3l5TVJkVC1MaDNNZlBWRTdvc2lmTWRjT1JnbFVUb1FEU0xPc1hhN3ZWNVdHYkgxa2twSEV2YXRzUFFuclVieXFYNzU2b1g1U1dpZjFLY0g1MGRteFJwTzFsVG5SU0pYWGR1eWY2NHp5VkxNSzZTb0ZB?oc=5">연준 인플레이션이 3년 최고치에 도달함에 따라 금리 결정 예정 - ABC7 로스앤젤레스</a> <span class="p0-desc">연준 인플레이션이 3년 최고치에 도달함에 따라 금리 결정 예정 ABC7 Los Angeles</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 24건 중 텔레그램 0건, 소셜 1건, 정치·경제 23건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 24건 중 텔레그램 0건, 소셜 1건, 정치·경제 23건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

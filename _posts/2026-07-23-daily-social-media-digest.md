@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-07-23 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.huffingtonpost.kr">KSOI] 이재명 긍정평가 48.8%로 5.9% 급락 : 40·50·60대와 중도층에서 긍정평가 크게 줄어 - 허프포스트코리아</a> <span class="p0-desc">폭염과 가뭄에 강과 저수지가 말라가고 있다. 강물이 마르자 강바닥에서 과거의 흔적이 모습을 드러나는가 하면, 바닷물이 강을 거슬러 올라와 식수원까지 위협하고 있다. 유럽에서 두 번째로 긴 다뉴브강의 수위가 가뭄으로 크게 낮아졌다. 세르비아 프라호보 항구 인근에서는 수면</span></li><li><a href="https://www.ebn.co.kr">코스피, 장중 4%대 급등…매수 사이드카 발동·외국인·기관 '쌍끌이'</a> <span class="p0-desc">코스피, 장중 4%대 급등…매수 사이드카 발동·외국인·기관 '쌍끌이' ebn.co.kr</span></li><li><a href="https://biz.newdaily.co.kr">코스피, 외국인 · 기관 쌍끌이 속 6800선 회복 … 매수 사이드카 발동</a> <span class="p0-desc">코스피, 외국인 · 기관 쌍끌이 속 6800선 회복 … 매수 사이드카 발동 뉴데일리</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 24건 중 텔레그램 0건, 소셜 0건, 정치·경제 24건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 24건 중 텔레그램 0건, 소셜 0건, 정치·경제 24건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

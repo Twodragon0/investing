@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-13 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: S&P 500 Recovered $1 Trillion in 90 Minutes Despite Wider Market Crash - 180건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: 엔비디아, 삼성전자 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 삼성전자, 코스피 관련 30건</li><li>📊 <strong>매크로/금리</strong>: 환율, 주식 관련 18건</li><li>🏦 <strong>거래소</strong>: IPO 관련 13건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNRWhRVkstSmJBbzhiOF92UkhhSWZVOG5TcmNvMUNoQzBJUlY0azdhUW9Lb1ZzeUhxYUtraUtXM0ZzRUhiYlZBNmk2QUd0V3NYT0FWUmswbHU3Tk81T1VEMDN6bGRqYUdQbEVIU0Q2WVJkUzNxTHhJdmFTTUhZbVlHbm9iSENWcFA2LVJZV3FDOVZXQmZ2Unc?oc=5">S&P 500 Recovered $1 Trillion in 90 Minutes Despite Wider Market Crash</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,342.73 (-0.55%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 696.53 (-0.92%).
+- 2026-11-13 주식 시장에서 180건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,342.73(-0.55%), KOSDAQ 696.53(-0.92%), USD/KRW 1,334.98(-0.11%).
 - *재무부 매각 가속화, 유럽 채권도 뒤따르다*
 
 ## 테마별 주요 뉴스

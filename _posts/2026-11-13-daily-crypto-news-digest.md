@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-13 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente - 122건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 동향 주시</li><li>🏦 <strong>거래소</strong>: 32건 수집</li><li>📈 <strong>가격/시장</strong>: 코인리더스, 달러 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 엔비디아 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/crypto-hackers-stole-57-cents-every-1-earned-ark?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente</a></li><li><a href="https://cointelegraph.com/news/binance-cso-foreshadowed-6b-hack-tactic-months-before-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Binance CSO unwittingly foreshadowed $6.3B hack tactic months before attack</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **122건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-13 암호화폐 핵심 뉴스: 로스차일드, XRP ETF 6300주 담았다…코인 3종 분산 공시. 총 122건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

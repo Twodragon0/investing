@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-14 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FBI warns of North Korean ‘FaceStealer’ campaign targeting American employees - KTLA - 123건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 관련 51건</li><li>🏦 <strong>거래소</strong>: 41건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, 하락 동향 주시</li><li>🔵 <strong>규제/정책</strong>: SEC 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOVjJyUzNvUXVnYUgwRmVtcjhxb2ZQY0lJekVvTnpnWVRRYk04UW5GZXEzUUhKSVYyVUVmUlFHY3FUaVlmTW5fMzN4bE56dGNKcHFEdm5YNnVsNk9UUmZxbGJaT3N2TkM4Z0hhZFdqY3NRSDJucllQYXlkS2V6TGx1N0Y5ZEF1X1VpcEp2akY0NWdxeENJdnN6M3JTdjZZVGptbFJQdnVTLWd0TXFqOTl30gG0AUFVX3lxTFAzZ2cwYjBHNEV6RU1VRlVqRnZpS1R1cEc3RHJyT1BfUFBGZ1lGMVp3dTRxMjRHRzBqdVNmeF9ETFRXY2FndGhLa2QxNVdYa0JvaGdFcnRSZXdWODF5b0RTTVdEaElSdjNWUFZlZVExNGlvNTJ5MUkySWJEQUcxc0VQVnV6WnltSHdMYzNfWjJmOHpJdkc4a1ptYVhVNGc1eGdlOFN4azdyQmVOeFQ3X1FUaGdtMg?oc=5">FBI warns of North Korean ‘FaceStealer’ campaign targeting American employees - KTLA</a></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQM1UwZlVJclJteDl1STRDQVdCZGV3Y2NhWkVYTWRYNXcwRkZDNk5JdzNfSDZkaV9DZkJDTXduZWFLNW43dmw1dktUcDNmM0pmN2FNZGhfSXg3Y05iMEtfd011a2gwWFFWWk53aW9PR05sUjNSeWtKN0hDYmtwX1VVa1FDWjg5UGFFS0o4aUx4UmJEdEl2MXNjN0MxakhBOHlodFc5QTEzbi1pSXBnQmdleHJDTlA3MmZadlZWZG8zYw?oc=5">US cracks down on North Korean cryptocurrency-theft scheme, recovers more Binance funds - Cybersecurity Dive</a></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQMkE3S2p3djVDb3JYNFVHUmJHQUpyWm9aTk12X3hGUGMyM3VFUnhrOUswdFUyaTNXRjE1RDlFMTdBcWJBZmJWMGtlc1dnaUE1Q2JBZ1Zacm1aYnE3aExPUllWZl9OWEMtamRTN2lWdGJnMW1NVzVvZjBxa1VDbjNEYkVHdG5TTUtjMnhXVXgtejFnMmp5WHpLNEkyRVJmSXNNb3Q40gGrAUFVX3lxTFBLT1BWSkt0VEd2U2Jic0N4SVVFVFRDTVBsMW9DaXU2cF95bTdNbkpEUVoteXl1d1REMjE0bm1Yb0NZNjBlbjFBN2hfUXBGcFJoYmZjTGx1SjhneWxYT1pOYncyeUN5UWpQbnpHWDdzUktSRDBDcVZkQkZqMDVyS3JSc0NjUC1vLVBrWW42eGF2NXJ6U2hRcW9vWnU0V1JBWFZ2SWZORlNSWDFEYw?oc=5">FBI's LA Field Office warns of ‘FaceStealer' cryptocurrency theft scheme - NBC Los Angeles</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: FBI warns of North Korean ‘FaceStealer’ campaign targeting American employees - KTLA 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 123건의 뉴스 중 P1 주요 이슈도 12건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인, 달러, 개월 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (41건): binance, north, korean 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (37건): 달러, 하락, 개월 가격 변동 (37건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- FBI warns of North Korean ‘FaceStealer’ campaign targeting American employees - KTLA
-- US cracks down on North Korean cryptocurrency-theft scheme, recovers more Binance funds - Cybersecur
-- FBI's LA Field Office warns of ‘FaceStealer' cryptocurrency theft scheme - NBC Los Angeles
-
-### 주요 이슈
-
-- Bitcoin Hits 12-Week Low as Fed Rate Fears Undo Most of Summer Rally
-- Metaplanet swings to $170M loss as Bitcoin sale hits earnings
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 외 9건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(35건), Google News EN(15건), Google News KR(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-14.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-14.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-14 암호화폐 시장 123건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
