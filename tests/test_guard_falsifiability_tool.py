@@ -296,8 +296,54 @@ def test_exemption_list_only_shrinks():
     )
 
 
+def test_python_mutations_still_parse():
+    """`.py` 를 겨냥한 뮤테이션은 **실행 가능한 파이썬**이어야 한다.
+
+    문법을 깨뜨리는 뮤테이션은 pytest 를 수집 단계에서 죽인다. 그러면 rc≠0 이
+    나오고 하네스는 그걸 **FALSIFIABLE 로 보고한다** — 가드가 잡은 게 아니라
+    파일이 깨진 것인데 구별되지 않는다.
+
+    2026-09-22 실측: 하네스 자신을 겨냥한 케이스 2건의 `new` 가 실제 개행 대신
+    리터럴 `\n` 이었다. 주입된 소스는 문법 오류였고 `patched_rc=4`(pytest 사용
+    오류)가 났는데 **허위 FALSIFIABLE 로 통과했다.** `rc=1`(테스트 실패)과
+    `rc=4`(수집 실패)를 사람이 매번 구별해야 했다.
+
+    여기서 기계가 구별한다. 메모 `feedback_mutation_must_be_executable` 가 경고한
+    형태이기도 하다.
+    """
+    import ast
+
+    broken = []
+    for case in gf.STATIC_CASES:
+        if not case.target.endswith(".py"):
+            continue
+        target = gf.REPO_ROOT / case.target
+        original = target.read_text(encoding="utf-8")
+        try:
+            mutated = gf.apply_static_mutation(original, case)
+        except RuntimeError as exc:  # 앵커 문제는 다른 가드가 본다
+            broken.append(f"{case.label}: 앵커 — {exc}")
+            continue
+        try:
+            ast.parse(mutated)
+        except SyntaxError as exc:
+            broken.append(f"{case.label}: 뮤테이션 결과가 파싱되지 않는다 — {exc}")
+
+    assert not broken, (
+        "문법을 깨뜨리는 뮤테이션이 있다. rc≠0 이 나오지만 **가드가 잡은 게 아니라 "
+        "파일이 깨진 것**이라 허위 FALSIFIABLE 이 된다:\n  " + "\n  ".join(broken)
+    )
+
+
 def test_mutated_files_covers_every_static_target():
-    """안전 검사(_assert_safe_to_run)가 변형 대상 전부를 감시해야 한다."""
+    """`_mutated_files()` 가 변형 대상 전부를 담아야 한다.
+
+    옛 이유는 "안전 검사(`_assert_safe_to_run`)가 감시해야 한다" 였는데, 그 함수는
+    워크트리 격리로 불필요해져 2026-09-23 에 삭제됐다. **단언은 그대로 유효하다** —
+    지금은 `trigger_paths()`(CI 트리거 판정)와
+    `test_main_tree_is_untouched_by_a_run`(실행 후 무손상 확인)이 이 집합을 쓴다.
+    빠진 대상은 곧 트리거 누락이자 검증 누락이다.
+    """
     watched = {p.resolve() for p in gf._mutated_files()}
 
     for case in gf.STATIC_CASES:
