@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-10 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE8tVGI3anJtT3lHZGgzVlNMRkpxdFoxQ2FudzZ3V1JiSTdPeVFPNUVMYWRXeE8yVzlaT3N3eWFZYmlpNFJVazdmOU10YkIxUUh2dDN1STVvSQ?oc=5">미국 민주당 암호화폐 규제 강화 전망 : 비트코인·이더리움 가격 급락, 8월 이후 최저치 - 허프포스트코리아</a> <span class="p0-desc">미국 민주당 암호화폐 규제 강화 전망 : 비트코인·이더리움 가격 급락, 8월 이후 최저치 허프포스트코리아</span></li><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTFBjTGVaTGhNSXJVdTBWZHR3WVk1OWhWQ2hWWUpRdm9uVlMwRC01bGZyNV9ZQkdrNEZHdWhmQTIwVEwxYmJJTXktT2x3?oc=5">암호화폐 일주일 새 6% 급락! 비트코인 200일선서 운명의 공방 - 코인리더스</a> <span class="p0-desc">암호화폐 일주일 새 6% 급락! 비트코인 200일선서 운명의 공방 코인리더스</span></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOM1FXWThYVXRpWnlDajBmc2ZUejl4QWJHc1JibU8zTnRnd1VwNHE1SnJqbWxoNXRkdDRGaUM0c1gyWkIwenpyQXU2QVUyYUlxamFmUGRwQXFHaV94dTN1Ynh1WVNOVFNMbkpzTmJyYmtVTmZ3aVlKMFMyTWt1aExRSHN1OWs?oc=5">비트코인 점유율 급락…알트코인 급등, 한 가지 문제</a> <span class="p0-desc">비트코인 점유율 급락…알트코인 급등, 한 가지 문제 BeInCrypto</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **118건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-11-10 암호화폐 핵심 뉴스: 비트코인, 규제 불확실성과 ETF 자금 유출에 7만4,000달러대로 하락 - Investing.com 한국어. 총 118건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-18 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OVGZLcGtYbUNaTXp3T1J3NWI0OFdRNFBoa1dVR1lSUTVBblBCRkFkY3JDNHp3eE9SaUdNNEstaTFudkRPRmhJMWUtaWpoRU9xbHZ6V0RR?oc=5">폭락 중인 암호화폐 비트코인·리플 이번 주 가격 결정지을 4가지 핵심 이벤트 - 위키트리</a> <span class="p0-desc">암호화폐(가상화폐·코인) 비트코인(Bitcoin, BTC)과 엑스알피(XRP)의 가격 향방을 결정지을 4가지 핵심 이벤트가 이번 주 열린다.17일(한국 시각) 오전 9시 30분 기.</span></li><li><a href="https://www.coindesk.com/opinion/2026/08/17/the-coldcard-hack-proves-reputation-is-not-a-security-model">Coldcard 해킹으로 평판은 보안 모델이 아님이 입증되었습니다.</a> <span class="p0-desc">검증을 기반으로 구축된 커뮤니티는 판단을 한 사람에게 아웃소싱하는 데 5년을 보냈다고 Foundation CEO Zach Herbert는 썼습니다.</span></li><li><a href="https://cointelegraph.com/news/harmony-plans-rollback-transactions-one-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Harmony는 한 번의 익스플로잇 이후 109,000건의 트랜잭션을 삭제하여 롤백을 계획하고 있습니다.</a> <span class="p0-desc">하모니는 레이븐코인이 익스플로잇 이후 별도의 롤백 분쟁에 직면하기 때문에 선택적으로 거래를 복원하면 일관되지 않은 체인 상태가 발생할 수 있다고 말했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **89건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
-- 2026-08-18 암호화폐 핵심 뉴스: 트럼프, 암호화폐 명확성을 높이기 위해 백악관에서 업계 리더들과의 회의 개최. 총 89건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

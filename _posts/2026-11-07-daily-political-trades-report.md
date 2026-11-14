@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-07 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(14회), **관세**(6회), **의회**(4회), **SEC(미국증권거래위원회)**(4회), **연준**(4회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-11-07 정치권 핵심 이슈: 인텔(INTC) 립부 탄 CEO, 급락 뒤 자사주 970만 달러 매수 - 코인리더스. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 34건 (SEC 내부자 거래 23건, 트럼프 정책 8건, 중앙은행 3건)을 종합 정리합니다
 - 1. Trump signs proclamation he says will prevent future changes to the Oval Office and Cabinet Room - Los Angeles Times
 
 ## 1. 트럼프 행정명령/정책
