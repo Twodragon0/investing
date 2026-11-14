@@ -10,7 +10,7 @@
 
 pytest>=9.1.1
 pytest-cov>=7.1.0
-pytest-playwright>=0.9.0
+pytest-playwright>=0.10.0
 pytest-timeout>=2.4.0
 
 # 로컬 커밋 단계 훅 러너. **설치만으로는 훅이 걸리지 않는다** — `pre-commit install`
