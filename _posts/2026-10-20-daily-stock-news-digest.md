@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-20 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE5SM0lUN0ZYTlVFTnJ4ZVdjQkdkc1RtSW4wa09KZmFSXy1ZOTZKMTBYeW80OUx2X1YyLVZEVTctV2Jsa3Fld3NDZml3cTdncUNWTUw1eHZfYXBNc2wwbGM1ZzdNSQ?oc=5">역대급 실적에도 주가는 연일 급락…삼성·SK ‘호남 반도체 속도전’ 변수는 - 에너지경제신문</a> <span class="p0-desc">역대급 실적에도 주가는 연일 급락…삼성·SK ‘호남 반도체 속도전’ 변수는 에너지경제신문</span></li><li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9tSkhhdlBJM3Bva0s3ZmlhWWFCN2t5Tm5CRm82WmFFVDlEMGZndjZRUXRxcEdxNFVUdGI4djg3bGY1aENsN3daREx3VGVvWnJEMjF4WWRkX2hrYjJnMzdaeXRTM05paGNkaGVsNno3ZHFRVjBGZ19UWNIBeEFVX3lxTE9tSkhhdlBJM3Bva0s3ZmlhWWFCN2t5Tm5CRm82WmFFVDlEMGZndjZRUXRxcEdxNFVUdGI4djg3bGY1aENsN3daREx3VGVvWnJEMjF4WWRkX2hrYjJnMzdaeXRTM05paGNkaGVsNno3ZHFRVjBGZ19UWA?oc=5">"실적은 최고인데 주가는 폭락"…삼성전자·SK하이닉스 반등 시점은</a> <span class="p0-desc">"실적은 최고인데 주가는 폭락"…삼성전자·SK하이닉스 반등 시점은 뉴시스</span></li><li><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE91LUdyWGo0Z2RmdmQ3V09MYU56QU1jVU1Zb2MwVDJ4MFhLOEk4SU1LT3JLTlV3RmJ0NjM1R2lVelo2QldxTllBZThhQQ?oc=5">특징주] 美 코어위브 또 폭락⋯삼성전자·SK하이닉스 '약세' - 아이뉴스24</a> <span class="p0-desc">[특징주] 美 코어위브 또 폭락⋯삼성전자·SK하이닉스 '약세' 아이뉴스24</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,768.01 (+1.76%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 808.89 (+1.78%).
-- 2026-10-20 주식 시장에서 170건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,768.01(+1.76%), KOSDAQ 808.89(+1.78%), USD/KRW 1,331.65(-0.19%).
 - *오늘 미국 주식 시장: S&P 500 선물 하락으로 인한 무역 인플레이션 우려 야후 파이낸스*
 
 ## 테마별 주요 뉴스
