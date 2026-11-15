@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-08-17 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **관세**(2회), **이재명**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-08-17 정치권 핵심 이슈: LeBlanc set to meet U.S. trade representative Sunday as tariff deadline looms. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 3건 (트럼프 정책 1건, 한국 정치인 2건)을…
+- 1. LeBlanc set to meet U.S. trade representative Sunday as tariff deadline looms 오타와 — 캐나다-미국 무역 장관 도미닉 르블랑(Dominic LeBlanc)과 미국 무역 대표 제이미슨 그리어(Jamieson…
 
 ## 1. 트럼프 행정명령/정책
 

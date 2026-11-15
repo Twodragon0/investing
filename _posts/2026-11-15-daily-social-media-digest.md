@@ -30,43 +30,14 @@ image_alt: "소셜 미디어 동향 - 2026-11-15 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 코인베이스 기관에서는 바이낸스 해킹이 아닌 연준 금리 기대치가 침몰했다고 말합니다 비트코인 - TradingView - 17건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 관련 10건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 관련 5건</li><li>🟠 <strong>비트코인</strong>: 비트코인, 기관 관련 2건</li><li>🔵 <strong>규제/정책</strong>: 트럼프 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPa2tSYmtpOUoxX09tX2xHeWtoNUkzanRYTDdOTEFFVVpJQUY3amd2UTg5RUExYUg4dDRnRzMyN0NudUlOSThhQkU5LWhFMHdCaGd3Q1RpVnF2ajFrbkZsQlU1WVRpRzhTWF9adjhuMzdTdHRXVUtNVGIwRE0wYjNvWTBPRWF2M0dsY1ZJSUhzLXJfSEZxVnlHUkE5Q2N5WDNvRURDc24yRlZBLW1ocjhHcEo2cjBmcWpPSjhVTWFhRGo0ekNjWHpXRVN0aVVOT2pxM2QyXzlIamdiSDdnUC1EZTNB?oc=5">코인베이스 기관에서는 바이낸스 해킹이 아닌 연준 금리 기대치가 침몰했다고 말합니다 비트코인 - TradingView</a> <span class="p0-desc">코인베이스 기관에서는 바이낸스 해킹이 아니라 연준 금리 기대치가 침몰했다고 말합니다 비트코인 TradingView</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코인베이스 기관에서는 바이낸스 해킹이 아닌 연준 금리 기대치가 침몰했다고 말합니다 비트코인 - TradingView 
-총 17건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
+오늘 수집된 총 17건 중 텔레그램 0건, 소셜 1건, 정치·경제 16건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (10건): 연준, 인플레이션, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (5건): 트럼프, 이재명 정치 이슈 (5건) — 정책 불확실성이 시장 방향성에 영향을 줄 수 있습니다.
-- **🟠 비트코인** (2건): 비트코인, 기관 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코인베이스 기관에서는 바이낸스 해킹이 아닌 연준 금리 기대치가 침몰했다고 말합니다 비트코인 - TradingView
-
-### 투자자 체크포인트
-
-- 소셜 1건, 정치·경제 16건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">10건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:20%"></div></div><span class="theme-count">2건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:10%"></div></div><span class="theme-count">1건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">1건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-11-15.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-11-15.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 1건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
 

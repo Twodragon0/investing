@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-02 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPZjBKNHBsSy1EQlN4NnM4QXQ0OXNDeFlzUnY1bVVtYVB3RU9ZSk5vOGU0MzFkLWFlMXIzYS1hNnpzOHNjX3BLa1JjMTZIUUppT0JVVk9QeUR6X3pkSXVCOU53VmhtYXRQV0dQX05WclZGYlgwSWlTZnpUYUVFVzVKZko2UDdXeGRXOWllT3FNTHMxNGJTMlgyNy1BcnVYaDIzaWRUNFZpUG9EQ3JSZEHSAbMBQVVfeXFMTXBHdjctTGNMSU5XZUVxTGFsZFBlN1A3Y0pDRHp5dDItMk9aZW9DcXA4b3RTWXpQbnc2U0VJRk1QRjk0T21iMzJoV0hXQlBkWlBFS2hKeFRhVXZ5ODc0ZVhULUJzMGxmLXFxaGtIZlVSV1I2a3NDcjJTSVJTU25UZ1kySGtJaVZheGxqRVAyVWNLTGlBWlZpMVV2LW5DV29yUVF6YjVvazF5NGhhMzRLRTY5T0U?oc=5">FBI는 60억 달러 규모의 암호화폐 해킹에 북한 책임이 있다고 밝혔습니다</a> <span class="p0-desc">FBI는 60억 달러의 바이낸스 암호화폐 해킹에 북한이 책임이 있다고 밝혔습니다. Fox Business 바이낸스는 기록적인 63억 달러 해킹 후 고객 인출을 재개합니다 Guard.</span></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQMzd2WVZ5Vk9ZYTMxdi1zblhqWS1iX1A0ZWRTWEhSZmh4RVpfXzczNVV5eTk0RWJDc2NFN1FNMEFHZFVKTzlZRzU5cTNSYkZrbzBCWklrZFRzT3RBd1pXY1JXOF9aNUc0T0NpQm1MdnRXZkUwUUpUS3ZydlYtM3cyY3JpWnpSdXNheWNtcXNjeV8yakxmMk1J?oc=5">북한 관련 그룹이 사상 최대 규모의 암호화폐 해킹으로 바이낸스에서 63억 달러를 훔쳤습니다 - Cybersecurity Dive</a> <span class="p0-desc">북한 관련 그룹이 사상 최대 규모의 암호화폐 해킹을 통해 바이낸스에서 63억 달러를 훔쳤습니다.</span></li><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOVFRVMmJEaTJ5dlpFZG8yQlhlQ1NoM3MydEJfSFN4NTVNV01WS3hmSk1JaVhCempndVNIQmxtMGhwWC1TcmhuRlpVaG5MZ1dUb3F0V2dWTGhXTkdXMHZqWkw4a2lEeDEtMGhyWU9JekwxYzVXZGY4Q013ZXd3WTM1dWlkNmxNT1FqaFZkek5yeXVzQ2dXMFdIYkR4VnA2SXFIRm5FYTd2cU8wWDlvaFF5aFB1RHQxQVpaSFdqRA?oc=5">대규모 암호화폐 해킹은 아마도 역사상 최대 규모의 디지털 화폐 도난일 것입니다 - The Washington Post</a> <span class="p0-desc">대규모 암호화폐 해킹은 아마도 역사상 최대 규모의 디지털 화폐 도난일 것입니다. 워싱턴 포스트</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **99건** 수집
 - 주요 테마: 🏦 거래소, 🔴 보안/해킹, 🟠 비트코인
+- 2026-11-02 암호화폐 핵심 뉴스: FBI는 60억 달러 규모의 암호화폐 해킹에 북한 책임이 있다고 밝혔습니다. 총 99건 분석, 핵심 테마는 거래소, 보안/해킹, 비트코인입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

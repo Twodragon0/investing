@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-14 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(22회), **연준**(16회), **SEC(미국증권거래위원회)**(14회), **관세**(10회), **의회**(4회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-11-14 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 51건 — 미국 의회 거래 2건, SEC 내부자 거래 24건, 트럼프 정책 17건, 한국 정치인 1건, 중앙은행 7건
+- 1. Ro Khanna faces questions over Nvidia stock sales - The American Bazaar
 
 ## 1. 미국 의회 거래 동향
 
