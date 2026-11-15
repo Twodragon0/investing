@@ -243,7 +243,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383267/jpmorgan-bitcoin-crypto-linked-holdings-approach-1-billion" class="news-title" target="_blank" rel="noopener noreferrer">JPMorgan’s Bitcoin and Crypto-Linked Holdings Approach $1 Billion</a>
-<p class="news-desc">The bank’s Q3 13F shows roughly $981 million across Bitcoin ETFs, Strategy and Coinbase—likely over $1 billion counting Robinhood and miners.</p>
+<p class="news-desc">JP모건 CEO에서 암호화폐를 조롱하는 데 수년을 보낸 Chase는 현재 거의 10억 달러 규모 암호화폐 관련 주식과 자금을 보유하고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -297,7 +297,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-14 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383260/trump-first-democratic-picks-sec-cftc-could-reshape-crypto" class="news-title" target="_blank" rel="noopener noreferrer">Trump’s First Democratic Picks for SEC and CFTC Could Reshape Crypto’s Regulators</a>
-<p class="news-desc">The bipartisan slate—two Republicans and two Democrats, Trump’s first Democratic picks for either agency—would refill commissions that have driven crypto policy since the Clarity Act’s collapse.</p>
+<p class="news-desc">도널드 트럼프 대통령은 암호화폐에 대한 규칙을 작성하는 두 연방 기관의 공석을 채우기 위해 4명을 지명했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

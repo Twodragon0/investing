@@ -229,7 +229,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/13/robinhood-supreme-court-ipo-lawsuit.html" class="news-title" target="_blank" rel="noopener noreferrer">Supreme Court will hear Robinhood effort to toss IPO info omissions lawsuit</a>
-<p class="news-desc">The Trump administration had urged the Supreme Court to hear an appeal by Robinhood of a lower-court's decision to revive an investors' lawsuit over the IPO.</p>
+<p class="news-desc">트럼프 행정부는 IPO에 대한 투자자의 소송을 재개하겠다는 하급 법원 결정에 대한 Robinhood의 항소를 심리하도록 대법원에 촉구했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -283,7 +283,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-14 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html" class="news-title" target="_blank" rel="noopener noreferrer">Chicago Fed's Goolsbee says central bank 'has definitely got work to do' on inflation</a>
-<p class="news-desc">The policymaker expressed concern about the latest inflation data, telling CNBC that the central bank likely will need to take action.</p>
+<p class="news-desc">정책 입안자는 최근 인플레이션 데이터에 대한 우려를 표명하면서 중앙은행이 조치를 취해야 할 것이라고 CNBC에 말했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

@@ -263,7 +263,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383280/the-week-jensen-huang-fell-how-spy-scandal-toppled-nvidia-ceo" class="news-title" target="_blank" rel="noopener noreferrer">The Week Jensen Huang Fell: How a Spy Scandal Toppled Nvidia’s CEO</a>
-<p class="news-desc">In a matter of days, the executive synonymous with the AI boom resigned after 33 years amid reports of affairs and suspected Chinese intelligence ties—sending Nvidia’s stock reeling and leaving the chipmaker leaderless.</p>
+<p class="news-desc">엔비디아 CEO 젠슨 황은 사건 보도와 중국 간첩 의혹으로 인해 33년 만에 사임했습니다. 여기에 당신이 알아야 할 모든 것이 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -318,7 +318,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383282/bitcoin-etfs-lose-2-1-billion-november-outflow-streak-seven-days" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin ETFs Lose $2.1 Billion in November as Outflow Streak Hits Seven Days</a>
-<p class="news-desc">Spot Bitcoin ETFs shed $185.4 million on Friday, their seventh straight day of outflows, pushing November losses to about $2.1 billion as Bitcoin fell toward $64,000.</p>
+<p class="news-desc">비트코인 ETF 투자자들은 여전히 ​​출구로 향하고 있으며 7일 연속 손실을 연장하고 있으며 BTC 가격 하락이 가속화되고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -330,7 +330,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-16 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383266/china-ai-pipeline-nvidia-chips-washington-restricts" class="news-title" target="_blank" rel="noopener noreferrer">China’s $3.2 Billion AI Pipeline Still Calls for Nvidia Chips Washington Restricts</a>
-<p class="news-desc">Chinese data center projects are still being designed around restricted Nvidia processors, even as Beijing pushes domestic alternatives.</p>
+<p class="news-desc">중국이 국내 대안을 추진하고 있음에도 불구하고 중국 데이터 센터 프로젝트는 여전히 제한된 엔비디아 프로세서를 중심으로 설계되고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
