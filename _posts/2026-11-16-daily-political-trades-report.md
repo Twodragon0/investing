@@ -14,7 +14,6 @@ description: "Nvidia 이사, Jensen Huang 스캔들 몇 주 전 주식 약 1.3�
 image_alt: "정치인 거래·정책 리포트 - 2026-11-16 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-11-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-11-16.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-11-16** 정치권 핵심 이슈: **Nvidia 이사, Jensen Huang 스캔들 몇 주 전 주식 약 1.3조원 매각 - GeekNews**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **26건** (SEC 내부자 거래 9건, 트럼프 정책 8건, 한국 정치인 1건, 중앙은행 8건)을 종합 정리합니다
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-16 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(12회), **연준**(10회), **이재명**(2회), **관세**(2회), **행정명령**(2회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **26건**의 뉴스가 수집되었습니다. 세부 구성은 SEC 내부자 거래 9건, 트럼프 정책 8건, 한국 정치인 1건, 중앙은행 8건입니다.
-
-**트럼프 정책** 관련으로는 At the Supreme Court, Trump aims to cut the power of judges again Reuters 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**중앙은행 정책**에서는 한은 기준금리, 26일 인상될까? 미국 연준 '빅스텝' 가능성에 긴장감 고조 📈 뉴닉 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 김종인 “이재용·최태원 영웅시한 이재명, 민심 못 읽어”…주가·부동산 정책 직격 창업일보 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-11-16 정치권 핵심 이슈: Nvidia 이사, Jensen Huang 스캔들 몇 주 전 주식 약 1.3조원 매각 - GeekNews. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 26건 (SEC 내부자 거래 9건, 트럼프 정책 8건, 한국 정치인 1건,…
+- 1. 대법원에서 트럼프는 판사의 권한을 다시 자르는 것을 목표로 합니다. 대법원에서 트럼프는 다시 판사의 권한을 줄이는 것을 목표로 합니다.
 
 ## 1. 트럼프 행정명령/정책
 

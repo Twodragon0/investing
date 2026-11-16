@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-25 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://intellectia.ai">Fed Interest Rate Decision June 2026: Hawkish Pause Signals Higher for Longer - Intellectia AI</a></li><li><a href="https://www.ytn.co.kr">코스피 급락 9,000 붕괴.하이닉스·삼성전자 약세 - YTN</a> <span class="p0-desc">코스피 급락 9,000 붕괴.하이닉스·삼성전자 약세 YTN</span></li><li><a href="https://ket.kr">하이닉스 ‘왕좌교체’ 하루 만 10%급락…축포?경고음? - 경제타임스</a> <span class="p0-desc">경제타임스 온인주 기자 | 국내 증시가 6일 오전 반도체 대형주 급락에 흔들리고 있다. 코스피는 외국인의 대규모 매도 속에 낙폭을 4%대로 키웠으며, 코스닥도 상승과 하락을 오간 끝에 약세를 나타내고 있다. 오전 10시09분 기준 코스피는 전 거래일보다 272.44포인트(4.13%) 내린 6325.62를 기록했다. 코스닥지수는 8.78포인트(1.10%) 하락한 790.81을 나타냈다. 코스피는 1.81% 내린 6478.75로 출발한 뒤 시간이 지날수록 하락 폭이 확대됐다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 8,471.02 (+3.26%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 909.31 (+2.00%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-06-25 주식 시장에서 212건의 뉴스를 분석했습니다. 한국 시장: KOSPI 8,471.02(+3.26%), KOSDAQ 909.31(+2.00%), USD/KRW 1,542.11(+0.75%).
 - *경제정의,정치개혁,공정사회,인권.교육,노동.복지,환경.동물,나눔과연대,국제NGO, 시민기자,이슈&기획,오피니언,Photo뉴스 섹션 제공*
 
 ## 테마별 주요 뉴스

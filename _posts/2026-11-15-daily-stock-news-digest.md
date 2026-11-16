@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-15 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: How Rockstar's 'GTA VI' release could reshape gaming, streaming and even paid time off - 151건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 국채 주목</li><li>🤖 <strong>AI/기술</strong>: 엔비디아 관련 29건</li><li>📈 <strong>가격/시장</strong>: 코스피, 하이닉스 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com/2026/11/14/gta-6-grand-theft-auto-launch.html">How Rockstar's 'GTA VI' release could reshape gaming, streaming and even paid time off</a></li><li><a href="https://www.cnbc.com/2026/11/14/heating-oil-price-spike-household-budgets.html">Heating oil prices are up 59% from last winter. The spike is 'crushing folks,' Maine nonprofit says</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,290.53 (-0.58%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 699.66 (+1.59%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-11-15 주식 시장에서 151건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,290.53(-0.58%), KOSDAQ 699.66(+1.59%), USD/KRW 1,336.20(+0.14%).
 - *재무부 매각 가속화, 유럽 채권도 뒤따르다*
 
 ## 테마별 주요 뉴스

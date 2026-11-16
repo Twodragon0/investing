@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-19 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OVGZLcGtYbUNaTXp3T1J3NWI0OFdRNFBoa1dVR1lSUTVBblBCRkFkY3JDNHp3eE9SaUdNNEstaTFudkRPRmhJMWUtaWpoRU9xbHZ6V0RR?oc=5">폭락 중인 암호화폐 비트코인·리플 이번 주 가격 결정지을 4가지 핵심 이벤트 - 위키트리</a> <span class="p0-desc">암호화폐(가상화폐·코인) 비트코인(Bitcoin, BTC)과 엑스알피(XRP)의 가격 향방을 결정지을 4가지 핵심 이벤트가 이번 주 열린다.17일(한국 시각) 오전 9시 30분 기.</span></li><li><a href="https://decrypt.co/375816/openai-answer-rogue-agents-hacks-more-ai">악성 에이전트 및 해킹에 대한 OpenAI의 답변은 그 이상입니다.</a> <span class="p0-desc">OpenAI 사장 Greg Brockman의 새 에세이는 긴급한 AI 기반 방어를 추진하기 위해 회사가 자체적으로 Hugging Face를 해킹한 사례를 인용합니다.</span></li><li><a href="https://bitcoinmagazine.com/news/losses-top-115-million-in-coldcard-hack">Coldcard에서 최대 $115M 손실 비트코인 해킹: Galaxy Research</a> <span class="p0-desc">비트코인 잡지의 콜드카드 손실액 최고 1억 1500만 달러 비트코인 해킹: Galaxy Research Galaxy Digital의 최신 수치에 따르면 도난당한 비트코인 금액은 1.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **104건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏛️ 정치/정책
+- 2026-08-19 암호화폐 핵심 뉴스: 이것이 지금 암호화폐에 1,000달러를 투자하는 가장 좋은 방법입니다. 총 104건 분석, 핵심 테마는 비트코인, 가격/시장, 정치/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

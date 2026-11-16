@@ -41,41 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-16 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: FBI disrupts crypto theft scheme by North Korean hacking group; billions stolen so far - Los Ange. - 102건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 달러 관련 36건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li><li>📈 <strong>가격/시장</strong>: 달러, 암호화폐 관련 30건</li><li>🤖 <strong>AI/기술</strong>: IPO, 엔비디아 관련 16건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcTdHMVBPUXpnOHUxc2VUOWlyZ2JZRWxJNk1nN1Fva3dVWnVLRDgtNS14cUlPSVVaZkU5NXRvWEI0T3FLSjF6V0o2dEhOY0xPRHd1WWxEb2dTWmVkU1Fic29fUVFOaHVpWDZ1Y3FYdnhwWXZIVGdWNGFYU3JoMkpFb1dfY0xqVzdvTXUteXVLaUlHcEFPUHhtaHpxaWxqYUJPOWU4YTRGei1GOHVCLWlsSFJENUlsZHNocU9keHd1bl90aHg5cXAzTjEwa0wxQTVRM3ZB?oc=5">FBI disrupts crypto theft scheme by North Korean hacking group; billions stolen so far - Los Angeles Times</a></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQM1UwZlVJclJteDl1STRDQVdCZGV3Y2NhWkVYTWRYNXcwRkZDNk5JdzNfSDZkaV9DZkJDTXduZWFLNW43dmw1dktUcDNmM0pmN2FNZGhfSXg3Y05iMEtfd011a2gwWFFWWk53aW9PR05sUjNSeWtKN0hDYmtwX1VVa1FDWjg5UGFFS0o4aUx4UmJEdEl2MXNjN0MxakhBOHlodFc5QTEzbi1pSXBnQmdleHJDTlA3MmZadlZWZG8zYw?oc=5">US cracks down on North Korean cryptocurrency-theft scheme, recovers more Binance funds - Cybersecurity Dive</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9lYXhrTzgzeHVfWjBtOWZ2SE04eTRFSjBzNi1SMkh2ZXBBWDNIbWpTUXZOUzkyb3JJWjA3WVFESnduR1RwclhTQjFvNzVMSmdrQWxqMzhyRkpSMFpnOURrWkFyWVhLNTJzYS1QOTN1TkJVTnc?oc=5">톰 리, 암호화폐 급락 배경…젠슨황·앤트로픽·바이낸스</a> <span class="p0-desc">톰 리, 암호화폐 급락 배경…젠슨황·앤트로픽·바이낸스 디지털투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: FBI disrupts crypto theft scheme by North Korean hacking group; billions stolen so far - Los Ange. 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 102건의 뉴스 중 P1 주요 이슈도 13건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 달러, 개월 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (30건): IPO 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **📈 가격/시장** (30건): 달러, 암호화폐, 개월 가격 변동 (30건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- FBI disrupts crypto theft scheme by North Korean hacking group; billions stolen so far - Los Angeles
-- US cracks down on North Korean cryptocurrency-theft scheme, recovers more Binance funds - Cybersecur
-- 톰 리, 암호화폐 급락 배경…젠슨황·앤트로픽·바이낸스
-
-### 주요 이슈
-
-- 비트코인, ETF 자금 유출·강제 청산에 6만 달러선 접근 - Investing.com 한국어
-- 비트코인 11일간 15.6% 하락…AI 우려·앤트로픽 상장·10년물 5% 돌파가 겹쳤다 - 위키트리
-- 암호화폐] 비트코인 3개월 최저치 6만 5,000달러 터치… ETF 자금 유출·레버리지 청산 겹쳐 - 굿모닝베트남미디어
-- 외 10건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(14건), Decrypt(14건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-16.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-16.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-16 암호화폐 시장 102건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
