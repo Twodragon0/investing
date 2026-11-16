@@ -1,0 +1,217 @@
+---
+layout: post
+title: "암호화폐 시장 종합 리포트 - 2026-11-17 | Fear 10"
+date: 2026-11-17 07:28:27 +0900
+categories: [market-analysis]
+tags: ["market-report", "crypto", "top-coins", "trending", "daily"]
+keywords: "market-report, crypto, top-coins, trending, daily"
+source: "CoinMarketCap"
+lang: "ko"
+image: "/assets/images/generated/og-daily-crypto-market-report-2026-11-17.png"
+permalink: "/market-analysis/2026/11/17/daily-crypto-market-report/"
+description: "BTC $65,291 (24h +0.2%). 공포·탐욕 지수: 10/100 (Extreme Fear), BTC 도미넌스 58.7%. 상위 30개 코인 분석."
+excerpt: "BTC $65,291 (24h +0.2%). 공포·탐욕 지수: 10/100 (Extreme Fear), BTC 도미넌스 58.7%. 상위 30개 코인 분석."
+image_alt: "암호화폐 시장 종합 리포트 - 2026-11-17 | Fear 10 - 시장 분석 뉴스 요약 이미지"
+---
+
+**2026-11-17** 비트코인 **$65,291** (24h +0.2%) · 공포·탐욕 지수 **10/100** (Extreme Fear) · BTC 도미넌스 **58.7%**. 상위 30개 코인의 시세 및 모멘텀을 정리합니다.
+
+## 시장 시각화
+
+<picture><source srcset="{{ '/assets/images/generated/top-coins-cmc-2026-11-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/top-coins-cmc-2026-11-17.png' | relative_url }}" alt="CoinMarketCap Top 코인 순위 (2026-11-17)" loading="lazy" decoding="async"></picture>
+<picture><source srcset="{{ '/assets/images/generated/market-heatmap-cmc-2026-11-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-heatmap-cmc-2026-11-17.png' | relative_url }}" alt="암호화폐 시장 히트맵 (2026-11-17)" loading="lazy" decoding="async"></picture>
+
+
+## 오늘의 브리핑
+
+<picture><source srcset="{{ '/assets/images/generated/news-briefing-cmc-2026-11-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-cmc-2026-11-17.png' | relative_url }}" alt="시장 브리핑 카드" loading="lazy" decoding="async"></picture>
+
+
+## 한눈에 보기
+
+<div class="stat-grid"><div class="stat-item"><div class="stat-value">$65,291</div><div class="stat-label">BTC (+0.2%)</div></div><div class="stat-item"><div class="stat-value">10</div><div class="stat-label">공포/탐욕 (Extreme Fear)</div></div><div class="stat-item"><div class="stat-value">$2.23T</div><div class="stat-label">총 시가총액</div></div><div class="stat-item"><div class="stat-value">58.7%</div><div class="stat-label">BTC 도미넌스</div></div></div>
+
+<div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🟢 <strong>Hyperliquid</strong> (HYPE): +3.13%</li><li>🔴 <strong>Stellar</strong> (XLM): -1.86%</li><li>🔴 <strong>Chainlink</strong> (LINK): -1.21%</li></ul></div>
+
+## 전체 뉴스 요약
+
+오늘 시가총액 상위 **30개** 코인을 기준으로 시장을 분석했습니다. 비트코인은 **$65,291**에서 24시간 +0.17% 상승하며 투자 심리 회복을 견인하고 있습니다. 전체 시가총액은 **$2.23T**으로 전일 대비 -1.03% 변동했으며, BTC 도미넌스 58.7%로 비트코인 중심 자금 흐름이 지속입니다. 공포/탐욕 지수는 **10** (Extreme Fear)으로, 극도의 공포 상태로, 역발상 매수 기회를 모색할 시점입니다.
+
+## 시장 인사이트
+
+**오늘의 시장 인사이트:**
+
+24시간 변동 **-1.03%**로 소폭 조정 구간입니다. 기술적 지지선에서의 매수세 유입 여부를 확인해야 합니다.
+
+BTC 도미넌스 **58.7%**로 비트코인 중심 흐름이 지속됩니다. 과거 사이클에서 도미넌스 55% 이상 구간은 알트 시즌 이전 축적기에 해당하는 경우가 많았습니다.
+
+거래량/시가총액 비율 **3.5%**로 정상 범위 내 거래량입니다.
+
+Top 20 코인 중 9개 상승, 11개 하락으로 종목별 차별화가 뚜렷합니다. 최고 상승은 **Hyperliquid**(HYPE) +3.13%, 최대 하락은 **Stellar**(XLM) -1.86%입니다.
+
+**공포/탐욕 지수**: 극도의 공포 상태(**10/100**)입니다. 역사적으로 F&G 지수 10~20 구간은 중장기 저점 형성과 동행한 경우가 많았습니다. 역발상 매수 관점에서 주목할 시점이나, 추가 하락 여지도 있습니다.
+
+**복합 신호 분석**: 시가총액 하락에도 BTC 도미넌스가 상승하고 있어, 알트코인에서 비트코인으로의 '안전 자산 회귀' 흐름입니다. 공포 구간과 겹쳐 바닥 탐색 중일 수 있습니다.
+
+> *본 분석은 자동 수집된 데이터를 기반으로 생성되었으며, 투자 조언이 아닙니다. 투자 결정은 개인의 판단과 책임 하에 이루어져야 합니다.*
+
+## 시장 전망
+
+## 시장 전망 분석
+
+| 지표 | 기간 | 현재값 | 신호 | 가중치 |
+|------|------|--------|------|--------|
+| 공포·탐욕 지수 | 현재 | 10 (극공포) | 약세 | 38% |
+| 시장 심리 | 24h | +1.00 | 강세 | 31% |
+| 모멘텀 | 7d | BTC -12.9%(7d) / ETH -13.9%(7d) | 약세 | 31% |
+
+**종합 점수**: 45/100 (↔️ 혼조)
+**신뢰도**: 보통 (1/3 지표 일치)
+
+### 시장 참여자 입장 분석
+- **강세 진영**: 시장 심리 (+1.00)
+- **약세 진영**: 공포·탐욕 지수 (10 (극공포)), 모멘텀 (BTC -12.9%(7d) / ETH -13.9%(7d))
+- **관망**: 없음
+- **지배 입장**: 약세 (67% 합의)
+
+### 시나리오 분석
+- 🟢 **강세 시나리오** (25%): 공포·탐욕 지수 (현재 10 (극공포)) 반등 시 위험자산 선호 회복, VIX 안정화되며 기술적 저항선 돌파 가능
+ - *촉매*: 연준 비둘기파 발언, ETF 승인
+ - *시간 프레임*: 단기 1-3일 내 확인 가능
+ - *저항선*: 현재가 +3~5%
+- 🟡 **기본 시나리오** (50%): 현 심리 수준(45점) 유지, 모멘텀 (현재 BTC -12.9%(7d) / ETH -13.9%(7d)) 방향 확인 후 점진적 포지션 조정 권장
+ - *시간 프레임*: 중기 1-2주 횡보 예상
+- 🔴 **약세 시나리오** (25%): VIX 추가 상승 및 매크로 압박 지속 시 추가 조정 가능, 공포·탐욕 (현재 10 (극공포)) 극공포 구간 진입 주의
+ - *촉매*: VIX 30 돌파
+ - *시간 프레임*: 중기 1-2주 내 약세 전환 가능성
+ - *지지선*: 현재가 -5~8%
+
+> ⚠️ 본 분석은 알고리즘 기반 자동 생성이며, 투자 조언이 아닙니다.
+
+## 주요 토픽 분석
+
+### 1. neutral 변동 (관련 기사 19건, 중립)
+neutral · 변동 · usdt 관련 뉴스 19건이 감지되었습니다. 주요 출처: CoinMarketCap. 시장 분위기: 중립.
+**관련 키워드**: neutral, 변동, usdt, bnb, usdc, xrp
+
+### 2. hype 상승 (관련 기사 1건, 긍정적)
+hype · 상승 · 강세 관련 뉴스 1건이 감지되었습니다. 주요 출처: CoinMarketCap. 시장 분위기: 긍정적.
+**관련 키워드**: hype, 상승, 강세, hyperliquid, rally, surge
+
+### 핵심 엔티티 네트워크
+
+| 엔티티 | 유형 | 언급 | 감성 | 입장 |
+|--------|------|------|------|------|
+| 비트코인 | 자산 | 2회 | +0.00 | 중립 |
+| 이더리움 | 자산 | 1회 | +0.00 | 중립 |
+| 테더 | 기관/기업 | 1회 | +0.00 | 중립 |
+| 바이낸스코인 | 자산 | 1회 | +0.00 | 중립 |
+| 써클 | 기관/기업 | 1회 | +0.00 | 중립 |
+| 리플 | 자산 | 1회 | +0.00 | 중립 |
+| 솔라나 | 자산 | 1회 | +0.00 | 중립 |
+| 도지코인 | 자산 | 1회 | +0.00 | 중립 |
+| 체인링크 | 자산 | 1회 | +0.00 | 중립 |
+| 에이다 | 자산 | 1회 | +0.00 | 중립 |
+
+**주요 관계:**
+- 비트코인캐시 --[영향]--> 비트코인 (+0.00): "Bitcoin Cash (BCH) +0.2% 변동"
+
+## 1. 글로벌 암호화폐 시장 현황
+
+**총 시가총액**: $2.23T (🔴 -1.03%)
+
+**24시간 거래량**: $77.32B
+
+**BTC 도미넌스**: 58.7% | **ETH 도미넌스**: 10.0%
+
+**활성 코인 수**: 21,855개
+
+## 2. 공포/탐욕 지수
+
+**10/100** — Extreme Fear
+
+`[██░░░░░░░░░░░░░░░░░░]`
+
+## 3. 주요 변동 코인
+
+**1. Hyperliquid (HYPE)**
+현재가 $69.94, 24시간 +3.13% 상승, 7일 -7.00%. 시가총액 $17.67B
+`24h 변동률 기준 Top 1`
+
+**2. Stellar (XLM)**
+현재가 $0.138064, 24시간 -1.86% 하락, 7일 -6.01%. 시가총액 $4.89B
+`24h 변동률 기준 Top 2`
+
+**3. Chainlink (LINK)**
+현재가 $9.17, 24시간 -1.21% 하락, 7일 -13.90%. 시가총액 $6.86B
+`24h 변동률 기준 Top 3`
+
+**4. XRP (XRP)**
+현재가 $0.960763, 24시간 -0.93% 하락, 7일 -12.09%. 시가총액 $61.02B
+`24h 변동률 기준 Top 4`
+
+**5. UNUS SED LEO (LEO)**
+현재가 $9.16, 24시간 -0.85% 하락, 7일 -1.50%. 시가총액 $8.42B
+`24h 변동률 기준 Top 5`
+
+## 4. 시가총액 Top 20
+
+| # | 코인 | 가격 (USD) | 24h 변동 | 7d 변동 | 시가총액 |
+|---|------|-----------|---------|--------|---------|
+| 1 | **Bitcoin(비트코인)** (BTC) | $65,291.41 | 🟢 +0.17% | 🔴 -12.95% | $1.31T |
+| 2 | **Ethereum(이더리움)** (ETH) | $1,831.40 | 🟢 +0.20% | 🔴 -13.87% | $223.84B |
+| 3 | **Tether USDt** (USDT) | $0.999079 | 🔴 -0.04% | 🟢 +0.03% | $175.27B |
+| 4 | **BNB** (BNB) | $593.84 | 🔴 -0.19% | 🔴 -13.83% | $78.10B |
+| 5 | **USDC** (USDC) | $0.999892 | 🟢 +0.01% | 🟢 +0.01% | $69.14B |
+| 6 | **XRP(리플)** (XRP) | $0.960763 | 🔴 -0.93% | 🔴 -12.09% | $61.02B |
+| 7 | **Solana(솔라나)** (SOL) | $71.93 | 🔴 -0.45% | 🔴 -16.76% | $42.56B |
+| 8 | **TRON** (TRX) | $0.305172 | 🟢 +0.04% | 🔴 -3.63% | $29.00B |
+| 9 | **Hyperliquid** (HYPE) | $69.94 | 🟢 +3.13% | 🔴 -7.00% | $17.67B |
+| 10 | **Zcash** (ZEC) | $905.68 | 🔴 -0.03% | 🔴 -22.82% | $15.37B |
+| 11 | **Monero** (XMR) | $498.56 | 🟢 +0.53% | 🔴 -15.80% | $9.39B |
+| 12 | **Dogecoin** (DOGE) | $0.059464 | 🟢 +0.25% | 🔴 -14.81% | $9.32B |
+| 13 | **UNUS SED LEO** (LEO) | $9.16 | 🔴 -0.85% | 🔴 -1.50% | $8.42B |
+| 14 | **Chainlink** (LINK) | $9.17 | 🔴 -1.21% | 🔴 -13.90% | $6.86B |
+| 15 | **Cardano** (ADA) | $0.153532 | 🔴 -0.51% | 🔴 -13.21% | $5.65B |
+| 16 | **Stellar** (XLM) | $0.138064 | 🔴 -1.86% | 🔴 -6.01% | $4.89B |
+| 17 | **Ethena USDe** (USDE) | $0.999623 | 🟢 +0.00% | 🟢 +0.06% | $4.87B |
+| 18 | **Dai** (DAI) | $0.999637 | 🔴 -0.02% | 🔴 -0.03% | $4.42B |
+| 19 | **Bitcoin Cash** (BCH) | $209.92 | 🟢 +0.23% | 🔴 -11.84% | $4.22B |
+| 20 | **NEAR Protocol** (NEAR) | $3.18 | 🔴 -0.74% | 🔴 -12.67% | $4.17B |
+
+## 5. 트렌딩 코인
+
+**현재 가장 주목받는 코인들:**
+
+1. **Lighter** (LIT) — 시가총액 순위 #83
+2. **Macca the Gator** (MACCA) — 시가총액 순위 #863
+3. **Solana(솔라나)** (SOL) — 시가총액 순위 #7
+4. **Pudgy Penguins** (PENGU) — 시가총액 순위 #123
+5. **Bitcoin(비트코인)** (BTC) — 시가총액 순위 #1
+6. **AudaCity** (DACITYCOIN) — 시가총액 순위 #958
+7. **Hyperliquid** (HYPE) — 시가총액 순위 #10
+8. **Avalanche** (AVAX) — 시가총액 순위 #27
+9. **Bittensor** (TAO) — 시가총액 순위 #41
+10. **Zcash** (ZEC) — 시가총액 순위 #11
+
+## 6. 24시간 최대 상승 (Top 20 기준)
+
+| 코인 | 가격 | 24h 변동 |
+|------|------|---------|
+| **Hyperliquid** (HYPE) | $69.94 | 🟢 +3.13% |
+| **Monero** (XMR) | $498.56 | 🟢 +0.53% |
+| **Dogecoin** (DOGE) | $0.059464 | 🟢 +0.25% |
+| **Bitcoin Cash** (BCH) | $209.92 | 🟢 +0.23% |
+| **Ethereum(이더리움)** (ETH) | $1,831.40 | 🟢 +0.20% |
+
+## 7. 24시간 최대 하락 (Top 20 기준)
+
+| 코인 | 가격 | 24h 변동 |
+|------|------|---------|
+| **Chainlink** (LINK) | $9.17 | 🔴 -1.21% |
+| **Litecoin** (LTC) | $44.79 | 🔴 -1.38% |
+| **Avalanche** (AVAX) | $7.18 | 🔴 -1.38% |
+| **Sui** (SUI) | $0.722462 | 🔴 -1.45% |
+| **Stellar** (XLM) | $0.138064 | 🔴 -1.86% |
+
+<div class="wm-footer-meta"><span>수집 시각: 2026-11-17 KST</span><span>소스: CoinGecko</span></div>
