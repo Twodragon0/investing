@@ -34,10 +34,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-16 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 주가 62% 폭락 “정말 큰일이다” 했는데…280만원 간다는 ‘이 주식’, 전망 보니 - 101건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 만원, 삼성전자 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, IPO 주목</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 연준 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1QWlZRaDNjUW1vT1ZxaHVpSXpNZFVNYUd5TjRURUlpS0UwZWRFSV9HR0hjazdWMUhiRTRuaHdIbDI3NjA4NFJ3cDlxQUNrY0NPb1HSAVNBVV95cUxPMHdZZUw3cUtjSmhvSV83aVZHTnZKRVZuTTVwbnU4MmZqSHVMSFRfbDhoWXN1WC1vbkRkVnBaeFhHT2t5aHljTUtCYWwweVBvOEhidw?oc=5">주가 62% 폭락 “정말 큰일이다” 했는데…280만원 간다는 ‘이 주식’, 전망 보니</a> <span class="p0-desc">주가 62% 폭락 “정말 큰일이다” 했는데…280만원 간다는 ‘이 주식’, 전망 보니 서울경제</span></li><li><a href="https://www.cnbc.com/2026/11/14/gta-6-grand-theft-auto-launch.html">How Rockstar's 'GTA VI' release could reshape gaming, streaming and even paid time off</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,290.53 (-0.58%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 699.66 (+1.59%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-11-16 주식 시장에서 101건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,290.53(-0.58%), KOSDAQ 699.66(+1.59%), USD/KRW 1,334.98(+0.05%).
 - *엔비디아는 74개의 서버가 중국으로 이동하고 56개가 차단되었다는 주장이 있는 가운데 대만 관리들에게 직원의 처우를 재고할 것을 촉구합니다.*
 
 ## 테마별 주요 뉴스

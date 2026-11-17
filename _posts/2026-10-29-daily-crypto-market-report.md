@@ -29,9 +29,11 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-10-29 | 시총 $2.74T (-
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 24시간 주요 변동</strong><ul><li>🟢 <strong>Litecoin</strong> (LTC): +4.41%</li><li>🟢 <strong>UNUS SED LEO</strong> (LEO): +4.06%</li><li>🟢 <strong>Chainlink</strong> (LINK): +2.63%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 오늘의 시장 인사이트:
+- 2026-10-29 비트코인 $81,274 (24h +0.6%) · 공포·탐욕 지수 51/100 (Neutral) · BTC 도미넌스 59.5%. 상위 30개 코인의 시세 및 모멘텀을 정리합니다.
 
 ## 시장 인사이트
 

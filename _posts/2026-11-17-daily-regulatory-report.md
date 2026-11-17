@@ -28,25 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-17 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 가상자산 관련 6건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 가상자산 주목</li><li>🏛️ <strong>정치/정책</strong>: 2건 수집</li><li>🏦 <strong>거래소</strong>: 블록체인투데, 가상자산 관련 1건</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 6건의 뉴스 중 **규제/정책** 관련이 4건(67%)으로 압도적입니다. 규제 동향이 시장 참여자들의 주요 관심사입니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (4건): 가상자산 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🏛️ 정치/정책** (2건): financial, minister, initiatives 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **🏦 거래소** (1건): 블록체인투데, 가상자산, 거래대금 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-### 주요 이슈
-
-- Bundesbank, MAS, 결제 실패 위험을 줄이는 국경 간 CBDC 결제 테스트 - CoinDesk
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 3건, 아시아 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 6건
 - **한국**: 3건

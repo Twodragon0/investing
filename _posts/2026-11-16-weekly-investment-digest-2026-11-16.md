@@ -54,9 +54,11 @@ image_alt: "주간 투자 다이제스트 - 2026년 11월 16일 - 시장 분석 
 - 2026-11-16 [암호화폐 시장 종합 리포트 - 2026-11-16 | Fear 10](/market-analysis/2026/11/16/daily-crypto-market-report/) -- 현재가 $0.058712, 24시간 -2.15% 하락, 7일 -17.69%. 시가총액 $9.20B
 - 2026-11-16 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-11-16](/market-analysis/2026/11/16/daily-worldmonitor-briefing/) -- 2026-11-16 글로벌 핵심 이슈: Iran targets US military base in Bahrain with drone attack (지정학/안보). WorldMonitor 연계 소스 기준 총…
 - 2026-11-16 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-11-16](/market-analysis/2026/11/16/daily-worldmonitor-briefing/) -- WorldMonitor/BBC World · 13건 WorldMonitor/Guardian World · 5건 WorldMonitor/Al Jazeera · 2건
-- 2026-11-16 [WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-11-16](/market-analysis/2026/11/16/daily-worldmonitor-briefing/) -- 오늘의 글로벌 리스크 스냅샷 총 수집: 20건 핵심 테마: 사회/기타, 에너지, 지정학/안보 집중 출처: WorldMonitor/BBC World
-- 2026-11-16 [주요 경제 캘린더 및 실적 일정 (2026-11-16)](/market-analysis/2026/11/16/fmp-economic-calendar/) -- 2026-11-16 오늘 일정 핵심: 주요 경제 이벤트 CPI분/분. 시장 지수 2종, 섹터 11개, 국채 금리 5개 만기, 경제 이벤트 28건(고·중간 중요도), 대형주 실적 3건, IPO 일정 8건을 정리했습니다
-- 2026-11-16 [주요 경제 캘린더 및 실적 일정 (2026-11-16)](/market-analysis/2026/11/16/fmp-economic-calendar/) -- Anthropic sets IPO price range of $70 to $78, looks to start trading Nov. 19, sources say
+<div class="alert-box alert-info"><strong>오늘의 글로벌 리스크 스냅샷</strong><ul>
+<li>총 수집: N/A</li>
+<li>핵심 테마: N/A</li>
+<li>집중 출처: N/A</li>
+</ul></div>
 
 ## 암호화폐 뉴스 (8건)
 

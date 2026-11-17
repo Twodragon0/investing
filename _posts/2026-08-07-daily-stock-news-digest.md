@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-07 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9ET2oyOHVwUU1DVE1mdExmREQ2cEF0Sk1TVlUzNG55MkluV2EyM1c1TlB5bjlFVnBQdEhkREpiU0RHRV9mS1kyMGpVZHUtQWxiZGkzTGhhZ3JEdnF3RG03ZUpiRDEtVVJ4MEpLeXJrNTTSAXRBVV95cUxPQnNTeGRacXJobEdGRXFkVzNBd3RvTEpsUjhLV3BPUTNQbzhBVTRGNzZuUkh3V0hrZ0VTdndqNXRkNzVLblp5WElUT0p5WHd0OGd0dDhXajBIRXRMSFpxWjVtM21SYXJQeHlnZHBUeE1iVUZmMA?oc=5">반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 - 산경투데이</a> <span class="p0-desc">반도체 투심 다시 흔들…코스피 4.58% 급락, 코스닥은 800선 회복 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE03RGFaZjljUUpCQVRLZmlLVE5UazFGQlhweW1FUVBZU25wUDVQTjc3eGhraXY4UTdHZ2Ftb2E1cVd3WW1VRmpVRXEzaTZpX1FGa19MeEsyemtYcTNGUlVKRnRTU0xwWm8?oc=5">샌디스크 쇼크에 글로벌 반도체주 급락…키옥시아 합작 '332단 낸드'로 돌파구 - 초이스스탁US</a> <span class="p0-desc">샌디스크 쇼크에 글로벌 반도체주 급락…키옥시아 합작 '332단 낸드'로 돌파구 | 뉴스 - 초이스스탁US|샌디스크 보수적 매출 전망에 미국·아시아 주요 반도체 기업 주가 일제히 하락하이퍼스케일러 수요 탄탄하나 단기 단가 정점 우려, 높았던 눈높이가 변동성 자극삼성전자·SK하이닉스 HB...</span></li><li><a href="https://www.sankyungtoday.com">외국인 매도에 반도체주 급락…삼성전자 6%·SK하이닉스 10%↓ - 산경투데이</a> <span class="p0-desc">외국인 매도에 반도체주 급락…삼성전자 6%·SK하이닉스 10%↓ 산경투데이</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,280.15 (-0.40%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 790.13 (-1.98%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-07 주식 시장에서 192건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,280.15(-0.40%), KOSDAQ 790.13(-1.98%), USD/KRW 1,420.25(-0.24%).
 - *한강타임즈 김광호 기자 = IBK기업은행은 중소기업의 디지털 경쟁력 강화를 위해 ‘IBK상거래원스톱’ 서비스를 고도화하고 ‘크레탑 기업정보 브리핑’ 서비스를 새롭게 출시한다고 5일.*
 
 ## 테마별 주요 뉴스

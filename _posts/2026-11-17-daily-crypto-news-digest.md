@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-17 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 법무부, 북한의 대규모 암호화폐 도난을 막기 위한 조치 발표 - 국토안보부 오늘 - 114건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 하락 주목</li><li>🏦 <strong>거래소</strong>: 27건 수집</li><li>📈 <strong>가격/시장</strong>: 하락, 시황 관련 36건</li><li>🟣 <strong>DeFi</strong>: 15건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPYm1QS3Yta3N5TVlodTdwLVF5NTVWTXRCZHJMRmZhM0Q3dW1Mc2xUSlFqUjZ6c1ZtNllkdGF3VUpiako4aVBMMmRPbXZZaHV0d2ZtelV3NllKSXEySS1ERjBrOTlGZ3ptSDlvNGRXQlFLN3ZXdXd1VnQ2aE9vSXBGajZHLTZOWnVrWVZuZE1zTmJaNXdlWTNtelhyZXRURWpfVV9sdExvbWx3RWdGQzQzaVliZDU4MTVhRkhVVzJKVzdCOUIzd1hUMmZTdlFYRzc2MF9Da1JTWGZpU3RHVmxoSEZn?oc=5">법무부, 북한의 대규모 암호화폐 도난을 막기 위한 조치 발표 - 국토안보부 오늘</a> <span class="p0-desc">법무부, 북한의 대규모 암호화폐 도용을 저지하기 위한 조치 발표 오늘 국토안보부</span></li><li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOQU05S3JyT08wLWZmSUxzZV9SMnV5RTAzWEtwTlJEUVVVaFpOUksyMmJNQldHNVZic01Pd1BjV0pPNHlVUnJ5cGgxaEljeUxKdjdfMUJQckxKeUROQmdpOEhTV0dUQWxiTDI4SURLMzAxZUhtaEJlUUhyZTJBSUZETmhqSzFma1BFLTdaMXN5SHJ6UDBRZURFaEdIeVZGRndCMW5CVkRyWFE4N0ZDODJmVTRqdVBoSVJDQ1haZWhtdjYzRU01?oc=5">바이낸스에서 63억 달러 도난: 현재까지 가장 큰 암호화폐 해킹 - The Guilfordian</a> <span class="p0-desc">바이낸스에서 도난당한 63억 달러: 현재까지 가장 큰 암호화폐 해킹 The Guilfordian</span></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPOXd4TDF4SVlQb0NUTV9uY3N5cEhUSXZGVzVuMWRwbWZ3YThjdDJQUFJ1bzZLajZsREpsNEVTcTE4NngtWmpHc3ptVzU3V0NMNU5pS0M1QzFmVnFGX0lTNm02Zm9vVjlMSm1TLUdjV2hTWTlHNDVLWEpDUkVPemV6ZmM3eU1PLXdyNE14d0oxbmJFZFdDemUyZkNYeE9kXzJDeVpCaV9QOUtfM2ZhQy1BbQ?oc=5">DOJ, 바이낸스 해킹으로 12억 달러 이상 압류 또는 제지 승인 획득 - 비트코인 재단</a> <span class="p0-desc">DOJ, 바이낸스 해킹 비트코인 재단에서 12억 달러 이상 압수 또는 제지 승인 획득</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 법무부, 북한의 대규모 암호화폐 도난을 막기 위한 조치 발표 - 국토안보부 오늘 
-외 P0 긴급 이슈 5건이 추가 감지되었습니다. 총 114건의 뉴스 중 P1 주요 이슈도 16건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (43건): 비트코인, 하락, 달러 관련 (43건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (27건): binance, plunges, predict 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **📈 가격/시장** (36건): 하락, 시황, 달러 가격 변동 (36건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 법무부, 북한의 대규모 암호화폐 도난을 막기 위한 조치 발표 - 국토안보부 오늘
-- 바이낸스에서 63억 달러 도난: 현재까지 가장 큰 암호화폐 해킹 - The Guilfordian
-- DOJ, 바이낸스 해킹으로 12억 달러 이상 압류 또는 제지 승인 획득 - 비트코인 재단
-
-### 주요 이슈
-
-- 비트코인 6만달러 무너지면 3만8000달러까지 추락 경고 - 뉴스핌
-- 비트코인, 6만5천 달러 아래 횡보…ETF 자금 유출 지속 - Investing.com 한국어
-- 비트코인 옵션 트레이더들, US$60,000까지 가격 하락 경고 - IDNFinancials
-- 외 13건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-17.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **114건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-17 암호화폐 핵심 뉴스: 주와 도시에서는 사기가 증가함에 따라 암호화폐 키오스크를 금지하기로 움직임 - Stateline. 총 114건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

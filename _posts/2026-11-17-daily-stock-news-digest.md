@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-17 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 - 프리진경제 - 186건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, IPO 주목</li><li>🏦 <strong>거래소</strong>: IPO, 엔비디아 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 국채 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE4wU21TV3BwN21aWDZ6aVd2a1daSVhBZC00c0NzbmFxQnJBUjQ2U0tNdE8xQTlfbFNOQlJPOGhKOWhzNGxrNzlEZ0dzUkVBa3NkVHgwaFMtQXNpcmhyWjhXaUVick9EOEhvN3RJdg?oc=5">외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 - 프리진경제</a> <span class="p0-desc">외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE56bGdxbllMcUxwU3lDYmtHdmtKTkVONEV4SXVLamdWbjEwSGg1d3dIRzdMUEVyelc4MlM4VjRCQUoyaThCV3hjbTFhUWVPbTVBZzI5d3hnNkdXQQ?oc=5">"개장 직후엔 괜찮았는데"…코스피·코스닥, 美 금리·AI 우려에 '급락'</a> <span class="p0-desc">"개장 직후엔 괜찮았는데"…코스피·코스닥, 美 금리·AI 우려에 '급락' 한국경제</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE4zTGtNNDJCLUI4YTVwSThhMUoxVlkyeVVMQktOU1FaRGRLZGpTUFhpY2N3azJlQXVtV3o2RXM2ZzdFMjh4V09EMmR6My0ycUMwVFh2TGl1dWhNOWVYOXpZVDNuNDctTXdwY080aTRHeDjSAXRBVV95cUxNTVVNWUtlaTJRaFlfUzM1dkpfS2owdmRnODVEU0ZIbFh0UVBnekgtb2dUV0x6SC1qbEp4SDQ4emtOT3hBWFpybHdqc1d5ZExSYzIta3RwUFNwSFU3cERzdktUWWNrekVXbFRiUk5IdlNxNFRJMw?oc=5">코스피 장중 3%대 급락…외국인 매도에 반도체주 동반 하락 - 산경투데이</a> <span class="p0-desc">코스피 장중 3%대 급락…외국인 매도에 반도체주 동반 하락 산경투데이</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 - 프리진경제 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 186건의 뉴스 중 P1 주요 이슈도 25건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (40건): 코스피, 코스닥, 외국인 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **🤖 AI/기술** (38건): 엔비디아, IPO, 실적 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **🏦 거래소** (15건): IPO, 엔비디아, 실적 관련 지표와 수급 흐름을 함께 확인하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 - 프리진경제
-- "개장 직후엔 괜찮았는데"…코스피·코스닥, 美 금리·AI 우려에 '급락'
-- 코스피 장중 3%대 급락…외국인 매도에 반도체주 동반 하락 - 산경투데이
-
-### 주요 이슈
-
-- Nasdaq 100 Plunges as Nvidia Earnings, Anthropic IPO on Horizon
-- Stocks Fall Before Nvidia Earnings, Anthropic IPO: Markets Wrap
-- Wall Street ends sharply lower on AI jitters ahead of Nvidia results, Anthropic
-- 외 22건
-
-### 투자자 체크포인트
-
-- 한국 기사 60건, 글로벌 기사 126건 수집
-- 한국 지수: KOSPI 5,100.50(-3.66%), KOSDAQ 665.65(-5.03%), USD/KRW 1,337.38(+0.13%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">40건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:95%"></div></div><span class="theme-count">38건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:38%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:32%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-17.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-17.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,100.50 (-3.66%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 665.65 (-5.03%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-11-17 주식 시장에서 186건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,100.50(-3.66%), KOSDAQ 665.65(-5.03%), USD/KRW 1,337.38(+0.13%).
+- *Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relationship.*
 
 ## 테마별 주요 뉴스
 

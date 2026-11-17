@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-05-08 | 시총 $2.75T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🟢 <strong>Toncoin</strong> (TON): +9.07%</li><li>🔴 <strong>Dogecoin</strong> (DOGE): -3.27%</li><li>🔴 <strong>Monero</strong> (XMR): -2.94%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **18건** 수집
