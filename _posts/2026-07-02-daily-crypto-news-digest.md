@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-02 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBCZ1Nxbl9pSXY3NW1PdVhSYWo4cDBnMS1yTVl0bGc2akpiQWRvUk4tYU9Td0Z5NGhGcV81OXlhc2JvV193OGlESklJQlNnYVhfeENaR2ZGR1ZRQTN0Q3M3NmxzUHdETDZVcFg0aEtpR24?oc=5">"비트코인, 4만달러까지 하락할 수도"…올해만 30% 넘게 급락</a> <span class="p0-desc">"비트코인, 4만달러까지 하락할 수도"…올해만 30% 넘게 급락 연합인포맥스</span></li><li><a href="https://news.einfomax.co.kr">"비트코인, 4만달러까지 하락할 수도"…올해만 30% 넘게 급락 |</a> <span class="p0-desc">"비트코인, 4만달러까지 하락할 수도"…올해만 30% 넘게 급락</span></li><li><a href="https://www.coindesk.com/tech/2026/07/01/tokenized-google-stock-inflated-7-700-in-rare-defi-lending-exploit">토큰화된 구글 주식은 드문 디파이 대출 악용으로 인해 7,700% 부풀렸습니다.</a> <span class="p0-desc">공격자는 담보로 사용된 토큰화된 구글 주식의 가치를 실제 가격의 약 78배로 부풀린 다음 이를 빌려 약 403,000달러의 불량 부채를 남겼습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **111건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-07-02 암호화폐 핵심 뉴스: 트럼프의 재무 공개에는 주로 밈 코인을 통해 발생한 암호화폐 수익 14억 달러가 기재되어 있습니다.. 총 111건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

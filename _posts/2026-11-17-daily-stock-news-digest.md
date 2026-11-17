@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-17 - 주식 뉴스 요약 이�
 
 - KOSPI 5,100.50 (-3.66%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 665.65 (-5.03%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-11-17 주식 시장에서 186건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,100.50(-3.66%), KOSDAQ 665.65(-5.03%), USD/KRW 1,337.38(+0.13%).
 - *Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relationship.*
 
 ## 테마별 주요 뉴스

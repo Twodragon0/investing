@@ -37,7 +37,6 @@ permalink: "/stock-news/2026/02/15/daily-stock-news-digest/"
 ---
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 📈 가격/시장, 📊 매크로/금리, 🤖 AI/기술

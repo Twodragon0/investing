@@ -32,13 +32,12 @@ image_alt: "소셜 미디어 동향 - 2026-07-29 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com">연준 금리 결정, 기술 수익: 이번 주 주목할 사항</a> <span class="p0-desc">연준 금리 결정, 기술 수익: 이번 주 주목해야 할 사항 WSJ</span></li><li><a href="https://www.usnews.com">연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간 | US 뉴스 - US 뉴스 & 월드 리포트</a> <span class="p0-desc">연준 금리 결정, 관세, 이란 '일시 중지'로 바쁜 경제 주간</span></li><li><a href="https://www.fxstreet.com">연준 금리 결정이 임박함에 따라 유로화는 최근 최저치에 근접했습니다 - FXStreet</a> <span class="p0-desc">FXStreet는 신뢰할 수 있는 뉴스와 실시간 Forex 분석을 제공하는 선도적인 소스입니다. FXStreet는 실시간 환율, 차트 및 경제 달력을 제공합니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 26건 중 텔레그램 0건, 소셜 1건, 정치·경제 25건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 26건 중 텔레그램 0건, 소셜 1건, 정치·경제 25건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
