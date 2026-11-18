@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-16 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcTdHMVBPUXpnOHUxc2VUOWlyZ2JZRWxJNk1nN1Fva3dVWnVLRDgtNS14cUlPSVVaZkU5NXRvWEI0T3FLSjF6V0o2dEhOY0xPRHd1WWxEb2dTWmVkU1Fic29fUVFOaHVpWDZ1Y3FYdnhwWXZIVGdWNGFYU3JoMkpFb1dfY0xqVzdvTXUteXVLaUlHcEFPUHhtaHpxaWxqYUJPOWU4YTRGei1GOHVCLWlsSFJENUlsZHNocU9keHd1bl90aHg5cXAzTjEwa0wxQTVRM3ZB?oc=5">FBI disrupts crypto theft scheme by North Korean hacking group; billions stolen so far - Los Angeles Times</a></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQM1UwZlVJclJteDl1STRDQVdCZGV3Y2NhWkVYTWRYNXcwRkZDNk5JdzNfSDZkaV9DZkJDTXduZWFLNW43dmw1dktUcDNmM0pmN2FNZGhfSXg3Y05iMEtfd011a2gwWFFWWk53aW9PR05sUjNSeWtKN0hDYmtwX1VVa1FDWjg5UGFFS0o4aUx4UmJEdEl2MXNjN0MxakhBOHlodFc5QTEzbi1pSXBnQmdleHJDTlA3MmZadlZWZG8zYw?oc=5">US cracks down on North Korean cryptocurrency-theft scheme, recovers more Binance funds - Cybersecurity Dive</a></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9lYXhrTzgzeHVfWjBtOWZ2SE04eTRFSjBzNi1SMkh2ZXBBWDNIbWpTUXZOUzkyb3JJWjA3WVFESnduR1RwclhTQjFvNzVMSmdrQWxqMzhyRkpSMFpnOURrWkFyWVhLNTJzYS1QOTN1TkJVTnc?oc=5">톰 리, 암호화폐 급락 배경…젠슨황·앤트로픽·바이낸스</a> <span class="p0-desc">톰 리, 암호화폐 급락 배경…젠슨황·앤트로픽·바이낸스 디지털투데이</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-11-16 암호화폐 시장 102건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

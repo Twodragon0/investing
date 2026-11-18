@@ -32,13 +32,12 @@ image_alt: "소셜 미디어 동향 - 2026-06-17 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.businessinsider.com">Kevin Warsh는 곧 연준 의장으로서 첫 번째 금리 결정을 감독하게 됩니다. 예상되는 내용은 다음과 같습니다. - Business Insider</a> <span class="p0-desc">Business Insider tells the global tech, finance, stock market, media, economy, lifestyle, real estate, AI and innovative stories you want to know.</span></li><li><a href="https://eciks.org">연준의 Kevin Warsh는 시장 최고 기록 가운데 내일 1등급 결정을 발표할 예정입니다.</a> <span class="p0-desc">ECIKS.org는 미국 경제, 비즈니스, 금융 시장, 기술 및 정치를 추적하기 위한 플랫폼입니다. 우리의 임무는 명확한 분석, 신뢰할 수 있는 데이터 및 전략적 통찰력을 제공하여.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 35건 중 텔레그램 0건, 소셜 1건, 정치·경제 34건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 35건 중 텔레그램 0건, 소셜 1건, 정치·경제 34건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 2건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드
