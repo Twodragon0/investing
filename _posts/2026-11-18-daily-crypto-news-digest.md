@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence - 120건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 관련 38건</li><li>🏦 <strong>거래소</strong>: 30건 수집</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 실적 동향 주시</li><li>📈 <strong>가격/시장</strong>: 하락, 블루밍비트 관련 25건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/383446/binance-hack-wallets-move-ethereum-after-two-weeks">Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence</a></li><li><a href="https://decrypt.co/383414/optimizely-hack-hijacked-ledger-bbc-and-176-other-sites-to-swap-crypto-wallet-addresses">Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses</a></li><li><a href="https://cointelegraph.com/news/feds-waller-cites-binance-hack-in-warning-over-tokenized-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Fed’s Waller cites Binance hack in warning over tokenized finance</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence 
-외 P0 긴급 이슈 3건이 추가 감지되었습니다. 총 120건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (38건): 비트코인, BTC, 하락 관련 (38건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🏦 거래소** (30건): binance, coinbase, robinhood 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🤖 AI/기술** (22건): 엔비디아, 실적 기술 이슈 (22건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence
-- Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses
-- Fed’s Waller cites Binance hack in warning over tokenized finance
-
-### 주요 이슈
-
-- 비트코인, 앤트로픽 IPO·엔비디아 실적 '겹악재' 경계 - KB Think
-- 07:47 가상자산] 비트코인, ETF 자금 유출 중단에도 하락…8820만원선 - 신아일보
-- XETA co-founder arrested in Cypress as federal indictment alleges crypto investm
-- 외 17건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, ETF
-- **주요 출처**: Binance(35건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-18.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-18.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **120건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🤖 AI/기술
+- 2026-11-18 암호화폐 핵심 뉴스: "다우 1.64%·나스닥 0.74% 내리고 비트코인 2.07% 하락" - 국제뉴스. 총 120건 분석, 핵심 테마는 비트코인, 거래소, AI/기술입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

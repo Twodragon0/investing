@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-04 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-06-02/bitcoin-s-inflation-hedging-promise-in-tatters-after-36-plunge">비트코인의 인플레이션 헤지 약속은 36% 폭락 후 엉망이 되었습니다.</a> <span class="p0-desc">비트코인의 인플레이션 헤징 약속은 36% 폭락 후 엉망이 되었습니다. (36% 갱신) 급락 관련 회사입니다.</span></li><li><a href="https://news.google.com/read/CBMilAFBVV95cUxQYlpEc2I4dl9KaHRydmRlRmNWUWNlbXBfSjJUaXJISlBWc2Q3T0dHS2dkWU43dmxaaEkxN1o1OUFXeWJUSXhvbVdlMDNGajFndm1wLUVCUHVDTE8tTGVJdnRJU3RrdllHOUlQeDBmRlJGam45RnBOS0R2ODZBLUdfQVg3RjlaODExR2FIME1ydWUtZjFy?hl=en-US&gl=US&ceid=US%3Aen">비트코인 가격은 $20,000까지 하락할 것이라고 Peter Schiff는 말합니다 — HODLers가 곧 '그만둘' 것이라고 주장</a> <span class="p0-desc">Peter Schiff는 비트코인 폭락을 $20,000로 예측합니다. 그는 가격 하락이 장기 보유자들 사이에서 패닉 매도를 촉발할 수 있다고 말했습니다. 비트코인의 쇠퇴는 다음과.</span></li><li><a href="https://www.bloomberg.com/news/articles/2026-06-03/a-180-crypto-rally-shows-new-investing-era-as-bitcoin-stumbles">180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다.</a> <span class="p0-desc">180% 암호화폐 랠리은 비트코인의 실패로 새로운 투자 시대를 보여줍니다. (180% 갱신) 급락 관련 회사입니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **105건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-04 암호화폐 핵심 뉴스: 비트코인은 최근 매도 이후 2026년 신저가로 하락할 것이라고 트레이더들은 예측했습니다.. 총 105건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

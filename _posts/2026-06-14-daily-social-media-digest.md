@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-06-14 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.weex.com">다음 주 거시적 전망: Waller의 "데뷔"가 다가오고 있으며 연준은 금리 결정을 발표할 예정입니다 - WEEX</a> <span class="p0-desc">WEEX 거래소 - 비트코인, 이더리움 및 알트코인을 안전하고 쉽게 거래하여 1,000 BTC 보호 기금, 빠른 토큰 상장 및 낮은 미끄러짐 거래를 제공합니다. 높은 유동성을 위해.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 24건 중 텔레그램 0건, 소셜 0건, 정치·경제 24건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 24건 중 텔레그램 0건, 소셜 0건, 정치·경제 24건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향

@@ -16,33 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-18 - 보안 뉴스 요약 �
 
 블록체인 보안 19건 분석. 주목 사건: **[Security] Lighter incident exposes risks beyond withdrawal ** / 보안 뉴스 헤드라인: Hackers exploit GeoVision surveillance systems to deploy cry.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Google says hackers use AI agents to find and exploit software flaws 
-외 P0 긴급 이슈 12건이 추가 감지되었습니다. 총 19건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (18건): security, exploit, lighter 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟠 비트코인** (4건): exploit, luxor, surveillance 관련 (4건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-- **🤖 AI/기술** (1건): 구글 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Google says hackers use AI agents to find and exploit software flaws
-- [Security] Binance hack may push institutions to outside custody, FalconX exec says
-- [보안] Zodiac이 키 손상을 의심함에 따라 안전 지갑이 650만 달러 손실을 입은 것으로 알려졌습니다
-
-### 주요 이슈
-
-- [보안] Luxor CEO은 비트코인 광부 납치 이후 AI '어두운 숲'에 대해 경고합니다.
-
-### 투자자 체크포인트
-
-- 보안 사건 16건, 보안 뉴스 3건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 19건
