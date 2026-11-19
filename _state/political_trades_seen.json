@@ -1,39 +1,5 @@
 {
   "seen": {
-    "42ffa3379997872aaa7fec99": "2026-10-19T16:36:36",
-    "7443aa022b1a8526c0b49b34": "2026-10-19T16:36:36",
-    "625d47d3697fcd346419071d": "2026-10-19T16:36:36",
-    "feae5d651e62a37a8ae23be1": "2026-10-19T16:36:36",
-    "35c5e1126dd34e45262c8b22": "2026-10-19T16:36:36",
-    "42761ac324f72d1717a69029": "2026-10-19T16:36:36",
-    "0dcd229e77a1129ac5132e4c": "2026-10-19T16:36:36",
-    "3a12448b600ea84d17daef74": "2026-10-19T16:36:36",
-    "8f07e94b0488e4ecbedd3bbe": "2026-10-19T16:36:36",
-    "e4f9bca687321f23b14f55d1": "2026-10-19T16:36:36",
-    "2d8e9deef0d4ac814f871c89": "2026-10-19T16:36:36",
-    "af7b9b5046785b1bc11fe948": "2026-10-19T16:36:36",
-    "de6ae46c1d4075a97638b45d": "2026-10-19T16:36:36",
-    "5d826c91f80c404cdaf1ac75": "2026-10-19T16:36:36",
-    "adcb14b0c251d3f753a3cf32": "2026-10-19T16:36:36",
-    "c88c376deb3197da395589a8": "2026-10-19T16:36:36",
-    "cfcf3646a2142800b75d62d2": "2026-10-19T16:36:36",
-    "ea18c1e4900ed3173e4f6936": "2026-10-19T16:36:36",
-    "2aab310cc502e065bf9420fe": "2026-10-19T16:36:36",
-    "dbaf60c6a39f052f56b51b0d": "2026-10-19T16:36:36",
-    "58fb89f285c4863cc9c17507": "2026-10-19T16:36:36",
-    "66f540765c9b4bcd3a626cbe": "2026-10-19T16:36:36",
-    "f4ee07c234906f3150f86232": "2026-10-19T16:36:36",
-    "170b0b4d902ba5a167ec5d09": "2026-10-19T16:36:36",
-    "e101f97a7b963a77f03afb73": "2026-10-19T16:36:36",
-    "bbebae11b60fbf32379b6a8b": "2026-10-19T16:36:36",
-    "ba437ac3be7e56621d7fa11d": "2026-10-19T16:36:36",
-    "27b2fe197fd34f03700ef021": "2026-10-19T16:36:36",
-    "8859bff112545b0f8583cb52": "2026-10-19T16:36:36",
-    "1be53cbf51a46d0072aadf5f": "2026-10-19T16:36:36",
-    "4d694236b1e8018e3a7cf905": "2026-10-19T16:36:36",
-    "2fde7923af48705d9b693685": "2026-10-19T16:36:36",
-    "3d2990e68ab8b6691a8ce256": "2026-10-19T16:36:36",
-    "a3f4ed747ed1fb1f76e73174": "2026-10-19T16:36:36",
     "0c02105281ee5e075bc9bbe1": "2026-10-21T00:46:41",
     "a479fea87f31b9e47d89a3cd": "2026-10-21T00:46:41",
     "0a327f08be8eee47ef350603": "2026-10-21T00:46:41",
@@ -1097,7 +1063,60 @@
     "c62e1ddf1934dafb4739c60c": "2026-11-17T18:44:10",
     "dceb534697b0e013d793f50f": "2026-11-17T18:44:10",
     "522958f19c5ac5b357706a02": "2026-11-17T18:44:10",
-    "c851a21a015039dc0e4b724c": "2026-11-17T18:44:10"
+    "c851a21a015039dc0e4b724c": "2026-11-17T18:44:10",
+    "9cf78960dea8fa711a66bff3": "2026-11-19T03:47:34",
+    "a078ee34d141ac672a1a722f": "2026-11-19T03:47:34",
+    "f08e46e2fb526505b94d792e": "2026-11-19T03:47:34",
+    "0959e6d2d8aab4498595d5b1": "2026-11-19T03:47:34",
+    "20875d50e1770914f9040aa9": "2026-11-19T03:47:34",
+    "57a0a7fbdc8cbea4db24a5f1": "2026-11-19T03:47:34",
+    "8b71a38dc180850e1ba0897e": "2026-11-19T03:47:34",
+    "d5ece0428dd2df5ef5f6bcae": "2026-11-19T03:47:34",
+    "469c59c1021475bdd1a8ec28": "2026-11-19T03:47:34",
+    "d75e2dcf5c71a155a51bbab3": "2026-11-19T03:47:34",
+    "16648fb961ae73568961a451": "2026-11-19T03:47:34",
+    "86ba668d8267652e09a1e61c": "2026-11-19T03:47:34",
+    "e058fc09a7428822b2aa2506": "2026-11-19T03:47:34",
+    "3ff625c3d42fa423e40da830": "2026-11-19T03:47:34",
+    "671a1a813f83bdf5f6f6c590": "2026-11-19T03:47:34",
+    "680c38885af0d0337966c92a": "2026-11-19T03:47:34",
+    "10fb6b7f469760c43dacb7f4": "2026-11-19T03:47:34",
+    "3195061e7d0b098a789a6e3b": "2026-11-19T03:47:34",
+    "b410b83f17807565b7d2c7b6": "2026-11-19T03:47:34",
+    "81a0539c5686bdc922969f11": "2026-11-19T03:47:34",
+    "db35897e51e219def5a86b40": "2026-11-19T03:47:34",
+    "45fa687f968c738ea9f07d91": "2026-11-19T03:47:34",
+    "b7631623d79c473b70272b8a": "2026-11-19T03:47:34",
+    "1ef5936977b5a17a8f2a239a": "2026-11-19T03:47:34",
+    "e655c3992bd465ce2b9b5ac8": "2026-11-19T03:47:34",
+    "4b17f3f1786cf2a9ee712166": "2026-11-19T03:47:34",
+    "d01bf00aafcd53a10c97bba6": "2026-11-19T03:47:34",
+    "925002aa9ce08d0af40fc645": "2026-11-19T03:47:34",
+    "cea1a95d059654b2133987fe": "2026-11-19T03:47:34",
+    "0ef0c53e295f506f520aa6a6": "2026-11-19T03:47:34",
+    "76c69782e02d0f52dcb167e5": "2026-11-19T03:47:34",
+    "9614eac495e16c4cca577748": "2026-11-19T03:47:34",
+    "14bad03fccfec2e91be14dbf": "2026-11-19T03:47:34",
+    "f96995bf0d1f20ae2bd86cae": "2026-11-19T03:47:34",
+    "33c7c1955a2c8c9edeaecd32": "2026-11-19T03:47:34",
+    "873a65d84321edc1bbfce790": "2026-11-19T03:47:34",
+    "6efcd8b70d09697980d3b094": "2026-11-19T03:47:34",
+    "74f78dc953079e196b01fc10": "2026-11-19T03:47:34",
+    "829fe43f5e441d4bbd55cd4a": "2026-11-19T03:47:34",
+    "44cacd9f04f78464dbb94b1b": "2026-11-19T03:47:34",
+    "399bd38f56ab0cd320dab802": "2026-11-19T03:47:34",
+    "9f22a868db4077cd6af63fa6": "2026-11-19T03:47:34",
+    "cc24a78bf32fa07be2d2c284": "2026-11-19T03:47:34",
+    "94e23bdbbd44f19dcaa9e7c8": "2026-11-19T03:47:34",
+    "16fa6a508f611aa54b06231c": "2026-11-19T03:47:34",
+    "819f3ed877a616ace30f6d0c": "2026-11-19T03:47:34",
+    "3859febfaa80ea3293d21d3e": "2026-11-19T03:47:34",
+    "0ee65278299b1a8f33aea88b": "2026-11-19T03:47:34",
+    "d461e7d100c81edba4a77450": "2026-11-19T03:47:34",
+    "9d7c4b60ac57509881bcbae3": "2026-11-19T03:47:34",
+    "623ce100d97ed36114cd567f": "2026-11-19T03:47:34",
+    "777d47583273f433c66e079f": "2026-11-19T03:47:34",
+    "7aa4952fd0b44e76e1ee5ee7": "2026-11-19T03:47:34"
   },
   "titles": [
     [
@@ -21099,6 +21118,218 @@
     [
       "정치인 거래정책 리포트 20261118",
       "2026-11-18"
+    ],
+    [
+      "american resources 구조조정 현황 발표sec 공시 지연 investingcom 한국어",
+      "2026-11-19"
+    ],
+    [
+      "hyln hyliion officer plans to sell 8562 shares tied to vesting award quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "bruce polsky exercised 75000 options at atea pharmaceuticals avir and sold 41226 shares stock titan",
+      "2026-11-19"
+    ],
+    [
+      "at 25 a share mark reddout sold 6 shares of innovex international invx stock titan",
+      "2026-11-19"
+    ],
+    [
+      "lumentum holdings lite ceo hurlston sold 548 shares for 310k at 56638 under a 10b51 plan quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "vericel vcel principal accounting officer exercises options and sells all 1885 shares stock titan",
+      "2026-11-19"
+    ],
+    [
+      "biovie bivi ceo do bought 2500 shares for 2493 at 100 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "to cover tax withholding fold holdings fld required its cfo to sell 3097 shares stock titan",
+      "2026-11-19"
+    ],
+    [
+      "orion180 insurance group oig director deutsch bought 10323 shares for 106k at an average 1026 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "after selling class a shares a constellation brands stz insider still holds 323m shares stock titan",
+      "2026-11-19"
+    ],
+    [
+      "anaptysbio anabv director ecor1 capital bought 374580 shares for 172m at an average 4598 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "at sofi sofi 26823 shares were sold to cover taxes tied to the vesting of arun pintos stock awards stock titan",
+      "2026-11-19"
+    ],
+    [
+      "global partners glp insider global gp bought 7102 shares for 312k at an average 4390 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "xti aerospace xtia director evans bought 100000 shares for 869k at an average 087 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "global self storage self director burke bought 1000 shares for 4815 at 482 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "peoples bancorp of north carolina pebk director price bought 200 shares for 8284 at 4142 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "once upon a farm pbc ofrm director robb bought 4664 shares for 50k at 1072 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "frp holdings frph director baker bought 5332 shares for 963k at an average 1807 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "usa rare earth usar director blitzer bought 450000 shares for 3m at an average 666 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "grace therapeutics grce 10 owner opaleye management bought 48060 shares for 834k at an average 174 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "suncrete rmix director matteson bought 10000 shares for 551k at 551 quantisnow",
+      "2026-11-19"
+    ],
+    [
+      "trump administration unveils project to combat cybercrime",
+      "2026-11-19"
+    ],
+    [
+      "trump administration taps trm labs in 95 million push to disrupt crypto crime networks crypto briefing",
+      "2026-11-19"
+    ],
+    [
+      "cfpbs sharp pivot on enforcement one action in a year american banker",
+      "2026-11-19"
+    ],
+    [
+      "predictions platform kalshi complies with order to halt trump mention contracts coindesk",
+      "2026-11-19"
+    ],
+    [
+      "washington closes remoteaccess loophole on ai chips as congressional scrutiny of nvidia nasdaq nvda mounts foreign policy journal",
+      "2026-11-19"
+    ],
+    [
+      "opinion 124 the broken promises behind trumps tariffs",
+      "2026-11-19"
+    ],
+    [
+      "canada and mexico turn up pressure on trump over 2 trillion trade deal newsweek",
+      "2026-11-19"
+    ],
+    [
+      "how trump and xi went from tariff war to trade truce us news world report",
+      "2026-11-19"
+    ],
+    [
+      "abscbn news trump boasts biggest trade deal ever made with ph facebook",
+      "2026-11-19"
+    ],
+    [
+      "govelect gina hinojosa says she talked border with trump will roll back abbott executive orders on h1b visas thc the texas tribune",
+      "2026-11-19"
+    ],
+    [
+      "russia says europe is in humiliating decline as trump putin and xi meet time magazine",
+      "2026-11-19"
+    ],
+    [
+      "how to manage tech competition with china mcfauls world",
+      "2026-11-19"
+    ],
+    [
+      "can xitrump talks at apec turn chinas boeing pledge into firm orders scmp",
+      "2026-11-19"
+    ],
+    [
+      "the economists 2027 cover explained what its images of war ai and the economy mean according to the editors 10 key trends revista merca20",
+      "2026-11-19"
+    ],
+    [
+      "서산시 공직자 142명 재산등록 내용 심의공직자윤리위원회 개최 신아일보",
+      "2026-11-19"
+    ],
+    [
+      "exclusive ecb to discuss raising reserve requirement next week sources say",
+      "2026-11-19"
+    ],
+    [
+      "경제지표 좋아지는데 살림살이는 왜 성장률 39의 역설 더스쿠프",
+      "2026-11-19"
+    ],
+    [
+      "씨티그룹 한국은행 11월과 2월 모두 금리 인상 전망 gdp와 물가 상승해 통화 긴축에 무게",
+      "2026-11-19"
+    ],
+    [
+      "feds waller says central bank may need to shock people with halfpoint rate hike",
+      "2026-11-19"
+    ],
+    [
+      "fed officials saw higher rates ahead when they held steady last month",
+      "2026-11-19"
+    ],
+    [
+      "fed minutes show ai fears and that a bigger rate increase is still on the table",
+      "2026-11-19"
+    ],
+    [
+      "fed minutes show almost all officials expect more rate hikes",
+      "2026-11-19"
+    ],
+    [
+      "feds waller doubles down on a jumbo rate hike in december sees more hikes to come",
+      "2026-11-19"
+    ],
+    [
+      "feds barr says rate rises likely lie ahead for economy",
+      "2026-11-19"
+    ],
+    [
+      "fed saw need to keep raising rates despite holding steady in october",
+      "2026-11-19"
+    ],
+    [
+      "the latest federal reserve interest rate forecast points to 4 hikes by midseptember and thats terrible news for wall street the motley fool",
+      "2026-11-19"
+    ],
+    [
+      "feds waller says officials may need to shock with halfpoint rate hike the hill",
+      "2026-11-19"
+    ],
+    [
+      "breaking fed minutes keep further rate hikes firmly on the table fxstreet",
+      "2026-11-19"
+    ],
+    [
+      "the fed came close to an october rate hike fomc minutes show investmentnews",
+      "2026-11-19"
+    ],
+    [
+      "fed officials expect further interest rate hikes after pausing last month",
+      "2026-11-19"
+    ],
+    [
+      "fed may need to hike rates four times says central bank official mortgage professional america",
+      "2026-11-19"
+    ],
+    [
+      "정치인 거래정책 리포트 20261119",
+      "2026-11-19"
     ]
   ],
   "seen_urls": {}
