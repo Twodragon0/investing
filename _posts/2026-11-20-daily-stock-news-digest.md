@@ -307,7 +307,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html" class="news-title" target="_blank" rel="noopener noreferrer">Commerce approved sales of more than 879,000 AI chips to Chinese companies, Rep. Mast says</a>
-<p class="news-desc">Members of Congress have pushed in the wake of the Jensen Huang scandal for legislation to tighten export controls on chip sales to China.</p>
+<p class="news-desc">의회 의원들은 젠슨 황 스캔들로 인해 중국에 대한 칩 판매에 대한 수출 통제를 강화하는 법안을 추진했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -331,7 +331,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-20 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/11/19/financial-exploitation-prevention-act-older-investors-fraud.html" class="news-title" target="_blank" rel="noopener noreferrer">Congress passes bill to protect older investors from financial fraud</a>
-<p class="news-desc">Both chambers of Congress have now approved the Financial Exploitation Prevention Act of 2025, which is aimed at protecting vulnerable investors from fraud.</p>
+<p class="news-desc">두 의회 모두 사기로부터 취약한 투자자를 보호하기 위한 2025년 금융 착취 방지법을 승인했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
