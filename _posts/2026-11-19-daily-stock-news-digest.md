@@ -37,7 +37,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-19 - 주식 뉴스 요약 이�
 
 - KOSPI 5,067.44 (+2.06%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 662.81 (+1.90%).
-- 2026-11-19 주식 시장에서 193건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,067.44(+2.06%), KOSDAQ 662.81(+1.90%), USD/KRW 1,332.54(-0.20%).
 - *Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.*
 
 ## 테마별 주요 뉴스

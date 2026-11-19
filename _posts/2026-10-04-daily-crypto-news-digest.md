@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-10-04 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFAweUkzTndnU2hxRE43NVNOYzQtamltV0tGMmFIMWRYTmJ6SEJNcENPVE5FeWZXS2JBb1VYMFVxTm84bXJ6Z1d0eHlkZlB5bEJnYUc1N2htaGx4eVQ5VVhORm9GSXItQkphMDdjbElycw?oc=5">비트겟 해킹 업데이트…XRP, 비트코인, 북한 연관성</a> <span class="p0-desc">비트겟 해킹 업데이트…XRP, 비트코인, 북한 연관성 BeInCrypto</span></li><li><a href="https://decrypt.co/380005/chainalysis-ai-87m-bitget-hack-north-korea">Chainalysis Used AI to Trace the $387M Bitget Hack Back to North Korea</a></li><li><a href="https://decrypt.co/379929/morning-minute-near-intents-hacked-for-3-8m-was-it-a-bullish-hack">Morning Minute: NEAR Intents Hacked for $3.8M - Was It A Bullish Hack?</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
-- 2026-10-04 암호화폐 시장 75건 분석 — 핵심 테마: 비트코인, 가격/시장, 규제/정책
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
