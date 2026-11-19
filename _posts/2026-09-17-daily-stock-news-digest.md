@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-17 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1YMWhNN1cyLUZGQzZIUFZEZ1NuSXpJc1RuUlJBclJ4TXUtRE9Majg0blowdF9tM1JlNUhhdHJJNWhibENyWjItNUJjSU1uczFNbGljNFVOMjRFbkwwQ0dCcGdQQlNuS3NLQmVfRGxCVFU2NTBweG1uZDZn?oc=5">Treasury yields hold above 5% ahead of Fed rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxObFFVaTE3MEZveW9FelZMSjVuVWk5a1BVQWxZVWUwa1lSZXJ5Nk85bncwbFJzc2RZSkg5ZjdqM042X21oZGNmVGYxOEloZTdOb1NpRk1CM2g4b3FESkkyNWE3a1dVTldNMkpVdWtPR3V5TGE4TE5rNHI4dS1IR2lIQ0RCUGZRUm0xbzRLYzJKTjdsZHdsNkhLMVdIaW1RRlBDREhxYmthWlJMaFc1TmFtT3VzNEVaS1dyaE9PMVl3UmZOckpaYkZHNGZJV19IanM?oc=5">Stock market today: Dow, S&P 500, Nasdaq rise ahead of crucial Fed interest rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOd0MyTUgwOFdkTXlFQzdjSExIQUhzWWVENFMwRWF6TFNpTEl3VFR3eXpmQVoyV0Zna1ZNQzRJeU12Wk1BRU9iOWhoYXVEREJsS2RGa200ckJxQ1pwVWsyN2Q1U1RwUEl3dGpsNVdLNmVyLThYTHl4Q3AzMHRDZWM3c2pjRzJ4bHhkZTE0V2thbnUtSWlqckZOUzhlS1I4RXpnbGRWdVp3dnNDNWEzeDdJaFNoR2lRNlV0ZFRwLVhzdU9ycGNlbUt3R1lJUkw0RHpt?oc=5">Stock Market Today: Dow trims decline, S&P 500 and Nasdaq higher ahead of Fed rate decision; oil prices and yields retreat</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,717.97 (+1.37%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 815.98 (+0.44%).
+- 2026-09-17 주식 시장에서 210건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,717.97(+1.37%), KOSDAQ 815.98(+0.44%), USD/KRW 1,367.19(+0.31%).
 - *[0915마감체크] 코스피, 고금리·고유가에 4거래일 연속 하락.*
 
 ## 테마별 주요 뉴스

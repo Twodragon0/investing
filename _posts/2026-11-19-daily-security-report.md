@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-19 - 보안 뉴스 요약 �
 
 블록체인 보안 17건 분석. 주목 사건: **[Security] Ledger hardware implant saga reaches Dubai’s Virg** / 보안 뉴스 헤드라인: DeFi Hack News: 2026 Crypto Hacks Report - StealthEX.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Google says hackers use AI agents to find and exploit software flaws 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 17건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (16건): security, exploit, lighter 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🤖 AI/기술** (1건): 구글 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-- **🔷 이더리움** (3건): 공급 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- [Security] Google says hackers use AI agents to find and exploit software flaws
-- [Security] Binance hack may push institutions to outside custody, FalconX exec says
-- [Security] B18 TimeBank exploit: Unknown
-
-### 투자자 체크포인트
-
-- 보안 사건 14건, 보안 뉴스 3건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 17건

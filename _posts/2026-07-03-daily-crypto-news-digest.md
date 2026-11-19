@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-07-03 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/taiko-reopens-bridge-1-7m-exploit-users-made-whole?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Taiko는 170만 달러의 악용 후 브리지를 재개하고 사용자가 전체를 만들었다고 말합니다.</a> <span class="p0-desc">Taiko는 11일간의 네트워크 중단 이후 자산 백업을 보충하고 보안 수정을 완료한 후 브리지 전송을 복원했습니다.</span></li><li><a href="https://www.coindesk.com/markets/2026/07/02/taiko-s-bridge-is-back-online-after-usd1-7-million-hack-and-its-token-is-up-a-staggering-136">Taiko는 170만 달러의 해킹 후 불과 10일 만에 크로스체인 브리지를 완전히 복원했습니다.</a> <span class="p0-desc">프로토콜은 독립적인 보안 검토를 포함하는 다단계 복구를 완료했습니다. TAIKO 토큰은 최근 거래에서 136%나 급등했습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **110건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-07-03 암호화폐 핵심 뉴스: 전 NSC 이란 국장: 암호화폐 법안은 제재 회피를 위한 티켓입니다 - Fortune. 총 110건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

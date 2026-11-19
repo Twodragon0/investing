@@ -32,45 +32,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-19 - 주식 뉴스 요약 이�
 <div class="stat-item"><div class="stat-value">662.81</div><div class="stat-label">KOSDAQ +1.90%</div></div>
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 하이닉스, 삼성전자, 엔비디아 부각 193건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: 하이닉스, 삼성전자 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>📊 <strong>매크로/금리</strong>: 국채, 연준 관련 28건</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li></ul></div>
+
 ## 전체 뉴스 요약
 
-총 193건의 뉴스에서 **AI/기술**(59건)과 **가격/시장**(44건)이 동시에 부각되고 있습니다. AI 관련 기술 발전이 시장에서 새로운 투자 테마로 주목받고 있습니다
-
-### 테마별 동향
-
-- **🤖 AI/기술** (59건): 하이닉스, 삼성전자, 엔비디아 기술 이슈 (59건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📈 가격/시장** (44건): 코스피, 코스닥, 기관 가격 변동 (44건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (28건): 국채, 연준, 환율 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- 코스피 5000선 붕괴에도 … 개미, 레버리지 ETF 매수 - 세이프머니
-- U.S. Stocks Mostly Lower After Nvidia Earnings Fail to Soothe Nerves
-- Wall Street ends mixed after Nvidia earnings, Fed minutes
-- 외 40건
-
-### 투자자 체크포인트
-
-- 한국 기사 64건, 글로벌 기사 129건 수집
-- 한국 지수: KOSPI 5,067.44(+2.06%), KOSDAQ 662.81(+1.90%), USD/KRW 1,332.54(-0.20%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">59건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:75%"></div></div><span class="theme-count">44건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:47%"></div></div><span class="theme-count">28건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:17%"></div></div><span class="theme-count">10건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-19.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-19.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,067.44 (+2.06%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 662.81 (+1.90%).
+- 2026-11-19 주식 시장에서 193건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,067.44(+2.06%), KOSDAQ 662.81(+1.90%), USD/KRW 1,332.54(-0.20%).
+- *Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.*
 
 ## 테마별 주요 뉴스
 
