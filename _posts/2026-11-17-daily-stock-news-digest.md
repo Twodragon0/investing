@@ -264,7 +264,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-17 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/11/16/trump-nvidia-stock-trades-jensen-huang.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access</a>
-<p class="news-desc">Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relationship with a suspected Chinese spy.</p>
+<p class="news-desc">트럼프의 계정은 젠슨 황과 의심되는 중국 스파이의 관계에 대한 브리핑을 받은 지 5일 만에 엔비디아 주식으로 최대 100만 달러까지 매도했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

@@ -231,7 +231,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/news/tokenized-nvidia-cap-rises-158-stock-loses-750b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Tokenized Nvidia market cap surges 159% amid Jensen Huang’s exit</a>
-<p class="news-desc">Nvidia stock tokens reached $401.9 million in combined value as Jensen Huang stepped down and the chipmaker posted record quarterly revenue.</p>
+<p class="news-desc">토큰화된 엔비디아 주식은 11월 17일까지 시가총액이 4억 190만 달러에 이르렀으며 이는 11월 8일보다 159% 증가한 반면, 엔비디아 주식은 11월 6일 종가보다 거의 17% 하락했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

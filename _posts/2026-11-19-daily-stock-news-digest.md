@@ -263,7 +263,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html" class="news-title" target="_blank" rel="noopener noreferrer">Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show</a>
-<p class="news-desc">The Federal Reserve on Wednesday released minutes from its October policy meeting at which it voted to hold its benchmark interest rate in a range between 3.75%-4%.</p>
+<p class="news-desc">연준은 수요일에 기준 금리를 3.75%-4% 사이에서 유지하기로 투표한 10월 정책 회의 회의록을 발표했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -275,7 +275,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/18/trump-xi-putin-apec-shenzhen-china.html" class="news-title" target="_blank" rel="noopener noreferrer">I watched Trump, Xi and Putin gather in China. Here are my top takeaways</a>
-<p class="news-desc">U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin are expected to hold a rare trilateral meeting on Thursday.</p>
+<p class="news-desc">도널드 트럼프 미국 대통령, 시진핑 중국 대통령, 블라디미르 푸틴 러시아 대통령이 목요일에 드물게 3국 회담을 가질 예정입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -287,7 +287,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-19 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/18/nvidia-lutnick-china-ai-megaspeed-cantor-fitzgerald.html" class="news-title" target="_blank" rel="noopener noreferrer">Cantor Fitzgerald's Nvidia business interests targeted in Democrats' Lutnick probe</a>
-<p class="news-desc">The congressional probe is among the first to be announced since the blue-wave midterm that will deliver Democrats control of the House and Senate come January.</p>
+<p class="news-desc">이번 의회 조사는 1월에 민주당이 하원과 상원을 장악하게 될 파란만장 중간선거 이후 처음으로 발표된 것 중 하나입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

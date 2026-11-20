@@ -127,7 +127,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383446/binance-hack-wallets-move-ethereum-after-two-weeks" class="news-title" target="_blank" rel="noopener noreferrer">Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence</a>
-<p class="news-desc">A wallet linked to October’s record Binance theft moved $63 million in ether, before analysts flagged a larger wave of transfers and reported Bitcoin swaps amid ongoing U.S. recovery efforts.</p>
+<p class="news-desc">10월 기록인 바이낸스 절도와 연결된 지갑은 분석가들이 더 큰 규모의 이체 물결을 표시하기 전인 이더리움에 6,300만 달러를 이동했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -139,7 +139,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383443/former-robinhood-engineer-pleads-guilty-crypto-insider-trading" class="news-title" target="_blank" rel="noopener noreferrer">Former Robinhood Engineer Pleads Guilty to Crypto Insider Trading Scheme</a>
-<p class="news-desc">Huaisong Xiang admitted repeatedly trading perpetual futures on Hyperliquid using confidential Robinhood listing plans, pocketing $125,523.</p>
+<p class="news-desc">Huaisong Xiang은 기밀 Robinhood 상장 계획을 사용하여 Hyperliquid에 영구 선물을 반복적으로 거래했음을 인정했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -182,7 +182,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383468/why-microsoft-thinks-smaller-cheaper-ai-beat-claude-gpt" class="news-title" target="_blank" rel="noopener noreferrer">Why Microsoft Thinks Smaller, Cheaper AI Can Beat Claude and GPT</a>
-<p class="news-desc">Microsoft's new coding, cybersecurity and image models challenge bigger rivals on performance and price. The company's bet is that doing one job exceptionally well matters more than doing absolutely everything.</p>
+<p class="news-desc">마이크로소프트의 새로운 코딩, 사이버 보안 및 이미지 AI 모델은 성능과 가격 면에서 더 큰 경쟁업체에 도전합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -194,7 +194,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383513/nvidia-board-shuts-down-jensen-huang-comeback" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia Board Shuts Down Jensen Huang Comeback, Launches Search for New CEO</a>
-<p class="news-desc">Nvidia's board rejected a comeback for its ousted co-founder as it hired a search firm, backed interim CEO Colette Kress, and tightened oversight of chip exports to China.</p>
+<p class="news-desc">엔비디아의 이사회는 검색 회사를 고용하고 임시 CEO Colette Kress를 지원하면서 축출된 공동 창업자의 복귀를 거부했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -278,7 +278,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383505/nvidia-shares-rise-earnings-beat-first-report-jensen-huang-exit" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia Shares Rise After Earnings Beat in First Report Since Jensen Huang's Exit</a>
-<p class="news-desc">The chipmaker doubled quarterly revenue, forecast another record and rallied after hours, but its first report without Jensen Huang leaves leadership questions and a deeply bruised stock chart unresolved.</p>
+<p class="news-desc">엔비디아는 분기별 수익을 두 배로 늘리고 또 다른 기록을 예측했지만 젠슨 황이 없는 첫 번째 보고서는 리더십에 대한 의문을 남깁니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -290,7 +290,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383454/jensen-huang-honored-return-nvidia-ceo-board-resistance" class="news-title" target="_blank" rel="noopener noreferrer">Jensen Huang Says He'd Be 'Honored' to Return as Nvidia CEO, Despite Board's Resistance</a>
-<p class="news-desc">The ousted Nvidia founder apologized for his conduct, offered to return if directors ask, and addressed supporters as the chipmaker presses ahead with its search for new leadership this week.</p>
+<p class="news-desc">축출된 엔비디아 창립자 젠슨 황은 자신의 행동에 대해 사과하고 이사가 요청하면 다시 돌아오겠다고 제안했으며 지지자들에게 연설했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -302,7 +302,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383434/standard-life-chair-wants-tokenized-gilts-to-open-uk-government-bonds-to-retail-savers" class="news-title" target="_blank" rel="noopener noreferrer">Standard Life Chair Wants Tokenized Gilts to Open UK Government Bonds to Retail Savers</a>
-<p class="news-desc">Sir Nicholas Lyons told Solana's Breakpoint that tokenization should benefit ordinary investors, not just wholesale institutions.</p>
+<p class="news-desc">Standard Life의 회장인 Sir Nicholas Lyons에 따르면 토큰화는 일반 영국 예금자들이 국채를 더 쉽게 구매하는 데 도움이 될 수 있으며 대형 금융 기관만을 위한 도구가 되어서는 안 됩니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

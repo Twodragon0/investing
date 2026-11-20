@@ -183,7 +183,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-18 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html" class="news-title" target="_blank" rel="noopener noreferrer">Anthropic likely to price IPO above the current range of $70 to $78, sources tell CNBC</a>
-<p class="news-desc">Anthropic is slated to list on the Nasdaq under the ticker symbol "ANT" and start trading on Nov. 19.</p>
+<p class="news-desc">Anthropic은 "ANT"라는 티커 기호로 나스닥에 상장되어 11월 19일에 거래를 시작할 예정입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
