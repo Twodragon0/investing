@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-01 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.etf.com/sections/features/while-crypto-sinks-hype-soaring-now-it-has-two-etfs">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다</a> <span class="p0-desc">암호화폐가 하락하는 동안 과대광고는 치솟고 있습니다. 이제 두 개의 ETF가 있습니다.</span></li><li><a href="https://www.coindesk.com/tech/2026/05/29/xrp-ledger-s-new-proposal-blocks-the-flash-loan-attacks-costing-defi-hundreds-of-millions">XRP Ledger의 새로운 제안은 디파이 수억 달러의 비용이 드는 플래시 대출 공격을 차단합니다.</a> <span class="p0-desc">XRPL 수정안 초안에서는 트랜잭션이 구축된 방식으로 인해 네트워크에서 플래시 대출 공격이 "구조적으로 불가능"하다고 명시하고 있습니다. 이는 이더리움 디파이억 달러의 비용이 드는.</span></li><li><a href="https://cointelegraph.com/news/cosmos-based-gravity-bridge-halts-bridge-after-reported-54m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Cosmos 기반 Gravity Bridge는 540만 달러 규모의 익스플로잇이 보고된 후 브리지를 중단합니다.</a> <span class="p0-desc">Gravity Bridge는 의심되는 서명 키 손상으로 인해 약 540만 달러가 소모되었으며, 조사가 진행되는 동안 검증인은 브리지를 중단해야 했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **82건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-06-01 암호화폐 핵심 뉴스: 미국 CFTC, 규제 회사의 첫 승인으로 암호화폐 '퍼프' 문 열다. 총 82건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

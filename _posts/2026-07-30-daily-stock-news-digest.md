@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-30 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.cnbc.com">Treasury yields rise as Wall Street awaits Fed interest rate decision</a></li><li><a href="https://news.einfomax.co.kr">코스피·코스닥, 장중 급락에 매도 사이드카 발동…6,000선 무너져</a> <span class="p0-desc">코스피·코스닥, 장중 급락에 매도 사이드카 발동…6,000선 무너져 연합인포맥스</span></li><li><a href="https://www.hankyung.com">끝없는 폭락장에 '패닉셀링'…코스피·코스닥 10% 넘게 급락</a> <span class="p0-desc">끝없는 폭락장에 '패닉셀링'…코스피·코스닥 10% 넘게 급락 한국경제</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,663.24 (-5.98%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 662.68 (-6.12%).
-- 2026-07-30 주식 시장에서 209건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,663.24(-5.98%), KOSDAQ 662.68(-6.12%), USD/KRW 1,447.70(-0.42%).
 - *바른언론의 이상향 뉴스토피아, 정치, 경제, 사회, 문화 뉴스, 칼럼, 만평 수록*
 
 ## 테마별 주요 뉴스

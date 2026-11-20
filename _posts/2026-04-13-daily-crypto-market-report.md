@@ -28,7 +28,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-13 | ADA -5.8% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Cardano</strong> (ADA): -5.76%</li><li>🔴 <strong>Chainlink</strong> (LINK): -4.87%</li><li>🔴 <strong>Ethereum</strong> (ETH): -4.64%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **10건** 수집

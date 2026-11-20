@@ -19,7 +19,6 @@ image_alt: "지정학 리스크 리포트 - 2026-10-26 - 글로벌 이슈 뉴스
 ## 전체 뉴스 요약
 
 - 총 **0건** 수집
-- 2026-10-26 지정학 핵심 이슈: Presidents Obama And Trump Held Competing Midterm Rallies On The Same Day. They Clashed O (GDELT). 주요 테마는 기타 지정학이며, Polymarket 15건·GDELT…
 - 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
 
 
