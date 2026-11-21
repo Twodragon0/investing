@@ -22,7 +22,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-19 | XMR -6.6% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Monero</strong> (XMR): -6.63%</li><li>🔴 <strong>Chainlink</strong> (LINK): -6.60%</li><li>🔴 <strong>Ethereum</strong> (ETH): -6.15%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **12건** 수집
