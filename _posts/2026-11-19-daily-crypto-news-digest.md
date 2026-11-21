@@ -243,7 +243,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-19 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://cointelegraph.com/markets/bitcoin-60k-liquidity-stocks-gain-nvidia-1158b-earnings-beat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Bitcoin steadies after Nvidia’s earnings beat as $60K bids stand out</a>
-<p class="news-desc">Bitcoin halted downside as Nvidia confidence returned, with its stock gaining 3% premarket and South Korea’s tech-heavy KOSPI reclaiming 5,000 points.</p>
+<p class="news-desc">비트코인 가격 손실이 안정되고 엔비디아 수익과 NVDA 선물이 시판 전 3%를 추가함에 따라 낙관적인 전망으로 주가가 상승합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

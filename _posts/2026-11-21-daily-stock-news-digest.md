@@ -288,7 +288,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-21 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'</a>
-<p class="news-desc">Trump spoke at the White House after meeting with Chinese President Xi Jinping and Russian President Vladimir Putin for a historic trilateral summit in China.</p>
+<p class="news-desc">트럼프는 중국에서 열린 역사적인 3국 정상회담을 위해 시진핑 중국 대통령과 블라디미르 푸틴 러시아 대통령을 만난 후 백악관에서 연설했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
