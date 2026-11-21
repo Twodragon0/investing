@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-21 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 - 산경투데이 - 201건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 주목</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 연준 관련 17건</li><li>🏦 <strong>거래소</strong>: IPO, 앤트로픽 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE54dTBpRWgyM1VaVkZpZjdCOWZCNFY3T3ZpLU5VaHpuWFl4VDNmYmxCemFMbWZZWGU3RlplOVkzbU4ySHlQU3BYSktudUoxRDhxbXpWMTdBTm4xNlZtUXBUdnFpLW9xUWI2LWp3X0xqelbSAXRBVV95cUxNRjFRc0VjWXZSWWRNVGpXRjUwMlNLMlRRVWNZcm1hdmtIdXhWRW1xT0lqX0RmNjNVVEd1SXZ5eXEtWWhDdU56WWw2TFVkOGFzSENuT2o1WldPNWtUdEZ5clY2UURDQWpGY1dEbTNBT01CSmNmWQ?oc=5">코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 - 산경투데이</a> <span class="p0-desc">코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9aZHJQMmRfYjBEVmZzazFsYy1XeW5EVmNFYkNDdlJSa3dXbXI0RHk4NTQzYXFBYUZkdy0wbHU5UTVwYlkzOUlac1Q5TlRfaXVXVGNaVGc5b2w0YXNzZEkwSGo5b003S284UFNxRg?oc=5">美 기술주 급락에 코스피 4,900선 붕괴…코스닥 5.71% 폭락 - 프리진경제</a> <span class="p0-desc">美 기술주 급락에 코스피 4,900선 붕괴…코스닥 5.71% 폭락 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1tYmFWLUh6akMtVFNoV0ljU1NYWm9iSDU4bHhnX0tYMjdrR0lyb1VxajQ0dmk1YkVTTVI3a0RnOFdBTkNfV0tYMG0xZ2lvQnBZT2g3aHdOMVVISWdiSkk3SG5TcUR6NnRxNkYxRGZR?oc=5">코스피·코스닥 동반 5%대 급락…10거래일 만에 매도 사이드카 - 이슈밸리</a> <span class="p0-desc">코스피·코스닥 동반 5%대 급락…10거래일 만에 매도 사이드카 이슈밸리</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 - 산경투데이 
-외 P0 긴급 이슈 11건이 추가 감지되었습니다. 총 201건의 뉴스 중 P1 주요 이슈도 25건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (60건): 코스피, 코스닥, 사이드카 가격 변동 (60건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (38건): 반도체, 삼성전자, 하이닉스 기술 이슈 (38건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (17건): 환율, 연준, 주식 매크로 변수 (17건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 - 산경투데이
-- 美 기술주 급락에 코스피 4,900선 붕괴…코스닥 5.71% 폭락 - 프리진경제
-- 코스피·코스닥 동반 5%대 급락…10거래일 만에 매도 사이드카 - 이슈밸리
-
-### 주요 이슈
-
-- Nasdaq wipes out gains for the year as Anthropic IPO fails to quell AI nerves
-- Stock Market Today: Dow, S&P 500 Enter Correction Territory — Live Updates
-- US Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 sink on AI selloff after A
-- 외 22건
-
-### 투자자 체크포인트
-
-- 한국 기사 72건, 글로벌 기사 129건 수집
-- 한국 지수: KOSPI 4,869.96(-4.23%), KOSDAQ 645.68(-3.65%), USD/KRW 1,346.13(+0.89%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">60건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:63%"></div></div><span class="theme-count">38건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:28%"></div></div><span class="theme-count">17건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:22%"></div></div><span class="theme-count">13건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:10%"></div></div><span class="theme-count">6건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-21.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 4,869.96 (-4.23%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 645.68 (-3.65%).
+- 2026-11-21 주식 시장에서 201건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,869.96(-4.23%), KOSDAQ 645.68(-3.65%), USD/KRW 1,346.13(+0.89%).
+- *Stock Market Today: Dow, S&P 500 Enter Correction Territory — Live Updates WSJ Stock Market Today: Dow and S&P 500.*
 
 ## 테마별 주요 뉴스
 

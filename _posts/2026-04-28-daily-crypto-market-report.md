@@ -27,6 +27,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-28 | 시총 $2.65T (-
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>MemeCore</strong> (M): -9.15%</li><li>🔴 <strong>Stellar</strong> (XLM): -3.94%</li><li>🔴 <strong>Ethereum</strong> (ETH): -3.42%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **16건** 수집

@@ -28,28 +28,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-21 - 규제 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 글로벌 규제: 규제/정책 관련 15건 수집</strong><ul><li>🔵 <strong>규제/정책</strong>: 10건 수집</li><li>🟣 <strong>DeFi</strong>: 디파이 관련 3건</li><li>🤖 <strong>AI/기술</strong>: 2건 수집</li><li>🏛️ <strong>정치/정책</strong>: 3건 수집</li></ul></div>
 
-## 전체 뉴스 요약
-
-총 15건의 뉴스 중 **규제/정책** 관련이 10건(67%)으로 압도적입니다. 규제/정책 관련 뉴스가 시장의 불확실성을 높이고 있습니다
-
-### 테마별 동향
-
-- **🔵 규제/정책** (10건): urges, fca, briefing 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🟣 DeFi** (3건): 디파이 DeFi 동향 (3건) — TVL 변화와 프로토콜 수익률을 비교 점검하세요.
-- **🤖 AI/기술** (2건): settlement, anthropic, singapore 기술 이슈 (2건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 주요 이슈
-
-- International,IOSCO’s Appointment of the leadership of standing committees
-- Singapore’s MAS upgrades tokenized settlement rails and moves to verify AI agent
-
-### 투자자 체크포인트
-
-- **주요 지역**: 미국 7건, 아시아 3건, 유럽 3건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 15건
 - **미국**: 7건

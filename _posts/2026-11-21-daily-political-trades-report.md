@@ -14,7 +14,6 @@ description: "트럼프는 엔비디아 및 SpaceX를 포함한 수백 건의 �
 image_alt: "정치인 거래·정책 리포트 - 2026-11-21 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-11-21.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-11-21.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-11-21** 정치권 핵심 이슈: **트럼프는 엔비디아 및 SpaceX를 포함한 수백 건의 주식 거래를 공개합니다 - Newsweek**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **36건** (미국 의회 거래 1건, SEC 내부자 거래 15건, 트럼프 정책 11건, 한국 정치인 2건, 중앙은행 7건)을 종합 정리합니다
@@ -25,19 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-21 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **SEC(미국증권거래위원회)**(14회), **연준**(12회), **트럼프**(10회), **관세**(8회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **36건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, SEC 내부자 거래 15건, 트럼프 정책 11건, 한국 정치인 2건, 중앙은행 7건입니다.
-
-**트럼프 정책** 관련으로는 Opinion | A Lesson on the Economics of Tariff Leverage WSJ 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 Trump reveals hundreds of stock trades, including Nvidia and SpaceX Newsweek 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 한은, 26일 올해 마지막 금통위…기준금리 3.25%로 올릴까 패트론타임스 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
-**한국 정치인** 관련으로는 김현정 의원, 고빈도매매 과다호가 규제 강화 법안 발의 검경일보 등의 재산/거래 소식이 수집되었습니다.
-
----
+- 2026-11-21 정치권 핵심 이슈: 트럼프는 엔비디아 및 SpaceX를 포함한 수백 건의 주식 거래를 공개합니다 - Newsweek. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 36건 (미국 의회 거래 1건, SEC 내부자 거래 15건, 트럼프 정책 11건, 한국…
+- 1. 트럼프는 엔비디아 및 SpaceX를 포함한 수백 건의 주식 거래를 공개합니다 - Newsweek 트럼프는 엔비디아 및 SpaceX Newsweek를 포함하여 수백 건의 주식 거래를 공개합니다.
 
 ## 1. 미국 의회 거래 동향
 
