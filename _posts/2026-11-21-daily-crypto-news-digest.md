@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-21 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI 자금난·해킹 악재 - 뉴스핌 - 120건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 코인리더스 관련 47건</li><li>🏦 <strong>거래소</strong>: IPO 동향 주시</li><li>📈 <strong>가격/시장</strong>: IPO, 암호화폐 주목</li><li>🤖 <strong>AI/기술</strong>: IPO, $60K 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9hNjBxbjV6RENCN1ZxWXUtVWtiOHh4T0EwVEd3WjVmM2haZi1BanFHRmd0dnFUc0ZYcHdkVnQ3Vjk4Yl90ZEFfcjVqY0RtV1RCeG9TeTUyaUxQdjM3?oc=5">코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI 자금난·해킹 악재 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI 자금난·해킹 악재 뉴스핌</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeFVHWHRGaUZVZGhET0xnZV81MkpPRzBXS1puTW56TDlIcjJrVkdWaFlqcDJTalpzZFIxaEVzUVVrVmktMDk3bEwtQmpHZGpZbE9BMjFDOE1GQmZ1MFNzMXpnZnhuVVBfQzdHcTl6WE1LN2x0bG1obllRSl9vR0dJV0FWTnNvZGlW?oc=5">스테이블코인 2930억달러로 뚝…코웬이 비트코인 급락 점친 이유</a> <span class="p0-desc">스테이블코인 2930억달러로 뚝…코웬이 비트코인 급락 점친 이유 글로벌이코노믹</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1Db3FGRmFJbl9zLWJyT2hsdVJVUVJ6dnA5RGE5Z3RWYm5QWHpwUXpCVHpxekZJNkxncG1xb0VmNDFTR3pMYWhNLVkzd0hFVXZ4Nzk2VEkyNG1SSzVCcHNhMldqci1EN1g3Zmtldg?oc=5">BLOCKCHAIN REPORT] “양자컴퓨터가 비트코인 암호를 깬다”…국제증권감독기구, 금융시장에 긴급 경고 - https://www.climatepol.com/</a> <span class="p0-desc">[BLOCKCHAIN REPORT] “양자컴퓨터가 비트코인 암호를 깬다”…국제증권감독기구, 금융시장에 긴급 경고 https://www.climatepol.com/</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **120건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-21 암호화폐 핵심 뉴스: 비트코인은 $60,000 수준 아래로 떨어집니다.. 총 120건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

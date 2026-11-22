@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-18 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE56bGdxbllMcUxwU3lDYmtHdmtKTkVONEV4SXVLamdWbjEwSGg1d3dIRzdMUEVyelc4MlM4VjRCQUoyaThCV3hjbTFhUWVPbTVBZzI5d3hnNkdXQQ?oc=5">"개장 직후엔 괜찮았는데"…코스피·코스닥, 美 금리·AI 우려에 '급락'</a> <span class="p0-desc">"개장 직후엔 괜찮았는데"…코스피·코스닥, 美 금리·AI 우려에 '급락' 한국경제</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE4wU21TV3BwN21aWDZ6aVd2a1daSVhBZC00c0NzbmFxQnJBUjQ2U0tNdE8xQTlfbFNOQlJPOGhKOWhzNGxrNzlEZ0dzUkVBa3NkVHgwaFMtQXNpcmhyWjhXaUVick9EOEhvN3RJdg?oc=5">외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 - 프리진경제</a> <span class="p0-desc">외국인·기관 '쌍끌이' 매도 폭탄…코스피·코스닥 급락 프리진경제</span></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE4zTGtNNDJCLUI4YTVwSThhMUoxVlkyeVVMQktOU1FaRGRLZGpTUFhpY2N3azJlQXVtV3o2RXM2ZzdFMjh4V09EMmR6My0ycUMwVFh2TGl1dWhNOWVYOXpZVDNuNDctTXdwY080aTRHeDjSAXRBVV95cUxNTVVNWUtlaTJRaFlfUzM1dkpfS2owdmRnODVEU0ZIbFh0UVBnekgtb2dUV0x6SC1qbEp4SDQ4emtOT3hBWFpybHdqc1d5ZExSYzIta3RwUFNwSFU3cERzdktUWWNrekVXbFRiUk5IdlNxNFRJMw?oc=5">코스피 장중 3%대 급락…외국인 매도에 반도체주 동반 하락 - 산경투데이</a> <span class="p0-desc">코스피 장중 3%대 급락…외국인 매도에 반도체주 동반 하락 산경투데이</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 4,968.48 (-2.15%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 650.06 (-2.31%).
+- 2026-11-18 주식 시장에서 204건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,968.48(-2.15%), KOSDAQ 650.06(-2.31%), USD/KRW 1,335.25(-0.00%).
 - *Anthropic is slated to list on the Nasdaq under the ticker symbol "ANT" and start trading on Nov.*
 
 ## 테마별 주요 뉴스

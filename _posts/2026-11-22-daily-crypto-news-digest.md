@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-22 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 베테랑 상인 WHO이 2018년에 못박힌 비트코인 폭락이 잔인한 경고를 발행합니다. - 115건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 하락 주목</li><li>🏦 <strong>거래소</strong>: IPO 이슈 부각</li><li>📈 <strong>가격/시장</strong>: 달러, 하락 주목</li><li>🤖 <strong>AI/기술</strong>: $60K, IPO 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPZmlmR0EwUnN4X0tTQXgxRERrRldiS1hsS180WVRvN2Z2WXRQcHJDd2NWREVNQXl2R0NfTm16TDdiWW5vU1cxYzdnNTM5YXZuN0NuN3IyR1BEeXBYRXkyTjhqUHFBUXp2cmNlREVpcmE4dmVuMm9kcFpwTW9jWGZ5RXFrNFgwX0NVMm1sN280OGJTdXdGRmp2RFRLWXlDR08wY0I5aWxrX2NCRjJmeDVDdllR?oc=5">베테랑 상인 WHO이 2018년에 못박힌 비트코인 폭락이 잔인한 경고를 발행합니다.</a> <span class="p0-desc">베테랑 상인 WHO이 2018년에 못 박혔습니다 비트코인 폭락이 이 잔인한 경고를 발행합니다 TheStreet</span></li><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQWHAyR2t3NHlrb2hOUnlKT3F4OHlfa0FHYmtzQmtKUU5PcmE1ZWJtdHZuWWp1clBHN3JYUmFSQjRPaEVRNWFZWl8ya2hKM1U1NmtOem9HNWNIQzQwTWlreHRsU25pd3Rrb0d5QlFPLXJFRmIzQm52ZU40S2FKalVBc2FCSFJIZUdTVTM1U293bGV5bXp2R0Rzc19DUnVqR3NPekNWVjM3V0ZfZGJ5?oc=5">폭락 이후 Stellar(XLM)는 좋은 투자일까? - 연중무휴 월 스트리트</a> <span class="p0-desc">폭락 이후 Stellar(XLM)는 좋은 투자일까? 연중무휴 월스트리트</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBiUnd6VWNEMXFTYnJENlhhN1owYU91RTRyaUdHbllpTUFzSzJuV0psLW9sRlRkVjdFRnNBV0EzOWdDN2lrTnVvLW85NXJPVHBiVXRjVHZkMk5lOU9RTG1IQ09WaHZOQ0trTVhZS1J1cllNZ3c?oc=5">비트코인, $55,326까지 하락 후 $60,000선 회복 - Investing.com 한국어</a> <span class="p0-desc">비트코인, $55,326까지 하락 후 $60,000선 회복 Investing.com 한국어 비트코인 6만 달러 선 붕괴에 암호화폐 시장 패닉 국제뉴스 비트코인 4달 만에 6달러선.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 베테랑 상인 WHO이 2018년에 못박힌 비트코인 폭락이 잔인한 경고를 발행합니다. 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 115건의 뉴스 중 P1 주요 이슈도 22건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (51건): 비트코인, 하락, 달러 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (34건): IPO 동향이 포트폴리오 전략에 영향을 줄 수 있어 주시가 필요합니다.
-- **📈 가격/시장** (37건): 달러, 하락, 암호화폐 가격 변동 (37건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 베테랑 상인 WHO이 2018년에 못박힌 비트코인 폭락이 잔인한 경고를 발행합니다.
-- 폭락 이후 Stellar(XLM)는 좋은 투자일까? - 연중무휴 월 스트리트
-- 비트코인, $55,326까지 하락 후 $60,000선 회복 - Investing.com 한국어
-
-### 주요 이슈
-
-- 솔라나 ETF, 월스트리트 대규모 암호화폐 매도에도 상승
-- XRP 가격: ETF 자산이 10억 달러 이하로 하락함에 따라 리플 연계 토큰의 향후 전망 - CoinDesk
-- AI 거품이 마침내 터지는 걸까요? 엔비디아 월스트리트 전문가의 경고에 따라 48%의 충돌 발생
-- 외 19건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, ETF, AI
-- **주요 출처**: Binance(35건), Google News KR(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-22.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-22.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **115건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-22 암호화폐 핵심 뉴스: 비트코인은 2년 중 최저치로 하락한 후 상승. 총 115건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

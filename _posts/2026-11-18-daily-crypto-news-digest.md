@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-18 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/383446/binance-hack-wallets-move-ethereum-after-two-weeks">Binance Hack Wallets Move $137 Million in Ethereum After Two Weeks of Silence</a></li><li><a href="https://decrypt.co/383414/optimizely-hack-hijacked-ledger-bbc-and-176-other-sites-to-swap-crypto-wallet-addresses">Optimizely Hack Hijacked Ledger, BBC and 176 Other Sites to Swap Crypto Wallet Addresses</a></li><li><a href="https://cointelegraph.com/news/feds-waller-cites-binance-hack-in-warning-over-tokenized-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Fed’s Waller cites Binance hack in warning over tokenized finance</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **120건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🤖 AI/기술
+- 2026-11-18 암호화폐 핵심 뉴스: "다우 1.64%·나스닥 0.74% 내리고 비트코인 2.07% 하락" - 국제뉴스. 총 120건 분석, 핵심 테마는 비트코인, 거래소, AI/기술입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
