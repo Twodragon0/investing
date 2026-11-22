@@ -39,7 +39,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-21 - 주식 뉴스 요약 이�
 
 - KOSPI 4,869.96 (-4.23%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 645.68 (-3.65%).
-- 2026-11-21 주식 시장에서 201건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,869.96(-4.23%), KOSDAQ 645.68(-3.65%), USD/KRW 1,346.13(+0.89%).
 - *Stock Market Today: Dow, S&P 500 Enter Correction Territory — Live Updates WSJ Stock Market Today: Dow and S&P 500.*
 
 ## 테마별 주요 뉴스

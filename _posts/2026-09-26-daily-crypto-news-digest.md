@@ -43,11 +43,9 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-26 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE94VjJkTVB3RkpEWVRMN2x5cjRLZ3dXaXFZbWFPQUtvS2Z0TTBiNHVWRWJCOVRQVWhSVTd3Rk0xTEN0MmpUVlVEM0luaDdmT3FMMi1RWWstdkFnVk9uZkZhbjhTUmdBVm55WGVTemplaDjSAXRBVV95cUxPTmZXUkhxUllVTWdmZmxGWVk3ckpMTC1UZGVXc1FpaC1TRDlmRWZHRmRWUXZ2T21Gd0JUYkpQUndnTDNVZmlxM1FwaGMwdklDcnM0RmhmaC1qbVRfMHBlckUySkZaWk5saDFxa2NLSXB0ODR3ag?oc=5">미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회</a> <span class="p0-desc">미 국채금리 급등에 암호화폐 하락세…비트코인 한때 8만4천달러 하회 연합인포맥스 비트코인 8만 4천 달러 보합세. 금리 우려·비트겟 해킹 주시 kr.investing.com 美.</span></li><li><a href="https://cointelegraph.com/news/former-hack-vc-partner-hsin-ju-chuang-found-dead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Former Hack VC partner Hsin-Ju Chuang’s death ruled a suicide</a></li><li><a href="https://cointelegraph.com/news/no-confirmed-crypto-theft-iphone-safari-attack-slowmist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">SlowMist has yet to confirm crypto theft from iPhone Safari attack</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🔴 보안/해킹
-- 2026-09-26 암호화폐 시장 75건 분석 — 핵심 테마: 비트코인, 거래소, 보안/해킹
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

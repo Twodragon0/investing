@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-05-29 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(21회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-05-29 정치권 핵심 이슈: Daily Editorials의 Ultimate Insider의 대규모 주식 거래 - Creators Syndicate. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 30건 (미국 의회 거래 1건, SEC 내부자 거래 15건,…
-- 1. Daily Editorials의 Ultimate Insider의 대규모 주식 거래 - Creators Syndicate 우리의 목표는 당신이 생각하게 만드는 것입니다.
 
 ## 1. 미국 의회 거래 동향
 
