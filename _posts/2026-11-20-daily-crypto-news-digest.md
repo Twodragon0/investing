@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-20 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9hNjBxbjV6RENCN1ZxWXUtVWtiOHh4T0EwVEd3WjVmM2haZi1BanFHRmd0dnFUc0ZYcHdkVnQ3Vjk4Yl90ZEFfcjVqY0RtV1RCeG9TeTUyaUxQdjM3?oc=5">코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI 자금난·해킹 악재 - 뉴스핌</a> <span class="p0-desc">[코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI 자금난·해킹 악재 뉴스핌 비트코인, 금리 인상 우려 속 $63,500 아래로 하락 Investing.c.</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE41R2dsSDVwd2kwZDVhbzg0RHFoa2d4UVpNeHJtb25TUUxubGRseUgxSFlDTGE0NjF1andrc3BIdUxzYzZNQzhfT2VXM2loTmUyTVRIS0JmZG5kWmFOaGx0UTMxOEZRSzdPVVE3M2pucVJNRHM?oc=5">앤트로픽 상장 첫날 +17%에도 美증시 2%대 급락…비트코인 보합</a> <span class="p0-desc">앤트로픽 상장 첫날 +17%에도 美증시 2%대 급락…비트코인 보합 디지털투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeFVHWHRGaUZVZGhET0xnZV81MkpPRzBXS1puTW56TDlIcjJrVkdWaFlqcDJTalpzZFIxaEVzUVVrVmktMDk3bEwtQmpHZGpZbE9BMjFDOE1GQmZ1MFNzMXpnZnhuVVBfQzdHcTl6WE1LN2x0bG1obllRSl9vR0dJV0FWTnNvZGlW?oc=5">스테이블코인 2930억달러로 뚝…코웬이 비트코인 급락 점친 이유</a> <span class="p0-desc">스테이블코인 2930억달러로 뚝…코웬이 비트코인 급락 점친 이유 글로벌이코노믹</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **119건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
-- 2026-11-20 암호화폐 핵심 뉴스: 코인 시황] 비트코인 6만3000달러대 약세…금 대비 상대적 강세에도 AI 자금난·해킹 악재 - 뉴스핌. 총 119건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
