@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-09-03 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1YN3RQa2xycXpVVHpYLTBxNDZ6ZEhXRmlzQWZXdzNwMm84R0tUMXZFSTl5OGJSVnVfcFdVMmRNUGthRklxM29Za3ZjZlB1Xy1uNXNlcVNyZnktTmdZYnNpVnNqYkFCbmtBNzE1LXRqWXA?oc=5">코스피·코스닥지수] 미국·이란전쟁 충격에 코스피 4% 급락…6,500대로 밀려, 코스닥도 2.1% 하락 - 한국강사신문</a> <span class="p0-desc">[한국강사신문 한상형 기자] 중동 지역의 군사적 긴장이 다시 고조되면서 국내 증시가 큰 폭으로 흔들렸다. 코스피는 4% 가까이 급락하며 6,500선으로 내려앉았고, 코스닥 역시 2% 넘게 하락했다. 삼성전자와 SK하이닉스의 자사주 관련 매수세가 유입됐지만 외국인과 기관의 대규모 매도 공세를 막기에는 역부족이었다.2일 코스피는 전 거래일보다 273.08포인트(3.99%) 떨어진 6,562.72에 거래를 마쳤다. 지난달 28일 이후 3거래일 만에 하락세로 돌아선 것이다.이날 지수는 210.33포인트(3.08%) 내린 6,625.47로</span></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBHNzhHckk4UkkydU90azBfU0lLOFJvNVlTaUwtb09DVEE1VGdUT0dNSTM1VGdLU2QxaTl6QWxfVlBmbVpES08wV05jZkxwbzJKV1VVOFFyRTlLNkt6ZG5mVVBsUE4tbGk4dGZISlVUOXkzVHM?oc=5">속보] 코스피 4% 급락 6,562.72 마감…코스닥도 2%대 하락 - 스페셜타임스</a> <span class="p0-desc">9월 2일 코스피 지수가 전 거래일 대비 4% 하락한 6,562.72에 거래를 마쳤습니다. 같은 날 코스닥 지수 역시 2%대 하락세를 보이며 장을 마감했습니다.· · · · · · · · · ·관련기사▶ 코스피, 중동 지정학적 리스크에 6,780선 후퇴…코스닥 1%대 하락▶ 코스닥 제</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5pRlpTanBkQ3dxVDFWaWRyemJGRDE4ekgxOGpVQlJrQkJkQ2oxMnQ0X1RyNVhBRTFCWk9NTEJvd3QtZU1ycTNRRGZSTEVCNXdyTzRjMmktQWZSOHNkMnphTS1rLXBnOEd1?oc=5">국제유가 폭등과 국채금리 상승에 삼성·SK하이닉스 4%대 급락 - 2news.co.kr</a> <span class="p0-desc">인플레이션 우려와 글로벌 증시 약세 여파로 국내 반도체 대장주가 동반 하락했다. 뉴스1에 따르면 삼성전자와 SK하이닉스는 대규모 자사주 매입이라는 방어 수단에도 불구하고 외국인과 기관의 거센 매도세를 이겨내지 못하고 4%대 하락률을 기록하며 장을 마감했다. 두 기업이 수조 원 규모의 자사주를 사들이며 주가 하단을 지지하려 했으나 미국과 이란의 충돌로 촉발된 국제유가 급등과 장기 국채금리 치솟음이 결정적인 타격을 입혔다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,562.72 (-3.99%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 803.98 (-2.10%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-09-03 주식 시장에서 194건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,562.72(-3.99%), KOSDAQ 803.98(-2.10%), USD/KRW 1,359.43(-1.09%).
 - *이재명 정부 출범과 함께 시작된 코스피 5000 목표는 지난 1월 27일 조기에 초과 달성됐다.*
 
 ## 테마별 주요 뉴스

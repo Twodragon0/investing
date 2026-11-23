@@ -14,7 +14,6 @@ description: "국회의원은 주식 거래를 공개해야 합니다. NANC는 �
 image_alt: "정치인 거래·정책 리포트 - 2026-11-23 - 정치인 거래 뉴스 요약 이미지"
 ---
 
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-political-2026-11-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-political-2026-11-23.png' | relative_url }}" alt="news-briefing-political" loading="lazy" decoding="async"></picture>
 
 
 **2026-11-23** 정치권 핵심 이슈: **국회의원은 주식 거래를 공개해야 합니다. NANC는 민주당의 매수를 하나로 복사합니다 ETF - 24/7 Wall St.**. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 **23건** (미국 의회 거래 1건, SEC 내부자 거래 3건, 트럼프 정책 8건, 중앙은행 11건)을 종합 정리합니다
@@ -25,17 +24,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-23 - 정치인 거래 �
 
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(14회), **의회**(12회), **연준**(10회), **SEC(미국증권거래위원회)**(6회), **행정명령**(6회)</div>
 
+
 ## 전체 뉴스 요약
 
-오늘 정치인 거래·정책 분야에서 총 **23건**의 뉴스가 수집되었습니다. 세부 구성은 미국 의회 거래 1건, SEC 내부자 거래 3건, 트럼프 정책 8건, 중앙은행 11건입니다.
-
-**트럼프 정책** 관련으로는 Trump limits Congress’s accesses to confidential agency, contractor information The Hill 등의 소식이 포착되었으며, 행정명령과 관세 정책 변화가 글로벌 시장 심리에 직접적 영향을 미치고 있습니다.
-
-**미국 의회 거래** 동향에서는 Members of Congress Must Disclose Their Stock Trades. 등이 보고되었습니다. 의원들의 주식 거래 패턴은 향후 입법 방향의 간접 신호로 해석될 수 있습니다.
-
-**중앙은행 정책**에서는 Lisa Cook warns the Fed could get behind the curve if it doesn't raise rates now Yahoo Finance 관련 뉴스가 수집되었으며, 금리 결정은 채권·주식·암호화폐 시장 전반에 파급 효과를 줍니다.
-
----
+- 2026-11-23 정치권 핵심 이슈: 국회의원은 주식 거래를 공개해야 합니다. NANC는 민주당의 매수를 하나로 복사합니다 ETF - 24/7 Wall St.. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 23건 (미국 의회 거래 1건, SEC 내부자 거래 3건, 트럼프…
+- 1. 국회의원은 주식 거래를 공개해야 합니다. NANC는 민주당의 매수를 하나로 복사합니다 ETF - 24/7 Wall St. 국회의원은 주식 거래를 공개해야 합니다.
 
 ## 1. 미국 의회 거래 동향
 

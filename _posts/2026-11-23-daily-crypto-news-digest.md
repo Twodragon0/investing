@@ -41,41 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-23 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” - CoinNess - 87건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 31건 수집</li><li>🟠 <strong>비트코인</strong>: 비트코인, 붕괴 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 붕괴 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 14건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE41b0c4UGZiQ3c2WXBKUXBseTRCVXdycm9uLXIzZmFjZkJKUkFJaDhHTUN2QWVUV0o4b1FVWTRXWkpIeS1FdzdvbQ?oc=5">속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” - CoinNess</a> <span class="p0-desc">속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” CoinNess</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9icEdPTEYxT1REZmRfQ0dLRVNOOHdzLUdRSjZPeF9Wd0xNRWx4TzQ0OE0zN0NsTjAyQVN5Q3dsTW5Sd1pVVENjUER1VnM5QXVYNUVtcUoxbGFaakRVTnhoaHZYXzlaVzg?oc=5">“위험 피할 곳 현금뿐”…주식 이어 비트코인, 금·은 가격 모두 폭락</a> <span class="p0-desc">“위험 피할 곳 현금뿐”…주식 이어 비트코인, 금·은 가격 모두 폭락 한겨레</span></li><li><a href="https://decrypt.co/383732/wrapped-monero-token-collapses-99-after-13-million-hack-blamed-on-web-host">래핑된 모네로 토큰은 웹 호스트에서 발생한 1,300만 달러의 해킹으로 인해 99% 붕괴되었습니다.</a> <span class="p0-desc">Wagyu의 XMR1 토큰은 공격자가 배포자 계정에서 520만 개의 토큰을 이동하고 그 중 일부를 1,350만 달러에 판매한 후 99% 이상 하락했습니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” - CoinNess 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 87건의 뉴스 중 P1 주요 이슈도 10건 확인됩니다.
-
-### 테마별 동향
-
-- **🏦 거래소** (31건): anthropic, exchanges, transfers 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-- **🟠 비트코인** (30건): 비트코인, 붕괴, 엔비디아 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **📈 가격/시장** (29건): 암호화폐, 붕괴, 달러선 가격 변동 (29건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” - CoinNess
-- “위험 피할 곳 현금뿐”…주식 이어 비트코인, 금·은 가격 모두 폭락
-- 래핑된 모네로 토큰은 웹 호스트에서 발생한 1,300만 달러의 해킹으로 인해 99% 붕괴되었습니다.
-
-### 주요 이슈
-
-- AI 거품이 마침내 터지는 걸까요? 엔비디아 월스트리트 전문가의 경고에 따라 48%의 충돌 발생
-- Claude는 인류 멸망 후 하루 만에 역사적인 수학 혁신을 이뤘다고 주장합니다. IPO
-- SBF의 '이타주의자' 음모 반전: FTX의 인류 주식 가치는 430억 달러에 달할 것입니다
-- 외 7건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Google News KR(13건), Decrypt(11건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-23.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **87건** 수집
+- 주요 테마: 🏦 거래소, 🟠 비트코인, 📈 가격/시장
+- 2026-11-23 암호화폐 핵심 뉴스: 비트코인은 2년 중 최저치로 하락한 후 상승. 총 87건 분석, 핵심 테마는 거래소, 비트코인, 가격/시장입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

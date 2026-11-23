@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-11-01 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSmFRSU9ibkVRU0gzcWF6NWI1UjQwTnBlY2owNE9fSTlva2d4T21GYmZlZjhTQTZMckdjZERHMUpick96MElia1VRdnZ6YVE2NTI0SHFoVEV5NU9HMTVQQjZOY0QzZUt3WnBYYWlWUWhFOVpEOXpraVhqaVZPRTA4SUVwaDZfYVNVd3JOS0tjajZHMjdHaXNFSER4d3JkVlZBLXlYMHMtQ2hMMkw4TG9fc2Z6M0JIUTdQ?oc=5">President Trump says they're looking into Binance hack as calls grow for crypto rules</a></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQUXc3ZF9BUHhMSFcybTg2ZDJjdzJFMm1Fdm5rQzRBdVA1cFg3RUwwdGZhamh4ZTkzTUVfeTdVNmZuSWtmUGx3b04zU2E2QjhucUszZmxZVjFRVXF1dWpwRlRiYkxjc3BXWm1OdTVjeFI0T0NGYWpNMXQ5QmFtOXU3VTBVM2hqdmxaXzlkV9IBkgFBVV95cUxPMU0wTlRxZmN5M1NCUVhENV95cE43OVFkUEFuZXd2VUZ0M0ctMlRfWExIbmI3ejdvRmRKalNnQmJUUm9QcTF0NDVMdF83YUtEbXN1SFdRVERvLVBweTV0RUdSV21KbkdtcnZHZVZYUWhpMzAxVU91MDMtZzIzX1ZNRU51VElMZzZDRi0wOFhDaTYxQQ?oc=5">Trump says US looking into Binance hack: ‘We don’t know’ if North Korea responsible - The Hill</a></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xcF96Q2t4YkpxM0NUNkgtb0hZMy1CR3hkUDhuUUl3T2R5VUo1eXJia2s3emhPU0RvenBGT3dtX1U4aGVsTGZrS2ZCTjNCVi11M3BlZURDelR6dw?oc=5">美 AI 투자 우려 속 코스피 3%대 급락…삼성닉스 동반 부진[fn오전시황</a> <span class="p0-desc">美 AI 투자 우려 속 코스피 3%대 급락…삼성닉스 동반 부진[fn오전시황] 파이낸셜뉴스</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 8건 중 텔레그램 0건, 소셜 0건, 정치·경제 8건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 8건 중 텔레그램 0건, 소셜 0건, 정치·경제 8건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

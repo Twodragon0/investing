@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-23 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: ‘7만전자·20만닉스’ 말한 전문가. “본격 폭락, 아직 시작도 안했다” - 131건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 하이닉스, 코스피 주목</li><li>📊 <strong>매크로/금리</strong>: 연준, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 하이닉스 주목</li><li>🏦 <strong>거래소</strong>: IPO, 서학개미 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaC1JZmdSZW5kb2NEQU9UWDNJVlpZMVhNVzFjWlA2OFRENDdRaWVPcjljcDI5R0JUQ2N1a1cwTE44dzU5SHFCU1NxSUVHU0lNRGdJNkhtM1ZOenJXNnY3ek05bEJQUlY2UzBCNWV3UVlWUEdTZUhwa09yV25JamIxNEY4ZThLT3Vh?oc=5">‘7만전자·20만닉스’ 말한 전문가. “본격 폭락, 아직 시작도 안했다”</a> <span class="p0-desc">‘7만전자·20만닉스’ 말한 전문가. “본격 폭락, 아직 시작도 안했다” 조선일보</span></li><li><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RT3V4NzVsRVo5QWNXMXd0UWpqeWpkZ2J3OUVGQUdCVEdTRnlGQ0dLb1dEZXJHWG13S0FvWTB5Yi10UlFVS1RvTnBBc19EZnRPT3VpRWRaaTZ0MXV5NEE?oc=5">내일 증시 ‘블랙먼데이’ 오나…삼성·하이닉스 해외 추정가 급락, 코스피 4500선 위협 - 주간경향</a> <span class="p0-desc">내일 증시 ‘블랙먼데이’ 오나…삼성·하이닉스 해외 추정가 급락, 코스피 4500선 위협 주간경향</span></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPbXFPalNpMTdjNWpxUm1KYUVLYnV5eXhJeERkUjJHQk5Mby1VTzlPOU1ucFB6blJrRDRQT0FYa3JfMC1ia25QdU55N3FiMHd4TFA1ZzQ0eWE2dlg4MFhLQU1lZkI4YlhlN2JlVmlNRm5kMVd3cnhoNjZldF9rV05QcU5SMkhoUmk4cEZPV1g3X2NsTThw?oc=5">11월 수출 발표 D-1, 반도체 1~10일 4배 뒤 코스피 한 주 −8%… 폭락 주 다음 수출 발표일 5번, 코스피는 5일 뒤 모두 올랐다 (삼성전자·하이닉스 주가) - 네이버 프리미엄콘텐츠</a> <span class="p0-desc">11월 수출 발표 D-1, 반도체 1~10일 4배 뒤 코스피 한 주 −8%… 폭락 주 다음 수출 발표일 5번, 코스피는 5일 뒤 모두 올랐다 (삼성전자·하이닉스 주가) 네이버 프리.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: ‘7만전자·20만닉스’ 말한 전문가. “본격 폭락, 아직 시작도 안했다” 
-외 P0 긴급 이슈 8건이 추가 감지되었습니다. 총 131건의 뉴스 중 P1 주요 이슈도 14건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (35건): 하이닉스, 코스피, 폭락 가격 변동 (35건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (18건): 연준, 금리, 환율 매크로 변수 (18건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (18건): 엔비디아, 하이닉스, 반도체 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- ‘7만전자·20만닉스’ 말한 전문가. “본격 폭락, 아직 시작도 안했다”
-- 내일 증시 ‘블랙먼데이’ 오나…삼성·하이닉스 해외 추정가 급락, 코스피 4500선 위협 - 주간경향
-- 11월 수출 발표 D-1, 반도체 1~10일 4배 뒤 코스피 한 주 −8%… 폭락 주 다음 수출 발표일 5번, 코스피는 5일 뒤 모두 올랐다 (삼성전자·하이닉스 주가) - 네이버 
-
-### 주요 이슈
-
-- 엔비디아 실적 발표하면 '삼전닉스' 주가 오른다고? - 뉴스톱
-- 주가급락에도 노후자금 반도체 선호 여전…ETF 순매수 지속 - 매일경제 마켓
-- 제이 클레이튼 국가정보국장은 미국인들에게 '위험의 충돌'을 경고했습니다.
-- 외 11건
-
-### 투자자 체크포인트
-
-- 한국 기사 52건, 글로벌 기사 79건 수집
-- 한국 지수: KOSPI 4,869.96(-4.23%), KOSDAQ 645.68(-3.65%), USD/KRW 1,346.04(+0.88%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">35건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:51%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:51%"></div></div><span class="theme-count">18건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:17%"></div></div><span class="theme-count">6건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:23%"></div></div><span class="theme-count">8건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-23.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-23.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 4,869.96 (-4.23%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
+- KOSDAQ 645.68 (-3.65%).
+- 2026-11-23 주식 시장에서 131건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,869.96(-4.23%), KOSDAQ 645.68(-3.65%), USD/KRW 1,346.04(+0.88%).
+- *연준 매파는 유가 하락에도 불구하고 10년물 수익률을 높게 유지했습니다.*
 
 ## 테마별 주요 뉴스
 

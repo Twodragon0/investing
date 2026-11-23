@@ -28,6 +28,7 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-04-04 | XMR -2.9% - 시�
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Monero</strong> (XMR): -2.94%</li><li>🟢 <strong>Cardano</strong> (ADA): +2.62%</li><li>🟢 <strong>Hyperliquid</strong> (HYPE): +2.08%</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **20건** 수집

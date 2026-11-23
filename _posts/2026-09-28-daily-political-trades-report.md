@@ -23,8 +23,11 @@ image_alt: "정치인 거래·정책 리포트 - 2026-09-28 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(2회), **이재명**(1회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-09-28 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 3건 — 트럼프 정책 1건, 한국 정치인 1건, 중앙은행 1건
+- 1. Trump Approves Fuel Economy Rollback That Gives Gas Cars More Room - Autoblog Trump Approves Fuel Economy Rollback That Gives Gas Cars More Room Autoblog
 
 ## 1. 트럼프 행정명령/정책
 

@@ -25,30 +25,6 @@ image_alt: "WorldMonitor 글로벌 인텔리전스 브리핑 - 2026-11-23 - 시�
 - 주요 출처: WorldMonitor/CNBC (14건), WorldMonitor/Guardian World (6건)
 
 
-## 전체 뉴스 요약
-<div class="alert-box alert-warning"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 지정학 리스크 레벨: 낮음</strong><ul><li>지정학적 리스크가 비교적 안정적이나, 돌발 이벤트 가능성은 상존합니다.</li></ul></div>
-
-핵심 테마는 **사회/기타**(11건), **금융시장**(4건), **지정학/안보**(3건) 중심으로 전개되고 있습니다.
-
-안보 이슈(3건)와 금융시장 뉴스(4건)가 동시 부각되고 있어, 지정학적 긴장이 시장 심리에 직접 영향을 미치는 구간입니다.
-
-에너지 이슈 **1건**이 포착되었습니다. 에너지 가격 추이를 모니터링하며 관련 섹터 포지션을 점검하세요.
-
-**테마 집중도**: 상위 2개 테마가 전체의 75%를 차지하여, 시장의 관심이 뚜렷하게 쏠리고 있습니다. 소외 테마에서 서프라이즈 이벤트 발생 시 충격이 증폭될 수 있습니다.
-
-### 고중요도 이슈 (3건)
-
-- 국가정보국(National Intelligence) 국장 제이 클레이튼(Jay Clayton)은 미국인들에게 기술 중단 이후 '도로의 충돌'을 경고했습니다.
-- 사우디아라비아와 바레인은 이란이 미국과 여전히 협상의 여지가 있다고 말하면서 새로운 공격을 보고했습니다.
-- Russian warship sinks in Benghazi after suspected Ukrainian drone attack
-
-### 투자자 체크포인트
-
-- **에너지**: WTI·브렌트 가격과 에너지 ETF 변동성 주시
-- **금융시장**: 주요 지수 변동성과 외국인 수급 동향 모니터링
-- **방산·사이버보안**: 군사적 긴장 확대 시 수혜 섹터 점검
-- **출처**: WorldMonitor/CNBC (14건), WorldMonitor/Guardian World (6건)
-
 ## 테마별 현황
 <div class="stat-grid"><div class="stat-item"><div class="stat-value">20</div><div class="stat-label">총 이슈</div></div><div class="stat-item"><div class="stat-value">5</div><div class="stat-label">테마 수</div></div><div class="stat-item"><div class="stat-value">2</div><div class="stat-label">출처 수</div></div><div class="stat-item"><div class="stat-value">3</div><div class="stat-label">안보 이슈</div></div></div>
 
