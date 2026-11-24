@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-20 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE94ZnB3LUN5TTczUUtxekc0V1JtbzB2X0ZjeFp3WG9fTlNnYy1NVGRla0t5MjhwUjNqanFxMEdyeDBiOFhFWjRoQkVBelpmZUJhV1dOc2RGZlVaRWllb3lyZ9IBeEFVX3lxTE40cy1obHZoRzYwT3dxN2FsbTNHV2R4VWg5OFhuR29BaWVRbEt0cVpQeTE3V2FISkp1czRVcHNvVm1GWV9TTFl5M2ZfcU1zcDNaLU1McTlzYk1sMU0wZVI3anZVTnJLc0RDcU9oMG9hQktYUG1wakh6YQ?oc=5">"삼성전자·SK하이닉스, 아직 본격 폭락 시작 안 됐다" …이주완 박사의 경고</a> <span class="p0-desc">"삼성전자·SK하이닉스, 아직 본격 폭락 시작 안 됐다" …이주완 박사의 경고 뉴시스</span></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPQm5IdlBBNDVfaDlsUU1ZU0lMUmhRWjBPUEczdTJtMmdLcjduTkJnLUdRNE05cjNQOElUUnpoZHN4bEF0TVdRRDAwb2ZMQWpDODc0T3dMQWRZVDl2M0x2SlBRR3VkTWg2Sm9ZeDZKYVYtSVVIQm1SSkNjSFZrdlNTNjFNWHRNRzBJXzNoanJYNkRXTzZrdExPR1ln?oc=5">S&P 500 Breaks Critical Support: Is a Bigger Stock Market Crash Coming?</a></li><li><a href="https://www.marketwatch.com/story/were-in-our-50s-and-terrified-of-a-market-crash-should-we-put-400-000-of-our-1-million-retirement-savings-into-an-annuity-1943f240?mod=mw_rss_topstories">We’re in our 50s and terrified of a market crash. Should we put $400,000 of our $1 million retirement savings into an annuity?</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,137.89 (+1.45%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
 - KOSDAQ 684.81 (+3.29%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-11-20 주식 시장에서 199건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,137.89(+1.45%), KOSDAQ 684.81(+3.29%), USD/KRW 1,333.63(+0.17%).
 - *Stock market today: Dow, S&P 500 slip ahead of Anthropic IPO, Nvidia stock extends decline Yahoo Finance Dow closes.*
 
 ## 테마별 주요 뉴스
