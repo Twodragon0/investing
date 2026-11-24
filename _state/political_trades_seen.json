@@ -1,17 +1,5 @@
 {
   "seen": {
-    "fcd9027b0335e842b2a266e3": "2026-10-25T13:50:08",
-    "3121d49ee5dc41e78b8e5343": "2026-10-25T13:50:08",
-    "e82b68faa3dddcd9c23309b7": "2026-10-25T13:50:08",
-    "73dc4a49d06f152c0a51fb92": "2026-10-25T13:50:08",
-    "5e01e656a213374de9d21012": "2026-10-25T13:50:08",
-    "e2e5ef00d09fa75b5f41fda1": "2026-10-25T13:50:08",
-    "5466903da31b37201b9df154": "2026-10-25T13:50:08",
-    "0769d0cfbb872b85a3eb7f93": "2026-10-25T13:50:08",
-    "52983005ea85529b1571f58f": "2026-10-25T13:50:08",
-    "8a099d929e85f18d61979d12": "2026-10-25T13:50:08",
-    "418746b47189558685cf0854": "2026-10-25T13:50:08",
-    "d5f3272a4e5128f758e9076a": "2026-10-25T13:50:08",
     "23ebbb74cdb532d689256c50": "2026-10-26T00:33:53",
     "3a9d72dc41fed3485cb7a2e4": "2026-10-26T00:33:53",
     "e24b7ec03c7e676b6dcc6cb9": "2026-10-26T00:33:53",
@@ -1201,7 +1189,56 @@
     "634ce1be5c4638b7ef352ef4": "2026-11-23T21:39:44",
     "9b9d83a1f7c48df426068b5e": "2026-11-23T21:39:44",
     "ed648bb03a806851ea0162a9": "2026-11-23T21:39:44",
-    "d2ba77764a317713151682d0": "2026-11-23T21:39:44"
+    "d2ba77764a317713151682d0": "2026-11-23T21:39:44",
+    "6d89343885de6bfde179dcd2": "2026-11-24T20:27:06",
+    "21f2656523422347b60a02a0": "2026-11-24T20:27:06",
+    "1de55aabdd2123b95622680c": "2026-11-24T20:27:06",
+    "f3b9a12342729c08fc717d77": "2026-11-24T20:27:06",
+    "48e2a112d36161ef72107a3b": "2026-11-24T20:27:06",
+    "ecb1a79161ce305fe866d054": "2026-11-24T20:27:06",
+    "be29224d188ce7c09678261a": "2026-11-24T20:27:06",
+    "956f14949cb6bd3f65e9b159": "2026-11-24T20:27:06",
+    "5727e66070574a714817e618": "2026-11-24T20:27:06",
+    "b2b297498238627c63ba3d58": "2026-11-24T20:27:06",
+    "1226544a324332b8a2ea38b2": "2026-11-24T20:27:06",
+    "6befc1f2d0537f57dea30f1f": "2026-11-24T20:27:06",
+    "fa05c798f2f36421142bc190": "2026-11-24T20:27:06",
+    "c27a820509bb9d30a0cbc918": "2026-11-24T20:27:06",
+    "b57678eb7db0a9aeeb0f42fb": "2026-11-24T20:27:06",
+    "eedcfe2c58a9c9d3a49d973e": "2026-11-24T20:27:06",
+    "819075258cc3078da6f888e1": "2026-11-24T20:27:06",
+    "2a401d535bccd4c6846fbab8": "2026-11-24T20:27:06",
+    "85b2e77853752719ab35c7a6": "2026-11-24T20:27:06",
+    "a06234063167ac9edea0c27d": "2026-11-24T20:27:06",
+    "69450718f82a582eaf2f1110": "2026-11-24T20:27:06",
+    "5e154958fb5e8ea72e2bbcc0": "2026-11-24T20:27:06",
+    "c7242036999b3de0e219549f": "2026-11-24T20:27:06",
+    "df4cd1fc25d58d89a81550a7": "2026-11-24T20:27:06",
+    "fbdda5b743c390d3e02d819a": "2026-11-24T20:27:06",
+    "3e0b3433857ef4ef8aa46c8c": "2026-11-24T20:27:06",
+    "b1951a8fb6821fdfac601e01": "2026-11-24T20:27:06",
+    "ea24ea6db92d98298d96de28": "2026-11-24T20:27:06",
+    "b87eabaf0ff21e23217ad9a4": "2026-11-24T20:27:06",
+    "677fb4c432f195fa0c5153b9": "2026-11-24T20:27:06",
+    "924b5b1c46661712ea9d091e": "2026-11-24T20:27:06",
+    "f86d3097ea64120e5a351dcb": "2026-11-24T20:27:06",
+    "10b28277093af8480ec06051": "2026-11-24T20:27:06",
+    "7bd6410d00a7513e6242f668": "2026-11-24T20:27:06",
+    "6086dc25aa1e42375cffaa6d": "2026-11-24T20:27:06",
+    "49e77f3b9ae4a08e7288db11": "2026-11-24T20:27:06",
+    "6e754469a1474d98cf99fe7e": "2026-11-24T20:27:06",
+    "bb57765cb9ebb2af1815d619": "2026-11-24T20:27:06",
+    "0fb0ed95a926d1d8eaca2e81": "2026-11-24T20:27:06",
+    "8e93f477c8e960b38d497e7d": "2026-11-24T20:27:06",
+    "d57662f75cd91390871c2074": "2026-11-24T20:27:06",
+    "ecd302521f1bb5ce956fe118": "2026-11-24T20:27:06",
+    "e0877a49c81809ac6b889171": "2026-11-24T20:27:06",
+    "0eb5599c01363f659bfb43ef": "2026-11-24T20:27:06",
+    "d8e6a54e8e51bf748cc7e4bb": "2026-11-24T20:27:06",
+    "31926127c1900d2c99cdcf81": "2026-11-24T20:27:06",
+    "76a2267a5bcabcdb9d93de95": "2026-11-24T20:27:06",
+    "9467ba3e11ae01244f6f3181": "2026-11-24T20:27:06",
+    "e2fcb7a281122b4c2a8d7876": "2026-11-24T20:27:06"
   },
   "titles": [
     [
@@ -21203,6 +21240,202 @@
     [
       "정치인 거래정책 리포트 20261124",
       "2026-11-24"
+    ],
+    [
+      "congress trade representative harriet m hageman just disclosed new stock trades quiver quantitative",
+      "2026-11-25"
+    ],
+    [
+      "팔란티어 11 뛴 날 공시645억 매도는 나흘 전 코인리더스",
+      "2026-11-25"
+    ],
+    [
+      "nvidia nvda general counsel teter sold 30000 shares for 454m at an average 15143 under a 10b51 plan quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "auburn national bancorporation aubn director conn bought 200 shares for 5050 at 2525 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "grove collaborative holdings grov director karp bought 16350 shares for 128k at an average 078 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "energy vault holdings nrgv ceo piconi bought 15000 shares for 391k at 261 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "pure cycle pcyo cfo spezialy bought 500 shares for 4750 at 950 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "ibio ibio 10 owner coastlands capital bought 500000 shares for 406k at 081 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "lcnb ceo meilstrup bought 400 shares for 7640 at 1910 form 4 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "norfolk southern nsc director davidson received 1078 restricted stock units quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "tpg re finance trust trtx director smith bought 10000 shares for 64k at 640 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "colony bankcorp cban executive canup bought 500 shares for 9748 at 1950 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "western digital wdc director massengill received 746 shares quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "friedman industries frd ceo taylor bought 5000 shares for 169k at an average 3375 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "granite ridge resources grnt cfo kettler bought 5000 shares for 275k at 549 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "uxin uxin ceo dai bought 5000 american depositary shares for 3433 at 069 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "vivani medical vani director williams bought 5208902 shares for 53m at an average 102 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "prenetics global pre cfo rosin bought 40000 shares for 404k at an average 1011 quantisnow",
+      "2026-11-25"
+    ],
+    [
+      "exclusive 124 us prepares to raise tariffs on china and other countries",
+      "2026-11-25"
+    ],
+    [
+      "donald trump readies raft of new tariffs on major economies financial times",
+      "2026-11-25"
+    ],
+    [
+      "trumps nvidia move heralds a new front in economic intervention",
+      "2026-11-25"
+    ],
+    [
+      "house democrat expands investigation into donald trump jrs investment firm the washington post",
+      "2026-11-25"
+    ],
+    [
+      "trump backs down on citizenship question for us census yeni safak english",
+      "2026-11-25"
+    ],
+    [
+      "is the us government ready to create a department of the moon washington times",
+      "2026-11-25"
+    ],
+    [
+      "nevada students dream of a space career without leaving home las vegas sun",
+      "2026-11-25"
+    ],
+    [
+      "trump order targets congressional oversight usa herald",
+      "2026-11-25"
+    ],
+    [
+      "crypto regulatory affairs hong kong supervisor highlights agentic ai for onchain risk management elliptic",
+      "2026-11-25"
+    ],
+    [
+      "doj details crypto cases in broad antiscam crackdown the defiant",
+      "2026-11-25"
+    ],
+    [
+      "the regulatory turkey lost weight but washingtons still gobbling this thanksgiving competitive enterprise institute",
+      "2026-11-25"
+    ],
+    [
+      "trump pans newsom for commuting death sentences in 2028 test",
+      "2026-11-25"
+    ],
+    [
+      "cftc orders kalshi to pause certain trump speech contracts dl news",
+      "2026-11-25"
+    ],
+    [
+      "raskin demands records from four trumplinked companies cwibccoid",
+      "2026-11-25"
+    ],
+    [
+      "trump orders contractors to report congressional requests to white house demokratiscoid",
+      "2026-11-25"
+    ],
+    [
+      "기획 증권가 금리 인상 보다 ai기업실적 더 중요 매일일보",
+      "2026-11-25"
+    ],
+    [
+      "한은 26일 올해 마지막 금통위시장은 금리 인상에 무게 매일신문",
+      "2026-11-25"
+    ],
+    [
+      "이슈앤피플 ai 거품 공포 속 한미 금리 인상 향방은 매일경제 마켓",
+      "2026-11-25"
+    ],
+    [
+      "채권시장 전문가 54 한은 기준금리 인상긴축 우려에 투자심리 급랭 경인방송 뉴스",
+      "2026-11-25"
+    ],
+    [
+      "금리 인상 앞둔 부동산 시장집값 상승론과 조정론 팽팽 httpswwwthedailyeconomykr",
+      "2026-11-25"
+    ],
+    [
+      "경제포커스 한은 금통위 26일 기준금리 인상할까 시사캐스트",
+      "2026-11-25"
+    ],
+    [
+      "채권시장 참여자 54 11월 기준금리 인상투자심리 위축 브릿지경제",
+      "2026-11-25"
+    ],
+    [
+      "뉴스락 특별기획 금리 3 시대 돈의 방향이 바뀐다 뉴스락",
+      "2026-11-25"
+    ],
+    [
+      "포커스 5대 은행 정기예금 두달새 43조 불어났다기준금리 더 오를까 오늘경제",
+      "2026-11-25"
+    ],
+    [
+      "most fed regional boards wanted to raise rates in october",
+      "2026-11-25"
+    ],
+    [
+      "bill ackman says federal reserve is about to make another mistake",
+      "2026-11-25"
+    ],
+    [
+      "the fed isnt riding to the rescue wall street still sees a december rate hike after techs worst week since 2020 chart of the day",
+      "2026-11-25"
+    ],
+    [
+      "bill ackman says the fed is about to make another mistake on dec 9 247 wall st",
+      "2026-11-25"
+    ],
+    [
+      "will the fed raise interest rates in december 2026 what to know before the dec 9 decision around prague",
+      "2026-11-25"
+    ],
+    [
+      "fed chair kevin warsh and the fomc have a new concern and it has nothing to do with trumpflation the globe and mail",
+      "2026-11-25"
+    ],
+    [
+      "정치인 거래정책 리포트 20261125",
+      "2026-11-25"
     ]
   ],
   "seen_urls": {}
