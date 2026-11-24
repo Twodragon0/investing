@@ -41,40 +41,13 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-24 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 북한, 비트코인 믹서를 통해 2억 4700만 달러의 바이낸스 해킹 전리품 이동 - 91건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 엔비디아 주목</li><li>🏦 <strong>거래소</strong>: 증권 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 엔비디아 주목</li><li>📈 <strong>가격/시장</strong>: 엔비디아 관련 15건</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/383844/north-korea-247-million-binance-hack-bitcoin-mixers">북한, 비트코인 믹서를 통해 2억 4700만 달러의 바이낸스 해킹 전리품 이동</a> <span class="p0-desc">64억 달러 규모의 해킹이 발생한 지 약 한 달 후 Elliptic은 거의 모든 코인조인 혼합이 WHO "이와 같은 자금 차단을 거부하는" 한 사람에 의해 조정되었다고 말했습니다.</span></li><li><a href="https://www.theblock.co/news/regulation/2026-11-23-doj-1-17-billion-usdc-binance-hack-circle-replacement-tokens-445398">DOJ은 바이낸스 해킹과 관련하여 USDC에서 11억 7천만 달러를 찾습니다. Circle은 대체 토큰을 발행할 수 있습니다.</a> <span class="p0-desc">미국 법무부는 10월 29일 바이낸스 해킹과 관련된 USDC에 약 11억 7천만 달러를 회수하려고 합니다.</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 북한, 비트코인 믹서를 통해 2억 4700만 달러의 바이낸스 해킹 전리품 이동 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 91건의 뉴스 중 P1 주요 이슈도 7건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (36건): 비트코인, 엔비디아 가격 흐름과 온체인 지표 변화를 함께 확인하세요.
-- **🏦 거래소** (29건): 증권 이슈가 부각되며 해당 섹터의 단기 변동성 확대 가능성이 있습니다.
-- **🤖 AI/기술** (26건): 엔비디아 기술 이슈 (26건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 북한, 비트코인 믹서를 통해 2억 4700만 달러의 바이낸스 해킹 전리품 이동
-- DOJ은 바이낸스 해킹과 관련하여 USDC에서 11억 7천만 달러를 찾습니다. Circle은 대체 토큰을 발행할 수 있습니다.
-
-### 주요 이슈
-
-- 오늘 암호화폐 업계에서 일어난 일은 다음과 같습니다
-- 비트코인 집회, 엔비디아가 젠슨 황의 복귀에 35% 급등함에 따라 인류가 침몰함
-- Cathie Wood의 ARK Invest, 계획된 두 개의 암호화폐 ETF 중단
-- 외 4건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Cointelegraph(15건), Decrypt(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-24.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 총 **91건** 수집
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 🤖 AI/기술
+- 2026-11-24 암호화폐 핵심 뉴스: Kalshi, 뉴욕 도박법 분쟁에서 임시 승리 확보. 총 91건 분석, 핵심 테마는 비트코인, 거래소, AI/기술입니다
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 

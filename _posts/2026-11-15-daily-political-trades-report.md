@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-15 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(22회), **관세**(14회), **연준**(10회), **의회**(4회), **행정명령**(4회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-11-15 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 39건 — 미국 의회 거래 1건, SEC 내부자 거래 18건, 트럼프 정책 13건, 중앙은행 7건
 - 1. Nancy Pelosi’s Nvidia Bet Just Cost Her Most Of A Year’s Pay — Thanks To Jensen Huang
 
 ## 1. 미국 의회 거래 동향

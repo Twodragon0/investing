@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-22 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE54dTBpRWgyM1VaVkZpZjdCOWZCNFY3T3ZpLU5VaHpuWFl4VDNmYmxCemFMbWZZWGU3RlplOVkzbU4ySHlQU3BYSktudUoxRDhxbXpWMTdBTm4xNlZtUXBUdnFpLW9xUWI2LWp3X0xqelbSAXRBVV95cUxNRjFRc0VjWXZSWWRNVGpXRjUwMlNLMlRRVWNZcm1hdmtIdXhWRW1xT0lqX0RmNjNVVEd1SXZ5eXEtWWhDdU56WWw2TFVkOGFzSENuT2o1WldPNWtUdEZ5clY2UURDQWpGY1dEbTNBT01CSmNmWQ?oc=5">코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 - 산경투데이</a> <span class="p0-desc">코스피·코스닥 동반 매도 사이드카…반도체 대형주 6%대 급락 산경투데이</span></li><li><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE5VeDlXQUM5aVozZ0Q3RFY0cGNnbkkxb1NOQTNFSGg1a0ZxdE9ac0prdEVnUDBOdWtpNnFyNE95b0tQaW1hN3F1YTM5cUFvOGJJR2c?oc=5">‘검은 금요일’ 코스피·코스닥 나란히 5%대 급락…3거래일 만 ‘5천피’ 붕괴</a> <span class="p0-desc">‘검은 금요일’ 코스피·코스닥 나란히 5%대 급락…3거래일 만 ‘5천피’ 붕괴 매일경제</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JQW9UV3FUU05zN1drQ1dDODNiakZDNElBdDdPUXQ0VUZMY0kzUHoxTVA4SzBza004eDRZSjNqRzZWVXE4MHJJNC1aNEs1bzY0UllRVEF4OXpGZw?oc=5">오후 시황] 코스피 5.4% 급락…코스피·코스닥 매도 사이드카 잇달아 발동</a> <span class="p0-desc">[오후 시황] 코스피 5.4% 급락…코스피·코스닥 매도 사이드카 잇달아 발동 한국경제</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 4,869.96 (-4.23%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 645.68 (-3.65%).
+- 2026-11-22 주식 시장에서 142건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,869.96(-4.23%), KOSDAQ 645.68(-3.65%), USD/KRW 1,334.79(+0.04%).
 - *연준 매파는 유가 하락에도 불구하고 10년물 수익률을 높게 유지했습니다.*
 
 ## 테마별 주요 뉴스

@@ -33,51 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-24 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV - 163건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 코스피, 코스닥 관련 46건</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 하이닉스 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 환율, 연준 관련 12건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 엔비디아 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1XbzlSX0ZkcUZVdEM5X1V6UUh4NG1Bck5NakhtcEg2OXcwT2hGdU9pV196bTRlXzVtdEdpM2xhYXJOakFVLUFWcW5lRnpmLWcxNGJwU29JYkNPQm9EempjRG5ZbmJBMEFpRVRjUnZMNGF2a3dBLTItLU55Nk8?oc=5">속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV</a> <span class="p0-desc">[속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 한국경제TV</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVdHIzS1ZPVlNoamhvVGgzUVBkWVFhdTM5WldCdmRrcWZTa3hzdkJYbkczUzJOZjkwMG1weTM3cFo0WlAzVzRqNlVUamFHdnpsTVJudkIyYS04cjdoZ1dZUFhXOW1kcDlU?oc=5">코스피·코스닥 5%대 급락 충격 이어 뉴욕증시까지 털썩…삼성전자·SK하이닉스 등 대형주 향방은? - CBC뉴스</a> <span class="p0-desc">코스피·코스닥 5%대 급락 충격 이어 뉴욕증시까지 털썩…삼성전자·SK하이닉스 등 대형주 향방은? CBC뉴스</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 163건의 뉴스 중 P1 주요 이슈도 18건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (46건): 코스피, 코스닥, 삼성전자 가격 변동 (46건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **🤖 AI/기술** (39건): 엔비디아, 하이닉스, 반도체주 기술 이슈 (39건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-- **📊 매크로/금리** (12건): 환율, 연준, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-
-**리스크 수준 [MODERATE]**: 일부 주의 이벤트가 있으나, 전반적으로 안정적인 상황입니다.
-
-### 긴급 이슈
-
-- 속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV
-- 코스피·코스닥 5%대 급락 충격 이어 뉴욕증시까지 털썩…삼성전자·SK하이닉스 등 대형주 향방은? - CBC뉴스
-
-### 주요 이슈
-
-- 삼성전자·SK하이닉스 주가 하락 경고, 2028년 메모리 시장의 충격 예고
-- 트럼프 행정부는 ESG이 401(k)에 투자하는 것을 억제할 수 있는 규칙을 제안했습니다.
-- 브리지바이오, 사지근이영양증 치료제 벨젬다 승인 획득
-- 외 15건
-
-### 투자자 체크포인트
-
-- 한국 기사 71건, 글로벌 기사 92건 수집
-- 한국 지수: KOSPI 5,043.22(+6.38%), KOSDAQ 669.17(+4.22%), USD/KRW 1,342.25(+0.07%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">46건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:85%"></div></div><span class="theme-count">39건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:26%"></div></div><span class="theme-count">12건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:20%"></div></div><span class="theme-count">9건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:15%"></div></div><span class="theme-count">7건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-24.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-24.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 5,043.22 (+6.38%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
+- KOSDAQ 669.17 (+4.22%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-11-24 주식 시장에서 163건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,043.22(+6.38%), KOSDAQ 669.17(+4.22%), USD/KRW 1,342.25(+0.07%).
+- *주식 반등으로 2년 만기 국채 수익률이 급등하고 투자자들은 뉴욕을 기다리고 있습니다*
 
 ## 테마별 주요 뉴스
 

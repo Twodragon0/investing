@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-09 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.yna.co.kr">특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓</a> <span class="p0-desc">[특징주] 삼성전자, 6.3% 급락 마감…SK하이닉스도 5.7%↓ 연합뉴스</span></li><li><a href="https://www.ytn.co.kr">뉴스나우] 삼성전자, 역대급 실적에도 '주가 폭락'.원인은? - YTN</a> <span class="p0-desc">배우 배윤경이 새 드라마 '써닝야구단‘에 합류한다. 오늘(6일) YTN Star 취재에 따르면, 배윤경은 '써닝야구단‘ 출연을 확정했다. '써닝야구단'은 사회인 야구를 나가기 위해 고군분투하는 유부남들의 이야기...</span></li><li><a href="https://www.topstarnews.net">삼성전자·SK하이닉스 급락, 모건스탠리 보고서보다 불안이 컸다 - TopStarNews</a> <span class="p0-desc">삼성전자·SK하이닉스 급락, 모건스탠리 보고서보다 불안이 컸다 TopStarNews</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 7,246.79 (-5.35%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 785.00 (-5.56%).
+- 2026-07-09 주식 시장에서 208건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,246.79(-5.35%), KOSDAQ 785.00(-5.56%), USD/KRW 1,506.63(-0.55%).
 - *일시적인 문제가 발생했습니다.*
 
 ## 테마별 주요 뉴스

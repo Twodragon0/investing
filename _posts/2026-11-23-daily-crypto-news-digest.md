@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-23 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” - CoinNess - 87건 분석</strong><ul><li>🏦 <strong>거래소</strong>: 31건 수집</li><li>🟠 <strong>비트코인</strong>: 비트코인, 붕괴 주목</li><li>📈 <strong>가격/시장</strong>: 암호화폐, 붕괴 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 14건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE41b0c4UGZiQ3c2WXBKUXBseTRCVXdycm9uLXIzZmFjZkJKUkFJaDhHTUN2QWVUV0o4b1FVWTRXWkpIeS1FdzdvbQ?oc=5">속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” - CoinNess</a> <span class="p0-desc">속보 | 공포에 빠진 코인 투자자들… “인플레·금리 인상 우려가 급락 원인” CoinNess</span></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9icEdPTEYxT1REZmRfQ0dLRVNOOHdzLUdRSjZPeF9Wd0xNRWx4TzQ0OE0zN0NsTjAyQVN5Q3dsTW5Sd1pVVENjUER1VnM5QXVYNUVtcUoxbGFaakRVTnhoaHZYXzlaVzg?oc=5">“위험 피할 곳 현금뿐”…주식 이어 비트코인, 금·은 가격 모두 폭락</a> <span class="p0-desc">“위험 피할 곳 현금뿐”…주식 이어 비트코인, 금·은 가격 모두 폭락 한겨레</span></li><li><a href="https://decrypt.co/383732/wrapped-monero-token-collapses-99-after-13-million-hack-blamed-on-web-host">래핑된 모네로 토큰은 웹 호스트에서 발생한 1,300만 달러의 해킹으로 인해 99% 붕괴되었습니다.</a> <span class="p0-desc">Wagyu의 XMR1 토큰은 공격자가 배포자 계정에서 520만 개의 토큰을 이동하고 그 중 일부를 1,350만 달러에 판매한 후 99% 이상 하락했습니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **87건** 수집
 - 주요 테마: 🏦 거래소, 🟠 비트코인, 📈 가격/시장
+- 2026-11-23 암호화폐 핵심 뉴스: 비트코인은 2년 중 최저치로 하락한 후 상승. 총 87건 분석, 핵심 테마는 거래소, 비트코인, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
