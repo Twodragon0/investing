@@ -16,30 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-25 - 보안 뉴스 요약 �
 
 블록체인 보안 12건 분석. 주목 사건: **[Security] Here’s what happened in crypto today**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Bullpen exploit: Unknown 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 12건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (12건): security, exploit, infrastructure 보안 이슈 (12건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🔷 이더리움** (3건): exploit, infrastructure, compromised 네트워크 업데이트와 L2 확장이 가격에 미칠 영향을 주시하세요.
-- **🟣 DeFi** (4건): exploit, compromised, undetected 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-
-### 긴급 이슈
-
-- [Security] Bullpen exploit: Unknown
-- [보안] Endurance Bridge 익스플로잇: Unbacked Cross-Chain Mint
-- [Security] CyberConnect exploit: Private Key Compromised
-
-### 주요 이슈
-
-
-### 투자자 체크포인트
-
-- 보안 사건 12건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 12건

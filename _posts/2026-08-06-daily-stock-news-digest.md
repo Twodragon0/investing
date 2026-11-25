@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-08-06 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9lTWhJRWdUMXdEVFdwZzFlbGVVbjJETUV5TEVwdnFvMmwyeHFlUEREanVoTGJNUE9xZmwzTDdyNXktZDBPQUhyMGVmNTdqYm13b3A4RDlGMFd6bGJFNjdRQmVWbVVpWlJwbTNoLUM2QlTSAXRBVV95cUxQYjRHUHJONEc1Ry1PdVltNjhiME9zc2d5SnNwdmZQb0ozUHVaeGlDV2U1RXE3bk4zOXNHSkJfbzA0VFFnRjlPaHYta2xSeG52X09UVXB2SDRNV0Z5cTZVNUduMnhhUDB5RG5QWnVTbWRfZVRhaQ?oc=5">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 - 산경투데이</a> <span class="p0-desc">반도체주 급등에 코스피 6,600선 회복…매수 사이드카 발동 산경투데이</span></li><li><a href="https://www.sedaily.com">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식</a> <span class="p0-desc">“하락 대비 상승이 8배”… 코스피 뒷심에 코스닥 ‘3연 사이드카’ 상승 마감 [이런국장 저런주식] 서울경제</span></li><li><a href="https://www.freezine.co.kr">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' - 프리진경제</a> <span class="p0-desc">코스피, 롤러코스터 장세 끝에 1.6%↑.코스닥은 사상 첫 '3일 연속 매수 사이드카' 프리진경제</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 6,598.26 (+3.76%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 799.59 (+2.42%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-08-06 주식 시장에서 199건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,598.26(+3.76%), KOSDAQ 799.59(+2.42%), USD/KRW 1,421.14(-0.58%).
 - *나스닥 다운과 혼합된 주식; 금 가격 급등 - Reuters*
 
 ## 테마별 주요 뉴스

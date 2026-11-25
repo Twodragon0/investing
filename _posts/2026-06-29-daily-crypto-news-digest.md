@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-06-29 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/372221/ai-agent-openclaw-6000-hack-attempts">이 AI 에이전트가 6,000번의 해킹 시도에서 살아남았습니다. 방법은 다음과 같습니다.</a> <span class="p0-desc">Fernando Irarrázaval은 OpenClaw 보조자의 받은 편지함을 Hacker News에 게시하고 Claude Opus 4.6이 수천 명의 공격자를 막아내는 것을 지켜.</span></li><li><a href="https://cointelegraph.com/news/secondfi-two-week-recovery-cardano-wallet-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">SecondFi는 카르다노 지갑 악용 후 2주 복구를 목표로 합니다.</a> <span class="p0-desc">SecondFi는 법의학 조사를 완료하고 최종 잔액 스냅샷을 촬영했으며 자산 반환을 준비하고 있다고 밝혔습니다</span></li><li><a href="https://www.coindesk.com/markets/2026/06/27/polymarket-hack-updated-to-usd3-1-million-days-after-the-platform-promised-users-full-refunds">플랫폼이 사용자에게 전액 환불을 약속한 지 며칠 만에 Polymarket 해킹이 310만 달러로 업데이트되었습니다.</a> <span class="p0-desc">뉴스 보도에 따르면 예측 시장의 거대 기업은 허위 또는 기만적 마케팅 관행과 관련하여 조사를 받고 있습니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **80건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🏦 거래소
+- 2026-06-29 암호화폐 핵심 뉴스: 에이브, 솔라나 생태계 토큰은 비트코인이 $60,000 근처에서 안정되면서 암호화폐 반등을 주도합니다.. 총 80건 분석, 핵심 테마는 비트코인, 가격/시장, 거래소입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

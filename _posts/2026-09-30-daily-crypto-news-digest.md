@@ -43,9 +43,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-09-30 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-29/pokemon-fan-charged-with-55-million-crypto-hack-goes-on-trial">Pokemon Fan Charged With $55 Million Crypto Hack Goes on Trial</a></li><li><a href="https://seekingalpha.com/news/4647405-bitget-says-crypto-theft-reached-387_5m-as-stolen-xrp-moves-through-wallets">Bitget says crypto theft reached $387.5M as stolen XRP moves through wallets (XRP-USD:Cryptocurrency)</a></li><li><a href="https://decrypt.co/379463/chainlink-institutions-add-bridge-checks-kelp-hack">Months After the $292M Kelp Hack, Chainlink Lets Institutions Add Their Own Bridge Checks</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🤖 AI/기술
+- 2026-09-30 암호화폐 시장 80건 분석 — 핵심 테마: 비트코인, 거래소, AI/기술
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -29,35 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-25 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 가상자산 해킹 피해, 사업자 과실 없어도 배상…금융사 수준 규제 도입 - 27건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 규제, 금융위원회 동향 주시</li><li>🏦 <strong>거래소</strong>: 거래소, 제한 관련 9건</li><li>🟠 <strong>비트코인</strong>: 2건 수집</li><li>🔴 <strong>보안/해킹</strong>: 가상자산, 해킹 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ndGpLeHl0bk1fZXdiYmQ4b1ZqamE0OGdSOEpnVWtwYTNIWDE3Vi1WSFRZQmhGUFRTRTdPdTg3NUpDZl9kVkp3QXJ1RmVjVmxFUDh4dGlR?oc=5">가상자산 해킹 피해, 사업자 과실 없어도 배상…금융사 수준 규제 도입</a> <span class="p0-desc">가상자산 해킹 피해, 사업자 과실 없어도 배상…금융사 수준 규제 도입. 디지털 자산 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBhNWhpU3NJWjJWOUEyUjlHN3RBQTBjRS1sTW5ZVFhKa3FXeXdyeXJrcVZ3TWQ0eE5aOE1SQ0dXWDNaSkRPamJpTDVKRTZxdV94dFAwa3FmM185Y3ZXbEh4Y1lPbldYb2FHeVE?oc=5">가상자산 ‘금융회사급’ 규제 받는다…해킹 피해엔 무과실 배상 - https://www.sisaworld.kr/</a> <span class="p0-desc">가상자산 ‘금융회사급’ 규제 받는다…해킹 피해엔 무과실 배상 - https://www.sisaworld.kr/. 디지털 자산 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 가상자산 해킹 피해, 사업자 과실 없어도 배상…금융사 수준 규제 도입 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 27건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (15건): 규제, 금융위원회 규제 움직임 (15건) — 시장 접근성과 유동성에 직접적 영향이 예상됩니다.
-- **🏦 거래소** (9건): 거래소, 제한, 증권 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-- **🟠 비트코인** (2건): 비트코인 관련 (2건) 보도 — 거래량과 펀딩비 추이에 주목할 구간입니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 가상자산 해킹 피해, 사업자 과실 없어도 배상…금융사 수준 규제 도입
-- 가상자산 ‘금융회사급’ 규제 받는다…해킹 피해엔 무과실 배상 - https://www.sisaworld.kr/
-
-### 주요 이슈
-
-- CFTC 특정 이벤트 계약에 대한 데이터 보고 요구 사항에 관한 최종 규칙 게시
-- 규제 빗장 풀고 지배구조 손본다…코인시장 재편 본격화 - 공공뉴스
-- 정부, 국내 코인 발행 9년 만에 허용 추진…금융회사 수준 규제 도입 - 경북도민일보
-
-### 투자자 체크포인트
-
-- **주요 지역**: 한국 13건, 유럽 6건, 미국 5건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 27건
 - **한국**: 13건
