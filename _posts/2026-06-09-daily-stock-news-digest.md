@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-06-09 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5lNUlYREZmd19lRXdNWjRGME5nMGdaUGR6VmRpaFd0b3BYQnNOVnBIY3I3TE1kV1V1Wk1NYTBfUkprc2VSQkJncm5rMnVVQklRd0ZOMU5YS25mQkUtUl8zNVkyWkVWWUdvQktB?oc=5">미국발 반도체 충격에 삼성전자·SK하이닉스 급락…코스피도 출렁 - 서울뉴스통신</a> <span class="p0-desc">미국발 반도체 충격에 삼성전자·SK하이닉스 급락…코스피도 출렁 서울뉴스통신</span></li><li><a href="https://bloomingbit.io">"삼전닉스 본격 폭락" vs "젠슨 황 보라…지금이 기회" [분석+] - 블루밍비트</a> <span class="p0-desc">"삼전닉스 본격 폭락" vs "젠슨 황 보라…지금이 기회" [분석+] 블루밍비트</span></li><li><a href="https://m.ekn.kr">특징주] SK하이닉스·삼성전자, 두 자릿수 급락…AI 랠리 제동 걸리나 - 에너지경제신문</a> <span class="p0-desc">[특징주] SK하이닉스·삼성전자, 두 자릿수 급락…AI 랠리 제동 걸리나 에너지경제신문</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 7,484.41 (-8.29%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 911.39 (-9.08%).
-- 2026-06-09 주식 시장에서 180건의 뉴스를 분석했습니다. 한국 시장: KOSPI 7,484.41(-8.29%), KOSDAQ 911.39(-9.08%), USD/KRW 1,526.08(-2.10%).
 - *이란은 또한 유가 상승을 줄이면서 이스라엘에 대한 군사 공격을 중단한다고 밝혔습니다*
 
 ## 테마별 주요 뉴스
