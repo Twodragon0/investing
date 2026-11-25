@@ -1,36 +1,5 @@
 {
   "seen": {
-    "ebeee2778bfe5ad4d314fbe1": "2026-10-26T16:16:27",
-    "3d921bc99af6516914b3b5d7": "2026-10-26T16:16:27",
-    "7c931102d51a68aa4e251150": "2026-10-26T16:16:27",
-    "44dcb8089df4089dbc9fbbfb": "2026-10-26T16:16:27",
-    "bb17c48e6e61d28805817525": "2026-10-26T16:16:27",
-    "921b8111cb3e244dab6e9e24": "2026-10-26T16:16:27",
-    "bec5087925c840c3236eee2a": "2026-10-26T16:16:27",
-    "f0d9b4757fe9043d0f4c96a4": "2026-10-26T16:16:27",
-    "39c996dd94a53b51b37bd70b": "2026-10-26T16:16:27",
-    "0de06c2424a6b0708d733451": "2026-10-26T16:16:27",
-    "262bb210580e88be59c23a4a": "2026-10-26T16:16:27",
-    "1cf2c0559817b1890fbfc5fd": "2026-10-26T16:16:27",
-    "613e452b2fc14d89e6169e96": "2026-10-26T16:16:27",
-    "2fd5004c61067d322041b0d5": "2026-10-26T16:16:27",
-    "6c197648b415229690df4429": "2026-10-26T16:16:27",
-    "c0624a8b403ceaa43c78c089": "2026-10-26T16:16:27",
-    "befce546e3ae5cde9b0eba89": "2026-10-26T16:16:27",
-    "02c45e1c86cfffe08cd1dc7a": "2026-10-26T16:16:27",
-    "be93ea4b749858db99a7fede": "2026-10-26T16:16:27",
-    "c09338eb5ffb0888644472ea": "2026-10-26T16:16:27",
-    "580d9ef9f2d957707ebc1b2b": "2026-10-26T16:16:27",
-    "3ad7be6885d13a1943c695c1": "2026-10-26T16:16:27",
-    "9852f621e539d52a7f7e412d": "2026-10-26T16:16:27",
-    "d7a145f1199ea6e6ea1cb95b": "2026-10-26T16:16:27",
-    "5e48a2201cbbc9230d0c035c": "2026-10-26T16:16:27",
-    "18cb92c013566e29f5390c4a": "2026-10-26T16:16:27",
-    "a4137852abd3686cea345648": "2026-10-26T16:16:27",
-    "35c7807dce8c4df4eb0e8e47": "2026-10-26T16:16:27",
-    "0007212809e20440bd9e1519": "2026-10-26T16:16:27",
-    "81bc39133e53e2d32187f69c": "2026-10-26T16:16:27",
-    "19a7422c36bbb3e488134259": "2026-10-26T16:16:27",
     "b8d5a6ac903b010f3fa837bc": "2026-10-27T15:31:27",
     "74300f171b685b95af06e14e": "2026-10-27T15:31:27",
     "9c6d57a84a337165b655eb57": "2026-10-27T15:31:27",
@@ -1221,7 +1190,63 @@
     "31926127c1900d2c99cdcf81": "2026-11-24T20:27:06",
     "76a2267a5bcabcdb9d93de95": "2026-11-24T20:27:06",
     "9467ba3e11ae01244f6f3181": "2026-11-24T20:27:06",
-    "e2fcb7a281122b4c2a8d7876": "2026-11-24T20:27:06"
+    "e2fcb7a281122b4c2a8d7876": "2026-11-24T20:27:06",
+    "df53db48a0f646decc470d26": "2026-11-25T19:33:46",
+    "27cd42cd07026e4c36dc7244": "2026-11-25T19:33:46",
+    "a67c6d1c7d46964aa889530c": "2026-11-25T19:33:46",
+    "4757537d2d2b6ac02ed98254": "2026-11-25T19:33:46",
+    "66dd15ee1918d509425161ee": "2026-11-25T19:33:46",
+    "5a869e757d5eabe71d71684b": "2026-11-25T19:33:46",
+    "1ba5214d0f6c58bf7c46c9a1": "2026-11-25T19:33:46",
+    "734f26d6a276e7426b0ea8a9": "2026-11-25T19:33:46",
+    "230f6b92693f2e9ef404298b": "2026-11-25T19:33:46",
+    "963d6409b09542ef1775003d": "2026-11-25T19:33:46",
+    "4a3380b4c437a86f8536737b": "2026-11-25T19:33:46",
+    "8dcf620ae0fc4084176d50de": "2026-11-25T19:33:46",
+    "845a0be607e194057431590e": "2026-11-25T19:33:46",
+    "c893cb9f966dfc1339832dfa": "2026-11-25T19:33:46",
+    "188b7df8e73c014421bca019": "2026-11-25T19:33:46",
+    "1b0e21dc6edbb74e700ed7b7": "2026-11-25T19:33:46",
+    "70e284773e41efb60fff035c": "2026-11-25T19:33:46",
+    "0a9ce9aa1f50df53742a2549": "2026-11-25T19:33:46",
+    "6984640c080544987b7de1b4": "2026-11-25T19:33:46",
+    "d11429625f50ba443e13c356": "2026-11-25T19:33:46",
+    "a62009ef497318f1a9ec4208": "2026-11-25T19:33:46",
+    "a78763949065affd438f7d22": "2026-11-25T19:33:46",
+    "eac2abfb9bb053005eeaab74": "2026-11-25T19:33:46",
+    "7ee1d186ff1436332dd6af95": "2026-11-25T19:33:46",
+    "2ef27bd7d7077d66607db06d": "2026-11-25T19:33:46",
+    "7c3deff49041a56d16c344c4": "2026-11-25T19:33:46",
+    "9e30fe097d341d6f53e8a525": "2026-11-25T19:33:46",
+    "445161b7b29d051b31da0c15": "2026-11-25T19:33:46",
+    "752ee425f1f4826c7b6d861c": "2026-11-25T19:33:46",
+    "4ec1bf0cbd943d799f919ed6": "2026-11-25T19:33:46",
+    "af237ea9866da77fa5ee0d6c": "2026-11-25T19:33:46",
+    "632780609365d0093c96acc3": "2026-11-25T19:33:46",
+    "e337f840f95412da0f2d7d87": "2026-11-25T19:33:46",
+    "5272b77b9f15554b261169b3": "2026-11-25T19:33:46",
+    "bb60c21a278cbfb7acfc1dc9": "2026-11-25T19:33:46",
+    "dcc1e2f760c768617e0f826b": "2026-11-25T19:33:46",
+    "dec2eb56f292afa9616585c4": "2026-11-25T19:33:46",
+    "d19969bcd834495f39b852b3": "2026-11-25T19:33:46",
+    "f0d0430eb36c133a7440ba80": "2026-11-25T19:33:46",
+    "e6f243238fa59daa50099ff5": "2026-11-25T19:33:46",
+    "c53fb3ac34a1965a23136640": "2026-11-25T19:33:46",
+    "9a5e3044b6cd1d3ef511ad45": "2026-11-25T19:33:46",
+    "8767a7d12f278d31e4e5a15e": "2026-11-25T19:33:46",
+    "c4f5722ff33949559d9b74fc": "2026-11-25T19:33:46",
+    "34ee81928d2e4d38074d7911": "2026-11-25T19:33:46",
+    "57cf45b5d987e574cc7e512c": "2026-11-25T19:33:46",
+    "331e89f8f53e29235bd2e3c3": "2026-11-25T19:33:46",
+    "7ebde8c199c6a1cded575a9d": "2026-11-25T19:33:46",
+    "b0aa32ee90a681f39f49f7ac": "2026-11-25T19:33:46",
+    "579e09e14581bd2ecc8ce376": "2026-11-25T19:33:46",
+    "1a2f814e9fc1e215f6ecd30c": "2026-11-25T19:33:46",
+    "4b3239fe7c9e573ecb54d2c6": "2026-11-25T19:33:46",
+    "81c8722960b348f944809dcb": "2026-11-25T19:33:46",
+    "594e59bb8510c66f559b025d": "2026-11-25T19:33:46",
+    "fe90bb352f0864ace6bbaf19": "2026-11-25T19:33:46",
+    "35f850d7c62f3aa0e420dff9": "2026-11-25T19:33:46"
   },
   "titles": [
     [
@@ -21223,6 +21248,230 @@
     [
       "정치인 거래정책 리포트 20261125",
       "2026-11-25"
+    ],
+    [
+      "congress trade representative robert onder just disclosed new stock trades quiver quantitative",
+      "2026-11-26"
+    ],
+    [
+      "rep harriet hageman violated the stock act with monthslate disclosures notus",
+      "2026-11-26"
+    ],
+    [
+      "dell technologies dell director radakovich sold 2022 shares for 766k at 37900 under a 10b51 plan quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "fsbw fs bancorp inc filed sec form 8k other events financial statements and exhibits quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "under a trading plan sandisk sndk cto alper ilkbahar sold 1968 shares at 9801 each stock titan",
+      "2026-11-26"
+    ],
+    [
+      "hca downgraded by argus quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "fastly fsly cfo acquired 1385 shares through an employee plan then sold the same number stock titan",
+      "2026-11-26"
+    ],
+    [
+      "in three trades blacksky technology bksy general counsel christiana l lin sold 6000 shares stock titan",
+      "2026-11-26"
+    ],
+    [
+      "first watch restaurant group fwrg director william kussell plans to sell 25000 fwrg shares quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "under a preset trading plan blacksky technology bksy cfo henry edward dubois sold 4000 shares stock titan",
+      "2026-11-26"
+    ],
+    [
+      "fmn 10 owner bank of america corp de bought 122 of shares form 4 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "cbl associates properties cbl director contis bought 325 shares for 162k at 4997 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "saul centers bfs coo pearson bought 3716 shares for 997k at 2684 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "tronox holdings trox ceo romano bought 75000 shares for 139k at 186 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "prenetics global pre cfo lo bought 12435 shares for 127k at an average 1022 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "intu sec form defa14a filed by intuit inc quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "energy vault holdings nrgv ceo piconi bought 25000 shares for 608k at 243 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "vivopower vivo ceo chin bought 264693 shares for 466k at 176 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "umh properties umh director quigley bought 2500 umh properties inc for 357k at 1428 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "vistance networks visn executive bowen bought 25000 shares for 984k at 394 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "dbi designer brands inc filed sec form 8k other events quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "goldcom gold 10 owner tether global investments fund sicaf bought 150000 shares for 575m at 3831 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "volitionrx vnrx ceo reynolds bought 20000 shares for 3406 at 017 quantisnow",
+      "2026-11-26"
+    ],
+    [
+      "sec form 4 unknown",
+      "2026-11-26"
+    ],
+    [
+      "justice department takes aim at billions in crypto fraud proceeds in historic largest ever crackdown",
+      "2026-11-26"
+    ],
+    [
+      "justice department announces largestever crackdown on scammers targeting over 800 defendants to protect americans from fraud department of justice gov",
+      "2026-11-26"
+    ],
+    [
+      "us bitcoin reserve bill reaches house union calendar the defiant",
+      "2026-11-26"
+    ],
+    [
+      "us dojs biggestever crypto fraud sweep charges more than 800 freezes over 1 billion bloomingbit",
+      "2026-11-26"
+    ],
+    [
+      "susie wiles exit wont fix trumps corruption problem the korea times",
+      "2026-11-26"
+    ],
+    [
+      "crypto in the crosshairs as doj unveils historic 800defendant sweep",
+      "2026-11-26"
+    ],
+    [
+      "us freezes over 1 billion in crypto as antiscam campaign targets 800 defendants finance magnates",
+      "2026-11-26"
+    ],
+    [
+      "trump administration unveils new tariffs for china eu and more citing unfair practices",
+      "2026-11-26"
+    ],
+    [
+      "donald trump set to raise tariffs on 16 major economies sky news",
+      "2026-11-26"
+    ],
+    [
+      "trump administration proposes 20 tariff on chinese goods new levies on 13 partners wwmt",
+      "2026-11-26"
+    ],
+    [
+      "us announces new tariffs on host of countries including china",
+      "2026-11-26"
+    ],
+    [
+      "trump administration set to unveil new tariffs sources sabc news",
+      "2026-11-26"
+    ],
+    [
+      "is trump raising tariffs on china again new duties on china the eu and 14 others could come this week nacionale",
+      "2026-11-26"
+    ],
+    [
+      "witnesses clash over chineseowned factories on american soil legis1",
+      "2026-11-26"
+    ],
+    [
+      "fact check team supreme court to review trumps bid to suspend asylum at southern border wciv",
+      "2026-11-26"
+    ],
+    [
+      "us plans to hike tariffs on china eu brazil and others over subsidized production the boston globe",
+      "2026-11-26"
+    ],
+    [
+      "trump administration proposes new tariffs on 30 countries including the eu",
+      "2026-11-26"
+    ],
+    [
+      "us plans to hike tariffs on china eu brazil and others over subsidized production vinnews",
+      "2026-11-26"
+    ],
+    [
+      "한은 오늘26일 기준 금리 결정연 325로 올릴까 kbs 뉴스",
+      "2026-11-26"
+    ],
+    [
+      "올해 마지막 금통위 d1한은 기준금리 30325 유력 뉴스웍스",
+      "2026-11-26"
+    ],
+    [
+      "코스피 6 폭락하자 채권시장으로금통위 전날 국고채 금리 일제히 하락",
+      "2026-11-26"
+    ],
+    [
+      "곽세연의 프리즘 한은은 한은 길을 간다 kb think",
+      "2026-11-26"
+    ],
+    [
+      "내일 금통위 기준금리 325로 오를까 반도체 호황이 부른 금리 인상 과거 25번은 왜 올리느냐가 갈랐다 네이버 프리미엄콘텐츠",
+      "2026-11-26"
+    ],
+    [
+      "한은 이달 기준금리 325 유력최종금리 눈높이 촉각 포인트데일리",
+      "2026-11-26"
+    ],
+    [
+      "기준금리 결정 앞두고 국고채 금리 일제히 하락 3년물 연 3583 sbs biz",
+      "2026-11-26"
+    ],
+    [
+      "마지막 금리인상에 베팅외인 금통위 앞두고 국채선물 대량 매수",
+      "2026-11-26"
+    ],
+    [
+      "가계대출 금리 5대로 주담대 고정변동 금리 차 023p로 좁혀져",
+      "2026-11-26"
+    ],
+    [
+      "이번이 마지막 인상외국인 10년 국채선물 5거래일 연속 매수 서울경제tv",
+      "2026-11-26"
+    ],
+    [
+      "마지막 금리인상에 베팅외인 금통위 앞두고 국채선물 대량 매수 자유일보",
+      "2026-11-26"
+    ],
+    [
+      "the fed is likely to raise rates in december what it means for your holiday spending",
+      "2026-11-26"
+    ],
+    [
+      "gold hits near 15month lows silver crashes below 40 amid fed hike fears all eyes on the fed rate decision tradingview",
+      "2026-11-26"
+    ],
+    [
+      "정치인 거래정책 리포트 20261126",
+      "2026-11-26"
     ]
   ],
   "seen_urls": {}
