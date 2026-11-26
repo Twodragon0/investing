@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-13 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.wsj.com/economy/central-banking/week-ahead-for-fx-bonds-all-eyes-on-fed-rate-decision-c333aa4c">FX, 채권의 일주일 전: 연준 금리 결정에 모든 이목이 집중되고 있습니다</a> <span class="p0-desc">FX, 채권 일주일 전: 연준 금리 결정에 모든 관심 WSJ</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 15건 중 텔레그램 0건, 소셜 0건, 정치·경제 15건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 15건 중 텔레그램 0건, 소셜 0건, 정치·경제 15건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향

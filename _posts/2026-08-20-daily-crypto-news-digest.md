@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-20 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.fool.com/investing/2026/08/19/looking-to-diversify-your-portfolio-heres-1-crypto/">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다.</a> <span class="p0-desc">포트폴리오를 다양화하고 싶으신가요? 고려해야 할 1가지 암호화폐는 다음과 같습니다. 급락 관련 보도.</span></li><li><a href="https://www.bloomberg.com/news/newsletters/2026-08-18/strategy-s-mstr-step-back-is-sinking-in-among-bitcoin-faithful">Saylor가 비트코인에서 물러나면서 무관심이 이어졌습니다.</a> <span class="p0-desc">Saylor가 비트코인에서 물러나면서 무관심이 시작됩니다. 급락 관련 보도.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **103건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
+- 2026-08-20 암호화폐 핵심 뉴스: 트럼프는 SEC이 규정을 고려함에 따라 암호화폐 경영진을 호스팅합니다.. 총 103건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

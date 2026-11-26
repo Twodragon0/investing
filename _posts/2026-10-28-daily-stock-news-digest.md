@@ -35,10 +35,12 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-28 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1OcEI2VDlSbWY2ZVB3T0cxWUxscW1LRURUUW0wbEY3M2g0WTlXQ0JqeXIwc2taRmpMMjVkSTBIaXhRYmliNFlUNGVzTXZpSWNjdkJr?oc=5">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 - 뉴닉</a> <span class="p0-desc">코스피, 6개월여 만에 최저치 5469.47로 내려앉아…코스닥은 3.26% 급락 📉 뉴닉</span></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPdnVMeHR0cjdhVXpVQk9hZWdUUkVoMjAwX3g5OG5iWWprMW5XeEJoaC1CaTlDUVZSZ1ZjZnE4SFpsLWlCMXFXWE1lNnRoNzBKU1NqM2J1QmNUSVNhRzB4MUJxdXpMR0dQRUpNeGFOdDJ6Z25fcjA2QmVvczUxQko5RHc0d0tycDdIZGxIaGlqM3Z3OWhKeEhGMUxB0gGfAUFVX3lxTFA4SUxwS3ZmSEZwWmtRM0VkOUtZQUlSN0djS0JYRkxhMnF1VFhpVzdRWU91b1BoTjBhUm5HVkt4OHhMNElOR0JHYXpGTm5Md0NRa0lmTC1MRzNmWlAwb1lzX2hYbWgzSExzS0pZRXNfd01LNktjbVZBYTJwa2t2d0M5NUxqd2ZMVXJIam9lRHJrN09hcmlyVEpUYVptZzM0VQ?oc=5">U.S. Treasury yields are little changed as investors look ahead to the Fed's rate decision</a></li><li><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE52bEpMSmgwNnNhQUpvcEc3Ymo3N2JYTTVYSmNHQ29XV0VGRGc0eEUyTUtsZE5YbW0wUlczTGEzYmxFNUw0WWFZRWdlTWRtUGgxUHdPRll4dS1JSjdVTnZPZ29uUG4?oc=5">'미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 - 베타뉴스</a> <span class="p0-desc">'미 금리 결정 경계감'…원·달러 환율 1,320원대 보합 마감 베타뉴스</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - KOSPI 5,638.34 (+2.58%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 743.83 (+1.57%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
+- 2026-10-28 주식 시장에서 197건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,638.34(+2.58%), KOSDAQ 743.83(+1.57%), USD/KRW 1,326.55(+0.12%).
 - *분석 - 채권 투자자들은 연준에 대해 덜 생각하고 AI에 대해 더 많이 생각하고 있습니다.*
 
 ## 테마별 주요 뉴스

@@ -16,31 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-26 - 보안 뉴스 요약 �
 
 블록체인 보안 13건 분석. 주목 사건: **[Security] Braiins warns of Bitcoin mining attacks affecting**.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Bullpen exploit: Unknown 
-외 P0 긴급 이슈 7건이 추가 감지되었습니다. 총 13건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (13건): security, exploit, infrastructure 보안 이슈 (13건) — 해킹·사기 사건이 시장 신뢰에 미칠 영향을 확인하세요.
-- **🟠 비트코인** (5건): 비트코인 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🔷 이더리움** (3건): exploit, infrastructure, compromised 생태계 동향 (3건) — 가스비·TVL 변화를 함께 확인하세요.
-
-### 긴급 이슈
-
-- [Security] Bullpen exploit: Unknown
-- [Security] Biswap V3 exploit: Incorrect Share Accounting
-- [보안] Endurance Bridge 익스플로잇: Unbacked Cross-Chain Mint
-
-### 주요 이슈
-
-- [Security] Here’s what happened in crypto today
-
-### 투자자 체크포인트
-
-- 보안 사건 13건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 13건

@@ -33,52 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-26 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: 코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 - 한국면세뉴스 - 186건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 코스피 동향 주시</li><li>📊 <strong>매크로/금리</strong>: 인플레이션, 연준 동향 주시</li><li>🤖 <strong>AI/기술</strong>: 엔비디아, 삼성전자 이슈 부각</li><li>🏦 <strong>거래소</strong>: IPO 주목</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBrSDcycC1qaURfNWJtWkktQml2MzhoMS10T0Z1aHNJQVBvWGxWMXZjb3Z0M0FlaXVOVVVMR3U3RFRwUUZuQldzTXBqbGNJejQwVFE0UnZxd1RtRmlZbG5WT1BfMGM2TXZzS2c?oc=5">코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 - 한국면세뉴스</a> <span class="p0-desc">코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 한국면세뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1XbzlSX0ZkcUZVdEM5X1V6UUh4NG1Bck5NakhtcEg2OXcwT2hGdU9pV196bTRlXzVtdEdpM2xhYXJOakFVLUFWcW5lRnpmLWcxNGJwU29JYkNPQm9EempjRG5ZbmJBMEFpRVRjUnZMNGF2a3dBLTItLU55Nk8?oc=5">속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV</a> <span class="p0-desc">[속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 한국경제TV</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBqR2ZFMGVKbmo2RDRKclFvemIyQVhlUklOaVRTTmhnOFRjXzI2RndjSnlUZml3RWtpSUcyNTBjTXkzekVFY0doLTRYTFZvVFBmdjJCMHhCNjJVRTRtZU5HVTUwc1N0TzdZZl8yYg?oc=5">코스피 4700 붕괴에 삼성전자·SK하이닉스 '폭락'…박현주 “100조원 투입해야” - 데일리25</a> <span class="p0-desc">코스피 4700 붕괴에 삼성전자·SK하이닉스 '폭락'…박현주 “100조원 투입해야” 데일리25</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: 코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 - 한국면세뉴스 
-외 P0 긴급 이슈 6건이 추가 감지되었습니다. 총 186건의 뉴스 중 P1 주요 이슈도 24건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (47건): 삼성전자, 코스피, 하이닉스 가격 변동 (47건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-- **📊 매크로/금리** (27건): 인플레이션, 연준, 국채 매크로 변수 (27건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (27건): 엔비디아, 삼성전자, 하이닉스 테크 동향이 시장 주도주 교체에 영향을 줄 수 있습니다.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- 코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 - 한국면세뉴스
-- 속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV
-- 코스피 4700 붕괴에 삼성전자·SK하이닉스 '폭락'…박현주 “100조원 투입해야” - 데일리25
-
-### 주요 이슈
-
-- 연준은 채권 투자자에게 강력한 인플레이션 경고를 보냅니다.
-- SpaceX, 1백만 개의 궤도 데이터 센터 위성 배치에 대한 FCC 승인 획득
-- HP의 주식은 기술 매도세에서 눈에 띄는 상승세를 보이고 있습니다.
-- 외 21건
-
-### 투자자 체크포인트
-
-- 한국 기사 67건, 글로벌 기사 119건 수집
-- 한국 지수: KOSPI 4,723.42(+0.46%), KOSDAQ 660.50(+1.97%), USD/KRW 1,343.24(-0.03%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">47건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:57%"></div></div><span class="theme-count">27건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:57%"></div></div><span class="theme-count">27건</span></div>
-<div class="theme-row"><span class="theme-label">🏦 거래소</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:23%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:21%"></div></div><span class="theme-count">10건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-26.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 4,723.42 (+0.46%): 소폭 상승하며 안정적 흐름을 보이고 있습니다. 거래량 동반 여부가 추세 지속의 열쇠입니다.
+- KOSDAQ 660.50 (+1.97%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-11-26 주식 시장에서 186건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,723.42(+0.46%), KOSDAQ 660.50(+1.97%), USD/KRW 1,343.24(-0.03%).
+- *채권 거래자들, 연준 위험 헤지 위해 서두르다*
 
 ## 테마별 주요 뉴스
 

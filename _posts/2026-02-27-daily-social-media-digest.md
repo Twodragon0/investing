@@ -21,6 +21,7 @@ permalink: "/social-media/2026/02/27/daily-social-media-digest/"
 <div class="alert-box alert-info"><strong>소셜 미디어 매크로/금리, 정치/정책 관련 51건 포착</strong><ul><li>📊 <strong>매크로/금리</strong> (17건): Cathie Wood says Bitcoin is "hands down" better than Gold."Bitcoin is a hedge against Both inflation and deflation."</li><li>🏛️ <strong>정치/정책</strong> (11건): President Trump says everyone's portfolios are "gaining.""Everybody is up, way up."</li><li>🟠 <strong>비트코인</strong> (10건): A property seller featured on a 2015 episode of Million Dollar Listing New York declined 50,000 Bitcoin for their $14M two-bed apartment.</li><li>📈 <strong>가격/시장</strong> (16건): 코스피 6300 돌파 최고치 경신…반도체 랠리 속 ‘기관 주도 상승’ 구조 고착 이코노미사이언스</li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 오늘 수집된 총 51건 중 텔레그램 20건, 소셜 1건, 정치·경제 30건으로 매크로/금리 및 정치/정책 이슈가 주요 화제입니다.

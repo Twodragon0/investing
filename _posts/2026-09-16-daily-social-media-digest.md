@@ -32,12 +32,13 @@ image_alt: "소셜 미디어 동향 - 2026-09-16 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE85dmJNTUU5VVFqT2ZsRnJFczhrbkpBN0VoTEh6b2I1cTQ4bnhKWWc5Wnl3N2RpWGtlOTR0UWx0TkNzUVprMTJ6RGNsVDhLZ1lVSHVUNmFtdW5vaVd5SmFxWnNISTktY1JYNUVnSQ?oc=5">외국인·기관 ‘팔자’에 코스피 급락…장중 6600선 추락 - 스페셜경제</a> <span class="p0-desc">스페셜경제=최진형 기자 | 코스피가 장 초반 3% 넘게 급락하며 장중 6600선까지 밀렸다. 외국인과 기관이 대규모 매도에 나선 가운데 개인이 2조원 넘게 순매수</span></li><li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOZEEwWWxtWXQwUTd6ZVNQT0lhZzlBUC05VzNYSDhkT0Z5MGxuWVFuV0NncG9jQWlZSEhJRDROQXJZUFdjd3NZVUxKN0FoYU9TckVEXzdudW9ncW92Q3JuNi1xdzNIUjN6X1A1Zy0xNmJuRjJ0RUFyNzF1cUZBNzAxNFVtUWZKeHA3NHlTVzlLZlBUREVuRUNXV01qcGNkR2RVa2V2QkF4cEk5eFZOLW9XanBUb3Y?oc=5">Fed's Kevin Warsh should just 'stick to the data' for rate decision - Yahoo Finance UK</a></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQRk9nQklhemJVaDNwbDJrZkRYYXREYkFjbGVKVEFhbWxadWZNMDNXV215eTc5TExzUEJWRlhpWEt5aHpUT09DTExBbEhDVDl2UklEcnY1bGpYRTQ0RzFSdkFBbUxJWUE2ZlMwM01nZE9wejMza2I2RWJLcUNtNGg1SklZOC0?oc=5">Morning Business Report: Trump pushes back on calls to slow AI as Fed rate decision approaches - 41NBC News</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 40건 중 텔레그램 0건, 소셜 1건, 정치·경제 39건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 40건 중 텔레그램 0건, 소셜 1건, 정치·경제 39건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 주요 소셜 미디어 트렌드

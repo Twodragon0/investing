@@ -41,40 +41,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: UK Hacker Sentenced to Six Years for Role in $11.6 Million Cryptocurrency Theft Scheme - Homeland. - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 전망 주목</li><li>🏦 <strong>거래소</strong>: 29건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, ETF 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 채굴 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOWEt1elBzVzh5eWFTSWwtN1A5em1QdGhxaTBwTjFHUzR4S011cjd3Z1IzN0xfNDZGdUNvay15U2RSOVB2WjZqX1lLOEVSRkJnb2lUMTM2Z3RDZEJ4LV9CLUk3ay1oYko3MDhDd0F5QUdjSmRQMmNsV3drTkdrRXhNdXZzX1lLM0x0YzgtdC1MRmNsR2FFZlYtcTdzWlh5WExTQjlCRk9qa3BrU01WMktockw5dldHRW5sWjVPenhXOExLVWRiQnc3WFpmM194cWc0eU5XZVh1OURKRFFw?oc=5">UK Hacker Sentenced to Six Years for Role in $11.6 Million Cryptocurrency Theft Scheme - Homeland Security Today</a></li><li><a href="https://bitcoinmagazine.com/news/bithumb-hack-exposed-passports-wallet-addresses">Bithumb Says October Hack Exposed Passports, Bank Accounts and Wallet Addresses</a></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: UK Hacker Sentenced to Six Years for Role in $11.6 Million Cryptocurrency Theft Scheme - Homeland. 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 118건의 뉴스 중 P1 주요 이슈도 17건 확인됩니다.
-
-### 테마별 동향
-
-- **🟠 비트코인** (47건): 비트코인, 전망, BTC 심리 지표가 변동 중이며, 주요 지지·저항선 근접 여부를 점검하세요.
-- **🏦 거래소** (29건): 증권 이슈가 시장 구조 변화의 신호일 수 있어 심층 분석이 권장됩니다.
-- **📈 가격/시장** (20건): 달러, ETF, 뉴스핌 가격 변동 (20건) — 거래량 대비 변동폭을 확인하고 진입 타이밍을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- UK Hacker Sentenced to Six Years for Role in $11.6 Million Cryptocurrency Theft Scheme - Homeland Se
-- Bithumb Says October Hack Exposed Passports, Bank Accounts and Wallet Addresses
-
-### 주요 이슈
-
-- Bitcoin, Ethereum, XRP, Dogecoin Pull Back Amid Trump Tariff Jitters: Analyst Ch
-- Justice department warning online users of scammers using real women in cryptocu
-- 비트코인, ETF 자금 유출·미 연준 금리 인상 전망에 2022년 이후 최악의 월간 낙폭 향해 - Investing.com 한국어
-- 외 14건
-
-### 투자자 체크포인트
-
-- **핫 키워드**: 비트코인, AI, 이더리움
-- **주요 출처**: Binance(35건), Decrypt(15건), Cointelegraph(15건)
-- 시장 영향 가능성이 있는 거래소 공지 8건 포함
-- 프로모션성 거래소 공지 6건 제외
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-crypto-2026-11-26.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-crypto-2026-11-26.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+- 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-26 암호화폐 시장 118건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
+- *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스
 
