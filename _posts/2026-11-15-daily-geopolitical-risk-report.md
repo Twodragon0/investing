@@ -19,7 +19,6 @@ description: "지정학 리스크 리포트 — 지정학적 리스크와 글로
 ## 전체 뉴스 요약
 
 - 총 **1건** 수집
-- 2026-11-15 지정학 핵심 이슈: Global insurance sector faces geopolitical risk challenges - Traders Union (Google News). 주요 테마는 무역/공급망이며, Polymarket 15건·GDELT 0건·뉴스…
 - 글로벌 예측 시장 Polymarket에서 지정학·정치 이벤트에 대한 집단지성 확률을 확인합니다. 거래량이 많을수록 시장 참여자의 신뢰도가 높습니다.
 
 

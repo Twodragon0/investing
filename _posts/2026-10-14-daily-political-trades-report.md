@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-10-14 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **내부자**(2회), **공시**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-10-14 정치권 핵심 이슈: Cory Mills는 Elijah의 주식 거래 공개 보고서 속에서 내부자 거래에 대한 Ryan Elijah의 입장에 의문을 제기합니다 - Flo. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 22건 (미국 의회 거래 1건, SEC…
 - 1. Cory Mills는 Elijah의 주식 거래 공개 보고서 속에서 내부자 거래에 대한 Ryan Elijah의 입장에 의문을 제기합니다 - Floridian Press Cory Mills는 Elijah의 주식 거래 공개 보고서 속에서 내부자 거래에 대한 Ryan Elijah의…
 
 ## 1. 미국 의회 거래 동향

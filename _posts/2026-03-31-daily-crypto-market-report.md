@@ -28,7 +28,6 @@ image_alt: "암호화폐 시장 종합 리포트 - 2026-03-31 | HYPE -5.5% - 시
 <div class="alert-box alert-info"><strong>24시간 주요 변동</strong><ul><li>🔴 <strong>Hyperliquid</strong> (HYPE): -5.46%</li><li>🟢 <strong>Stellar</strong> (XLM): +2.07%</li><li>🟢 <strong>Chainlink</strong> (LINK): +1.70%</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **19건** 수집

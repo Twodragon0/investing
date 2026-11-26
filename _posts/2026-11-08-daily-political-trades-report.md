@@ -23,11 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-08 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(22회), **관세**(12회), **SEC(미국증권거래위원회)**(10회), **의회**(2회), **연준**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-11-08 정치권 핵심 이슈: 엔비디아·AMD 경영진도 매도…AI 내부자들 ‘고점 탈출’ 74억 달러 - 조세일보. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 35건 (SEC 내부자 거래 19건, 트럼프 정책 15건, 중앙은행 1건)을 종합 정리합니다
-- 1. Trump administration moves closer to allowing crypto in 401(k) retirement plans
 
 ## 1. 트럼프 행정명령/정책
 

@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-11-09 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNZF8wRkd3OTN1U3I0S2xUdmpZZnR5bWNyak05MUdGOC1MVk5FQU80bkNNd05pc1ZnekgzbF9FbzMxNUZGajVtMFVyYWZkRExuYWV0SFJqdEtIWm9RUnhSejZDeVhGWDBlNG5wZndCRVFHLXlXdnN2d28zRzhnU2pYY1l6QUZ0MmF5V1dKUlNrMTFEU1BmamVHTVdLX3AyQzQ2Vnc?oc=5">Midterm results may add uncertainty to the Fed’ next rate decision — here are 5 money moves to consider before December</a></li><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE0wVnM2aGg0UVpCSllvNXJTeU12anp5cHczUWhSQTJvRDZFZS1janlHU1hsZ21KOXJ2MnlPWlBhRnhmcG15aUJDYVNJRnFVQ3ZuUHZYakQwdXZnMFZiaVdaYkJWVVRoRjh5cGM0?oc=5">금리 인상 저울질하는 한은…코스피 폭락 변수되나 - 비즈워치</a> <span class="p0-desc">금리 인상 저울질하는 한은…코스피 폭락 변수되나 비즈워치</span></li><li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5aXzJNbmp4S1RxczFtUVMxMlJVRGc4SFBWRU9vRTB5ZEpmTmFDdndNR3UySFFIRTUxbW9YR0d2YXZCdUtFd1U5MEljRWlXRGlKdnpqMg?oc=5">물가는 3% 육박, 코스피는 5000선 위태…금리 결정 앞둔 한은 딜레마</a> <span class="p0-desc">물가는 3% 육박, 코스피는 5000선 위태…금리 결정 앞둔 한은 딜레마 뉴스1</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 11건 중 텔레그램 0건, 소셜 0건, 정치·경제 11건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 11건 중 텔레그램 0건, 소셜 0건, 정치·경제 11건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

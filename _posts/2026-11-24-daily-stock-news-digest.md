@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-24 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1XbzlSX0ZkcUZVdEM5X1V6UUh4NG1Bck5NakhtcEg2OXcwT2hGdU9pV196bTRlXzVtdEdpM2xhYXJOakFVLUFWcW5lRnpmLWcxNGJwU29JYkNPQm9EempjRG5ZbmJBMEFpRVRjUnZMNGF2a3dBLTItLU55Nk8?oc=5">속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 - 한국경제TV</a> <span class="p0-desc">[속보] 급등장에 코스피·코스닥 ＇매수 사이드카＇ 발동 한국경제TV</span></li><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVdHIzS1ZPVlNoamhvVGgzUVBkWVFhdTM5WldCdmRrcWZTa3hzdkJYbkczUzJOZjkwMG1weTM3cFo0WlAzVzRqNlVUamFHdnpsTVJudkIyYS04cjdoZ1dZUFhXOW1kcDlU?oc=5">코스피·코스닥 5%대 급락 충격 이어 뉴욕증시까지 털썩…삼성전자·SK하이닉스 등 대형주 향방은? - CBC뉴스</a> <span class="p0-desc">코스피·코스닥 5%대 급락 충격 이어 뉴욕증시까지 털썩…삼성전자·SK하이닉스 등 대형주 향방은? CBC뉴스</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,043.22 (+6.38%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 669.17 (+4.22%). KOSDAQ이 KOSPI 대비 약세로, 대형주 중심의 안전 선호 흐름이 나타나고 있습니다.
-- 2026-11-24 주식 시장에서 163건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,043.22(+6.38%), KOSDAQ 669.17(+4.22%), USD/KRW 1,342.25(+0.07%).
 - *주식 반등으로 2년 만기 국채 수익률이 급등하고 투자자들은 뉴욕을 기다리고 있습니다*
 
 ## 테마별 주요 뉴스
