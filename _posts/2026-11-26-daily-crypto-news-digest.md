@@ -250,7 +250,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/384002/1password-breach-vaults-phishing-emails" class="news-title" target="_blank" rel="noopener noreferrer">The 1Password Breach Didn’t Touch Your Vault. The Phishing Emails Might</a>
-<p class="news-desc">An attacker compromised an employee’s GitHub account to reach 1Password’s backend and copy customer names and emails, but the company says vault contents, encryption keys and your Secret Key were never exposed.</p>
+<p class="news-desc">비밀번호 관리자 1Password는 공격자가 일부 백엔드 시스템에 액세스한 보안 위반을 공개했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -262,7 +262,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383999/another-bitcoin-mining-firm-hashrate-hijacking-attacks" class="news-title" target="_blank" rel="noopener noreferrer">Another Bitcoin Mining Firm Flags 'Hashrate Hijacking' Attacks That Reroute Rewards</a>
-<p class="news-desc">Braiins says an attacker exploited the unencrypted Stratum V1 protocol and internet route hijacking to impersonate mining pools, striking over 1,000 sites in a single second.</p>
+<p class="news-desc">몇 주 만에 두 번째로, 주요 비트코인 채굴 회사는 공격자들이 연결을 가로채서 채굴 보상을 빼앗고 있다고 경고했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -274,7 +274,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383994/nvidia-290-million-settle-crypto-mining-disclosure-lawsuit" class="news-title" target="_blank" rel="noopener noreferrer">Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit</a>
-<p class="news-desc">The proposed cash settlement would resolve a shareholder suit alleging the chipmaker hid how much of its 2017-2018 gaming revenue came from crypto miners.</p>
+<p class="news-desc">엔비디아는 암호화폐 채굴 수익 공개에 대한 2018년 주주 소송을 해결하기 위해 2억 9천만 달러를 지불하기로 합의했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -305,7 +305,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/384001/what-happened-alice-huang-nvidia-spy-scandal" class="news-title" target="_blank" rel="noopener noreferrer">What Happened to Alice Huang, the Woman at the Center of Nvidia’s Scandal?</a>
-<p class="news-desc">U.S. intelligence found no evidence that Beijing directed Alice Huang to spy on Nvidia’s CEO, but the former Megaspeed executive still faces entry bans and scrutiny of business ties.</p>
+<p class="news-desc">미국 정보부는 중국이 Alice Huang에게 엔비디아의 CEO을 감시하도록 지시했다는 증거를 찾지 못했지만 전 Megaspeed 임원은 여전히 ​​조사를 받고 있습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -317,7 +317,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383997/what-is-artex-ai-hacking-tool-us-spy-agency-breach" class="news-title" target="_blank" rel="noopener noreferrer">What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach</a>
-<p class="news-desc">Microsoft says state-backed hackers and cybercriminals are using Artex to automate attacks with AI agents, exploiting familiar security flaws at speeds that leave defenders little time to respond or recover.</p>
+<p class="news-desc">마이크로소프트은 국가 지원을 받는 해커와 사이버 범죄자가 Artex를 사용하여 AI 에이전트를 통한 공격을 자동화하고 보안 결함을 악용하고 있다고 말합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -329,7 +329,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://decrypt.co/383963/openai-changes-chatgpt-drastically-cut-usage-limits" class="news-title" target="_blank" rel="noopener noreferrer">OpenAI’s Changes to ChatGPT Could Drastically Cut Usage Limits for Paying Subscribers</a>
-<p class="news-desc">OpenAI is merging ChatGPT’s Chat and Work modes, forcing advanced conversations to compete with coding tasks for usage and leaving paying subscribers wondering how much AI they will actually get.</p>
+<p class="news-desc">OpenAI는 ChatGPT의 채팅 모드와 작업 모드를 병합하여 고급 대화가 사용을 위해 코딩 작업과 경쟁하도록 합니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
