@@ -1,52 +1,5 @@
 {
   "seen": {
-    "65be6976109242e6df1f9e16": "2026-10-28T16:13:46",
-    "855374364565a161a2811291": "2026-10-28T16:13:46",
-    "7dad18fda062fee3c0d1137d": "2026-10-28T16:13:46",
-    "399cc92dde9d9017ceed0f1a": "2026-10-28T16:13:46",
-    "2aa4aa703a44e71d8950359e": "2026-10-28T16:13:46",
-    "7e94a9f8ebf05bcbdeb680d8": "2026-10-28T16:13:46",
-    "a18b205712b964296aa172bf": "2026-10-28T16:13:46",
-    "db6f030f0f2fce0a0b65497e": "2026-10-28T16:13:46",
-    "ab9b057be63f7f5090b02ae0": "2026-10-28T16:13:46",
-    "9dd810b0f1bd2d4e0334bf59": "2026-10-28T16:13:46",
-    "9ac542ac0071377d6eb8bd2d": "2026-10-28T16:13:46",
-    "1f7f4a0435fc3496b128c831": "2026-10-28T16:13:46",
-    "b522fd3f98c8f705525901cf": "2026-10-28T16:13:46",
-    "b8c2a77ba121e9d6cac957c6": "2026-10-28T16:13:46",
-    "adec1b7f96f779c8d91e7d92": "2026-10-28T16:13:46",
-    "2574a51dde23e3ee4e461bfb": "2026-10-28T16:13:46",
-    "8821abd156c3e7c9d3eef27c": "2026-10-28T16:13:46",
-    "e8f09d6eab9833c1047406ac": "2026-10-28T16:13:46",
-    "65b6674704c55bd0079861d0": "2026-10-28T16:13:46",
-    "12170c84a73fe6700806e895": "2026-10-28T16:13:46",
-    "53a0e790f514787c9336e6f3": "2026-10-28T16:13:46",
-    "c62c77fc78c0499e624ffc70": "2026-10-28T16:13:46",
-    "c5556a40f34a208b073e26aa": "2026-10-28T16:13:46",
-    "e6d6f7362b85761a8c6f2922": "2026-10-28T16:13:46",
-    "a5d9800bdb0f5120d553f5f6": "2026-10-28T16:13:46",
-    "a41ac73eefc7856580aebd45": "2026-10-28T16:13:46",
-    "33346abedf1ef3266a334de4": "2026-10-28T16:13:46",
-    "b247f57bd11ce308ba8f7f45": "2026-10-28T16:13:46",
-    "87cf30a13a416329a9399952": "2026-10-28T16:13:46",
-    "f7ca701cd3e9520fe8b74cf3": "2026-10-28T16:13:46",
-    "0e8c41b6036f916c09c3338f": "2026-10-28T16:13:46",
-    "44b25deb20c2e65a3b49a2b1": "2026-10-28T16:13:46",
-    "91b3e60e4e951076f4346f56": "2026-10-28T16:13:46",
-    "06f624ba2f7c5d6358a11f4f": "2026-10-28T16:13:46",
-    "e8ac1ca52c5acad69bb88657": "2026-10-28T16:13:46",
-    "d4b2d79f5e1907f9d4972326": "2026-10-28T16:13:46",
-    "f3fa92516b52174e57aa9701": "2026-10-28T16:13:46",
-    "e53f550e34e3bdcb7e2e5bf9": "2026-10-28T16:13:46",
-    "16900b9c8fd13266fa7e8e4e": "2026-10-28T16:13:46",
-    "4fbb2bb02eb55b6a35edbed1": "2026-10-28T16:13:46",
-    "0ede210613d9e81b8347b5ca": "2026-10-28T16:13:46",
-    "4e3e60226c97a3088c3560b2": "2026-10-28T16:13:46",
-    "9f6c4b0d31b4f86dbfc2460a": "2026-10-28T16:13:46",
-    "42849d8d5ffd3ec32829d170": "2026-10-28T16:13:46",
-    "7a5613927967ba624424b09b": "2026-10-28T16:13:46",
-    "76da6854b13f159dd59335ce": "2026-10-28T16:13:46",
-    "a7a3abf8a02972ab9e329de2": "2026-10-28T16:13:46",
     "e82550c1062b3049caf58ebf": "2026-10-29T16:20:18",
     "e191216b932443be0c183591": "2026-10-29T16:20:18",
     "3a5e1cc9d02582c820e6e016": "2026-10-29T16:20:18",
@@ -1240,7 +1193,48 @@
     "6522faab54d1857ccf9517c4": "2026-11-26T19:14:52",
     "e06a821a5e7b2dce58afd4fa": "2026-11-26T19:14:52",
     "8b48e87ecc4d25bd86305d28": "2026-11-26T19:14:52",
-    "8710ddea649e002c4611e1da": "2026-11-26T19:14:52"
+    "8710ddea649e002c4611e1da": "2026-11-26T19:14:52",
+    "b55a24c43737b20a216a3e2e": "2026-11-27T19:09:22",
+    "56ec64fdd9ea2ccfe2d73c33": "2026-11-27T19:09:22",
+    "9776b731028bd2dba8e6dfcb": "2026-11-27T19:09:22",
+    "7a0447560ecdb907e792b823": "2026-11-27T19:09:22",
+    "d24361efc4be7809ff769286": "2026-11-27T19:09:22",
+    "00435bf794002621df916a9b": "2026-11-27T19:09:22",
+    "75cb612e2832d2adb297e21b": "2026-11-27T19:09:22",
+    "87d2bddcbcd295a7637cb031": "2026-11-27T19:09:22",
+    "96527d239a5de23c036b8e66": "2026-11-27T19:09:22",
+    "390161f6d9314097e1e66852": "2026-11-27T19:09:22",
+    "c9567ce3a4c3100ef159ea1f": "2026-11-27T19:09:22",
+    "500659af5445586dcda40889": "2026-11-27T19:09:22",
+    "0008e549d47b39d89b505b35": "2026-11-27T19:09:22",
+    "27615d171541d324d99006f3": "2026-11-27T19:09:22",
+    "de8d5e19ce1a2c4bb5ced498": "2026-11-27T19:09:22",
+    "5ffd6092b4cd634bef7e42b0": "2026-11-27T19:09:22",
+    "4ca58dc1ff2d242a31a3dc55": "2026-11-27T19:09:22",
+    "99540b8e5d584dd5cc8e9f92": "2026-11-27T19:09:22",
+    "87027d09fd6e7a0bfba0e83e": "2026-11-27T19:09:22",
+    "fd91f41a533373ac74161cdb": "2026-11-27T19:09:22",
+    "7b0f8d06071b10e3ba986279": "2026-11-27T19:09:22",
+    "12c42bc8a5981a92e5911cfe": "2026-11-27T19:09:22",
+    "d525e7faeea38cfa73bbdb3f": "2026-11-27T19:09:22",
+    "0bbe82bfcf415fce6b02abc1": "2026-11-27T19:09:22",
+    "5a1d132a296149c3673e4092": "2026-11-27T19:09:22",
+    "77e65981b560c68ac2dceaa3": "2026-11-27T19:09:22",
+    "021d7cc5223b3cb7be44e76f": "2026-11-27T19:09:22",
+    "2adba63b3f08f62c8b0db336": "2026-11-27T19:09:22",
+    "f07c08ec65cb906667ca6843": "2026-11-27T19:09:22",
+    "f93ede127b6a95cfd3e0e4ce": "2026-11-27T19:09:22",
+    "94a17d01761806f767aa17f2": "2026-11-27T19:09:22",
+    "bb8905000a8185d8c4f93916": "2026-11-27T19:09:22",
+    "839888eea8523b589c5fc812": "2026-11-27T19:09:22",
+    "21305c7e38488fb9d0331cf1": "2026-11-27T19:09:22",
+    "019d4a7fba1484f23cd7bece": "2026-11-27T19:09:22",
+    "6012513c51242ef6147db450": "2026-11-27T19:09:22",
+    "7108f8376b061c9fd45db5a5": "2026-11-27T19:09:22",
+    "4e477569b85e9bfdf0ccf1a3": "2026-11-27T19:09:22",
+    "11dc96f19c9db75790a7ceeb": "2026-11-27T19:09:22",
+    "63975d7fb6c86dde67421e08": "2026-11-27T19:09:22",
+    "65a9299590a3effe137448c1": "2026-11-27T19:09:22"
   },
   "titles": [
     [
@@ -21242,6 +21236,170 @@
     [
       "정치인 거래정책 리포트 20261127",
       "2026-11-27"
+    ],
+    [
+      "congressman discloses first public stock trades and its all sales",
+      "2026-11-28"
+    ],
+    [
+      "enr energizer director proposes sale of 4000 shares quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "after exercising options at 4363 vericel vcel cfo mara sold the shares under a preset plan stock titan",
+      "2026-11-28"
+    ],
+    [
+      "intelligent group intj sells two hong kong units for about hk208 million combined quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "after exercising options vericel vcel director heidi hagen sold 10000 shares under a trading plan stock titan",
+      "2026-11-28"
+    ],
+    [
+      "after selling part of his stake the ceo of exlservice exls still holds 357214 shares directly stock titan",
+      "2026-11-28"
+    ],
+    [
+      "caty cathay general bancorp filed sec form 8k other events financial statements and exhibits quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "lenz therapeutics lenz 10 owner leonard bought 138620 shares for 396k at an average 285 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "across six november dates efraim cohenarazi bought 50000 shares of prf technologies prfx stock titan",
+      "2026-11-28"
+    ],
+    [
+      "outset medical om 10 owner leonard bought 19087 shares for 54k at an average 283 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "at 070 apiece director asaf shavit bought 37879 shares of prf technologies prfx stock titan",
+      "2026-11-28"
+    ],
+    [
+      "pure cycle pcyo director fink bought 2500 shares for 25k at 1001 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "franklin financial services fraf director duffey bought 15 shares for 1009 at 6729 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "tmc the metals tmc ceo barron bought 20000 shares for 334k at 167 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "prf technologies prfx ceo cohenarazi bought 50000 shares for 378k at an average 076 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "obook holdings owls ceo wang bought 4080 shares for 8227 at 202 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "globus maritime glbs director feidakis bought 90000 shares for 221k at 245 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "uxin uxin ceo dai bought 8200 american depositary shares for 5593 at 068 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "orbs eightco holdings inc filed sec form 8k notice of delisting quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "eltek eltk director nissan bought 1200 shares for 5194 at 433 quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "skyd skydance corporation filed sec form 8k termination of a quantisnow",
+      "2026-11-28"
+    ],
+    [
+      "a guide to trumps secondterm sanctions council on foreign relations",
+      "2026-11-28"
+    ],
+    [
+      "what tariffs has trump introduced and why yahoo",
+      "2026-11-28"
+    ],
+    [
+      "trump calls the preelection gdp figures fake and demands an investigation of commerce department now georgia",
+      "2026-11-28"
+    ],
+    [
+      "why trumps new tariff probably wont hurt taiwan httpsdominotheorycom",
+      "2026-11-28"
+    ],
+    [
+      "president orders white house approval for federal contractors congressional testimony the presidential prayer team",
+      "2026-11-28"
+    ],
+    [
+      "republicans rethink tariffs giving democrats an opening to challenge trump mpr news",
+      "2026-11-28"
+    ],
+    [
+      "new tariffs on china risk undermining trade truce with us",
+      "2026-11-28"
+    ],
+    [
+      "trump riles trade partners with tariffs that undercut china1",
+      "2026-11-28"
+    ],
+    [
+      "for trump doubling down on tariffs is about power not popularity",
+      "2026-11-28"
+    ],
+    [
+      "spanish economist to succeed lagarde at the ecb",
+      "2026-11-28"
+    ],
+    [
+      "뉴스픽 한국은행 오늘 기준금리 결정인상할 듯 mbc 뉴스",
+      "2026-11-28"
+    ],
+    [
+      "한은 기준금리 325로 올려올해 세 번째 인상 경북일보",
+      "2026-11-28"
+    ],
+    [
+      "한은 기준금리 올린 날 무슨 일이국고채 만기별로 희비 엇갈린 이유 매일경제 마켓",
+      "2026-11-28"
+    ],
+    [
+      "한은 기준금리 325로 인상 물가경기 대응 한국보험신문",
+      "2026-11-28"
+    ],
+    [
+      "한은 기준금리 연 325로 인상 강원일보",
+      "2026-11-28"
+    ],
+    [
+      "hawkish fed poised to raise rates despite stock market turmoil financial times",
+      "2026-11-28"
+    ],
+    [
+      "gold price forecast fed rate hike in december may limit recovery to 130 lakh per 10 grams by 2026end says expert livemint",
+      "2026-11-28"
+    ],
+    [
+      "week ahead for fx bonds key labor data in focus ahead of feds december rate decision",
+      "2026-11-28"
+    ],
+    [
+      "the fed recently held rates but a hike could be coming heres what that means for your cd",
+      "2026-11-28"
+    ],
+    [
+      "정치인 거래정책 리포트 20261128",
+      "2026-11-28"
     ]
   ],
   "seen_urls": {}
