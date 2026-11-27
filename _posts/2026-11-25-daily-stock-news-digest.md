@@ -284,7 +284,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-25 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/24/trump-jensen-huang-nvidia.html" class="news-title" target="_blank" rel="noopener noreferrer">Trump wanted Jensen Huang back. Now, the president is all alone in Washington</a>
-<p class="news-desc">Republicans worry Nvidia CEO Jensen Huang's affairs with a suspected Chinese spy jeopardized U.S. national security.</p>
+<p class="news-desc">공화당원들은 엔비디아 CEO 젠슨 황이 중국 스파이로 의심되는 사람과의 관계가 미국 국가 안보를 위태롭게 한다고 우려하고 있습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
