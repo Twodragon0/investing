@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-14 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zcGw3UXA3ZzNuQTMwbGEwUGkyQlliMFNzYXdaakkyN24ySkRodjcxUnlyblVkVkxBMGl3Q0xWbmM0YzdQaGYtbU5kV1NZbFdqQlVWOGZkdUlrVWNfNW5WUTNjYl9nRDRQ?oc=5">엔비디아 후폭풍에 美반도체 6% 급락…외국인 7000억 매도, 코스피 5300선 붕괴 - 녹색경제신문</a> <span class="p0-desc">엔비디아 후폭풍에 美반도체 6% 급락…외국인 7000억 매도, 코스피 5300선 붕괴 녹색경제신문</span></li><li><a href="https://www.sedaily.com/article/20114124">당장 그 자리에서 30만원 준다…월세 밀린 사람들 찾아가는 ‘긴급 지원’ 뭐길래</a></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,290.53 (-0.58%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
 - KOSDAQ 699.66 (+1.59%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-11-14 주식 시장에서 178건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,290.53(-0.58%), KOSDAQ 699.66(+1.59%), USD/KRW 1,336.18(+0.14%).
 - *나스닥 선물은 엔비디아 격변의 혼란으로 인해 진정되었습니다.*
 
 ## 테마별 주요 뉴스

@@ -43,12 +43,10 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-08-16 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://cointelegraph.com/news/crypto-biz-bitcoin-self-custody-etf-inflows-strategy-riot-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">Crypto Biz: 비트코인의 $116M 자기 양육권 모닝콜</a> <span class="p0-desc">1억 1600만 달러 규모의 비트코인 지갑 익스플로잇으로 인해 ETF 유입이 반등하고 Strategy가 BTC에 더 많은 관심을 기울이고 채굴자들이 AI 거래에서 수십억 달러를 추.</span></li><li><a href="https://decrypt.co/375670/openai-staff-blame-rush-ship-rogue-agent-hack">OpenAI 직원, 악성 에이전트 해킹에 대한 비난 돌진</a> <span class="p0-desc">전현직 OpenAI 직원들은 새로운 AI 제품 출시에 대한 압박으로 인해 안전 우선순위를 정하기가 더 어려워졌다고 말했습니다.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - 총 **98건** 수집
 - 주요 테마: 🟠 비트코인, 📈 가격/시장, 🔵 규제/정책
-- 2026-08-16 암호화폐 핵심 뉴스: XRP 가격: 비트코인 및 더 넓은 암호화폐 시장에서 여러 역풍이 뭉치게 됩니다.. 총 98건 분석, 핵심 테마는 비트코인, 가격/시장, 규제/정책입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

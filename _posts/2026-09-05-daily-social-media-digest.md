@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-09-05 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-04/fed-rate-decision-still-hangs-on-inflation-after-jobs-report">Fed Rate Decision Still Hangs on Inflation After Jobs Report</a></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9JVUNCSEw3eC1BVmlrRmlLMnNwMDFtZ3hLT01Bd3BQSXA0anl1aFV6Q3M2WEkwM2NBZjdiZElubTFUcjJaVl9pNm8wRHU2V0I3YkdmQ3N4UWNzYVdyWUNTYVZXX2c2MVU?oc=5">‘이유 없이 뚝’ 코스피…개인·외국인·기관 모두 던져</a> <span class="p0-desc">미 국채 금리가 하락하고 국제 유가 상승세도 잠잠해지면서 코스피가 3일 상승 출발했지만, 장 마감 전 급락하며 6400선까지 주저앉았다. 뚜렷한 악재가 없어 증권가에서도 해석.</span></li><li><a href="http://www.e-today.kr/news/articleViewAmp.html?idxno=913865">오후 2시 갑자기 급락?…'수급 절벽' 코스피 6600선 아래로[시황종합] - 경제투데이</a> <span class="p0-desc">3일 오후 서울 중구 하나은행 딜링룸 현황판에 전장대비 16.76(0.26%) 상승한 6,579.48을 나타내고 있다. 2026.9.3 ⓒ 뉴스1 이광호 기자 3일 오전 서울 중구.</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 26건 중 텔레그램 0건, 소셜 0건, 정치·경제 26건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 26건 중 텔레그램 0건, 소셜 0건, 정치·경제 26건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
