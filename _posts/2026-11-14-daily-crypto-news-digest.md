@@ -43,9 +43,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-14 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOVjJyUzNvUXVnYUgwRmVtcjhxb2ZQY0lJekVvTnpnWVRRYk04UW5GZXEzUUhKSVYyVUVmUlFHY3FUaVlmTW5fMzN4bE56dGNKcHFEdm5YNnVsNk9UUmZxbGJaT3N2TkM4Z0hhZFdqY3NRSDJucllQYXlkS2V6TGx1N0Y5ZEF1X1VpcEp2akY0NWdxeENJdnN6M3JTdjZZVGptbFJQdnVTLWd0TXFqOTl30gG0AUFVX3lxTFAzZ2cwYjBHNEV6RU1VRlVqRnZpS1R1cEc3RHJyT1BfUFBGZ1lGMVp3dTRxMjRHRzBqdVNmeF9ETFRXY2FndGhLa2QxNVdYa0JvaGdFcnRSZXdWODF5b0RTTVdEaElSdjNWUFZlZVExNGlvNTJ5MUkySWJEQUcxc0VQVnV6WnltSHdMYzNfWjJmOHpJdkc4a1ptYVhVNGc1eGdlOFN4azdyQmVOeFQ3X1FUaGdtMg?oc=5">FBI warns of North Korean ‘FaceStealer’ campaign targeting American employees - KTLA</a></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQM1UwZlVJclJteDl1STRDQVdCZGV3Y2NhWkVYTWRYNXcwRkZDNk5JdzNfSDZkaV9DZkJDTXduZWFLNW43dmw1dktUcDNmM0pmN2FNZGhfSXg3Y05iMEtfd011a2gwWFFWWk53aW9PR05sUjNSeWtKN0hDYmtwX1VVa1FDWjg5UGFFS0o4aUx4UmJEdEl2MXNjN0MxakhBOHlodFc5QTEzbi1pSXBnQmdleHJDTlA3MmZadlZWZG8zYw?oc=5">US cracks down on North Korean cryptocurrency-theft scheme, recovers more Binance funds - Cybersecurity Dive</a></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQMkE3S2p3djVDb3JYNFVHUmJHQUpyWm9aTk12X3hGUGMyM3VFUnhrOUswdFUyaTNXRjE1RDlFMTdBcWJBZmJWMGtlc1dnaUE1Q2JBZ1Zacm1aYnE3aExPUllWZl9OWEMtamRTN2lWdGJnMW1NVzVvZjBxa1VDbjNEYkVHdG5TTUtjMnhXVXgtejFnMmp5WHpLNEkyRVJmSXNNb3Q40gGrAUFVX3lxTFBLT1BWSkt0VEd2U2Jic0N4SVVFVFRDTVBsMW9DaXU2cF95bTdNbkpEUVoteXl1d1REMjE0bm1Yb0NZNjBlbjFBN2hfUXBGcFJoYmZjTGx1SjhneWxYT1pOYncyeUN5UWpQbnpHWDdzUktSRDBDcVZkQkZqMDVyS3JSc0NjUC1vLVBrWW42eGF2NXJ6U2hRcW9vWnU0V1JBWFZ2SWZORlNSWDFEYw?oc=5">FBI's LA Field Office warns of ‘FaceStealer' cryptocurrency theft scheme - NBC Los Angeles</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-14 암호화폐 시장 123건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-25 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(27회), **연준**(12회), **관세**(12회), **의회**(6회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-11-25 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 48건 — 미국 의회 거래 1건, SEC 내부자 거래 17건, 트럼프 정책 15건, 중앙은행 15건
 - 1. Congress Trade: Representative Harriet M. Hageman Just Disclosed New Stock Trades - Quiver Quantitative Congress Trade: Representative Harriet M.
 
 ## 1. 미국 의회 거래 동향

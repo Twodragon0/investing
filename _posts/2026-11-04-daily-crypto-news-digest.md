@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-04 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxObEpvZTJESmtzMW9TVV9TSTl2bkhjdGRYLWh0SF9PaW5nYlpZTVZqRXVTN1NybEg0VGU4ZGRfYjR0aWpZdjdtQS1VN21SSW5KWlZpT2dQS0YybmptdGlNTEVnclY1dmgwUlc1VGE2cWcyQkRVaGFVSlp4WVlvVTFVUzZGMA?oc=5">해커, BTCPay 서버 결함을 악용해 암호화폐 훔쳐 - Infosecurity Magazine</a> <span class="p0-desc">해커들은 BTCPay 서버 결함을 악용하여 암호화폐를 훔칩니다. Infosecurity Magazine</span></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBNbXJ4bVF3dTZWUlNXdHRhaS1haHA0TmVPcG9jZ1ZrZ2RRalYwMjVlQ2FxSUo4TmNXRXBLWk5YRmNtUFlJdTVXdWZzVS1fVGY0R0xITXl0ZDFkS2NLVkR3cTE2QkFnZEpVZnA4bFZTMXYxVHhpbTA0VFY4RndPSmc?oc=5">역사상 최대 규모의 암호화폐 절도 배후에 있는 김정은 해커 - El Mundo America</a> <span class="p0-desc">역사상 최대 규모의 암호화폐 절도 배후에 있는 김정은 해커들 El Mundo America</span></li><li><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE1aam5NNHV5RHJHZHlKRktBWjE4dFo0YWZBVEtmdmtuMmFtbzhnXzRkbUZldjBUamM0MmVGTXhab1IxWE41dUlORkNBSE56b1VWM2dfa0pMTG1EQ3hSekVNbk5lUQ?oc=5">비트코인 ETF, 美 중간선거·해킹 악재에 2거래일간 10억 달러 유출 - 더구루</a> <span class="p0-desc">비트코인 ETF, 美 중간선거·해킹 악재에 2거래일간 10억 달러 유출 더구루</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **118건** 수집
 - 주요 테마: 🏦 거래소, 🟠 비트코인, 🔴 보안/해킹
+- 2026-11-04 암호화폐 핵심 뉴스: 암호화폐 채굴 위해 미국 대학 컴퓨터 해킹 혐의로 기소된 캐나다 남성 - 13WHAM-TV. 총 118건 분석, 핵심 테마는 거래소, 비트코인, 보안/해킹입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

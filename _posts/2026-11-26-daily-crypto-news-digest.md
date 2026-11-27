@@ -42,9 +42,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-26 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: UK Hacker Sentenced to Six Years for Role in $11.6 Million Cryptocurrency Theft Scheme - Homeland. - 118건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, 전망 주목</li><li>🏦 <strong>거래소</strong>: 29건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, ETF 이슈 부각</li><li>🟣 <strong>DeFi</strong>: 채굴 이슈 부각</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOWEt1elBzVzh5eWFTSWwtN1A5em1QdGhxaTBwTjFHUzR4S011cjd3Z1IzN0xfNDZGdUNvay15U2RSOVB2WjZqX1lLOEVSRkJnb2lUMTM2Z3RDZEJ4LV9CLUk3ay1oYko3MDhDd0F5QUdjSmRQMmNsV3drTkdrRXhNdXZzX1lLM0x0YzgtdC1MRmNsR2FFZlYtcTdzWlh5WExTQjlCRk9qa3BrU01WMktockw5dldHRW5sWjVPenhXOExLVWRiQnc3WFpmM194cWc0eU5XZVh1OURKRFFw?oc=5">UK Hacker Sentenced to Six Years for Role in $11.6 Million Cryptocurrency Theft Scheme - Homeland Security Today</a></li><li><a href="https://bitcoinmagazine.com/news/bithumb-hack-exposed-passports-wallet-addresses">Bithumb Says October Hack Exposed Passports, Bank Accounts and Wallet Addresses</a></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-26 암호화폐 시장 118건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

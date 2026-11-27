@@ -33,51 +33,13 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-27 - 주식 뉴스 요약 이�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장 긴급: “삼성전자·SK하이닉스만의 문제 아니었다”…美마이크론 이틀 새 15% 폭락, 반도체 무슨 일? - 데일리25 - 156건 분석</strong><ul><li>📈 <strong>가격/시장</strong>: 삼성전자, 코스피 이슈 부각</li><li>📊 <strong>매크로/금리</strong>: 환율, 금리 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 삼성전자 관련 15건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 관세 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9sZmVycFMwR3hWa3hNalF4VHJLa3I2X2dvVUF4U2ZOdkJGVUpGRXphN2FDZ0tEeUdHR2gwdU5fNnNrV3c0RXk0ZElEZFh5VGx4MzJXOVE5ZmJ1akFEWjZwb3AtdnhfdUkyT2hKaA?oc=5">“삼성전자·SK하이닉스만의 문제 아니었다”…美마이크론 이틀 새 15% 폭락, 반도체 무슨 일? - 데일리25</a> <span class="p0-desc">“삼성전자·SK하이닉스만의 문제 아니었다”…美마이크론 이틀 새 15% 폭락, 반도체 무슨 일? 데일리25</span></li><li><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE5jT2w4OHN1Q0w2QnBUUUhtekw1aFlmb3pOMjBDZWZCVFRkekY2dVBrQ0lJX2pZdHZTR29ZcnJ4YVllWkZTMTQ2THUtXzlxeVZPSkRwczdGZ252dnpaY01hTHJjWWtqc2ZBa3VkeQ?oc=5">심층분석] 엔비디아 반락에 삼성전자·SK하이닉스 급락…2028년 메모리 전망도 갈렸다 - 굿모닝경제</a> <span class="p0-desc">[심층분석] 엔비디아 반락에 삼성전자·SK하이닉스 급락…2028년 메모리 전망도 갈렸다 굿모닝경제</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: “삼성전자·SK하이닉스만의 문제 아니었다”…美마이크론 이틀 새 15% 폭락, 반도체 무슨 일? - 데일리25 
-외 P0 긴급 이슈 1건이 추가 감지되었습니다. 총 156건의 뉴스 중 P1 주요 이슈도 20건 확인됩니다.
-
-### 테마별 동향
-
-- **📈 가격/시장** (44건): 삼성전자, 코스피, 코스닥 시장 흐름이 활발하며, 주요 가격대에서의 매물 분포를 살펴보세요.
-- **📊 매크로/금리** (34건): 환율, 금리, 달러 매크로 변수 (34건) — 금리·환율 방향성이 자산 배분에 핵심 변수입니다.
-- **🤖 AI/기술** (15건): 반도체, 삼성전자, 하이닉스 기술 이슈 (15건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- “삼성전자·SK하이닉스만의 문제 아니었다”…美마이크론 이틀 새 15% 폭락, 반도체 무슨 일? - 데일리25
-- 심층분석] 엔비디아 반락에 삼성전자·SK하이닉스 급락…2028년 메모리 전망도 갈렸다 - 굿모닝경제
-
-### 주요 이슈
-
-- 연준은 채권 투자자에게 강력한 인플레이션 경고를 보냅니다.
-- "스페이스X, 우주 데이터센터 '스타마인드'…2028년 실적 기여"-NH
-- U.S. tariff-hike threats pile pressure on partners to sign trade deals
-- 외 17건
-
-### 투자자 체크포인트
-
-- 한국 기사 68건, 글로벌 기사 88건 수집
-- 한국 지수: KOSPI 4,699.78(-0.85%), KOSDAQ 674.30(+1.95%), USD/KRW 1,342.88(-0.03%)
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">44건</span></div>
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:77%"></div></div><span class="theme-count">34건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:34%"></div></div><span class="theme-count">15건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:25%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🟠 비트코인</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">4건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-<picture><source srcset="{{ '/assets/images/generated/market-snapshot-2026-11-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/market-snapshot-2026-11-27.png' | relative_url }}" alt="market-snapshot" loading="lazy" decoding="async"></picture>
-
-
----
+- KOSPI 4,699.78 (-0.85%): 소폭 조정 중이나 기술적 지지선 부근에서 반등 가능성이 있습니다.
+- KOSDAQ 674.30 (+1.95%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
+- 2026-11-27 주식 시장에서 156건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,699.78(-0.85%), KOSDAQ 674.30(+1.95%), USD/KRW 1,342.88(-0.03%).
+- *연준은 채권 투자자 TheStreet에게 강력한 인플레이션 경고를 보냅니다.*
 
 ## 테마별 주요 뉴스
 

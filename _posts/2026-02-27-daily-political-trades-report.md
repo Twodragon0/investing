@@ -22,9 +22,11 @@ permalink: "/political-trades/2026/02/27/daily-political-trades-report/"
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **재산**(8회), **이재명**(4회), **insider**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
 - 한국 정치인 관련 4건의 재산/거래 소식이 수집되었습니다. 공직자 재산 공개 시즌에는 부동산·주식 관련 정책 방향의 힌트를 얻을 수 있으며, 국내 규제 환경 변화에 대한 선제적 대응이 필요합니다.
+- 미국 정치인 거래 동향과 주요 정책 변동을 분석한 일일 리포트입니다.
 - 1. Penske Automotive (PAG) EVP receives 4,994-share stock award with vesting - Stock Titan Penske Automotive (PAG) EVP, 베스팅 조건부 주식 4,994주 수령 - Stock Titan
 
 ## SEC 내부자 거래 (Form 4)

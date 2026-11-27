@@ -29,49 +29,14 @@ image_alt: "소셜 미디어 동향 - 2026-11-27 - 소셜 미디어 뉴스 요�
 </div>
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 소셜 긴급: 연준 - 41건 분석</strong><ul><li>📊 <strong>매크로/금리</strong>: 연준, 인플레이션 관련 22건</li><li>🏛️ <strong>정치/정책</strong>: 트럼프, 이재명 이슈 부각</li><li>🤖 <strong>AI/기술</strong>: 반도체, 호황 동향 주시</li><li>📈 <strong>가격/시장</strong>: 기준금리, 인상 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNVW43SFhnN0VQZkdTa1l2a3BOVWRmZUdsVzVRN29JNWM5TDdLZElJMF9weE5ub1ZuVW5RTEJ3Sl9CNVZ2UUd4dXNJMURwamF1dTBhOWNjR2NTYTduMEVGanRmc2EyWXAwdXd0cVBKZF9hR0EwQzNTMzA4Z3VmWnh4VmR0T0JxN1c3aXp0TDA0X1NXMFZWeWpaMg?oc=5">Gold Hits Near 15-Month Lows, Silver Crashes Below $40 Amid Fed Hike Fears – All Eyes On The Fed Rate Decision</a></li><li><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxNcDBqRmN5SFdFVVdjcWh6UTJyNlFkQVZ2THhqSVcwRmlIUE9wcWk0bWZ3aDlBdXJqek81ZGZnZ1NJZVlQM0o1c1d3SXE4X1ZiRC1VT0tOY1g1UVhxSk1hQTBhSVhvN0tkaDlWUjJxQlFJdF9hNloyOXRqVnY2bW1sdDBLNnZJN2ZhcThVcHR4dDYzVXU0N2UtSzQ3N0hTOVBsdFJuTDVsN1JXQnlvSjBmVFhGcGFFLU9EMTBQVEllVHR3MVdUejE5OFdBZVkteFNlQ0lLQmpJMG1TamZGX2JQdElRUEhadHJhVXczZm5veVhnM0tVYnBlTg?oc=5">연준, 12월 요금 결정에 앞서 베이지북 출시</a> <span class="p0-desc">연준, 12월 요금 결정에 앞서 베이지북 출시 kare11.com</span></li><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPamtaX2kzd0lTa3JMY2wwem9jcWtwY2VFbTFxYkdoc1pDY3FCS3p4S2lQUXFBUXdMLTFXOE9SMmtQSDhqMVJqc1pMckNTLXl1NmxKNF9ZbFc3NnJLcWdBT2tkbi1UbDJEWWFOUnE5VXN1NjdwWFc5X0Y4dGFib1ktdFh2QUxjOXBWMThBOVpPZHgyZHh1UnNoLWIxd0J0Qi01X0Zab08yLW9Ga1h1?oc=5">10월 PCE 보고서는 12월 연준 금리 결정 이전에 최종 인플레이션 테스트를 설정합니다 - TipRanks</a> <span class="p0-desc">10월 PCE 보고서는 12월 연준 금리 결정 이전에 최종 인플레이션 테스트를 설정합니다. TipRanks</span></li></ul></div>
+
 ## 전체 뉴스 요약
 
-**긴급**: Gold Hits Near 15-Month Lows, Silver Crashes Below $40 Amid Fed Hike Fears – All Eyes On The Fed. 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 41건의 뉴스 중 P1 주요 이슈도 1건 확인됩니다.
+오늘 수집된 총 41건 중 텔레그램 0건, 소셜 0건, 정치·경제 41건으로 다양한 이슈가 주요 화제입니다.
 
-### 테마별 동향
-
-- **📊 매크로/금리** (22건): 연준, 인플레이션, 금리 거시경제 지표 발표에 따른 시장 변동성 확대에 대비하세요.
-- **🏛️ 정치/정책** (11건): 트럼프, 이재명, 대통령 정치적 변수가 투자 심리에 작용하고 있어, 관련 섹터를 점검하세요.
-- **🤖 AI/기술** (5건): 반도체, 호황, 기준금리 기술 이슈 (5건) — 반도체·AI 섹터 실적 영향과 밸류에이션을 점검하세요.
-
-**리스크 수준 [ELEVATED]**: 주요 리스크 이벤트가 확인되었습니다. 시장 동향을 면밀히 주시하세요.
-
-### 긴급 이슈
-
-- Gold Hits Near 15-Month Lows, Silver Crashes Below $40 Amid Fed Hike Fears – All Eyes On The Fed Rat
-- 연준, 12월 요금 결정에 앞서 베이지북 출시
-- 10월 PCE 보고서는 12월 연준 금리 결정 이전에 최종 인플레이션 테스트를 설정합니다 - TipRanks
-
-### 주요 이슈
-
-- 아시아 주식 시장 랠리 트럼프의 새로운 관세 제안이 우려했던 것보다 피해가 적다는 것이 입증됨 - Arise News
-
-### 투자자 체크포인트
-
-- 정치·경제 41건
-
-
-<div class="theme-distribution">
-<div class="theme-row"><span class="theme-label">📊 매크로/금리</span><div class="bar-track"><div class="bar-fill-orange bar-fill" style="width:100%"></div></div><span class="theme-count">22건</span></div>
-<div class="theme-row"><span class="theme-label">🏛️ 정치/정책</span><div class="bar-track"><div class="bar-fill-blue bar-fill" style="width:50%"></div></div><span class="theme-count">11건</span></div>
-<div class="theme-row"><span class="theme-label">🤖 AI/기술</span><div class="bar-track"><div class="bar-fill-purple bar-fill" style="width:23%"></div></div><span class="theme-count">5건</span></div>
-<div class="theme-row"><span class="theme-label">📈 가격/시장</span><div class="bar-track"><div class="bar-fill-green bar-fill" style="width:86%"></div></div><span class="theme-count">19건</span></div>
-<div class="theme-row"><span class="theme-label">🔵 규제/정책</span><div class="bar-track"><div class="bar-fill-red bar-fill" style="width:9%"></div></div><span class="theme-count">2건</span></div>
-</div>
-
-*기사는 여러 테마에 중복 집계될 수 있음*
-
-
----
-
-<picture><source srcset="{{ '/assets/images/generated/news-briefing-social-2026-11-27.webp' | relative_url }}" type="image/webp"><img src="{{ '/assets/images/generated/news-briefing-social-2026-11-27.png' | relative_url }}" alt="news-briefing" loading="lazy" decoding="async"></picture>
-
+**핵심 신호 정리**
+- 주요 테마: 다양한 이슈
+- 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향
 
