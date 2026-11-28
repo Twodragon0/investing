@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-26 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **관세**(26회), **트럼프**(22회), **SEC(미국증권거래위원회)**(8회), **연준**(6회), **의회**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-11-26 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 55건 — 미국 의회 거래 2건, SEC 내부자 거래 22건, 트럼프 정책 18건, 중앙은행 13건
 - 1. Congress Trade: Representative Robert Onder Just Disclosed New Stock Trades - Quiver Quantitative
 
 ## 1. 미국 의회 거래 동향

@@ -42,10 +42,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-27 - 암호화폐 뉴스 요
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 암호화폐 긴급: 비트코인·이더리움·XRP 핵심 지지선 붕괴 위기…추가 폭락 공포 확산 - 115건 분석</strong><ul><li>🟠 <strong>비트코인</strong>: 비트코인, BTC 주목</li><li>🏦 <strong>거래소</strong>: 28건 수집</li><li>📈 <strong>가격/시장</strong>: 달러, BTC 동향 주시</li><li>🟣 <strong>DeFi</strong>: 디파이 동향 주시</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeGlxLTdnamZvUGtCdElMeDNTVmtISHZ4eVFsVkdURlR5a0NMcmdzOXB4dTg3UktZTGdCVXYzNWxBNTZiLS14NFdqRmh0SjBWLUtJMWRMQ1I3NzZLeDFpNTZxaWlBdnNkVVA5QWl2Z3VSQ2F2cy1mLUdaT0JvTGtOdS1YYTdXOE1a?oc=5">비트코인·이더리움·XRP 핵심 지지선 붕괴 위기…추가 폭락 공포 확산</a> <span class="p0-desc">비트코인·이더리움·XRP 핵심 지지선 붕괴 위기…추가 폭락 공포 확산 글로벌이코노믹</span></li><li><a href="https://decrypt.co/384027/uk-regulator-cites-binance-hack-as-it-plans-tougher-defi-rules-than-us-and-eu-report">영국 규제 당국은 미국과 EU보다 더 엄격한 디파이 규칙을 계획하면서 바이낸스 해킹을 인용합니다: 보고서</a> <span class="p0-desc">FCA는 디파이 플랫폼의 승인을 요구하고 규제 대상 거래소가 영국 소매 거래를 해당 플랫폼으로 라우팅하지 못하도록 할 계획입니다.</span></li><li><a href="https://cointelegraph.com/news/binance-completes-withdrawal-recovery-four-weeks-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound">바이낸스 63억 달러 해킹 후 4주 만에 출금 복구 완료</a> <span class="p0-desc">이 발표는 기록적인 암호화폐 도난 이후 바이낸스가 비트코인 인출을 복원한 11월 1일에 시작된 단계적 인출 복구를 마무리합니다.</span></li></ul></div>
 
+
 ## 전체 뉴스 요약
 
 - 총 **115건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-27 암호화폐 핵심 뉴스: 독점: StanChart의 암호화폐 회사인 Zodia Custody가 보안 위반으로 피해를 입었고 일부 클라이언트 데이터가 노출되었습니다.. 총 115건 분석, 핵심 테마는 비트코인, 거래소, 가격/시장입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

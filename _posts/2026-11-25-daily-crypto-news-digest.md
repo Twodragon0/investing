@@ -43,9 +43,11 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-25 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxORDVNMXVSLXVnN2RqNTM3Q09KcFk4MnhKNG9pN2FPd1ZJd2JURFNMRWRCMllWYm9Ia1dZYXh6bmhrWFdkM2k2WFNzNndJQXI5aDdoTXJXdzNwUGxUQzJhQWxwQ1JIcnRwaFVyVXJmbmV2STNnWGJPUldNelNRZmZyV1gweDFVeW1BVVhJMTV5WEtreVJnQ2xrQ0V2VzRfZUtHVWlsQzJja01fYUN1ZEw1ZUJwQU5zWExINXZqSGJGdEpYNjRR?oc=5">US files action to recover over $1 billion in cryptocurrency stolen in Binance hack</a></li><li><a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTFBqTFJza1BWUmlLMVg2N0Z2bW0zaS1DdnBYaXZHbmxRUW5oNHpvZnl3QVp6bkVsaWJ5aGRRVWZNaWtGTFQ2V3VVVzJ3?oc=5">도지코인 올해 67.5% 폭락…0.05달러마저 무너지나 - 코인리더스</a> <span class="p0-desc">도지코인 올해 67.5% 폭락…0.05달러마저 무너지나 코인리더스</span></li><li><a href="https://decrypt.co/383930/coldcard-bitcoin-exploit-how-hidden-flaw-survived-years-audits">Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits</a></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 📈 가격/시장
+- 2026-11-25 암호화폐 시장 120건 분석 — 핵심 테마: 비트코인, 거래소, 가격/시장
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

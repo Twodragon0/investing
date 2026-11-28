@@ -31,12 +31,13 @@ image_alt: "소셜 미디어 동향 - 2026-11-26 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxPdlktRlRYb3BCcmFxRDFSQ25rUGExS1d1ZW9OQmZ6LVE2VG1RdzJOZzlxd0poV29xUTEtVnY0SXVIQVpTbWlGUHNQY1pvVEhBenczN2M0RVpJM2QzUmNEZFZoSVZRakpacmd6MjhFRzFfSFFKWUhTM0F4N3pFT01JaVk1aV9MSFUyM0s0WGcyYVQ3ZnZ4M2tDaG1Vd1EtakJwTW1QVDlUVWRVQ3g4bEJiZTlQRUdadi02RGQ1ZWNWSGVVV1ItVXVVSWM3LV84YVc4VWU5ZFRSbVZnQUY4RWNrZGNIRGI3ZFRQZFZzaEhXNElIOHRWdHAyTll1OA?oc=5">금은 15개월 최저치 부근에 도달, 은은 연준 인상 우려 속에서 $40 이하로 하락 – 모든 시선은 연준 금리 결정에 쏠려 있습니다 - TradingView</a> <span class="p0-desc">금은 15개월 최저치 근처에 도달하고 은은 연준 인상 우려 속에 $40 이하로 하락 – 모든 시선은 연준 금리 결정에 쏠려 있습니다 TradingView</span></li><li><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxNcDBqRmN5SFdFVVdjcWh6UTJyNlFkQVZ2THhqSVcwRmlIUE9wcWk0bWZ3aDlBdXJqek81ZGZnZ1NJZVlQM0o1c1d3SXE4X1ZiRC1VT0tOY1g1UVhxSk1hQTBhSVhvN0tkaDlWUjJxQlFJdF9hNloyOXRqVnY2bW1sdDBLNnZJN2ZhcThVcHR4dDYzVXU0N2UtSzQ3N0hTOVBsdFJuTDVsN1JXQnlvSjBmVFhGcGFFLU9EMTBQVEllVHR3MVdUejE5OFdBZVkteFNlQ0lLQmpJMG1TamZGX2JQdElRUEhadHJhVXczZm5veVhnM0tVYnBlTg?oc=5">연준, 12월 요금 결정에 앞서 베이지북 출시</a> <span class="p0-desc">연준, 12월 요금 결정에 앞서 베이지북 출시 kare11.com</span></li><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPamtaX2kzd0lTa3JMY2wwem9jcWtwY2VFbTFxYkdoc1pDY3FCS3p4S2lQUXFBUXdMLTFXOE9SMmtQSDhqMVJqc1pMckNTLXl1NmxKNF9ZbFc3NnJLcWdBT2tkbi1UbDJEWWFOUnE5VXN1NjdwWFc5X0Y4dGFib1ktdFh2QUxjOXBWMThBOVpPZHgyZHh1UnNoLWIxd0J0Qi01X0Zab08yLW9Ga1h1?oc=5">10월 PCE 보고서는 12월 연준 금리 결정 이전에 최종 인플레이션 테스트를 설정합니다 - TipRanks</a> <span class="p0-desc">10월 PCE 보고서는 12월 연준 금리 결정 이전에 최종 인플레이션 테스트를 설정합니다. TipRanks</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
-오늘 수집된 총 39건 중 텔레그램 0건, 소셜 0건, 정치·경제 39건으로 주요 이슈를 정리했습니다.
+오늘 수집된 총 39건 중 텔레그램 0건, 소셜 0건, 정치·경제 39건으로 다양한 이슈가 주요 화제입니다.
 
 **핵심 신호 정리**
-- 주요 테마: 주요 이슈
+- 주요 테마: 다양한 이슈
 - 긴급 알림 3건에 대한 선별 모니터링
 
 ## 정치·경제 동향

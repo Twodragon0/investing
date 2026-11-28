@@ -43,10 +43,12 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-24 - 암호화폐 뉴스 요
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://decrypt.co/383844/north-korea-247-million-binance-hack-bitcoin-mixers">북한, 비트코인 믹서를 통해 2억 4700만 달러의 바이낸스 해킹 전리품 이동</a> <span class="p0-desc">64억 달러 규모의 해킹이 발생한 지 약 한 달 후 Elliptic은 거의 모든 코인조인 혼합이 WHO "이와 같은 자금 차단을 거부하는" 한 사람에 의해 조정되었다고 말했습니다.</span></li><li><a href="https://www.theblock.co/news/regulation/2026-11-23-doj-1-17-billion-usdc-binance-hack-circle-replacement-tokens-445398">DOJ은 바이낸스 해킹과 관련하여 USDC에서 11억 7천만 달러를 찾습니다. Circle은 대체 토큰을 발행할 수 있습니다.</a> <span class="p0-desc">미국 법무부는 10월 29일 바이낸스 해킹과 관련된 USDC에 약 11억 7천만 달러를 회수하려고 합니다.</span></li></ul></div>
 
 
+
 ## 전체 뉴스 요약
 
 - 총 **91건** 수집
 - 주요 테마: 🟠 비트코인, 🏦 거래소, 🤖 AI/기술
+- 2026-11-24 암호화폐 핵심 뉴스: Kalshi, 뉴욕 도박법 분쟁에서 임시 승리 확보. 총 91건 분석, 핵심 테마는 비트코인, 거래소, AI/기술입니다
 - *기사는 여러 테마에 중복 집계될 수 있음*
 
 ## 테마별 주요 뉴스

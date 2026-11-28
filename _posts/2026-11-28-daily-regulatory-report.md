@@ -29,36 +29,6 @@ image_alt: "글로벌 규제 동향 리포트 - 2026-11-28 - 규제 뉴스 요�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 규제 긴급: 영국 규제 당국은 미국과 EU보다 더 엄격한 디파이 규칙을 계획하면서 바이낸스 해킹을 인용합니다: 보고서 - 20건 분석</strong><ul><li>🔵 <strong>규제/정책</strong>: 13건 수집</li><li>🟣 <strong>DeFi</strong>: 디파이 동향 주시</li><li>🏦 <strong>거래소</strong>: 8건 수집</li><li>🔴 <strong>보안/해킹</strong>: 3건 수집</li></ul></div>
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNNTd0TzFGbUVxSGRYb0drbHZCU1B5U2R5Z2lqdE5VRWNnOUtuYk1nSWZ2NUw0SGZ1OGp3dFFwUElLcWJ4U0RBMTZzTFJ4d1phZnhCMzJpeXBFZDR6YUR3QzBXNXVoVUk1OHFJYmJVamNydjhFdlZqMFduNUl6X0xMVXlxbUtrZkhlSkloeV9oMER1Ry05a0xWTUtfQU8?oc=5">영국 규제 당국은 미국과 EU보다 더 엄격한 디파이 규칙을 계획하면서 바이낸스 해킹을 인용합니다: 보고서</a> <span class="p0-desc">영국 규제 당국은 미국과 EU보다 더 엄격한 디파이 규칙을 계획하면서 바이낸스 해킹을 인용합니다: 보고서. 규제기관, 인용 관련 보도.</span></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxOX1F1Umw5ZHlNRE5vRnRPUkE4aGZST2NiS2NOMGZCMHRvNFkzNzlZeHBQZERMVmZQb21ZWmxydXVYZ0MyY29IX3M1Zy0weUMwWVNnRFlVLW15bW9DTUNIaExrWlFPNHhfUDdjTVNHM29XcGhYTDF5RzRrRTFCV0hvTEt0MDA0Zmd2UVZWcVdiamVXOFUweEUw?oc=5">영국 FCA, 63억 달러 규모의 바이낸스 해킹 이후 더욱 엄격한 디파이 규칙 추진 - Crypto News</a> <span class="p0-desc">영국 FCA는 63억 달러 규모의 바이낸스 해킹에 따라 더 엄격한 디파이 규칙을 추진합니다 - Crypto News. ($63억)</span></li><li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOZElDVDU3Q2ZGaXFCOWpSVkFrNkMwSjRScXpDeUk2WnpiVWtpNEd0R0RjNjZEelNOZUlyR29TVklKUUliNmNIbmNaSXp1N1pKZWJsVDBlODlxQ2J4d25tZEVfOEdBNDV4WGphLVkxSGFvQ2ZaS1NaWHZnbFljOEpvQVd6MnlXZGFkUmNtV3hselpMOS1zLVN2V0hMbEl1Vl9UTmZoMW1pSk1JcFdvRTFwYUY2Qk9BVEMxZDAyMGF3WHdVQmFJ?oc=5">바이낸스 해킹은 FCA 계획이 더욱 엄격해짐에 따라 자금 세탁 위험을 강조합니다. 디파이 규칙 - 금융 거물</a> <span class="p0-desc">바이낸스 해킹은 FCA 계획이 더욱 엄격해짐에 따라 자금 세탁 위험을 강조합니다. 디파이 규칙 - 금융 거물. FCA, 바이낸스 관련 보도.</span></li></ul></div>
 
-## 전체 뉴스 요약
-
-**긴급**: 영국 규제 당국은 미국과 EU보다 더 엄격한 디파이 규칙을 계획하면서 바이낸스 해킹을 인용합니다: 보고서 
-외 P0 긴급 이슈 2건이 추가 감지되었습니다. 총 20건의 뉴스 중 P1 주요 이슈도 3건 확인됩니다.
-
-### 테마별 동향
-
-- **🔵 규제/정책** (13건): esma, overhaul, plans 정책 변화가 감지되어, 관련 자산 규제 리스크를 재점검하세요.
-- **🟣 DeFi** (8건): 디파이, 소비자 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🏦 거래소** (8건): 지분 관련 보도가 이어지고 있어 관련 포지션 점검이 필요합니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- 영국 규제 당국은 미국과 EU보다 더 엄격한 디파이 규칙을 계획하면서 바이낸스 해킹을 인용합니다: 보고서
-- 영국 FCA, 63억 달러 규모의 바이낸스 해킹 이후 더욱 엄격한 디파이 규칙 추진 - Crypto News
-- 바이낸스 해킹은 FCA 계획이 더욱 엄격해짐에 따라 자금 세탁 위험을 강조합니다. 디파이 규칙 - 금융 거물
-
-### 주요 이슈
-
-- 코인거래소 규제 촘촘해진 디지털자산법…관건은 시행령 - 지디넷코리아
-- 거래소 지분 규제 고수한 금융당국… 글로벌 경쟁력은 뒷전?
-- "기업 성장 사다리 걷어차는 규제"…與野서 터져 나온 '거래소 지분 제한' 위헌론
-
-### 투자자 체크포인트
-
-- **주요 지역**: 유럽 12건, 한국 5건, 미국 2건
-
-
 ## 핵심 요약
 - **총 수집 건수**: 20건
 - **유럽**: 12건

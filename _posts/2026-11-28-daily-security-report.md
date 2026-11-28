@@ -16,29 +16,6 @@ image_alt: "블록체인 보안 리포트 - 2026-11-28 - 보안 뉴스 요약 �
 
 블록체인 보안 14건 분석. 주목 사건: **[Security] Japan’s crypto security group taps SEAL to speed **.
 
-## 전체 뉴스 요약
-
-**긴급**: [Security] Japan’s crypto security group taps SEAL to speed up hack response 
-외 P0 긴급 이슈 10건이 추가 감지되었습니다. 총 14건의 뉴스 중 긴급 이슈를 중심으로 시장 움직임을 분석합니다.
-
-### 테마별 동향
-
-- **🔴 보안/해킹** (14건): $6.3B 보안 사고가 보고되어, 관련 프로토콜·거래소의 대응을 주시하세요.
-- **🟣 DeFi** (7건): exploit, compromised, bridge 탈중앙 금융 이슈가 부각되며 유동성 풀 리밸런싱 여부에 주목하세요.
-- **🏦 거래소** (3건): $6.3B 흐름이 두드러지며, 추세 전환 신호를 주시할 구간입니다.
-
-**리스크 수준 [CRITICAL]**: 시장 긴급 상황이 감지되었습니다. 포트폴리오 점검을 권고합니다.
-
-### 긴급 이슈
-
-- [Security] Japan’s crypto security group taps SEAL to speed up hack response
-- [보안] 바이낸스, 63억 달러 해킹 후 4주 만에 출금 복구 완료
-- [보안] 영국 규제 기관은 63억 달러의 바이낸스 해킹을 인용하여 더 엄격한 디파이 규칙을 계획합니다: 보고서
-
-### 투자자 체크포인트
-
-- 보안 사건 14건, 보안 뉴스 0건
-
 ## 핵심 요약
 
 - **보안 사고/뉴스**: 총 14건

@@ -23,8 +23,10 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-12 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **트럼프**(12회), **연준**(12회), **관세**(8회), **의회**(4회), **SEC(미국증권거래위원회)**(2회)</div>
 
 
+
 ## 전체 뉴스 요약
 
+- 2026-11-12 미국 의회·SEC·행정부 정치인 거래 및 정책 이벤트 — 총 41건 — SEC 내부자 거래 20건, 트럼프 정책 10건, 중앙은행 11건
 - 1. First Step Act implementation tweaks get closer to the law’s intent to send more people home earlier - Reason Foundation
 
 ## 1. 트럼프 행정명령/정책
