@@ -329,7 +329,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-28 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/japans-crypto-security-group-taps-seal-to-speed-up-hack-response?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Japan’s crypto security group taps SEAL to speed up hack response</a>
-<p class="news-desc">The partnership comes weeks after a third-party data breach exposed hundreds of thousands of customer email addresses belonging to two Japanese crypto exchanges.</p>
+<p class="news-desc">일본의 암호화폐 사이버 보안 그룹인 JPCrypto-ISAC는 사이버 공격에 대한 대응을 강화하기 위해 Security Alliance와 파트너십을 맺었습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>

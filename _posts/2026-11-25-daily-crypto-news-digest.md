@@ -222,7 +222,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383906/cftc-new-crypto-reserves-guidance-actually-allows-what-it-doesnt" class="news-title" target="_blank" rel="noopener noreferrer">What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t</a>
-<p class="news-desc">Staff guidance lets swap venues and clearinghouses count Bitcoin, Ethereum, and stablecoins toward their 12-month operating-cost buffer. Here's the catch.</p>
+<p class="news-desc">CFTC은 거래 플랫폼이 비트코인, 이더리움 및 스테이블코인 보유 자산을 계산하는 방법에 대한 새로운 지침을 발표했습니다. 이것이 의미하는 바는 다음과 같습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>
@@ -246,7 +246,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://cointelegraph.com/news/coldcard-how-security-reviews-missed-bitcoin-wallet-flaw-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound" class="news-title" target="_blank" rel="noopener noreferrer">Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years</a>
-<p class="news-desc">Coldcard maker Coinkite explained why years of security checks failed to catch the flaw and said it has yet to decide on compensation for affected customers.</p>
+<p class="news-desc">Coinkite는 여러 보안 검토에도 불구하고 비트코인 지갑 결함이 5년 넘게 발견되지 않은 이유를 밝힙니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Cointelegraph</span>
 </div>
 </div>
@@ -299,7 +299,7 @@ image_alt: "암호화폐 뉴스 브리핑 - 2026-11-25 - 암호화폐 뉴스 요
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://decrypt.co/383930/coldcard-bitcoin-exploit-how-hidden-flaw-survived-years-audits" class="news-title" target="_blank" rel="noopener noreferrer">Coldcard Bitcoin Exploit, Revisited: How a Hidden Flaw Survived Years of Audits</a>
-<p class="news-desc">Coinkite’s postmortem reveals a software random-number generator shipped in place of the hardware one for over five years, slipping past at least 15 reviews.</p>
+<p class="news-desc">공격자가 손상된 Coldcard 하드웨어 지갑에서 비트코인을 빼낸 지 4개월 후, 장치 제조업체는 자세한 부검을 발표했습니다.</p>
 <span class="source-tag" data-source-type="crypto-media">Decrypt</span>
 </div>
 </div>

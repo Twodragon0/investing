@@ -267,7 +267,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-27 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-high">HIGH</span>
 <a href="https://www.cnbc.com/2026/11/26/nvidias-volatile-swings-expose-risks-of-single-stock-etfs.html" class="news-title" target="_blank" rel="noopener noreferrer">Buyer beware? Nvidia's volatile swings expose risks of single-stock ETFs</a>
-<p class="news-desc">ETF Action founding partner Mike Akins and GraniteShares CEO Will Rhind react to Nvidia's sharp losses and latest comeback.</p>
+<p class="news-desc">ETF 액션 창립 파트너 Mike Akins 및 GraniteShares CEO Rhind는 엔비디아의 급격한 손실과 최근 복귀에 반응할 것입니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>

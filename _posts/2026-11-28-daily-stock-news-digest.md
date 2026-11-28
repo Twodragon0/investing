@@ -275,7 +275,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/27/china-chip-stocks-beijing-market-support.html" class="news-title" target="_blank" rel="noopener noreferrer">Chinese chip stocks notch biggest ever one-day gains as Beijing signals broader market support</a>
-<p class="news-desc">Chinese stocks rebounded sharply after a rare intraday state media readout cheered investors as top policymakers pledged market liquidity support.</p>
+<p class="news-desc">중국 주식은 최고 정책 입안자들이 시장 유동성 지원을 약속함에 따라 드물게 관영 언론이 투자자들을 환호하는 보도를 한 후 급격히 반등했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
@@ -322,7 +322,7 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-28 - 주식 뉴스 요약 이�
 <div class="news-card-body">
 <span class="news-severity news-severity-med">MED</span>
 <a href="https://www.cnbc.com/2026/11/27/spacex-shares-musk-donations.html" class="news-title" target="_blank" rel="noopener noreferrer">SpaceX shares jump over 4% amid tech rally and after Musk says he will expand on Trump Account share donations</a>
-<p class="news-desc">SpaceX shares jumped in trading Friday after Elon Musk said on X that he would donate shares to American children every year.</p>
+<p class="news-desc">SpaceX 주식은 일론 머스크이 X에서 매년 미국 어린이들에게 주식을 기부하겠다고 말한 후 금요일 거래가 급등했습니다.</p>
 <span class="source-tag" data-source-type="finance-media">CNBC Top News</span>
 </div>
 </div>
