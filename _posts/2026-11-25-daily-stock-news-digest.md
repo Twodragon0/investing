@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-25 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBrSDcycC1qaURfNWJtWkktQml2MzhoMS10T0Z1aHNJQVBvWGxWMXZjb3Z0M0FlaXVOVVVMR3U3RFRwUUZuQldzTXBqbGNJejQwVFE0UnZxd1RtRmlZbG5WT1BfMGM2TXZzS2c?oc=5">코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 - 한국면세뉴스</a> <span class="p0-desc">코스피·코스닥 사이드카 올해 101회…2002년 제도 개편 이후 최다 한국면세뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBFRDZMTy1LeTZQelZYRFlFMHVPRER5bEVpVFhKMGlrV2RQWUlieGhyc19CS3lXY2s4SThuN2tZX3BwTkpzYnV3dWZpbmVoampROWwwQmRqRmI0bWEyTW1wTEhpVXZHdmg0bHhuc2hXcw?oc=5">삼성전자·SK하이닉스 6~7% 급락…전날 상승분 반납 - 진일보 | 전남일보</a> <span class="p0-desc">삼성전자·SK하이닉스 6~7% 급락…전날 상승분 반납 진일보 | 전남일보</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE0wbk5RSzN0OEZURnNaQi02N2UzMEkxYTV6dUxmenBXTjY2ME5HMHp1QWV6S1Mwa01VOTMxVFhSaHN1SG12OTRJcmVMcVVUeU1GYkhjdl96YkdBelZV?oc=5">특징주] 美 기술주 급락 여파.프리마켓서 삼성전자4%·SK하이닉스5%↓ - 뉴스핌</a> <span class="p0-desc">[특징주] 美 기술주 급락 여파.프리마켓서 삼성전자4%·SK하이닉스5%↓ 뉴스핌</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 4,763.20 (-5.47%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 642.59 (-3.89%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-11-25 주식 시장에서 185건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,763.20(-5.47%), KOSDAQ 642.59(-3.89%), USD/KRW 1,345.08(+0.22%).
 - *Dow soars 1,400 points; Nasdaq surges 6% in its best day since April 2025 as Jensen Huang returns to Nvidia CNBC*
 
 ## 테마별 주요 뉴스

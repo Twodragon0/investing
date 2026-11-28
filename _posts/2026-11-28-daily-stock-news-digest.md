@@ -38,7 +38,6 @@ image_alt: "주식 시장 뉴스 종합 - 2026-11-28 - 주식 뉴스 요약 이�
 
 - KOSPI 4,915.68 (+3.70%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 708.99 (+7.20%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-11-28 주식 시장에서 143건의 뉴스를 분석했습니다. 한국 시장: KOSPI 4,915.68(+3.70%), KOSDAQ 708.99(+7.20%), USD/KRW 1,343.53(-0.03%).
 - *Stock market today: Dow, S&P 500, Nasdaq end holiday week with gains as AI stocks rebound Yahoo Finance Stock Market.*
 
 ## 테마별 주요 뉴스

@@ -23,10 +23,8 @@ image_alt: "정치인 거래·정책 리포트 - 2026-11-17 - 정치인 거래 �
 <div class="alert-box alert-info"><strong>오늘의 핵심 키워드</strong>: **연준**(16회), **SEC(미국증권거래위원회)**(12회), **트럼프**(8회), **의회**(2회)</div>
 
 
-
 ## 전체 뉴스 요약
 
-- 2026-11-17 정치권 핵심 이슈: 마이크로소프트(MSFT), 내부자 3개월 7,476만달러 매도.목표가는 '상향' - 코인리더스. 미국 의회·SEC·행정부·중앙은행 거래·정책 이벤트 총 40건 (SEC 내부자 거래 22건, 트럼프 정책 10건, 중앙은행 8건)을 종합 정리합니다
 - 1. Former White House Adviser Says US Needs Congressional Approval to Buy More Bitcoin for Strategic Reserve - bloomingbit
 
 ## 1. 트럼프 행정명령/정책

@@ -34,12 +34,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-07-19 - 주식 뉴스 요약 이�
 <div class="alert-box alert-info"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> 주식 시장: 반도체, 선물, 구글 부각 156건 분석</strong><ul><li>🤖 <strong>AI/기술</strong>: 반도체, 선물 관련 14건</li><li>📈 <strong>가격/시장</strong>: 반도체 주목</li><li>🏦 <strong>거래소</strong>: IPO 주목</li><li>🏛️ <strong>정치/정책</strong>: 트럼프 동향 주시</li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 6,820.60 (-6.37%): 뚜렷한 하락세로 리스크 관리가 필요한 구간입니다. 프로그램 매도 및 외국인 이탈 규모를 확인하세요.
 - KOSDAQ 791.84 (-4.53%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-07-19 주식 시장에서 156건의 뉴스를 분석했습니다. 한국 시장: KOSPI 6,820.60(-6.37%), KOSDAQ 791.84(-4.53%), USD/KRW 1,487.46(+0.66%).
 - *일시적인 문제가 발생했습니다.*
 
 ## 테마별 주요 뉴스

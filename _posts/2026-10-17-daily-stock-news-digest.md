@@ -35,12 +35,10 @@ image_alt: "주식 시장 뉴스 종합 - 2026-10-17 - 주식 뉴스 요약 이�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9TbDA0cUxmZEJ4bjY0ZUxmU3hyS3BhbkVJUWR0WmFIOEt6N0RmTjhWdkJQWFFKZW9RQ0hNYk41eE9teFpIUE1ZLTBkZUppZU1mb1FyaHFEZWl4RWpBT3lnaTU0TkwzTDBuZXBUeUpmcm9DRzlSX1VB0gF3QVVfeXFMT1NsMDRxTGZkQnhuNjRlTGZTeHJLcGFuRUlRZHRaYUg4S3o3RGZOOFZ2QlBYUUplb1FDSE1iTjV4T214WkhQTVktMGRlSmllTWZvUXJocURlaXhFakFPeWdpNTROTDNMMG5lcFR5SmZyb0NHOVJfVUE?oc=5">표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락</a> <span class="p0-desc">[표] 10월 15일 매매동향.코스피 외국인 3조6350억원 순매도에 7%대 폭락 핀포인트뉴스</span></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHVktWSjVJemdPQXZUQTFzbXhkX0JfZkU5T0Z3bS1GSWRJdWVxUDlZMnpVcmVhSWJpdXJTQkZURlVkU3ZtVzJsOC1RYzJ0S2g3dXB6UGxod3k3dUnSAWBBVV95cUxQVm1CUjRhQmdVN1BfRVZUWmVUb2JKVXRrc3RYU0hoOUNWWEJjNmlhQnVzTFZ3NWk2RlI4MC1HeEYzTFFUVUhqcXo5eF93eW1kRjkzMTBZbjA1OVpMRTFPWlg?oc=5">KB증권 "삼성전자·SK하이닉스 급락 과도…실적은 오히려 개선"</a> <span class="p0-desc">(서울=연합뉴스) 정회인 기자 = KB증권은 16일 최근 삼성전자[005930] 와 SK하이닉스[000660] 의 주가 급락이 실적 악화보다는 국내...</span></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XZXZhOXVpMEU3ZjdESmdwNzZuTTB5RXVjU05LZ3F5QjdvaDZQelFtMTJ3QjFPUVZ1Ml8waVBCUktvRXlOOVRDeHFRVzlHZVhGN2pmLU5HUXIzdmR3?oc=5">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 - 뉴스핌</a> <span class="p0-desc">삼성·SK하이닉스 주가 폭락…中 반도체 추격에 '2029년 공급 과잉' 경고까지 뉴스핌</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
 - KOSPI 5,668.05 (+2.05%): 강한 상승세로 매수 심리가 우세합니다. 외국인·기관 순매수 여부를 확인할 필요가 있습니다.
 - KOSDAQ 794.78 (+4.46%). KOSDAQ이 KOSPI 대비 강세로, 중소형주·성장주 선호 심리가 반영됩니다.
-- 2026-10-17 주식 시장에서 196건의 뉴스를 분석했습니다. 한국 시장: KOSPI 5,668.05(+2.05%), KOSDAQ 794.78(+4.46%), USD/KRW 1,334.74(-0.48%).
 - *트레이더들이 변동성이 큰 한 주를 마무리하면서 미국 재무부 수익률이 흔들리고 있습니다.*
 
 ## 테마별 주요 뉴스

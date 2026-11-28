@@ -31,13 +31,12 @@ image_alt: "소셜 미디어 동향 - 2026-08-18 - 소셜 미디어 뉴스 요�
 <div class="alert-box alert-urgent"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="alert-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 긴급 알림</strong><ul><li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPc2tXbHUwdzBya09ZQ0wxMDFKcC10di1lanRUdWg4MVEwNDFrOWNaS2h6YVNBSHNmLTZCY3BpVGlGRm5jOHhYclRtaWxFVXJpUjlyaWRoUXo5WXlQQVotclNROUVraHVVNlEyclpLdW1DS2hRMHNVUHZld25KN25LRHhJYXdndENGYjVYNHVYV2dQQnJ3T2YycGUyYUExTGtYMDhTaWtCalNjUjRleWxBSm9jb1RrZDNJSmtRYlhMTnFBTjRCZ1hydUx3?oc=5">오늘의 주식시장: 유가 상승으로 주가지수 선물이 엇갈리고 있으며, 금 가격은 $4,385입니다 - 유라시아 비즈니스 뉴스</a> <span class="p0-desc">8월 17일 글로벌 시장은 기술주를 중심으로 조심스러운 긍정적인 모습을 보였습니다. 미국 소매판매 감소와 고유가에 대한 우려가 제기된 가운데 연준의 금리 결정…</span></li></ul></div>
 
 
-
 ## 전체 뉴스 요약
 
-오늘 수집된 총 19건 중 텔레그램 0건, 소셜 0건, 정치·경제 19건으로 다양한 이슈가 주요 화제입니다.
+오늘 수집된 총 19건 중 텔레그램 0건, 소셜 0건, 정치·경제 19건으로 주요 이슈를 정리했습니다.
 
 **핵심 신호 정리**
-- 주요 테마: 다양한 이슈
+- 주요 테마: 주요 이슈
 - 긴급 알림 1건에 대한 선별 모니터링
 
 ## 정치·경제 동향
