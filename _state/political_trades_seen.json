@@ -1,61 +1,5 @@
 {
   "seen": {
-    "e82550c1062b3049caf58ebf": "2026-10-29T16:20:18",
-    "e191216b932443be0c183591": "2026-10-29T16:20:18",
-    "3a5e1cc9d02582c820e6e016": "2026-10-29T16:20:18",
-    "a361b9f0e9e3b476ea34e825": "2026-10-29T16:20:18",
-    "444fcbf0557abf95f7f06514": "2026-10-29T16:20:18",
-    "438b62b214ac06b4a2bedf28": "2026-10-29T16:20:18",
-    "df8351ca81d5d933331695d0": "2026-10-29T16:20:18",
-    "128ced6e34a709d6fed2bfb0": "2026-10-29T16:20:18",
-    "601a3fc85c1c75d8201101d2": "2026-10-29T16:20:18",
-    "aa21b113cb07b8248a7844ff": "2026-10-29T16:20:18",
-    "c375e5d82028b0fa5a8873d1": "2026-10-29T16:20:18",
-    "f57f4ebe74be60f0693800d7": "2026-10-29T16:20:18",
-    "0d8d3217a673e2a22c31261f": "2026-10-29T16:20:18",
-    "9a5217a4f7ce07b21f13b639": "2026-10-29T16:20:18",
-    "fb32c628f13e7fc2c7752a2a": "2026-10-29T16:20:18",
-    "e75dd1ed779360ab618edd2e": "2026-10-29T16:20:18",
-    "bf156ab7db9d8ba6c801d497": "2026-10-29T16:20:18",
-    "86f69f3ee5278f3edb55ac5e": "2026-10-29T16:20:18",
-    "a2b797fd0a4d0229f9c356a2": "2026-10-29T16:20:18",
-    "493c7a7d4a7cdf00afe8373f": "2026-10-29T16:20:18",
-    "d2a545e203c938a49610358a": "2026-10-29T16:20:18",
-    "2664173c030977a5a275907c": "2026-10-29T16:20:18",
-    "8092574aa6b7c07ae69b04ee": "2026-10-29T16:20:18",
-    "0d5c35fb8598ed41bc4fd46f": "2026-10-29T16:20:18",
-    "be751c1831798c6d2b9bf79a": "2026-10-29T16:20:18",
-    "94de4804119350ddb690be7a": "2026-10-29T16:20:18",
-    "4d587f52874371dfd267783b": "2026-10-29T16:20:18",
-    "343eb90415b371ae6abdbd7f": "2026-10-29T16:20:18",
-    "76aadeb0d61ae00b34112d43": "2026-10-29T16:20:18",
-    "a0cb405dfbf61e561eeac05a": "2026-10-29T16:20:18",
-    "5144eace6cc6287abdfb8806": "2026-10-29T16:20:18",
-    "d7a62b4abe2abf8e1a761c99": "2026-10-29T16:20:18",
-    "6a72c8b2e73608cf03ae6997": "2026-10-29T16:20:18",
-    "a29209b17d9a71af8224dc27": "2026-10-29T16:20:18",
-    "d311200874c93bec07b998db": "2026-10-29T16:20:18",
-    "4e0f21ea33e2357c2e73ca08": "2026-10-29T16:20:18",
-    "ba53e5d7173e3ba284a04279": "2026-10-29T16:20:18",
-    "f22372ac0537657ccfbe30b2": "2026-10-29T16:20:18",
-    "4e5a0f3afcb436a2a03cb6c8": "2026-10-29T16:20:18",
-    "9ae2fcd9ea69d381a0a5107d": "2026-10-29T16:20:18",
-    "2c39ebb3b7d705c77214b2ce": "2026-10-29T16:20:18",
-    "be219d9d5049b30e44e0db8f": "2026-10-29T16:20:18",
-    "793387c65da011eab99d14de": "2026-10-29T16:20:18",
-    "796bf7bf7b983c20bc7dcb2b": "2026-10-29T16:20:18",
-    "06595128f313aa5404f84960": "2026-10-29T16:20:18",
-    "f340dcc36add3e8ac8db2fca": "2026-10-29T16:20:18",
-    "26b4a6b0efe50229df779030": "2026-10-29T16:20:18",
-    "f3ed7a2a4c61067952fd2b92": "2026-10-29T16:20:18",
-    "7d0d23f5ea831635cc8b5694": "2026-10-29T16:20:18",
-    "75b6b9aa0682f599735e9213": "2026-10-29T16:20:18",
-    "99d942f91d9d988c136759b8": "2026-10-29T16:20:18",
-    "c8c08767b6850a8feb84856f": "2026-10-29T16:20:18",
-    "8f2d0f27375db4127679f584": "2026-10-29T16:20:18",
-    "ab006ae718d557fcac618c19": "2026-10-29T16:20:18",
-    "40eabe8739f26ed83735df24": "2026-10-29T16:20:18",
-    "6d23529ccaab25dfed9294b9": "2026-10-29T16:20:18",
     "f4f11af5411b580123d78d28": "2026-10-30T16:10:53",
     "8089b306c9308cb47694c142": "2026-10-30T16:10:53",
     "493e5b5c6d2f97dd708cf7af": "2026-10-30T16:10:53",
@@ -1234,7 +1178,31 @@
     "4e477569b85e9bfdf0ccf1a3": "2026-11-27T19:09:22",
     "11dc96f19c9db75790a7ceeb": "2026-11-27T19:09:22",
     "63975d7fb6c86dde67421e08": "2026-11-27T19:09:22",
-    "65a9299590a3effe137448c1": "2026-11-27T19:09:22"
+    "65a9299590a3effe137448c1": "2026-11-27T19:09:22",
+    "18a2313dcbf5613166f101e4": "2026-11-28T17:44:10",
+    "94f030b35850aa0e12ddb70d": "2026-11-28T17:44:10",
+    "ffd5cf0dd7a732fd357ee3b1": "2026-11-28T17:44:10",
+    "3fbbbd434ef55be4c08d0ec5": "2026-11-28T17:44:10",
+    "5f28cec62e8a92889a205d35": "2026-11-28T17:44:10",
+    "f95cc6dd35451849e381ef95": "2026-11-28T17:44:10",
+    "68a2997e037362844aec256b": "2026-11-28T17:44:10",
+    "c456a721dd9ca32f4f9c7320": "2026-11-28T17:44:10",
+    "76f7a0071377e9d8531ae619": "2026-11-28T17:44:10",
+    "1568269e4f9292ab0623c043": "2026-11-28T17:44:10",
+    "aa429e163170f4a9164adaf3": "2026-11-28T17:44:10",
+    "a742500f4474e235ab6512a8": "2026-11-28T17:44:10",
+    "a621bf718bafaa0ffa07f4e7": "2026-11-28T17:44:10",
+    "054289b2ea0a20cbc25a318a": "2026-11-28T17:44:10",
+    "2b168bd6224ff4f362135340": "2026-11-28T17:44:10",
+    "c882c122e4d3b82fdd619f16": "2026-11-28T17:44:10",
+    "dd4c631cbbe857105bfcc916": "2026-11-28T17:44:10",
+    "9995a0d9f8ee9e27f84ec77f": "2026-11-28T17:44:10",
+    "9e4ca10ff2b36acadadd2f31": "2026-11-28T17:44:10",
+    "8db10d9f2fc9618de1de6543": "2026-11-28T17:44:10",
+    "8e0ba064e68af42acc347b47": "2026-11-28T17:44:10",
+    "e9243da20d585a3f942dfafa": "2026-11-28T17:44:10",
+    "1937d81faa22cb8c34eeae48": "2026-11-28T17:44:10",
+    "ae91c1fcb5a2ce553449e46b": "2026-11-28T17:44:10"
   },
   "titles": [
     [
@@ -21236,6 +21204,102 @@
     [
       "정치인 거래정책 리포트 20261128",
       "2026-11-28"
+    ],
+    [
+      "hagemans nvidia stock sold two weeks before ceo scandal broke cowboy state daily",
+      "2026-11-29"
+    ],
+    [
+      "federal signal fss director workman gifted 4000 shares quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "across six reported sales frank klein sold 36860 rocket lab rklb shares under a trading plan stock titan",
+      "2026-11-29"
+    ],
+    [
+      "ecf 10 owner saba capital management bought 148k of shares form 4 quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "in six automatic trades under a plan arjun kampani sold 6254 rocket lab rklb shares stock titan",
+      "2026-11-29"
+    ],
+    [
+      "mexico fund mxf 10 owner saba capital management bought 112736 shares for 227m at an average 2015 quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "beta technologies beta director stone bought 80000 shares for 126m at an average 1576 quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "fg annuities life fgsn director blunt received 110181 shares quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "venu holding venu ceo roth bought 7368 shares for 7817 at 106 quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "destiny tech100 dxyz 10 owner saba capital management bought 169040 shares for 395m at 2335 quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "evercore evr cfo lalonde acquired 40000 shares quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "dexcom dxcm director malady sold 1100 shares for 899k at 8172 under a 10b51 plan quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "ipst ip strategy holdings inc filed sec form 8k notice of quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "vericel vcel cfo mara sold 24992 shares for 151m at 6050 under a 10b51 plan quantisnow",
+      "2026-11-29"
+    ],
+    [
+      "us oligarchs enriched by transactional trump face fierce scrutiny in new congress",
+      "2026-11-29"
+    ],
+    [
+      "us democrats prepare investigations into billionaires in trumps inner circle who is in their sights українські національні новини унн",
+      "2026-11-29"
+    ],
+    [
+      "republicans rethink tariffs giving democrats an opening to challenge trump",
+      "2026-11-29"
+    ],
+    [
+      "faisal islam why trumps new tariffs are less of a threat",
+      "2026-11-29"
+    ],
+    [
+      "trumps tariffs have become americas new normal al jazeera",
+      "2026-11-29"
+    ],
+    [
+      "trump doubles down on his tariff agenda financial times",
+      "2026-11-29"
+    ],
+    [
+      "데스크칼럼 집 팔고 주식 사라고 부추겼던 대통령 한국정경신문",
+      "2026-11-29"
+    ],
+    [
+      "올해 3번 오른 한은 기준금리다음 인상은 내년 2월 무게 뉴스웍스",
+      "2026-11-29"
+    ],
+    [
+      "gold and silver prices recover but fed ratehike risks persist where could prices head in six months expert views livemint",
+      "2026-11-29"
+    ],
+    [
+      "정치인 거래정책 리포트 20261129",
+      "2026-11-29"
     ]
   ],
   "seen_urls": {}
